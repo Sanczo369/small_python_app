@@ -1,4 +1,6 @@
 from tkinter import *
+from PIL import ImageTk, Image
+
 root = Tk()
 root.iconbitmap('logo.ico')
 root.title("Tic Tac Toe")
@@ -9,8 +11,9 @@ root.resizable(False, False)
 
 
 # Define Element
+logo = ImageTk.PhotoImage(Image.open("logo1.png"))
 
-# LabelFrame "Calculator"
+# LabelFrame "TTT"
 framettt = Label(root, text="Tic Tac Toe", padx=5, pady=5)
 btn_1 = Button(root, height=2, width=30, padx=5, pady=5, text="Start")
 btn_2 = Button(root, height=2, width=30, padx=5, pady=5, text="Autor")
