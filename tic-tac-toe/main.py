@@ -2,6 +2,20 @@ from tkinter import *
 import tkinter.font as font
 from PIL import ImageTk, Image
 
+
+# Function to show the author info window
+def show_author_info():
+    author_info_window = Toplevel(root)
+    author_info_window.title("Author Information")
+    author_info_window.geometry("300x100")
+
+    author_label = Label(author_info_window, text="Autor: Arkadiusz Sanecki", font=label_font)
+    author_label.pack(pady=20)
+
+    back_button = Button(author_info_window, text="Wróć", command=author_info_window.destroy)
+    back_button.pack()
+
+
 root = Tk()
 root.iconbitmap('logo.ico')
 root.title("Tic Tac Toe")
@@ -20,7 +34,7 @@ logo0_label = Label(root, image=logo)
 btn_1 = Button(root, height=2, width=30, text="Start",
                bg='#45b592', fg='#ffffff', bd=0, font=button_font)
 btn_2 = Button(root, height=2, width=30, text="Autor",
-               bg='#45b592', fg='#ffffff', bd=0, font=button_font)
+               bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=show_author_info)
 btn_3 = Button(root, height=2, width=30, text="Koniec",
                bg='#45b592', fg='#ffffff', bd=0, font=button_font)
 
