@@ -36,7 +36,7 @@ btn_1 = Button(root, height=2, width=30, text="Start",
 btn_2 = Button(root, height=2, width=30, text="Autor",
                bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=show_author_info)
 btn_3 = Button(root, height=2, width=30, text="Koniec",
-               bg='#45b592', fg='#ffffff', bd=0, font=button_font)
+               bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=quit)
 
 # Position
 logo0_label.grid(row=0, column=0, columnspan=2, padx=10, pady=5)
