@@ -15,6 +15,18 @@ def show_author_info():
     back_button = Button(author_info_window, text="Wróć", command=author_info_window.destroy)
     back_button.pack()
 
+def start_game():
+    # Remove Element Position
+    framettt.grid_forget()
+    logo0_label.grid_forget()
+    btn_1.grid_forget()
+    btn_2.grid_forget()
+    btn_3.grid_forget()
+
+    game_frame = Frame(root)  # Create a new frame for the game
+    game_frame.grid(row=1, column=0, columnspan=4, padx=50, pady=15)
+
+
 
 root = Tk()
 root.iconbitmap('logo.ico')
@@ -32,7 +44,7 @@ framettt = Label(root, height=2, width=12, text="Tic Tac Toe",bg='#000000', fg='
 logo0_label = Label(root, image=logo)
 # Define Elements
 btn_1 = Button(root, height=2, width=30, text="Start",
-               bg='#45b592', fg='#ffffff', bd=0, font=button_font)
+               bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=start_game)
 btn_2 = Button(root, height=2, width=30, text="Autor",
                bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=show_author_info)
 btn_3 = Button(root, height=2, width=30, text="Koniec",
