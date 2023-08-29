@@ -33,6 +33,17 @@ def start_game():
 
     current_player = 'X'  # Start with player X
 
+def make_move(row, col):
+    nonlocal current_player
+
+    if game_state[row][col] == '':
+        game_state[row][col] = current_player
+        button = Button(game_frame, text=current_player, font=button_font, height=2, width=5, command=lambda: None)
+        button.grid(row=row, column=col)
+        check_winner()
+        current_player = 'O' if current_player == 'X' else 'X'  # Switch players
+
+
 
 
 root = Tk()
