@@ -44,6 +44,26 @@ def make_move(row, col):
         current_player = 'O' if current_player == 'X' else 'X'  # Switch players
 
 
+def check_winner():
+    # Check rows
+    for row in game_state:
+        if row[0] == row[1] == row[2] != '':
+            announce_winner(row[0])
+
+    # Check columns
+    for col in range(3):
+        if game_state[0][col] == game_state[1][col] == game_state[2][col] != '':
+            announce_winner(game_state[0][col])
+
+    # Check diagonals
+    if game_state[0][0] == game_state[1][1] == game_state[2][2] != '':
+        announce_winner(game_state[0][0])
+
+    if game_state[0][2] == game_state[1][1] == game_state[2][0] != '':
+        announce_winner(game_state[0][2])
+
+
+
 
 
 root = Tk()
