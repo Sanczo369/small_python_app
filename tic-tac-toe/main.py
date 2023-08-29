@@ -24,7 +24,7 @@ def start_game():
     btn_3.grid_forget()
 
     game_frame = Frame(root)  # Create a new frame for the game
-    game_frame.grid(row=1, column=0, columnspan=4, padx=50, pady=15)
+    game_frame.grid(row=1, column=0, columnspan=4, padx=0, pady=0, sticky="nsew")
 
 # Define the initial state of the game (empty cells)
     game_state = [['', '', ''],
