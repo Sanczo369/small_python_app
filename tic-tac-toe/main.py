@@ -33,45 +33,51 @@ def start_game():
 
     current_player = 'X'  # Start with player X
 
-def make_move(row, col):
-    nonlocal current_player
+    def make_move(row, col):
+        nonlocal current_player
 
-    if game_state[row][col] == '':
-        game_state[row][col] = current_player
-        button = Button(game_frame, text=current_player, font=button_font, height=2, width=5, command=lambda: None)
-        button.grid(row=row, column=col)
-        check_winner()
-        current_player = 'O' if current_player == 'X' else 'X'  # Switch players
+        if game_state[row][col] == '':
+            game_state[row][col] = current_player
+            button = Button(game_frame, text=current_player, font=button_font, height=2, width=5, command=lambda: None)
+            button.grid(row=row, column=col)
+            check_winner()
+            current_player = 'O' if current_player == 'X' else 'X'  # Switch players
 
+    def check_winner():
+        # Check rows
+        for row in game_state:
+            if row[0] == row[1] == row[2] != '':
+                announce_winner(row[0])
 
-def check_winner():
-    # Check rows
-    for row in game_state:
-        if row[0] == row[1] == row[2] != '':
-            announce_winner(row[0])
+        # Check columns
+        for col in range(3):
+            if game_state[0][col] == game_state[1][col] == game_state[2][col] != '':
+                announce_winner(game_state[0][col])
 
-    # Check columns
-    for col in range(3):
-        if game_state[0][col] == game_state[1][col] == game_state[2][col] != '':
-            announce_winner(game_state[0][col])
+        # Check diagonals
+        if game_state[0][0] == game_state[1][1] == game_state[2][2] != '':
+            announce_winner(game_state[0][0])
 
-    # Check diagonals
-    if game_state[0][0] == game_state[1][1] == game_state[2][2] != '':
-        announce_winner(game_state[0][0])
+        if game_state[0][2] == game_state[1][1] == game_state[2][0] != '':
+            announce_winner(game_state[0][2])
 
-    if game_state[0][2] == game_state[1][1] == game_state[2][0] != '':
-        announce_winner(game_state[0][2])
+    def announce_winner(winner):
 
-def announce_winner(winner):
-    result_label = Label(game_frame, text=f"Player {winner} wins!", font=label_font)
-    result_label.grid(row=3, column=0, columnspan=3)
+        result_label_window = Toplevel(root)
+        result_label_window.title("Kto wygrał")
+        result_label_window.geometry("300x100")
 
+        author_label = Label(result_label_window, text=f"Gracz {winner} Wygrał!", font=label_font)
+        author_label.pack(pady=20)
 
-for row in range(3):
-    for col in range(3):
-        button = Button(game_frame, text='', font=button_font, height=2, width=5,
-                        command=lambda r=row, c=col: make_move(r, c))
-        button.grid(row=row, column=col)
+        back_button = Button(result_label_window, text="Wróć", command=result_label_window.destroy)
+        back_button.pack()
+
+    for row in range(3):
+        for col in range(3):
+            button = Button(game_frame, text='', font=button_font, height=2, width=5,
+                            command=lambda r=row, c=col: make_move(r, c))
+            button.grid(row=row, column=col)
 
 
 
