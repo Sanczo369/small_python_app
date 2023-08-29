@@ -62,6 +62,16 @@ def check_winner():
     if game_state[0][2] == game_state[1][1] == game_state[2][0] != '':
         announce_winner(game_state[0][2])
 
+def announce_winner(winner):
+    result_label = Label(game_frame, text=f"Player {winner} wins!", font=label_font)
+    result_label.grid(row=3, column=0, columnspan=3)
+
+
+for row in range(3):
+    for col in range(3):
+        button = Button(game_frame, text='', font=button_font, height=2, width=5,
+                        command=lambda r=row, c=col: make_move(r, c))
+        button.grid(row=row, column=col)
 
 
 
