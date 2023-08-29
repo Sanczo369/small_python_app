@@ -26,6 +26,13 @@ def start_game():
     game_frame = Frame(root)  # Create a new frame for the game
     game_frame.grid(row=1, column=0, columnspan=4, padx=50, pady=15)
 
+# Define the initial state of the game (empty cells)
+    game_state = [['', '', ''],
+                  ['', '', ''],
+                  ['', '', '']]
+
+    current_player = 'X'  # Start with player X
+
 
 
 root = Tk()
