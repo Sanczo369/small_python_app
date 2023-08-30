@@ -44,6 +44,19 @@ def btn_multi():
     number_one = float(e_result.get())
     e_result.delete(0, END)
 
+def btn_result():
+    global number_one
+    number_two = e_result.get()
+    e_result.delete(0, END)
+    if equation == "+":
+        e_result.insert(0, str(round(number_one + float(number_two), 13)))
+    elif equation == "-":
+        e_result.insert(0, str(round(number_one - float(number_two), 13)))
+    elif equation == "*":
+        e_result.insert(0, str(round(number_one * float(number_two), 13)))
+    elif equation == "/":
+        e_result.insert(0, str(round(number_one / float(number_two), 13)))
+
 # Define Element
 e_result = Entry(root, bg="#FFF", width=5, font=("Arial", 20))
 btn_1 = Button(root, height=2, width=5, text="1")
