@@ -13,6 +13,37 @@ def onClick(number):
 def Clear():
     e_result.delete(0, END)
 
+def btn_add():
+    global equation
+    global number_one
+    equation = "+"
+    number_one = float(e_result.get())
+    e_result.delete(0, END)
+
+
+def btn_sub():
+    global equation
+    global number_one
+    equation = "-"
+    number_one = float(e_result.get())
+    e_result.delete(0, END)
+
+
+def btn_div():
+    global equation
+    global number_one
+    equation = "/"
+    number_one = float(e_result.get())
+    e_result.delete(0, END)
+
+
+def btn_multi():
+    global equation
+    global number_one
+    equation = "*"
+    number_one = float(e_result.get())
+    e_result.delete(0, END)
+
 # Define Element
 e_result = Entry(root, bg="#FFF", width=5, font=("Arial", 20))
 btn_1 = Button(root, height=2, width=5, text="1")
