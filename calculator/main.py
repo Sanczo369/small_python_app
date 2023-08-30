@@ -3,6 +3,16 @@ root = Tk()
 root.iconbitmap('logo.ico')
 root.title("Calculator")
 
+
+def onClick(number):
+    current = e_result.get()
+    e_result.delete(0, END)
+    e_result.insert(0, current+str(number))
+
+
+def Clear():
+    e_result.delete(0, END)
+
 # Define Element
 e_result = Entry(root, bg="#FFF", width=5, font=("Arial", 20))
 btn_1 = Button(root, height=2, width=5, text="1")
