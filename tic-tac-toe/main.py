@@ -16,7 +16,7 @@ def show_author_info():
     author_label = Label(root, text="Autor: Arkadiusz Sanecki", font=label_font)
     author_label.grid(row=0, column=0, padx=50, pady=20)
 
-    back_button = Button(root, text="Wróć", height=2, width=30, command=root.destroy, bg='#45b592', fg='#ffffff', bd=0,font=button_font)
+    back_button = Button(root, text="Wróć", command=root.destroy, **button_style)
     back_button.grid(row=1, column=0, padx=50, pady=200)
 
 def start_game():
@@ -30,7 +30,7 @@ def start_game():
     game_frame = Frame(root)  # Create a new frame for the game
     game_frame.grid(row=1, column=0, columnspan=4, padx=100, pady=60, sticky="nsew")
 
-    back_button = Button(root, text="Wróć", height=2, width=30, command=root.destroy, bg='#45b592', fg='#ffffff', bd=0, font=button_font)
+    back_button = Button(root, text="Wróć", command=root.destroy, **button_style)
     back_button.grid(row=2, column=0, columnspan=4, padx=50, pady=10)
 # Define the initial state of the game (empty cells)
     game_state = [['', '', ''],
@@ -98,17 +98,31 @@ root.resizable(False, False)
 logo = ImageTk.PhotoImage(Image.open("logo1.png"))
 button_font = font.Font(family='Comic Sans MS', size=12)
 label_font = font.Font(family='Comic Sans MS', size=16)
+button_style = {
+    "height": 2,
+    "width": 30,
+    "font": ('Comic Sans MS', 12),
+    "bg": "#45b592",
+    "fg":'#ffffff',
+    "activebackground": "#45b592",
+    "borderwidth": 0,
+    "relief": "solid"
+}
+label_style = {
+    "height": 2,
+    "width": 12,
+    "font": ('Comic Sans MS', 16),
+    "bg": "#000000",
+    "fg": '#ffffff',
+}
 
 # LabelFrame
-framettt = Label(root, height=2, width=12, text="Tic Tac Toe",bg='#000000', fg='#ffffff', font=label_font)
+framettt = Label(root, text="Tic Tac Toe", **label_style)
 logo0_label = Label(root, image=logo)
 # Define Elements
-btn_1 = Button(root, height=2, width=30, text="Start",
-               bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=start_game)
-btn_2 = Button(root, height=2, width=30, text="Autor",
-               bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=show_author_info)
-btn_3 = Button(root, height=2, width=30, text="Koniec",
-               bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=quit)
+btn_1 = Button(root, text="Start", command=start_game, **button_style)
+btn_2 = Button(root, text="Autor", command=show_author_info, **button_style)
+btn_3 = Button(root, text="Koniec", command=quit, **button_style)
 
 # Position
 logo0_label.grid(row=0, column=0, columnspan=2, padx=20, pady=15)
