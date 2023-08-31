@@ -63,28 +63,42 @@ def btn_result():
     elif equation == "/":
         e_result.insert(0, str(round(number_one / float(number_two), 13)))
 
+
 # Define Element
-e_result = Entry(root, bg="#FFF", width=5, font=("Arial", 20))
-btn_1 = Button(root, height=2, width=5, text="1", command=lambda: onClick(1))
-btn_2 = Button(root, height=2, width=5, text="2", command=lambda: onClick(2))
-btn_3 = Button(root, height=2, width=5, text="3", command=lambda: onClick(3))
-btn_4 = Button(root, height=2, width=5, text="4", command=lambda: onClick(4))
-btn_5 = Button(root, height=2, width=5, text="5", command=lambda: onClick(5))
-btn_6 = Button(root, height=2, width=5, text="6", command=lambda: onClick(6))
-btn_7 = Button(root, height=2, width=5, text="7", command=lambda: onClick(7))
-btn_8 = Button(root, height=2, width=5, text="8", command=lambda: onClick(8))
-btn_9 = Button(root, height=2, width=5, text="9", command=lambda: onClick(9))
-btn_0 = Button(root, height=2, width=5, text="0", command=lambda: onClick(0))
-btn_00 = Button(root, height=2, width=5, text="00", command=lambda: onClick("00"))
-btn_add = Button(root, height=2, width=5, text="+", command=btn_add)
-btn_sub = Button(root, height=2, width=5, text="-", command=btn_sub)
-btn_div = Button(root, height=2, width=5, text="/", command=btn_div)
-btn_multi = Button(root, height=2, width=5, text="*", command=btn_multi)
-btn_clear = Button(root, height=2, width=5, text="C", command=Clear)
-btn_off = Button(root, height=2, width=5, text="OFF", command=root.quit)
-btn_result = Button(root, height=2, width=5, text="=", command=btn_result)
-btn_proc = Button(root, height=2, width=5, text="%", command=btn_proc)
-btn_dot = Button(root, height=2, width=5, text=",", command=lambda: onClick("."))
+e_result = Entry(root, bg="#FFF", width=5, font=("Arial", 25))
+
+# Define Styles
+button_style = {
+    "height": 2,
+    "width": 5,
+    "font": ("Arial", 16),
+    "bg": "#E0E0E0",
+    "activebackground": "#C0C0C0",
+    "borderwidth": 1,
+    "relief": "solid"
+}
+
+# Define Element
+btn_1 = Button(root, text="1", command=lambda: onClick(1), **button_style)
+btn_2 = Button(root, text="2", command=lambda: onClick(2), **button_style)
+btn_3 = Button(root, text="3", command=lambda: onClick(3), **button_style)
+btn_4 = Button(root, text="4", command=lambda: onClick(4), **button_style)
+btn_5 = Button(root, text="5", command=lambda: onClick(5), **button_style)
+btn_6 = Button(root, text="6", command=lambda: onClick(6), **button_style)
+btn_7 = Button(root, text="7", command=lambda: onClick(7), **button_style)
+btn_8 = Button(root, text="8", command=lambda: onClick(8), **button_style)
+btn_9 = Button(root, text="9", command=lambda: onClick(9), **button_style)
+btn_0 = Button(root, text="0", command=lambda: onClick(0), **button_style)
+btn_00 = Button(root, text="00", command=lambda: onClick("00"), **button_style)
+btn_add = Button(root, text="+", command=btn_add, **button_style)
+btn_sub = Button(root, text="-", command=btn_sub, **button_style)
+btn_div = Button(root, text="/", command=btn_div, **button_style)
+btn_multi = Button(root, text="*", command=btn_multi, **button_style)
+btn_clear = Button(root, text="C", command=Clear, **button_style)
+btn_off = Button(root, text="OFF", command=root.quit, **button_style)
+btn_result = Button(root, text="=", command=btn_result, **button_style)
+btn_proc = Button(root, text="%", command=btn_proc, **button_style)
+btn_dot = Button(root, text=",", command=lambda: onClick("."), **button_style)
 
 # Element Position
 
