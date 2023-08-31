@@ -2,9 +2,28 @@ from tkinter import *
 import tkinter.font as font
 from PIL import ImageTk, Image
 
+author_label = None
+back_button = None
+game_frame = None
+def restore_previous_view(num):
+    # Remove Author Info Position
+    if num == 2:
+        author_label.grid_forget()
+        back_button.grid_forget()
+    elif num == 1:
+        game_frame.grid_forget()
+        back_button.grid_forget()
 
+    # Restore Previous Elements Position
+    logo0_label.grid(row=0, column=0, columnspan=2, padx=20, pady=15)
+    text.grid(row=0, column=2, columnspan=2, padx=50, pady=15)
+    btn_1.grid(row=1, column=0, columnspan=4, padx=50, pady=15)
+    btn_2.grid(row=2, column=0, columnspan=4, padx=50, pady=15)
+    btn_3.grid(row=3, column=0, columnspan=4, padx=50, pady=15)
 # Funkcja wyświetlająca okno informacji o autorze
 def show_author_info():
+    global author_label, back_button
+
     # Remove Element Position
     text.grid_forget()
     logo0_label.grid_forget()
@@ -15,11 +34,12 @@ def show_author_info():
     author_label = Label(root, text="Autor: Arkadiusz Sanecki", font=label_font)
     author_label.grid(row=0, column=0, padx=50, pady=20)
 
-    back_button = Button(root, text="Wróć", command=root.destroy, **button_style)
+    back_button = Button(root, text="Wróć", command=lambda: restore_previous_view(2), **button_style)
     back_button.grid(row=1, column=0, padx=50, pady=200)
 
 # Fukcja Gry
 def start_game():
+    global game_frame, back_button
     # Usunięcie Elementów
     text.grid_forget()
     logo0_label.grid_forget()
@@ -30,7 +50,7 @@ def start_game():
     game_frame = Frame(root)  # Tworzenie nowej ramki dla gry
     game_frame.grid(row=1, column=0, columnspan=4, padx=100, pady=60, sticky="nsew")
 
-    back_button = Button(root, text="Wróć", command=root.destroy, **button_style)
+    back_button = Button(root, text="Wróć", command=lambda: restore_previous_view(1), **button_style)
     back_button.grid(row=2, column=0, columnspan=4, padx=50, pady=10)
     #Zdefiniuj początkowy stan gry (puste komórki)
     game_state = [['', '', ''],
