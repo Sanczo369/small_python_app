@@ -5,15 +5,19 @@ from PIL import ImageTk, Image
 
 # Function to show the author info window
 def show_author_info():
-    author_info_window = Toplevel(root)
-    author_info_window.title("Author Information")
-    author_info_window.geometry("300x100")
+    # Remove Element Position
+    framettt.grid_forget()
+    logo0_label.grid_forget()
+    btn_1.grid_forget()
+    btn_2.grid_forget()
+    btn_3.grid_forget()
 
-    author_label = Label(author_info_window, text="Autor: Arkadiusz Sanecki", font=label_font)
-    author_label.pack(pady=20)
 
-    back_button = Button(author_info_window, text="Wróć", command=author_info_window.destroy)
-    back_button.pack()
+    author_label = Label(root, text="Autor: Arkadiusz Sanecki", font=label_font)
+    author_label.grid(row=0, column=0, padx=50, pady=20)
+
+    back_button = Button(root, text="Wróć", height=2, width=30, command=root.destroy, bg='#45b592', fg='#ffffff', bd=0,font=button_font)
+    back_button.grid(row=1, column=0, padx=50, pady=200)
 
 def start_game():
     # Remove Element Position
@@ -24,8 +28,10 @@ def start_game():
     btn_3.grid_forget()
 
     game_frame = Frame(root)  # Create a new frame for the game
-    game_frame.grid(row=1, column=0, columnspan=4, padx=0, pady=0, sticky="nsew")
+    game_frame.grid(row=1, column=0, columnspan=4, padx=100, pady=60, sticky="nsew")
 
+    back_button = Button(root, text="Wróć", height=2, width=30, command=root.destroy, bg='#45b592', fg='#ffffff', bd=0, font=button_font)
+    back_button.grid(row=2, column=0, columnspan=4, padx=50, pady=10)
 # Define the initial state of the game (empty cells)
     game_state = [['', '', ''],
                   ['', '', ''],
@@ -105,7 +111,7 @@ btn_3 = Button(root, height=2, width=30, text="Koniec",
                bg='#45b592', fg='#ffffff', bd=0, font=button_font, command=quit)
 
 # Position
-logo0_label.grid(row=0, column=0, columnspan=2, padx=10, pady=5)
+logo0_label.grid(row=0, column=0, columnspan=2, padx=20, pady=15)
 framettt.grid(row=0, column=2, columnspan=2, padx=50, pady=15)
 
 btn_1.grid(row=1, column=0, columnspan=4, padx=50, pady=15)
