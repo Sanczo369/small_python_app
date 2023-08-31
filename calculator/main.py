@@ -36,6 +36,12 @@ def btn_div():
     number_one = float(e_result.get())
     e_result.delete(0, END)
 
+def btn_proc():
+    global number_one
+    number_two = float(e_result.get())
+    resul = (number_one*number_two)/100
+    e_result.delete(0, END)
+    e_result.insert(0, str(resul))
 
 def btn_multi():
     global equation
@@ -77,8 +83,8 @@ btn_multi = Button(root, height=2, width=5, text="*", command=btn_multi)
 btn_clear = Button(root, height=2, width=5, text="C", command=Clear)
 btn_off = Button(root, height=2, width=5, text="OFF", command=root.quit)
 btn_result = Button(root, height=2, width=5, text="=", command=btn_result)
-btn_proc = Button(root, height=2, width=5, text="%")
-btn_dot = Button(root, height=2, width=5, text=",")
+btn_proc = Button(root, height=2, width=5, text="%", command=btn_proc)
+btn_dot = Button(root, height=2, width=5, text=",", command=lambda: onClick("."))
 
 # Element Position
 
