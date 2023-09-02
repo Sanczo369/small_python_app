@@ -1,6 +1,16 @@
 # Small Python App
 Small Python App in Tkinter
-## tic-tac-toe
+## Kółko i krzyżyk
+Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
+### Oto rozkład kodu:
+- Importowanie potrzebnych modułów
+- Tworzenie zmiennych globalnych
+- Funkcje
+- Plansza gry
+- Inicjalizacja głównego okna root 
+- Konfiguracja okna, ikony, tytułu i rozmiaru.
+- Tworzenie elementów interfejsu: etykiety, przycisk
+  
 ## Prosty Kalkulator
 Jest to program w języku Python wykorzystujący bibliotekę Tkinter do stworzenia prostej aplikacji kalkulatora z graficznym interfejsem użytkownika (GUI).
 ### Oto rozkład kodu:
