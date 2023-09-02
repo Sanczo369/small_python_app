@@ -10,6 +10,9 @@ Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym 
 - Inicjalizacja głównego okna root 
 - Konfiguracja okna, ikony, tytułu i rozmiaru.
 - Tworzenie elementów interfejsu: etykiety, przycisk
+
+### Opis działania
+Aplikacja skupia się na grze "Kółko i krzyżyk", umożliwiając rozpoczęcie rozgrywki, wyświetlenie informacji o autorze i zamknięcie programu. Plansza gry jest obsługiwana przez funkcje make_move, check_winner i announce_winner. Gdy gra zostanie zakończona, pojawi się okno z informacją o zwycięzcy. Po zakończeniu gry użytkownik może wrócić do głównego menu.
   
 ## Prosty Kalkulator
 Jest to program w języku Python wykorzystujący bibliotekę Tkinter do stworzenia prostej aplikacji kalkulatora z graficznym interfejsem użytkownika (GUI).
