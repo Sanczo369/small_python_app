@@ -5,7 +5,7 @@ import tkinter.font as font
 root = Tk()
 root.iconbitmap('logo.ico')
 root.title("QR CODE GENERATOR")
-root.geometry("400x400")
+root.geometry("450x600")
 
 # Zablokowanie zmiany rozmiaru okna
 root.resizable(False, False)
@@ -29,14 +29,14 @@ button_style = {
 # Elementy
 content_label = Label(root, text="Wpisz co ma zawierać kod QR", font=label_font)
 name_label = Label(root, text="Podaj nazwe dla kodu QR (pliku png)", font=label_font)
-content_entry = Entry(root)
-name_entry = Entry(root)
-generate_btn = Button(root, text="Generuj")
+content_entry = Text(root, height=3, width=40)
+name_entry = Text(root, height=1, width=20)
+generate_btn = Button(root, text="Generuj", **button_style)
 # Pozycja elementów
-content_label.grid(row=0, column=0)
-content_entry.grid(row=0, column=1)
-name_label.grid(row=1, column=0)
-name_entry.grid(row=1, column=1)
-generate_btn.grid(row=2, columnspan=2)
+content_label.grid(row=0, column=0,padx=0, pady=5)
+content_entry.grid(row=1, column=0, padx=10, pady=5)
+name_label.grid(row=2, column=0,padx=70, pady=5)
+name_entry.grid(row=3, column=0,padx=70, pady=20)
+generate_btn.grid(row=4, padx=50)
 if __name__ == '__main__':
     root.mainloop()
