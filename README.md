@@ -31,4 +31,5 @@ Jest to program w języku Python wykorzystujący bibliotekę Tkinter do stworzen
 - Procent liczby (%)
 
 Ten kod tworzy podstawową aplikację kalkulatora z prostym interfejsem użytkownika. Użytkownicy mogą wykonywać podstawowe operacje arytmetyczne, klikając przyciski, a wynik jest wyświetlany w polu wejściowym.
-## Qr Code Generator
+## Generowania kodów QR
+Aplikacją do generowania kodów QR z interfejsem graficznym przy użyciu biblioteki qrcode, tkinter, i PIL. 
