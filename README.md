@@ -33,3 +33,6 @@ Jest to program w języku Python wykorzystujący bibliotekę Tkinter do stworzen
 Ten kod tworzy podstawową aplikację kalkulatora z prostym interfejsem użytkownika. Użytkownicy mogą wykonywać podstawowe operacje arytmetyczne, klikając przyciski, a wynik jest wyświetlany w polu wejściowym.
 ## Generowania kodów QR
 Aplikacją do generowania kodów QR z interfejsem graficznym przy użyciu biblioteki qrcode, tkinter, i PIL. 
+### Bibliotekę qrcode
+Upewnij się, że masz bibliotekę qrcode zainstalowaną na swoim systemie, aby ten program działał poprawnie. Jeśli nie jest zainstalowana, możesz ją zainstalować za pomocą narzędzia pip, wykonując polecenie:
+pip install qrcode
