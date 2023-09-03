@@ -3,16 +3,20 @@ from tkinter import *
 import tkinter.font as font
 from PIL import ImageTk, Image
 
+
 root = Tk()
+# konfiguracja okna
 root.iconbitmap('logo.ico')
 root.title("QR CODE GENERATOR")
-root.geometry("450x600")
+root.geometry("450x630")
 
+# Funkcja generująca kod QR
 def gen(x, y):
     img = qrcode.make(x)
     img.save(f'{y}.png')
     display_qr_code(f'{y}.png')
 
+# Funkcja wyswietlajaca kod qr
 def display_qr_code(image_path):
     code_png = ImageTk.PhotoImage(Image.open(image_path))
     if hasattr(root, 'qr_code_label'):
@@ -25,6 +29,7 @@ def display_qr_code(image_path):
 # Zablokowanie zmiany rozmiaru okna
 root.resizable(False, False)
 
+# Style
 label_font = font.Font(family='Roboto', size=14)
 button_style = {
     "height": 2,
