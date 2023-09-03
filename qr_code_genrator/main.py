@@ -1,6 +1,7 @@
 import qrcode
 from tkinter import *
 import tkinter.font as font
+from PIL import ImageTk, Image
 
 root = Tk()
 root.iconbitmap('logo.ico')
@@ -10,6 +11,16 @@ root.geometry("450x600")
 def gen(x, y):
     img = qrcode.make(x)
     img.save(f'{y}.png')
+    display_qr_code(f'{y}.png')
+
+def display_qr_code(image_path):
+    code_png = ImageTk.PhotoImage(Image.open(image_path))
+    if hasattr(root, 'qr_code_label'):
+        root.qr_code_label.configure(image=code_png)
+        root.qr_code_label.image = code_png
+    else:
+        root.qr_code_label = Label(root, image=code_png)
+        root.qr_code_label.grid(row=5, column=0, padx=50)
 
 # Zablokowanie zmiany rozmiaru okna
 root.resizable(False, False)
@@ -40,7 +51,7 @@ content_label.grid(row=0, column=0, padx=0, pady=5)
 content_entry.grid(row=1, column=0, padx=10, pady=5)
 name_label.grid(row=2, column=0, padx=70, pady=5)
 name_entry.grid(row=3, column=0, padx=70, pady=20)
-generate_btn.grid(row=4, padx=50)
+generate_btn.grid(row=4,column=0, padx=50)
 
 if __name__ == '__main__':
     root.mainloop()
