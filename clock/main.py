@@ -7,7 +7,7 @@ root = Tk()
 root.title('clock')
 root.geometry("400x600")
 root.config(bg='black')
-
+root.iconbitmap('logo.ico')
 
 def update():
     clock.config(text=time.strftime("%H:%M:%S"))
