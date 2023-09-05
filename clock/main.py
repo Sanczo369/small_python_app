@@ -10,6 +10,13 @@ def start():
         update()
         running = True
 
+def pause():
+    global running
+    if running:
+        # cancel updating of time using after_cancel()
+        clock.after_cancel(update_time)
+        running = False
+
 root = Tk()
 root.title('clock')
 root.geometry("400x600")
