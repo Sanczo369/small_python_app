@@ -29,6 +29,28 @@ def reset():
     # set label back to zero
     clock.config(text='00:00:00')
 
+
+def update():
+    # update seconds with (addition) compound assignment operator
+    global hours, minutes, seconds
+    seconds += 1
+    if seconds == 60:
+        minutes += 1
+        seconds = 0
+    if minutes == 60:
+        hours += 1
+        minutes = 0
+    # format time to include leading zeros
+    hours_string = f'{hours}' if hours > 9 else f'0{hours}'
+    minutes_string = f'{minutes}' if minutes > 9 else f'0{minutes}'
+    seconds_string = f'{seconds}' if seconds > 9 else f'0{seconds}'
+    # update timer label after 1000 ms (1 second)
+    clock.config(text=hours_string + ':' + minutes_string + ':' + seconds_string)
+    # after each second (1000 milliseconds), call update function
+    # use update_time variable to cancel or pause the time using after_cancel
+    global update_time
+    update_time = clock.after(1000, update)
+
 root = Tk()
 root.title('clock')
 root.geometry("400x600")
