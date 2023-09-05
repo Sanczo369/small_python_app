@@ -36,3 +36,6 @@ Aplikacją do generowania kodów QR z interfejsem graficznym przy użyciu biblio
 ### Bibliotekę qrcode
 Upewnij się, że masz bibliotekę qrcode zainstalowaną na swoim systemie, aby ten program działał poprawnie. Jeśli nie jest zainstalowana, możesz ją zainstalować za pomocą narzędzia pip, wykonując polecenie:
 pip install qrcode
+
+## Stoper
+
