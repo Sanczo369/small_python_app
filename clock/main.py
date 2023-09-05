@@ -1,7 +1,14 @@
 from tkinter import *
 import time
 
+running = False
+hours, minute, seconds = 0, 0, 0
 
+def start():
+    global running
+    if not running:
+        update()
+        running = True
 
 root = Tk()
 root.title('clock')
