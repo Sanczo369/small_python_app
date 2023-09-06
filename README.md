@@ -38,4 +38,4 @@ Upewnij się, że masz bibliotekę qrcode zainstalowaną na swoim systemie, aby 
 pip install qrcode
 
 ## Stoper
-
+ Aplikacja Stoper napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi uruchamianie, zatrzymywanie i resetowanie stopera.
