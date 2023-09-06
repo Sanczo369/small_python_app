@@ -39,3 +39,14 @@ pip install qrcode
 
 ## Stoper
  Aplikacja Stoper napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi uruchamianie, zatrzymywanie i resetowanie stopera.
+
+
+### Oto rozkład kodu:
+- Importowanie modułów
+- Inicjalizacja zmiennych
+- Funkcje
+- Tworzenie głównego okna Tkinter
+- Styl przycisków
+- Tworzenie interfejsu użytkownika
+- Układ elementów
+- Uruchomienie głównej pętli Tkinter:
