@@ -50,3 +50,9 @@ pip install qrcode
 - Tworzenie interfejsu użytkownika
 - Układ elementów
 - Uruchomienie głównej pętli Tkinter:
+
+### Funkcje
+- start(): Rozpoczyna działanie stopera, wywołując funkcję update().
+- pause(): Zatrzymuje stoper poprzez anulowanie aktualizacji czasu.
+- reset(): Resetuje stoper do stanu początkowego, zerując zmienne czasu i ustawiając etykietę z czasem na "00:00:00".
+- update(): Aktualizuje czas na stoperze, inkrementując sekundy, minuty i godziny, a następnie formatuje czas i aktualizuje etykietę co sekundę za pomocą after().
