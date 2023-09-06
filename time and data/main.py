@@ -13,6 +13,7 @@ def update():
     clock.config(text=time.strftime("%H:%M:%S"))
     clock.after(1000, update)
 
+
 clock = Label(root, background='black', foreground='white', font=('arial', 40, 'bold'))
 calendar = Label(root, background='black', foreground='white', font=('arial', 40, 'bold'))
 clock.grid(column=0, row=0)
