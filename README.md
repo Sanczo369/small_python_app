@@ -60,3 +60,8 @@ pip install qrcode
 ## To Do List
 
 ## Time and data
+### Oto rozkład kodu:
+- Importowanie niezbędnych bibliotek
+- Tworzenie głównego okna aplikacji
+- Definiowanie funkcji update
+- Tworzenie elementów GUI
