@@ -6,7 +6,7 @@ root = Tk()
 root.title('time and data')
 root.geometry("400x400")
 root.config(bg='black')
-
+root.iconbitmap('logo.ico')
 
 def update():
     calendar.config(text=date.today().strftime("%d/%m/%Y"))
