@@ -60,6 +60,7 @@ pip install qrcode
 ## To Do List
 
 ## Time and data
+Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi wyświetlenie aktualnej godziny oraz daty.
 ### Oto rozkład kodu:
 - Importowanie niezbędnych bibliotek
 - Tworzenie głównego okna aplikacji
