@@ -58,3 +58,5 @@ pip install qrcode
 - update(): Aktualizuje czas na stoperze, inkrementując sekundy, minuty i godziny, a następnie formatuje czas i aktualizuje etykietę co sekundę za pomocą after().
 
 ## To Do List
+
+## Time and data
