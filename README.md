@@ -58,5 +58,11 @@ pip install qrcode
 - update(): Aktualizuje czas na stoperze, inkrementując sekundy, minuty i godziny, a następnie formatuje czas i aktualizuje etykietę co sekundę za pomocą after().
 
 ## To Do List
-
+Aplikacja "To-Do List" (lista zadań) jest narzędziem, które pomaga użytkownikom organizować swoje obowiązki, zadania i plany w sposób bardziej efektywny.
 ## Time and data
+Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi wyświetlenie aktualnej godziny oraz daty.
+### Oto rozkład kodu:
+- Importowanie niezbędnych bibliotek
+- Tworzenie głównego okna aplikacji
+- Definiowanie funkcji update
+- Tworzenie elementów GUI
