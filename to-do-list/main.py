@@ -4,6 +4,7 @@ root = Tk()
 root.title('To Do List')
 root.geometry("400x400")
 root.config(bg='black')
+root.iconbitmap('logo.ico')
 
 value=1
 def add():
