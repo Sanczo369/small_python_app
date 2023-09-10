@@ -75,3 +75,5 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - Tworzenie głównego okna aplikacji
 - Definiowanie funkcji update
 - Tworzenie elementów GUI
+
+  ## Quiz
