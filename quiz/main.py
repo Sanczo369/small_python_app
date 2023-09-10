@@ -5,11 +5,18 @@ root.title('Quiz')
 root.geometry("400x400")
 root.iconbitmap('logo.ico')
 
+
+button_style = {
+    "height": 2,
+    "width": 30,
+    "font": ('Comic Sans MS', 12),
+}
+
 # Zdefiniowanie Elementów
 nazwa_label = Label(root, text="Quiz")
-btn_1 = Button(root, text="Start")
-btn_2 = Button(root, text="Autor")
-btn_3 = Button(root, text="Koniec")
+btn_1 = Button(root, text="Start", **button_style)
+btn_2 = Button(root, text="Autor", **button_style)
+btn_3 = Button(root, text="Koniec", **button_style)
 
 
 # Pozycja Elementów
