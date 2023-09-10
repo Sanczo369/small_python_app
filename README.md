@@ -59,6 +59,15 @@ pip install qrcode
 
 ## To Do List
 Aplikacja "To-Do List" (lista zadań) jest narzędziem, które pomaga użytkownikom organizować swoje obowiązki, zadania i plany w sposób bardziej efektywny.
+## Oto rozkład kodu:
+= Importowanie Tkinter:
+= Inicjalizacja głównego okna:
+- Ustawienie tytułu, rozmiaru i tła:
+- Zmienna "value":
+- Funkcja "add":
+- Główna pętla programu:
+
+
 ## Time and data
 Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi wyświetlenie aktualnej godziny oraz daty.
 ### Oto rozkład kodu:
