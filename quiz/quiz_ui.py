@@ -43,3 +43,19 @@ class QuizInterface:
 
         # Mainloop
         self.window.mainloop()
+
+    def display_title(self):
+        """To display title"""
+
+        # Title
+        title = Label(self.window, text="iQuiz Application",
+                      width=50, bg="green", fg="white", font=("ariel", 20, "bold"))
+
+        # place of the title
+        title.place(x=0, y=2)
+
+    def display_question(self):
+        """To display the question"""
+
+        q_text = self.quiz.next_question()
+        self.canvas.itemconfig(self.question_text, text=q_text)
