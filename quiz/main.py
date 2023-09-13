@@ -1,28 +1,28 @@
-from tkinter import *
+from question_model import Question
+from quiz_data import question_data
+from quiz_brain import QuizBrain
+from quiz_ui import QuizInterface
+from random import shuffle
+import html
 
-root = Tk()
-root.title('Quiz')
-root.geometry("400x400")
-root.iconbitmap('logo.ico')
+question_bank = []
+for question in question_data:
+    choices = []
+    question_text = html.unescape(question["question"])
+    correct_answer = html.unescape(question["correct_answer"])
+    incorrect_answers = question["incorrect_answers"]
+    for ans in incorrect_answers:
+        choices.append(html.unescape(ans))
+    choices.append(correct_answer)
+    shuffle(choices)
+    new_question = Question(question_text, correct_answer, choices)
+    question_bank.append(new_question)
 
 
-button_style = {
-    "height": 2,
-    "width": 30,
-    "font": ('Comic Sans MS', 12),
-}
+quiz = QuizBrain(question_bank)
 
-# Zdefiniowanie Elementów
-nazwa_label = Label(root, text="Quiz")
-btn_1 = Button(root, text="Start", **button_style)
-btn_2 = Button(root, text="Autor", **button_style)
-btn_3 = Button(root, text="Koniec", **button_style)
+quiz_ui = QuizInterface(quiz)
 
 
-# Pozycja Elementów
-nazwa_label.grid(row=0, column=0, columnspan=2, padx=20, pady=15)
-btn_1.grid(row=1, column=0, columnspan=4, padx=50, pady=15)
-btn_2.grid(row=2, column=0, columnspan=4, padx=50, pady=15)
-btn_3.grid(row=3, column=0, columnspan=4, padx=50, pady=15)
-
-root.mainloop()
+print("You've completed the quiz")
+print(f"Your final score was: {quiz.score}/{quiz.question_no}")
