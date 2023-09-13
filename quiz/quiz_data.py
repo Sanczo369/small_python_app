@@ -4,7 +4,7 @@ parameters = {
     "amount": 10,
     "type": "multiple"
 }
-response = requests.get(url="odnosnik do pytań", params=parameters)
+response = requests.get(url="https://opentdb.com/api.php?amount=10&type=multiple", params=parameters)
 question_data = response.json()["results"]
 
 """
