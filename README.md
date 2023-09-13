@@ -77,3 +77,9 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - Tworzenie elementów GUI
 
   ## Quiz
+  quiz_ui.py
+  quiz_data.py
+  quiz_brain.py
+  main.py
+  question_model.py
+  logo.ico
