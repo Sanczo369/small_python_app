@@ -1,0 +1,86 @@
+[
+    {
+        'category': 'Historia',
+        'type': 'Wybór wielokrotny',
+        'difficulty': 'Łatwy',
+        'question': 'Kto był pierwszym prezydentem Stanów Zjednoczonych?',
+        'correct_answer': 'George Washington',
+        'incorrect_answers': [
+            'John Adams',
+            'Thomas Jefferson',
+            'Benjamin Franklin'
+            ]
+    }
+    {
+        'category': 'Matematyka',
+        'type': 'Typ',
+        'difficulty': 'Średni',
+        'question': 'Jaki jest wynik mnożenia 7 przez 8?',
+        'correct_answer': '56',
+        'incorrect_answers': [
+            '51',
+            '62',
+            '58'
+            ]
+    }
+    {
+        'category': 'Literatura',
+        'type': 'Wybór wielokrotny',
+        'difficulty': 'Średni',
+        'question': 'Kto napisał powieść "Zbrodnia i kara"?',
+        'correct_answer': 'Fiodor Dostojewski',
+        'incorrect_answers': [
+            'Jan Brzechwa',
+            'Eliza Orzeszkowa',
+            'Julian Tuwim'
+            ]
+    }
+    {
+        'category': 'Nauka',
+        'type': 'Wybór wielokrotny',
+        'difficulty': 'Trudny',
+        'question': 'Jak nazywa się proces, w którym jądro atomowe rozpada się na mniejsze jądra?',
+        'correct_answer': 'Rozpad jądrowy',
+        'incorrect_answers': [
+            'Fuzja jądrowa',
+            'Spalanie jądrowe',
+            'Synteza jądrowa'
+            ]
+    }
+    {
+        'category': 'Geografia',
+        'type': 'Wybór wielokrotny',
+        'difficulty': 'Łatwy',
+        'question': 'Który kraj leży na Półwyspie Apenińskim?',
+        'correct_answer': 'Włochy',
+        'incorrect_answers': [
+            'Grecja',
+            'Hiszpania',
+            'Francja'
+            ]
+    }
+    {
+        'category': 'Sport',
+        'type': 'Wybór wielokrotny',
+        'difficulty': 'Łatwy',
+        'question': 'Która drużyna wygrała Super Bowl w roku 2021?',
+        'correct_answer': 'Tampa Bay Buccaneers',
+        'incorrect_answers': [
+            'Kansas City Chiefs',
+            'New England Patriots',
+            'San Francisco 49ers'
+            ]
+    }
+    {
+        'category': 'Muzyka',
+        'type': 'Wybór wielokrotny',
+        'difficulty': 'Średni',
+        'question': 'Który zespół stworzył album "The Dark Side of the Moon"?',
+        'correct_answer': 'Pink Floyd',
+        'incorrect_answers': [
+            'The Beatles',
+            'Led Zeppelin',
+            'Queen'
+            ]
+    }
+]
