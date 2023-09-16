@@ -18,4 +18,10 @@ Button(root, image=eraser, bg='#f2f3f5').place(x=45, y=400)
 colors=Canvas(root, bg="#ffffff", width=40, height=300, bd=0)
 colors.place(x=42, y=55)
 
+canvas =Canvas(root, width=900, height=510, background='white', cursor="hand2")
+canvas.place(x=130, y=20)
+
+
+canvas.bind('<Button-1>')
+canvas.bind('<B1-Motion>')
 root.mainloop()
