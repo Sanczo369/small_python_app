@@ -10,6 +10,15 @@ root.config(bg='#f2f3f5')
 root.resizable(False,False)
 root.iconbitmap('logo.ico')
 
+current_x = 0
+current_y = 0
+color = 'black'
+
+def locate_xy(work):
+    global current_x, current_y
+    current_x = work.x
+    current_y = work.y
+
 
 
 color_box=PhotoImage(file="color_section.png")
