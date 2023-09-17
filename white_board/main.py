@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter.colorchooser import  askcolor
+from tkinter.colorchooser import askcolor
 from tkinter import ttk
 import tkinter as tk
 
@@ -12,7 +12,7 @@ root.iconbitmap('logo.ico')
 
 current_x = 0
 current_y = 0
-color = 'black'
+color = "black"
 
 def locate_xy(work):
     global current_x, current_y
@@ -24,13 +24,19 @@ def addLine(work):
     global current_x, current_y
     canvas.create_line((current_x, current_y, work.x, work.y), width=2, fill=color)
     current_x, current_y = work.x, work.y
+def show_color(new_color):
+    global color
+    color = new_color
 
+def new_canvas():
+    canvas.delete('all')
+    display_pallete()
 
 color_box=PhotoImage(file="color_section.png")
 Label(root,image=color_box,bg="#f2f3f5").place(x=10,y=20)
 
 eraser=PhotoImage(file="rubber_96712.png")
-Button(root, image=eraser, bg='#f2f3f5').place(x=45, y=400)
+Button(root, image=eraser, bg='#f2f3f5', command=new_canvas).place(x=45, y=400)
 
 colors=Canvas(root, bg="#ffffff", width=40, height=310, bd=0)
 colors.place(x=42, y=55)
@@ -70,6 +76,6 @@ def display_pallete():
     colors.tag_bind(id,"Button-1", lambda x: show_color("pink"))
 display_pallete()
 
-canvas.bind('<Button-1>')
-canvas.bind('<B1-Motion>')
+canvas.bind('<Button-1>', locate_xy)
+canvas.bind('<B1-Motion>', addLine)
 root.mainloop()
