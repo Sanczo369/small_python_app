@@ -78,4 +78,18 @@ display_pallete()
 
 canvas.bind('<Button-1>', locate_xy)
 canvas.bind('<B1-Motion>', addLine)
+
+current_value = tk.DoubleVar()
+
+def get_current_value():
+    return '{: .2f}'.format(current_value.get())
+
+def slider_changed(event):
+    value_label.configure(text=get_current_value())
+
+slider = ttk.Scale(root, from_=0, to=100, orient='horizontal', command=slider_changed, variable= current_value)
+slider.place(x=30,y=530)
+
+value_label = ttk.Label(root,text=get_current_value())
+value_label.place(x=27, y=550)
 root.mainloop()
