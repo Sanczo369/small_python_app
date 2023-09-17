@@ -20,6 +20,11 @@ def locate_xy(work):
     current_y = work.y
 
 
+def addLine(work):
+    global current_x, current_y
+    canvas.create_line((current_x, current_y, work.x, work.y), width=2, fill=color)
+    current_x, current_y = work.x, work.y
+
 
 color_box=PhotoImage(file="color_section.png")
 Label(root,image=color_box,bg="#f2f3f5").place(x=10,y=20)
