@@ -22,7 +22,7 @@ def locate_xy(work):
 
 def addLine(work):
     global current_x, current_y
-    canvas.create_line((current_x, current_y, work.x, work.y), width=2, fill=color)
+    canvas.create_line((current_x, current_y, work.x, work.y), width=get_current_value(), fill=color, capstyle=ROUND, smooth=True)
     current_x, current_y = work.x, work.y
 def show_color(new_color):
     global color
@@ -87,7 +87,7 @@ def get_current_value():
 def slider_changed(event):
     value_label.configure(text=get_current_value())
 
-slider = ttk.Scale(root, from_=0, to=100, orient='horizontal', command=slider_changed, variable= current_value)
+slider = ttk.Scale(root, from_=0, to=100, orient='horizontal', command=slider_changed, variable=current_value)
 slider.place(x=30,y=530)
 
 value_label = ttk.Label(root,text=get_current_value())
