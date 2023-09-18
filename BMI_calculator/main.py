@@ -16,4 +16,13 @@ Label(root, width=72, height=18, bg="lightblue").pack(side=BOTTOM)
 box=PhotoImage(file="box.png")
 Label(root,image=box).place(x=40,y=100)
 Label(root,image=box).place(x=260,y=100)
+
+Height=StringVar()
+Weight=StringVar()
+height=Entry(root, textvariable=Height, width=4, font="arial 50", bg="#fff", fg="#000", bd=0, justify=CENTER)
+height.place(x=52,y=145)
+weight=Entry(root, textvariable=Weight, width=4, font="arial 50", bg="#fff", fg="#000", bd=0, justify=CENTER)
+weight.place(x=272,y=145)
+
+scale=PhotoImage
 root.mainloop()
