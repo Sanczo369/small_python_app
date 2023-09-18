@@ -1,4 +1,6 @@
 from tkinter import *
+from tkinter import ttk
+import tkinter as tk
 
 root=Tk()
 root.title("BMI Calculator")
@@ -21,8 +23,23 @@ Height=StringVar()
 Weight=StringVar()
 height=Entry(root, textvariable=Height, width=4, font="arial 50", bg="#fff", fg="#000", bd=0, justify=CENTER)
 height.place(x=52,y=145)
+#Height.set(get_current_value())
 weight=Entry(root, textvariable=Weight, width=4, font="arial 50", bg="#fff", fg="#000", bd=0, justify=CENTER)
 weight.place(x=272,y=145)
+#Weight.set(get_current_value())
+
+
+
+
+current_value = tk.DoubleVar()
+slider= ttk.Scale(root, from_=0, to=220, orient="horizontal")
+slider.place(x=80, y=236)
+
+
+slider= ttk.Scale(root, from_=0, to=220, orient="horizontal")
+slider.place(x=300, y=236)
+
+
 
 scale=PhotoImage
 root.mainloop()
