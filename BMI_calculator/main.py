@@ -29,7 +29,11 @@ weight.place(x=272,y=145)
 #Weight.set(get_current_value())
 
 
+def get_current_value():
+    return '{: .2f}'.format(current_value.get())
 
+def slider_changed(event):
+    Height.set(get_current_value())
 
 current_value = tk.DoubleVar()
 slider= ttk.Scale(root, from_=0, to=220, orient="horizontal")
