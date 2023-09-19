@@ -26,7 +26,7 @@ height.place(x=52,y=145)
 #Height.set(get_current_value())
 weight=Entry(root, textvariable=Weight, width=4, font="arial 50", bg="#fff", fg="#000", bd=0, justify=CENTER)
 weight.place(x=272,y=145)
-#Weight.set(get_current_value())
+#Weight.set(get_current_value2())
 
 
 
@@ -57,7 +57,7 @@ slider2= ttk.Scale(root, from_=0, to=200, orient="horizontal", style="TScale", c
 slider2.place(x=300, y=236)
 
 
-
+Button(root,text="Raport", width=15,height=2,font="arial 10 bold", bg="#1f6e68", fg="white").place(x=280,y=340)
 
 
 scale=PhotoImage
