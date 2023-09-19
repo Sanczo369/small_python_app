@@ -15,7 +15,23 @@ def BMI():
 
     m=h/100
     bmi=round(float(w/m**2),1)
-    print(bmi)
+    label1.config(text=bmi)
+
+    if bmi<=18.5:
+        label2.config(text="Niedowaga")
+        label3.config(text="Masz wagę mniejszą niż prawidłowa waga")
+
+    elif bmi>18.5 and bmi<=25:
+        label2.config(text="Prawidłowa waga")
+        label3.config(text="Masz  prawidłową wagę")
+
+    elif bmi>25 and bmi<=30:
+        label2.config(text="Nadwaga")
+        label3.config(text="Masz wagę większą niż prawidłowa waga")
+
+    else:
+        label2.config(text="Otyłość")
+        label3.config(text="Jest możliwość zagrożenia życia")
 
 top=PhotoImage(file="top.png")
 top_image=Label(root, image=top, background="#f0f1f5")
