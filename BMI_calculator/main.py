@@ -44,6 +44,18 @@ slider= ttk.Scale(root, from_=0, to=220, orient="horizontal", style="TScale", co
 slider.place(x=80, y=236)
 
 
+# Slider 2
+current_value2 = tk.DoubleVar()
+
+def get_current_value2():
+    return '{: .2f}'.format(current_value2.get())
+
+def slider_changed2(event):
+    Weight.set(get_current_value2())
+
+slider2= ttk.Scale(root, from_=0, to=200, orient="horizontal", style="TScale", command=slider_changed2, variable=current_value2)
+slider2.place(x=300, y=236)
+
 
 
 
