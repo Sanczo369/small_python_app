@@ -9,6 +9,14 @@ root.resizable(False, False)
 root.configure(bg="#f0f1f5")
 root.iconbitmap('logo.ico')
 
+def BMI():
+    h=float(Height.get())
+    w=float(Weight.get())
+
+    m=h/100
+    bmi=round(float(w/m**2))
+    print(bmi)
+
 top=PhotoImage(file="top.png")
 top_image=Label(root, image=top, background="#f0f1f5")
 top_image.place(x=50,y=0)
@@ -57,7 +65,7 @@ slider2= ttk.Scale(root, from_=0, to=200, orient="horizontal", style="TScale", c
 slider2.place(x=300, y=236)
 
 
-Button(root,text="Raport", width=15,height=2,font="arial 10 bold", bg="#1f6e68", fg="white").place(x=280,y=340)
+Button(root,text="Raport", width=15,height=2,font="arial 10 bold", bg="#1f6e68", fg="white", command=BMI).place(x=280,y=340)
 
 
 scale=PhotoImage
