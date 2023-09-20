@@ -27,7 +27,7 @@ age_value = StringVar()
 
 name_entry = Entry(root,textvariable=name_value, width=45, bd=2, font=20)
 contact_entry = Entry(root,textvariable=contact_value, width=45, bd=2, font=20)
-age_entry = Entry(root,textvariable=age_value, width=45, bd=2, font=20)
+age_entry = Entry(root,textvariable=age_value, width=15, bd=2, font=20)
 gender_combobox= Combobox(root,values=['M','K'], font="arial 14", state='r', width=14)
 address_entry= Text(root, width=50, height=4, bd=4)
 
@@ -37,5 +37,8 @@ age_entry.place(x=200,y=200)
 gender_combobox.place(x=440,y=200)
 address_entry.place(x=200,y=250)
 
+Button(root, text="Zatwierd", bg="#326273", fg="white", width=15, height=2).place(x=200,y=350)
+Button(root, text="Wyczyść", bg="#326273", fg="white", width=15, height=2).place(x=340,y=350)
+Button(root, text="Zamknij", bg="#326273", fg="white", width=15, height=2).place(x=480,y=350)
 
 root.mainloop()
