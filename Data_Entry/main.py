@@ -13,6 +13,15 @@ root.resizable(False, False)
 root.configure(bg="#326273")
 # root.iconbitmap('logo.ico')
 
+
+def clear():
+    name_value.set('')
+    contact_value.set('')
+    age_value.set('')
+    address_entry.delete(1.0,END)
+
+
+
 Label(root, text="Proszę o wypełnienie formularza zgłoszeniowego", font="arial 13", bg="#326273", fg="#fff").place(x=20,y=20)
 
 Label(root, text="Imię", font=23, bg="#326273", fg="#fff").place(x=50,y=100)
@@ -38,7 +47,7 @@ gender_combobox.place(x=440,y=200)
 address_entry.place(x=200,y=250)
 
 Button(root, text="Zatwierd", bg="#326273", fg="white", width=15, height=2).place(x=200,y=350)
-Button(root, text="Wyczyść", bg="#326273", fg="white", width=15, height=2).place(x=340,y=350)
-Button(root, text="Zamknij", bg="#326273", fg="white", width=15, height=2).place(x=480,y=350)
+Button(root, text="Wyczyść", bg="#326273", fg="white", width=15, height=2, command=clear).place(x=340,y=350)
+Button(root, text="Zamknij", bg="#326273", fg="white", width=15, height=2, command=quit).place(x=480,y=350)
 
 root.mainloop()
