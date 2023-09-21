@@ -7,6 +7,9 @@ root = Tk()
 root.title("Google Translator")
 root.geometry("1080x400")
 
+arrow_image=PhotoImage(file="arrow.png")
+image_label=Label(root,image=arrow_image, width=150)
+image_label.place(x=460, y=50)
 
 language = googletrans.LANGUAGES
 languageV = list(language.values())
