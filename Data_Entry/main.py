@@ -36,6 +36,13 @@ def submit():
     sheet.cell(column=5, row=sheet.max_row, value=address)
     file.save(r'Backened_Data.xlsx')
 
+    messagebox.showinfo("info","Dodano!")
+    name_value.set('')
+    contact_value.set('')
+    age_value.set('')
+    address_entry.delete(1.0,END)
+
+
 Label(root, text="Proszę o wypełnienie formularza zgłoszeniowego", font="arial 13", bg="#326273", fg="#fff").place(x=20,y=20)
 
 Label(root, text="Imię", font=23, bg="#326273", fg="#fff").place(x=50,y=100)
