@@ -13,6 +13,19 @@ root.resizable(False, False)
 root.configure(bg="#326273")
 # root.iconbitmap('logo.ico')
 
+file=pathlib.Path('Backened_Data.xlsx')
+if file.exists():
+    pass
+else:
+    file=Workbook()
+    sheet=file.active
+    sheet['A1']="Nazwa"
+    sheet['B1']="Numer Telefonu"
+    sheet['C1']="Wiek"
+    sheet['D1']='Płeć'
+    sheet['E1']='Adres'
+
+    file.save('Backened_Data.xlsx')
 
 def clear():
     name_value.set('')
