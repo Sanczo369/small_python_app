@@ -55,6 +55,8 @@ scrollbar2.pack(side="right", fill="y")
 scrollbar2.configure(command=text2.yview)
 text2.configure(yscrollcommand=scrollbar2.set)
 
+translate= Button(root, text="Translate", font="Roboto 15 bold italic", activebackground="purple", cursor="hand2", bd=5, bg='red', fg='white')
+translate.place(x=480, y=250)
 root.configure(bg="white")
 label_change()
 root.mainloop()
