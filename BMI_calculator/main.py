@@ -84,15 +84,15 @@ slider2.place(x=300, y=236)
 Button(root,text="Raport", width=15,height=2,font="arial 10 bold", bg="#1f6e68", fg="white", command=BMI).place(x=280,y=340)
 
 label1= Label(root, font="arial 60 bold", bg="lightblue", fg="#fff")
-label1.place(x=125,y=305)
+label1.place(x=45,y=305)
 
 
 label2= Label(root, font="arial 20 bold", bg="lightblue", fg="#3b3a3a")
-label2.place(x=280,y=430)
+label2.place(x=180,y=430)
 
 
-label3= Label(root, font="arial 60 bold", bg="lightblue")
-label3.place(x=200,y=500)
+label3= Label(root, font="arial 15 bold", bg="lightblue")
+label3.place(x=50,y=500)
 
 scale=PhotoImage
 root.mainloop()
