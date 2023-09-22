@@ -11,7 +11,7 @@ root.title("Data Entry")
 root.geometry('700x400+300+200')
 root.resizable(False, False)
 root.configure(bg="#326273")
-# root.iconbitmap('logo.ico')
+root.iconbitmap('logo.ico')
 
 file=pathlib.Path('Backened_Data.xlsx')
 if file.exists():
