@@ -6,6 +6,7 @@ import textblob
 root = Tk()
 root.title("Google Translator")
 root.geometry("1080x400")
+root.iconbitmap('logo.ico')
 
 arrow_image=PhotoImage(file="arrow.png")
 image_label=Label(root,image=arrow_image, width=150)
