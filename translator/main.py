@@ -8,6 +8,14 @@ root.title("Google Translator")
 root.geometry("1080x400")
 root.iconbitmap('logo.ico')
 
+def label_change():
+    c=combo1.get()
+    c1=combo2.get()
+    label1.configure(text=c)
+    label2.configure(text=c1)
+    root.after(1000, label_change)
+
+
 arrow_image=PhotoImage(file="arrow.png")
 image_label=Label(root,image=arrow_image, width=150)
 image_label.place(x=460, y=50)
@@ -46,5 +54,7 @@ scrollbar2=Scrollbar(f1)
 scrollbar2.pack(side="right", fill="y")
 scrollbar2.configure(command=text2.yview)
 text2.configure(yscrollcommand=scrollbar2.set)
+
 root.configure(bg="white")
+label_change()
 root.mainloop()
