@@ -87,3 +87,5 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 ## BMI CALCULATOR
 
 ## Data Entry
+
+## Translate
