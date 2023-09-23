@@ -60,12 +60,12 @@ pip install qrcode
 ## To Do List
 Aplikacja "To-Do List" (lista zadań) jest narzędziem, które pomaga użytkownikom organizować swoje obowiązki, zadania i plany w sposób bardziej efektywny.
 ## Oto rozkład kodu:
-= Importowanie Tkinter:
-= Inicjalizacja głównego okna:
-- Ustawienie tytułu, rozmiaru i tła:
-- Zmienna "value":
-- Funkcja "add":
-- Główna pętla programu:
+= Importowanie Tkinter
+= Inicjalizacja głównego okna
+- Ustawienie tytułu, rozmiaru i tła
+- Zmienna "value"
+- Funkcja "add"
+- Główna pętla programu
 
 
 ## Time and data
@@ -87,12 +87,12 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 ## BMI CALCULATOR
 Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie podanych danych takich jak masa ciała i wzrost. Dzięki temu dowiesz się, czy Twoja waga jest w normie, czy może wymaga pewnych zmian.
 ## Oto rozkład kodu:
-= Importowanie Tkinter:
-= Inicjalizacja głównego okna:
-- Ustawienie tytułu, rozmiaru i tła:
-- Funkcja BMI():
-- Tworzenie interfejsu użytkownika:
-- Główna pętla programu:
+- Importowanie Tkinter
+- Inicjalizacja głównego okna
+- Ustawienie tytułu, rozmiaru i tła
+- Funkcja BMI()
+- Tworzenie interfejsu użytkownika
+- Główna pętla programu
 ## Data Entry
 
 ## Translate
