@@ -94,5 +94,14 @@ Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie po
 - Tworzenie interfejsu użytkownika
 - Główna pętla programu
 ## Data Entry
-
+Aplikacja umożliwia wprowadzanie danych osobowych do arkusza kalkulacyjnego i zapisywanie ich w pliku "Backened_Data.xlsx".
+## Oto rozkład kodu:
+- Importowanie potrzebnych modułów:(openpyxl, xlrd,tkinter)
+- Inicjalizacja głównego okna aplikacji:
+- Sprawdzanie istnienia pliku "Backened_Data.xlsx" i jego tworzenie, jeśli nie istnieje.
+- Funkcje clear() i submit():
+clear(): Czyści wprowadzone dane w polach tekstowych i komboboxie.
+submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjnego "Backened_Data.xlsx", wyświetla komunikat o sukcesie i czyści pola wprowadzania.
+- Tworzenie etykiet, pól tekstowych, komboboxa i przycisków w oknie głównym aplikacji.
+- Uruchamianie root.mainloop()
 ## Translate
