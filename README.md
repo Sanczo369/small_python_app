@@ -106,4 +106,14 @@ submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjneg
 - Uruchamianie root.mainloop()
 ## White_board
 Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika (GUI) wykorzystującym bibliotekę Tkinter w Pythonie.
+## Oto rozkład kodu:
+- Interfejs użytkownika
+- Rysunek na płótnie
+- Paleta kolorów
+- Suwak grubości linii
+- Przycisk Gumki 
+- Funkcjonalność rysowania
+- Wybór koloru
+- Regulacja grubości linii
+- Wyczyść płótno
 ## Translate
