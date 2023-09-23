@@ -85,7 +85,14 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - question_model.py
 - logo.ico
 ## BMI CALCULATOR
-
+Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie podanych danych takich jak masa ciała i wzrost. Dzięki temu dowiesz się, czy Twoja waga jest w normie, czy może wymaga pewnych zmian.
+## Oto rozkład kodu:
+= Importowanie Tkinter:
+= Inicjalizacja głównego okna:
+- Ustawienie tytułu, rozmiaru i tła:
+- Funkcja BMI():
+- Tworzenie interfejsu użytkownika:
+- Główna pętla programu:
 ## Data Entry
 
 ## Translate
