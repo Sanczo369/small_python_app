@@ -104,4 +104,6 @@ clear(): Czyści wprowadzone dane w polach tekstowych i komboboxie.
 submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjnego "Backened_Data.xlsx", wyświetla komunikat o sukcesie i czyści pola wprowadzania.
 - Tworzenie etykiet, pól tekstowych, komboboxa i przycisków w oknie głównym aplikacji.
 - Uruchamianie root.mainloop()
+## White_board
+Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika (GUI) wykorzystującym bibliotekę Tkinter w Pythonie.
 ## Translate
