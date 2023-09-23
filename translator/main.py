@@ -15,6 +15,23 @@ def label_change():
     label2.configure(text=c1)
     root.after(1000, label_change)
 
+def translate_now():
+    global language
+    try:
+        text_=text1.get(1.0,END)
+        c2=combo1.get()
+        c3=combo2.get()
+        if (text_):
+            words=textblob.TextBlob(text_)
+            lan=words.detect_language()
+            for i,j in language.items():
+                if(j==c3):
+                    lan_=i
+            words=words.translate(from_lang=lan,to=str(lan_))
+            text2.delete(1.0,END)
+            text2.insert(END,words)
+    except Exception as e:
+        messagebox.showerror("googletrans", f"please try again       {e}")
 
 arrow_image=PhotoImage(file="arrow.png")
 image_label=Label(root,image=arrow_image, width=150)
@@ -55,7 +72,7 @@ scrollbar2.pack(side="right", fill="y")
 scrollbar2.configure(command=text2.yview)
 text2.configure(yscrollcommand=scrollbar2.set)
 
-translate= Button(root, text="Translate", font="Roboto 15 bold italic", activebackground="purple", cursor="hand2", bd=5, bg='red', fg='white')
+translate= Button(root, text="Translate", font="Roboto 15 bold italic", activebackground="purple", cursor="hand2", bd=5, bg='red', fg='white', command=translate_now)
 translate.place(x=480, y=250)
 root.configure(bg="white")
 label_change()
