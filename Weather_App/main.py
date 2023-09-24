@@ -43,3 +43,18 @@ label3.place(x=430, y=400)
 
 label4=Label(root, text="CIŚNIENIE", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
 label4.place(x=650, y=400)
+
+t=Label(font=("arial", 15, "bold"), fg="#ee666d")
+t.place(x=400, y=150)
+c=Label(font=("arial", 15, "bold"))
+c.place(x=400, y=250)
+
+w=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
+w.place(x=120, y=430)
+h=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
+h.place(x=280, y=430)
+d=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
+d.place(x=450, y=430)
+p=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
+p.place(x=670, y=430)
+root.mainloop()
