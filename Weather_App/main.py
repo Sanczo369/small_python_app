@@ -20,3 +20,13 @@ textfield.focus()
 myimage_icon = Button(borderwidth=0, cursor="hand2", bg="#404040")
 myimage_icon.place(x=400, y=34)
 root.mainloop()
+
+#logo
+Logo_image=PhotoImage(file="logo.png")
+logo=Label(image=Logo_image)
+logo.place(x=150, y=100)
+
+# Bottom box
+Frame_image = PhotoImage(file='box.png')
+frame_myimage=Label(image=Frame_image)
+frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
