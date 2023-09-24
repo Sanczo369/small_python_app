@@ -60,12 +60,12 @@ pip install qrcode
 ## To Do List
 Aplikacja "To-Do List" (lista zadań) jest narzędziem, które pomaga użytkownikom organizować swoje obowiązki, zadania i plany w sposób bardziej efektywny.
 ## Oto rozkład kodu:
-= Importowanie Tkinter:
-= Inicjalizacja głównego okna:
-- Ustawienie tytułu, rozmiaru i tła:
-- Zmienna "value":
-- Funkcja "add":
-- Główna pętla programu:
+= Importowanie Tkinter
+= Inicjalizacja głównego okna
+- Ustawienie tytułu, rozmiaru i tła
+- Zmienna "value"
+- Funkcja "add"
+- Główna pętla programu
 
 
 ## Time and data
@@ -85,5 +85,35 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - question_model.py
 - logo.ico
 ## BMI CALCULATOR
-
+Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie podanych danych takich jak masa ciała i wzrost. Dzięki temu dowiesz się, czy Twoja waga jest w normie, czy może wymaga pewnych zmian.
+## Oto rozkład kodu:
+- Importowanie Tkinter
+- Inicjalizacja głównego okna
+- Ustawienie tytułu, rozmiaru i tła
+- Funkcja BMI()
+- Tworzenie interfejsu użytkownika
+- Główna pętla programu
 ## Data Entry
+Aplikacja umożliwia wprowadzanie danych osobowych do arkusza kalkulacyjnego i zapisywanie ich w pliku "Backened_Data.xlsx".
+## Oto rozkład kodu:
+- Importowanie potrzebnych modułów:(openpyxl, xlrd,tkinter)
+- Inicjalizacja głównego okna aplikacji:
+- Sprawdzanie istnienia pliku "Backened_Data.xlsx" i jego tworzenie, jeśli nie istnieje.
+- Funkcje clear() i submit():
+clear(): Czyści wprowadzone dane w polach tekstowych i komboboxie.
+submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjnego "Backened_Data.xlsx", wyświetla komunikat o sukcesie i czyści pola wprowadzania.
+- Tworzenie etykiet, pól tekstowych, komboboxa i przycisków w oknie głównym aplikacji.
+- Uruchamianie root.mainloop()
+## White_board
+Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika (GUI) wykorzystującym bibliotekę Tkinter w Pythonie.
+## Oto rozkład kodu:
+- Interfejs użytkownika
+- Rysunek na płótnie
+- Paleta kolorów
+- Suwak grubości linii
+- Przycisk Gumki 
+- Funkcjonalność rysowania
+- Wybór koloru
+- Regulacja grubości linii
+- Wyczyść płótno
+## Translate
