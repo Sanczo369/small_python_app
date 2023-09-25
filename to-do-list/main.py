@@ -20,6 +20,21 @@ def add():
     del_btn.grid(row=1 + value, column=1)
     value+=1
 
+def openTaskFile():
+    try:
+        global task_list
+        with open("tasklist.txt", "r") as taskfile:
+            tasks = taskfile.readlines()
+
+        for task in tasks:
+            if task !='n':
+                task_list.append(task)
+                listbox.insert(END, task)
+
+    except:
+        file = open("tasklist.txt", "w")
+        file.close()
+
 heading=Label(root, text="Lista zadań", font=("Arial", 20, 'bold'), fg="white", bg="#32405b")
 heading.place(x=130, y=20)
 
