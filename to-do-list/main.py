@@ -2,8 +2,8 @@ from tkinter import *
 
 root = Tk()
 root.title('To Do List')
-root.geometry("400x650+400+100")
-root.config(bg='black')
+root.geometry("400x550+400+100")
+root.config(bg='#32405b')
 root.iconbitmap('logo.ico')
 
 task_list=[]
@@ -45,5 +45,7 @@ scrollbar.pack(side=RIGHT, fill= BOTH)
 listbox.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=listbox.yview)
 
+Delete_icon=PhotoImage(file="bin.png")
+Button(root,text="Usuń", width=6, font=("Arial", 16, 'bold'), bg="#ff0000", fg='#ffffff').pack(side=BOTTOM, pady=13)
 
 root.mainloop()
