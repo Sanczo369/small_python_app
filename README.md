@@ -107,7 +107,7 @@ submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjneg
 - Uruchamianie root.mainloop()
 ## White_board
 Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika (GUI) wykorzystującym bibliotekę Tkinter w Pythonie.
-## Oto rozkład kodu:
+### Oto rozkład kodu:
 - Interfejs użytkownika
 - Rysunek na płótnie
 - Paleta kolorów
@@ -118,3 +118,9 @@ Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika
 - Regulacja grubości linii
 - Wyczyść płótno
 ## Translate
+Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do tworzenia interfejsu graficznego użytkownika (GUI). Aplikacja przy pomocy modułu googletrans tłumaczy tekstu przy użyciu Google Translate.
+### Oto rozkład kodu:
+- Importowanie niezbędnych modułów i bibliotek
+- Definiowanie dwóch głównych funkcji:label_change() i translate_now()
+- Tworzenie elementów interfejsu graficznego
+- Inicjalizacja aplikacji
