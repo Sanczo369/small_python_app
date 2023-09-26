@@ -11,6 +11,7 @@ root=Tk()
 root.title("Weather_App")
 root.geometry('900x500+300+200')
 root.resizable(False,False)
+root.iconbitmap('logo.ico')
 
 #search box
 textfield = tk.Entry(root, justify='center', width=17, font=("poppins", 25, "bold"), bg="#404040", fg="white")
@@ -21,10 +22,6 @@ myimage_icon = Button(borderwidth=0, cursor="hand2", bg="#404040")
 myimage_icon.place(x=400, y=34)
 
 
-#logo
-# Logo_image=PhotoImage(file="logo.png")
-# logo=Label(image=Logo_image)
-# logo.place(x=150, y=100)
 #
 # # Bottom box
 # Frame_image = PhotoImage(file='box.png')
