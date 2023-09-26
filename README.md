@@ -10,7 +10,6 @@ Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym 
 - Inicjalizacja głównego okna root 
 - Konfiguracja okna, ikony, tytułu i rozmiaru.
 - Tworzenie elementów interfejsu: etykiety, przycisk
-
 ### Opis działania
 Aplikacja skupia się na grze "Kółko i krzyżyk", umożliwiając rozpoczęcie rozgrywki, wyświetlenie informacji o autorze i zamknięcie programu. Plansza gry jest obsługiwana przez funkcje make_move, check_winner i announce_winner. Gdy gra zostanie zakończona, pojawi się okno z informacją o zwycięzcy. Po zakończeniu gry użytkownik może wrócić do głównego menu.
   
@@ -29,8 +28,9 @@ Jest to program w języku Python wykorzystujący bibliotekę Tkinter do stworzen
 - Mnożenie (x)
 - Dzielenie (÷)
 - Procent liczby (%)
-
+### Opis działania
 Ten kod tworzy podstawową aplikację kalkulatora z prostym interfejsem użytkownika. Użytkownicy mogą wykonywać podstawowe operacje arytmetyczne, klikając przyciski, a wynik jest wyświetlany w polu wejściowym.
+
 ## Generowania kodów QR
 Aplikacją do generowania kodów QR z interfejsem graficznym przy użyciu biblioteki qrcode, tkinter, i PIL. 
 ### Bibliotekę qrcode
@@ -39,8 +39,6 @@ pip install qrcode
 
 ## Stoper
  Aplikacja Stoper napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi uruchamianie, zatrzymywanie i resetowanie stopera.
-
-
 ### Oto rozkład kodu:
 - Importowanie modułów
 - Inicjalizacja zmiennych
@@ -50,7 +48,6 @@ pip install qrcode
 - Tworzenie interfejsu użytkownika
 - Układ elementów
 - Uruchomienie głównej pętli Tkinter:
-
 ### Funkcje
 - start(): Rozpoczyna działanie stopera, wywołując funkcję update().
 - pause(): Zatrzymuje stoper poprzez anulowanie aktualizacji czasu.
@@ -68,7 +65,6 @@ Aplikacja zapisuje liste zadań do plku txt co pozwala przy ponownym uruchomieni
 - Funkcja "add"
 - Główna pętla programu
 
-
 ## Time and data
 Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi wyświetlenie aktualnej godziny oraz daty.
 ### Oto rozkład kodu:
@@ -77,7 +73,7 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - Definiowanie funkcji update
 - Tworzenie elementów GUI
 
-  ## Quiz
+## Quiz
 ### Pliki
 - quiz_ui.py
 - quiz_data.py
@@ -85,6 +81,7 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - main.py
 - question_model.py
 - logo.ico
+
 ## BMI CALCULATOR
 Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie podanych danych takich jak masa ciała i wzrost. Dzięki temu dowiesz się, czy Twoja waga jest w normie, czy może wymaga pewnych zmian.
 ### Oto rozkład kodu:
@@ -94,6 +91,7 @@ Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie po
 - Funkcja BMI()
 - Tworzenie interfejsu użytkownika
 - Główna pętla programu
+
 ## Data Entry
 Aplikacja umożliwia wprowadzanie danych osobowych do arkusza kalkulacyjnego i zapisywanie ich w pliku "Backened_Data.xlsx".
 ### Oto rozkład kodu:
@@ -105,6 +103,7 @@ clear(): Czyści wprowadzone dane w polach tekstowych i komboboxie.
 submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjnego "Backened_Data.xlsx", wyświetla komunikat o sukcesie i czyści pola wprowadzania.
 - Tworzenie etykiet, pól tekstowych, komboboxa i przycisków w oknie głównym aplikacji.
 - Uruchamianie root.mainloop()
+  
 ## White_board
 Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika (GUI) wykorzystującym bibliotekę Tkinter w Pythonie.
 ### Oto rozkład kodu:
@@ -117,6 +116,7 @@ Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika
 - Wybór koloru
 - Regulacja grubości linii
 - Wyczyść płótno
+
 ## Translate
 Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do tworzenia interfejsu graficznego użytkownika (GUI). Aplikacja przy pomocy modułu googletrans tłumaczy tekstu przy użyciu Google Translate.
 ### Oto rozkład kodu:
