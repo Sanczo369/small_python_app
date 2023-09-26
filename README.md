@@ -59,7 +59,8 @@ pip install qrcode
 
 ## To Do List
 Aplikacja "To-Do List" (lista zadań) jest narzędziem, które pomaga użytkownikom organizować swoje obowiązki, zadania i plany w sposób bardziej efektywny.
-## Oto rozkład kodu:
+Aplikacja zapisuje liste zadań do plku txt co pozwala przy ponownym uruchomieniu aplikacji widok zadań które były wpisane wcześniej i nie zostały usunięty podczas poprzedniego używania aplikacji
+### Oto rozkład kodu:
 = Importowanie Tkinter
 = Inicjalizacja głównego okna
 - Ustawienie tytułu, rozmiaru i tła
@@ -86,7 +87,7 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - logo.ico
 ## BMI CALCULATOR
 Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie podanych danych takich jak masa ciała i wzrost. Dzięki temu dowiesz się, czy Twoja waga jest w normie, czy może wymaga pewnych zmian.
-## Oto rozkład kodu:
+### Oto rozkład kodu:
 - Importowanie Tkinter
 - Inicjalizacja głównego okna
 - Ustawienie tytułu, rozmiaru i tła
@@ -95,7 +96,7 @@ Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie po
 - Główna pętla programu
 ## Data Entry
 Aplikacja umożliwia wprowadzanie danych osobowych do arkusza kalkulacyjnego i zapisywanie ich w pliku "Backened_Data.xlsx".
-## Oto rozkład kodu:
+### Oto rozkład kodu:
 - Importowanie potrzebnych modułów:(openpyxl, xlrd,tkinter)
 - Inicjalizacja głównego okna aplikacji:
 - Sprawdzanie istnienia pliku "Backened_Data.xlsx" i jego tworzenie, jeśli nie istnieje.
