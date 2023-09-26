@@ -58,8 +58,8 @@ pip install qrcode
 Aplikacja "To-Do List" (lista zadań) jest narzędziem, które pomaga użytkownikom organizować swoje obowiązki, zadania i plany w sposób bardziej efektywny.
 Aplikacja zapisuje liste zadań do plku txt co pozwala przy ponownym uruchomieniu aplikacji widok zadań które były wpisane wcześniej i nie zostały usunięty podczas poprzedniego używania aplikacji
 ### Oto rozkład kodu:
-= Importowanie Tkinter
-= Inicjalizacja głównego okna
+- Importowanie Tkinter
+- Inicjalizacja głównego okna
 - Ustawienie tytułu, rozmiaru i tła
 - Zmienna "value"
 - Funkcja "add"
