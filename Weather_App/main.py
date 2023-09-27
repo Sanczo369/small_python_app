@@ -25,10 +25,10 @@ myimage_icon = Button(image=Search_icon, borderwidth=0, cursor="hand2", bg="#404
 myimage_icon.place(x=359, y=40)
 
 
-# # Bottom box
-# Frame_image = PhotoImage(file='box.png')
-# frame_myimage=Label(image=Frame_image)
-# frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
+# Bottom box
+Frame_image = PhotoImage(file='box.png')
+frame_myimage=Label(image=Frame_image)
+frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
 
 #label
 label1=Label(root, text="WIATR", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
