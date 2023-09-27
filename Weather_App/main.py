@@ -8,6 +8,19 @@ from datetime import datetime
 import requests
 import pytz
 
+def get_weather():
+    city=textfield.get()
+    geolocator= Nominatim(user_agent="geoapiExercises")
+    location= geolocator.geocode(city)
+    obj = TimezoneFinder()
+    result= obj.timezone_at(lng=location.longitude, lat=location.latitude)
+    home= pytz.timezone(result)
+    local_time=datetime.now(home)
+    current_time=local_time.strftime("%I:%M %p")
+    clock.config(text=current_time)
+    name.config(text="AKTUALNA POGODA")
+
+
 root=Tk()
 root.title("Weather_App")
 root.geometry('900x500+300+200')
@@ -28,20 +41,20 @@ myimage_icon.place(x=359, y=40)
 # Bottom box
 Frame_image = PhotoImage(file='box.png')
 frame_myimage=Label(image=Frame_image)
-frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
+frame_myimage.place(x=50, y=398)
 
 #label
 label1=Label(root, text="WIATR", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
-label1.place(x=120, y=400)
+label1.place(x=100, y=400)
 
 label2=Label(root, text="WILGOTNOŚĆ", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
 label2.place(x=250, y=400)
 
 label3=Label(root, text="OPIS", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
-label3.place(x=430, y=400)
+label3.place(x=460, y=400)
 
 label4=Label(root, text="CIŚNIENIE", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
-label4.place(x=650, y=400)
+label4.place(x=600, y=400)
 
 t=Label(font=("arial", 15, "bold"), fg="#ee666d")
 t.place(x=400, y=150)
@@ -51,9 +64,9 @@ c.place(x=400, y=250)
 w=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
 w.place(x=120, y=430)
 h=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
-h.place(x=280, y=430)
+h.place(x=315, y=430)
 d=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
-d.place(x=450, y=430)
+d.place(x=470, y=430)
 p=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
-p.place(x=670, y=430)
+p.place(x=640, y=430)
 root.mainloop()
