@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+from PIL import Image, ImageTk
 from geopy.geocoders import Nominatim
 from tkinter import ttk, messagebox
 from timezonefinder import TimezoneFinder
@@ -17,12 +18,13 @@ root.iconbitmap('logo.ico')
 textfield = tk.Entry(root, justify='center', width=17, font=("poppins", 25, "bold"), bg="#404040", fg="white")
 textfield.place(x=50, y=40)
 textfield.focus()
+
 #search icon
-myimage_icon = Button(borderwidth=0, cursor="hand2", bg="#404040")
-myimage_icon.place(x=400, y=34)
+Search_icon=PhotoImage(file="lupa.png")
+myimage_icon = Button(image=Search_icon, borderwidth=0, cursor="hand2", bg="#404040")
+myimage_icon.place(x=359, y=40)
 
 
-#
 # # Bottom box
 # Frame_image = PhotoImage(file='box.png')
 # frame_myimage=Label(image=Frame_image)
