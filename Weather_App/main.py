@@ -11,7 +11,7 @@ import pytz
 def get_weather():
     try:
         city=textfield.get()
-        geolocator= Nominatim(user_agent="xxxxx")
+        geolocator= Nominatim(user_agent="Sanczo369")
         location= geolocator.geocode(city)
         obj = TimezoneFinder()
         result= obj.timezone_at(lng=location.longitude, lat=location.latitude)
@@ -21,12 +21,12 @@ def get_weather():
         clock.config(text=current_time)
         name.config(text="AKTUALNA POGODA")
 
-        api=f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&xxxxx"
+        api=f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&appid=1683215a7f24cee194ceae0b80f9efd1"
         json_data=requests.get(api).json()
 
         if 'weather' in json_data:
             condition = json_data['weather'][0]['main']
-            description = json_data['weather'][0]['description']
+            clouds = json_data['clouds']['all']
             temp = int(json_data["main"]["temp"]-273.15)
             pressure = json_data["main"]["pressure"]
             humidity = json_data['main']["humidity"]
@@ -34,10 +34,10 @@ def get_weather():
 
             t.config(text=f"{temp}°")
             c.config(text=f"{condition}| FEELS LIKE {temp}°")
-            w.config(text=wind)
-            h.config(text=humidity)
-            d.config(text=description)
-            p.config(text=pressure)
+            w.config(text=f"{wind}m/s")
+            h.config(text=f"{humidity}%")
+            d.config(text=f"{clouds}%")
+            p.config(text=f"{pressure}hPa")
         else:
             t.config(text="N/A")
             c.config(text="N/A")
@@ -79,28 +79,28 @@ clock.place(x=30, y=130)
 
 #label
 label1=Label(root, text="WIATR", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
-label1.place(x=100, y=400)
+label1.place(x=60, y=400)
 
 label2=Label(root, text="WILGOTNOŚĆ", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
-label2.place(x=250, y=400)
+label2.place(x=220, y=400)
 
-label3=Label(root, text="OPIS", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
-label3.place(x=460, y=400)
+label3=Label(root, text="ZACHMURZENIE", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
+label3.place(x=400, y=400)
 
 label4=Label(root, text="CIŚNIENIE", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
 label4.place(x=600, y=400)
 
-t=Label(font=("arial", 15, "bold"), fg="#ee666d")
+t=Label(font=("arial", 40, "bold"), fg="#ee666d")
 t.place(x=400, y=150)
 c=Label(font=("arial", 15, "bold"))
 c.place(x=400, y=250)
 
-w=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
-w.place(x=120, y=430)
-h=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
-h.place(x=315, y=430)
-d=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
-d.place(x=470, y=430)
-p=Label(text="...", font=("arial", 20, "bold"), fg="#1ab5ef")
-p.place(x=640, y=430)
+w=Label(text="", font=("arial", 20, "bold"), fg="white", bg="#1ab5ef")
+w.place(x=60, y=430)
+h=Label(text="", font=("arial", 20, "bold"), fg="white", bg="#1ab5ef")
+h.place(x=220, y=430)
+d=Label(text="", font=("arial", 20, "bold"), fg="white", bg="#1ab5ef")
+d.place(x=400, y=430)
+p=Label(text="", font=("arial", 20, "bold"), fg="white", bg="#1ab5ef")
+p.place(x=600, y=430)
 root.mainloop()
