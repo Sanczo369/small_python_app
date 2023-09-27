@@ -9,17 +9,45 @@ import requests
 import pytz
 
 def get_weather():
-    city=textfield.get()
-    geolocator= Nominatim(user_agent="geoapiExercises")
-    location= geolocator.geocode(city)
-    obj = TimezoneFinder()
-    result= obj.timezone_at(lng=location.longitude, lat=location.latitude)
-    home= pytz.timezone(result)
-    local_time=datetime.now(home)
-    current_time=local_time.strftime("%I:%M %p")
-    clock.config(text=current_time)
-    name.config(text="AKTUALNA POGODA")
+    try:
+        city=textfield.get()
+        geolocator= Nominatim(user_agent="xxxxx")
+        location= geolocator.geocode(city)
+        obj = TimezoneFinder()
+        result= obj.timezone_at(lng=location.longitude, lat=location.latitude)
+        home= pytz.timezone(result)
+        local_time=datetime.now(home)
+        current_time=local_time.strftime("%I:%M %p")
+        clock.config(text=current_time)
+        name.config(text="AKTUALNA POGODA")
 
+        api=f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&xxxxx"
+        json_data=requests.get(api).json()
+
+        if 'weather' in json_data:
+            condition = json_data['weather'][0]['main']
+            description = json_data['weather'][0]['description']
+            temp = int(json_data["main"]["temp"]-273.15)
+            pressure = json_data["main"]["pressure"]
+            humidity = json_data['main']["humidity"]
+            wind =json_data['wind']["speed"]
+
+            t.config(text=f"{temp}°")
+            c.config(text=f"{condition}| FEELS LIKE {temp}°")
+            w.config(text=wind)
+            h.config(text=humidity)
+            d.config(text=description)
+            p.config(text=pressure)
+        else:
+            t.config(text="N/A")
+            c.config(text="N/A")
+            w.config(text="N/A")
+            h.config(text="N/A")
+            d.config(text="N/A")
+            p.config(text="N/A")
+    except Exception as e:
+        # Handle other exceptions
+        print(f"An error occurred: {e}")
 
 root=Tk()
 root.title("Weather_App")
