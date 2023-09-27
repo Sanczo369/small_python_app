@@ -34,7 +34,7 @@ textfield.focus()
 
 #search icon
 Search_icon=PhotoImage(file="lupa.png")
-myimage_icon = Button(image=Search_icon, borderwidth=0, cursor="hand2", bg="#404040")
+myimage_icon = Button(image=Search_icon, borderwidth=0, cursor="hand2", bg="#404040", command=get_weather)
 myimage_icon.place(x=359, y=40)
 
 
@@ -42,6 +42,12 @@ myimage_icon.place(x=359, y=40)
 Frame_image = PhotoImage(file='box.png')
 frame_myimage=Label(image=Frame_image)
 frame_myimage.place(x=50, y=398)
+
+# time
+name=Label(root, font=("arial", 15, "bold"))
+name.place(x=30, y=100)
+clock=Label(root,font=("Helvetica", 20))
+clock.place(x=30, y=130)
 
 #label
 label1=Label(root, text="WIATR", font=("Helvetica", 15, "bold"), fg="white",bg="#1ab5ef")
