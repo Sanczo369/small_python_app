@@ -11,7 +11,7 @@ import pytz
 def get_weather():
     try:
         city=textfield.get()
-        geolocator= Nominatim(user_agent="Sanczo369")
+        geolocator= Nominatim(user_agent="xxxx")
         location= geolocator.geocode(city)
         obj = TimezoneFinder()
         result= obj.timezone_at(lng=location.longitude, lat=location.latitude)
@@ -21,7 +21,7 @@ def get_weather():
         clock.config(text=current_time)
         name.config(text="AKTUALNA POGODA")
 
-        api=f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&appid=1683215a7f24cee194ceae0b80f9efd1"
+        api=f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&xxxx"
         json_data=requests.get(api).json()
 
         if 'weather' in json_data:
