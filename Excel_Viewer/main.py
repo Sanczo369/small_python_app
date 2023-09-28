@@ -7,4 +7,11 @@ root.geometry("1100x400+200+200")
 root.configure(bg='#107C41')
 root.iconbitmap('logo.ico')
 
-root.mainloop()
+
+# Frame
+frame = Frame(root)
+frame.pack(pady=25)
+
+# Treeview
+tree = ttk.Treeview(frame)
+tree.pack()
