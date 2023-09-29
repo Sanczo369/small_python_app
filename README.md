@@ -124,3 +124,5 @@ Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do t
 - Definiowanie dwóch głównych funkcji:label_change() i translate_now()
 - Tworzenie elementów interfejsu graficznego
 - Inicjalizacja aplikacji
+
+## Excel_Viewer
