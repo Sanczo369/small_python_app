@@ -74,6 +74,7 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - Tworzenie elementów GUI
 
 ## Quiz
+Aplikacja Quiz napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja jest rodzaj zabawy, rozrywki intelektualnej, polegającej na odpowiedz na losowe pytania z 4 wariantami odpowiedzi.
 ### Pliki
 - quiz_ui.py
 - quiz_data.py
