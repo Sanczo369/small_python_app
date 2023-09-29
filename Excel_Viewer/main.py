@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk, messagebox, filedialog
-
+import numpy
 import pandas as pd
 
 root = Tk()
@@ -18,6 +18,20 @@ def Open():
             df = pd.read_excel(filename)
         except:
             messagebox.showerror("Error", "You can't access this file!")
+    tree.delete(*tree.get_children())
+
+    # nagłówek arkusza danych
+    tree["column"]= list(df.columns)
+    tree['show'] = "headings"
+
+    # tytuły nagłówków
+    for col in tree["column"]:
+        tree.heading(col, text=col)
+
+    #wprowadzone danych
+    df_rows = df.to_numpy().tolist()
+    for row in df_rows:
+        tree.insert("", "end", values=row)
 # Frame
 frame = Frame(root)
 frame.pack(pady=25)
