@@ -74,6 +74,7 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - Tworzenie elementów GUI
 
 ## Quiz
+Aplikacja Quiz napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja jest rodzaj zabawy, rozrywki intelektualnej, polegającej na odpowiedz na losowe pytania z 4 wariantami odpowiedzi.
 ### Pliki
 - quiz_ui.py
 - quiz_data.py
@@ -81,6 +82,9 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - main.py
 - question_model.py
 - logo.ico
+
+### Opis działania
+Aplikacjawyświetla pytanie oraz 4 warianty odpowiedzi po udzieleniu odpowiedzi gracz otrzymuje informacje o prawidłowej odpowiedzi. Po odpowiedzi na 10 pytań program wyświetla rezulta z informacją o procentowej skutecznośći oraz liczbie prawidłowych oraz błędnych odpowiedzi. Pytania pobierane są ze strony opentdb.com
 
 ## BMI CALCULATOR
 Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie podanych danych takich jak masa ciała i wzrost. Dzięki temu dowiesz się, czy Twoja waga jest w normie, czy może wymaga pewnych zmian.
