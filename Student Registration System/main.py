@@ -1,3 +1,4 @@
+from datetime import date
 from tkinter import *
 from xlsxwriter import Workbook
 import pathlib
@@ -49,5 +50,21 @@ Srch.place(x=1060, y=66)
 imageicon4=PhotoImage(file='img/arrow.png')
 Update_button=Button(root, image=imageicon4,bg='#c36464')
 Update_button.place(x=110, y=64)
+
+# Rejestracja No
+Label(root, text="Registration No:", font="arial 13", fg=framebg, bg=background).place(x=30, y=150)
+Registration=StringVar()
+reg_entry = Entry(root, textvariable=Registration, width=15, font="arial 10")
+reg_entry.place(x=160, y=150)
+
+# Rejestracja Data()
+Label(root, text="Date", font="arial 13", fg=framebg, bg=background).place(x=500, y=150)
+Date=StringVar()
+today = date.today()
+d1 = today.strftime("%d/%m/%Y")
+date_entry = Entry(root, textvariable=Date, width=15, font="arial 10")
+date_entry.place(x=550, y=150)
+Date.set(d1)
+
 
 root.mainloop()
