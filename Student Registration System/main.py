@@ -66,5 +66,29 @@ date_entry = Entry(root, textvariable=Date, width=15, font="arial 10")
 date_entry.place(x=550, y=150)
 Date.set(d1)
 
+# Dane Studenta
+obj=LabelFrame(root, text="Student's Details", font=20, bd=2, width=900, bg=framebg, fg=framefg, height=250, relief=GROOVE)
+obj.place(x=30, y=200)
+
+Label(obj,text="Full Name:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=50)
+Label(obj,text="Date of Birth:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=100)
+Label(obj,text="Gender:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=150)
+
+Label(obj,text="Class:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=50)
+Label(obj,text="Religion:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=100)
+Label(obj,text="Skills:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=150)
+
+# Dane Rodziców
+obj=LabelFrame(root, text="Parent's Details", font=20, bd=2, width=900, bg=framebg, fg=framefg, height=220, relief=GROOVE)
+obj.place(x=30, y=470)
+
+Label(obj,text="Father Name:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=50)
+Label(obj,text="Father's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=100)
+
+Label(obj,text="Mother Name:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=50)
+Label(obj,text="Mother's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=100)
+
+
+
 
 root.mainloop()
