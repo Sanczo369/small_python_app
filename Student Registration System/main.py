@@ -45,4 +45,9 @@ imageicon3= PhotoImage(file="img/lupa.png")
 Srch=Button(root,text="Search", compound=LEFT, image=imageicon3, width=123, bg="#68ddfa", font='arial 13 bold')
 Srch.place(x=1060, y=66)
 
+# Przycisk odśwież
+imageicon4=PhotoImage(file='img/arrow.png')
+Update_button=Button(root, image=imageicon4,bg='#c36464')
+Update_button.place(x=110, y=64)
+
 root.mainloop()
