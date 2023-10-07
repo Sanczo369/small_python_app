@@ -12,6 +12,7 @@ root.resizable(False,False)
 root.iconbitmap('img/logo.ico')
 root.config(bg=background)
 
+#Weryfikacja czy istnieje Student_data.xlsx
 file_path = 'Student_data.xlsx'
 file = pathlib.Path(file_path)
 if file.exists():
@@ -33,6 +34,8 @@ else:
     sheet.write('L1',"Mother's Occupation")
     workbook.close()
 
-
+#Górna Belka
+Label(root,text="Email:admin@gmail.com", width=10, height=3, bg='#f0687c', anchor='e').pack(side=TOP, fill=X)
+Label(root,text="STUDENT REGISTRATION", width=10, height=2, bg='#c36464', fg='#fff', font='arial 20 bold').pack(side=TOP, fill=X)
 
 root.mainloop()
