@@ -130,3 +130,4 @@ Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do t
 - Inicjalizacja aplikacji
 
 ## Excel_Viewer
+## Student Registration System
