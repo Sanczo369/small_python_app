@@ -121,11 +121,27 @@ obj2=LabelFrame(root, text="Parent's Details", font=20, bd=2, width=900, bg=fram
 obj2.place(x=30, y=470)
 
 Label(obj2,text="Father Name:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=50)
-Label(obj2,text="Father's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=100)
+Label(obj2,text="Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=100)
 
 Label(obj2,text="Mother Name:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=50)
-Label(obj2,text="Mother's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=100)
+Label(obj2,text="Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=100)
 
+# Entry Dane Rodziców
+F_Name = StringVar()
+f_entry = Entry(obj2, textvariable=F_Name, width=20, font="arial 10")
+f_entry.place(x=160, y=50)
+
+Father_Occupation = StringVar()
+FO_entry = Entry(obj2, textvariable=Father_Occupation, width=20, font="arial 10")
+FO_entry.place(x=160, y=100)
+
+M_Name = StringVar()
+m_entry = Entry(obj2, textvariable=M_Name, width=20, font="arial 10")
+m_entry.place(x=630, y=50)
+
+Mather_Occupation = StringVar()
+MO_entry = Entry(obj2, textvariable=Mather_Occupation, width=20, font="arial 10")
+MO_entry.place(x=630, y=100)
 
 
 
