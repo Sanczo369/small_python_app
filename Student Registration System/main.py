@@ -46,6 +46,11 @@ def selection():
     else:
         gender = "K"
         print(gender)
+
+# Exit
+def Exit():
+    root.destroy()
+
 #Górna Belka
 Label(root,text="Email:admin@gmail.com", width=10, height=3, bg='#f0687c', anchor='e').pack(side=TOP, fill=X)
 Label(root,text="STUDENT REGISTRATION", width=10, height=2, bg='#c36464', fg='#fff', font='arial 20 bold').pack(side=TOP, fill=X)
@@ -153,9 +158,10 @@ lbl.place(x=30, y=10)
 
 # button
 Button(root, text="Upload", width=19, height=2, font="arial 12 bold", bg="lightblue").place(x=1000, y=370)
-Button(root, text="Save", width=19, height=2, font="arial 12 bold", bg="lightblue").place(x=1000, y=450)
-Button(root, text="Reset", width=19, height=2, font="arial 12 bold", bg="lightblue").place(x=1000, y=530)
-Button(root, text="Exit", width=19, height=2, font="arial 12 bold", bg="lightblue").place(x=1000, y=610)
+saveButton = Button(root, text="Save", width=19, height=2, font="arial 12 bold", bg="lightgreen")
+saveButton.place(x=1000, y=450)
+Button(root, text="Reset", width=19, height=2, font="arial 12 bold", bg="lightpink").place(x=1000, y=530)
+Button(root, text="Exit", width=19, height=2, font="arial 12 bold", bg="grey", command=Exit).place(x=1000, y=610)
 
 
 root.mainloop()
