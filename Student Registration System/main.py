@@ -89,17 +89,7 @@ Label(obj,text="Class:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=
 Label(obj,text="Religion:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=100)
 Label(obj,text="Skills:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=150)
 
-# Dane Rodziców
-obj=LabelFrame(root, text="Parent's Details", font=20, bd=2, width=900, bg=framebg, fg=framefg, height=220, relief=GROOVE)
-obj.place(x=30, y=470)
-
-Label(obj,text="Father Name:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=50)
-Label(obj,text="Father's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=100)
-
-Label(obj,text="Mother Name:", font="arial 13", bg=framebg, fg=framefg).placEntrye(x=500,y=50)
-Label(obj,text="Mother's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=100)
-
-#
+# Entry Dane Studenta
 DOB = StringVar()
 dob_entry = Entry(obj, textvariable=DOB, width=20, font="arial 10")
 dob_entry.place(x=160, y=100)
@@ -119,11 +109,23 @@ religion_entry = Entry(obj,textvariable=Religion,width=20,font="arial 10")
 religion_entry.place(x=630, y=100)
 
 Skill = StringVar()
-skill_entry = Entry(obj,textvariable=Name, width=20, font="arial 10")
+skill_entry = Entry(obj,textvariable=Skill, width=20, font="arial 10")
 skill_entry.place(x=630, y=150)
 
 Class = Combobox(obj, values=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], font="Roboto 10", width=17, state="r")
 Class.place(x=630, y=50)
+Class.set("Select Class")
+
+# Dane Rodziców
+obj2=LabelFrame(root, text="Parent's Details", font=20, bd=2, width=900, bg=framebg, fg=framefg, height=220, relief=GROOVE)
+obj2.place(x=30, y=470)
+
+Label(obj2,text="Father Name:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=50)
+Label(obj2,text="Father's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=30,y=100)
+
+Label(obj2,text="Mother Name:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=50)
+Label(obj2,text="Mother's Occupation:", font="arial 13", bg=framebg, fg=framefg).place(x=500,y=100)
+
 
 
 
