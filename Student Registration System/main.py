@@ -35,6 +35,15 @@ else:
     sheet.write('L1',"Mother's Occupation")
     workbook.close()
 
+#Płeć
+def selection():
+    value=radio.get()
+    if value ==1:
+        gender = "M"
+        print(gender)
+    else:
+        gender = "K"
+        print(gender)
 #Górna Belka
 Label(root,text="Email:admin@gmail.com", width=10, height=3, bg='#f0687c', anchor='e').pack(side=TOP, fill=X)
 Label(root,text="STUDENT REGISTRATION", width=10, height=2, bg='#c36464', fg='#fff', font='arial 20 bold').pack(side=TOP, fill=X)
