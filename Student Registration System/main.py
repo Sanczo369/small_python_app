@@ -207,7 +207,7 @@ f.place(x=1000, y=150)
 
 img=PhotoImage(file="img/photo.png")
 lbl=Label(f, bg="black", image=img)
-lbl.place(x=30, y=10)
+lbl.place(x=0, y=0)
 
 # button
 Button(root, text="Upload", width=19, height=2, font="arial 12 bold", bg="lightblue", command=showimage).place(x=1000, y=370)
