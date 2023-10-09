@@ -67,6 +67,27 @@ def registration_no():
     except:
         Registration.set("1")
 
+def Clear():
+    global img
+    Name.set('')
+    DOB.set('')
+    Religion.set('')
+    Skill.set('')
+    F_Name.set('')
+    M_Name.set('')
+    Father_Occupation.set('')
+    Mather_Occupation.set('')
+    Class.set("Select Class")
+
+    registration_no()
+
+    saveButton.config(state='normal')
+
+    img1=PhotoImage(file="img/photo.png")
+    lbl.config(image=img1)
+    lbl.image = img1
+
+    img=""
 
 # showimage
 def showimage():
@@ -192,7 +213,7 @@ lbl.place(x=30, y=10)
 Button(root, text="Upload", width=19, height=2, font="arial 12 bold", bg="lightblue", command=showimage).place(x=1000, y=370)
 saveButton = Button(root, text="Save", width=19, height=2, font="arial 12 bold", bg="lightgreen")
 saveButton.place(x=1000, y=450)
-Button(root, text="Reset", width=19, height=2, font="arial 12 bold", bg="lightpink").place(x=1000, y=530)
+Button(root, text="Reset", width=19, height=2, font="arial 12 bold", bg="lightpink", command=Clear).place(x=1000, y=530)
 Button(root, text="Exit", width=19, height=2, font="arial 12 bold", bg="grey", command=Exit).place(x=1000, y=610)
 
 
