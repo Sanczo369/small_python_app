@@ -1,7 +1,10 @@
+import os
 from datetime import date
 from tkinter import *
+from tkinter import filedialog
 from tkinter.ttk import Combobox
 
+from PIL import ImageTk
 from xlsxwriter import Workbook
 import pathlib
 background = '#06283D'
@@ -47,9 +50,22 @@ def selection():
         gender = "K"
         print(gender)
 
-# Exit
+# Exit window
 def Exit():
     root.destroy()
+
+
+# showimage
+def showimage():
+    global filename
+    global img
+    filename = filedialog.askopenfilename(initialdir=os.getcwd(), title="Select image file", filetypes=(("JPG File", "*.jpg"), ("PNG File", "*.png"), ("All files", "*.txt")))
+    img = (Image.open(filename))
+    resized_image = img.resize((190, 190))
+    photo2 = ImageTk.PhotoImage(resized_image)
+    lbl.config(image=photo2)
+    lbl.image = photo2
+
 
 #Górna Belka
 Label(root,text="Email:admin@gmail.com", width=10, height=3, bg='#f0687c', anchor='e').pack(side=TOP, fill=X)
@@ -157,7 +173,7 @@ lbl=Label(f, bg="black", image=img)
 lbl.place(x=30, y=10)
 
 # button
-Button(root, text="Upload", width=19, height=2, font="arial 12 bold", bg="lightblue").place(x=1000, y=370)
+Button(root, text="Upload", width=19, height=2, font="arial 12 bold", bg="lightblue", command=showimage).place(x=1000, y=370)
 saveButton = Button(root, text="Save", width=19, height=2, font="arial 12 bold", bg="lightgreen")
 saveButton.place(x=1000, y=450)
 Button(root, text="Reset", width=19, height=2, font="arial 12 bold", bg="lightpink").place(x=1000, y=530)
