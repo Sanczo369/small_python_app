@@ -4,7 +4,8 @@ from tkinter import *
 from tkinter import filedialog
 from tkinter.ttk import Combobox
 
-from PIL import ImageTk
+import openpyxl
+from PIL import ImageTk, Image
 from xlsxwriter import Workbook
 import pathlib
 background = '#06283D'
@@ -54,6 +55,18 @@ def selection():
 def Exit():
     root.destroy()
 
+# Autonumeracja
+def registration_no():
+    file= openpyxl.load_workbook('Student_data.xlsx')
+    sheet=file.active
+    row=sheet.max_row
+    max_row_value=sheet.cell(row=row,column=1).value
+
+    try:
+        Registration.set(max_row_value+1)
+    except:
+        Registration.set("1")
+
 
 # showimage
 def showimage():
@@ -88,6 +101,9 @@ Label(root, text="Registration No:", font="arial 13", fg=framebg, bg=background)
 Registration=StringVar()
 reg_entry = Entry(root, textvariable=Registration, width=15, font="arial 10")
 reg_entry.place(x=160, y=150)
+
+# Wywołanie funkcji registration_no()
+registration_no()
 
 # Rejestracja Data()
 Label(root, text="Date", font="arial 13", fg=framebg, bg=background).place(x=500, y=150)
