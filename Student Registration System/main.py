@@ -114,9 +114,13 @@ def Save():
     Re1=Religion.get()
     S1=Skill.get()
     fathername=F_Name.get()
-    mathername = M_Name.get()
+    mothername = M_Name.get()
     F1=Father_Occupation.get()
     M1=Mather_Occupation.get()
+    if N=="" or C1=="Select Class" or D2=="" or Re1=="" or S1=="" or mothername=="" or fathername=="" or F1=="" or M1=="":
+        messagebox.showerror("error", "Few Data is missing!")
+    else:
+        file=openpyxl.load_workbook('Student_data.xlsx')
 
 
 #Górna Belka
