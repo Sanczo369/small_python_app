@@ -1,7 +1,7 @@
 import os
 from datetime import date
 from tkinter import *
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
 from tkinter.ttk import Combobox
 
 import openpyxl
@@ -43,6 +43,7 @@ else:
 
 #Płeć
 def selection():
+    global gender
     value=radio.get()
     if value ==1:
         gender = "M"
@@ -99,6 +100,23 @@ def showimage():
     photo2 = ImageTk.PhotoImage(resized_image)
     lbl.config(image=photo2)
     lbl.image = photo2
+
+def Save():
+    R1=Registration.get()
+    N1=Name.get()
+    C1=Class.get()
+    try:
+        G1=gender
+    except:
+        messagebox.showerror("error", "Select Gender!")
+    D2=DOB.get()
+    D1=Date.get()
+    Re1=Religion.get()
+    S1=Skill.get()
+    fathername=F_Name.get()
+    mathername = M_Name.get()
+    F1=Father_Occupation.get()
+    M1=Mather_Occupation.get()
 
 
 #Górna Belka
@@ -211,7 +229,7 @@ lbl.place(x=0, y=0)
 
 # button
 Button(root, text="Upload", width=19, height=2, font="arial 12 bold", bg="lightblue", command=showimage).place(x=1000, y=370)
-saveButton = Button(root, text="Save", width=19, height=2, font="arial 12 bold", bg="lightgreen")
+saveButton = Button(root, text="Save", width=19, height=2, font="arial 12 bold", bg="lightgreen", command=Save)
 saveButton.place(x=1000, y=450)
 Button(root, text="Reset", width=19, height=2, font="arial 12 bold", bg="lightpink", command=Clear).place(x=1000, y=530)
 Button(root, text="Exit", width=19, height=2, font="arial 12 bold", bg="grey", command=Exit).place(x=1000, y=610)
