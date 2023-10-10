@@ -41,6 +41,18 @@ else:
     sheet.write('L1',"Mother's Occupation")
     workbook.close()
 
+def search():
+    text = Search.get()
+    Clear()
+    saveButton.config(state='disable')
+    file=openpyxl.load_workbook("Student_data.xlsx")
+    sheet=file.active
+    for row in sheet.rows:
+        if row[0].value == int(text):
+            name = row[0]
+            print(str(name))
+
+
 #Płeć
 def selection():
     global gender
@@ -62,7 +74,6 @@ def registration_no():
     sheet=file.active
     row=sheet.max_row
     max_row_value=sheet.cell(row=row,column=1).value
-
     try:
         Registration.set(max_row_value+1)
     except:
@@ -154,7 +165,7 @@ Label(root,text="STUDENT REGISTRATION", width=10, height=2, bg='#c36464', fg='#f
 Search=StringVar()
 Entry(root, textvariable=Search, width=15, bd=2, font="arial 20").place(x=820, y=70)
 imageicon3= PhotoImage(file="img/lupa.png")
-Srch=Button(root,text="Search", compound=LEFT, image=imageicon3, width=123, bg="#68ddfa", font='arial 13 bold')
+Srch=Button(root,text="Search", compound=LEFT, image=imageicon3, width=123, bg="#68ddfa", font='arial 13 bold', command=search)
 Srch.place(x=1060, y=66)
 
 # Przycisk odśwież
@@ -164,7 +175,7 @@ Update_button.place(x=110, y=64)
 
 # Rejestracja No
 Label(root, text="Registration No:", font="arial 13", fg=framebg, bg=background).place(x=30, y=150)
-Registration=StringVar()
+Registration=IntVar()
 reg_entry = Entry(root, textvariable=Registration, width=15, font="arial 10")
 reg_entry.place(x=160, y=150)
 
