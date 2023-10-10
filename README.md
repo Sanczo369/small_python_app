@@ -130,6 +130,7 @@ Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do t
 - Inicjalizacja aplikacji
 
 ## Excel_Viewer
+Aplikacja to przeglądarkę arkuszy danych programu Excel za pomocą Pythona. jest to całkowicie projekt GUI Tkinter
 ## Student Registration System
 Aplikacja "Student Registration System" to system rejestracji studentów z bazą danych Excel przy użyciu Pythona. jest to całkowicie projekt GUI Tkinter
 ### requirements
