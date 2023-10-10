@@ -74,18 +74,6 @@ def search():
     x11=sheet.cell(row=int(reg_number), column=11).value
     x12=sheet.cell(row=int(reg_number), column=12).value
 
-    print(x1)
-    print(x2)
-    print(x3)
-    print(x4)
-    print(x5)
-    print(x6)
-    print(x7)
-    print(x8)
-    print(x9)
-    print(x10)
-    print(x11)
-    print(x12)
 
     Registration.set(x1)
     Name.set(x2)
@@ -104,13 +92,11 @@ def search():
     Father_Occupation.set(x11)
     Mather_Occupation.set(x12)
 
-    registration_no()
-
-    saveButton.config(state='normal')
-
-    img1=PhotoImage(file="img/photo.png")
-    lbl.config(image=img1)
-    lbl.image = img1
+    img=(Image.open("student_img/"+str(x1)+".jpg"))
+    resized_image=img.resize((190,190))
+    photo2=ImageTk.PhotoImage(resized_image)
+    lbl.config(image=photo2)
+    lbl.image=photo2
 
 
 
