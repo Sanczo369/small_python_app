@@ -50,7 +50,68 @@ def search():
     for row in sheet.rows:
         if row[0].value == int(text):
             name = row[0]
-            print(str(name))
+            # print(str(name))
+            reg_no_position=str(name)[14:-1]
+            reg_number=str(reg_no_position)[-1]
+            # print(reg_no_position)
+            # print(reg_number)
+
+    try:
+        print(str(name))
+    except:
+        messagebox.showerror("Invalid", "Invalid registration number!!!")
+
+    x1=sheet.cell(row=int(reg_number), column=1).value
+    x2=sheet.cell(row=int(reg_number), column=2).value
+    x3=sheet.cell(row=int(reg_number), column=3).value
+    x4=sheet.cell(row=int(reg_number), column=4).value
+    x5=sheet.cell(row=int(reg_number), column=5).value
+    x6=sheet.cell(row=int(reg_number), column=6).value
+    x7=sheet.cell(row=int(reg_number), column=7).value
+    x8=sheet.cell(row=int(reg_number), column=8).value
+    x9=sheet.cell(row=int(reg_number), column=9).value
+    x10=sheet.cell(row=int(reg_number), column=10).value
+    x11=sheet.cell(row=int(reg_number), column=11).value
+    x12=sheet.cell(row=int(reg_number), column=12).value
+
+    print(x1)
+    print(x2)
+    print(x3)
+    print(x4)
+    print(x5)
+    print(x6)
+    print(x7)
+    print(x8)
+    print(x9)
+    print(x10)
+    print(x11)
+    print(x12)
+
+    Registration.set(x1)
+    Name.set(x2)
+    Class.set(x3)
+    if x4=="K":
+        R2.select()
+    else:
+        R1.select()
+
+    DOB.set(x5)
+    Date.set(x6)
+    Religion.set(x7)
+    Skill.set(x8)
+    F_Name.set(x9)
+    M_Name.set(x10)
+    Father_Occupation.set(x11)
+    Mather_Occupation.set(x12)
+
+    registration_no()
+
+    saveButton.config(state='normal')
+
+    img1=PhotoImage(file="img/photo.png")
+    lbl.config(image=img1)
+    lbl.image = img1
+
 
 
 #Płeć
