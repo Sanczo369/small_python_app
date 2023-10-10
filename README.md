@@ -131,3 +131,9 @@ Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do t
 
 ## Excel_Viewer
 ## Student Registration System
+
+### requirements
+- pathlib
+- openpyxl
+- xlrd
+- pillow
