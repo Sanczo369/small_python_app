@@ -137,6 +137,12 @@ def Update():
     sheet.cell(column=12, row=int(reg_number), value=M1)
     file.save(r'Student_data.xlsx')
 
+    try:
+        img.save("student_img/"+str(R1)+".jpg")
+    except:
+        pass
+    messagebox.showinfo("Update", "Update Sucessfully!")
+    Clear()
 #Płeć
 def selection():
     global gender
