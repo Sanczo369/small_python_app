@@ -98,7 +98,44 @@ def search():
     lbl.config(image=photo2)
     lbl.image=photo2
 
+def Update():
+    R1 = Registration.get()
+    N1 = Name.get()
+    C1 = Class.get()
+    selection()
+    G1=gender
+    D2 = DOB.get()
+    D1 = Date.get()
+    Re1 = Religion.get()
+    S1 = Skill.get()
+    fathername = F_Name.get()
+    mothername = M_Name.get()
+    F1 = Father_Occupation.get()
+    M1 = Mather_Occupation.get()
 
+    file= openpyxl.load_workbook('Student_data.xlsx')
+    sheet=file.active
+
+    for row in sheet.rows:
+        if row[0].value == R1:
+            name=row[0]
+            print(str(name))
+            reg_no_position=str(name)[14:-1]
+            reg_number=str(reg_no_position)[-1]
+            print(reg_number)
+    sheet.cell(column=1, row=int(reg_number), value=R1)
+    sheet.cell(column=2, row=int(reg_number), value=N1)
+    sheet.cell(column=3, row=int(reg_number), value=C1)
+    sheet.cell(column=4, row=int(reg_number), value=G1)
+    sheet.cell(column=5, row=int(reg_number), value=D2)
+    sheet.cell(column=6, row=int(reg_number), value=D1)
+    sheet.cell(column=7, row=int(reg_number), value=Re1)
+    sheet.cell(column=8, row=int(reg_number), value=S1)
+    sheet.cell(column=9, row=int(reg_number), value=fathername)
+    sheet.cell(column=10, row=int(reg_number), value=mothername)
+    sheet.cell(column=11, row=int(reg_number), value=F1)
+    sheet.cell(column=12, row=int(reg_number), value=M1)
+    file.save(r'Student_data.xlsx')
 
 #Płeć
 def selection():
@@ -106,10 +143,8 @@ def selection():
     value=radio.get()
     if value ==1:
         gender = "M"
-        print(gender)
     else:
         gender = "K"
-        print(gender)
 
 # Exit window
 def Exit():
@@ -217,7 +252,7 @@ Srch.place(x=1060, y=66)
 
 # Przycisk odśwież
 imageicon4=PhotoImage(file='img/arrow.png')
-Update_button=Button(root, image=imageicon4,bg='#c36464')
+Update_button=Button(root, image=imageicon4,bg='#c36464', command=Update)
 Update_button.place(x=110, y=64)
 
 # Rejestracja No
