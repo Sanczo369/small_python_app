@@ -141,3 +141,8 @@ Aplikacja "Student Registration System" to system rejestracji studentów z bazą
 - openpyxl
 - xlrd
 - pillow
+- tkinter
+- xlsxwriter
+- PIL
+- datetime
+- os
