@@ -15,6 +15,14 @@ def Reset():
     entry_food7.delete(0, END)
 
 def Total():
+    price1=1
+    price2=2
+    price3=3
+    price4=4
+    price5=5
+    price6=6
+    price7=7
+
     try:a1=int(food1.get())
     except: a1=0
 
@@ -35,6 +43,16 @@ def Total():
 
     try:a7=int(food7.get())
     except: a7=0
+
+    #cost
+    c1=price1*a1
+    c2=price2*a2
+    c3=price3*a3
+    c4=price4*a4
+    c5=price5*a5
+    c6=price6*a6
+    c7=price7*a7
+
 
 
 Label(text="BILL MANAGEMENT", bg="black", fg="white", font=("calibri",33), width="300", height="2").pack()
