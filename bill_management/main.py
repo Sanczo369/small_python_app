@@ -14,7 +14,27 @@ def Reset():
     entry_food6.delete(0, END)
     entry_food7.delete(0, END)
 
+def Total():
+    try:a1=int(food1.get())
+    except: a1=0
 
+    try:a2=int(food2.get())
+    except: a2=0
+
+    try:a3=int(food3.get())
+    except: a3=0
+
+    try:a4=int(food4.get())
+    except: a4=0
+
+    try:a5=int(food5.get())
+    except: a5=0
+
+    try:a6=int(food6.get())
+    except: a6=0
+
+    try:a7=int(food7.get())
+    except: a7=0
 
 
 Label(text="BILL MANAGEMENT", bg="black", fg="white", font=("calibri",33), width="300", height="2").pack()
