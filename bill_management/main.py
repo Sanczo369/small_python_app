@@ -117,5 +117,9 @@ root.mainloop()
 btn_reset=Button(f1, bd=5, fg="black", bg="lightblue", font=("arial", 16,"bold"), width=10, text="Reset", command=Reset)
 btn_reset.grid(row=8,column=0)
 
-btn_total=Button(f1, bd=5, fg="black", bg="lightblue", font=("arial", 16,"bold"), width=10, text="Total")#, command=Total)
-btn_reset.grid(row=8,column=1)
+btn_total=Button(f1, bd=5, fg="black", bg="lightblue", font=("arial", 16,"bold"), width=10, text="Total", command=Total)
+btn_total.grid(row=8,column=1)
+
+#Bill
+f2=Frame(root, bg="lightyellow", highlightbackground="black", highlightthickness=1, width=300, height=370)
+f2.place(x=690, y=118)
