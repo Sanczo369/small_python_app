@@ -5,7 +5,7 @@ root.geometry("1000x500")
 root.title("Bill Mangement")
 root.resizable(False,False)
 
-Label(text="BILL MANAGEMENT", bg="black", fg="white", font=("calibri",33), width="300", height="2")
+Label(text="BILL MANAGEMENT", bg="black", fg="white", font=("calibri",33), width="300", height="2").pack()
 
 
 # MENU CARD
@@ -62,3 +62,7 @@ entry_food5.grid(row=5, column=1)
 entry_food6.grid(row=6, column=1)
 entry_food7.grid(row=7, column=1)
 root.mainloop()
+
+# buttons
+btn_reset=Button(f1, bd=5, fg="black", bg="lightblue", font=("arial", 16,"bold"), width=10, text="Reset")#,command=Reset)
+btn_reset.grid(row=8,column=0)
