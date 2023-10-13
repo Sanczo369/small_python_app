@@ -5,6 +5,18 @@ root.geometry("1000x500")
 root.title("Bill Mangement")
 root.resizable(False,False)
 
+def Reset():
+    entry_food1.delete(0, END)
+    entry_food2.delete(0, END)
+    entry_food3.delete(0, END)
+    entry_food4.delete(0, END)
+    entry_food5.delete(0, END)
+    entry_food6.delete(0, END)
+    entry_food7.delete(0, END)
+
+
+
+
 Label(text="BILL MANAGEMENT", bg="black", fg="white", font=("calibri",33), width="300", height="2").pack()
 
 
@@ -64,5 +76,5 @@ entry_food7.grid(row=7, column=1)
 root.mainloop()
 
 # buttons
-btn_reset=Button(f1, bd=5, fg="black", bg="lightblue", font=("arial", 16,"bold"), width=10, text="Reset")#,command=Reset)
+btn_reset=Button(f1, bd=5, fg="black", bg="lightblue", font=("arial", 16,"bold"), width=10, text="Reset", command=Reset)
 btn_reset.grid(row=8,column=0)
