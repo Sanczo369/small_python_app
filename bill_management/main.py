@@ -124,3 +124,5 @@ btn_total.grid(row=8,column=1)
 #Bill
 f2=Frame(root, bg="lightyellow", highlightbackground="black", highlightthickness=1, width=300, height=370)
 f2.place(x=690, y=118)
+Bill=Label(f2, text="Bill", font=('calibri', 20), bg="lightyellow")
+Bill.place(x=120, y=10)
