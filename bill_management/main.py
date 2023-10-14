@@ -4,6 +4,7 @@ root=Tk()
 root.geometry("1000x500")
 root.title("Bill Mangement")
 root.resizable(False,False)
+root.iconbitmap('logo.ico')
 
 def Reset():
     entry_food1.delete(0, END)
