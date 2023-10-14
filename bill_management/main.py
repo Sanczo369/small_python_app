@@ -54,6 +54,9 @@ def Total():
     c6=price6*a6
     c7=price7*a7
 
+    lbl_total=Label(f2, font=('arial', 20, 'bold'), text="Total", width=16, fg="lightyellow", bg="black")
+    lbl_total.place(x=0, y=50)
+
 
 
 Label(text="BILL MANAGEMENT", bg="black", fg="white", font=("calibri",33), width="300", height="2").pack()
