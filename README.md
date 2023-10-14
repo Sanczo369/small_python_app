@@ -148,3 +148,10 @@ Aplikacja "Student Registration System" to system rejestracji studentów z bazą
 - os
 ## Bill Mangement
 Aplikacja "Bill Mangement" to system wyliczający wartość rachunku na podstawie ceny oraz ilośći zamowionych dań przy użyciu Pythona. jest to całkowicie projekt GUI Tkinter
+### Oto rozkład aplikacji:
+- Belka z nazwą aplikacji
+- Aktualne Menu z cenami
+- formularz do wprowadzenia ilości zamówionych dań
+- Przycisk do resetu
+- Przycisk do podliczenia 
+- wyświetlenie sumy za zamówienie
