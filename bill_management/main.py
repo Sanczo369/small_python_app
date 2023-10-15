@@ -57,6 +57,11 @@ def Total():
     lbl_total=Label(f2, font=('arial', 20, 'bold'), text="Total", width=16, fg="lightyellow", bg="black")
     lbl_total.place(x=0, y=50)
 
+    entry_total=Entry(f2, font=('arial', 20, 'bold'), textvariable=Total_bill, bd=6, width=15, bg="lightgreen")
+    entry_total.place(x=20, y=100)
+    totalcost=c1+c2+c3+c4+c5+c6+c7
+    string_bill="Rs.", str('%.2f' %totalcost)
+    Total_bill.set(string_bill)
 
 
 Label(text="BILL MANAGEMENT", bg="black", fg="white", font=("calibri",33), width="300", height="2").pack()
