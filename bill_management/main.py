@@ -72,13 +72,13 @@ f=Frame(root, bg="lightgreen", highlightbackground="black", highlightthickness=1
 f.place(x=10, y=118)
 Label(f,text="Menu", font=("Gabriola", 40, "bold"),fg="black",bg="lightgreen").place(x=80, y=0)
 
-Label(f, font=("Lucida Calligraphy", 15, 'bold'), text="food1.......1$", fg="black", bg="lightgreen").place(x=10, y=80)
-Label(f, font=("Lucida Calligraphy", 15, 'bold'), text="food2.......2$", fg="black", bg="lightgreen").place(x=10, y=110)
-Label(f, font=("Lucida Calligraphy", 15, 'bold'), text="food3.......3$", fg="black", bg="lightgreen").place(x=10, y=140)
-Label(f, font=("Lucida Calligraphy", 15, 'bold'), text="food4.......4$", fg="black", bg="lightgreen").place(x=10, y=170)
-Label(f, font=("Lucida Calligraphy", 15, 'bold'), text="food5.......5$", fg="black", bg="lightgreen").place(x=10, y=200)
-Label(f, font=("Lucida Calligraphy", 15, 'bold'), text="food6.......6$", fg="black", bg="lightgreen").place(x=10, y=230)
-Label(f, font=("Lucida Calligraphy", 15, 'bold'), text="food7.......7$", fg="black", bg="lightgreen").place(x=10, y=260)
+Label(f, font=("Gabriola", 20, 'bold'), text="food1......................................1$", fg="black", bg="lightgreen").place(x=10, y=70)
+Label(f, font=("Gabriola", 20, 'bold'), text="food2......................................2$", fg="black", bg="lightgreen").place(x=10, y=110)
+Label(f, font=("Gabriola", 20, 'bold'), text="food3......................................3$", fg="black", bg="lightgreen").place(x=10, y=150)
+Label(f, font=("Gabriola", 20, 'bold'), text="food4......................................4$", fg="black", bg="lightgreen").place(x=10, y=190)
+Label(f, font=("Gabriola", 20, 'bold'), text="food5......................................5$", fg="black", bg="lightgreen").place(x=10, y=230)
+Label(f, font=("Gabriola", 20, 'bold'), text="food6......................................6$", fg="black", bg="lightgreen").place(x=10, y=270)
+Label(f, font=("Gabriola", 20, 'bold'), text="food7......................................7$", fg="black", bg="lightgreen").place(x=10, y=310)
 
 # ENTRY WORK
 f1=Frame(root,bd=5, height=370, width=300, relief=RAISED)
