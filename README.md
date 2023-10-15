@@ -155,3 +155,5 @@ Aplikacja "Bill Mangement" to system wyliczający wartość rachunku na podstawi
 - Przycisk do resetu
 - Przycisk do podliczenia 
 - wyświetlenie sumy za zamówienie
+
+## Speed Test
