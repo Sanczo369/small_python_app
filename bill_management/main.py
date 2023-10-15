@@ -127,7 +127,7 @@ entry_food4.grid(row=4, column=1)
 entry_food5.grid(row=5, column=1)
 entry_food6.grid(row=6, column=1)
 entry_food7.grid(row=7, column=1)
-root.mainloop()
+
 
 # buttons
 btn_reset=Button(f1, bd=5, fg="black", bg="lightblue", font=("arial", 16,"bold"), width=10, text="Reset", command=Reset)
@@ -141,3 +141,4 @@ f2=Frame(root, bg="lightyellow", highlightbackground="black", highlightthickness
 f2.place(x=690, y=118)
 Bill=Label(f2, text="Bill", font=('calibri', 20), bg="lightyellow")
 Bill.place(x=120, y=10)
+root.mainloop()
