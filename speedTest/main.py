@@ -24,5 +24,8 @@ def Check():
 
 topLabel = Label(root, text="SpeedTest",font=("arial",20,"bold"), fg="#ffffff", bg="#1a212d").pack(pady=(40,0))
 
+mainImg=PhotoImage(file="main.png")
+mainLabel = Label(root, image=mainImg, fg="#ffffff", bg="#1a212d").pack(pady=(40,0))
+
 startBtn=Button(root, text="START",font=("arial",20,"bold"),fg="#ffffff", bg="#1a212d", bd=3).pack(pady=(40,0))
 root.mainloop()
