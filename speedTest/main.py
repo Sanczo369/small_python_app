@@ -30,5 +30,10 @@ mainLabel = Label(root, image=mainImg, fg="#ffffff", bg="#1a212d")
 mainLabel.pack(pady=(40,0))
 
 startBtn=Button(root, text="START",font=("arial",20,"bold"),fg="#ffffff", bg="#1a212d", bd=3, activebackground="#1a212d",activeforeground="#ffffff", cursor="hand2")
-startBtn.pack(pady=(40,0))
+startBtn.pack(pady=(100,0))
+
+# Label
+Label(root, text="PING", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=20, y=380)
+Label(root, text="DOWNLOAD", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=110, y=380)
+Label(root, text="UPLOAD", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=260, y=380)
 root.mainloop()
