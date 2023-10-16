@@ -22,10 +22,13 @@ def Check():
     test.get_servers(servernames)
     print(test.results.ping)
 
-topLabel = Label(root, text="SpeedTest",font=("arial",20,"bold"), fg="#ffffff", bg="#1a212d").pack(pady=(40,0))
+topLabel = Label(root, text="SpeedTest",font=("arial",40,"bold"), fg="#ffffff", bg="#1a212d")
+topLabel.pack(pady=(40,0))
 
 mainImg=PhotoImage(file="main.png")
-mainLabel = Label(root, image=mainImg, fg="#ffffff", bg="#1a212d").pack(pady=(40,0))
+mainLabel = Label(root, image=mainImg, fg="#ffffff", bg="#1a212d")
+mainLabel.pack(pady=(40,0))
 
-startBtn=Button(root, text="START",font=("arial",20,"bold"),fg="#ffffff", bg="#1a212d", bd=3).pack(pady=(40,0))
+startBtn=Button(root, text="START",font=("arial",20,"bold"),fg="#ffffff", bg="#1a212d", bd=3, activebackground="#1a212d",activeforeground="#ffffff", cursor="hand2")
+startBtn.pack(pady=(40,0))
 root.mainloop()
