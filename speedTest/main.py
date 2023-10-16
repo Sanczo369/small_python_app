@@ -36,4 +36,12 @@ startBtn.pack(pady=(100,0))
 Label(root, text="PING", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=20, y=380)
 Label(root, text="DOWNLOAD", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=110, y=380)
 Label(root, text="UPLOAD", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=260, y=380)
+
+Label(root, text="MS", font=("arial", 10, "bold"), fg="#ffffff", bg="#1a212d").place(x=60, y=420)
+Label(root, text="MBPS", font=("arial", 10, "bold"), fg="#ffffff", bg="#1a212d").place(x=185, y=420)
+Label(root, text="MBPS", font=("arial", 10, "bold"), fg="#ffffff", bg="#1a212d").place(x=300, y=420)
+
+Label(root, text="Download", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=129, y=240)
+Label(root, text="MBPS", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=145, y=330)
+
 root.mainloop()
