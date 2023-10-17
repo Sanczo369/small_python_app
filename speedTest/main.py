@@ -14,14 +14,15 @@ def Check():
     test=speedtest.Speedtest()
 
     Uploading=round(test.upload()/(1024*1024),2)
-    print(Uploading)
+    upload.config(text=Uploading)
 
     downloading=round(test.download()/(1024*1024),2)
-    print(downloading)
+    download.config(text=downloading)
+    mainValue.config(text=downloading)
 
     servernames=[]
     test.get_servers(servernames)
-    print(test.results.ping)
+    upload.config(text=test.results.ping)
 
 topLabel = Label(root, text="SpeedTest",font=("arial",40,"bold"), fg="#ffffff", bg="#1a212d")
 topLabel.pack(pady=(40,0))
