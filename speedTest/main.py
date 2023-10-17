@@ -13,10 +13,10 @@ root.iconphoto(False, image_icon)
 def Check():
     test=speedtest.Speedtest()
 
-    Uploading=test.upload()
+    Uploading=round(test.upload()/(1024*1024),2)
     print(Uploading)
 
-    downloading= test.download()
+    downloading=round(test.download()/(1024*1024),2)
     print(downloading)
 
     servernames=[]
