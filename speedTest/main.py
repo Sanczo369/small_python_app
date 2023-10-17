@@ -15,10 +15,11 @@ def Check():
 
     Uploading=test.upload()
     print(Uploading)
+
     downloading= test.download()
     print(downloading)
-    servernames=[]
 
+    servernames=[]
     test.get_servers(servernames)
     print(test.results.ping)
 
@@ -29,7 +30,7 @@ mainImg=PhotoImage(file="main.png")
 mainLabel = Label(root, image=mainImg, fg="#ffffff", bg="#1a212d")
 mainLabel.pack(pady=(40,0))
 
-startBtn=Button(root, text="START",font=("arial",20,"bold"),fg="#ffffff", bg="#1a212d", bd=3, activebackground="#1a212d",activeforeground="#ffffff", cursor="hand2")
+startBtn=Button(root, text="START",font=("arial",20,"bold"),fg="#ffffff", bg="#1a212d", bd=3, activebackground="#1a212d",activeforeground="#ffffff", cursor="hand2",command=Check)
 startBtn.pack(pady=(100,0))
 
 # Label
@@ -49,4 +50,6 @@ ping=Label(root, text="00", font=("arial", 13, "bold"),fg="#ffffff", bg="#1a212d
 download=Label(root, text="00", font=("arial", 13, "bold"),fg="#ffffff", bg="#1a212d").place(x=160, y=418)
 upload=Label(root, text="00", font=("arial", 13, "bold"),fg="#ffffff", bg="#1a212d").place(x=275, y=418)
 
+# Main Value
+mainValue=Label(root, text="000", font=("arial", 30, "bold"),fg="#ffffff", bg="#1a212d").place(x=143, y=278)
 root.mainloop()
