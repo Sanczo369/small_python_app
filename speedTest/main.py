@@ -44,4 +44,9 @@ Label(root, text="MBPS", font=("arial", 10, "bold"), fg="#ffffff", bg="#1a212d")
 Label(root, text="Download", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=129, y=240)
 Label(root, text="MBPS", font=("arial", 15, "bold"), fg="#ffffff", bg="#1a212d").place(x=145, y=330)
 
+# Value
+ping=Label(root, text="00", font=("arial", 13, "bold"),fg="#ffffff", bg="#1a212d").place(x=35, y=418)
+download=Label(root, text="00", font=("arial", 13, "bold"),fg="#ffffff", bg="#1a212d").place(x=160, y=418)
+upload=Label(root, text="00", font=("arial", 13, "bold"),fg="#ffffff", bg="#1a212d").place(x=275, y=418)
+
 root.mainloop()
