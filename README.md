@@ -157,3 +157,4 @@ Aplikacja "Bill Mangement" to system wyliczający wartość rachunku na podstawi
 - wyświetlenie sumy za zamówienie
 
 ## Speed Test
+Aplikacja "Speed Test" to system wyliczający wartość PING, DOWNLOAD oraz UPLOAD
