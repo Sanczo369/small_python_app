@@ -161,3 +161,5 @@ Aplikacja "Speed Test" to system wyliczający wartość PING, DOWNLOAD oraz UPLO
 ### requirements
 - speedtest
 - tkinter
+
+## PDF Protector Tool
