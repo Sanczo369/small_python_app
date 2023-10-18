@@ -163,3 +163,5 @@ Aplikacja "Speed Test" to system wyliczający wartość PING, DOWNLOAD oraz UPLO
 - tkinter
 
 ## PDF Protector Tool
+Program do szyfrowania pliku formacie PDF. Jest to projekt całkowicie gui tkinter.
+Do stworzenia tego narzędzia Pythona użyjemy tkinter i PyPDF2 2
