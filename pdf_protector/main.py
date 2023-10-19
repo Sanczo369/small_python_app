@@ -23,6 +23,9 @@ Label(frame, text="Target PDF File:", font="arial 10 bold", fg='#4c4542').place(
 entry2= Entry(frame, width=30, textvariable=target, font="arial 15", bd=1)
 entry2.place(x=150, y=100)
 
-
+password=StringVar()
+Label(frame, text="Set User Password:", font="arial 10 bold", fg='#4c4542').place(x=15, y=150)
+entry3= Entry(frame, width=30, textvariable=password, font="arial 15", bd=1)
+entry3.place(x=150, y=150)
 
 root.mainloop()
