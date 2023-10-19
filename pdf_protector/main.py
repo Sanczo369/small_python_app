@@ -18,6 +18,10 @@ Label(frame, text="Source PDF File:", font="arial 10 bold", fg='#4c4542').place(
 entry1= Entry(frame, width=30, textvariable=source, font="arial 15", bd=1)
 entry1.place(x=150, y=48)
 
+target=StringVar()
+Label(frame, text="Target PDF File:", font="arial 10 bold", fg='#4c4542').place(x=30, y=100)
+entry2= Entry(frame, width=30, textvariable=target, font="arial 15", bd=1)
+entry2.place(x=150, y=100)
 
 
 
