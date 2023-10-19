@@ -8,6 +8,7 @@ root.geometry("600x430+300+100")
 root.resizable(False,False)
 
 def browse():
+    global filename
     filename = filedialog.askopenfilename(initialdir=os.getcwd(), title="Wybierz plik obrazu", filetypes=(("PDF file", "*.pdf"), ("All files", ".")))
     entry1.insert(END, filename)
 
@@ -27,7 +28,7 @@ Label(frame, text="Source PDF File:", font="arial 10 bold", fg='#4c4542').place(
 entry1= Entry(frame, width=30, textvariable=source, font="arial 15", bd=1)
 entry1.place(x=150, y=48)
 
-Button_Source=PhotoImage(file="btn.png")
+Button_Source=PhotoImage(file="file_select.png")
 Button(frame,image=Button_Source, width=35, height=24, bg="#d3cdcd", command=browse).place(x=500, y=47)
 
 target=StringVar()
