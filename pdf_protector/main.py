@@ -21,8 +21,8 @@ Label(frame, text="Source PDF File:", font="arial 10 bold", fg='#4c4542').place(
 entry1= Entry(frame, width=30, textvariable=source, font="arial 15", bd=1)
 entry1.place(x=150, y=48)
 
-Button_icon=PhotoImage(file="btn.png")
-Button(frame,image=Button_icon, width=35, height=24, bg="#d3cdcd").place(x=500, y=47)
+Button_Source=PhotoImage(file="btn.png")
+Button(frame,image=Button_Source, width=35, height=24, bg="#d3cdcd").place(x=500, y=47)
 
 target=StringVar()
 Label(frame, text="Target PDF File:", font="arial 10 bold", fg='#4c4542').place(x=30, y=100)
@@ -33,5 +33,9 @@ password=StringVar()
 Label(frame, text="Set User Password:", font="arial 10 bold", fg='#4c4542').place(x=15, y=150)
 entry3= Entry(frame, width=30, textvariable=password, font="arial 15", bd=1)
 entry3.place(x=150, y=150)
+
+Button_icon=PhotoImage(file="btn.png")
+Protect=Button(root,text="     Protect PDF File",compound=LEFT, image=Button_icon, width=230, height=50, bg="#bfb9b9",font="arial 10 bold")
+Protect.pack(side=BOTTOM, pady=40)
 
 root.mainloop()
