@@ -12,7 +12,41 @@ def browse():
     filename = filedialog.askopenfilename(initialdir=os.getcwd(), title="Wybierz plik obrazu", filetypes=(("PDF file", "*.pdf"), ("All files", ".")))
     entry1.insert(END, filename)
 
+def Protect():
+    mainfile=source.get()
+    protectfile=target.get()
+    code=password.get()
 
+    if mainfile=="" and protectfile=="" and password.get()=="":
+        messagebox.showerror("Invalid", "All entries are empty!")
+    elif mainfile=="":
+        messagebox.showerror("Invalid", "Please Type Souce PDF Filename")
+    elif protectfile=="":
+        messagebox.showerror("Invalid", "Please Type Target PDF Filename")
+    elif password.get()=="":
+        messagebox.showerror("Invalid", "Please Type Password")
+    else:
+        try:
+            out=PdfFileWriter()
+            file= PdfFileReader(filename)
+            num = file.numPages
+
+            for idx in range(num):
+                page=file.getPage(idx)
+                out.addPage(page)
+            out.encrypt(code)
+
+            with open(protectfile, "wb") as f:
+                out.write(f)
+
+            source.set("")
+            target.set("")
+            password.set("")
+
+            messagebox.showinfo("info", "Successfully done!!!")
+
+        except:
+            messagebox.showerror("Invalid", "Invalid Entry!!!")
 
 img_logo=PhotoImage(file="logo.png")
 root.iconphoto(False, img_logo)
