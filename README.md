@@ -151,6 +151,14 @@ clear(): Czyści wprowadzone dane w polach tekstowych i komboboxie.
 submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjnego "Backened_Data.xlsx", wyświetla komunikat o sukcesie i czyści pola wprowadzania.
 - Tworzenie etykiet, pól tekstowych, komboboxa i przycisków w oknie głównym aplikacji.
 - Uruchamianie root.mainloop()
+
+### requirements
+- tkinter
+- openpyxl,
+- xlrd
+- pathlib
+
+
   
 ## White_board
 Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika (GUI) wykorzystującym bibliotekę Tkinter w Pythonie.
@@ -164,6 +172,11 @@ Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika
 - Wybór koloru
 - Regulacja grubości linii
 - Wyczyść płótno
+### requirements
+- tkinter
+- os
+
+
 
 ## Translate
 Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do tworzenia interfejsu graficznego użytkownika (GUI). Aplikacja przy pomocy modułu googletrans tłumaczy tekstu przy użyciu Google Translate.
@@ -172,12 +185,19 @@ Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do t
 - Definiowanie dwóch głównych funkcji:label_change() i translate_now()
 - Tworzenie elementów interfejsu graficznego
 - Inicjalizacja aplikacji
+### requirements
+- tkinter
+- pygoogletranslation
+
+
 
 ## Excel_Viewer
 Aplikacja to przeglądarkę arkuszy danych programu Excel za pomocą Pythona. jest to całkowicie projekt GUI Tkinter
 ### requirements
 - numpy
 - pandas
+
+  
 ## Student Registration System
 Aplikacja "Student Registration System" to system rejestracji studentów z bazą danych Excel przy użyciu Pythona. jest to całkowicie projekt GUI Tkinter
 ### requirements
@@ -190,6 +210,8 @@ Aplikacja "Student Registration System" to system rejestracji studentów z bazą
 - PIL
 - datetime
 - os
+
+  
 ## Bill Mangement
 Aplikacja "Bill Mangement" to system wyliczający wartość rachunku na podstawie ceny oraz ilośći zamowionych dań przy użyciu Pythona. jest to całkowicie projekt GUI Tkinter
 ### Oto rozkład aplikacji:
@@ -199,6 +221,10 @@ Aplikacja "Bill Mangement" to system wyliczający wartość rachunku na podstawi
 - Przycisk do resetu
 - Przycisk do podliczenia 
 - wyświetlenie sumy za zamówienie
+### requirements
+- tkinter
+
+
 
 ## Speed Test
 Aplikacja "Speed Test" to system wyliczający wartość PING, DOWNLOAD oraz UPLOAD
