@@ -239,3 +239,6 @@ Program do szyfrowania pliku formacie PDF. Jest to projekt całkowicie gui tkint
 - tkinter
 
 ##  Snake Game 
+### requirements
+- random
+- tkinter
