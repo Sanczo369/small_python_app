@@ -95,6 +95,10 @@ y = int(screen_height/2) - int(screen_height/2)
 
 root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
+root.bind('<Left>', lambda event: change_direction("left"))
+root.bind('<Right>', lambda event: change_direction("right"))
+root.bind('<Up>', lambda event: change_direction("up"))
+root.bind('<Down>', lambda event: change_direction("down"))
 
 snake=Snake()
 food=Food()
