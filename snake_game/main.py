@@ -2,7 +2,7 @@ from tkinter import  *
 import random
 root=Tk()
 root.title("Snake Game")
-root.geometry("720x780+300+100")
+
 root.resizable(False,False)
 img_logo=PhotoImage(file="logo.png")
 root.iconphoto(False, img_logo)
@@ -42,5 +42,22 @@ top_label.pack()
 
 canvas = Canvas(root, bg=BACKGROUND_COLOR, height=GAME_HEIGHT, width=GAME_WIDTH)
 canvas.pack()
+
+root.update()
+
+window_width = root.winfo_width()
+window_height = root.winfo_height()
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+x = int(screen_width/2) - int(window_width/2)
+y = int(screen_height/2) - int(screen_height/2)
+
+root.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+snake=Snake()
+food=Food()
+
+
 
 root.mainloop()
