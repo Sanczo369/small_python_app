@@ -23,7 +23,18 @@ GAME_WIDTH = 700
 
 # Klasy
 class Snake:
-    pass
+
+    def __init__(self):
+        self.body_size = BODY_PARTS
+        self.coordonates = []
+        self.squares = []
+
+        for i in range(0, BODY_PARTS):
+            self.coordonates.append([0, 0])
+
+        for x, y in self.coordonates:
+            square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR, tag="snake")
+            self.squares.append(square)
 class Food:
     def __init__(self):
         x = random.randint(0, (GAME_WIDTH / SPACE_SIZE) - 1) * SPACE_SIZE
