@@ -26,13 +26,13 @@ class Snake:
 
     def __init__(self):
         self.body_size = BODY_PARTS
-        self.coordonates = []
+        self.coordinates = []
         self.squares = []
 
         for i in range(0, BODY_PARTS):
-            self.coordonates.append([0, 0])
+            self.coordinates.append([0, 0])
 
-        for x, y in self.coordonates:
+        for x, y in self.coordinates:
             square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR, tag="snake")
             self.squares.append(square)
 class Food:
@@ -40,12 +40,36 @@ class Food:
         x = random.randint(0, (GAME_WIDTH / SPACE_SIZE) - 1) * SPACE_SIZE
         y = random.randint(0, (GAME_HEIGHT / SPACE_SIZE) - 1) * SPACE_SIZE
 
-        self.coordonates = [x, y]
+        self.coordinates = [x, y]
 
         canvas.create_oval(x,y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR, tag="food")
 # Funkcje
-def next_turn():
-    pass
+def next_turn(snake, food):
+
+    x, y = snake.coordinates[0]
+
+    if direction == "up":
+        y -= SPACE_SIZE
+    elif direction == "down":
+        y += SPACE_SIZE
+    elif direction == "left":
+        x -= SPACE_SIZE
+    elif direction == "right":
+        x += SPACE_SIZE
+
+    snake.coordinates.insert(0, (x,y))
+
+    square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
+
+    snake.squares.insert(0, square)
+
+    del snake.coordinates[-1]
+
+    canvas.delete(snake.squares[-1])
+
+    del snake.squares[-1]
+
+    root.after(SPEED, next_turn, snake, food)
 def change_direction(new_direction):
     pass
 def check_collisions():
@@ -71,9 +95,10 @@ y = int(screen_height/2) - int(screen_height/2)
 
 root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
+
 snake=Snake()
 food=Food()
 
-
+next_turn(snake, food)
 
 root.mainloop()
