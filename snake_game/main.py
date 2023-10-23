@@ -112,7 +112,8 @@ def check_collisions(snake):
             return True
     return False
 def game_over():
-    pass
+    canvas.delete(ALL)
+    canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=("consola", 70), text="GAME OVER", fill="red", tag="gameover")
 
 top_label=Label(root, text="Score:{}".format(score), font=("consolas", 40))
 top_label.pack()
