@@ -75,7 +75,11 @@ def next_turn(snake, food):
         canvas.delete(snake.squares[-1])
         del snake.squares[-1]
 
-    root.after(SPEED, next_turn, snake, food)
+    if check_collisions(snake):
+        game_over()
+
+    else:
+        root.after(SPEED, next_turn, snake, food)
 def change_direction(new_direction):
     global direction
 
