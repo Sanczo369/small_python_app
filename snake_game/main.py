@@ -63,11 +63,17 @@ def next_turn(snake, food):
 
     snake.squares.insert(0, square)
 
-    del snake.coordinates[-1]
+    if x == food.coordinates[0] and y == food.coordinates[1]:
+        global score
+        score+=1
+        top_label.config(text="Score:{}".format(score))
+        canvas.delete("food")
+        food = Food()
 
-    canvas.delete(snake.squares[-1])
-
-    del snake.squares[-1]
+    else:
+        del snake.coordinates[-1]
+        canvas.delete(snake.squares[-1])
+        del snake.squares[-1]
 
     root.after(SPEED, next_turn, snake, food)
 def change_direction(new_direction):
