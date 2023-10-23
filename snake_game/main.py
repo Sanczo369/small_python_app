@@ -1,10 +1,10 @@
-from tkinter import  *
+from tkinter import *
 import random
-root=Tk()
+root = Tk()
 root.title("Snake Game")
 
-root.resizable(False,False)
-img_logo=PhotoImage(file="logo.png")
+root.resizable(False, False)
+img_logo = PhotoImage(file="logo.png")
 root.iconphoto(False, img_logo)
 
 # Zmienne
@@ -18,7 +18,6 @@ score = 0
 direction = "down"
 GAME_HEIGHT = 700
 GAME_WIDTH = 700
-
 
 
 # Klasy
@@ -35,14 +34,18 @@ class Snake:
         for x, y in self.coordinates:
             square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR, tag="snake")
             self.squares.append(square)
+
+
 class Food:
     def __init__(self):
-        x = random.randint(0, (GAME_WIDTH / SPACE_SIZE) - 1) * SPACE_SIZE
-        y = random.randint(0, (GAME_HEIGHT / SPACE_SIZE) - 1) * SPACE_SIZE
+        x = random.randint(0, int(GAME_WIDTH / SPACE_SIZE) - 1) * SPACE_SIZE
+        y = random.randint(0, int(GAME_HEIGHT / SPACE_SIZE) - 1) * SPACE_SIZE
 
         self.coordinates = [x, y]
 
-        canvas.create_oval(x,y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR, tag="food")
+        canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR, tag="food")
+
+
 # Funkcje
 def next_turn(snake, food):
 
@@ -57,7 +60,7 @@ def next_turn(snake, food):
     elif direction == "right":
         x += SPACE_SIZE
 
-    snake.coordinates.insert(0, (x,y))
+    snake.coordinates.insert(0, (x, y))
 
     square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
 
@@ -65,7 +68,7 @@ def next_turn(snake, food):
 
     if x == food.coordinates[0] and y == food.coordinates[1]:
         global score
-        score+=1
+        score += 1
         top_label.config(text="Score:{}".format(score))
         canvas.delete("food")
         food = Food()
@@ -80,6 +83,8 @@ def next_turn(snake, food):
 
     else:
         root.after(SPEED, next_turn, snake, food)
+
+
 def change_direction(new_direction):
     global direction
 
@@ -95,27 +100,29 @@ def change_direction(new_direction):
     elif new_direction == 'down':
         if direction != 'up':
             direction = new_direction
+
+
 def check_collisions(snake):
 
     x, y = snake.coordinates[0]
 
     if x < 0 or x >= GAME_WIDTH:
-        print("GAME OVER")
         return True
     elif y < 0 or y >= GAME_HEIGHT:
-        print("GAME OVER")
         return True
 
     for body_part in snake.coordinates[1:]:
         if x == body_part[0] and y == body_part[1]:
-            print("GAME OVER")
             return True
     return False
+
+
 def game_over():
     canvas.delete(ALL)
     canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=("consola", 70), text="GAME OVER", fill="red", tag="gameover")
 
-top_label=Label(root, text="Score:{}".format(score), font=("consolas", 40))
+
+top_label = Label(root, text="Score:{}".format(score), font=("consolas", 40))
 top_label.pack()
 
 canvas = Canvas(root, bg=BACKGROUND_COLOR, height=GAME_HEIGHT, width=GAME_WIDTH)
@@ -138,8 +145,8 @@ root.bind('<Right>', lambda event: change_direction("right"))
 root.bind('<Up>', lambda event: change_direction("up"))
 root.bind('<Down>', lambda event: change_direction("down"))
 
-snake=Snake()
-food=Food()
+snake = Snake()
+food = Food()
 
 next_turn(snake, food)
 
