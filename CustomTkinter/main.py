@@ -24,9 +24,12 @@ set_appearance_mode("dark")
 # btn5 = CTkButton(master=app, text="Click Me", corner_radius=32, fg_color="#4158D0", hover_color="#C850C0", border_color="#FFCC70", border_width=2, image=CTkImage(dark_image=img, light_image=img))
 # btn5.place(relx= 0.5, rely = 0.3, anchor = "n")
 
-label= CTkLabel(master=app, text="Some Text...", font=("Arial", 20), text_color="#FFCC70")
-label.place(relx=0.5, rely=0.5, anchor="center")
+# Label
+# label= CTkLabel(master=app, text="Some Text...", font=("Arial", 20), text_color="#FFCC70")
+# label.place(relx=0.5, rely=0.5, anchor="center")
 
-
+# Combobox
+combobox = CTkComboBox(master=app, values=["option 1", "option 2", "option 3"])
+combobox.place(relx=0.5, rely=0.5, anchor="center")
 
 app.mainloop()
