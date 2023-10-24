@@ -3,6 +3,9 @@ from PIL import Image
 app = CTk()
 app.geometry("500x400")
 
+set_appearance_mode("dark")
+# set_appearance_mode("light")
+
 btn = CTkButton(master=app, text="Click Me")
 btn.place(relx= 0.2, rely = 0.1, anchor = "n")
 
