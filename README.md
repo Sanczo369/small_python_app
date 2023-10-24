@@ -243,3 +243,5 @@ Gra Snake, znana również jako Snake Game, to prosta i klasyczna gra komputerow
 ### requirements
 - random
 - tkinter
+
+## CustomTkinter
