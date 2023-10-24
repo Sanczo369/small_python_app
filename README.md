@@ -239,6 +239,7 @@ Program do szyfrowania pliku formacie PDF. Jest to projekt całkowicie gui tkint
 - tkinter
 
 ##  Snake Game 
+Gra Snake, znana również jako Snake Game, to prosta i klasyczna gra komputerowa. Gracz kontroluje węża, który porusza się po planszy.Celem gry jest zbieranie jedzenia, które po zjedzeniu powodują, że wąż rośnie. Wąż porusza się wzdłuż planszy i nie może uderzyć w ściany ani samego siebie. Jeśli to się stanie, gracz przegrywa.Gracz steruje wężem, za pomocą klawiszy strzałek. Gra trwa tak długo, jak gracz unika kolizji i zdobywa jak najwięcej punktów, zbierając jedzenie. Punkty są przyznawane za każdy zebrany element jedzenia, a im dłuższy jest wąż, tym trudniej utrzymać kontrolę nad nim.
 ### requirements
 - random
 - tkinter
