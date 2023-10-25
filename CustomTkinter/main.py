@@ -29,7 +29,14 @@ set_appearance_mode("dark")
 # label.place(relx=0.5, rely=0.5, anchor="center")
 
 # Combobox
-combobox = CTkComboBox(master=app, values=["option 1", "option 2", "option 3"])
-combobox.place(relx=0.5, rely=0.5, anchor="center")
+# combobox = CTkComboBox(master=app, values=["option 1", "option 2", "option 3"])
+# combobox.place(relx=0.5, rely=0.5, anchor="center")
+
+# Switch
+# checkbox = CTkCheckBox(master=app, text= "Option")
+# checkbox.place(relx=0.5, rely=0.5, anchor="center")
+#
+# checkbox = CTkCheckBox(master=app, text= "Option", fg_color="#C850C0", checkbox_height=30, checkbox_width=30, corner_radius=36)
+# checkbox.place(relx=0.5, rely=0.5, anchor="center")
 
 app.mainloop()
