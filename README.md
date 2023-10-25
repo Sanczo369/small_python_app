@@ -245,3 +245,15 @@ Gra Snake, znana również jako Snake Game, to prosta i klasyczna gra komputerow
 - tkinter
 
 ## CustomTkinter
+### Lista 
+- set_appearance_mode
+- CTkButton
+- CTkLabel
+- CTkComboBox
+- CTkCheckBox
+- CTkSlider
+- CTkEntry
+- CTkTextbox
+### requirements
+- customtkinter
+- PIL
