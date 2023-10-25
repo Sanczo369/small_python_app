@@ -42,6 +42,15 @@ set_appearance_mode("dark")
 # Slider
 # slider = CTkSlider(master=app)
 # slider.place(relx=0.5, rely=0.5, anchor="center")
+# slider = CTkSlider(master=app, from_=0, to=100, number_of_steps=5, button_color="#C850C0", progress_color="#C850C0", orientation="vertical")
+# slider.place(relx=0.5, rely=0.5, anchor="center")
+
+# Entry
+# entry= CTkEntry(master=app)
+# entry.place(relx=0.5, rely=0.5, anchor="center")
+
+# entry= CTkEntry(master=app, placeholder_text="Start typing...", width=300, text_color="#FFCC70")
+# entry.place(relx=0.5, rely=0.5, anchor="center")
 
 
 app.mainloop()
