@@ -255,6 +255,9 @@ CustomTkinter to biblioteka interfejsu użytkownika Pythona oparta na Tkinter, k
 - CTkSlider
 - CTkEntry
 - CTkTextbox
+- Event Handling
+- Frame
+- TabView
 ### requirements
 - customtkinter
 - PIL
