@@ -59,4 +59,25 @@ set_appearance_mode("dark")
 # textbox = CTkTextbox(master=app, scrollbar_button_color="#FFCC70", corner_radius=16, border_color="#FFCC70", border_width=2)
 # textbox.place(relx=0.5, rely=0.5, anchor="center")
 
+
+# Event Handling
+# def click_handler():
+#     print("Button Clicked")
+# btn = CTkButton(master=app, text="Click Me", command=click_handler)
+# btn.place(relx= 0.5, rely = 0.5, anchor = "center")
+
+# def click_handler(value):
+#     print(f"Button Clicked {value}")
+# btn = CTkComboBox(master=app, values=["Opt1", "Opt2", "Opt3"], command=click_handler)
+# btn.place(relx= 0.5, rely = 0.5, anchor = "center")
+
+# def click_handler():
+#     print(f"Button Clicked {entry.get()}")
+#
+# entry=CTkEntry(master=app, placeholder_text="Type anything...")
+# btn = CTkButton(master=app, text="Submit", command=click_handler)
+#
+# entry.pack(anchor="s", expand=True, pady=10)
+# btn.pack(anchor = "n", expand=True)
+
 app.mainloop()
