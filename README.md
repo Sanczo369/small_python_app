@@ -245,3 +245,16 @@ Gra Snake, znana również jako Snake Game, to prosta i klasyczna gra komputerow
 - tkinter
 
 ## CustomTkinter
+CustomTkinter to biblioteka interfejsu użytkownika Pythona oparta na Tkinter, która zapewnia nowe, nowoczesne i w pełni konfigurowalne widżety. Są tworzone i używane jak zwykłe widżety Tkinter i można ich również używać w połączeniu ze zwykłymi elementami Tkinter. 
+### Lista 
+- set_appearance_mode
+- CTkButton
+- CTkLabel
+- CTkComboBox
+- CTkCheckBox
+- CTkSlider
+- CTkEntry
+- CTkTextbox
+### requirements
+- customtkinter
+- PIL
