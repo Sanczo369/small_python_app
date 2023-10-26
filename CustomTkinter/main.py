@@ -90,4 +90,26 @@ set_appearance_mode("dark")
 # label.pack(anchor="s", expand=True, pady=10, padx=30)
 # entry.pack(anchor="s", expand=True, pady=10, padx=30)
 # btn.pack(anchor="n", expand=True, pady=30, padx=20)
+
+
+
+# TabView
+tabview= CTkTabview(master=app)
+tabview.pack(padx=20, pady=20)
+
+tabview.add("Tab 1")
+tabview.add("Tab 2")
+tabview.add("Tab 3")
+
+label_1 = CTkLabel(master=tabview.tab("Tab 1"), text="This is a frame 1")
+label_1.pack(pady=20, padx=20)
+
+label_2 = CTkLabel(master=tabview.tab("Tab 2"), text="This is a frame 2")
+label_2.pack(pady=20, padx=20)
+
+label_3 = CTkLabel(master=tabview.tab("Tab 3"), text="This is a frame 3")
+label_3.pack(pady=20, padx=20)
+
+
+
 app.mainloop()
