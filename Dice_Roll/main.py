@@ -14,4 +14,10 @@ def roll():
     l1.config(text=f'{x1}{x2}')
     l1.pack()
 
+
+l1=Label(root, font=("times", 200))
+b1=Button(root, text="lets roll...", command=roll)
+b1.place(x=330,y=0)
+
+
 mainloop()
