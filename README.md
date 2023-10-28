@@ -264,3 +264,8 @@ CustomTkinter to biblioteka interfejsu użytkownika Pythona oparta na Tkinter, k
 
 ## Dice Roll
 Jest to program gry "Rzut Kośćmi" w interfejsie graficznym za pomocą biblioteki tkinter w języku Python.
+
+
+## Media Player
+Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzenia multimedialnego wykorzystno Tkinter i Pygame.
+
