@@ -267,5 +267,5 @@ Jest to program gry "Rzut Kośćmi" w interfejsie graficznym za pomocą bibliote
 
 
 ## Media Player
-
+Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzenia multimedialnego wykorzystno Tkinter i Pygame.
 
