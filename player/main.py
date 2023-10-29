@@ -52,6 +52,24 @@ label = Label(root)
 label.place(x=0, y=0)
 root.after(0, update, 0)
 
+# Button
+ButtonPlay = PhotoImage(file="play1.png")
+Button(root, image=ButtonPlay, bg="#FFFFFF", bd=0, height = 60, width =60,
+       command=PlayMusic).place(x=215, y=487)
+
+ButtonStop = PhotoImage(file="stop1.png")
+Button(root, image=ButtonStop, bg="#FFFFFF", bd=0, height = 60, width =60,
+       command=mixer.music.stop).place(x=130, y=487)
+
+Buttonvolume = PhotoImage(file="volume.png")
+Button(root, image=Buttonvolume, bg="#FFFFFF", bd=0, height = 60, width =60,
+       command=mixer.music.unpause).place(x=20, y=487)
+
+ButtonPause = PhotoImage(file="pause1.png")
+Button(root, image=ButtonPause, bg="#FFFFFF", bd=0, height = 60, width =60,
+       command=mixer.music.pause).place(x=300, y=487)
+
+
 lower_farme = Frame(root, bg ="#ffffff", width=485, height=180)
 lower_farme.place(x=0, y=400)
 mainloop()
