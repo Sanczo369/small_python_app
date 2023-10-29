@@ -22,6 +22,14 @@ def AddMusic():
               if song.endswith(".mp3"):
                      Playlist.insert(END, song)
 
+
+def PlayMusic():
+    Music_Name = Playlist.get(ACTIVE)
+    print(Music_Name[0:-4])
+    mixer.music.load(Playlist.get(ACTIVE))
+    mixer.music.play()
+
+
 lower_farme = Frame(root, bg ="#ffffff", width=485, height=180)
 lower_farme.place(x=0, y=400)
 mainloop()
