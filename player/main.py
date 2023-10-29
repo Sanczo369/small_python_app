@@ -40,6 +40,17 @@ root.iconphoto(False, image_icon)
 frameCnt = 30
 frames = [PhotoImage(file='aa1.gif',format = 'gif -index %i' %(i)) for i in range(frameCnt)]
 
+def update(ind):
+
+    frame = frames[ind]
+    ind += 1
+    if ind == frameCnt:
+        ind = 0
+    label.configure(image=frame)
+    root.after(40, update, ind)
+label = Label(root)
+label.place(x=0, y=0)
+root.after(0, update, 0)
 
 lower_farme = Frame(root, bg ="#ffffff", width=485, height=180)
 lower_farme.place(x=0, y=400)
