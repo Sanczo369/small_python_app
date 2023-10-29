@@ -30,6 +30,17 @@ def PlayMusic():
     mixer.music.play()
 
 
+# icon
+lower_frame = Frame(root , bg = "#FFFFFF", width = 485 , height = 180 )
+lower_frame.place ( x = 0 , y = 400)
+
+image_icon = PhotoImage(file="logo png.png")
+root.iconphoto(False, image_icon)
+
+frameCnt = 30
+frames = [PhotoImage(file='aa1.gif',format = 'gif -index %i' %(i)) for i in range(frameCnt)]
+
+
 lower_farme = Frame(root, bg ="#ffffff", width=485, height=180)
 lower_farme.place(x=0, y=400)
 mainloop()
