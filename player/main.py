@@ -69,6 +69,12 @@ ButtonPause = PhotoImage(file="pause1.png")
 Button(root, image=ButtonPause, bg="#FFFFFF", bd=0, height = 60, width =60,
        command=mixer.music.pause).place(x=300, y=487)
 
+# Label
+Menu = PhotoImage(file="menu.png")
+Label(root, image=Menu).place(x=0, y=580, width=485, height=120)
+
+Frame_Music = Frame(root, bd=2, relief=RIDGE)
+Frame_Music.place(x=0, y=585, width=485, height=100)
 
 lower_farme = Frame(root, bg ="#ffffff", width=485, height=180)
 lower_farme.place(x=0, y=400)
