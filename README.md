@@ -273,3 +273,6 @@ Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzeni
 - time
 - pygame
 - os
+### Funkcje
+- AddMusic():
+- PlayMusic():
