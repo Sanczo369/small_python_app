@@ -80,5 +80,11 @@ Frame_Music.place(x=0, y=585, width=485, height=100)
 Button(root, text="Browse Music", width=59, height=1, font=("calibri",
       12, "bold"), fg="Black", bg="#FFFFFF", command=AddMusic).place(x=0, y=550)
 
+Scroll = Scrollbar(Frame_Music)
+Playlist = Listbox(Frame_Music, width=100, font=("Times new roman", 10), bg="#333333", fg="grey", selectbackground="lightblue", cursor="hand2", bd=0, yscrollcommand=Scroll.set)
+Scroll.config(command=Playlist.yview)
+Scroll.pack(side=RIGHT, fill=Y)
+Playlist.pack(side=RIGHT, fill=BOTH)
+
 
 mainloop()
