@@ -76,6 +76,9 @@ Label(root, image=Menu).place(x=0, y=580, width=485, height=120)
 Frame_Music = Frame(root, bd=2, relief=RIDGE)
 Frame_Music.place(x=0, y=585, width=485, height=100)
 
-lower_farme = Frame(root, bg ="#ffffff", width=485, height=180)
-lower_farme.place(x=0, y=400)
+
+Button(root, text="Browse Music", width=59, height=1, font=("calibri",
+      12, "bold"), fg="Black", bg="#FFFFFF", command=AddMusic).place(x=0, y=550)
+
+
 mainloop()
