@@ -11,6 +11,7 @@ root.geometry('485x700+290+10')
 root.resizable(False, False)
 root.iconbitmap('logo.ico')
 root.config(bg="#333333")
+mixer.init()
 
 def AddMusic():
     path = filedialog.askdirectory()
@@ -33,9 +34,6 @@ def PlayMusic():
 # icon
 lower_frame = Frame(root , bg = "#FFFFFF", width = 485 , height = 180 )
 lower_frame.place ( x = 0 , y = 400)
-
-image_icon = PhotoImage(file="logo png.png")
-root.iconphoto(False, image_icon)
 
 frameCnt = 30
 frames = [PhotoImage(file='aa1.gif',format = 'gif -index %i' %(i)) for i in range(frameCnt)]
@@ -77,6 +75,7 @@ Frame_Music = Frame(root, bd=2, relief=RIDGE)
 Frame_Music.place(x=0, y=585, width=485, height=100)
 
 
+
 Button(root, text="Browse Music", width=59, height=1, font=("calibri",
       12, "bold"), fg="Black", bg="#FFFFFF", command=AddMusic).place(x=0, y=550)
 
@@ -87,4 +86,4 @@ Scroll.pack(side=RIGHT, fill=Y)
 Playlist.pack(side=RIGHT, fill=BOTH)
 
 
-mainloop()
+root.mainloop()
