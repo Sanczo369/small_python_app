@@ -16,7 +16,9 @@ def update_duration(event):
     end_time["text"] = str(datetime.timedelta(seconds=duration))
     progress_slider["to"] = duration
 
-
+def update_scale(event):
+    """ updates the scale value """
+    progress_value.set(vid_player.current_duration())
 
 
 root.mainloop()
