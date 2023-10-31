@@ -20,5 +20,15 @@ def update_scale(event):
     """ updates the scale value """
     progress_value.set(vid_player.current_duration())
 
+def load_video():
+    """ loads the video """
+    file_path = filedialog.askopenfilename()
+
+    if file_path:
+        vid_player.load(file_path)
+
+        progress_slider.config(to=0, from_=0)
+        play_pause_btn["text"] = "Play"
+        progress_value.set(0)
 
 root.mainloop()
