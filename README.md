@@ -276,3 +276,10 @@ Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzeni
 ### Funkcje
 - AddMusic():
 - PlayMusic():
+
+
+## Simpli Video Player
+### requirements
+- tkinter
+- datetime
+- tkVideoPlayer
