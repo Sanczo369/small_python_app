@@ -279,3 +279,7 @@ Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzeni
 
 
 ## Simpli Video Player
+### requirements
+- tkinter
+- datetime
+- tkVideoPlayer
