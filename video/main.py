@@ -10,5 +10,13 @@ root.geometry("800x700+290+10")
 frame = tk.Frame(root)
 frame.pack()
 
+def update_duration(event):
+    """ updates the duration after finding the duration """
+    duration = vid_player.video_info()["duration"]
+    end_time["text"] = str(datetime.timedelta(seconds=duration))
+    progress_slider["to"] = duration
+
+
+
 
 root.mainloop()
