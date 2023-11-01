@@ -69,5 +69,10 @@ load_btn.pack(ipadx=12, ipady=4, anchor=tk.NW)
 #Playbutton = tk.Button(root, image=ButtonPlay, bd=0, height = 60, width =60,
 #       command=lambda: play_pause).pack(ipadx=12, ipady=4, anchor=tk.NW)
 
+#vid_player = TkinterVideo(scaled=True, master=root)
+#vid_player.pack(expand=True, fill="both")
+
+vid_player = TkinterVideo(root, scaled=True)
+vid_player.pack(expand=True, fill="both")
 
 root.mainloop()
