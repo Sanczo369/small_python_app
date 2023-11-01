@@ -40,4 +40,14 @@ def skip(value: int):
     vid_player.seek(int(progress_slider.get())+value)
     progress_value.set(progress_slider.get() + value)
 
+def play_pause():
+    """ pauses and plays """
+    if vid_player.is_paused():
+        vid_player.play()
+        play_pause_btn["text"] = "Pause"
+
+    else:
+        vid_player.pause()
+        play_pause_btn["text"] = "Play"
+
 root.mainloop()
