@@ -35,5 +35,9 @@ def seek(value):
     """ used to seek a specific timeframe """
     vid_player.seek(int(value))
 
+def skip(value: int):
+    """ skip seconds """
+    vid_player.seek(int(progress_slider.get())+value)
+    progress_value.set(progress_slider.get() + value)
 
 root.mainloop()
