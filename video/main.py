@@ -31,4 +31,9 @@ def load_video():
         play_pause_btn["text"] = "Play"
         progress_value.set(0)
 
+def seek(value):
+    """ used to seek a specific timeframe """
+    vid_player.seek(int(value))
+
+
 root.mainloop()
