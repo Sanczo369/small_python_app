@@ -50,4 +50,10 @@ def play_pause():
         vid_player.pause()
         play_pause_btn["text"] = "Play"
 
+def video_ended(event):
+    """ handle video ended """
+    progress_slider.set(progress_slider["to"])
+    play_pause_btn["text"] = "Play"
+    progress_slider.set(0)
+
 root.mainloop()
