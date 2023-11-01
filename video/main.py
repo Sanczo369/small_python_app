@@ -56,4 +56,18 @@ def video_ended(event):
     play_pause_btn["text"] = "Play"
     progress_slider.set(0)
 
+
+#ButtonPlay = PhotoImage(file="play1.png")
+#Button(root, image=ButtonPlay, bg="#FFFFFF", bd=0, height = 60, width =60,
+#       command=load_video).place(x=0, y=0)
+
+load_btn = tk.Button(root, text="Browse",bg="#FFFFFF", font=("calibri",
+      12, "bold"), command=load_video)
+load_btn.pack(ipadx=12, ipady=4, anchor=tk.NW)
+
+#ButtonPlay = PhotoImage(file="play11.png")
+#Playbutton = tk.Button(root, image=ButtonPlay, bd=0, height = 60, width =60,
+#       command=lambda: play_pause).pack(ipadx=12, ipady=4, anchor=tk.NW)
+
+
 root.mainloop()
