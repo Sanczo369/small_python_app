@@ -98,4 +98,7 @@ progress_slider = tk.Scale(root, variable=progress_value, from_=0, to=0, orient=
 # progress_slider.bind("<ButtonRelease-1>", seek)
 progress_slider.pack(side="left", fill="x", expand=True)
 
+end_time = tk.Label(root, text=str(datetime.timedelta(seconds=0)))
+end_time.pack(side="left")
+
 root.mainloop()
