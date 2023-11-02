@@ -86,4 +86,10 @@ ButtonPlay = PhotoImage(file="forward.png")
 Playbutton = tk.Button(lower_frame, image=ButtonPlay, bd=0,  height = 50, width =50,
        command=lambda: skip(5)).pack(side = LEFT)
 
+#skip_plus_5sec = tk.Button(root, text="Skip -5 sec", command=lambda: skip(-5))
+#skip_plus_5sec.pack(side="left")
+
+start_time = tk.Label(root, text=str(datetime.timedelta(seconds=0)))
+start_time.pack(side="left")
+
 root.mainloop()
