@@ -75,4 +75,8 @@ load_btn.pack(ipadx=12, ipady=4, anchor=tk.NW)
 vid_player = TkinterVideo(root, scaled=True)
 vid_player.pack(expand=True, fill="both")
 
+Buttonbackward = PhotoImage(file="backward.png")
+back = tk.Button(lower_frame, image=Buttonbackward, bd=0, height = 50, width =50,
+       command=lambda: skip(-5)).pack(side = LEFT)
+
 root.mainloop()
