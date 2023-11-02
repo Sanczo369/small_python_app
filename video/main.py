@@ -81,4 +81,9 @@ back = tk.Button(lower_frame, image=Buttonbackward, bd=0, height = 50, width =50
 
 play_pause_btn = tk.Button(lower_frame, text="Play", width = 40, height = 2, command = play_pause)
 play_pause_btn.pack(expand=True, fill="both", side = LEFT)
+
+ButtonPlay = PhotoImage(file="forward.png")
+Playbutton = tk.Button(lower_frame, image=ButtonPlay, bd=0,  height = 50, width =50,
+       command=lambda: skip(5)).pack(side = LEFT)
+
 root.mainloop()
