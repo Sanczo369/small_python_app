@@ -101,4 +101,8 @@ progress_slider.pack(side="left", fill="x", expand=True)
 end_time = tk.Label(root, text=str(datetime.timedelta(seconds=0)))
 end_time.pack(side="left")
 
+vid_player.bind("<<Duration>>", update_duration)
+vid_player.bind("<<SecondChanged>>", update_scale)
+vid_player.bind("<<Ended>>", video_ended )
+
 root.mainloop()
