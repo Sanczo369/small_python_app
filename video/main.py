@@ -92,4 +92,10 @@ Playbutton = tk.Button(lower_frame, image=ButtonPlay, bd=0,  height = 50, width 
 start_time = tk.Label(root, text=str(datetime.timedelta(seconds=0)))
 start_time.pack(side="left")
 
+progress_value = tk.IntVar(root)
+
+progress_slider = tk.Scale(root, variable=progress_value, from_=0, to=0, orient="horizontal", command=seek)
+# progress_slider.bind("<ButtonRelease-1>", seek)
+progress_slider.pack(side="left", fill="x", expand=True)
+
 root.mainloop()
