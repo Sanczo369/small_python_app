@@ -1,4 +1,4 @@
-# Small Python App
+# Małe aplikacje w Pythonie z użyciem Tkinter
 Small Python App in Tkinter
 
 
