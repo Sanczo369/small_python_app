@@ -10,17 +10,21 @@ root.geometry("800x700+290+10")
 frame = tk.Frame(root)
 frame.pack()
 
-lower_frame = tk.Frame(root , bg = "#FFFFFF")
-lower_frame.pack ( fill="both", side = BOTTOM)
+lower_frame = tk.Frame(root, bg="#FFFFFF")
+lower_frame.pack(fill="both", side=BOTTOM)
+
+
 def update_duration(event):
     """ updates the duration after finding the duration """
     duration = vid_player.video_info()["duration"]
     end_time["text"] = str(datetime.timedelta(seconds=duration))
     progress_slider["to"] = duration
 
+
 def update_scale(event):
     """ updates the scale value """
     progress_value.set(vid_player.current_duration())
+
 
 def load_video():
     """ loads the video """
@@ -33,14 +37,17 @@ def load_video():
         play_pause_btn["text"] = "Play"
         progress_value.set(0)
 
+
 def seek(value):
     """ used to seek a specific timeframe """
     vid_player.seek(int(value))
+
 
 def skip(value: int):
     """ skip seconds """
     vid_player.seek(int(progress_slider.get())+value)
     progress_value.set(progress_slider.get() + value)
+
 
 def play_pause():
     """ pauses and plays """
@@ -52,6 +59,7 @@ def play_pause():
         vid_player.pause()
         play_pause_btn["text"] = "Play"
 
+
 def video_ended(event):
     """ handle video ended """
     progress_slider.set(progress_slider["to"])
@@ -59,37 +67,34 @@ def video_ended(event):
     progress_slider.set(0)
 
 
-#ButtonPlay = PhotoImage(file="play1.png")
-#Button(root, image=ButtonPlay, bg="#FFFFFF", bd=0, height = 60, width =60,
+# ButtonPlay = PhotoImage(file="play1.png")
+# Button(root, image=ButtonPlay, bg="#FFFFFF", bd=0, height = 60, width =60,
 #       command=load_video).place(x=0, y=0)
 
-load_btn = tk.Button(root, text="Browse",bg="#FFFFFF", font=("calibri",
-      12, "bold"), command=load_video)
+load_btn = tk.Button(root, text="Browse", bg="#FFFFFF", font=("calibri", 12, "bold"), command=load_video)
 load_btn.pack(ipadx=12, ipady=4, anchor=tk.NW)
 
-#ButtonPlay = PhotoImage(file="play11.png")
-#Playbutton = tk.Button(root, image=ButtonPlay, bd=0, height = 60, width =60,
+# ButtonPlay = PhotoImage(file="play11.png")
+# Playbutton = tk.Button(root, image=ButtonPlay, bd=0, height = 60, width =60,
 #       command=lambda: play_pause).pack(ipadx=12, ipady=4, anchor=tk.NW)
 
-#vid_player = TkinterVideo(scaled=True, master=root)
-#vid_player.pack(expand=True, fill="both")
+# vid_player = TkinterVideo(scaled=True, master=root)
+# vid_player.pack(expand=True, fill="both")
 
 vid_player = TkinterVideo(root, scaled=True)
 vid_player.pack(expand=True, fill="both")
 
 Buttonbackward = PhotoImage(file="backward.png")
-back = tk.Button(lower_frame, image=Buttonbackward, bd=0, height = 50, width =50,
-       command=lambda: skip(-5)).pack(side = LEFT)
+back = tk.Button(lower_frame, image=Buttonbackward, bd=0, height=50, width=50, command=lambda: skip(-5)).pack(side=LEFT)
 
-play_pause_btn = tk.Button(lower_frame, text="Play", width = 40, height = 2, command = play_pause)
-play_pause_btn.pack(expand=True, fill="both", side = LEFT)
+play_pause_btn = tk.Button(lower_frame, text="Play", width=40, height=2, command=play_pause)
+play_pause_btn.pack(expand=True, fill="both", side=LEFT)
 
 ButtonPlay = PhotoImage(file="forward.png")
-Playbutton = tk.Button(lower_frame, image=ButtonPlay, bd=0,  height = 50, width =50,
-       command=lambda: skip(5)).pack(side = LEFT)
+Playbutton = tk.Button(lower_frame, image=ButtonPlay, bd=0,  height=50, width=50, command=lambda: skip(5)).pack(side=LEFT)
 
-#skip_plus_5sec = tk.Button(root, text="Skip -5 sec", command=lambda: skip(-5))
-#skip_plus_5sec.pack(side="left")
+# skip_plus_5sec = tk.Button(root, text="Skip -5 sec", command=lambda: skip(-5))
+# skip_plus_5sec.pack(side="left")
 
 start_time = tk.Label(root, text=str(datetime.timedelta(seconds=0)))
 start_time.pack(side="left")
@@ -105,11 +110,11 @@ end_time.pack(side="left")
 
 vid_player.bind("<<Duration>>", update_duration)
 vid_player.bind("<<SecondChanged>>", update_scale)
-vid_player.bind("<<Ended>>", video_ended )
-#ButtonPlay = PhotoImage(file="play1.png")
-#Button(root, image=ButtonPlay, bg="#FFFFFF", bd=0, height = 60, width =60,
+vid_player.bind("<<Ended>>", video_ended)
+# ButtonPlay = PhotoImage(file="play1.png")
+# Button(root, image=ButtonPlay, bg="#FFFFFF", bd=0, height = 60, width =60,
 #       command=lambda: skip(5)).place(x=215, y=487)
 
-#skip_plus_5sec = tk.Button(root, text="Skip +5 sec", command = lambda: skip(+5))
-#skip_plus_5sec.pack(side="left")
+# skip_plus_5sec = tk.Button(root, text="Skip +5 sec", command = lambda: skip(+5))
+# skip_plus_5sec.pack(side="left")
 root.mainloop()
