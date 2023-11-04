@@ -1,6 +1,5 @@
-# Small Python App
-Small Python App in Tkinter
-
+# Małe aplikacje w Pythonie z użyciem Tkinter
+Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter
 
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
@@ -279,6 +278,7 @@ Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzeni
 
 
 ## Simpli Video Player
+Stworzymy odtwarzacz wideo w języku Python przy użyciu Tkintera
 ### requirements
 - tkinter
 - datetime
