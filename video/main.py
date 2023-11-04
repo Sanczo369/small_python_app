@@ -10,6 +10,8 @@ root.geometry("800x700+290+10")
 frame = tk.Frame(root)
 frame.pack()
 
+lower_frame = tk.Frame(root , bg = "#FFFFFF")
+lower_frame.pack ( fill="both", side = BOTTOM)
 def update_duration(event):
     """ updates the duration after finding the duration """
     duration = vid_player.video_info()["duration"]
