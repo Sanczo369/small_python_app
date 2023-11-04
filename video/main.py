@@ -104,5 +104,10 @@ end_time.pack(side="left")
 vid_player.bind("<<Duration>>", update_duration)
 vid_player.bind("<<SecondChanged>>", update_scale)
 vid_player.bind("<<Ended>>", video_ended )
+#ButtonPlay = PhotoImage(file="play1.png")
+#Button(root, image=ButtonPlay, bg="#FFFFFF", bd=0, height = 60, width =60,
+#       command=lambda: skip(5)).place(x=215, y=487)
 
+#skip_plus_5sec = tk.Button(root, text="Skip +5 sec", command = lambda: skip(+5))
+#skip_plus_5sec.pack(side="left")
 root.mainloop()
