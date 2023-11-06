@@ -283,3 +283,6 @@ Stworzymy odtwarzacz wideo w języku Python przy użyciu Tkintera
 - tkinter
 - datetime
 - tkVideoPlayer
+
+## Employee Management System
+Projekt nowoczesnego systemu zarządzania pracownikami Tkinter z bazą danych sqlite3 w Pythonie przy użyciu Customtkinter.
