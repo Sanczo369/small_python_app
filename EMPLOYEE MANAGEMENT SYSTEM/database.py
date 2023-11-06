@@ -21,3 +21,11 @@ def fetch_employees():
     employees = cursor.fetchall()
     conn.close()
     return employees
+
+def insert_employee(id, name, role, gender, status):
+    conn = sqlite3.connect('Employees.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO Employees (id, name, role, gender, status) VALUES (?, ?, ?, ?, ?)',
+                   (id, name, role, gender, status))
+    conn.commit()
+    conn.close()
