@@ -283,3 +283,5 @@ Stworzymy odtwarzacz wideo w języku Python przy użyciu Tkintera
 - tkinter
 - datetime
 - tkVideoPlayer
+
+## Employee Management System
