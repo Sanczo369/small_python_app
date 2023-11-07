@@ -1,8 +1,13 @@
-from customtkinter import *
+import customtkinter
+from tkinter import *
+from tkinter import ttk
+import tkinter as tk
+from tkinter import messagebox
+import database
 
-app = CTk()
-app.geometry("500x400")
-app.title("EMPLOYEE MANAGEMENT SYSTEM")
+app = customtkinter.CTk()
+app.title("Employee Management SystemM")
+app.geometry("900x420")
 app.resizable(False, False)
-app.configure(bg="#326273")
+app.configure(bg="#161C25")
 app.mainloop()
