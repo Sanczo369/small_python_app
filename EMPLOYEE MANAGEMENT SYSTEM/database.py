@@ -29,3 +29,10 @@ def insert_employee(id, name, role, gender, status):
                    (id, name, role, gender, status))
     conn.commit()
     conn.close()
+
+def delete_employee(id):
+    conn = sqlite3.connect('Employees.db')
+    cursor = conn.cursor()
+    cursor.execute('DELETE FROM Employees WHERE id = ?',(id,))
+    conn.commit()
+    conn.close()
