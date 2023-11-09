@@ -14,6 +14,8 @@ app.config(bg="#161C25")
 font1 = ('Arial',20,'bold')
 font2 = ('Arial',12,'bold')
 
+# Form Label/Entry
+
 id_label = customtkinter.CTkLabel(app, font=font1, text="ID:", text_color='#fff', bg_color="#161C25")
 id_label.place(x=20, y=20)
 id_entry = customtkinter.CTkEntry(app, font=font1, text_color='#000', fg_color="#fff", border_color='#0C9295', border_width=2, width=180)
@@ -43,9 +45,10 @@ status_label.place(x=20, y=260)
 status_entry = customtkinter.CTkEntry(app, font=font1, text_color='#000', fg_color="#fff", border_color='#0C9295', border_width=2, width=180)
 status_entry.place(x=100, y=260)
 
+
+# Button
 add_button = customtkinter.CTkButton(app, font = font1, text_color='#fff', text='Add Employee', fg_color='#05A312', hover_color="#00850B", bg_color='#161C25', cursor='hand2', corner_radius=15, width=260)
 add_button.place(x=20, y=310)
-
 
 clear_button = customtkinter.CTkButton(app, font = font1, text_color='#fff', text='New Employee', fg_color='#161C25', hover_color="#FF5002", bg_color='#161C25',border_color='#F15704', border_width=2, cursor='hand2', corner_radius=15, width=260)
 clear_button.place(x=20, y=360)
@@ -56,5 +59,10 @@ update_button.place(x=300, y=360)
 delete_button = customtkinter.CTkButton(app, font = font1, text_color='#fff', text='Delete Employee', fg_color='#E40404', hover_color="#AE0000", bg_color='#161C25',border_color='#E40404', border_width=2, cursor='hand2', corner_radius=15, width=260)
 delete_button.place(x=580, y=360)
 
+# Style
+style = ttk.Style(app)
+style.theme_use('clam')
+style.configure('Treeview', font = font2, fooreground= '#fff', background='#000', fieldbackground= '#313837')
+style.map('Treeview', backgound=[('selected', '#1A8F2D')])
 
 app.mainloop()
