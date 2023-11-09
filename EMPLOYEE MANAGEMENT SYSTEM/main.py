@@ -50,5 +50,11 @@ add_button.place(x=20, y=310)
 clear_button = customtkinter.CTkButton(app, font = font1, text_color='#fff', text='New Employee', fg_color='#161C25', hover_color="#FF5002", bg_color='#161C25',border_color='#F15704', border_width=2, cursor='hand2', corner_radius=15, width=260)
 clear_button.place(x=20, y=360)
 
+update_button = customtkinter.CTkButton(app, font = font1, text_color='#fff', text='Update Employee', fg_color='#161C25', hover_color="#FF5002", bg_color='#161C25',border_color='#F15704', border_width=2, cursor='hand2', corner_radius=15, width=260)
+update_button.place(x=300, y=360)
+
+delete_button = customtkinter.CTkButton(app, font = font1, text_color='#fff', text='Delete Employee', fg_color='#E40404', hover_color="#AE0000", bg_color='#161C25',border_color='#E40404', border_width=2, cursor='hand2', corner_radius=15, width=260)
+delete_button.place(x=580, y=360)
+
 
 app.mainloop()
