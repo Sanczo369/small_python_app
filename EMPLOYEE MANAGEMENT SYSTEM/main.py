@@ -20,6 +20,20 @@ def add_to_treeview():
     for employee in employees:
         tree.insert('', END, values=employee)
 
+def insert():
+    id = id_entry.get()
+    name = name_entry.get()
+    role = role_entry.get()
+    gender = variable1.get()
+    status = status_entry.get()
+    if not (id and name and role and gender and status):
+        messagebox.showerror('Error', 'Enter all fields.')
+    elif database.id_exists(id):
+        messagebox.showerror('Error', 'ID already exists.')
+    else:
+        database.insert_employee(id, name, role, gender, status)
+        add_to_treeview()
+        messagebox.showinfo('Success', 'Data has been inserted')
 
 # Form Label/Entry
 id_label = customtkinter.CTkLabel(app, font=font1, text="ID:", text_color='#fff', bg_color="#161C25")
