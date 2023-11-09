@@ -65,4 +65,23 @@ style.theme_use('clam')
 style.configure('Treeview', font = font2, fooreground= '#fff', background='#000', fieldbackground= '#313837')
 style.map('Treeview', backgound=[('selected', '#1A8F2D')])
 
+# Tree
+tree = ttk.Treeview(app, height=15)
+tree['columns'] = ('ID', 'Name', 'Role', 'Gender', 'Status')
+
+tree.column('#0', width=0, stretch=tk.NO)
+tree.column('ID', anchor=tk.CENTER, width=120)
+tree.column('Name', anchor=tk.CENTER, width=120)
+tree.column('Role', anchor=tk.CENTER, width=120)
+tree.column('Gender', anchor=tk.CENTER, width=120)
+tree.column('Status', anchor=tk.CENTER, width=120)
+
+tree.heading('ID', text='ID')
+tree.heading('Name', text='Name')
+tree.heading('Role', text='Role')
+tree.heading('Gender', text='Gender')
+tree.heading('Status', text='Status')
+
+tree.place(x=300, y=20)
+
 app.mainloop()
