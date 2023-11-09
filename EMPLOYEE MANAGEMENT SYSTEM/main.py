@@ -14,8 +14,14 @@ app.config(bg="#161C25")
 font1 = ('Arial',20,'bold')
 font2 = ('Arial',12,'bold')
 
-# Form Label/Entry
+def add_to_treeview():
+    employees = database.fetch_employees()
+    tree.delete(*tree.get_children())
+    for employee in employees:
+        tree.insert('', END, values=employee)
 
+
+# Form Label/Entry
 id_label = customtkinter.CTkLabel(app, font=font1, text="ID:", text_color='#fff', bg_color="#161C25")
 id_label.place(x=20, y=20)
 id_entry = customtkinter.CTkEntry(app, font=font1, text_color='#000', fg_color="#fff", border_color='#0C9295', border_width=2, width=180)
