@@ -28,6 +28,19 @@ def clear(*clicked):
     role_entry.delete(0,END)
     variable1.set('Male')
     status_entry.delete(0,END)
+
+def display_data(event):
+    selected_item = tree.focus()
+    if selected_item:
+        row = tree.item(selected_item)['values']
+        clear()
+        id_entry.insert(0, row[0])
+        name_entry.insert(0, row[1])
+        role_entry.insert(0, row[2])
+        variable1.set(row[3])
+        status_entry.insert(0, row[4])
+    else:
+        pass
 def insert():
     id = id_entry.get()
     name = name_entry.get()
