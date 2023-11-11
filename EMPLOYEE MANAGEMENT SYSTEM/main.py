@@ -124,5 +124,7 @@ tree.heading('Gender', text='Gender')
 tree.heading('Status', text='Status')
 
 tree.place(x=300, y=20)
+tree.bind()
+add_to_treeview('<ButtonRelease>', display_data)
 
 app.mainloop()
