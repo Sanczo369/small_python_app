@@ -32,6 +32,16 @@ for i in range(4):
     button.pack(pady=5)
     choice_btns.append(button)
 
+# Create the choice label
+feedback_label = ttk.Label(app, anchor='center', padding=10)
+feedback_label.pack(pady=10)
+
+# Initialize the score
+score = 0
+
+# Create the score label
+score_label = ttk.Label(app, text="Score: 0/{}".format(len(quiz_data)), anchor='center', padding=10)
+score_label.pack(pady=10)
 
 
 
