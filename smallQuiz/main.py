@@ -43,6 +43,15 @@ score = 0
 score_label = ttk.Label(app, text="Score: 0/{}".format(len(quiz_data)), anchor='center', padding=10)
 score_label.pack(pady=10)
 
+# Create the next button
+next_btn = ttk.Button(app, text="Next", command=next_question, state="disabled")
+next_btn.pack(pady=10)
+
+# Initialize the current question index
+current_question = 0
+
+# Show the first question
+show_question()
 
 
 app.mainloop()
