@@ -290,3 +290,5 @@ Projekt nowoczesnego systemu zarządzania pracownikami Tkinter z bazą danych sq
 - customtkinter
 - tkinter
 - database
+
+## SmallQuiz
