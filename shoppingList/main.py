@@ -3,6 +3,17 @@ from tkinter import *
 app = Tk()
 app.title("Shopping List")
 
+def creatreListinListBox(shopping):
+    for elem in shopping:
+        theList.insert(END, elem[0] + "-" + str(elem[1]))
+
+def listIndex(shopping, item):
+    index = -1
+    for i in range(len(shopping)):
+        if shopping[i][0] == item:
+            index = i
+    return index
+
 theList = Listbox(app, selectmode=SINGLE)
 theList.grid(row=0, column=0, columnspan=2, sticky=E)
 
