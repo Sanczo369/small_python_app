@@ -5,8 +5,15 @@ from quiz_data import quiz_data
 
 
 def show_question():
-    pass
+    question = quiz_data[current_question]
+    qs_label.config(text=question["question"])
 
+    choices = question['choices']
+    for i in range(4):
+        choice_btns[i].config(text=choices[i], state="normal")
+
+    feedback_label.config(text='')
+    next_btn.config(state="disabled")
 def  check_answer():
     pass
 
