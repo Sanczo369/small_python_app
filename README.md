@@ -294,7 +294,6 @@ Projekt nowoczesnego systemu zarządzania pracownikami Tkinter z bazą danych sq
 ## SmallQuiz
 Aplikacja Quiz przy użyciu języka Python i biblioteki customtkinter. 
 ### requirements
-- customtkinter
 - tkinter
 - ttkbootstrap
 - quiz_data
