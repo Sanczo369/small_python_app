@@ -33,7 +33,14 @@ def  check_answer(choice):
 
 
 def  next_question():
-    pass
+    global current_question
+    current_question +=1
+
+    if current_question < len(quiz_data):
+        show_question()
+    else:
+        messagebox.showinfo("Quiz Completed","Quiz Completed! Final score: {}/{}".format(score, len(quiz_data)))
+        app.destroy()
 
 # Create the main Window
 app = tk.Tk()
