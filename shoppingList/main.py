@@ -3,9 +3,9 @@ from tkinter import *
 app = Tk()
 app.title("Shopping List")
 
-def creatreListinListBox(shopping):
+def createListinListBox(shopping):
     for elem in shopping:
-        theList.insert(END, elem[0] + "-" + str(elem[1]))
+        theList.insert(END,elem[0] + "-" + str(elem[1]))
 
 def listIndex(shopping, item):
     index = -1
@@ -13,6 +13,13 @@ def listIndex(shopping, item):
         if shopping[i][0] == item:
             index = i
     return index
+
+def addList(shopping, item, index):
+    if index == -1:
+        shopping.append([item,1])
+    else:
+        shopping[index][1] += quantity.get()
+
 
 theList = Listbox(app, selectmode=SINGLE)
 theList.grid(row=0, column=0, columnspan=2, sticky=E)
