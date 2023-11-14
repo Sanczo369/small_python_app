@@ -20,9 +20,17 @@ def addList(shopping, item, index):
     else:
         shopping[index][1] += quantity.get()
 
-def removeList(sopping, index):
+def removeList(shopping, index):
     del(shopping[index])
 
+def add():
+    index = listIndex(shopping, item.get())
+    addList(shopping, item.get(), index)
+    if index >=0:
+        theList.delete(index)
+        theList.insert(index,shopping[index][0] + "-" + str(shopping[index][1]))
+    else:
+        theList.insert(END,item.get() + "-" + str(quantity.get()))
 
 theList = Listbox(app, selectmode=SINGLE)
 theList.grid(row=0, column=0, columnspan=2, sticky=E)
