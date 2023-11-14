@@ -32,6 +32,12 @@ def add():
     else:
         theList.insert(END,item.get() + "-" + str(quantity.get()))
 
+def remove():
+    index = theList.index(ACTIVE)
+    print(index)
+    removeList(shopping, index)
+    theList.delete(index)
+
 theList = Listbox(app, selectmode=SINGLE)
 theList.grid(row=0, column=0, columnspan=2, sticky=E)
 
