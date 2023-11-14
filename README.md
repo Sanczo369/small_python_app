@@ -298,3 +298,5 @@ Aplikacja Quiz przy użyciu języka Python i biblioteki customtkinter.
 - ttkbootstrap
 - quiz_data
 
+## Shopping List
+Aplikacja GUI z listą zakupów przy użyciu Tkintera i Pythona.
