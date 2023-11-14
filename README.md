@@ -298,3 +298,4 @@ Aplikacja Quiz przy użyciu języka Python i biblioteki customtkinter.
 - ttkbootstrap
 - quiz_data
 
+## Shopping List
