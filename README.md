@@ -1,5 +1,5 @@
 # Małe aplikacje w Pythonie z użyciem Tkinter
-Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter
+Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkinter
 
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
