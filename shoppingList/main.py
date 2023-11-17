@@ -1,8 +1,8 @@
-from tkinter import *
-
-app = Tk()
+from customtkinter import *
+from CTkListbox import *
+app = CTk()
 app.title("Shopping List")
-
+set_appearance_mode("dark")
 def createListinListBox(shopping):
     for elem in shopping:
         theList.insert(END,elem[0] + "-" + str(elem[1]))
@@ -33,12 +33,15 @@ def add():
         theList.insert(END,item.get() + "-" + str(quantity.get()))
 
 def remove():
-    index = theList.index(ACTIVE)
-    print(index)
-    removeList(shopping, index)
-    theList.delete(index)
+    selected_indices = theList.curselection()
+    if selected_indices:
+        index = selected_indices
+        removeList(shopping, index)
+        theList.delete(index)
 
-theList = Listbox(app, selectmode=SINGLE)
+shopping = [["apple" ,10],["milk", 2], ["juice", 1], ["wine", 2], ["chicken", 1]]
+
+theList = CTkListbox(app)
 theList.grid(row=0, column=0, columnspan=2, sticky=E)
 
 item=StringVar()
@@ -46,13 +49,13 @@ quantity=IntVar()
 
 quantity.set(1)
 
-Label(app, text="Item:").grid(row=1, column=0, sticky=E)
-Entry(app, textvariable=item).grid(row=1, column=1, sticky=W)
+CTkLabel(app, text="Item:").grid(row=1, column=0, sticky=E)
+CTkEntry(app, textvariable=item).grid(row=1, column=1, sticky=W)
 
-Label(app, text="Quantity:").grid(row=2, column=0, sticky=E)
-Entry(app, textvariable=quantity).grid(row=2, column=1, sticky=W)
+CTkLabel(app, text="Quantity:").grid(row=2, column=0, sticky=E)
+CTkEntry(app, textvariable=quantity).grid(row=2, column=1, sticky=W)
 
-Button(app, text="Add").grid(row=3, column=0, columnspan=3)
-Button(app, text="Remove").grid(row=0, column=3)
+CTkButton(app, text="Add", command=add).grid(row=3, column=0, columnspan=3)
+CTkButton(app, text="Remove", command=remove).grid(row=0, column=3)
 
 app.mainloop()
