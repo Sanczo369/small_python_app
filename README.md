@@ -1,6 +1,30 @@
 # Małe aplikacje w Pythonie z użyciem Tkinter
-Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter
-
+Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkinter
+## Lista Projektów
+- Kółko i krzyżyk
+- Prosty Kalkulator
+- Generowania kodów QR
+- Stoper
+- To Do List
+- Time and data
+- Quiz
+- BMI CALCULATOR
+- Data Entry
+- White board
+- Translate
+- Excel Viewer
+- Student Registration System
+- Bill Mangement
+- Speed Test
+- PDF Protector Tool
+- Snake Game
+- CustomTkinter
+- Dice Roll
+- Media Player
+- Simpli Video Player
+- Employee Management System
+- SmallQuiz
+- Shopping List
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
@@ -51,7 +75,6 @@ pip install qrcode
 - qrcode
 
 
-  
 ## Stoper
  Aplikacja Stoper napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi uruchamianie, zatrzymywanie i resetowanie stopera.
 ### Oto rozkład kodu:
@@ -73,7 +96,6 @@ pip install qrcode
 - tkinter
 
 
-  
 ## To Do List
 Aplikacja "To-Do List" (lista zadań) jest narzędziem, które pomaga użytkownikom organizować swoje obowiązki, zadania i plany w sposób bardziej efektywny.
 Aplikacja zapisuje liste zadań do plku txt co pozwala przy ponownym uruchomieniu aplikacji widok zadań które były wpisane wcześniej i nie zostały usunięty podczas poprzedniego używania aplikacji
@@ -88,7 +110,6 @@ Aplikacja zapisuje liste zadań do plku txt co pozwala przy ponownym uruchomieni
 - tkinter
 
 
-
 ## Time and data
 Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do tworzenia interfejsu graficznego. Aplikacja umożliwia użytkownikowi wyświetlenie aktualnej godziny oraz daty.
 ### Oto rozkład kodu:
@@ -100,7 +121,6 @@ Aplikacja Time and data napisana w Pythonie przy użyciu modułu Tkinter do twor
 - datetime
 - tkinter
 - time
-
 
 
 ## Quiz
@@ -124,7 +144,6 @@ Aplikacja Quiz napisana w Pythonie przy użyciu modułu Tkinter do tworzenia int
 Aplikacjawyświetla pytanie oraz 4 warianty odpowiedzi po udzieleniu odpowiedzi gracz otrzymuje informacje o prawidłowej odpowiedzi. Po odpowiedzi na 10 pytań program wyświetla rezulta z informacją o procentowej skutecznośći oraz liczbie prawidłowych oraz błędnych odpowiedzi. Pytania pobierane są ze strony opentdb.com
 
 
-
 ## BMI CALCULATOR
 Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie podanych danych takich jak masa ciała i wzrost. Dzięki temu dowiesz się, czy Twoja waga jest w normie, czy może wymaga pewnych zmian.
 ### Oto rozkład kodu:
@@ -138,7 +157,6 @@ Aplikacja pozwala na szybkie i precyzyjne obliczenie Twojego BMI na podstawie po
 - tkinter
 
 
-  
 ## Data Entry
 Aplikacja umożliwia wprowadzanie danych osobowych do arkusza kalkulacyjnego i zapisywanie ich w pliku "Backened_Data.xlsx".
 ### Oto rozkład kodu:
@@ -150,7 +168,6 @@ clear(): Czyści wprowadzone dane w polach tekstowych i komboboxie.
 submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjnego "Backened_Data.xlsx", wyświetla komunikat o sukcesie i czyści pola wprowadzania.
 - Tworzenie etykiet, pól tekstowych, komboboxa i przycisków w oknie głównym aplikacji.
 - Uruchamianie root.mainloop()
-
 ### requirements
 - tkinter
 - openpyxl,
@@ -158,8 +175,7 @@ submit(): Pobiera dane z pól wprowadzania, zapisuje je do arkusza kalkulacyjneg
 - pathlib
 
 
-  
-## White_board
+## White board
 Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika (GUI) wykorzystującym bibliotekę Tkinter w Pythonie.
 ### Oto rozkład kodu:
 - Interfejs użytkownika
@@ -176,7 +192,6 @@ Proste narzędzie do rysowania i malowania z graficznym interfejsem użytkownika
 - os
 
 
-
 ## Translate
 Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do tworzenia interfejsu graficznego użytkownika (GUI). Aplikacja przy pomocy modułu googletrans tłumaczy tekstu przy użyciu Google Translate.
 ### Oto rozkład kodu:
@@ -189,14 +204,13 @@ Aplikacja "Translator" stworzona w Pythonie przy użyciu biblioteki Tkinter do t
 - pygoogletranslation
 
 
-
-## Excel_Viewer
+## Excel Viewer
 Aplikacja to przeglądarkę arkuszy danych programu Excel za pomocą Pythona. jest to całkowicie projekt GUI Tkinter
 ### requirements
 - numpy
 - pandas
 
-  
+ 
 ## Student Registration System
 Aplikacja "Student Registration System" to system rejestracji studentów z bazą danych Excel przy użyciu Pythona. jest to całkowicie projekt GUI Tkinter
 ### requirements
@@ -224,12 +238,12 @@ Aplikacja "Bill Mangement" to system wyliczający wartość rachunku na podstawi
 - tkinter
 
 
-
 ## Speed Test
 Aplikacja "Speed Test" to system wyliczający wartość PING, DOWNLOAD oraz UPLOAD
 ### requirements
 - speedtest
 - tkinter
+
 
 ## PDF Protector Tool
 Program do szyfrowania pliku formacie PDF. Jest to projekt całkowicie gui tkinter.
@@ -237,11 +251,13 @@ Program do szyfrowania pliku formacie PDF. Jest to projekt całkowicie gui tkint
 - PyPDF2
 - tkinter
 
+
 ##  Snake Game 
 Gra Snake, znana również jako Snake Game, to prosta i klasyczna gra komputerowa. Gracz kontroluje węża, który porusza się po planszy.Celem gry jest zbieranie jedzenia, które po zjedzeniu powodują, że wąż rośnie. Wąż porusza się wzdłuż planszy i nie może uderzyć w ściany ani samego siebie. Jeśli to się stanie, gracz przegrywa.Gracz steruje wężem, za pomocą klawiszy strzałek. Gra trwa tak długo, jak gracz unika kolizji i zdobywa jak najwięcej punktów, zbierając jedzenie. Punkty są przyznawane za każdy zebrany element jedzenia, a im dłuższy jest wąż, tym trudniej utrzymać kontrolę nad nim.
 ### requirements
 - random
 - tkinter
+
 
 ## CustomTkinter
 CustomTkinter to biblioteka interfejsu użytkownika Pythona oparta na Tkinter, która zapewnia nowe, nowoczesne i w pełni konfigurowalne widżety. Są tworzone i używane jak zwykłe widżety Tkinter i można ich również używać w połączeniu ze zwykłymi elementami Tkinter. 
@@ -261,9 +277,12 @@ CustomTkinter to biblioteka interfejsu użytkownika Pythona oparta na Tkinter, k
 - customtkinter
 - PIL
 
+
 ## Dice Roll
 Jest to program gry "Rzut Kośćmi" w interfejsie graficznym za pomocą biblioteki tkinter w języku Python.
-
+### requirements
+- random
+- customtkinter
 
 ## Media Player
 Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzenia multimedialnego wykorzystno Tkinter i Pygame.
@@ -284,12 +303,14 @@ Stworzymy odtwarzacz wideo w języku Python przy użyciu Tkintera
 - datetime
 - tkVideoPlayer
 
+
 ## Employee Management System
 Projekt nowoczesnego systemu zarządzania pracownikami Tkinter z bazą danych sqlite3 w Pythonie przy użyciu Customtkinter.
 ### requirements
 - customtkinter
 - tkinter
 - database
+
 
 ## SmallQuiz
 Aplikacja Quiz przy użyciu języka Python i biblioteki customtkinter. 
