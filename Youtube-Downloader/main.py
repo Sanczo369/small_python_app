@@ -7,7 +7,7 @@ import os
 app = tk.Tk()
 app.title('Youtube Downloader')
 app.geometry("500x400")
-window.iconbitmap('yt.ico')
+app.iconbitmap('yt.ico')
 app.configure(background='#cccccc')
 
 # Browse Button
