@@ -25,6 +25,18 @@ lbl_path.place(x=20, y=270)
 path = tk.Entry(app, width=40, bg="linen", fg="gray9",textvariable=folder_path, font=('times', 15, ' bold '))
 path.place(x=150, y=280)
 
+# OptionMenu Button
+options = tk.StringVar(app)
+options.trace_add('write', lambda *args: print(options.get()))
+options.set("Video (mp4)") # default value
+
+om1 =tk.OptionMenu(app, options, "Video (mp4)","Audio (mp3)")
+om1["bg"] = "DarkGoldenrod1"
+om1["highlightthickness"]=0
+om1.config(width=10, height=1, font=('times', 15, ' bold '))
+om1['menu'].config(font=('times',(15)),bg='goldenrod1')
+om1.place(x=600, y=160)
+
 # Browse Button
 browse = tk.Button(app, text="Browse",command=browse_location,fg='black'  ,bg="DarkGoldenrod1"  ,width=11 ,height=1 , activebackground = "Red" ,font=('times', 15, ' bold '))
 browse.place(x=600, y=270)
