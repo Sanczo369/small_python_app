@@ -12,11 +12,18 @@ app.configure(background='#cccccc')
 
 
 # URL Message
-lbl_url = tk.Label(window, text="Enter URL :", width=10, height=2, fg="black", bg="light steel blue", font=('times', 15, ' bold '))
+lbl_url = tk.Label(app, text="Enter URL :", width=10, height=2, fg="black", bg="light steel blue", font=('times', 15, ' bold '))
 lbl_url.place(x=20, y=150)
 
-url = tk.Entry(window, width=40, bg="linen", fg="gray9",font=('times', 15, ' bold '))
+url = tk.Entry(app, width=40, bg="linen", fg="gray9",font=('times', 15, ' bold '))
 url.place(x=150, y=160)
+
+# Path Message
+lbl_path = tk.Label(app, text="Enter Path :", width=10, height=2, fg="black", bg="light steel blue", font=('times', 15, ' bold '))
+lbl_path.place(x=20, y=270)
+
+path = tk.Entry(app, width=40, bg="linen", fg="gray9",textvariable=folder_path, font=('times', 15, ' bold '))
+path.place(x=150, y=280)
 
 # Browse Button
 browse = tk.Button(app, text="Browse",command=browse_location,fg='black'  ,bg="DarkGoldenrod1"  ,width=11 ,height=1 , activebackground = "Red" ,font=('times', 15, ' bold '))
