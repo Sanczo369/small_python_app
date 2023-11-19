@@ -7,9 +7,9 @@ import youtube_dl
 
 app = tk.Tk()
 app.title('Youtube Downloader')
-app.geometry("500x400")
+app.geometry("760x430")
 app.iconbitmap('yt.ico')
-app.configure(background='#cccccc')
+app.configure(background='#333333')
 
 def clear():
     url.delete(first=0, last=50)
@@ -32,7 +32,7 @@ def download_file():
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([URL])
             noty='Video Downloaded successfully'
-            Notification.configure(text=noty,fg='black', bg="light steel blue", width=30, font=('times', 18, 'bold','italic'))
+            Notification.configure(text=noty,fg='black', bg="#333333", width=30, font=('times', 18, 'bold','italic'))
             Notification.place(x=150, y=450)
         elif options.get() == "Audio (mp3)":
             # Audio Download
@@ -48,7 +48,7 @@ def download_file():
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([URL])
             noty='Audio Downloaded successfully'
-            Notification.configure(text=noty,fg='black', bg="light steel blue", width=30, font=('times', 18, 'bold','italic'))
+            Notification.configure(text=noty,fg='black', bg="#333333", width=30, font=('times', 18, 'bold','italic'))
             Notification.place(x=150, y=450)
     except Exception as e:
         print(e)
