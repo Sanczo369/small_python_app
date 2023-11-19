@@ -53,6 +53,15 @@ def download_file():
     except Exception as e:
         print(e)
 
+folder_path = StringVar()
+
+message = tk.Label(app,  text = "Youtube downloader", bg="slate blue",
+            fg="black", height=2, width=int(app.winfo_screenwidth()/2), font=('times', 30, 'italic bold ')).pack()
+
+Notification = tk.Label(app, text="Video Downloaded Successfully", bg="lime green", fg="white", width=int(app.winfo_screenwidth()/2),
+                   height=2, font=('times', 18, 'bold'))
+
+
 # URL Message
 lbl_url = tk.Label(app, text="Enter URL :", width=10, height=2, fg="black", bg="light steel blue", font=('times', 15, ' bold '))
 lbl_url.place(x=20, y=150)
