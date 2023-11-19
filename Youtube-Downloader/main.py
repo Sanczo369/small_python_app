@@ -3,12 +3,16 @@ from tkinter import *
 from tkinter import filedialog
 from PIL import ImageTk, Image
 import os
+import youtube_dl
 
 app = tk.Tk()
 app.title('Youtube Downloader')
 app.geometry("500x400")
 app.iconbitmap('yt.ico')
 app.configure(background='#cccccc')
+
+def clear():
+    url.delete(first=0, last=50)
 
 def browse_location():
     global folder_path
