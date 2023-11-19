@@ -16,6 +16,39 @@ def browse_location():
     filename = filedialog.askdirectory()
     folder_path.set(filename)
 
+def download_file():
+    try:
+        URL = url.get()
+        PATH = path.get()
+        # Option Selection
+        if options.get() == "Video (mp4)":
+            # Video Download
+            ydl_opts = {}
+            os.chdir(PATH)
+            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                ydl.download([URL])
+            noty='Video Downloaded successfully'
+            Notification.configure(text=noty,fg='black', bg="light steel blue", width=30, font=('times', 18, 'bold','italic'))
+            Notification.place(x=150, y=450)
+        elif options.get() == "Audio (mp3)":
+            # Audio Download
+            ydl_opts = {
+                'format': 'bestaudio/best',
+                'postprocessors': [{
+                    'key': 'FFmpegExtractAudio',
+                    'preferredcodec': 'mp3',
+                    'preferredquality': '192',
+                    }],
+                }
+            os.chdir(PATH)
+            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                ydl.download([URL])
+            noty='Audio Downloaded successfully'
+            Notification.configure(text=noty,fg='black', bg="light steel blue", width=30, font=('times', 18, 'bold','italic'))
+            Notification.place(x=150, y=450)
+    except Exception as e:
+        print(e)
+
 # URL Message
 lbl_url = tk.Label(app, text="Enter URL :", width=10, height=2, fg="black", bg="light steel blue", font=('times', 15, ' bold '))
 lbl_url.place(x=20, y=150)
