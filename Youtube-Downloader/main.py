@@ -10,6 +10,11 @@ app.geometry("500x400")
 app.iconbitmap('yt.ico')
 app.configure(background='#cccccc')
 
+def browse_location():
+    global folder_path
+    global filename
+    filename = filedialog.askdirectory()
+    folder_path.set(filename)
 
 # URL Message
 lbl_url = tk.Label(app, text="Enter URL :", width=10, height=2, fg="black", bg="light steel blue", font=('times', 15, ' bold '))
