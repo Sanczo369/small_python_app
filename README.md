@@ -322,6 +322,9 @@ Aplikacja Quiz przy użyciu języka Python i biblioteki customtkinter.
 
 ## Shopping List
 Aplikacja GUI z listą zakupów przy użyciu Tkintera i Pythona.
+### requirements
+- customtkinter
+- CTkListbox
 
 
 ## Youtube Downloader
