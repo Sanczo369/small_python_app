@@ -40,7 +40,29 @@ canvas.create_text(
     fill="#FFFFFF",
     font=("MontserratRoman Bold", 32 * -1)
 )
+image_image_1 = PhotoImage(
+    file=relative_to_assets("image_1.png"))
+image_1 = canvas.create_image(
+    192.0,
+    146.0,
+    image=image_image_1
+)
 
+image_image_2 = PhotoImage(
+    file=relative_to_assets("image_2.png"))
+image_2 = canvas.create_image(
+    358.0,
+    229.0,
+    image=image_image_2
+)
+
+image_image_3 = PhotoImage(
+    file=relative_to_assets("image_3.png"))
+image_3 = canvas.create_image(
+    523.0,
+    146.0,
+    image=image_image_3
+)
 
 
 window.mainloop()
