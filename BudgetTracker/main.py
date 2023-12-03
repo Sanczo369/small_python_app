@@ -13,6 +13,33 @@ def submit_handler():
     expenses += new_expense_amt
     canvas.itemconfig(tagOrId=expenses_text, text=f"${expenses}")
 
+canvas = Canvas(
+    window,
+    bg = "#FFFFFF",
+    height = 550,
+    width = 700,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge"
+)
+
+canvas.place(x = 0, y = 0)
+canvas.create_rectangle(
+    0.0,
+    0.0,
+    700.0,
+    85.0,
+    fill="#002689",
+    outline="")
+
+canvas.create_text(
+    34.0,
+    17.0,
+    anchor="nw",
+    text="Budget Tracker",
+    fill="#FFFFFF",
+    font=("MontserratRoman Bold", 32 * -1)
+)
 
 
 
