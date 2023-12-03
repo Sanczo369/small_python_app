@@ -63,6 +63,58 @@ image_3 = canvas.create_image(
     146.0,
     image=image_image_3
 )
+canvas.create_text(
+    57.0,
+    122.0,
+    anchor="nw",
+    text="Income",
+    fill="#5F4500",
+    font=("MontserratRoman Bold", 12 * -1)
+)
 
+canvas.create_text(
+    57.0,
+    205.0,
+    anchor="nw",
+    text="Balance",
+    fill="#0A4A00",
+    font=("MontserratRoman Bold", 12 * -1)
+)
+
+canvas.create_text(
+    388.0,
+    122.0,
+    anchor="nw",
+    text="Expenses",
+    fill="#660000",
+    font=("MontserratRoman Bold", 12 * -1)
+)
+
+canvas.create_text(
+    57.0,
+    139.0,
+    anchor="nw",
+    text="$5,689",
+    fill="#5F4500",
+    font=("MontserratRoman Bold", 24 * -1)
+)
+
+canvas.create_text(
+    57.0,
+    222.0,
+    anchor="nw",
+    text="$4,289",
+    fill="#0A4A00",
+    font=("MontserratRoman Bold", 24 * -1)
+)
+
+expenses_text = canvas.create_text(
+    388.0,
+    139.0,
+    anchor="nw",
+    text="$1,400",
+    fill="#660000",
+    font=("MontserratRoman Bold", 24 * -1)
+)
 
 window.mainloop()
