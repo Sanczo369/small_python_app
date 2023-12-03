@@ -26,6 +26,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - SmallQuiz
 - Shopping List
 - Youtube Downloader
+- BudgetTracker
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
@@ -333,3 +334,6 @@ Aplikacja Youtube Downloader pzowala pobierać pliki z Youtube.
 - tkinter
 - PIL
 - youtube_dl
+
+
+## BudgetTracker
