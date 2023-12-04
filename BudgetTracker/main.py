@@ -150,4 +150,25 @@ canvas.create_text(
     fill="#002689",
     font=("MontserratRoman Bold", 12 * -1)
 )
+
+
+entry_image_1 = PhotoImage(
+    file=relative_to_assets("entry_1.png"))
+entry_bg_1 = canvas.create_image(
+    214.5,
+    362.0,
+    image=entry_image_1
+)
+entry_1 = Entry(
+    bd=0,
+    bg="#E3E3E3",
+    fg="#000716",
+    highlightthickness=0
+)
+entry_1.place(
+    x=50.0,
+    y=343.0,
+    width=329.0,
+    height=36.0
+)
 window.mainloop()
