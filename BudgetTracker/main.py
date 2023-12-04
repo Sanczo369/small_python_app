@@ -171,4 +171,26 @@ entry_1.place(
     width=329.0,
     height=36.0
 )
+
+
+entry_image_2 = PhotoImage(
+    file=relative_to_assets("entry_2.png"))
+entry_bg_2 = canvas.create_image(
+    215.5,
+    437.0,
+    image=entry_image_2
+)
+entry_2 = Entry(
+    bd=0,
+    bg="#E3E3E3",
+    fg="#000716",
+    highlightthickness=0
+)
+entry_2.place(
+    x=51.0,
+    y=418.0,
+    width=329.0,
+    height=36.0
+)
+
 window.mainloop()
