@@ -117,4 +117,12 @@ expenses_text = canvas.create_text(
     font=("MontserratRoman Bold", 24 * -1)
 )
 
+image_image_4 = PhotoImage(
+    file=relative_to_assets("image_4.png"))
+image_4 = canvas.create_image(
+    534.0,
+    435.0,
+    image=image_image_4
+)
+
 window.mainloop()
