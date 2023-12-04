@@ -209,4 +209,12 @@ button_1.place(
     height=53.0
 )
 
+image_image_5 = PhotoImage(
+    file=relative_to_assets("image_5.png"))
+image_5 = canvas.create_image(
+    660.0,
+    43.0,
+    image=image_image_5
+)
+
 window.mainloop()
