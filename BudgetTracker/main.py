@@ -124,5 +124,30 @@ image_4 = canvas.create_image(
     435.0,
     image=image_image_4
 )
+canvas.create_text(
+    36.0,
+    285.0,
+    anchor="nw",
+    text="Add Expense",
+    fill="#002689",
+    font=("MontserratRoman Bold", 16 * -1)
+)
 
+canvas.create_text(
+    36.0,
+    317.0,
+    anchor="nw",
+    text="Name",
+    fill="#002689",
+    font=("MontserratRoman Bold", 12 * -1)
+)
+
+canvas.create_text(
+    37.0,
+    392.0,
+    anchor="nw",
+    text="Amount ($)",
+    fill="#002689",
+    font=("MontserratRoman Bold", 12 * -1)
+)
 window.mainloop()
