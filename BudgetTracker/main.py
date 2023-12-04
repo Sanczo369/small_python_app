@@ -193,4 +193,20 @@ entry_2.place(
     height=36.0
 )
 
+button_image_1 = PhotoImage(
+    file=relative_to_assets("button_1.png"))
+button_1 = Button(
+    image=button_image_1,
+    borderwidth=0,
+    highlightthickness=0,
+    command=submit_handler,
+    relief="flat"
+)
+button_1.place(
+    x=37.0,
+    y=479.0,
+    width=358.0,
+    height=53.0
+)
+
 window.mainloop()
