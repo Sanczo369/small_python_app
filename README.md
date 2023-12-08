@@ -337,3 +337,8 @@ Aplikacja Youtube Downloader pzowala pobierać pliki z Youtube.
 
 
 ## BudgetTracker
+Budget Tracker został zaprojektowany, aby pomóc Ci zorganizować swoje finanse. Umożliwia śledzenie wydatków, dochodów, długów i należności. Zatrzymaj stare, niechlujne sposoby i zacznij śledzić teraz!
+
+### requirements
+- tkinter
+- pathlib
