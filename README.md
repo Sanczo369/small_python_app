@@ -27,6 +27,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - Shopping List
 - Youtube Downloader
 - BudgetTracker
+- Rock paper scissors
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
@@ -342,3 +343,5 @@ Budget Tracker został zaprojektowany, aby pomóc Ci zorganizować swoje finanse
 ### requirements
 - tkinter
 - pathlib
+
+## Rock paper scissors
