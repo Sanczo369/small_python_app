@@ -26,6 +26,23 @@ def main():
     pick2.grid(row=1, column=2)
     pick3.grid(row=1, column=3)
 
+    # play button
+    play_btn = Button(frame, text="PLAY", font=("Arial", 20, "bold"), borderwidth=2, relief="solid", padx=100, pady=5,
+                      command=lambda: checkResult(playerHand, numbers))
+    play_btn.grid(row=3, columnspan=4, pady=20)
+
+    # score element
+    score = LabelFrame(root, text="AKTUALNE WYNIKI", pady=10, padx=10)
+    game_label = Label(score, text="liczba gier:" + str(numbers))
+    win_label = Label(score, text="wygranych:" + str(wins))
+    lose_label = Label(score, text="przegranych:" + str(losses))
+    draw_label = Label(score, text="remisów:" + str(draws))
+    # score element position
+    score.grid(row=4, column=1, sticky=E)
+    game_label.grid(row=0, column=0, sticky=W)
+    win_label.grid(row=1, column=0, sticky=W)
+    lose_label.grid(row=2, column=0, sticky=W)
+    draw_label.grid(row=3, column=0, sticky=W)
 
     root.mainloop()
 if __name__ == '__main__':
