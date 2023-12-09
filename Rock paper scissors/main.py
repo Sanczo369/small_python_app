@@ -1,4 +1,29 @@
 from tkinter import *
+
+def player_pick(pick):
+    if pick == "papier":
+        pick1.config(bg ="red")
+        pick2.config(bg ="white")
+        pick3.config(bg ="white")
+        playerHand = "papier"
+
+
+    elif pick == "kamien":
+        pick1.config(bg ="white")
+        pick2.config(bg ="red")
+        pick3.config(bg ="white")
+        playerHand = "kamien"
+
+
+    else:
+        pick1.config(bg ="white")
+        pick2.config(bg ="white")
+        pick3.config(bg ="red")
+        playerHand = "nozyczki"
+
+    player_pick_label = Label(result, text="Twój wybór:" + playerHand)
+    player_pick_label.grid(row=0, column=0)
+
 def main():
     root=Tk()
     root.title('GRA "PAPIER, KAMIEŃ, NOŻYCZKI"')
