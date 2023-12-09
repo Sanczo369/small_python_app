@@ -44,6 +44,18 @@ def main():
     lose_label.grid(row=2, column=0, sticky=W)
     draw_label.grid(row=3, column=0, sticky=W)
 
+    # game result element
+    result = LabelFrame(root, text="WYNIKI GRY", pady=10, padx=190)
+    player_pick_label = Label(result, text="Twój wybór:" + playerHand)
+    ai_pick_label = Label(result, text="Wybór komputera:" + aiHand)
+    winer_label = Label(result, text="Zwycięzca gry:", font=("Arial", 15))
+    # game result position
+    result.grid(row=4, column=0, sticky=W)
+    player_pick_label.grid(row=0, column=0)
+    ai_pick_label.grid(row=1, column=0)
+    winer_label.grid(row=2, column=0)
+
+
     root.mainloop()
 if __name__ == '__main__':
     main()
