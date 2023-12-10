@@ -345,6 +345,7 @@ Budget Tracker został zaprojektowany, aby pomóc Ci zorganizować swoje finanse
 - pathlib
 
 ## Rock paper scissors
+ Gracze wybierają jedną z trzech opcji i wygrywa ta osoba, która wybierze opcję, która przewyższa przeciwnika. Kamień przewyższa nożyce, nożyce przewyższają papier, a papier przewyższa kamień. Jeśli gracze wybiorą tę samą opcję, gra jest remisowa.
 ### requirements
 - tkinter
 - PIL
