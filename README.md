@@ -345,3 +345,7 @@ Budget Tracker został zaprojektowany, aby pomóc Ci zorganizować swoje finanse
 - pathlib
 
 ## Rock paper scissors
+### requirements
+- tkinter
+- PIL
+- random
