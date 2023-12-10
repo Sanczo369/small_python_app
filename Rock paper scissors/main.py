@@ -24,6 +24,12 @@ def player_pick(pick):
     player_pick_label = Label(result, text="Twój wybór:" + playerHand)
     player_pick_label.grid(row=0, column=0)
 
+    def ai_pick():
+        tab = ['papier', 'kamien', 'nozyczki']
+        i = random.randint(0, len(tab) - 1)
+        aiHand = tab[i]
+        return aiHand
+
 def main():
     root=Tk()
     root.title('GRA "PAPIER, KAMIEŃ, NOŻYCZKI"')
