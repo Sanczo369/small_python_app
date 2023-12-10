@@ -1,4 +1,6 @@
+import random
 from tkinter import *
+from PIL import ImageTk, Image
 
 def player_pick(pick):
     if pick == "papier":
@@ -51,6 +53,24 @@ def player_pick(pick):
         ai_pick_label.grid(row=1, column=0)
 
 def main():
+    global aiHand
+    global pick1
+    global pick2
+    global pick3
+    global playerHand
+    global result
+    global ai_pick_label
+    global winer_label
+    global numbers
+    numbers=0
+    wins=0
+    losses=0
+    draws=0
+    playerHand=''
+    aiHand=''
+
+
+
     root=Tk()
     root.title('GRA "PAPIER, KAMIEŃ, NOŻYCZKI"')
     root.iconbitmap("logo.ico")
