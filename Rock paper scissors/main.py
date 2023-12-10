@@ -30,6 +30,26 @@ def player_pick(pick):
         aiHand = tab[i]
         return aiHand
 
+    def checkResult(pick, numbers):
+        numbers += 1
+        player = player_pick(pick)
+        ai = ai_pick()
+        if player == ai:
+            aiHand = 'draw'
+            winer_label = Label(result, text="Remis", font=("Arial", 15))
+            winer_label.grid(row=2, column=0)
+        elif (player == 'papier' and ai == 'kamien') or (player == 'kamien' and ai == 'nozyczki') or (
+                player == 'nozyczki' and ai == 'papier'):
+            aiHand = "win"
+            winer_label = Label(result, text="Zwycięzca gry:Gracz", font=("Arial", 15))
+            winer_label.grid(row=2, column=0)
+        else:
+            aiHand = 'loss'
+            winer_label = Label(result, text="Zwycięzca gry:AI", font=("Arial", 15))
+            winer_label.grid(row=2, column=0)
+        ai_pick_label = Label(result, text="Wybór komputera:" + ai)
+        ai_pick_label.grid(row=1, column=0)
+
 def main():
     root=Tk()
     root.title('GRA "PAPIER, KAMIEŃ, NOŻYCZKI"')
