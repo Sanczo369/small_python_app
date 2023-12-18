@@ -350,3 +350,8 @@ Budget Tracker został zaprojektowany, aby pomóc Ci zorganizować swoje finanse
 - tkinter
 - PIL
 - random
+### Funkcje
+- player_pick
+- ai_pick
+- checkResult
+
