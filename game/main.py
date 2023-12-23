@@ -22,3 +22,6 @@ score_value = 0
 font2 = pygame.font.Font('freesansbold.ttf',50)
 font1 = pygame.font.Font("freesansbold.ttf",50)
 
+def show_score():
+    score=font2.render("Score: "+ str(score_value),True,(0,255,0))
+    screen.blit(score,(10,10))
