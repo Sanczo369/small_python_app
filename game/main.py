@@ -17,3 +17,8 @@ f = 600
 ch = 3
 cha = 5
 
+screen = pygame.display.set_mode((720,1280))
+score_value = 0
+font2 = pygame.font.Font('freesansbold.ttf',50)
+font1 = pygame.font.Font("freesansbold.ttf",50)
+
