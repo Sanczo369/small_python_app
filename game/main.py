@@ -25,3 +25,7 @@ font1 = pygame.font.Font("freesansbold.ttf",50)
 def show_score():
     score=font2.render("Score: "+ str(score_value),True,(0,255,0))
     screen.blit(score,(10,10))
+
+def game_over():
+    over_text=font1.render("GAME OVER", True, (0,255,255))
+    screen.blit(over_text,(200,400))
