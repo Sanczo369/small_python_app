@@ -47,3 +47,26 @@ while run:
                 e+=cha
     y+=ch
     b+=ch
+
+    if y>=640:
+        x=random.randint(180,500)
+        y=random.randint(0,200)
+        score_value+=1
+
+
+    if b>=640:
+        x=random.randint(180,500)
+        y=random.randint(0,200)
+        score_value+=1
+
+
+    if abs(y-f)<100 and abs(x-e)<6:
+        game_over()
+        score_value=0
+
+    if abs(a-e)<100 and abs(b-f)<6:
+        game_over()
+        score_value=0
+
+    show_score()
+    pygame.display.update()
