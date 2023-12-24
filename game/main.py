@@ -29,3 +29,12 @@ def show_score():
 def game_over():
     over_text=font1.render("GAME OVER", True, (0,255,255))
     screen.blit(over_text,(200,400))
+
+run=True
+while run:
+    screen.fill(white)
+    pygame.draw.rect(screen,green,pygame.Rect(0,0,180,1280))
+    pygame.draw.rect(screen,green,pygame.Rect(540,0,180,1280))
+    pygame.draw.rect(screen,blue,pygame.Rect(x,y,40,80))
+    pygame.draw.rect(screen,blue,pygame.Rect(a,b,40,80))
+    pygame.draw.rect(screen,red,pygame.Rect(e,f,40,80))
