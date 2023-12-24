@@ -38,3 +38,12 @@ while run:
     pygame.draw.rect(screen,blue,pygame.Rect(x,y,40,80))
     pygame.draw.rect(screen,blue,pygame.Rect(a,b,40,80))
     pygame.draw.rect(screen,red,pygame.Rect(e,f,40,80))
+
+    for event in pygame.event.get():
+        if event.type==pygame.KEYDOWN:
+            if event.key==pygame.K_q:
+                e-=cha
+            if event.key==pygame.K_p:
+                e+=cha
+    y+=ch
+    b+=ch
