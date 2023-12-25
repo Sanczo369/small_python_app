@@ -60,3 +60,8 @@ def egg_dropped(egg):
     if lives_remaining == 0:
         messagebox.showinfo("Game Over!", "Final Score: "+ str(score))
         root.destroy()
+
+def lose_a_life():
+    global lives_remaining
+    lives_remaining-=1
+    c.itemconfigure(lives_text, text="Lives: "+str(lives_remaining))
