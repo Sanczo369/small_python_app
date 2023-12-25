@@ -52,3 +52,11 @@ def move_eggs():
         if eggy2 > canvas_height:
             egg_dropped(egg)
     root.after(egg_speed, move_eggs)
+
+def egg_dropped(egg):
+    eggs.remove(egg)
+    c.delete(egg)
+    lose_a_life()
+    if lives_remaining == 0:
+        messagebox.showinfo("Game Over!", "Final Score: "+ str(score))
+        root.destroy()
