@@ -356,6 +356,7 @@ Budget Tracker został zaprojektowany, aby pomóc Ci zorganizować swoje finanse
 - ai_pick
 - checkResult
 ## Egg Catcher
+Gra wykonana w tkinter polegająca na zbieraniu jajek spadających z góry
 ### requirements
 - itertools
 - random
