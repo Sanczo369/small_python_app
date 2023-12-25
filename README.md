@@ -356,3 +356,7 @@ Budget Tracker został zaprojektowany, aby pomóc Ci zorganizować swoje finanse
 - ai_pick
 - checkResult
 ## Egg Catcher
+### requirements
+- itertools
+- random
+- tkinter
