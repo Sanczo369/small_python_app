@@ -44,3 +44,11 @@ def create_egg():
     new_egg = c.create_oval(x, y, x+egg_width, y+egg_height, fill=next(color_cycle), width=0)
     eggs.append(new_egg)
     root.after(egg_interval, create_egg)
+
+def move_eggs():
+    for egg in eggs:
+        (eggx, eggy, eggx2, eggy2) = c.coords(egg)
+        c.move(egg, 0, 10)
+        if eggy2 > canvas_height:
+            egg_dropped(egg)
+    root.after(egg_speed, move_eggs)
