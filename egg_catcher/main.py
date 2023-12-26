@@ -92,3 +92,11 @@ def move_right(event):
     (x1,y1,x2,y2) = c.coords(catcher)
     if x2 < canvas_width:
         c.move(catcher, 20, 0)
+
+c.bind('<LEFT>', move_left)
+c.bind('<RIGHT>', move_right)
+c.focus_set()
+root.after(1000, create_egg)
+root.after(1000, move_eggs)
+root.after(1000, check_catch)
+root.mainloop()
