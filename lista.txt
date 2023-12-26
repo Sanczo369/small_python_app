@@ -25,3 +25,6 @@ Lista Projektów
 - Shopping List
 - Youtube Downloader
 - BudgetTracker
+- Game
+- Rock paper scissors
+- Egg Catcher
