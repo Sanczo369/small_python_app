@@ -82,3 +82,8 @@ def increase_score(points):
     egg_speed = int(egg_speed*difficulty)
     egg_interval = int(egg_interval * difficulty)
     c.itemconfigure(score_text, text="Score: "+ str(score))
+
+def move_left(event):
+    (x1,y1,x2,y2) = c.coords(catcher)
+    if x1>0:
+        c.move(catcher, -20, 0)
