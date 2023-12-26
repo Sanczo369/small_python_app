@@ -75,3 +75,10 @@ def check_catch():
             c.delete(egg)
             increase_score(egg_score)
     root.after(100, check_catch)
+
+def increase_score(points):
+    global score, egg_speed, egg_interval
+    score += points
+    egg_speed = int(egg_speed*difficulty)
+    egg_interval = int(egg_interval * difficulty)
+    c.itemconfigure(score_text, text="Score: "+ str(score))
