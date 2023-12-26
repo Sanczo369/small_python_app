@@ -87,3 +87,8 @@ def move_left(event):
     (x1,y1,x2,y2) = c.coords(catcher)
     if x1>0:
         c.move(catcher, -20, 0)
+
+def move_right(event):
+    (x1,y1,x2,y2) = c.coords(catcher)
+    if x2 < canvas_width:
+        c.move(catcher, 20, 0)
