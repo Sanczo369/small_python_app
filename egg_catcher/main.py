@@ -65,3 +65,13 @@ def lose_a_life():
     global lives_remaining
     lives_remaining-=1
     c.itemconfigure(lives_text, text="Lives: "+str(lives_remaining))
+
+def check_catch():
+    (catcherx, catchery, catcherx2, catchery2) = c.coords(catcher)
+    for egg in eggs:
+        (eggx, eggy, eggx2, eggy2) = c.coords(egg)
+        if catcherx < eggx and eggx2 < catcherx2 and catchery2 -eggy2 < 40:
+            eggs.remove(egg)
+            c.delete(egg)
+            increase_score(egg_score)
+    root.after(100, check_catch)
