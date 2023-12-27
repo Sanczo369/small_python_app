@@ -113,4 +113,28 @@ def scramble():
 
     display_val()
 
+def checkcol(a):
+    for y in range(3):
+        temp = []
+        for x in range(int(len(a)/3)):
+            temp.append(a[x][3*y])
+            temp.append(a[x][3*y+1])
+            temp.append(a[x][3*y+2])
+        if(duplicate_checker(temp) == True):
+           return True
+        temp = []
+        for x in range(3,(int(len(a)/3))*2):
+            temp.append(a[x][3*y])
+            temp.append(a[x][3*y+1])
+            temp.append(a[x][3*y+2])
+        if(duplicate_checker(temp) == True):
+           return True
+        temp = []
+        for x in range(6,(int(len(a)/3))*3):
+            temp.append(a[x][3*y])
+            temp.append(a[x][3*y+1])
+            temp.append(a[x][3*y+2])
+        if(duplicate_checker(temp) == True):
+           return True
+
 root.mainloop()
