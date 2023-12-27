@@ -58,4 +58,31 @@ def one_grid(row):
     g9.place(x = 102,y = 102)
     entry_list[2].append(g9)
 
+
+def display_val():
+    global entry_list
+    u = 0
+    for a in entry_list:
+        a_splited = [a[x:x + 9] for x in range(0, len(a), 9)]
+        for y in range(9):
+            if (grid[u][y] != 0):
+                a_splited[0][y].insert(0, grid[u][y])
+        u += 1
+    u = 3
+    for a in entry_list:
+        a_splited = [a[x:x + 9] for x in range(0, len(a), 9)]
+        for y in range(9):
+            if (grid[u][y] != 0):
+                a_splited[1][y].insert(0, grid[u][y])
+        u += 1
+
+    u = 6
+    for a in entry_list:
+        a_splited = [a[x:x + 9] for x in range(0, len(a), 9)]
+        for y in range(9):
+            if (grid[u][y] != 0):
+                a_splited[2][y].insert(0, grid[u][y])
+        u += 1
+
+
 root.mainloop()
