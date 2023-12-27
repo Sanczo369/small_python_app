@@ -137,4 +137,39 @@ def checkcol(a):
         if(duplicate_checker(temp) == True):
            return True
 
+
+def submit():
+    global entry_list
+
+    temp = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+    u = 0
+    for a in entry_list:
+        a_splited = [a[x:x + 9] for x in range(0, len(a), 9)]
+        for y in range(9):
+            if (a_splited[0][y].get() != ''):
+                temp[u][y] = int(a_splited[0][y].get())
+        u += 1
+    u = 3
+    for a in entry_list:
+        a_splited = [a[x:x + 9] for x in range(0, len(a), 9)]
+        for y in range(9):
+            if (a_splited[1][y].get() != ''):
+                temp[u][y] = int(a_splited[1][y].get())
+        u += 1
+
+    u = 6
+    for a in entry_list:
+        a_splited = [a[x:x + 9] for x in range(0, len(a), 9)]
+        for y in range(9):
+            if (a_splited[2][y].get() != ''):
+                temp[u][y] = int(a_splited[2][y].get())
+        u += 1
+
+    if (checkrow_horz(temp) == True or checkrow_vert(temp) == True or checkcol(temp) == True):
+        wrong()
+    else:
+        correct()
+
 root.mainloop()
