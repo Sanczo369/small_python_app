@@ -172,4 +172,26 @@ def submit():
     else:
         correct()
 
+def wrong():
+    title.config(fg="#990000",text="Try Again")
+    row1.config(highlightbackground="#990000")
+    row2.config(highlightbackground="#990000")
+    row3.config(highlightbackground="#990000")
+    row4.config(highlightbackground="#990000")
+    row5.config(highlightbackground="#990000")
+    row6.config(highlightbackground="#990000")
+    row7.config(highlightbackground="#990000")
+    row8.config(highlightbackground="#990000")
+    row9.config(highlightbackground="#990000")
+    row1.after(2100, lambda: row1.config(highlightbackground="white"))
+    row2.after(2100, lambda: row2.config(highlightbackground="white"))
+    row3.after(2100, lambda: row3.config(highlightbackground="white"))
+    row4.after(2100, lambda: row4.config(highlightbackground="white"))
+    row5.after(2100, lambda: row5.config(highlightbackground="white"))
+    row6.after(2100, lambda: row6.config(highlightbackground="white"))
+    row7.after(2100, lambda: row7.config(highlightbackground="white"))
+    row8.after(2100, lambda: row8.config(highlightbackground="white"))
+    row9.after(2100, lambda: row9.config(highlightbackground="white"))
+    title.after(2100, lambda: title.config(fg="#382888",text ="Sudoku"))
+
 root.mainloop()
