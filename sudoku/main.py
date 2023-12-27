@@ -85,4 +85,32 @@ def display_val():
         u += 1
 
 
+def scramble():
+    global grid
+    clear()
+    for a in entry_list:
+        for b in a:
+            b.delete(first=0, last=100)
+    amount = 20
+
+    for i in range(amount):
+        y = random.randint(0, len(grid) - 1)
+        x = random.randint(0, len(grid) - 1)
+        num = random.randint(1, len(grid))
+        allow = 0
+        for e in range(len(grid)):
+            if num not in grid[x] and num != grid[e][y]:
+                allow += 1
+        grid[x][y] = num
+        tempo = grid
+        tempo = rearrange(tempo)
+
+        for e in range(len(grid)):
+            if (duplicate_checker(tempo[e])):
+                allow = 0
+        if allow != len(grid):
+            grid[x][y] = 0
+
+    display_val()
+
 root.mainloop()
