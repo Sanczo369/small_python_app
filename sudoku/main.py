@@ -28,5 +28,34 @@ entry_list = [[], [], []]
 var =[]
 done = False
 
+def one_grid(row):
+    global grid,entry_list
+    g1 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    entry_list[0].append(g1)
+    g1.place(x = 5,y = 5)
+    g2 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    entry_list[0].append(g2)
+    g2.place(x = 52,y = 5)
+    g3 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    g3.place(x = 102,y = 5)
+    entry_list[0].append(g3)
+    g4 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    g4.place(x = 5,y = 52)
+    entry_list[1].append(g4)
+    g5 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    g5.place(x = 52,y = 52)
+    entry_list[1].append(g5)
+    g6 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    g6.place(x = 102,y = 52)
+    entry_list[1].append(g6)
+    g7 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    g7.place(x = 5,y = 102)
+    entry_list[2].append(g7)
+    g8 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    g8.place(x = 52,y = 102)
+    entry_list[2].append(g8)
+    g9 = Entry(row,textvariable=var,width = 2, fg="white", font="Geneva 30 bold",bg="#373737",justify=CENTER)
+    g9.place(x = 102,y = 102)
+    entry_list[2].append(g9)
 
 root.mainloop()
