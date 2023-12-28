@@ -203,6 +203,11 @@ def duplicate_checker(a):
         if (result == True):
             return True
 
+def checkrow_horz(a):
+    for x in a:
+        if(duplicate_checker(x) == True):
+            return True
+
 def checkcol(a):
     for y in range(3):
         temp = []
