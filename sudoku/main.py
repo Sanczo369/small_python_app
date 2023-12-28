@@ -196,7 +196,12 @@ def rearrange(a):
             count = 0
     return temp
 
-
+def duplicate_checker(a):
+        b = set(a)
+        result = len(a) != len(b)
+        # print(result)
+        if (result == True):
+            return True
 
 def checkcol(a):
     for y in range(3):
