@@ -123,6 +123,21 @@ def scramble():
 
     display_val()
 
+def stay(num,x,y):
+
+    for e in range(9):
+        if grid[y][e] ==num:
+            return False
+    for e in range(9):
+        if grid[e][x] ==num:
+            return False
+
+    for i in range(3):
+        for e in range(3):
+            if grid[((y//3)*3)+i][((x//3)*3)+e] ==num:
+                return False
+    return True
+
 def checkcol(a):
     for y in range(3):
         temp = []
