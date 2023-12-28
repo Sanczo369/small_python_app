@@ -142,6 +142,30 @@ def pressed_solve():
     global grid,done
     done =False
     solver()
+
+
+def solver():
+    global grid, done
+
+    if (done == False):
+
+        for y in range(9):
+            for x in range(9):
+                if grid[y][x] == 0:
+                    for num in range(1, 10):
+                        if stay(num, x, y):
+                            grid[y][x] = num
+                            solver()
+                            grid[y][x] = 0
+                    return
+        done = True
+        for a in entry_list:
+            for b in a:
+                b.delete(first=0, last=100)
+        display_val()
+
+        return
+
 def checkcol(a):
     for y in range(3):
         temp = []
