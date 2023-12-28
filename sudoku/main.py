@@ -166,6 +166,38 @@ def solver():
 
         return
 
+def rearrange(a):
+    temp=[[],[],[],[],[],[],[],[],[]]
+    count =0
+    ch = 0
+    for e in range(len(a)):
+        for x in range(3):
+            if(a[e][x]!=0):
+                temp[ch].append(a[e][x])
+        count+=1
+        if(count ==3):
+            ch+=1
+            count = 0
+    for e in range(len(a)):
+        for x in range(3,6):
+            if(a[e][x]!=0):
+                temp[ch].append(a[e][x])
+        count+=1
+        if(count ==3):
+            ch+=1
+            count = 0
+    for e in range(len(a)):
+        for x in range(6,9):
+            if(a[e][x]!=0):
+                temp[ch].append(a[e][x])
+        count+=1
+        if(count ==3):
+            ch+=1
+            count = 0
+    return temp
+
+
+
 def checkcol(a):
     for y in range(3):
         temp = []
