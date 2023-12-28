@@ -138,6 +138,10 @@ def stay(num,x,y):
                 return False
     return True
 
+def pressed_solve():
+    global grid,done
+    done =False
+    solver()
 def checkcol(a):
     for y in range(3):
         temp = []
