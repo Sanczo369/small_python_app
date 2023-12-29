@@ -208,6 +208,15 @@ def checkrow_horz(a):
         if(duplicate_checker(x) == True):
             return True
 
+def checkrow_vert(a):
+    for y in range(len(a)):
+        temp = []
+        for x in a:
+            temp.append(x[y])
+        if(duplicate_checker(temp) == True):
+            return True
+
+
 def checkcol(a):
     for y in range(3):
         temp = []
