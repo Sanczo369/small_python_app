@@ -352,4 +352,16 @@ row9.place(x = 300,y = 300)
 
 scramble()
 
+but = Canvas(root, width = 500, height = 45,background="#282828",bd=13, highlightthickness=0)
+but.pack()
+enter = Button(but,text ="Submit", fg="#282828",command=submit, font="Geneva 30 bold",bg='#282828',activebackground='#282828',highlightbackground="#288888",disabledforeground="#288888",justify=CENTER)
+enter.configure(bg='#282828',width = 12)
+enter.place(x = 0,y = 10)
+reset = Button(but,text ="Reset", fg="#282828",command=scramble, font="Geneva 30 bold",bg='#382888',activebackground='#382888',highlightbackground="#382888",disabledforeground="#382888",justify=CENTER)
+reset.configure(bg='#382888',width = 12)
+reset.place(x = 250,y = 10)
+solve = Button(root,text ="Solve", fg="#282828",command=pressed_solve, font="Geneva 30 bold",bg='#FCD4D4',activebackground='#FCD4D4',highlightbackground="#FCD4D4",disabledforeground="#FCD4D4",justify=CENTER)
+solve.configure(bg='#FCD4D4',width = 12)
+solve.place(x = 120,y = 575)
+
 root.mainloop()
