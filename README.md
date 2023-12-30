@@ -364,3 +364,7 @@ Gra wykonana w tkinter polegająca na zbieraniu jajek spadających z góry
 - tkinter
 
 ## Sudoku
+Łamigłówka, której celem jest wypełnienie diagramu 9 × 9 w taki sposób, aby w każdym wierszu, w każdej kolumnie i w każdym z dziewięciu pogrubionych kwadratów 3 × 3 znalazło się po jednej cyfrze od 1 do 9.
+### requirements
+- tkinter
+- random
