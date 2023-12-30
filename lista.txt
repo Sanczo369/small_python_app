@@ -29,3 +29,4 @@ Lista Projektów
 - Rock paper scissors
 - Egg Catcher
 - Sudoku
+- Wifi Password Displayer
