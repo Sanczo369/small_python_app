@@ -28,3 +28,4 @@ Lista Projektów
 - Game
 - Rock paper scissors
 - Egg Catcher
+- Sudoku
