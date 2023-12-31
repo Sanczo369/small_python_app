@@ -371,6 +371,7 @@ Gra wykonana w tkinter polegająca na zbieraniu jajek spadających z góry
 - random
 
 ## Wifi Password Displayer
+Aplikacja wyświetla haseło Wi-Fi
 ### requirements
 - subprocess
 
