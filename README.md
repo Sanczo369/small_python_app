@@ -378,3 +378,6 @@ Aplikacja wyświetla haseło Wi-Fi
 
 
 ## Audiobook
+### requirements
+- pyttsx3
+- PyPDF2
