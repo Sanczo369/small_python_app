@@ -52,7 +52,9 @@ class Calculator:
                               state="disable", textvar=self.textoperator, bd=5, relief=SUNKEN)
         self.operator.place(x=250, y=117)
 
-
+    def reset_now(self):
+        self.textoperator.set(" ")
+        self.text_value.set(" ")
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
