@@ -62,6 +62,10 @@ class Calculator:
             window.destroy()
         else:
             pass
+
+    def opr(self,work):
+        self.work = work
+        self.textoperator.set(self.work)
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
