@@ -31,6 +31,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - Egg Catcher
 - Sudoku
 - Wifi Password Displayer
+- audiobook
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
@@ -375,3 +376,8 @@ Aplikacja wyświetla haseło Wi-Fi
 ### requirements
 - subprocess
 
+
+## Audiobook
+### requirements
+- pyttsx3
+- PyPDF2
