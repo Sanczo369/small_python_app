@@ -55,6 +55,13 @@ class Calculator:
     def reset_now(self):
         self.textoperator.set(" ")
         self.text_value.set(" ")
+
+    def tata(self):
+        self.decision = messagebox.askyesno("Conformation","Do you want to exit right now?")
+        if self.decision>0:
+            window.destroy()
+        else:
+            pass
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
