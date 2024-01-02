@@ -12,35 +12,30 @@ class Calculator:
         self.widget()
 
     def butn(self):
-        self.plus = Button(self.window, text="+", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
-                           activebackground="#262626",
-                           command=lambda: self.opr("+"), relief=RAISED, bd=3)
-        self.plus.place(x=535, y=240)
+        self.plus = Button(self.window,text="+",width=3,font=("arial",15,"bold"),fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("+"), relief=RAISED, bd=3)
+        self.plus.place(x=535,y=240)
 
-        self.subs = Button(self.window, text="-", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
-                           activebackground="#262626",
-                           command=lambda: self.opr("-"), relief=RAISED, bd=3)
+        self.subs = Button(self.window, text="-", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("-"), relief=RAISED, bd=3)
         self.subs.place(x=535, y=300)
 
-        self.mul = Button(self.window, text="X", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
-                          activebackground="#262626",
-                          command=lambda: self.opr("X"), relief=RAISED, bd=3)
+        self.mul = Button(self.window, text="X", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("X"), relief=RAISED, bd=3)
         self.mul.place(x=535, y=360)
 
-        self.div = Button(self.window, text="/", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
-                          activebackground="#262626",
-                          command=lambda: self.opr("/"), relief=RAISED, bd=3)
+        self.div = Button(self.window, text="/", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("/"), relief=RAISED, bd=3)
         self.div.place(x=535, y=420)
 
-        self.rad = Button(self.window, text="rad", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
-                          activebackground="#262626",
-                          command=lambda: self.opr("Radian"), relief=RAISED, bd=3)
+        self.rad = Button(self.window, text="rad", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Radian"), relief=RAISED, bd=3)
         self.rad.place(x=440, y=360)
 
-        self.reci = Button(self.window, text="1/x", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
-                           activebackground="#262626",
-                           command=lambda: self.opr("Reciprocal"), relief=RAISED, bd=3)
+        self.reci = Button(self.window, text="1/x", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Reciprocal"), relief=RAISED, bd=3)
         self.reci.place(x=440, y=420)
+
 
         self.sqr = Button(self.window, text="X^2", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
                            command=lambda : self.opr("Square"), relief=RAISED, bd=3)
@@ -73,6 +68,36 @@ class Calculator:
         self.log10 = Button(self.window, text="log10", width=11, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
                            command=lambda : self.opr("log10"), relief=RAISED, bd=3)
         self.log10.place(x=200, y=300)
+
+        self.exponent = Button(self.window, text="e^x", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Exponent"), relief=RAISED, bd=3)
+        self.exponent.place(x=200, y=360)
+
+        self.power = Button(self.window, text="X^Y", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("x^y"), relief=RAISED, bd=3)
+        self.power.place(x=295, y=360)
+
+        self.factorial = Button(self.window, text="n!", width=5, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Factorial"), relief=RAISED, bd=3)
+        self.factorial.place(x=10, y=360)
+
+        self.mod = Button(self.window, text="Mod", width=4, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                                command=lambda: self.opr("Modulus"), relief=RAISED, bd=3)
+        self.mod.place(x=94, y=360)
+
+        self.reset = Button(self.window, text="Reset", width=5, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=self.reset_now, relief=RAISED, bd=3)
+        self.reset.place(x=10, y=420)
+
+        self.reset = Button(self.window, text="Pi", width=4, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                            command=self.pi_val, relief=RAISED, bd=3)
+        self.reset.place(x=95 ,y=420)
+
+        self.sin = Button(self.window, text="sin", width=5, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                               command=lambda: self.opr("sin"), relief=RAISED, bd=3)
+        self.sin.place(x=10, y=490)
+
+
     def widget(self):
         Label(self.window,text="Scientific Calculator Dolly",font=("arial",25,"bold","italic"),fg="orange",bg="#141414").place(x=100,y=5)
 
