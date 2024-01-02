@@ -172,6 +172,14 @@ class Calculator:
             window.destroy()
         else:
             pass
+    def information(self):
+        self.window_information = Toplevel()
+        self.window_information.title("Information")
+        self.window_information.geometry("500x400")
+        self.window_information.iconbitmap("calculator.ico")
+        self.window_information.maxsize(500,400)
+        self.window_information.minsize(500,400)
+        self.window_information.config(bg="#262626")
 
     def opr(self,work):
         self.work = work
