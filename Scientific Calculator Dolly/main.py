@@ -11,6 +11,37 @@ class Calculator:
         self.fact = 1
         self.widget()
 
+    def butn(self):
+        self.plus = Button(self.window, text="+", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
+                           activebackground="#262626",
+                           command=lambda: self.opr("+"), relief=RAISED, bd=3)
+        self.plus.place(x=535, y=240)
+
+        self.subs = Button(self.window, text="-", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
+                           activebackground="#262626",
+                           command=lambda: self.opr("-"), relief=RAISED, bd=3)
+        self.subs.place(x=535, y=300)
+
+        self.mul = Button(self.window, text="X", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
+                          activebackground="#262626",
+                          command=lambda: self.opr("X"), relief=RAISED, bd=3)
+        self.mul.place(x=535, y=360)
+
+        self.div = Button(self.window, text="/", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
+                          activebackground="#262626",
+                          command=lambda: self.opr("/"), relief=RAISED, bd=3)
+        self.div.place(x=535, y=420)
+
+        self.rad = Button(self.window, text="rad", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
+                          activebackground="#262626",
+                          command=lambda: self.opr("Radian"), relief=RAISED, bd=3)
+        self.rad.place(x=440, y=360)
+
+        self.reci = Button(self.window, text="1/x", width=3, font=("arial", 15, "bold"), fg="red", bg="#262626",
+                           activebackground="#262626",
+                           command=lambda: self.opr("Reciprocal"), relief=RAISED, bd=3)
+        self.reci.place(x=440, y=420)
+
     def widget(self):
         Label(self.window,text="Scientific Calculator Dolly",font=("arial",25,"bold","italic"),fg="orange",bg="#141414").place(x=100,y=5)
 
