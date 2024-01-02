@@ -42,6 +42,37 @@ class Calculator:
                            command=lambda: self.opr("Reciprocal"), relief=RAISED, bd=3)
         self.reci.place(x=440, y=420)
 
+        self.sqr = Button(self.window, text="X^2", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Square"), relief=RAISED, bd=3)
+        self.sqr.place(x=440, y=240)
+
+        self.cube = Button(self.window, text="X^3", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Cube"), relief=RAISED, bd=3)
+        self.cube.place(x=440, y=300)
+
+        self.equal = Button(self.window, text="=", width=11, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                            command=self.evaluation_opr, relief=RAISED, bd=3)
+        self.equal.place(x=440, y=490)
+
+        self.clear = Button(self.window, text="Information", width=11, font=("arial", 10, "bold"), activebackground="#262626",
+                            fg="red",bg="#262626",command=self.information, relief=RAISED, bd=3)
+        self.clear.place(x=480, y=68)
+
+        self.sqrt = Button(self.window, text="Square root", width=11, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Square root"), relief=RAISED, bd=3)
+        self.sqrt.place(x=10, y=240)
+
+        self.cubert = Button(self.window, text="Cube root", width=11, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("Cube root"), relief=RAISED, bd=3)
+        self.cubert.place(x=200, y=240)
+
+        self.log2 = Button(self.window, text="log2", width=11, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("log2"), relief=RAISED, bd=3)
+        self.log2.place(x=10, y=300)
+
+        self.log10 = Button(self.window, text="log10", width=11, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                           command=lambda : self.opr("log10"), relief=RAISED, bd=3)
+        self.log10.place(x=200, y=300)
     def widget(self):
         Label(self.window,text="Scientific Calculator Dolly",font=("arial",25,"bold","italic"),fg="orange",bg="#141414").place(x=100,y=5)
 
