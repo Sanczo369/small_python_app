@@ -97,6 +97,28 @@ class Calculator:
                                command=lambda: self.opr("sin"), relief=RAISED, bd=3)
         self.sin.place(x=10, y=490)
 
+        self.cos = Button(self.window, text="cos", width=4, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                            command=lambda: self.opr("cos"), relief=RAISED, bd=3)
+        self.cos.place(x=95, y=490)
+
+        self.tan = Button(self.window, text="tan", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                                command=lambda: self.opr("tan"), relief=RAISED, bd=3)
+        self.tan.place(x=200, y=490)
+        self.cot = Button(self.window, text="cot", width=3, font=("arial", 15, "bold"), fg="red",bg="#262626", activebackground="#262626",
+                                command=lambda: self.opr("cot"), relief=RAISED, bd=3)
+        self.cot.place(x=295, y=490)
+
+        self.bye = Button(self.window, text="Exit", width=47, font=("arial", 15, "bold"), bg="#262626", fg="green", activebackground="#262626",
+                           command=self.tata, relief=RAISED, bd=3)
+        self.bye.place(x=10, y=560)
+
+        self.lcm = Button(self.window, text="LCM", width=3, font=("arial", 15, "bold"), bg="#262626", fg="red", activebackground="#262626",
+                           command=lambda : self.opr("lcm"), relief=RAISED, bd=3)
+        self.lcm.place(x=200, y=420)
+
+        self.hcf = Button(self.window, text="HCF", width=3, font=("arial", 15, "bold"), bg="#262626", fg="red", activebackground="#262626",
+                           command=lambda : self.opr("hcf"), relief=RAISED, bd=3)
+        self.hcf.place(x=295, y=420)
 
     def widget(self):
         Label(self.window,text="Scientific Calculator Dolly",font=("arial",25,"bold","italic"),fg="orange",bg="#141414").place(x=100,y=5)
