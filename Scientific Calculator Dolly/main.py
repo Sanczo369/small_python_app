@@ -160,7 +160,8 @@ class Calculator:
                               disabledforeground="gold",
                               state="disable", textvar=self.textoperator, bd=5, relief=SUNKEN)
         self.operator.place(x=250, y=117)
-
+    def pi_val(self):
+        messagebox.showinfo("Value of pi","The value of pi is: 3.14159265")
     def reset_now(self):
         self.textoperator.set(" ")
         self.text_value.set(" ")
