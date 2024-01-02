@@ -181,6 +181,32 @@ class Calculator:
         self.window_information.minsize(500,400)
         self.window_information.config(bg="#262626")
 
+        Label(self.window_information,fg="#00FF00",font=("arial",11,"bold","italic"),
+        text="1.Write number and select operator at first, then click on equal(=) sign.", bg="#262626").place(x=5,y=15)
+
+        Label(self.window_information, fg="#00FF00", font=("arial", 12, "bold", "italic"), bg="#262626",
+        text="2.For single digit operation(e.g. rad,exponent,Reciprocal(1/x),").place(x=5, y=50)
+
+        Label(self.window_information, fg="#00FF00", font=("arial", 12, "bold", "italic"), bg="#262626",
+        text="square,cube,square root,cube root,log,factorial(n!),exponent etc.)").place(x=5, y=70)
+
+        Label(self.window_information, fg="#00FF00", font=("arial", 12, "bold", "italic"), bg="#262626",
+        text="only write number input in the 'Number1' but not write ").place(x=5, y=90)
+
+        Label(self.window_information, fg="#00FF00", font=("arial", 12, "bold", "italic"), bg="#262626",
+        text="input in 'Number2' .After that select favourable operator and go.").place(x=5, y=110)
+
+        Label(self.window_information, fg="#00FF00", font=("arial", 15, "bold", "italic"), bg="#262626",
+        text="Best of luck!").place(x=180, y=200)
+
+        Label(self.window_information, fg="#00FF00", font=("arial", 12, "bold", "italic"), bg="#262626",
+        text="3.For single no. operation,if there is present two no. in 'Number1'").place(x=5, y=140)
+
+        Label(self.window_information, fg="#00FF00", font=("arial", 12, "bold", "italic"), bg="#262626",
+         text="and 'Number2', only input number in 'Number1' will taken.").place(x=5, y=160)
+
+        self.window_information.mainloop()
+
     def opr(self,work):
         self.work = work
         self.textoperator.set(self.work)
