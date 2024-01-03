@@ -251,6 +251,16 @@ class Calculator:
                 messagebox.showerror("Error","Something error in input.please check it.")
                 self.information()
                 self.reset_now()
+        elif self.work_done=="Reciprocal":
+            try:
+                result_take = round(1.0/eval(self.n1),2)
+                self.text_value.set(int(result_take)) if int(result_take) == result_take else self.text_value.set(result_take)
+            except ZeroDivisionError:
+                self.text_value.set("Can not divide by zero")
+            except:
+                messagebox.showerror("Input Error","Please write number in the right position.Please read the information carefully")
+                self.information()
+                self.reset_now()
 
 if __name__ == '__main__':
     window = Tk()
