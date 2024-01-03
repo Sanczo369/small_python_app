@@ -210,6 +210,20 @@ class Calculator:
     def opr(self,work):
         self.work = work
         self.textoperator.set(self.work)
+
+    def evaluation_opr(self):
+        self.n1 = (self.number1.get())
+        self.n2 = (self.number2.get())
+        self.work_done = self.textoperator.get()
+        if self.work_done == "+":
+            try:
+                result_take = eval(self.n1) + eval(self.n2)
+                self.text_value.set(int(result_take)) if int(result_take) == result_take else self.text_value.set(
+                    result_take)
+            except:
+                messagebox.showerror("Error", "Something error in input.please check it.")
+                self.information()
+                self.reset_now()
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
