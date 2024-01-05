@@ -323,6 +323,20 @@ class Calculator:
                 messagebox.showerror("Error","Something error in input.please check it.")
                 self.information()
                 self.reset_now()
+        elif self.work_done == "lcm":
+            try:
+                if eval(self.n1) > eval(self.n2):
+                    result_take = (eval(self.n1) * eval(self.n2)) / math.gcd(eval(self.n1), eval(self.n2))
+                    self.text_value.set(int(result_take)) if int(result_take) == result_take else self.text_value.set(
+                        result_take)
+                else:
+                    result_take = (eval(self.n2) * eval(self.n1)) / math.gcd(eval(self.n2), eval(self.n1))
+                    self.text_value.set(int(result_take)) if int(result_take) == result_take else self.text_value.set(
+                        result_take)
+            except:
+                messagebox.showerror("Error", "Something error in input.please check it.")
+                self.information()
+                self.reset_now()
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
