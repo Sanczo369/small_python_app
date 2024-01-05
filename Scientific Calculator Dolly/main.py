@@ -312,6 +312,17 @@ class Calculator:
                 messagebox.showerror("Error","Something error in input.please check it.")
                 self.information()
                 self.reset_now()
+        elif self.work_done=="Factorial":
+            try:
+                for i in range(1,eval(self.n1)+1):
+                    self.fact= self.fact * i
+                self.text_value.set(int(self.fact)) if int(self.fact) == self.fact else self.text_value.set(self.fact)
+
+                self.fact=1
+            except:
+                messagebox.showerror("Error","Something error in input.please check it.")
+                self.information()
+                self.reset_now()
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
