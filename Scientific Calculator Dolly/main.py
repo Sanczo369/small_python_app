@@ -402,6 +402,18 @@ class Calculator:
                 messagebox.showerror("Error", "Something error in input.please check it.")
                 self.information()
                 self.reset_now()
+        elif self.work_done == "tan":
+            try:
+                if eval(self.n1) == 90:
+                    self.text_value.set("Infinite")
+                else:
+                    result_take = round(math.tan(math.radians(eval(self.n1))), 1)
+                    self.text_value.set(int(result_take)) if int(result_take) == result_take else self.text_value.set(
+                        result_take)
+            except:
+                messagebox.showerror("Error", "Something error in input.please check it.")
+                self.information()
+                self.reset_now()
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
