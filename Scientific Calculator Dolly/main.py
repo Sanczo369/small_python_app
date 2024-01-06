@@ -377,6 +377,13 @@ class Calculator:
                 messagebox.showerror("Error","Something error in input.please check it.")
                 self.information()
                 self.reset_now()
+        elif self.work_done == "Radian":
+            try:
+                self.text_value.set(round(math.radians(eval(self.n1)),3))
+            except:
+                messagebox.showerror("Error","Something error in input.please check it.")
+                self.information()
+                self.reset_now()
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
