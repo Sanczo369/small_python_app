@@ -426,6 +426,12 @@ class Calculator:
                 messagebox.showerror("Error", "Something error in input.please check it.")
                 self.information()
                 self.reset_now()
+        else:
+            messagebox.showerror("Error","Please read the information carefully at first.")
+            self.information()
+            self.reset_now()
+
+        self.number1.focus()
 if __name__ == '__main__':
     window = Tk()
     window.title("Smart Scientific Calculator")
