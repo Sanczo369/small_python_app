@@ -30,3 +30,4 @@ Lista Projektów
 - Egg Catcher
 - Sudoku
 - Wifi Password Displayer
+- Scientific Calculator Dolly
