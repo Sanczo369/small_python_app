@@ -384,3 +384,7 @@ Aplikacja wyświetla haseło Wi-Fi
 - PyPDF2
 
 ## Scientific Calculator Dolly
+
+### requirements
+- tkinter
+- math
