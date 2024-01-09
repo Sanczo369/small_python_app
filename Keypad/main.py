@@ -50,5 +50,22 @@ def upKey(event):
         buttonL[curBut[0]][curBut[1]].configure(highlightbackground='red')
     buttonL[curBut[0]][curBut[1]].focus_set()
 
+def downKey(event):
+    if curBut == [-1,-1]:
+        curBut[:] = [0,0]
+        buttonL[0][0].configure(highlightbackground='red')
+    elif curBut[0] == 3:
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='#d9d9d9')
+        curBut[:] = [(curBut[0]+1)%5, 0]
+        buttonL[curBut[0]][curBut[1]%11].configure(highlightbackground='red')
+    elif curBut[0] == 4:
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='#d9d9d9')
+        curBut[:] = [(curBut[0]+1)%5, 5]
+        buttonL[curBut[0]][curBut[1]%11].configure(highlightbackground='red')
+    else:
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='#d9d9d9')
+        curBut[:] = [(curBut[0]+1)%5, curBut[1]]
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='red')
+    buttonL[curBut[0]][curBut[1]].focus_set()
 
 Keyboard_App.mainloop()
