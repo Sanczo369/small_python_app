@@ -68,4 +68,22 @@ def downKey(event):
         buttonL[curBut[0]][curBut[1]].configure(highlightbackground='red')
     buttonL[curBut[0]][curBut[1]].focus_set()
 
+def select(value, x, y):
+    if curBut != [-1,-1]:
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='#d9d9d9')
+        buttonL[curBut[0]][curBut[1]].configure(highlightcolor='#d9d9d9')
+    curBut[:] = [x,y]
+    buttonL[x][y].configure(highlightbackground='red')
+    buttonL[x][y].configure(highlightcolor='red')
+    if value == "DEL":
+        input_val = entry.get("1.0", 'end-2c')
+        entry.delete("1.0", "end")
+        entry.insert("1.0", input_val, "end")
+    elif value == "SPACE":
+        entry.insert("insert", ' ')
+    elif value == "TAB":
+        entry.insert("insert", '   ')
+    else:
+        entry.insert("end", value)
+
 Keyboard_App.mainloop()
