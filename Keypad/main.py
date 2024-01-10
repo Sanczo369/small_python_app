@@ -32,6 +32,20 @@ def leftKey(event):
         buttonL[curBut[0]][curBut[1]].configure(highlightbackground='red')
     buttonL[curBut[0]][curBut[1]].focus_set()
 
+def rightKey(event):
+    if curBut == [-1,-1]:
+        curBut[:] = [0,0]
+        buttonL[0][0].configure(highlightbackground='red')
+    elif curBut[0] == 4:
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='#d9d9d9')
+        curBut[:] = [0,0]
+        buttonL[0][0].configure(highlightbackground='red')
+    else:
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='#d9d9d9')
+        curBut[:] = [curBut[0], (curBut[1]+1)%11]
+        buttonL[curBut[0]][curBut[1]].configure(highlightbackground='red')
+    buttonL[curBut[0]][curBut[1]].focus_set()
+
 def upKey(event):
     if curBut == [-1,-1]:
         curBut[:] = [0,0]
