@@ -102,4 +102,14 @@ for button in keys:
         buttonL[varRow-1].append(but)
         but.grid(row=6, columnspan=16)
 
+    varColumn += 1
+    if varColumn > 10:
+        varColumn = 0
+        varRow += 1
+        buttonL.append([])
+
+Keyboard_App.bind('<Left>', leftKey)
+Keyboard_App.bind('<Right>', rightKey)
+Keyboard_App.bind('<Up>', upKey)
+Keyboard_App.bind('<Down>', downKey)
 Keyboard_App.mainloop()
