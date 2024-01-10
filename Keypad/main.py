@@ -86,4 +86,13 @@ def select(value, x, y):
     else:
         entry.insert("end", value)
 
+for button in keys:
+    if button != "SPACE":
+        but = tk.Button(Keyboard_App, text=button, width=5, bg="#000000", fg="#ffffff", highlightthickness=4,
+                       activebackground="gray65", highlightcolor='red', activeforeground="#000000", relief="raised", padx=12,
+                       pady=4, bd=4, command=lambda x=button, i=varRow-1, j=varColumn: select(x, i, j))
+        but.bind('<Return>', lambda event, x=button, i=varRow-1, j=varColumn: select(x, i, j))
+        buttonL[varRow-1].append(but)
+        but.grid(row=varRow, column=varColumn)
+
 Keyboard_App.mainloop()
