@@ -16,6 +16,12 @@ times = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00",
 seatList = []
 seatSelected = []
 
+class Application(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title('Cinema Booking')
+        self.createWidgets()
+
 
 app = Application()
 app.mainloop()
