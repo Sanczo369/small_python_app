@@ -22,6 +22,8 @@ class Application(tk.Tk):
         self.title('Cinema Booking')
         self.createWidgets()
 
+    def updateMovies(self, event=None):
+        self.movieCombo['values'] = movies[self.genreCombo.get()]
 
 app = Application()
 app.mainloop()
