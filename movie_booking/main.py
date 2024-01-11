@@ -51,6 +51,12 @@ class Application(tk.Tk):
 
         tkinter.ttk.Separator(self, orient="horizontal").grid(row=3, column=0, columnspan=5, sticky='ew')
 
+    def createTimeButtons(self, event=None):
+        tk.Label(self, text='Select Time Slot', font='Roboto 11 bold underline').grid(row=4, column=2, columnspan=2, pady=5)
+        Time = tk.Frame(self)
+        Time.grid(row=5, column=0, columnspan=5)
+        for i in range(14):
+            tk.Button(Time, text=times[i], command=self.seatSelection).grid(row=4+i//7, column=i%7)
 
 app = Application()
 app.mainloop()
