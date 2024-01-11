@@ -25,5 +25,32 @@ class Application(tk.Tk):
     def updateMovies(self, event=None):
         self.movieCombo['values'] = movies[self.genreCombo.get()]
 
+    def createWidgets(self):
+        headingLabel = tk.Label(self, text="Cinema Bookings", font="Roboto 12")
+        headingLabel.grid(row=0, column=0, columnspan=5, padx=10, pady=10, sticky="w")
+        tkinter.ttk.Separator(self, orient="horizontal").grid(row=1, column=0, columnspan=5, sticky='ew')
+
+        day = tk.Frame(self)
+        tk.Label(day, text="_______").pack()
+
+        tk.Label(day, text="TODAY", font='Helvetica 10 underline').pack()
+        tk.Label(day, text="").pack()
+        day.grid(row=2, column=0, padx=10)
+
+        tk.Label(self, text="Genre: ").grid(row=2, column=1, padx=(10, 0))
+        self.genreCombo = tkinter.ttk.Combobox(self, width=15, values=list(movies.keys()), state="readonly")
+        self.genreCombo.set("SELECT GENRE")
+        self.genreCombo.bind('<<ComboboxSelected>>', self.updateMovies)
+        self.genreCombo.grid(row=2, column=2)
+
+        tk.Label(self, text="Movie: ").grid(row=2, column=3, padx=(10, 0))
+        self.movieCombo = tkinter.ttk.Combobox(width=15, state="readonly")
+        self.movieCombo.bind('<<ComboboxSelected>>', self.createTimeButtons)
+        self.movieCombo.set("SELECT MOVIE")
+        self.movieCombo.grid(row=2, column=4, padx=(0, 10))
+
+        tkinter.ttk.Separator(self, orient="horizontal").grid(row=3, column=0, columnspan=5, sticky='ew')
+
+
 app = Application()
 app.mainloop()
