@@ -58,5 +58,16 @@ class Application(tk.Tk):
         for i in range(14):
             tk.Button(Time, text=times[i], command=self.seatSelection).grid(row=4+i//7, column=i%7)
 
+    def seatSelection(self):
+        window = tk.Toplevel()
+        window.title("Select Seat(s)")
+        checkoutHeading = tk.Label(window, text="Seat(s) Selection", font="Roboto 12")
+        checkoutHeading.grid(row=0, column=0, columnspan=5, padx=10, pady=(10, 0), sticky="w")
+        infer = tk.Frame(window)
+        infer.grid(row=1, column=0)
+        tk.Label(infer, text='BLUE = SELECTED', fg='blue').grid(row=0, column=0, padx=10)
+        tk.Label(infer, text='RED = BOOKED', fg='brown').grid(row=0, column=1, padx=10)
+        tk.Label(infer, text='GREEN = AVAILABLE', fg='green').grid(row=0, column=2, padx=10)
+        tkinter.ttk.Separator(window, orient="horizontal").grid(row=2, column=0, pady=(0, 5), sticky='ew')
 app = Application()
 app.mainloop()
