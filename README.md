@@ -394,6 +394,7 @@ Aplikacja wyświetla haseło Wi-Fi
 - math
 
 ## KeyPad
+Aplikacja klawiatury ekranowej
 ### requirements
 - tkinter
 
