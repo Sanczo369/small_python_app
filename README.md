@@ -34,6 +34,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - audiobook
 - Scientific Calculator Dolly
 - KeyPad
+- Cinema Booking
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
@@ -393,5 +394,11 @@ Aplikacja wyświetla haseło Wi-Fi
 - math
 
 ## KeyPad
+Aplikacja klawiatury ekranowej
+### requirements
+- tkinter
+
+## Cinema Booking
+Aplikacja do tworzenia rezerwacji i wybór miejsca na seans konkretnego film
 ### requirements
 - tkinter
