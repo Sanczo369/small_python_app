@@ -398,5 +398,6 @@ Aplikacja wyświetla haseło Wi-Fi
 - tkinter
 
 ## Cinema Booking
+Aplikacja do tworzenia rezerwacji i wybór miejsca na seans konkretnego film
 ### requirements
 - tkinter
