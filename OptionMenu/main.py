@@ -8,6 +8,18 @@ class GasGen(Tkinter.Tk):
 		self.grid()
 
 
+    def initialize(self):
+        for i in range(8):
+            t = Tkinter.StringVar()
+            t.set("Not Selected")
+            self.vars.append(t)
+
+        for i in range(len(self.vars)):
+            OptionMenu(self, self.vars[i], "methane", "ethane", "propane", "iso-butane", "n-butane", "iso-pentane",
+                       "n-pentane", "benzene").grid(column=0, row=i)
+
+        Tkinter.Button(self, text="Show Values", command=self.show).grid(pady=10)
+
 if __name__ == "__main__":
 	app = GasGen()
 	app.title('Gas mixture generator')
