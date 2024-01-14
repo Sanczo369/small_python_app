@@ -20,6 +20,11 @@ class GasGen(Tkinter.Tk):
 
         Tkinter.Button(self, text="Show Values", command=self.show).grid(pady=10)
 
+
+    def show(self):
+        Tkinter.Label(self, text="\n".join([k.get() for k in self.vars])).grid(pady=10)
+
+
 if __name__ == "__main__":
 	app = GasGen()
 	app.title('Gas mixture generator')
