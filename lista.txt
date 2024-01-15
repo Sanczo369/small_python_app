@@ -31,3 +31,8 @@ Lista Projektów
 - Sudoku
 - Wifi Password Displayer
 - Scientific Calculator Dolly
+- KeyPad
+- OptionMenu
+- Movie Booking
+- OptionMenu
+- RadioButton
