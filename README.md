@@ -381,8 +381,8 @@ Aplikacja wyświetla haseło Wi-Fi
 ### requirements
 - subprocess
 
-
 ## Audiobook
+Aplikacja obsługująca nagranie dźwiękowe zawierające odczytany przez lektora tekst publikacji książkowej.
 ### requirements
 - pyttsx3
 - PyPDF2
@@ -403,11 +403,11 @@ Aplikacja do tworzenia rezerwacji i wybór miejsca na seans konkretnego film
 ### requirements
 - tkinter
 
-
 ## OptionMenu
 Przykładowe dodanie OptionMenu w projekcie
 ### requirements
 - tkinter
+
 ## RadioButton
 Przykładowe dodanie przycisków Radio w projekcie
 ### requirements
