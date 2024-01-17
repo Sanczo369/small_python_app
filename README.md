@@ -407,5 +407,9 @@ Aplikacja do tworzenia rezerwacji i wybór miejsca na seans konkretnego film
 
 
 ## OptionMenu
+### requirements
+- tkinter
 ## RadioButton
+### requirements
+- tkinter
   
