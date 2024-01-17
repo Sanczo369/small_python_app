@@ -388,6 +388,7 @@ Aplikacja wyświetla haseło Wi-Fi
 - PyPDF2
 
 ## Scientific Calculator Dolly
+Jest to program w języku Python wykorzystujący bibliotekę Tkinter do stworzenia prostej aplikacji kalkulatora z graficznym interfejsem użytkownika (GUI).
 ### requirements
 - tkinter
 - math
