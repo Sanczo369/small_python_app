@@ -410,6 +410,7 @@ Aplikacja do tworzenia rezerwacji i wybór miejsca na seans konkretnego film
 ### requirements
 - tkinter
 ## RadioButton
+Przykładowe dodanie przycisków Radio w projekcie
 ### requirements
 - tkinter
   
