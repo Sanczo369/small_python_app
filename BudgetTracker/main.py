@@ -15,6 +15,7 @@ window = Tk()
 window.geometry("700x550")
 window.configure(bg = "#FFFFFF")
 window.title("Calculator")
+window.iconbitmap('logo.ico')
 expenses = 1400
 window.resizable(False, False)
 
