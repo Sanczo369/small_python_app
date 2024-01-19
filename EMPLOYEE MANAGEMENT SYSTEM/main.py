@@ -6,8 +6,10 @@ from tkinter import messagebox
 import database
 
 app = customtkinter.CTk()
-app.title("Employee Management SystemM")
+app.title("Employee Management System")
+app.iconbitmap("logo.ico")
 app.geometry("900x420")
+
 app.resizable(False, False)
 app.config(bg="#161C25")
 
