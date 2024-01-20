@@ -2,6 +2,7 @@ from customtkinter import *
 from CTkListbox import *
 app = CTk()
 app.title("Shopping List")
+app.iconbitmap("logo.ico")
 set_appearance_mode("dark")
 def createListinListBox(shopping):
     for elem in shopping:
