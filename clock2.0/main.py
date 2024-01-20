@@ -26,6 +26,9 @@ class Clock(tkinter.Label):
             self.display_time = self.time
             self.config(text=self.display_time)
         self.after(200, self.tick)
+
+def timestamp():
+    print(time.strftime("%I:%M:%S"))
 if __name__ == "__main__":
 
     window = tkinter.Tk()
