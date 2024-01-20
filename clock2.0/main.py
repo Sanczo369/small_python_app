@@ -32,6 +32,7 @@ def timestamp():
 if __name__ == "__main__":
 
     window = tkinter.Tk()
+    window.iconbitmap("logo.ico")
     frame = tkinter.Frame(window, width=800, height=800)
     frame.pack()
 
