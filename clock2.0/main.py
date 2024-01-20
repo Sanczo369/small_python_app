@@ -2,6 +2,20 @@ import tkinter
 import time
 from tkinter import scrolledtext
 
+class Clock(tkinter.Label):
+    def __init__(self, parent=None, seconds=True):
+        tkinter.Label.__init__(self, parent)
+
+        self.display_seconds = seconds
+        if self.display_seconds:
+            self.time = time.strftime('%I:%M:%S')
+        else:
+            self.time = time.strftime('%I:%M %p').lstrip('0')
+        self.display_time = self.time
+        self.configure(text=self.display_time)
+
+        self.after(200, self.tick)
+
 if __name__ == "__main__":
 
     window = tkinter.Tk()
