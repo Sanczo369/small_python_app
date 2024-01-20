@@ -16,6 +16,16 @@ class Clock(tkinter.Label):
 
         self.after(200, self.tick)
 
+    def tick(self):
+        if self.display_seconds:
+            new_time = time.strftime('%I:%M:%S')
+        else:
+            new_time = time.strftime('%I:%M %p').lstrip('0')
+        if new_time != self.time:
+            self.time = new_time
+            self.display_time = self.time
+            self.config(text=self.display_time)
+        self.after(200, self.tick)
 if __name__ == "__main__":
 
     window = tkinter.Tk()
