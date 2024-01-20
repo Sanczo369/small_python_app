@@ -17,6 +17,7 @@ root.title("Sudoku")
 root.minsize(width=500, height=635)
 root.attributes("-alpha", 0.90)
 root.configure(background="#282828")
+root.iconbitmap('logo.ico')
 
 title = Label(root, text='Sudoku', fg="#382888", font="Geneva 30", bg="#282828")
 title.pack()
