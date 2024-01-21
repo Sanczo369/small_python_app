@@ -61,6 +61,7 @@ class Application(tk.Tk):
     def seatSelection(self):
         window = tk.Toplevel()
         window.title("Select Seat(s)")
+        window.iconbitmap("logo.ico")
         checkoutHeading = tk.Label(window, text="Seat(s) Selection", font="Roboto 12")
         checkoutHeading.grid(row=0, column=0, columnspan=5, padx=10, pady=(10, 0), sticky="w")
         infer = tk.Frame(window)
