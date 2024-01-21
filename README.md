@@ -413,4 +413,7 @@ Przykładowe dodanie OptionMenu w projekcie
 Przykładowe dodanie przycisków Radio w projekcie
 ### requirements
 - tkinter
+- 
+## Clock 2.0
+Aplikacja wyswietla aktualny czas i pozwala zapisać aktualą godzine
   
