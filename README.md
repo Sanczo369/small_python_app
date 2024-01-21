@@ -416,4 +416,8 @@ Przykładowe dodanie przycisków Radio w projekcie
 - 
 ## Clock 2.0
 Aplikacja wyswietla aktualny czas i pozwala zapisać aktualą godzine
+### requirements
+- tkinter
+- time
+
   
