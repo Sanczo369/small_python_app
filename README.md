@@ -31,13 +31,14 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - Egg Catcher
 - Sudoku
 - Wifi Password Displayer
-- audiobook
+- Audiobook
 - Scientific Calculator Dolly
 - KeyPad
 - Cinema Booking
 - OptionMenu
 - RadioButton
 - Clock 2.0
+  
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
