@@ -66,6 +66,32 @@ def view_saved_passwords():
             messagebox.showinfo(title="File Not Found", message="No passwords.txt file found.")
     else:
         messagebox.showwarning("Access Denied", "Invalid master password.")
+
+
+def update_password():
+    website = website_entry.get()
+    new_password = password_entry.get()
+
+    if len(website) == 0 or len(new_password) == 0:
+        messagebox.showinfo(title="Oops", message="Please make sure you have entered both website and password.")
+    else:
+        try:
+            with open("passwords.txt", "r") as data_file:
+                lines = data_file.readlines()
+
+            with open("passwords.txt", "w") as data_file:
+                for line in lines:
+                    if website in line:
+                        _, _, _ = line.split(" | ")
+                        data_file.write(f"{website} | {email_entry.get()} | {new_password}\n")
+                    else:
+                        data_file.write(line)
+
+            messagebox.showinfo(title="Success", message="Password updated successfully.")
+        except FileNotFoundError:
+            messagebox.showinfo(title="File Not Found", message="No passwords.txt file found.")
+
+
 window = Tk()
 window.title("MyPass")
 window.config(padx=50, pady=50, bg="#F0F0F0")
