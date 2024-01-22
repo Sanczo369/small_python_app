@@ -46,6 +46,26 @@ def save():
                 data_file.write(f"{website} | {email} | {password}\n")
                 website_entry.delete(0, END)
                 password_entry.delete(0, END)
+
+
+def view_saved_passwords():
+    master_password = "password"
+    entered_password = simpledialog.askstring("Master Password", "Enter the master password:", show='*')
+
+    if entered_password == master_password:
+        saved_passwords_window = Toplevel(window)
+        saved_passwords_window.title("Saved Passwords")
+
+        saved_passwords_text = Text(saved_passwords_window, width=80, height=10, font=("Helvetica", 12))
+        saved_passwords_text.pack()
+
+        try:
+            with open("passwords.txt", "r") as data_file:
+                saved_passwords_text.insert(END, data_file.read())
+        except FileNotFoundError:
+            messagebox.showinfo(title="File Not Found", message="No passwords.txt file found.")
+    else:
+        messagebox.showwarning("Access Denied", "Invalid master password.")
 window = Tk()
 window.title("MyPass")
 window.config(padx=50, pady=50, bg="#F0F0F0")
