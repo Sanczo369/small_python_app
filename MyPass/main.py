@@ -26,6 +26,12 @@ def generate_password():
 
     password_list = password_letters + password_symbols + password_numbers
     shuffle(password_list)
+
+    password = "".join(password_list)
+    password_entry.delete(0, END)
+    password_entry.insert(0, password)
+    pyperclip.copy(password)
+
 window = Tk()
 window.title("MyPass")
 window.config(padx=50, pady=50, bg="#F0F0F0")
