@@ -95,4 +95,12 @@ def update_password():
 window = Tk()
 window.title("MyPass")
 window.config(padx=50, pady=50, bg="#F0F0F0")
+
+
+canvas = Canvas(height=200, width=200, bg="#F0F0F0", highlightthickness=0)
+logo_img = PhotoImage(file=resource_path("assets/logo.png"))
+canvas.create_image(100, 100, image=logo_img)
+canvas.grid(row=0, column=1)
+
+
 window.mainloop()
