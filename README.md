@@ -421,4 +421,4 @@ Aplikacja wyswietla aktualny czas i pozwala zapisać aktualą godzine
 - tkinter
 - time
 
-  
+  ## MyPass
