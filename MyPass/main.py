@@ -118,4 +118,13 @@ email_entry.insert(0, "Sharmaalok02gwl@gmail.com")
 password_entry = Entry(width=21, font=("Helvetica", 12))
 password_entry.grid(row=3, column=1)
 
+generate_password_button = Button(text="Generate Password", width=15, bg="#007BFF", fg="white", font=("Helvetica", 12, "bold"), command=generate_password)
+generate_password_button.grid(row=3, column=2)
+add_button = Button(text="Store Password", bg="#28A745", fg="white", font=("Helvetica", 12, "bold"), width=36, command=save)
+add_button.grid(row=4, column=1, columnspan=2, pady=8)
+view_passwords_button = Button(text="View Saved Passwords", bg="#DC3545", fg="white", font=("Helvetica", 12, "bold"), width=36, command=view_saved_passwords)
+view_passwords_button.grid(row=5, column=1, columnspan=2, pady=10)
+update_password_button = Button(text="Update Password", bg="#FFC107", fg="black", font=("Helvetica", 12, "bold"), width=36, command=update_password)
+update_password_button.grid(row=6, column=1, columnspan=2)
+
 window.mainloop()
