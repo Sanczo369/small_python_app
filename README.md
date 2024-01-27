@@ -38,7 +38,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - OptionMenu
 - RadioButton
 - Clock 2.0
-  
+- MyPass
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
@@ -421,4 +421,12 @@ Aplikacja wyswietla aktualny czas i pozwala zapisać aktualą godzine
 - tkinter
 - time
 
-  
+## MyPass
+MyPass to prosty menedżer haseł zbudowany przy użyciu języka Python i biblioteki Tkinter. Umożliwia użytkownikom generowanie bezpiecznych haseł, przechowywanie ich wraz z odpowiednią witryną internetową i adresem e-mail/nazwą użytkownika, przeglądanie zapisanych haseł i aktualizowanie haseł w razie potrzeby.
+### requirements
+- tkinter
+- random
+- pyperclip
+- os
+- sys
+
