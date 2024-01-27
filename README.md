@@ -423,4 +423,10 @@ Aplikacja wyswietla aktualny czas i pozwala zapisać aktualą godzine
 
 ## MyPass
 MyPass to prosty menedżer haseł zbudowany przy użyciu języka Python i biblioteki Tkinter. Umożliwia użytkownikom generowanie bezpiecznych haseł, przechowywanie ich wraz z odpowiednią witryną internetową i adresem e-mail/nazwą użytkownika, przeglądanie zapisanych haseł i aktualizowanie haseł w razie potrzeby.
+### requirements
+- tkinter
+- random
+- pyperclip
+- os
+- sys
 
