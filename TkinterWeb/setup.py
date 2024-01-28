@@ -82,6 +82,46 @@ class InputMessageUI():
         self.root.configure(bg="#93B1A6")
         self.root.geometry(f"{self.WIN_WIDTH}x{self.WIN_HEIGHT}+{x}+{y}")
 
+    def validate_input(self):
+        splitted_message = self.message.split(" ")
+        longest_string = max(splitted_message, key=len)
+
+        if len(self.message) == 0:
+            self.error_input_text.config(text="Please provide a message", fg="blue")
+            self.error_input_text.pack(side="top", pady=(40, 0))
+            return False
+        elif len(longest_string) > 8:
+            self.error_input_text.config(text="Packets with more than 8 characters is not allowed!", fg="red")
+            self.error_input_text.pack(side="top", pady=(40, 0))
+            return False
+        elif len(splitted_message) > 8:
+            self.error_input_text.config(text="Please input no more than 8 words/packets", fg="blue")
+            self.error_input_text.pack(side="top", pady=(40, 0))
+            return False
+        elif len(self.n) == 0:
+            self.error_input_text.config(text="Please input number of broken words/packets", fg="blue")
+            self.error_input_text.pack(side="top", pady=(40, 0))
+            return False
+        elif int(self.n) > min(len(longest_string), len(splitted_message)):
+            self.error_input_text.config(text="Number of broken packets is too big!", fg="red")
+            self.error_input_text.pack(side="top", pady=(40, 0))
+            return False
+        elif int(self.n) < 0:
+            self.error_input_text.config(text="Number of broken packets must be positive!", fg="red")
+            self.error_input_text.pack(side="top", pady=(40, 0))
+            return False
+
+        splitted = self.message.split(" ")
+        if len(splitted) < 8:
+            splitted.extend(["_" * 8] * (8 - len(splitted)))
+
+        temp = " ".join([s.ljust(8, "_") for s in splitted])
+        # print(temp)
+        self.message = temp
+
+        self.n = int(self.n)
+        return True
+
 
 if __name__ == '__main__':
     InputUI = InputMessageUI()
