@@ -49,6 +49,40 @@ def generate_broken_message(array: list[str], indicator: list[bool], orient: str
 
     return result, indicator
 
+
+class InputMessageUI():
+    def __init__(self) -> None:
+        self.message: str = 0
+        self.n: int = 0
+
+        self.root = tk.Tk()
+        self.message_label = None
+        self.small_note = None
+        self.message_entry = None
+
+        self.n_label = None
+        self.n_entry = None
+
+        self.lets_go_button = None
+        self.error_input_text = None
+
+        # self.is_input_correct = False
+
+        self.WIN_WIDTH = 920
+        self.WIN_HEIGHT = 508
+        self.screenwidth = self.root.winfo_screenwidth()
+        self.screenheight = self.root.winfo_screenheight()
+        x = (self.screenwidth // 2) - (self.WIN_WIDTH // 2)
+        y = (self.screenheight // 2) - (self.WIN_HEIGHT // 2)
+
+        # small_icon = tk.PhotoImage(file="assets/icons8-thin-client-70.png")
+        # large_icon = tk.PhotoImage(file="assets/icons8-thin-client-70.png")
+        # self.root.iconphoto(False, large_icon, small_icon)
+        self.root.title("Computer Network Interleaving Simulator")
+        self.root.configure(bg="#93B1A6")
+        self.root.geometry(f"{self.WIN_WIDTH}x{self.WIN_HEIGHT}+{x}+{y}")
+
+
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
