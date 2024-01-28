@@ -12,4 +12,4 @@ pyperclip = "^1.8.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+build-backend = "poetry.masonry.api"0
