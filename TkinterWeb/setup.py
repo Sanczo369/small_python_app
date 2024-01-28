@@ -12,6 +12,10 @@ def cls_termninal() -> None:
     elif operating_system == 'linux' or operating_system == 'darwin':
         subprocess.run('clear', shell=True)
 
+def processing_text_input(text: str) -> tuple[list[str], list[str]]:
+    splitted_text = text.split(" ")
+    return ['  '.join(word) for word in splitted_text], ['\n'.join(column) for column in zip(*splitted_text)]
+
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
