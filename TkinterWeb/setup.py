@@ -16,6 +16,9 @@ def processing_text_input(text: str) -> tuple[list[str], list[str]]:
     splitted_text = text.split(" ")
     return ['  '.join(word) for word in splitted_text], ['\n'.join(column) for column in zip(*splitted_text)]
 
+def get_widget_size(widget: tk.Label | tk.Button) -> tuple[int, int]:
+    return widget.winfo_reqwidth(), widget.winfo_reqheight()
+
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
