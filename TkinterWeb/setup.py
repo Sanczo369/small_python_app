@@ -175,6 +175,9 @@ class InputMessageUI():
         self.n_entry.insert(0, 3)
         self.n_entry.pack(side='top')
 
+    def run(self):
+        self.initialize()
+        self.root.mainloop()
 
 if __name__ == '__main__':
     InputUI = InputMessageUI()
