@@ -122,7 +122,16 @@ class InputMessageUI():
         self.n = int(self.n)
         return True
 
+    def lets_go_button_event(self):
+        self.message = str(self.message_entry.get()).strip()
+        self.n = str(self.n_entry.get()).strip()
 
+        is_verified = self.validate_input()
+
+        if is_verified:
+            # print("DONE")
+            self.error_input_text.pack_forget()
+            self.root.destroy()
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
