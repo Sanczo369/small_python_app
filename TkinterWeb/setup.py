@@ -280,6 +280,17 @@ class AppSimulator():
                 sleep(0.002)
             else:
                 return "RESTART"
+
+    def pop_up_info_text(self, i):
+        # pop up info text
+        self.info_text_indicator.append(i+1)
+        self.info_text = tk.Label(self.root,
+            text=f"Oops! Paket data ke {self.info_text_indicator} rusak",
+            font=(self.font_FiraCode, 11),
+            fg='red'
+            )
+        _info_text_width = get_widget_size(self.info_text)[0]
+        self.info_text.place(x=self.screenwidth//2 - _info_text_width//2, y=160, width=_info_text_width + 30)
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
