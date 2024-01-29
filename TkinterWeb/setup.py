@@ -132,6 +132,31 @@ class InputMessageUI():
             # print("DONE")
             self.error_input_text.pack_forget()
             self.root.destroy()
+
+    def initialize(self):
+        # Message
+        self.message_label = tk.Label(
+            self.root,
+            text="Input message",
+            font=("Fira Code", 14, "bold"),
+            width=25
+            )
+        self.message_label.pack(side='top', pady=(92,0))
+        self.small_note = tk.Label(
+            self.root,
+            text="max. 8 words/packets",
+            font=("Fira Code", 9),
+            width=22
+            )
+        self.small_note.pack(side='top', pady=(0,0))
+        self.message_entry = tk.Entry(
+            self.root,
+            width=74,
+            justify='center',
+            font=("Fira Code", 14)
+            )
+        self.message_entry.insert(0, "matahari membakar sebagian material berwarna kebiruan 01234567")
+        self.message_entry.pack(side='top')
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
