@@ -273,7 +273,13 @@ class AppSimulator():
         # self.col_message = self.broken_col_message
         # self.row_message = self.broken_row_message
 
-
+    def wait_in_the_middle(self, n:int=100):
+        for _ in range(n):
+            if self.is_running:
+                self.root.update()
+                sleep(0.002)
+            else:
+                return "RESTART"
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
