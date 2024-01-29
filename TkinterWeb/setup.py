@@ -175,9 +175,104 @@ class InputMessageUI():
         self.n_entry.insert(0, 3)
         self.n_entry.pack(side='top')
 
+        # Let's go button
+        self.lets_go_button = tk.Button(
+            self.root,
+            text="Let's go",
+            font=("Fira Code", 14, "bold"),
+            width=16,
+            command=self.lets_go_button_event
+        )
+        self.lets_go_button.pack(side='top', pady=(50, 0))
+
+        # error message
+        self.error_input_text = tk.Label(
+            self.root,
+            text="",
+            font=("Fira Code", 10),
+            width=57
+        )
+
     def run(self):
         self.initialize()
         self.root.mainloop()
+
+
+class AppSimulator():
+    def __init__(self, n: int, message: str):
+        self.root = tk.Tk()
+        self.screenwidth = self.root.winfo_screenwidth()
+        self.screenheight = self.root.winfo_screenheight()
+        self.row_message, self.col_message = processing_text_input(message)
+
+        self.is_running = False
+        self.font_FiraCode = "Fira Code"
+
+        # -------------------------------------------------------------
+        # font_root = font.Font(family="Inter", size=60)
+
+        # self.root.option_add("*Font", font_root)
+        self.bg_root = "#93B1A6"
+        self.xy_color_label = "#ffffff"
+        self.root.configure(bg=self.bg_root)
+
+        self.root.title("Computer Network Interleaving Simulator")
+        self.root.attributes('-fullscreen', True)
+        # self.root.geometry(f"{int(self.screenwidth/1.15)}x{int(self.screenheight/1.15)}")
+        # self.root.state('zoomed')  # Maximize screen
+
+        # Icon App
+        # small_icon = tk.PhotoImage(file="assets/icons8-thin-client-70.png")
+        # large_icon = tk.PhotoImage(file="assets/icons8-thin-client-70.png")
+        # self.root.iconphoto(False, large_icon, small_icon)
+        # -------------------------------------------------------------
+
+        self.x = []
+        self.y = []
+        self.x_start, self.x_initial = 138, 138
+        self.y_start, self.y_initial = 250, 250
+
+        # Exit button
+        self.exit_button = None
+
+        # Header label
+        self.header = None
+
+        self.sender_text = None
+        self.info_text, self.info_text_indicator = None, []
+        self.reciever_text = None
+        self.interleaving_explenation_text = None
+        self.post_text = None
+
+        # Normal simulation button
+        self.normal_button = None
+
+        # Reset button
+        self.restart_button = None
+
+        # Interleaving simulation button
+        self.simulation_button = None
+
+        # x label
+        self.x_labels = []
+        self.x_label_width = 0  # 260
+        self.x_label_height = 0  # 50
+
+        # y label
+        self.y_labels = []
+        self.y_label_width = 0
+        self.y_label_height = 0
+
+        # Create random broken message
+        indicator = [True] * n + [False] * (abs(8 - n))
+        random.shuffle(indicator)
+
+        self.broken_row_message, self.row_indicator = generate_broken_message(self.row_message, indicator, orient='row')
+        self.broken_col_message, self.col_indicator = generate_broken_message(self.col_message, indicator, orient='col')
+
+        # self.col_message = self.broken_col_message
+        # self.row_message = self.broken_row_message
+
 
 if __name__ == '__main__':
     InputUI = InputMessageUI()
