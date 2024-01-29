@@ -157,6 +157,25 @@ class InputMessageUI():
             )
         self.message_entry.insert(0, "matahari membakar sebagian material berwarna kebiruan 01234567")
         self.message_entry.pack(side='top')
+
+        # n
+        self.n_label = tk.Label(
+            self.root,
+            text="Number of broken packets",
+            font=("Fira Code", 14, "bold"),
+            width=29
+        )
+        self.n_label.pack(side='top', pady=(30, 0))
+        self.n_entry = tk.Entry(
+            self.root,
+            width=25,
+            justify='center',
+            font=("Fira Code", 14)
+        )
+        self.n_entry.insert(0, 3)
+        self.n_entry.pack(side='top')
+
+
 if __name__ == '__main__':
     InputUI = InputMessageUI()
     InputUI.run()
