@@ -432,3 +432,7 @@ MyPass to prosty menedżer haseł zbudowany przy użyciu języka Python i biblio
 - sys
 
 ## Interleaving Simulator Python
+### requirements
+- tkinter
+- pyinstaller
+- auto-py-to-exe
