@@ -34,6 +34,20 @@ class Music_Player(Tk):
     def pause_music(self):
         mixer.music.pause()
 
+
+    def open_file(self, event):
+        try:
+            user_name = os.getlogin()
+            file_types = (
+                ("All Files", "*.*"),
+                ("MP3", ".mp3")
+            )
+            file_ = askopenfilename(initialdir=os.path.normpath("C://Users//{user_name}//Musics"), title="Open File",
+                                    filetype=file_types)
+            mixer.init()
+            mixer.music.load(str(file_))
+        except (Exception, error):
+            sys.exit()
 def main():
     window = Music_Player()
     window.mainloop()
