@@ -33,7 +33,8 @@ class Music_Player(Tk):
         mixer.music.play()
     def pause_music(self):
         mixer.music.pause()
-
+    def stop_music(self):
+        mixer.music.stop()
 
     def open_file(self, event):
         try:
