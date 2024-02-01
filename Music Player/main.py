@@ -28,6 +28,12 @@ class Music_Player(Tk):
         stop_btn = Button(self,text="Stop",width=5,height=2,foreground="#fff000",background="#333",command=self.stop_music).pack(padx=3,pady=3)
         self.bind("<Control-o>",lambda event: self.open_file(event))
         self.configure(background="black")
+
+    def play_music(self):
+        mixer.music.play()
+    def pause_music(self):
+        mixer.music.pause()
+
 def main():
     window = Music_Player()
     window.mainloop()
