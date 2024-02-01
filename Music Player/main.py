@@ -14,7 +14,7 @@ class Music_Player(Tk):
         self.title("Music Player")
         self.geometry("300x200+500+95")
         self.resizable(0,0)
-        icon = PhotoImage(file="./icon/music-player-icon.png")
+        icon = PhotoImage(file="music-player-icon.png")
         self.iconphoto(False,icon)
         menu = Menu(self)
         self.configure(menu=menu)
