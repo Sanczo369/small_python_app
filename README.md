@@ -40,6 +40,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - Clock 2.0
 - MyPass
 - Interleaving Simulator Python
+- Music Player Tkinter
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
 ### Oto rozkład kodu:
@@ -436,3 +437,11 @@ MyPass to prosty menedżer haseł zbudowany przy użyciu języka Python i biblio
 - tkinter
 - pyinstaller
 - auto-py-to-exe
+
+## Music Player Tkinter
+Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzenia multimedialnego wykorzystno Tkinter i Pygame.
+### requirements
+- os
+- sys
+- tkinter
+- pygame
