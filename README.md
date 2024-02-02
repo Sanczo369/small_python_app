@@ -439,6 +439,7 @@ MyPass to prosty menedżer haseł zbudowany przy użyciu języka Python i biblio
 - auto-py-to-exe
 
 ## Music Player Tkinter
+Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzenia multimedialnego wykorzystno Tkinter i Pygame.
 ### requirements
 - os
 - sys
