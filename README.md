@@ -439,3 +439,8 @@ MyPass to prosty menedżer haseł zbudowany przy użyciu języka Python i biblio
 - auto-py-to-exe
 
 ## Music Player Tkinter
+### requirements
+- os
+- sys
+- tkinter
+- pygame
