@@ -39,6 +39,37 @@ class MainApplication(Frame):
             label.pack(anchor="w")
             self.azzanTableArr.append(label)  # appends the label to the list for further use
 
+        self.frm1 = Frame(self.parent)
+        self.frm1.pack()
+
+        self.lblHijriMonthNum = Label(self.frm1, text=self.req["data"]["date"]["hijri"]["day"], font=("arial", 16))
+        self.lblHijriMonthName = Label(self.frm1, text=self.req["data"]["date"]["hijri"]["month"]["en"],
+                                       font=("arial", 16))
+        self.lblHijriYear = Label(self.frm1, text=self.req["data"]["date"]["hijri"]["year"], font=("arial", 16))
+
+        self.lblHijriMonthNum.grid(row=0, column=0)
+        self.lblHijriMonthName.grid(row=0, column=1)
+        self.lblHijriYear.grid(row=0, column=2)
+
+        self.parent.after(1000, self.update)
+
+    def calculateDifference(self):
+        s1 = strftime("%H:%M:%S")
+        s2 = self.azzanTime + ":00"
+
+        FMT = "%H:%M:%S"
+        # print(s2, s1)
+        tdelta = datetime.strptime(s2, FMT) - datetime.strptime(s1, FMT)
+
+        if tdelta.days < 0:
+            tdelta = timedelta(
+                days=0,
+                seconds=tdelta.seconds,
+                microseconds=tdelta.microseconds
+            )
+
+        # print(tdelta)
+        return str(tdelta)
 if __name__ == "__main__":
     root = Tk()
 
