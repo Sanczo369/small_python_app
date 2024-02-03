@@ -70,6 +70,35 @@ class MainApplication(Frame):
 
         # print(tdelta)
         return str(tdelta)
+
+    def update(self):
+        # check if the clock is exactly at 12:00 AM
+        if datetime.now().strftime("%H:%M:%S") == "00:00:00":
+            self.req = self.getData()
+            index = 0
+            for x, y in self.req["data"]["timings"].items():  # iterates over your nums
+                y_in = datetime.strptime(y, "%H:%M")
+                y = datetime.strftime(y_in, "%I:%M %p")
+                text = x + ": " + str(y)
+                self.azzanTableArr[index].config(text=text)  # appends the label to the list for further use
+                index += 1
+            self.lblHijriMonthNum.config(text=self.req["data"]["date"]["hijri"]["day"])
+            self.lblHijriMonthName.config(text=self.req["data"]["date"]["hijri"]["month"]["en"])
+            self.lblHijriYear.config(text=self.req["data"]["date"]["hijri"]["year"])
+        self.currentTime = strftime('%H:%M')
+        self.azzanIndex = self.getNextAzzanIndex(self.req)
+        self.azzanName = self.getAzzanName(self.req, self.azzanIndex)
+        self.azzanTime = self.getAzzanTime(self.req, self.azzanIndex)
+        x = self.calculateDifference()
+        x = x.split(":")
+        if (int(x[0]) > 9):
+            self.azzanName = "Any second now..."
+            self.lblAzzanTime.config(text="Any second now...")
+            self.lblAzzanName.config(text=self.azzanName)
+        else:
+            self.lblAzzanTime.config(text=self.calculateDifference())
+            self.lblAzzanName.config(text=self.azzanName)
+        self.parent.after(1000, self.update)
 if __name__ == "__main__":
     root = Tk()
 
