@@ -8,6 +8,19 @@ from os import remove
 WIDTH = 400
 HEIGHT = 380
 
+class MainApplication(Frame):
+    def __init__(self, parent):
+    	# INIT
+        Frame.__init__(self, parent)
+        self.parent = parent
+        self.currentTime = strftime('%H:%M')
+        self.req = self.getData()
+        self.azzanName = "Unknown"
+        self.azzanTime = "Unknown"
+        self.azzanIndex = self.getNextAzzanIndex(self.req)
+        self.azzanName = self.getAzzanName(self.req, self.azzanIndex)
+        self.azzanTime = self.getAzzanTime(self.req, self.azzanIndex)
+        self.azzanTableArr = []
 
 
 if __name__ == "__main__":
