@@ -22,6 +22,22 @@ class MainApplication(Frame):
         self.azzanTime = self.getAzzanTime(self.req, self.azzanIndex)
         self.azzanTableArr = []
 
+        # GUI PART
+        Label(self.parent, text="Next Azzan is:", font=("arial", 16)).pack()
+        self.lblAzzanName = Label(self.parent, text=self.azzanName, font=("arial", 32))
+        self.lblAzzanName.pack()
+
+        self.lblAzzanTime = Label(self.parent, text=self.calculateDifference(), font=("arial", 32))
+        Label(self.parent, text="It will be in:", font=("arial", 16)).pack()
+        self.lblAzzanTime.pack()
+
+        for x, y in self.req["data"]["timings"].items():  # iterates over your nums
+            y_in = datetime.strptime(y, "%H:%M")
+            y = datetime.strftime(y_in, "%I:%M %p")
+            text = x + ": " + str(y)
+            label = Label(self.parent, text=text, font=("arial", 16))  # set your text
+            label.pack(anchor="w")
+            self.azzanTableArr.append(label)  # appends the label to the list for further use
 
 if __name__ == "__main__":
     root = Tk()
