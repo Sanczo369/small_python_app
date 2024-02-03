@@ -99,6 +99,20 @@ class MainApplication(Frame):
             self.lblAzzanTime.config(text=self.calculateDifference())
             self.lblAzzanName.config(text=self.azzanName)
         self.parent.after(1000, self.update)
+
+    def getData(self):
+        try:
+            response = requests.get("http://api.aladhan.com/v1/timingsByCity?country=Egypt&city=Giza")
+            data = response.json()
+            del data["data"]["timings"]["Sunset"]
+            del data["data"]["timings"]["Imsak"]
+            del data["data"]["timings"]["Midnight"]
+            return data
+        except Exception as e:
+            messagebox.showerror("Failed to connect to the server.", "Check if your internet is working correctly.")
+            exit()
+
+
 if __name__ == "__main__":
     root = Tk()
 
