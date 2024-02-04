@@ -118,6 +118,8 @@ class MainApplication(Frame):
         newTime = t2 - t1
         return newTime.seconds / 60
 
+    def getAzzanName(self, data, index):
+        return list(data["data"]["timings"])[index]
 if __name__ == "__main__":
     root = Tk()
 
