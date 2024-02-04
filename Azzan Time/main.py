@@ -120,6 +120,9 @@ class MainApplication(Frame):
 
     def getAzzanName(self, data, index):
         return list(data["data"]["timings"])[index]
+
+    def getAzzanTime(self, data, index):
+        return list(data["data"]["timings"].values())[index]
 if __name__ == "__main__":
     root = Tk()
 
