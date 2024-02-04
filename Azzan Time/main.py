@@ -123,6 +123,20 @@ class MainApplication(Frame):
 
     def getAzzanTime(self, data, index):
         return list(data["data"]["timings"].values())[index]
+
+    def getNextAzzanIndex(self, data):
+        self.dates = data["data"]["timings"]
+        temp = []
+        # print(str(self.dates) + "\n\n\n")
+        for x in self.dates.values():
+            y = self.getTimeDifference(x)
+            # print(y)
+            temp.append(y)
+
+        # print("\n\n\n")
+
+        index = temp.index(min(temp))
+        return index
 if __name__ == "__main__":
     root = Tk()
 
