@@ -112,6 +112,11 @@ class MainApplication(Frame):
             messagebox.showerror("Failed to connect to the server.", "Check if your internet is working correctly.")
             exit()
 
+    def getTimeDifference(self, t2):
+        t1 = datetime.strptime(self.currentTime, "%H:%M")
+        t2 = datetime.strptime(t2, "%H:%M")
+        newTime = t2 - t1
+        return newTime.seconds / 60
 
 if __name__ == "__main__":
     root = Tk()
