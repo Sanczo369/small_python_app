@@ -41,3 +41,4 @@ Lista Projektów
 - Interleaving Simulator Python
 - TkinterWeb
 - Music Player Tkinter
+- Azzan Time
