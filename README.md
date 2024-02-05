@@ -41,6 +41,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - MyPass
 - Interleaving Simulator Python
 - Music Player Tkinter
+- Azzan Time
 
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
@@ -446,3 +447,14 @@ Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzeni
 - sys
 - tkinter
 - pygame
+
+## Azzan Time
+Aplikacja wyswietla aktualny czas Azzan
+### requirements
+- datetime
+- time
+- requests
+- tkinter
+- base64
+- os
+
