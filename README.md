@@ -449,5 +449,11 @@ Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzeni
 - pygame
 
 ## Azzan Time
+### requirements
+- datetime
+- time
+- requests
+- tkinter
+- base64
+- os
 
-## Azzan Time
