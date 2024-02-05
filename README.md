@@ -449,6 +449,7 @@ Tworzenie własnego odtwarzacza multimedialnego za pomocą Pythona. Do stworzeni
 - pygame
 
 ## Azzan Time
+Aplikacja wyswietla aktualny czas Azzan
 ### requirements
 - datetime
 - time
