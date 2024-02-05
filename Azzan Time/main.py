@@ -147,7 +147,7 @@ if __name__ == "__main__":
     y_cordinate = int((screen_height / 2) - (HEIGHT / 2))
 
     root.resizable(0, 0)
-
+    root.iconbitmap('logo.ico')
     root.geometry("{}x{}+{}+{}".format(WIDTH, HEIGHT, x_cordinate, y_cordinate))
     root.title("Azzan times | Made by Omar Hosam")
 
