@@ -54,3 +54,11 @@ def start_countdown(count):
         checkmark_label.config(text=engines)
 
 # --- UI FUNCTIONS: Timer Reset --- #
+
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(time_display, text='00:00')
+    title_task_label.config(text="& tasks")
+    checkmark_label.config(text='')
+    global repetition
+    repetition = 0
