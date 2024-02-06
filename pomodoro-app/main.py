@@ -82,3 +82,12 @@ def set_work_timer():
     else:
         WORK_MIN = work_minutes
     return WORK_MIN
+
+def set_long_break():
+    global LONG_BREAK_MIN
+    long_break = int(long_break_entry.get())
+    if type(long_break) != int:
+        LONG_BREAK_MIN = 20
+    else:
+        LONG_BREAK_MIN = long_break
+    return LONG_BREAK_MIN
