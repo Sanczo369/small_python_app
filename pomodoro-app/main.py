@@ -36,3 +36,21 @@ def start_timer():
     else:
         title_task_label.config(text="work and focus", font=(FONT_NAME, 20), bg=RED, fg=PINK)
         start_countdown(work_sec)
+def start_countdown(count):
+    global timer
+    count_min = math.floor(count / 60)
+    count_sec = count % 60
+    if count_sec < 10:
+        count_sec = f'0{count_sec}'
+    canvas.itemconfig(time_display, text=f'{count_min}:{count_sec}')
+    if count > 0:
+        timer = window.after(1000, start_countdown, count - 1)
+    else:
+        start_timer()
+        engines = ''
+        work_sess = math.floor(repetition/2)
+        for item in range(work_sess):
+            engines += '⚙'
+        checkmark_label.config(text=engines)
+
+# --- UI FUNCTIONS: Timer Reset --- #
