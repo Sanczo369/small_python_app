@@ -91,3 +91,8 @@ def set_long_break():
     else:
         LONG_BREAK_MIN = long_break
     return LONG_BREAK_MIN
+
+# ----- UI SETUP ----- #
+window = tkinter.Tk()
+window.title("The Pomodoro App")
+window.config(padx=20, pady=20, bg=RED)
