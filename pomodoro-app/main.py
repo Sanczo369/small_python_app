@@ -62,3 +62,12 @@ def reset_timer():
     checkmark_label.config(text='')
     global repetition
     repetition = 0
+
+# --- UI FUNCTIONS: Add/Remove tasks --- #
+
+def add_button_click():
+    listbox_label.insert(tkinter.END, entry_task.get())
+
+
+def remove_button_click():
+    listbox_label.delete(tkinter.ANCHOR)
