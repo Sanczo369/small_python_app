@@ -71,3 +71,14 @@ def add_button_click():
 
 def remove_button_click():
     listbox_label.delete(tkinter.ANCHOR)
+
+# --- UI FUNCTIONS: Set work and long break variables --- #
+
+def set_work_timer():
+    global WORK_MIN
+    work_minutes = int(work_entry.get())
+    if type(work_minutes) != int:
+        WORK_MIN = 25
+    else:
+        WORK_MIN = work_minutes
+    return WORK_MIN
