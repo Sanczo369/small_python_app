@@ -42,3 +42,4 @@ Lista Projektów
 - TkinterWeb
 - Music Player Tkinter
 - Azzan Time
+- Pomodoro App
