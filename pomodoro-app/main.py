@@ -111,3 +111,20 @@ start_button = tkinter.Button(text="Start", font=(FONT_NAME, 10, "bold"), highli
                               command=start_timer)
 reset_button = tkinter.Button(text="Reset", font=(FONT_NAME, 10, "bold"), highlightthickness=0, bg=GREEN,
                               command=reset_timer)
+
+checkmark_label = tkinter.Label(font=(FONT_NAME, 30), bg=RED, fg=GREEN)
+
+work_button = tkinter.Button(text="Work Min.", font=(FONT_NAME, 8), highlightthickness=0, bg=GREEN,
+                             command=set_work_timer, width=10)
+work_entry = tkinter.Entry(width=3, bg=GREEN)
+long_break_button = tkinter.Button(text="Break Min.", font=(FONT_NAME, 8), highlightthickness=0, bg=GREEN,
+                                   command=set_long_break, width=10)
+long_break_entry = tkinter.Entry(width=3, bg=GREEN)
+
+task_phrase = tkinter.Label(text="Keep track of your tasks today.", font=(FONT_NAME, 11),
+                            highlightthickness=0, bg=RED, fg=YELLOW)
+entry_task = tkinter.Entry(width=53, bg=GREEN)
+add_button = tkinter.Button(text="Add task", command=add_button_click, font=(FONT_NAME, 8), highlightthickness=0)
+listbox_label = tkinter.Listbox(height=8, width=40, font=(FONT_NAME, 10), bg=GREEN)
+remove_button = tkinter.Button(text="Remove task", command=remove_button_click, font=(FONT_NAME, 8),
+                               highlightthickness=0)
