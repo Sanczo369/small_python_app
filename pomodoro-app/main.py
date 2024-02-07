@@ -102,3 +102,12 @@ window.config(padx=20, pady=20, bg=RED)
 title_label = tkinter.Label(text="POMODORO", font=(FONT_NAME, 30), bg=RED, fg=YELLOW)
 title_task_label = tkinter.Label(text="& tasks", font=(FONT_NAME, 20), bg=RED, fg=YELLOW)
 canvas = tkinter.Canvas(width=200, height=224, bg=RED, highlightthickness=0)
+
+tomato_img = tkinter.PhotoImage(file="tomato_a.png")
+canvas.create_image(100, 112, image=tomato_img)
+time_display = canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35))
+
+start_button = tkinter.Button(text="Start", font=(FONT_NAME, 10, "bold"), highlightthickness=0, bg=GREEN,
+                              command=start_timer)
+reset_button = tkinter.Button(text="Reset", font=(FONT_NAME, 10, "bold"), highlightthickness=0, bg=GREEN,
+                              command=reset_timer)
