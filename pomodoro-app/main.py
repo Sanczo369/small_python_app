@@ -96,3 +96,9 @@ def set_long_break():
 window = tkinter.Tk()
 window.title("The Pomodoro App")
 window.config(padx=20, pady=20, bg=RED)
+
+# --- UI SETUP: Components --- #
+
+title_label = tkinter.Label(text="POMODORO", font=(FONT_NAME, 30), bg=RED, fg=YELLOW)
+title_task_label = tkinter.Label(text="& tasks", font=(FONT_NAME, 20), bg=RED, fg=YELLOW)
+canvas = tkinter.Canvas(width=200, height=224, bg=RED, highlightthickness=0)
