@@ -460,3 +460,6 @@ Aplikacja wyswietla aktualny czas Azzan
 - os
 
 ## Pomodoro-App
+### requirements
+- tkinter
+- math
