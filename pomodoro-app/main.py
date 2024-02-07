@@ -128,3 +128,26 @@ add_button = tkinter.Button(text="Add task", command=add_button_click, font=(FON
 listbox_label = tkinter.Listbox(height=8, width=40, font=(FONT_NAME, 10), bg=GREEN)
 remove_button = tkinter.Button(text="Remove task", command=remove_button_click, font=(FONT_NAME, 8),
                                highlightthickness=0)
+# --- UI SETUP: Grid Layout --- #
+title_label.grid(column=1, row=0)
+title_task_label.grid(column=1, row=1)
+canvas.grid(column=1, row=2)
+
+start_button.grid(column=0, row=3)
+reset_button.grid(column=0, row=4)
+
+checkmark_label.grid(column=1, row=4)
+
+work_button.grid(column=2, row=3, padx=6)
+work_entry.grid(column=4, row=3)
+long_break_button.grid(column=2, row=4, padx=6)
+long_break_entry.grid(column=4, row=4)
+
+task_phrase.grid(column=1, row=5, pady=10)
+entry_task.grid(column=1, row=6)
+add_button.grid(column=1, row=7, pady=5)
+listbox_label.grid(column=1, row=8, pady=5)
+remove_button.grid(column=1, row=9)
+
+# --- Window Loop --- #
+window.mainloop()
