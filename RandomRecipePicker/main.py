@@ -85,6 +85,53 @@ def load_frame1():
 		command=lambda:load_frame2()
 		).pack(pady=20)
 
+def load_frame2():
+	clear_widgets(frame1)
+	# stack frame 2 above frame 1
+	frame2.tkraise()
+
+	# fetch from database
+	table_name, table_records = fetch_db()
+	title, ingredients = pre_process(table_name, table_records)
+
+	# create logo widget
+	logo_img = ImageTk.PhotoImage(file="assets/RRecipe_logo_bottom.png")
+	logo_widget = tk.Label(frame2, image=logo_img, bg=bg_colour)
+	logo_widget.image = logo_img
+	logo_widget.pack(pady=20)
+
+	# recipe title widget
+	tk.Label(
+		frame2,
+		text=title,
+		bg=bg_colour,
+		fg="white",
+		font=("Ubuntu", 20)
+		).pack(pady=25, padx=25)
+
+	# recipe ingredients widgets
+	for i in ingredients:
+		tk.Label(
+			frame2,
+			text=i,
+			bg="#28393a",
+			fg="white",
+			font=("Shanti", 12)
+			).pack(fill="both", padx=25)
+
+	# 'back' button widget
+	tk.Button(
+		frame2,
+		text="BACK",
+		font=("Ubuntu", 18),
+		bg="#28393a",
+		fg="white",
+		cursor="hand2",
+		activebackground="#badee2",
+		activeforeground="black",
+		command=lambda:load_frame1()
+		).pack(pady=20)
+
 # initiallize app with basic settings
 root = tk.Tk()
 root.title("Recipe Picker")
