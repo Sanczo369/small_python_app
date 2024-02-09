@@ -7,6 +7,12 @@ import pyglet
 # set colours
 bg_colour = "#3d6466"
 
+
+def clear_widgets(frame):
+	# select all frame widgets and delete them
+	for widget in frame.winfo_children():
+		widget.destroy()
+
 # initiallize app with basic settings
 root = tk.Tk()
 root.title("Recipe Picker")
