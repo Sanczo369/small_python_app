@@ -50,6 +50,41 @@ def pre_process(table_name, table_records):
 
 	return title, ingredients
 
+def load_frame1():
+	clear_widgets(frame2)
+	# stack frame 1 above frame 2
+	frame1.tkraise()
+	# prevent widgets from modifying the frame
+	frame1.pack_propagate(False)
+
+	# create logo widget
+	logo_img = ImageTk.PhotoImage(file="assets/RRecipe_logo.png")
+	logo_widget = tk.Label(frame1, image=logo_img, bg=bg_colour)
+	logo_widget.image = logo_img
+	logo_widget.pack()
+
+	# create label widget for instructions
+	tk.Label(
+		frame1,
+		text="ready for your random recipe?",
+		bg=bg_colour,
+		fg="white",
+		font=("Shanti", 14)
+		).pack()
+
+	# create button widget
+	tk.Button(
+		frame1,
+		text="SHUFFLE",
+		font=("Ubuntu", 20),
+		bg="#28393a",
+		fg="white",
+		cursor="hand2",
+		activebackground="#badee2",
+		activeforeground="black",
+		command=lambda:load_frame2()
+		).pack(pady=20)
+
 # initiallize app with basic settings
 root = tk.Tk()
 root.title("Recipe Picker")
