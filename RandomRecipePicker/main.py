@@ -34,6 +34,22 @@ def fetch_db():
 
 	return table_name, table_records
 
+def pre_process(table_name, table_records):
+	# preprocess table name
+	title = table_name[:-6]
+	title = "".join([char if char.islower() else " " + char for char in title])
+
+	# preprocess table records
+	ingredients = []
+
+	for i in table_records:
+		name = i[1]
+		qty = i[2]
+		unit = i[3]
+		ingredients.append(qty + " " + unit + " of " + name)
+
+	return title, ingredients
+
 # initiallize app with basic settings
 root = tk.Tk()
 root.title("Recipe Picker")
