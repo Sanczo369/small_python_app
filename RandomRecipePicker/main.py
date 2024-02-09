@@ -13,6 +13,27 @@ def clear_widgets(frame):
 	for widget in frame.winfo_children():
 		widget.destroy()
 
+def fetch_db():
+	# connect an sqlite database
+	connection = sqlite3.connect("data/recipes.db")
+	cursor = connection.cursor()
+
+	# fetch all the table names
+	cursor.execute("SELECT * FROM sqlite_schema WHERE type='table';")
+	all_tables = cursor.fetchall()
+
+	# choose random table idx
+	idx = random.randint(0, len(all_tables)-1)
+
+	# fetch records from table
+	table_name = all_tables[idx][1]
+	cursor.execute("SELECT * FROM " + table_name + ";")
+	table_records = cursor.fetchall()
+
+	connection.close()
+
+	return table_name, table_records
+
 # initiallize app with basic settings
 root = tk.Tk()
 root.title("Recipe Picker")
