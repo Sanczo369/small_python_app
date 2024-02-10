@@ -139,6 +139,12 @@ root.title("Recipe Picker")
 frame1 = tk.Frame(root, width=500, height=600, bg=bg_colour)
 frame2 = tk.Frame(root, bg=bg_colour)
 
+# place frame widgets in window
+for frame in (frame1, frame2):
+	frame.grid(row=0, column=0, sticky="nesw")
+
+# load the first frame
+load_frame1()
 
 
 # run app
