@@ -43,3 +43,4 @@ Lista Projektów
 - Music Player Tkinter
 - Azzan Time
 - Pomodoro App
+- RandomRecipePicker
