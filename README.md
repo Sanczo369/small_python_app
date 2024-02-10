@@ -464,3 +464,5 @@ Aplikacja wyswietla aktualny czas Azzan
 ### requirements
 - tkinter
 - math
+
+## RandomRecipePicker
