@@ -466,3 +466,9 @@ Aplikacja wyswietla aktualny czas Azzan
 - math
 
 ## RandomRecipePicker
+### requirements
+- tkinter
+- PIL
+- sqlite3
+- numpy
+- pyglet
