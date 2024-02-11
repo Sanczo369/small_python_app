@@ -138,6 +138,7 @@ def load_frame2():
 # initiallize app with basic settings
 root = tk.Tk()
 root.title("Recipe Picker")
+root.eval("tk::PlaceWindow . center")
 
 # place app in the center of the screen (alternative approach to root.eval())
 # x = root.winfo_screenwidth() // 2
