@@ -466,6 +466,7 @@ Aplikacja wyswietla aktualny czas Azzan
 - math
 
 ## RandomRecipePicker
+wyświetlaj losowy przepis za pomocą aplikacji GUI Tkinter, SQLite3 i RecipeDB
 ### requirements
 - tkinter
 - PIL
