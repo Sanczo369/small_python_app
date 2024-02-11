@@ -461,6 +461,7 @@ Aplikacja wyswietla aktualny czas Azzan
 - os
 
 ## Pomodoro-App
+Blokowanie czasu to skuteczna strategia rozsądnego wykorzystywania czasu i osiągania lepszych wyników. Blokowanie czasu na określone czynności pozwala skupić się na jednym zadaniu na raz, ograniczyć rozproszenie uwagi i zwlekać.
 ### requirements
 - tkinter
 - math
