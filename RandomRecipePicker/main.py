@@ -138,6 +138,12 @@ def load_frame2():
 # initiallize app with basic settings
 root = tk.Tk()
 root.title("Recipe Picker")
+
+# place app in the center of the screen (alternative approach to root.eval())
+# x = root.winfo_screenwidth() // 2
+# y = int(root.winfo_screenheight() * 0.1)
+# root.geometry('500x600+' + str(x) + '+' + str(y))
+
 # create a frame widgets
 frame1 = tk.Frame(root, width=500, height=600, bg=bg_colour)
 frame2 = tk.Frame(root, bg=bg_colour)
