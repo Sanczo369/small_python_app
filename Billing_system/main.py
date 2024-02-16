@@ -46,6 +46,15 @@ class Bill_App:
         self.medical_price = StringVar()
         self.grocery_price = StringVar()
         self.cold_drinks_price = StringVar()
+
+        # ==============Customer==========================
+
+        self.c_name = StringVar()
+        self.c_phone = StringVar()
+        self.bill_no = StringVar()
+        x = random.randint(1000, 9999)
+        self.bill_no.set(str(x))
+        self.search_bill = StringVar()
 root = Tk()
 
 root.mainloop()
