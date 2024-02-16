@@ -31,6 +31,15 @@ class Bill_App:
         self.daal = IntVar()
         self.flour = IntVar()
         self.maggi = IntVar()
+
+        # =============coldDtinks=============================
+
+        self.sprite = IntVar()
+        self.limka = IntVar()
+        self.mazza = IntVar()
+        self.coke = IntVar()
+        self.fanta = IntVar()
+        self.mountain_duo = IntVar()
 root = Tk()
 
 root.mainloop()
