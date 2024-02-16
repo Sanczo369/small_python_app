@@ -419,8 +419,7 @@ Przykładowe dodanie OptionMenu w projekcie
 ## RadioButton
 Przykładowe dodanie przycisków Radio w projekcie
 ### requirements
-- tkinter
-- 
+- tkinter 
 ## Clock 2.0
 Aplikacja wyswietla aktualny czas i pozwala zapisać aktualą godzine
 ### requirements
@@ -461,6 +460,7 @@ Aplikacja wyswietla aktualny czas Azzan
 - os
 
 ## Pomodoro-App
+Blokowanie czasu to skuteczna strategia rozsądnego wykorzystywania czasu i osiągania lepszych wyników. Blokowanie czasu na określone czynności pozwala skupić się na jednym zadaniu na raz, ograniczyć rozproszenie uwagi i zwlekać.
 ### requirements
 - tkinter
 - math
