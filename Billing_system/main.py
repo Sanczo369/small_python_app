@@ -14,6 +14,14 @@ class Bill_App:
         title = Label(self.root, text="Billing Software", font=('times new roman', 30, 'bold'), pady=2, bd=12, bg="white", fg="Black", relief=GROOVE)
         title.pack(fill=X)
 
+        # ================variables=======================
+
+        self.sanitizer = IntVar()
+        self.mask = IntVar()
+        self.hand_gloves = IntVar()
+        self.dettol = IntVar()
+        self.newsprin = IntVar()
+        self.thermal_gun = IntVar()
 root = Tk()
 
 root.mainloop()
