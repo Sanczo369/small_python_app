@@ -55,6 +55,14 @@ class Bill_App:
         x = random.randint(1000, 9999)
         self.bill_no.set(str(x))
         self.search_bill = StringVar()
+
+        # ===============Tax================================
+
+        self.medical_tax = StringVar()
+        self.grocery_tax = StringVar()
+        self.cold_drinks_tax = StringVar()
+
+
 root = Tk()
 
 root.mainloop()
