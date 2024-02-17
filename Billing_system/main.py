@@ -62,6 +62,18 @@ class Bill_App:
         self.grocery_tax = StringVar()
         self.cold_drinks_tax = StringVar()
 
+        # =============customer retail details======================
+
+        F1 = LabelFrame(self.root, text="Customer Details", font=('times new roman', 15, 'bold'), bd=10, fg="Black",
+                        bg="#badc57")
+        F1.place(x=0, y=80, relwidth=1)
+        cname_lbl = Label(F1, text="Customer Name:", bg=bg_color, font=('times new roman', 15, 'bold'))
+        cname_lbl.grid(row=0, column=0, padx=20, pady=5)
+        cname_txt = Entry(F1, width=15, textvariable=self.c_name, font='arial 15', bd=7, relief=GROOVE)
+        cname_txt.grid(row=0, column=1, pady=5, padx=10)
+
+
+
 
 root = Tk()
 
