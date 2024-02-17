@@ -82,6 +82,9 @@ class Bill_App:
         c_bill_txt = Entry(F1, width=15, textvariable=self.search_bill, font='arial 15', bd=7, relief=GROOVE)
         c_bill_txt.grid(row=0, column=5, pady=5, padx=10)
 
+        bil_btn = Button(F1, text="Search", command=self.find_bill, width=10, bd=7, font=('arial', 12, 'bold'), relief=GROOVE)
+        bil_btn.grid(row=0, column=6, pady=5, padx=10)
+
 
 root = Tk()
 
