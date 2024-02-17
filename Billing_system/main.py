@@ -85,6 +85,12 @@ class Bill_App:
         bil_btn = Button(F1, text="Search", command=self.find_bill, width=10, bd=7, font=('arial', 12, 'bold'), relief=GROOVE)
         bil_btn.grid(row=0, column=6, pady=5, padx=10)
 
+        # ===================Medical====================================
+
+        F2 = LabelFrame(self.root, text="Medical Purpose", font=('times new roman', 15, 'bold'), bd=10, fg="Black",
+                        bg="#badc57")
+        F2.place(x=5, y=180, width=325, height=380)
+
 
 root = Tk()
 
