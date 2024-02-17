@@ -91,6 +91,11 @@ class Bill_App:
                         bg="#badc57")
         F2.place(x=5, y=180, width=325, height=380)
 
+        sanitizer_lbl = Label(F2, text="Sanitizer", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        sanitizer_lbl.grid(row=0, column=0, padx=10, pady=10, sticky='W')
+        sanitizer_txt = Entry(F2, width=10, textvariable=self.sanitizer, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        sanitizer_txt.grid(row=0, column=1, padx=10, pady=10)
+
 
 root = Tk()
 
