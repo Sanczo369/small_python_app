@@ -116,6 +116,11 @@ class Bill_App:
         newsprin_txt = Entry(F2, width=10, textvariable=self.newsprin, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         newsprin_txt.grid(row=4, column=1, padx=10, pady=10)
 
+        thermal_gun_lbl = Label(F2, text="Thermal Gun", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        thermal_gun_lbl.grid(row=5, column=0, padx=10, pady=10, sticky='W')
+        thermal_gun_txt = Entry(F2, width=10, textvariable=self.thermal_gun, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        thermal_gun_txt.grid(row=5, column=1, padx=10, pady=10)
+
 
 root = Tk()
 
