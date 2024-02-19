@@ -111,6 +111,11 @@ class Bill_App:
         dettol_txt = Entry(F2, width=10, textvariable=self.dettol, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         dettol_txt.grid(row=3, column=1, padx=10, pady=10)
 
+        newsprin_lbl = Label(F2, text="Newsprin", font =('times new roman', 16, 'bold'), bg = "#badc57", fg = "black")
+        newsprin_lbl.grid(row=4, column=0, padx=10, pady=10, sticky='W')
+        newsprin_txt = Entry(F2, width=10, textvariable=self.newsprin, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        newsprin_txt.grid(row=4, column=1, padx=10, pady=10)
+
 
 root = Tk()
 
