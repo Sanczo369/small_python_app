@@ -127,6 +127,10 @@ class Bill_App:
                         bg="#badc57")
         F3.place(x=340, y=180, width=325, height=380)
 
+        rice_lbl = Label(F3, text="Rice", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        rice_lbl.grid(row=0, column=0, padx=10, pady=10, sticky='W')
+        rice_txt = Entry(F3, width=10, textvariable=self.rice, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        rice_txt.grid(row=0, column=1, padx=10, pady=10)
 
 root = Tk()
 
