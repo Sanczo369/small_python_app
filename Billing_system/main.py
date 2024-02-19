@@ -132,6 +132,11 @@ class Bill_App:
         rice_txt = Entry(F3, width=10, textvariable=self.rice, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         rice_txt.grid(row=0, column=1, padx=10, pady=10)
 
+        food_oil_lbl = Label(F3, text="Food Oil", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        food_oil_lbl.grid(row=1, column=0, padx=10, pady=10, sticky='W')
+        food_oil_txt = Entry(F3, width=10, textvariable=self.food_oil, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        food_oil_txt.grid(row=1, column=1, padx=10, pady=10)
+
 root = Tk()
 
 root.mainloop()
