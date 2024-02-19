@@ -106,6 +106,11 @@ class Bill_App:
         hand_gloves_txt = Entry(F2, width=10, textvariable=self.hand_gloves, font=('times new roman', 16, 'bold'), bd=5, relief =GROOVE)
         hand_gloves_txt.grid(row=2, column=1, padx=10, pady=10)
 
+        dettol_lbl = Label(F2, text="Dettol", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        dettol_lbl.grid(row=3, column=0, padx=10, pady=10, sticky='W')
+        dettol_txt = Entry(F2, width=10, textvariable=self.dettol, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        dettol_txt.grid(row=3, column=1, padx=10, pady=10)
+
 
 root = Tk()
 
