@@ -152,6 +152,11 @@ class Bill_App:
         flour_txt = Entry(F3, width=10, textvariable=self.flour, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         flour_txt.grid(row=4, column=1, padx=10, pady=10)
 
+        maggi_lbl = Label(F3, text="Maggi", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        maggi_lbl.grid(row=5, column=0, padx=10, pady=10, sticky='W')
+        maggi_txt = Entry(F3, width=10, textvariable=self.maggi, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        maggi_txt.grid(row=5, column=1, padx=10, pady=10)
+
 root = Tk()
 
 root.mainloop()
