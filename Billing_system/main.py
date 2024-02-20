@@ -142,6 +142,11 @@ class Bill_App:
         wheat_txt = Entry(F3, width=10, textvariable=self.wheat, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         wheat_txt.grid(row=2, column=1, padx=10, pady=10)
 
+        daal_lbl = Label(F3, text="Daal", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        daal_lbl.grid(row=3, column=0, padx=10, pady=10, sticky='W')
+        daal_txt = Entry(F3, width=10, textvariable=self.daal, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        daal_txt.grid(row=3, column=1, padx=10, pady=10)
+
 root = Tk()
 
 root.mainloop()
