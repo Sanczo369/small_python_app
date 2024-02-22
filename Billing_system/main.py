@@ -173,6 +173,11 @@ class Bill_App:
         limka_txt = Entry(F4, width=10, textvariable=self.limka, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         limka_txt.grid(row=1, column=1, padx=10, pady=10)
 
+        mazza_lbl = Label(F4, text="Mazza", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        mazza_lbl.grid(row=2, column=0, padx=10, pady=10, sticky='W')
+        wheat_txt = Entry(F4, width=10, textvariable=self.mazza, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        wheat_txt.grid(row=2, column=1, padx=10, pady=10)
+
 root = Tk()
 
 root.mainloop()
