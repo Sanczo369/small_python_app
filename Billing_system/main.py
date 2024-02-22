@@ -157,6 +157,15 @@ class Bill_App:
         maggi_txt = Entry(F3, width=10, textvariable=self.maggi, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         maggi_txt.grid(row=5, column=1, padx=10, pady=10)
 
+        # ===========ColdDrinks================================
+
+        F4 = LabelFrame(self.root, text="Cold Drinks", font=('times new roman', 15, 'bold'), bd=10, fg="Black",
+                        bg="#badc57")
+        F4.place(x=670, y=180, width=325, height=380)
+
+
+
+
 root = Tk()
 
 root.mainloop()
