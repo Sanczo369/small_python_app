@@ -168,6 +168,10 @@ class Bill_App:
         sprite_txt = Entry(F4, width=10, textvariable=self.sprite, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         sprite_txt.grid(row=0, column=1, padx=10, pady=10)
 
+        limka_lbl = Label(F4, text="Limka", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        limka_lbl.grid(row=1, column=0, padx=10, pady=10, sticky='W')
+        limka_txt = Entry(F4, width=10, textvariable=self.limka, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        limka_txt.grid(row=1, column=1, padx=10, pady=10)
 
 root = Tk()
 
