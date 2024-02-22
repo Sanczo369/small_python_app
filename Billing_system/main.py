@@ -178,6 +178,11 @@ class Bill_App:
         wheat_txt = Entry(F4, width=10, textvariable=self.mazza, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         wheat_txt.grid(row=2, column=1, padx=10, pady=10)
 
+        coke_lbl = Label(F4, text="Coke", font=('times new roman', 16, 'bold'), bg="#badc57", fg="black")
+        coke_lbl.grid(row=3, column=0, padx=10, pady=10, sticky='W')
+        coke_txt = Entry(F4, width=10, textvariable=self.coke, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        coke_txt.grid(row=3, column=1, padx=10, pady=10)
+
 root = Tk()
 
 root.mainloop()
