@@ -212,6 +212,11 @@ class Bill_App:
                         bg="#badc57")
         F6.place(x=0, y=560, relwidth=1, height=140)
 
+        m1_lbl = Label(F6, text="Total Medical Price", font=('times new roman', 14, 'bold'), bg="#badc57", fg="black")
+        m1_lbl.grid(row=0, column=0, padx=20, pady=1, sticky='W')
+        m1_txt = Entry(F6, width=18, textvariable=self.medical_price, font='arial 10 bold', bd=7, relief=GROOVE)
+        m1_txt.grid(row=0, column=1, padx=18, pady=1)
+
 root = Tk()
 
 root.mainloop()
