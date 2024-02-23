@@ -222,6 +222,11 @@ class Bill_App:
         m2_txt = Entry(F6, width=18, textvariable=self.grocery_price, font='arial 10 bold', bd=7, relief=GROOVE)
         m2_txt.grid(row=1, column=1, padx=18, pady=1)
 
+        m3_lbl = Label(F6, text="Total Cold Drinks Price", font=('times new roman', 14, 'bold'), bg="#badc57", fg="black")
+        m3_lbl.grid(row=2, column=0, padx=20, pady=1, sticky='W')
+        m3_txt = Entry(F6, width=18, textvariable=self.cold_drinks_price, font='arial 10 bold', bd=7, relief=GROOVE)
+        m3_txt.grid(row=2, column=1, padx=18, pady=1)
+
 root = Tk()
 
 root.mainloop()
