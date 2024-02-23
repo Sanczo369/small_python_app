@@ -227,6 +227,11 @@ class Bill_App:
         m3_txt = Entry(F6, width=18, textvariable=self.cold_drinks_price, font='arial 10 bold', bd=7, relief=GROOVE)
         m3_txt.grid(row=2, column=1, padx=18, pady=1)
 
+        m4_lbl = Label(F6, text="Medical Tax", font=('times new roman', 14, 'bold'), bg="#badc57", fg="black")
+        m4_lbl.grid(row=0, column=2, padx=20, pady=1, sticky='W')
+        m4_txt = Entry(F6, width=18, textvariable=self.medical_tax, font='arial 10 bold', bd=7, relief=GROOVE)
+        m4_txt.grid(row=0, column=3, padx=18, pady=1)
+
 root = Tk()
 
 root.mainloop()
