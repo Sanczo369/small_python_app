@@ -193,6 +193,11 @@ class Bill_App:
         mountain_duo_txt = Entry(F4, width=10, textvariable=self.mountain_duo, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         mountain_duo_txt.grid(row=5, column=1, padx=10, pady=10)
 
+        # =================BillArea======================
+
+        F5 = Frame(self.root, bd=10, relief=GROOVE)
+        F5.place(x=1010, y=180, width=350, height=380)
+
 root = Tk()
 
 root.mainloop()
