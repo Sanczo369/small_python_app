@@ -198,6 +198,14 @@ class Bill_App:
         F5 = Frame(self.root, bd=10, relief=GROOVE)
         F5.place(x=1010, y=180, width=350, height=380)
 
+        bill_title = Label(F5, text="Bill Area", font='arial 15 bold', bd=7, relief=GROOVE)
+        bill_title.pack(fill=X)
+        scroll_y = Scrollbar(F5, orient=VERTICAL)
+        self.txtarea = Text(F5, yscrollcommand=scroll_y.set)
+        scroll_y.pack(side=RIGHT, fill=Y)
+        scroll_y.config(command=self.txtarea.yview)
+        self.txtarea.pack(fill=BOTH, expand=1)
+
 root = Tk()
 
 root.mainloop()
