@@ -251,6 +251,18 @@ class Bill_App:
         exit_btn = Button(btn_f, command=self.exit_app, text="Exit", bd=2, bg="#535C68", fg="white", pady=15, width=12, font='arial 13 bold')
         exit_btn.grid(row=0, column=3, padx=5, pady=5)
         self.welcome_bill()
+
+        # ================totalBill==========================
+
+        def total(self):
+            self.m_h_g_p = self.hand_gloves.get() * 12
+            self.m_s_p = self.sanitizer.get() * 2
+            self.m_m_p = self.mask.get() * 5
+            self.m_d_p = self.dettol.get() * 30
+            self.m_n_p = self.newsprin.get() * 5
+            self.m_t_g_p = self.thermal_gun.get() * 15
+            self.total_medical_price = float(
+                self.m_m_p + self.m_h_g_p + self.m_d_p + self.m_n_p + self.m_t_g_p + self.m_s_p)
 root = Tk()
 
 root.mainloop()
