@@ -276,6 +276,10 @@ class Bill_App:
             self.g_m_p = self.maggi.get() * 5
             self.total_grocery_price = float(
                 self.g_r_p + self.g_f_o_p + self.g_w_p + self.g_d_p + self.g_f_p + self.g_m_p)
+
+            self.grocery_price.set("Rs. " + str(self.total_grocery_price))
+            self.g_tax = round((self.total_grocery_price * 5), 2)
+            self.grocery_tax.set("Rs. " + str(self.g_tax))
 root = Tk()
 
 root.mainloop()
