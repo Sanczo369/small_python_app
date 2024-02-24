@@ -241,6 +241,13 @@ class Bill_App:
 
         btn_f = Frame(F6, bd=7, relief=GROOVE)
         btn_f.place(x=760, width=580, height=105)
+
+        total_btn = Button(btn_f, command=self.total, text="Total", bg="#535C68", bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
+        total_btn.grid(row=0, column=0, padx=5, pady=5)
+
+        generateBill_btn = Button(btn_f, command=self.bill_area, text="Generate Bill", bd=2, bg="#535C68", fg="white", pady=12, width=12, font='arial 13 bold')
+        generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
+
 root = Tk()
 
 root.mainloop()
