@@ -237,6 +237,10 @@ class Bill_App:
         m5_txt = Entry(F6, width=18, textvariable=self.grocery_tax, font='arial 10 bold', bd=7, relief=GROOVE)
         m5_txt.grid(row=1, column=3, padx=18, pady=1)
 
+        # =======Buttons-======================================
+
+        btn_f = Frame(F6, bd=7, relief=GROOVE)
+        btn_f.place(x=760, width=580, height=105)
 root = Tk()
 
 root.mainloop()
