@@ -248,6 +248,9 @@ class Bill_App:
         generateBill_btn = Button(btn_f, command=self.bill_area, text="Generate Bill", bd=2, bg="#535C68", fg="white", pady=12, width=12, font='arial 13 bold')
         generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
 
+        exit_btn = Button(btn_f, command=self.exit_app, text="Exit", bd=2, bg="#535C68", fg="white", pady=15, width=12, font='arial 13 bold')
+        exit_btn.grid(row=0, column=3, padx=5, pady=5)
+        self.welcome_bill()
 root = Tk()
 
 root.mainloop()
