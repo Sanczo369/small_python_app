@@ -267,6 +267,15 @@ class Bill_App:
             self.medical_price.set("Rs. " + str(self.total_medical_price))
             self.c_tax = round((self.total_medical_price * 0.05), 2)
             self.medical_tax.set("Rs. " + str(self.c_tax))
+
+            self.g_r_p = self.rice.get() * 10
+            self.g_f_o_p = self.food_oil.get() * 10
+            self.g_w_p = self.wheat.get() * 10
+            self.g_d_p = self.daal.get() * 6
+            self.g_f_p = self.flour.get() * 8
+            self.g_m_p = self.maggi.get() * 5
+            self.total_grocery_price = float(
+                self.g_r_p + self.g_f_o_p + self.g_w_p + self.g_d_p + self.g_f_p + self.g_m_p)
 root = Tk()
 
 root.mainloop()
