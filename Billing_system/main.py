@@ -263,6 +263,10 @@ class Bill_App:
             self.m_t_g_p = self.thermal_gun.get() * 15
             self.total_medical_price = float(
                 self.m_m_p + self.m_h_g_p + self.m_d_p + self.m_n_p + self.m_t_g_p + self.m_s_p)
+
+            self.medical_price.set("Rs. " + str(self.total_medical_price))
+            self.c_tax = round((self.total_medical_price * 0.05), 2)
+            self.medical_tax.set("Rs. " + str(self.c_tax))
 root = Tk()
 
 root.mainloop()
