@@ -280,6 +280,15 @@ class Bill_App:
             self.grocery_price.set("Rs. " + str(self.total_grocery_price))
             self.g_tax = round((self.total_grocery_price * 5), 2)
             self.grocery_tax.set("Rs. " + str(self.g_tax))
+
+            self.c_d_s_p = self.sprite.get() * 10
+            self.c_d_l_p = self.limka.get() * 10
+            self.c_d_m_p = self.mazza.get() * 10
+            self.c_d_c_p = self.coke.get() * 10
+            self.c_d_f_p = self.fanta.get() * 10
+            self.c_m_d = self.mountain_duo.get() * 10
+            self.total_cold_drinks_price = float(
+                self.c_d_s_p + self.c_d_l_p + self.c_d_m_p + self.c_d_c_p + self.c_d_f_p + self.c_m_d)
 root = Tk()
 
 root.mainloop()
