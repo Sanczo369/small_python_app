@@ -315,6 +315,20 @@ class Bill_App:
             messagebox.showerror("Error", "No Product Purchased")
         else:
             self.welcome_bill()
+        # ============medical===========================
+
+        if self.sanitizer.get() != 0:
+            self.txtarea.insert(END, f"\n Sanitizer\t\t{self.sanitizer.get()}\t\t{self.m_s_p}")
+        if self.mask.get() != 0:
+            self.txtarea.insert(END, f"\n Sanitizer\t\t{self.mask.get()}\t\t{self.m_m_p}")
+        if self.hand_gloves.get() != 0:
+            self.txtarea.insert(END, f"\n Hand Gloves\t\t{self.hand_gloves.get()}\t\t{self.m_h_g_p}")
+        if self.dettol.get() != 0:
+            self.txtarea.insert(END, f"\n Dettol\t\t{self.dettol.get()}\t\t{self.m_d_p}")
+        if self.newsprin.get() != 0:
+            self.txtarea.insert(END, f"\n Newsprin\t\t{self.newsprin.get()}\t\t{self.m_n_p}")
+        if self.thermal_gun.get() != 0:
+            self.txtarea.insert(END, f"\n Thermal Gun\t\t{self.sanitizer.get()}\t\t{self.m_t_g_p}")
 root = Tk()
 
 root.mainloop()
