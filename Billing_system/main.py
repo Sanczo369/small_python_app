@@ -306,6 +306,15 @@ class Bill_App:
         self.txtarea.insert(END, f"\n================================")
         self.txtarea.insert(END, f"\nProducts\t\tQTY\t\tPrice")
 
+#=========billArea=================================================
+
+    def bill_area(self):
+        if self.c_name.get() == " " or self.c_phone.get() == " ":
+            messagebox.showerror("Error", "Customer Details Are Must")
+        elif self.medical_price.get() == "Rs. 0.0" and self.grocery_price.get() == "Rs. 0.0" and self.cold_drinks_price.get()=="Rs. 0.0":
+            messagebox.showerror("Error", "No Product Purchased")
+        else:
+            self.welcome_bill()
 root = Tk()
 
 root.mainloop()
