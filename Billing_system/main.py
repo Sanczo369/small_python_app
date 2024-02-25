@@ -344,6 +344,22 @@ class Bill_App:
             self.txtarea.insert(END, f"\n Flour\t\t{self.flour.get()}\t\t{self.g_f_p}")
         if self.maggi.get() != 0:
             self.txtarea.insert(END, f"\n Maggi\t\t{self.maggi.get()}\t\t{self.g_m_p}")
+
+        # ================ColdDrinks==========================
+
+        if self.sprite.get() != 0:
+            self.txtarea.insert(END, f"\n Sprite\t\t{self.sprite.get()}\t\t{self.c_d_s_p}")
+        if self.limka.get() != 0:
+            self.txtarea.insert(END, f"\n Sanitizer\t\t{self.limka.get()}\t\t{self.c_d_l_p}")
+        if self.mazza.get() != 0:
+            self.txtarea.insert(END, f"\n Mazza\t\t{self.mazza.get()}\t\t{self.c_d_m_p}")
+        if self.coke.get() != 0:
+            self.txtarea.insert(END, f"\n Dettol\t\t{self.coke.get()}\t\t{self.c_d_c_p}")
+        if self.fanta.get() != 0:
+            self.txtarea.insert(END, f"\n Fanta\t\t{self.newsprin.get()}\t\t{self.c_d_f_p}")
+        if self.mountain_duo.get() != 0:
+            self.txtarea.insert(END, f"\n Mountain Duo\t\t{self.sanitizer.get()}\t\t{self.c_m_d}")
+            self.txtarea.insert(END, f"\n--------------------------------")
 root = Tk()
 
 root.mainloop()
