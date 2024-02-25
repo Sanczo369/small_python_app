@@ -295,6 +295,17 @@ class Bill_App:
             self.cold_drinks_tax.set("Rs. "+str(self.c_d_tax))
 
             self.total_bill = float(self.total_medical_price+self.total_grocery_price+self.total_cold_drinks_price+self.c_tax+self.g_tax+self.c_d_tax)
+#==============welcome-bill==============================
+
+    def welcome_bill(self):
+        self.txtarea.delete('1.0', END)
+        self.txtarea.insert(END, "\tWelcome Webcode Retail")
+        self.txtarea.insert(END, f"\n Bill Number:{self.bill_no.get()}")
+        self.txtarea.insert(END, f"\nCustomer Name:{self.c_name.get()}")
+        self.txtarea.insert(END, f"\nPhone Number{self.c_phone.get()}")
+        self.txtarea.insert(END, f"\n================================")
+        self.txtarea.insert(END, f"\nProducts\t\tQTY\t\tPrice")
+
 root = Tk()
 
 root.mainloop()
