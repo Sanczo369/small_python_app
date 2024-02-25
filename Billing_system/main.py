@@ -289,6 +289,12 @@ class Bill_App:
             self.c_m_d = self.mountain_duo.get() * 10
             self.total_cold_drinks_price = float(
                 self.c_d_s_p + self.c_d_l_p + self.c_d_m_p + self.c_d_c_p + self.c_d_f_p + self.c_m_d)
+
+            self.cold_drinks_price.set("Rs. "+str(self.total_cold_drinks_price))
+            self.c_d_tax = round((self.total_cold_drinks_price * 0.1), 2)
+            self.cold_drinks_tax.set("Rs. "+str(self.c_d_tax))
+
+            self.total_bill = float(self.total_medical_price+self.total_grocery_price+self.total_cold_drinks_price+self.c_tax+self.g_tax+self.c_d_tax)
 root = Tk()
 
 root.mainloop()
