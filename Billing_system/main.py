@@ -360,6 +360,19 @@ class Bill_App:
         if self.mountain_duo.get() != 0:
             self.txtarea.insert(END, f"\n Mountain Duo\t\t{self.sanitizer.get()}\t\t{self.c_m_d}")
             self.txtarea.insert(END, f"\n--------------------------------")
+
+        # ===============taxes==============================
+
+        if self.medical_tax.get() != '0.0':
+            self.txtarea.insert(END, f"\n Medical Tax\t\t\t{self.medical_tax.get()}")
+        if self.grocery_tax.get() != '0.0':
+            self.txtarea.insert(END, f"\n Grocery Tax\t\t\t{self.grocery_tax.get()}")
+        if self.cold_drinks_tax.get() != '0.0':
+            self.txtarea.insert(END, f"\n Cold Drinks Tax\t\t\t{self.cold_drinks_tax.get()}")
+
+        self.txtarea.insert(END, f"\n Total Bil:\t\t\t Rs.{self.total_bill}")
+        self.txtarea.insert(END, f"\n--------------------------------")
+        self.save_bill()
 root = Tk()
 
 root.mainloop()
