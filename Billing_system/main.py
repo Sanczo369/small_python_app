@@ -423,6 +423,14 @@ class Bill_App:
             self.flour.set(0)
             self.maggi.set(0)
 
+    # =============coldDrinks=============================
+
+            self.sprite.set(0)
+            self.limka.set(0)
+            self.mazza.set(0)
+            self.coke.set(0)
+            self.fanta.set(0)
+            self.mountain_duo.set(0)
 
 root = Tk()
 
