@@ -414,6 +414,15 @@ class Bill_App:
             self.newsprin.set(0)
             self.thermal_gun.set(0)
 
+    # ============grocery==============================
+
+            self.rice.set(0)
+            self.food_oil.set(0)
+            self.wheat.set(0)
+            self.daal.set(0)
+            self.flour.set(0)
+            self.maggi.set(0)
+
 
 root = Tk()
 
