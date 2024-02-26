@@ -373,6 +373,19 @@ class Bill_App:
         self.txtarea.insert(END, f"\n Total Bil:\t\t\t Rs.{self.total_bill}")
         self.txtarea.insert(END, f"\n--------------------------------")
         self.save_bill()
+
+        # =========savebill============================
+
+        def save_bill(self):
+            op = messagebox.askyesno("Save Bill", "Do you want to save the bill?")
+            if op > 0:
+                self.bill_data = self.txtarea.get('1.0', END)
+                f1 = open("bills/" + str(self.bill_no.get()) + ".txt", "w")
+                f1.write(self.bill_data)
+                f1.close()
+                messagebox.showinfo("Saved", f"Bill no:{self.bill_no.get()} Saved Successfully")
+            else:
+                return
 root = Tk()
 
 root.mainloop()
