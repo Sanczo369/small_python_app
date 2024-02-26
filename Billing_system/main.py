@@ -401,6 +401,20 @@ class Bill_App:
                 present = "yes"
         if present == "no":
             messagebox.showerror("Error", "Invalid Bill No")
+
+    # ======================clear-bill======================
+
+    def clear_data(self):
+        op = messagebox.askyesno("Clear", "Do you really want to Clear?")
+        if op > 0:
+            self.sanitizer.set(0)
+            self.mask.set(0)
+            self.hand_gloves.set(0)
+            self.dettol.set(0)
+            self.newsprin.set(0)
+            self.thermal_gun.set(0)
+
+
 root = Tk()
 
 root.mainloop()
