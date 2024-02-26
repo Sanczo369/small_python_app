@@ -432,6 +432,27 @@ class Bill_App:
             self.fanta.set(0)
             self.mountain_duo.set(0)
 
+    # ====================taxes================================
+
+            self.medical_price.set("")
+            self.grocery_price.set("")
+            self.cold_drinks_price.set("")
+
+            self.medical_tax.set("")
+            self.grocery_tax.set("")
+            self.cold_drinks_tax.set("")
+
+            self.c_name.set("")
+            self.c_phone.set("")
+
+            self.bill_no.set("")
+            x = random.randint(1000, 9999)
+            self.bill_no.set(str(x))
+
+            self.search_bill.set("")
+            self.welcome_bill()
+
+
 root = Tk()
 
 root.mainloop()
