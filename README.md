@@ -474,3 +474,5 @@ wyświetlaj losowy przepis za pomocą aplikacji GUI Tkinter, SQLite3 i RecipeDB
 - sqlite3
 - numpy
 - pyglet
+
+## Billing System
