@@ -461,5 +461,5 @@ class Bill_App:
 
 
 root = Tk()
-
+obj = Bill_App(root)
 root.mainloop()
