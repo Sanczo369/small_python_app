@@ -476,6 +476,7 @@ wyświetlaj losowy przepis za pomocą aplikacji GUI Tkinter, SQLite3 i RecipeDB
 - pyglet
 
 ## Billing System
+Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywać wszystkie dane i generować rachunek.
 ### requirements
 - tkinter
 - random
