@@ -44,6 +44,7 @@ Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkin
 - Azzan Time
 - Pomodoro-App
 - RandomRecipePicker
+- Billing System
 
 ## Kółko i krzyżyk
 Jest to program gry "Kółko i krzyżyk" (Tic Tac Toe) w interfejsie graficznym za pomocą biblioteki tkinter w języku Python. Oto opis aplikacji:
@@ -473,3 +474,11 @@ wyświetlaj losowy przepis za pomocą aplikacji GUI Tkinter, SQLite3 i RecipeDB
 - sqlite3
 - numpy
 - pyglet
+
+## Billing System
+Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywać wszystkie dane i generować rachunek.
+### requirements
+- tkinter
+- random
+- os
+- messagebox
