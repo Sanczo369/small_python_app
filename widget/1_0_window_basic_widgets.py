@@ -1,6 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 
+def button_func():
+	print('a button was pressed')
+
+def exercise_button_func():
+	print('hello')
+
 # create a window
 window = tk.Tk()
 window.title('Window and Widgets')
