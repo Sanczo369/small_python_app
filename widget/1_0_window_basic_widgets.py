@@ -26,5 +26,14 @@ exercise_label.pack()
 button = ttk.Button(master = window, text = 'A button', command = button_func)
 button.pack()
 
+# exercise
+# add one more text label and a button with a function that prints 'hello'
+# the label should say "my label" and be between the entry widget and the button
+
+# exercise button
+# exercise_button = ttk.Button(master = window, text = 'exercise button', command = exercise_button_func)
+exercise_button = ttk.Button(master = window, text = 'exercise button', command = lambda: print('hello'))
+exercise_button.pack()
+
 # run
 window.mainloop()
