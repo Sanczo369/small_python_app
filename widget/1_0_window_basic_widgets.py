@@ -22,5 +22,9 @@ entry.pack()
 exercise_label = ttk.Label(master = window, text = "my label")
 exercise_label.pack()
 
+# ttk button
+button = ttk.Button(master = window, text = 'A button', command = button_func)
+button.pack()
+
 # run
 window.mainloop()
