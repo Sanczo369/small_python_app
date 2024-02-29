@@ -18,5 +18,9 @@ text.pack()
 entry = ttk.Entry(master = window)
 entry.pack()
 
+# exercise label
+exercise_label = ttk.Label(master = window, text = "my label")
+exercise_label.pack()
+
 # run
 window.mainloop()
