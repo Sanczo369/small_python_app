@@ -14,5 +14,9 @@ label.pack(
 text = tk.Text(master = window)
 text.pack()
 
+# ttk entry
+entry = ttk.Entry(master = window)
+entry.pack()
+
 # run
 window.mainloop()
