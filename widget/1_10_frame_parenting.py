@@ -12,5 +12,12 @@ frame = ttk.Frame(window, width = 200, height = 200, borderwidth = 10, relief = 
 frame.pack_propagate(False)
 frame.pack(side = 'left')
 
+# master setting
+label = ttk.Label(frame, text = 'Label in frame')
+label.pack()
+
+button = ttk.Button(frame, text = 'button in a frame')
+button.pack()
+
 # run
 window.mainloop()
