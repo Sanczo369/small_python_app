@@ -21,7 +21,22 @@ entry2.pack()
 
 notebook.add(tab1, text = 'Tab 1')
 notebook.add(tab2, text = 'Tab 2')
-notebook.pack(
+notebook.pack()
+
+# exercise
+# add another tab with 2 buttons and one label inside
+
+tab_exercise = ttk.Frame(notebook)
+button_exercise_1 = ttk.Button(tab_exercise, text = 'button 1')
+button_exercise_1.pack()
+
+button_exercise_2 = ttk.Button(tab_exercise, text = 'button 2')
+button_exercise_2.pack()
+
+label_exercise_2 = ttk.Label(tab_exercise, text = 'Label')
+label_exercise_2.pack()
+
+notebook.add(tab_exercise, text = 'Tab exercise')
 
 # run
 window.mainloop()
