@@ -23,5 +23,15 @@ button.pack()
 label2 = ttk.Label(window, text = 'Label outside frame')
 label2.pack(side = 'left')
 
+# exercise
+# create another frame with a label, a button and an entry and place it to the right
+# of the other widgets
+
+exercise_frame = ttk.Frame(window)
+ttk.Label(exercise_frame, text = 'label in frame 2').pack()
+ttk.Button(exercise_frame, text = 'button in frame 2').pack()
+ttk.Entry(exercise_frame).pack()
+exercise_frame.pack(side = 'left')
+
 # run
 window.mainloop()
