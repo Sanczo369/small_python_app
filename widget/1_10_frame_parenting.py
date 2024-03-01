@@ -19,5 +19,9 @@ label.pack()
 button = ttk.Button(frame, text = 'button in a frame')
 button.pack()
 
+# example
+label2 = ttk.Label(window, text = 'Label outside frame')
+label2.pack(side = 'left')
+
 # run
 window.mainloop()
