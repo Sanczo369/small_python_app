@@ -5,6 +5,9 @@ window = tk.Tk()
 window.geometry('600x400')
 window.title("Tab Widget")
 
+# Notebook widget
+notebook = ttk.Notebook(window
+
 # tab 1
 tab1 = ttk.Frame(notebook)
 label1 = ttk.Label(tab1, text = 'Text in tab 1')
