@@ -26,5 +26,19 @@ help_menu.add_checkbutton(label = 'check', onvalue = 'on', offvalue = 'off', var
 
 menu.add_cascade(label = 'Help', menu = help_menu)
 
+
+# add another menu to the main menu, this one should have a sub menu
+# try to read the website below and add a submenu
+# docs: https://www.tutorialspoint.com/python/tk_menu.htm
+exercise_menu = tk.Menu(menu, tearoff = False)
+exercise_menu.add_command(label = 'exercise test 1')
+menu.add_cascade(label = 'Exercise', menu = exercise_menu)
+
+exercise_sub_menu = tk.Menu(menu, tearoff = False)
+exercise_sub_menu.add_command(label = 'some more stuff')
+exercise_menu.add_cascade(label = 'more stuff', menu = exercise_sub_menu)
+
+window.configure(menu = menu)
+
 # run
 window.mainloop()
