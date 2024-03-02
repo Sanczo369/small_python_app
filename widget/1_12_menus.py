@@ -40,5 +40,15 @@ exercise_menu.add_cascade(label = 'more stuff', menu = exercise_sub_menu)
 
 window.configure(menu = menu)
 
+# menu button
+menu_button = ttk.Menubutton(window, text = 'Menu Button')
+menu_button.pack()
+
+button_sub_menu = tk.Menu(menu_button, tearoff = False)
+button_sub_menu.add_command(label = 'entry 1', command = lambda: print('test 1'))
+button_sub_menu.add_checkbutton(label = 'check 1')
+# menu_button.configure(menu = button_sub_menu)
+menu_button['menu']= button_sub_menu
+
 # run
 window.mainloop()
