@@ -17,5 +17,10 @@ left = int(display_width / 2 - window_width / 2)
 top = int(display_height / 2 - window_height / 2)
 window.geometry(f'{window_width}x{window_height}+{left}+{top}')
 
+# window sizes
+window.minsize(200, 100)
+# window.maxsize(800, 700)
+# window.resizable(True,False)
+
 # run
 window.mainloop()
