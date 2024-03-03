@@ -22,5 +22,9 @@ window.minsize(200, 100)
 # window.maxsize(800, 700)
 # window.resizable(True,False)
 
+# screen attributes
+print(window.winfo_screenwidth())
+print(window.winfo_screenheight())
+
 # run
 window.mainloop()
