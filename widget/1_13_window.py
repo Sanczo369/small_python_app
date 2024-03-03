@@ -13,7 +13,9 @@ window_width = 1400
 window_height = 600
 display_width = window.winfo_screenwidth()
 display_height = window.winfo_screenheight()
-
+left = int(display_width / 2 - window_width / 2)
+top = int(display_height / 2 - window_height / 2)
+window.geometry(f'{window_width}x{window_height}+{left}+{top}')
 
 # run
 window.mainloop()
