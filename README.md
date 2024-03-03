@@ -482,3 +482,11 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - random
 - os
 - messagebox
+
+## Widget
+- 1_0_window_basic_widgets.py
+- 1_10_frame_parenting.py
+- 1_11_tabs.py
+- 1_12_menus.py
+
+
