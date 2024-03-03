@@ -26,5 +26,9 @@ window.minsize(200, 100)
 print(window.winfo_screenwidth())
 print(window.winfo_screenheight())
 
+# window attributes
+window.attributes('-alpha', 1)
+# window.attributes('-topmost', True)
+
 # run
 window.mainloop()
