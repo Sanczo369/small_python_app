@@ -37,5 +37,10 @@ window.bind('<Escape>', lambda event: window.quit())
 # window.attributes('-disable', True)
 # window.attributes('-fullscreen', True)
 
+# title bar
+window.overrideredirect(True)
+grip = ttk.Sizegrip(window)
+grip.place(relx = 1.0, rely = 1.0, anchor = 'se')
+
 # run
 window.mainloop()
