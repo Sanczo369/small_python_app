@@ -15,6 +15,9 @@ def button_func():
 window = tk.Tk()
 window.title('Getting and setting widgets')
 
+def reset_func():
+	label['text'] = 'some text'
+	entry['state'] = 'enabled'
 
 # run
 window.mainloop()
