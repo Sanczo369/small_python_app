@@ -25,9 +25,13 @@ entry.pack()
 button = ttk.Button(master = window, text = 'The button', command = button_func)
 button.pack()
 
+# exercise
+# add another button that changes text back to 'some text' and that enables entry
 def reset_func():
 	label['text'] = 'some text'
 	entry['state'] = 'enabled'
 
+exercise_button = ttk.Button(master = window, text = 'exercise button', command = reset_func)
+exercise_button.pack()
 # run
 window.mainloop()
