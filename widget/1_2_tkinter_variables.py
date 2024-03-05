@@ -13,6 +13,11 @@ window.title('Tkinter Variables')
 label = ttk.Label(master = window, text = 'label', textvariable = string_var)
 label.pack()
 
+entry = ttk.Entry(master = window, textvariable = string_var)
+entry.pack()
+
+button = ttk.Button(master = window, text = 'button', command = button_func)
+button.pack()
 
 # run
 window.mainloop()
