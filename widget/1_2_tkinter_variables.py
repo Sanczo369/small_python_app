@@ -9,6 +9,9 @@ def button_func():
 window = tk.Tk()
 window.title('Tkinter Variables')
 
+# widgets
+label = ttk.Label(master = window, text = 'label', textvariable = string_var)
+label.pack()
 
 
 # run
