@@ -19,5 +19,12 @@ entry.pack()
 button = ttk.Button(master = window, text = 'button', command = button_func)
 button.pack()
 
+# exercise
+# create 2 entry fields and 1 label, they should all be connected via a StringVar
+# set a start value of 'test'
+
+exercise_var = tk.StringVar(value = 'test')
+# exercise_var.set('test')
+
 # run
 window.mainloop()
