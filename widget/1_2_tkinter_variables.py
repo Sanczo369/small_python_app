@@ -26,5 +26,12 @@ button.pack()
 exercise_var = tk.StringVar(value = 'test')
 # exercise_var.set('test')
 
+entry1 = ttk.Entry(master = window, textvariable = exercise_var)
+entry1.pack()
+entry2 = ttk.Entry(master = window, textvariable = exercise_var)
+entry2.pack()
+exercise_label = ttk.Label(master = window, textvariable = exercise_var)
+exercise_label.pack()
+
 # run
 window.mainloop()
