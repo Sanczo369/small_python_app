@@ -5,6 +5,9 @@ from tkinter import ttk
 window = tk.Tk()
 window.title('Tkinter Variables')
 
+# tkinter variable
+string_var = tk.StringVar()
+
 
 # run
 window.mainloop()
