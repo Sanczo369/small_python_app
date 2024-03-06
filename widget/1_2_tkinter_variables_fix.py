@@ -12,5 +12,11 @@ string_var = tk.StringVar()
 label = ttk.Label(master = window, text = 'label', textvariable = string_var)
 label.pack()
 
+entry = ttk.Entry(master = window, textvariable = string_var)
+entry.pack()
+
+entry2 = ttk.Entry(master = window, textvariable = string_var)
+entry2.pack()
+
 # run
 window.mainloop()
