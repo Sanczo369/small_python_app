@@ -42,6 +42,9 @@ radio1 = ttk.Radiobutton(
 	command = lambda: print(radio_var.get()))
 radio1.pack()
 
+radio2 = ttk.Radiobutton(window, text = 'Radiobutton 2', value = 1, variable = radio_var)
+radio2.pack()
+
 # data
 radio_string = tk.StringVar()
 check_bool = tk.BooleanVar()
