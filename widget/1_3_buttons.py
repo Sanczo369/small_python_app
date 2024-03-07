@@ -54,6 +54,13 @@ radio2.pack()
 	# ticking the checkbutton prints the value of the radio button value
 	# use tkinter var for Booleans!
 
+# exercise radios
+
+def radio_func():
+	print(check_bool.get())
+	check_bool.set(False)
+
+
 # data
 radio_string = tk.StringVar()
 check_bool = tk.BooleanVar()
