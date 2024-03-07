@@ -26,6 +26,12 @@ check1 = ttk.Checkbutton(
 	offvalue = 5)
 check1.pack()
 
+check2 = ttk.Checkbutton(
+	window,
+	text = 'Checkbox 2',
+	command = lambda: check_var.set(5))
+check2.pack()
+
 # data
 radio_string = tk.StringVar()
 check_bool = tk.BooleanVar()
