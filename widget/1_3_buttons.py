@@ -45,6 +45,15 @@ radio1.pack()
 radio2 = ttk.Radiobutton(window, text = 'Radiobutton 2', value = 1, variable = radio_var)
 radio2.pack()
 
+# create another checkbutton and 2 radiobuttons
+# radio button:
+	# values for the buttons are A and B
+	# ticking either prints the value of the checkbutton
+	# ticking the radio button unchecks the checkbutton
+# check button:
+	# ticking the checkbutton prints the value of the radio button value
+	# use tkinter var for Booleans!
+
 # data
 radio_string = tk.StringVar()
 check_bool = tk.BooleanVar()
