@@ -492,6 +492,8 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 1_13_window.py
 - 1_1_getting_widget_data.py
 - 1_2_tkinter_variables.py
+- 1_2_tkinter_variables_fix.py
+- 1_3_buttons.py
 
 
 
