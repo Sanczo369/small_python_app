@@ -72,6 +72,11 @@ exercise_radio1 = ttk.Radiobutton(
 	value = 'A',
 	command = radio_func,
 	variable = radio_string)
-
+exercise_radio2 = ttk.Radiobutton(
+	window,
+	text = 'Radio B',
+	value = 'B',
+	command = radio_func,
+	variable = radio_string)
 # run
 window.mainloop()
