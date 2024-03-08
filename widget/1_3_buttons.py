@@ -83,5 +83,11 @@ exercise_check = ttk.Checkbutton(
 	text = 'exercise check',
 	variable = check_bool,
 	command = lambda: print(radio_string.get()))
+
+# layout
+exercise_radio1.pack()
+exercise_radio2.pack()
+exercise_check.pack()
+
 # run
 window.mainloop()
