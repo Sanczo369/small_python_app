@@ -22,5 +22,8 @@ entry_string = tk.StringVar(value = 'test')
 entry = ttk.Entry(window, textvariable = entry_string)
 entry.pack()
 
+button = ttk.Button(window, text = 'button', command = lambda: button_func(entry_string))
+button.pack()
+
 # run
 window.mainloop()
