@@ -17,5 +17,10 @@ window = tk.Tk()
 window.title('buttons, functions and arguments')
 
 
+# widgets
+entry_string = tk.StringVar(value = 'test')
+entry = ttk.Entry(window, textvariable = entry_string)
+entry.pack()
+
 # run
 window.mainloop()
