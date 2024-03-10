@@ -1,6 +1,6 @@
 # Małe aplikacje w Pythonie z użyciem Tkinter
-Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkinter
-## Lista Projektów
+Kilka projektów małych aplikacji z wykorzytaniem biblioteki Tkinter/Customtkinter.
+## Lista Projektów.
 - Kółko i krzyżyk
 - Prosty Kalkulator
 - Generowania kodów QR
