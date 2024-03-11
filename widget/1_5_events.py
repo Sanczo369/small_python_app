@@ -6,6 +6,10 @@ window = tk.Tk()
 window.geometry('600x500')
 window.title('Event Binding')
 
+# events
+# button.bind('<Alt-KeyPress-a>', lambda event: print(event))
+# window.bind('<KeyPress>', lambda event: print(f'a button was pressed ({event.char})'))
+
 # window.bind('<Motion>', get_pos)
 
 entry.bind('<FocusIn>', lambda event: print('entry field was selected'))
