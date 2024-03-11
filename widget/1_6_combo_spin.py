@@ -14,5 +14,11 @@ combo['values'] = items
 # combo.configure(values = items)
 combo.pack()
 
+# events
+combo.bind('<<ComboboxSelected>>', lambda event: combo_label.config(text = f'Selected value: {food_string.get()}'))
+
+combo_label = ttk.Label(window, text = 'a label')
+combo_label.pack()
+
 # run
 window.mainloop()
