@@ -6,6 +6,9 @@ window = tk.Tk()
 window.geometry('600x400')
 window.title('Canvas')
 
+# canvas
+canvas = tk.Canvas(window, bg = 'white')
+canvas.pack()
 
 # Exercise
 # use event binding to create a basic paint app
