@@ -35,5 +35,16 @@ spin.bind('<<Decrement>>', lambda event: print('down'))
 # spin['value'] = (1,2,3,4,5)
 spin.pack()
 
+# exercise:
+# create a spinbox that contains the letters A B C D E
+# and print the value whenever the value is decreased
+
+exercise_letters = ('A', 'B', 'C', 'D', 'E')
+exercise_string = tk.StringVar(value = exercise_letters[0])
+exercise_spin = ttk.Spinbox(window, textvariable = exercise_string, values = exercise_letters)
+exercise_spin.pack()
+
+exercise_spin.bind('<<Decrement>>', lambda event: print(exercise_string.get()))
+
 # run
 window.mainloop()
