@@ -21,6 +21,13 @@ canvas.pack()
 # 	outline = 'red',
 # 	width = 1)
 
+# canvas.create_line((0, 0, 100, 150), fill = 'blue')
+# canvas.create_polygon((0,0, 100,200, 300,50, 150, -50), fill = 'gray')
+
+# canvas.create_text((100,200), text = 'this is some text', fill = 'green', width = 10)
+
+# canvas.create_window((150,100), window = ttk.Button(window, text= 'this is text in a canvas'))
+
 # Exercise
 # use event binding to create a basic paint app
 def draw_on_canvas(event):
