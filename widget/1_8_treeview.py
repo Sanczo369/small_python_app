@@ -27,5 +27,8 @@ for i in range(100):
 	data = (first, last, email)
 	table.insert(parent = '', index = 0, values = data)
 
+table.insert(parent = '', index = tk.END, values = ('XXXXX', 'YYYYY', 'ZZZZZ'))
+
+
 # run
 window.mainloop()
