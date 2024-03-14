@@ -41,6 +41,8 @@ def delete_items(_):
 	for i in table.selection():
 		table.delete(i)
 
+table.bind('<<TreeviewSelect>>', item_select)
+table.bind('<Delete>', delete_items)
 
 # run
 window.mainloop()
