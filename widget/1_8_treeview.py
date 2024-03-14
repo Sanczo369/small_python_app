@@ -36,5 +36,11 @@ def item_select(_):
 		print(table.item(i)['values'])
 	# table.item(table.selection())
 
+def delete_items(_):
+	print('delete')
+	for i in table.selection():
+		table.delete(i)
+
+
 # run
 window.mainloop()
