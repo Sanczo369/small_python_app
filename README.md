@@ -494,6 +494,10 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 1_2_tkinter_variables.py
 - 1_2_tkinter_variables_fix.py
 - 1_3_buttons.py
-
+- 1_4_button_func_args.py
+- 1_5_events.py
+- 1_6_combo_spin.py
+- 1_7_canvas.py
+- 1_8_treeview.py
 
 
