@@ -29,6 +29,12 @@ for i in range(100):
 
 table.insert(parent = '', index = tk.END, values = ('XXXXX', 'YYYYY', 'ZZZZZ'))
 
+# events
+def item_select(_):
+	print(table.selection())
+	for i in table.selection():
+		print(table.item(i)['values'])
+	# table.item(table.selection())
 
 # run
 window.mainloop()
