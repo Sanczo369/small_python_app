@@ -35,6 +35,14 @@ progress.pack()
 scrolled_text = scrolledtext.ScrolledText(window, width = 100, height = 5)
 scrolled_text.pack()
 
+# exercise
+# create a progress that is vertical, starts automatically and also show the progress as a number
+# there should also be a scale slider that is affected by the progress bar
+exercise_int = tk.IntVar()
+exercise_progress = ttk.Progressbar(window, orient = 'vertical', variable = exercise_int)
+exercise_progress.pack()
+exercise_progress.start()
+
 
 # run
 window.mainloop()
