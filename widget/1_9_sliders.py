@@ -43,6 +43,9 @@ exercise_progress = ttk.Progressbar(window, orient = 'vertical', variable = exer
 exercise_progress.pack()
 exercise_progress.start()
 
+label = ttk.Label(window, textvariable = exercise_int)
+label.pack()
+
 
 # run
 window.mainloop()
