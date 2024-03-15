@@ -19,5 +19,15 @@ scale = ttk.Scale(
 scale.pack()
 
 
+# progress bar
+progress = ttk.Progressbar(
+	window,
+	variable = scale_float,
+	maximum = 25,
+	orient = 'horizontal',
+	mode = 'indeterminate',
+	length = 400)
+progress.pack()
+
 # run
 window.mainloop()
