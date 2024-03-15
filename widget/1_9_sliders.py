@@ -29,5 +29,12 @@ progress = ttk.Progressbar(
 	length = 400)
 progress.pack()
 
+# progress.start(1000)
+
+# Scrolledtext
+scrolled_text = scrolledtext.ScrolledText(window, width = 100, height = 5)
+scrolled_text.pack()
+
+
 # run
 window.mainloop()
