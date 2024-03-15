@@ -45,7 +45,8 @@ exercise_progress.start()
 
 label = ttk.Label(window, textvariable = exercise_int)
 label.pack()
-
+exercise_scale = ttk.Scale(window, variable = exercise_int, from_ = 0, to = 100)
+exercise_scale.pack()
 
 # run
 window.mainloop()
