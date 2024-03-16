@@ -31,6 +31,13 @@ class Segment(ttk.Frame):
 
         self.pack(expand=True, fill='both', padx=10, pady=10)
 
+    def create_exercise_box(self, text):
+        frame = ttk.Frame(master=self)
+        ttk.Entry(frame).pack(expand=True, fill='both')
+        ttk.Button(frame, text=text).pack(expand=True, fill='both')
+        return frame
+
+
 # window
 window = tk.Tk()
 window.title('Widgets and return')
