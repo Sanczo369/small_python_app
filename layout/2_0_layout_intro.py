@@ -21,5 +21,9 @@ label2 = ttk.Label(window, text = 'Label 2', background = 'blue')
 # window.rowconfigure(0, weight = 1)
 # window.rowconfigure(1, weight = 1)
 
+
+# label1.grid(row = 0, column = 1, sticky = 'nsew')
+# label2.grid(row = 1, column = 1, columnspan = 2, sticky = 'nsew')
+
 # run
 window.mainloop()
