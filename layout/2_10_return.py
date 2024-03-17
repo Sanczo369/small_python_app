@@ -50,5 +50,17 @@ window.geometry('400x600')
 # create_segment(window, 'bye', 'launch').pack(expand = True, fill = 'both', padx = 10, pady = 10)
 # create_segment(window, 'last one', 'exit').pack(expand = True, fill = 'both', padx = 10, pady = 10)
 
+Segment(window, 'label', 'button', 'test')
+Segment(window, 'test', 'click', 'something else')
+Segment(window, 'hello', 'test', '123')
+Segment(window, 'bye', 'launch', '')
+Segment(window, 'last one', 'exit', 'end')
+
+# exercise
+# create a smaller widget inside of the segment class using a function/method:
+# it should be a container that has an entry field and a button stacked on top of each other
+# the button text should be set via the parameters
+# all of this should be on the third column
+
 # run
 window.mainloop()
