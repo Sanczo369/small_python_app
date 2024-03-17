@@ -21,6 +21,15 @@ class App(tk.Tk):
 		self.mainloop()
 
 
+def create_small_layout(self):
+    self.frame.pack_forget()
+    self.frame = ttk.Frame(self)
+    ttk.Label(self.frame, text='Label 1', background='red').pack(expand=True, fill='both', padx=10, pady=5)
+    ttk.Label(self.frame, text='Label 2', background='green').pack(expand=True, fill='both', padx=10, pady=5)
+    ttk.Label(self.frame, text='Label 3', background='blue').pack(expand=True, fill='both', padx=10, pady=5)
+    ttk.Label(self.frame, text='Label 4', background='yellow').pack(expand=True, fill='both', padx=10, pady=5)
+    self.frame.pack(expand=True, fill='both')
+
 # exercise
 # create a a third layout where the widgets are next to each other (I used grid)
 # make it appear once the window is wider than 1200 pixels
