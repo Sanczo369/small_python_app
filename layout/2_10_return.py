@@ -43,5 +43,12 @@ window = tk.Tk()
 window.title('Widgets and return')
 window.geometry('400x600')
 
+# widgets
+# create_segment(window, 'label', 'button').pack(expand = True, fill = 'both', padx = 10, pady = 10)
+# create_segment(window, 'test', 'click').pack(expand = True, fill = 'both', padx = 10, pady = 10)
+# create_segment(window, 'hello', 'test').pack(expand = True, fill = 'both', padx = 10, pady = 10)
+# create_segment(window, 'bye', 'launch').pack(expand = True, fill = 'both', padx = 10, pady = 10)
+# create_segment(window, 'last one', 'exit').pack(expand = True, fill = 'both', padx = 10, pady = 10)
+
 # run
 window.mainloop()
