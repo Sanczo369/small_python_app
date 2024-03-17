@@ -10,6 +10,14 @@ class App(tk.Tk):
 		self.frame = ttk.Frame(self)
 		self.frame.pack(expand = True, fill = 'both')
 
+
+        SizeNotifier(
+            self,
+            {
+                600: self.create_medium_layout,
+                300: self.create_small_layout,
+                1200: self.create_large_layout
+            })
 		self.mainloop()
 
 
