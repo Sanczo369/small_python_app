@@ -20,5 +20,9 @@ window.title('Scrolling')
 # 	canvas.create_rectangle(l,t,r,b, fill = color)
 # canvas.pack(expand = True, fill = 'both')
 
+# # mousewheel scrolling
+# canvas.bind('<MouseWheel>', lambda event: canvas.yview_scroll(-int(event.delta / 60), "units"))
+
+
 # run window
 window.mainloop()
