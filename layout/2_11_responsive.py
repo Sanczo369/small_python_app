@@ -43,6 +43,18 @@ class App(tk.Tk):
         ttk.Label(self.frame, text='Label 4', background='yellow').grid(column=1, row=1, sticky='nsew', padx=10,
                                                                         pady=10)
 
+    def create_large_layout(self):
+        self.frame.pack_forget()
+
+        self.frame = ttk.Frame(self)
+        self.frame.columnconfigure((0, 1, 2, 3), weight=1, uniform='a')
+        self.frame.rowconfigure(0, weight=1, uniform='a')
+        self.frame.pack(expand=True, fill='both')
+
+        ttk.Label(self.frame, text='Label 1', background='red').grid(column=0, row=0, sticky='nsew', padx=10, pady=10)
+        ttk.Label(self.frame, text='Label 2', background='green').grid(column=1, row=0, sticky='nsew', padx=10, pady=10)
+        ttk.Label(self.frame, text='Label 3', background='blue').grid(column=2, row=0, sticky='nsew', padx=10, pady=10)
+        ttk.Label(self.frame, text='Label 4', background='yellow').grid(column=3, row=0, sticky='nsew', padx=10, pady=10)
 
 # exercise
 # create a a third layout where the widgets are next to each other (I used grid)
