@@ -56,6 +56,18 @@ class App(tk.Tk):
         ttk.Label(self.frame, text='Label 3', background='blue').grid(column=2, row=0, sticky='nsew', padx=10, pady=10)
         ttk.Label(self.frame, text='Label 4', background='yellow').grid(column=3, row=0, sticky='nsew', padx=10, pady=10)
 
+class SizeNotifier:
+	def __init__(self, window, size_dict):
+		self.window = window
+		self.size_dict = {key: value for key, value in sorted(size_dict.items())}
+		self.current_min_size = None
+		self.window.bind('<Configure>', self.check_size)
+
+		self.window.update()
+
+		min_height = self.window.winfo_height()
+		min_width = list(self.size_dict)[0]
+		self.window.minsize(min_width, min_height)
 # exercise
 # create a a third layout where the widgets are next to each other (I used grid)
 # make it appear once the window is wider than 1200 pixels
