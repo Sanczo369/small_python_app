@@ -23,6 +23,10 @@ window.title('Scrolling')
 # # mousewheel scrolling
 # canvas.bind('<MouseWheel>', lambda event: canvas.yview_scroll(-int(event.delta / 60), "units"))
 
+# # scrollbar
+# scrollbar = ttk.Scrollbar(window, orient = 'vertical', command = canvas.yview)
+# canvas.configure(yscrollcommand = scrollbar.set)
+# scrollbar.place(relx = 1, rely = 0, relheight = 1, anchor = 'ne')
 
 # run window
 window.mainloop()
