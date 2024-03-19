@@ -47,5 +47,15 @@ window.title('Scrolling')
 # text.configure(yscrollcommand = scrollbar_text.set)
 # scrollbar_text.place(relx = 1, rely = 0, relheight = 1, anchor = 'ne')
 
+# treeview
+table = ttk.Treeview(window, columns = (1,2), show = 'headings')
+table.heading(1, text = 'First name')
+table.heading(2, text = 'Last name')
+first_names = ['Bob', 'Maria', 'Alex', 'James', 'Susan', 'Henry', 'Lisa', 'Anna', 'Lisa']
+last_names = ['Smith', 'Brown', 'Wilson', 'Thomson', 'Cook', 'Taylor', 'Walker', 'Clark']
+for i in range(100):
+	table.insert(parent = '', index = tk.END, values = (choice(first_names), choice(last_names)))
+table.pack(expand = True, fill = 'both')
+
 # run window
 window.mainloop()
