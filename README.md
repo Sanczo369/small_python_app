@@ -499,5 +499,6 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 1_6_combo_spin.py
 - 1_7_canvas.py
 - 1_8_treeview.py
+- 1_9_sliders.py
 
 
