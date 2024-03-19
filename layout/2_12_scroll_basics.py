@@ -57,5 +57,9 @@ for i in range(100):
 	table.insert(parent = '', index = tk.END, values = (choice(first_names), choice(last_names)))
 table.pack(expand = True, fill = 'both')
 
+scrollbar_table = ttk.Scrollbar(window, orient = 'vertical', command = table.yview)
+table.configure(yscrollcommand = scrollbar_table.set)
+scrollbar_table.place(relx = 1, rely = 0, relheight = 1, anchor = 'ne')
+
 # run window
 window.mainloop()
