@@ -28,5 +28,11 @@ window.title('Scrolling')
 # canvas.configure(yscrollcommand = scrollbar.set)
 # scrollbar.place(relx = 1, rely = 0, relheight = 1, anchor = 'ne')
 
+# # exercise:
+# # create a horizontal scrollbar at the bottom and use it to scroll the canvas left and right
+# scrollbar_bottom = ttk.Scrollbar(window, orient = 'horizontal', command = canvas.xview)
+# canvas.configure(xscrollcommand = scrollbar_bottom.set)
+# scrollbar_bottom.place(relx = 0, rely = 1, relwidth = 1, anchor = 'sw')
+
 # run window
 window.mainloop()
