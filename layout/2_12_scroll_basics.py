@@ -37,5 +37,11 @@ window.title('Scrolling')
 # # also add an event to scroll left / right on Ctrl + mousewheel
 # canvas.bind('<Control MouseWheel>', lambda event: canvas.xview_scroll(-int(event.delta / 60), "units"))
 
+# text
+# text = tk.Text(window)
+# for i in range(1, 200):
+# 	text.insert(f'{i}.0', f'text: {i} \n')
+# text.pack(expand = True, fill = 'both'
+
 # run window
 window.mainloop()
