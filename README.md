@@ -499,5 +499,10 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 1_6_combo_spin.py
 - 1_7_canvas.py
 - 1_8_treeview.py
+- 1_9_sliders.py
 
-
+## Layout
+- 2_0_layout_intro.py
+- 2_10_return.py
+- 2_11_responsive.py
+- 2_12_scroll_basics.py
