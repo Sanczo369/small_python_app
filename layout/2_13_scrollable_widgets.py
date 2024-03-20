@@ -9,6 +9,10 @@ class ListFrame(ttk.Frame):
 		super().__init__(master = parent)
 		self.pack(expand = True, fill = 'both')
 
+        # widget data
+        self.text_data = text_data
+        self.item_number = len(text_data)
+        self.list_height = self.item_number * item_height
 # setup
 window = tk.Tk()
 window.geometry('500x400')
