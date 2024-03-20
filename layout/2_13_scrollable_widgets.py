@@ -13,6 +13,11 @@ class ListFrame(ttk.Frame):
         self.text_data = text_data
         self.item_number = len(text_data)
         self.list_height = self.item_number * item_height
+
+
+        # canvas
+        self.canvas = tk.Canvas(self, background='red', scrollregion=(0, 0, self.winfo_width(), self.list_height))
+        self.canvas.pack(expand=True, fill='both')
 # setup
 window = tk.Tk()
 window.geometry('500x400')
