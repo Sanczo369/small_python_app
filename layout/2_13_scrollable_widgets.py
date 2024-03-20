@@ -1,6 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
 
+
+# exercise
+# create a scrollbar
+class ListFrame(ttk.Frame):
+	def __init__(self, parent, text_data, item_height):
+		super().__init__(master = parent)
+		self.pack(expand = True, fill = 'both')
+
 # setup
 window = tk.Tk()
 window.geometry('500x400')
