@@ -18,6 +18,10 @@ class ListFrame(ttk.Frame):
         # canvas
         self.canvas = tk.Canvas(self, background='red', scrollregion=(0, 0, self.winfo_width(), self.list_height))
         self.canvas.pack(expand=True, fill='both')
+
+
+        # display frame
+        self.frame = ttk.Frame(self)
 # setup
 window = tk.Tk()
 window.geometry('500x400')
