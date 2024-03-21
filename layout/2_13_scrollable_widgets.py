@@ -31,6 +31,10 @@ class ListFrame(ttk.Frame):
         self.scrollbar = ttk.Scrollbar(self, orient='vertical', command=self.canvas.yview)
         self.canvas.configure(yscrollcommand=self.scrollbar.set)
         self.scrollbar.place(relx=1, rely=0, relheight=1, anchor='ne')
+
+        # events
+        self.canvas.bind_all('<MouseWheel>', lambda event: self.canvas.yview_scroll(-int(event.delta / 60), "units"))
+        self.bind('<Configure>', self.update_size)
 # setup
 window = tk.Tk()
 window.geometry('500x400')
