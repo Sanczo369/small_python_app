@@ -22,6 +22,10 @@ class ListFrame(ttk.Frame):
 
         # display frame
         self.frame = ttk.Frame(self)
+
+
+        for index, item in enumerate(self.text_data):
+            self.create_item(index, item).pack(expand=True, fill='both', pady=4, padx=10)
 # setup
 window = tk.Tk()
 window.geometry('500x400')
