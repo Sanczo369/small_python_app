@@ -47,6 +47,13 @@ class ListFrame(ttk.Frame):
             height = self.winfo_height()
             self.canvas.unbind_all('<MouseWheel>')
             self.scrollbar.place_forget()
+
+        self.canvas.create_window(
+            (0, 0),
+            window=self.frame,
+            anchor='nw',
+            width=self.winfo_width(),
+            height=height)
 # setup
 window = tk.Tk()
 window.geometry('500x400')
