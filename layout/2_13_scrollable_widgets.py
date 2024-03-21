@@ -35,6 +35,13 @@ class ListFrame(ttk.Frame):
         # events
         self.canvas.bind_all('<MouseWheel>', lambda event: self.canvas.yview_scroll(-int(event.delta / 60), "units"))
         self.bind('<Configure>', self.update_size)
+
+
+    def update_size(self, event):
+        if self.list_height >= self.winfo_height():
+            height = self.list_height
+            self.canvas.bind_all('<MouseWheel>', lambda event: self.canvas.yview_scroll(-int(event.delta / 60), "units"))
+            self.scrollbar.place(relx=1, rely=0, relheight=1, anchor='ne')
 # setup
 window = tk.Tk()
 window.geometry('500x400')
