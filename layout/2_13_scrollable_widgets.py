@@ -26,6 +26,11 @@ class ListFrame(ttk.Frame):
 
         for index, item in enumerate(self.text_data):
             self.create_item(index, item).pack(expand=True, fill='both', pady=4, padx=10)
+
+        # scrollbar
+        self.scrollbar = ttk.Scrollbar(self, orient='vertical', command=self.canvas.yview)
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        self.scrollbar.place(relx=1, rely=0, relheight=1, anchor='ne')
 # setup
 window = tk.Tk()
 window.geometry('500x400')
