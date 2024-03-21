@@ -54,6 +54,10 @@ class ListFrame(ttk.Frame):
             anchor='nw',
             width=self.winfo_width(),
             height=height)
+
+
+    def create_item(self, index, item):
+        frame = ttk.Frame(self.frame)
 # setup
 window = tk.Tk()
 window.geometry('500x400')
