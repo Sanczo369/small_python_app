@@ -11,6 +11,12 @@ class Extra(tk.Toplevel):
 		ttk.Button(self, text = 'A button').pack()
 		ttk.Label(self, text = 'another label').pack(expand = True)
 
+# https://docs.python.org/3/library/tkinter.messagebox.html
+def ask_yes_no():
+	# answer = messagebox.askquestion('Title', 'Body')
+	# print(answer)
+	messagebox.showerror('Info title', 'Here is some information')
+
 # window
 window = tk.Tk()
 window.geometry('600x400')
