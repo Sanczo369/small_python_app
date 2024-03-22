@@ -28,6 +28,8 @@ def create_window():
 	# ttk.Button(extra_window, text = 'A button').pack()
 	# ttk.Label(extra_window, text = 'another label').pack(expand = True)
 
+def close_window():
+	extra_window.destroy()
 # window
 window = tk.Tk()
 window.geometry('600x400')
