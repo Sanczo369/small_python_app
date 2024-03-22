@@ -58,6 +58,10 @@ class ListFrame(ttk.Frame):
 
     def create_item(self, index, item):
         frame = ttk.Frame(self.frame)
+
+        # grid layout
+        frame.rowconfigure(0, weight=1)
+        frame.columnconfigure((0, 1, 2, 3, 4), weight=1, uniform='a')
 # setup
 window = tk.Tk()
 window.geometry('500x400')
