@@ -62,6 +62,13 @@ class ListFrame(ttk.Frame):
         # grid layout
         frame.rowconfigure(0, weight=1)
         frame.columnconfigure((0, 1, 2, 3, 4), weight=1, uniform='a')
+
+        # widgets
+        ttk.Label(frame, text=f'#{index}').grid(row=0, column=0)
+        ttk.Label(frame, text=f'{item[0]}').grid(row=0, column=1)
+        ttk.Button(frame, text=f'{item[1]}').grid(row=0, column=2, columnspan=3, sticky='nsew')
+
+        return frame
 # setup
 window = tk.Tk()
 window.geometry('500x400')
