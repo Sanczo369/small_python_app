@@ -17,6 +17,17 @@ def ask_yes_no():
 	# print(answer)
 	messagebox.showerror('Info title', 'Here is some information')
 
+
+def create_window():
+	global extra_window
+	extra_window = Extra()
+	# extra_window = tk.Toplevel()
+	# extra_window.title('extra window')
+	# extra_window.geometry('300x400')
+	# ttk.Label(extra_window, text = 'A label').pack()
+	# ttk.Button(extra_window, text = 'A button').pack()
+	# ttk.Label(extra_window, text = 'another label').pack(expand = True)
+
 # window
 window = tk.Tk()
 window.geometry('600x400')
