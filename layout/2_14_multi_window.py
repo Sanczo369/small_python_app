@@ -38,6 +38,7 @@ window.title('Multiple windows')
 button1 = ttk.Button(window, text = 'open main window', command = create_window)
 button1.pack(expand = True)
 
-
+button2 = ttk.Button(window, text = 'close main window', command = close_window)
+button2.pack(expand = True)
 # run
 window.mainloop()
