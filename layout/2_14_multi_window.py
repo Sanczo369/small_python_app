@@ -35,6 +35,9 @@ window = tk.Tk()
 window.geometry('600x400')
 window.title('Multiple windows')
 
+button1 = ttk.Button(window, text = 'open main window', command = create_window)
+button1.pack(expand = True)
+
 
 # run
 window.mainloop()
