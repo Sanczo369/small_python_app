@@ -40,5 +40,9 @@ button1.pack(expand = True)
 
 button2 = ttk.Button(window, text = 'close main window', command = close_window)
 button2.pack(expand = True)
+
+button3 = ttk.Button(window, text = 'create yes no window', command = ask_yes_no)
+button3.pack(expand = True)
+
 # run
 window.mainloop()
