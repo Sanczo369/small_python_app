@@ -10,5 +10,9 @@ window.geometry('400x600')
 top_frame = ttk.Frame(window)
 label1 = ttk.Label(top_frame, text = 'First label', background = 'red')
 label2 = ttk.Label(top_frame, text = 'Label 2', background = 'blue')
+
+# middle widget
+label3 = ttk.Label(window, text = 'Another label', background = 'green')
+
 # run
 window.mainloop()
