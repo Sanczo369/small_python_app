@@ -14,5 +14,12 @@ label2 = ttk.Label(top_frame, text = 'Label 2', background = 'blue')
 # middle widget
 label3 = ttk.Label(window, text = 'Another label', background = 'green')
 
+# bottom frame
+bottom_frame = ttk.Frame(window)
+label4 = ttk.Label(bottom_frame, text = 'Last of the labels', background = 'orange')
+button = ttk.Button(bottom_frame, text = 'A Button')
+button2 = ttk.Button(bottom_frame, text = 'Another Button')
+
+
 # run
 window.mainloop()
