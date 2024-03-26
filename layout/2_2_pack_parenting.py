@@ -20,6 +20,11 @@ label4 = ttk.Label(bottom_frame, text = 'Last of the labels', background = 'oran
 button = ttk.Button(bottom_frame, text = 'A Button')
 button2 = ttk.Button(bottom_frame, text = 'Another Button')
 
+# exercise widgets
+exercise_frame = ttk.Frame(bottom_frame)
+button3 = ttk.Button(exercise_frame, text = 'Button 3')
+button4 = ttk.Button(exercise_frame, text = 'Button 4')
+button5 = ttk.Button(exercise_frame, text = 'Button 5')
 
 # run
 window.mainloop()
