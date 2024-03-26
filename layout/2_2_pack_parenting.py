@@ -26,5 +26,10 @@ button3 = ttk.Button(exercise_frame, text = 'Button 3')
 button4 = ttk.Button(exercise_frame, text = 'Button 4')
 button5 = ttk.Button(exercise_frame, text = 'Button 5')
 
+# top layout
+label1.pack(side = 'left', fill = 'both', expand = True)
+label2.pack(side = 'left', fill = 'both', expand = True)
+top_frame.pack(fill = 'both', expand = True)
+
 # run
 window.mainloop()
