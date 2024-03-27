@@ -45,5 +45,10 @@ bottom_frame.pack(expand = True, fill = 'both', padx = 20, pady = 20)
 # the frame should be on the right inside of the bottom frame
 # and the buttons should be stacked vertically inside of it
 
+button3.pack(expand = True, fill = 'both')
+button4.pack(expand = True, fill = 'both')
+button5.pack(expand = True, fill = 'both')
+exercise_frame.pack(side = 'left', fill = 'both', expand = True)
+
 # run
 window.mainloop()
