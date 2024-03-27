@@ -31,5 +31,8 @@ label1.pack(side = 'left', fill = 'both', expand = True)
 label2.pack(side = 'left', fill = 'both', expand = True)
 top_frame.pack(fill = 'both', expand = True)
 
+# middle layout
+label3.pack(expand = True)
+
 # run
 window.mainloop()
