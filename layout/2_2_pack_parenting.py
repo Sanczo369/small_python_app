@@ -40,5 +40,10 @@ label4.pack(side = 'left', expand = True, fill = 'both')
 button2.pack(side = 'left', expand = True, fill = 'both')
 bottom_frame.pack(expand = True, fill = 'both', padx = 20, pady = 20)
 
+# exercise
+# create 3 more buttons and another frame
+# the frame should be on the right inside of the bottom frame
+# and the buttons should be stacked vertically inside of it
+
 # run
 window.mainloop()
