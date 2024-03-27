@@ -34,5 +34,11 @@ top_frame.pack(fill = 'both', expand = True)
 # middle layout
 label3.pack(expand = True)
 
+# bottom layout
+button.pack(side = 'left', expand = True, fill = 'both')
+label4.pack(side = 'left', expand = True, fill = 'both')
+button2.pack(side = 'left', expand = True, fill = 'both')
+bottom_frame.pack(expand = True, fill = 'both', padx = 20, pady = 20)
+
 # run
 window.mainloop()
