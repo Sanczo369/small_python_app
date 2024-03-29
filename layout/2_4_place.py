@@ -22,5 +22,11 @@ button.place(relx = 1, rely = 1, anchor = 'se')
 frame = ttk.Frame(window)
 frame_label = ttk.Label(frame, text = 'Frame label', background = 'yellow')
 frame_button = ttk.Button(frame, text = 'Frame Button')
+
+# frame layout
+frame.place(relx = 0, rely = 0, relwidth = 0.3, relheight = 1)
+frame_label.place(relx = 0, rely = 0, relwidth = 1, relheight = 0.5)
+frame_button.place(relx = 0, rely = 0.5, relwidth = 1, relheight = 0.5)
+
 # run
 window.mainloop()
