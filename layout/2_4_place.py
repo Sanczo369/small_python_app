@@ -28,5 +28,10 @@ frame.place(relx = 0, rely = 0, relwidth = 0.3, relheight = 1)
 frame_label.place(relx = 0, rely = 0, relwidth = 1, relheight = 0.5)
 frame_button.place(relx = 0, rely = 0.5, relwidth = 1, relheight = 0.5)
 
+# exercise
+# create a label and place it right in the center of the window
+# the label should be half as wide as the window and be 200px tall
+exercise_label = ttk.Label(window, text = 'exercise label', background = 'orange')
+exercise_label.place(x = 200, rely = 0.5, anchor = 'center', relwidth = 0.5, height = 200)
 # run
 window.mainloop()
