@@ -5,5 +5,8 @@ from tkinter import ttk
 window = tk.Tk()
 window.geometry('400x300')
 
+# widgets
+label1 = ttk.Label(window, text = 'Label 1', background = 'green')
+label2 = ttk.Label(window, text = 'Label 2', background = 'red', width = 50)
 # run
 window.mainloop()
