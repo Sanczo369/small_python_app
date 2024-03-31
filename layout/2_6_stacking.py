@@ -23,5 +23,9 @@ button3 = ttk.Button(window, text = 'raise label 3', command = lambda: label3.tk
 label1.place(x = 50, y = 100, width = 200, height = 150)
 label2.place(x = 150, y = 60, width = 140, height = 100)
 label3.place(x = 20, y = 80, width = 180, height = 100)
+
+button1.place(rely = 1, relx = 0.8, anchor = 'se')
+button2.place(rely = 1, relx = 1, anchor = 'se')
+button3.place(rely = 1, relx = 0.6, anchor = 'se')
 # run
 window.mainloop()
