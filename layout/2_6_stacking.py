@@ -17,5 +17,11 @@ label3 = ttk.Label(window, text = 'Label 3', background = 'blue')
 button1 = ttk.Button(window, text = 'raise label 1', command = lambda: label1.lift(aboveThis = label2))
 button2 = ttk.Button(window, text = 'raise label 2', command = lambda: label2.tkraise())
 button3 = ttk.Button(window, text = 'raise label 3', command = lambda: label3.tkraise())
+
+
+# layout
+label1.place(x = 50, y = 100, width = 200, height = 150)
+label2.place(x = 150, y = 60, width = 140, height = 100)
+label3.place(x = 20, y = 80, width = 180, height = 100)
 # run
 window.mainloop()
