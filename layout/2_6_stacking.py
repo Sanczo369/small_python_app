@@ -27,5 +27,8 @@ label3.place(x = 20, y = 80, width = 180, height = 100)
 button1.place(rely = 1, relx = 0.8, anchor = 'se')
 button2.place(rely = 1, relx = 1, anchor = 'se')
 button3.place(rely = 1, relx = 0.6, anchor = 'se')
+
+# exercise
+# add a third label and button
 # run
 window.mainloop()
