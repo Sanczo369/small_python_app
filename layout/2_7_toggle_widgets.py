@@ -17,5 +17,7 @@ window.title('Hide widgets')
 # 		label_visible = True
 # 		label.place(relx = 0.5, rely = 0.5, anchor = 'center')
 
+# button = ttk.Button(window, text = 'toggle Label', command = toggle_label_place)
+# button.place(x = 10, y = 10)
 # run
 window.mainloop()
