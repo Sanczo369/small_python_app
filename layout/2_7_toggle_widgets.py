@@ -58,5 +58,9 @@ def toggle_label_pack():
 		label.pack(expand = True, before = button)
 		label_visible = True
 	# exercise: fix the code so that the button stays at the bottom
+
+label_visible = True
+label = ttk.Label(window, text= 'A label')
+label.pack(expand = True)
 # run
 window.mainloop()
