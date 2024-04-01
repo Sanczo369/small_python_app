@@ -44,5 +44,19 @@ window.title('Hide widgets')
 # label_visible = True
 # label = ttk.Label(window, text= 'A label')
 # label.grid(column = 1, row = 0)
+
+# pack
+def toggle_label_pack():
+	global label_visible
+
+	if label_visible:
+		label.pack_forget()
+		label_visible = False
+		frame.pack(expand = True, before = button)
+	else:
+		frame.pack_forget()
+		label.pack(expand = True, before = button)
+		label_visible = True
+	# exercise: fix the code so that the button stays at the bottom
 # run
 window.mainloop()
