@@ -38,5 +38,7 @@ window.title('Hide widgets')
 # window.columnconfigure((0,1), weight = 1, uniform = 'a')
 # window.rowconfigure(0, weight = 1, uniform = 'a')
 
+# button = ttk.Button(window, text = 'toggle Label', command = toggle_label_grid)
+# button.grid(column = 0, row = 0)
 # run
 window.mainloop()
