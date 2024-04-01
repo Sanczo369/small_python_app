@@ -62,5 +62,8 @@ def toggle_label_pack():
 label_visible = True
 label = ttk.Label(window, text= 'A label')
 label.pack(expand = True)
+
+button = ttk.Button(window, text = 'toggle Label', command = toggle_label_pack)
+button.pack()
 # run
 window.mainloop()
