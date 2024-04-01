@@ -35,5 +35,8 @@ window.title('Hide widgets')
 # 		label_visible = True
 # 		label.grid(column = 1, row = 0)
 
+# window.columnconfigure((0,1), weight = 1, uniform = 'a')
+# window.rowconfigure(0, weight = 1, uniform = 'a')
+
 # run
 window.mainloop()
