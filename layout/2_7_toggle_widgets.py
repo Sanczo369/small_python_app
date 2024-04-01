@@ -23,5 +23,17 @@ window.title('Hide widgets')
 # label_visible = True
 # label = ttk.Label(window, text= 'A label')
 # label.place(relx = 0.5, rely = 0.5, anchor = 'center')
+
+# grid
+# def toggle_label_grid():
+# 	global label_visible
+
+# 	if label_visible:
+# 		label.grid_forget()
+# 		label_visible = False
+# 	else:
+# 		label_visible = True
+# 		label.grid(column = 1, row = 0)
+
 # run
 window.mainloop()
