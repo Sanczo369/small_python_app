@@ -24,5 +24,8 @@ label = ttk.Label(
 # exercise:
 # add a frame with a width and height and give it a pink background color
 
+frame = ttk.Frame(window, height = 200, width = 100)
+frame.pack()
+
 # run
 window.mainloop()
