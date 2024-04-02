@@ -12,5 +12,14 @@ style.map('new.TButton',
 	background = [('pressed', 'green'), ('active', 'blue')])
 style.configure('TFrame', background = 'pink')
 
+# widgets
+label = ttk.Label(
+	window,
+	text = 'A label\nAnd then type on another line',
+	background = 'red',
+	foreground = 'white',
+	font = ('Jokerman', 20),
+	justify = 'right')
+
 # run
 window.mainloop()
