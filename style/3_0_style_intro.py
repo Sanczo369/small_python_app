@@ -21,6 +21,11 @@ label = ttk.Label(
 	font = ('Jokerman', 20),
 	justify = 'right')
 
+label.pack()
+
+button = ttk.Button(window, text = 'A button', style = 'new.TButton')
+button.pack()
+
 # exercise:
 # add a frame with a width and height and give it a pink background color
 
