@@ -10,5 +10,9 @@ window.geometry('400x300')
 ttk.Label(window, background = 'red').pack(expand = True, fill = 'both')
 ttk.Label(window, background = '#08F').pack(expand = True, fill = 'both')
 ttk.Label(window, background = '#4fc296').pack(expand = True, fill = 'both')
+
+# exercise
+# create a brownish color using hex values
+ttk.Label(window, background = '#C50').pack(expand = True, fill = 'both')
 # run
 window.mainloop()
