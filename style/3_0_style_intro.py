@@ -6,6 +6,11 @@ window = tk.Tk()
 window.title('Styling')
 window.geometry('400x300')
 
+# style
+style = ttk.Style()
+# print(style.theme_names())
+# style.theme_use('classic')
+
 style.configure('new.TButton', foreground = 'green', font = ('Jokerman', 20))
 style.map('new.TButton',
 	foreground = [('pressed', 'red'),('disabled', 'yellow')],
