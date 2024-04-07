@@ -30,5 +30,7 @@ button.pack()
 frame = ctk.CTkFrame(window)
 frame.pack()
 
+slider = ctk.CTkSlider(frame)
+slider.pack(padx = 20, pady = 20)
 # run
 window.mainloop()
