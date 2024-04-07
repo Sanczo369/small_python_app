@@ -26,5 +26,9 @@ button = ctk.CTkButton(
 	hover_color = '#AA0',
 	command = lambda: ctk.set_appearance_mode('light'))
 button.pack()
+
+frame = ctk.CTkFrame(window)
+frame.pack()
+
 # run
 window.mainloop()
