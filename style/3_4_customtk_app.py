@@ -26,3 +26,17 @@ class Menu(ctk.CTkFrame):
 		self.place(x = 0, y = 0, relwidth = 0.3, relheight = 1)
 
 		self.create_widgets()
+    def create_widgets(self):
+        # create the widgets
+        menu_button1 = ctk.CTkButton(self, text='Button 1')
+        menu_button2 = ctk.CTkButton(self, text='Button 2')
+        menu_button3 = ctk.CTkButton(self, text='Button 3')
+
+        menu_slider1 = ctk.CTkSlider(self, orientation='vertical', width=20)
+        menu_slider2 = ctk.CTkSlider(self, orientation='vertical', width=20)
+
+        toggle_frame = ctk.CTkFrame(self)
+        menu_toggle1 = ctk.CTkCheckBox(toggle_frame, text='check 1')
+        menu_toggle2 = ctk.CTkCheckBox(toggle_frame, text='check 2')
+
+        entry = ctk.CTkEntry(self)
