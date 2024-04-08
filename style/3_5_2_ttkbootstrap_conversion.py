@@ -24,6 +24,22 @@ class Menu(ttk.Frame):
 
 		self.create_widgets()
 
+    def create_widgets(self):
+        # create the widgets
+        menu_button1 = ttk.Button(self, text='Button 1', bootstyle='danger')
+        menu_button2 = ttk.Button(self, text='Button 2', bootstyle='success')
+        menu_button3 = ttk.Button(self, text='Button 3', bootstyle='dark')
+
+        menu_slider1 = ttk.Scale(self, orient='vertical', bootstyle='info')
+        menu_slider2 = ttk.Scale(self, orient='vertical', bootstyle='secondary')
+
+        toggle_frame = ttk.Frame(self)
+        menu_toggle1 = ttk.Checkbutton(toggle_frame, text='check 1', bootstyle='info')
+        menu_toggle2 = ttk.Checkbutton(toggle_frame, text='check 2')
+
+        entry = ttk.Entry(self)
+
+
 class Main(ttk.Frame):
 	def __init__(self, parent):
 		super().__init__(parent)
