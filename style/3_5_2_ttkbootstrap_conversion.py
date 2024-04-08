@@ -9,3 +9,10 @@ class App(ttk.Window):
         self.title(title)
         self.geometry(f'{size[0]}x{size[1]}')
         self.minsize(size[0], size[1])
+
+        # widgets
+        self.menu = Menu(self)
+        self.main = Main(self)
+
+        # run
+        self.mainloop()
