@@ -40,3 +40,7 @@ class Menu(ctk.CTkFrame):
         menu_toggle2 = ctk.CTkCheckBox(toggle_frame, text='check 2')
 
         entry = ctk.CTkEntry(self)
+
+        # create the grid
+        self.columnconfigure((0, 1, 2), weight=1, uniform='a')
+        self.rowconfigure((0, 1, 2, 3, 4), weight=1, uniform='a')
