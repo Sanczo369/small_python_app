@@ -23,3 +23,10 @@ class Menu(ttk.Frame):
 		self.place(x = 0, y = 0, relwidth = 0.3, relheight = 1)
 
 		self.create_widgets()
+
+class Main(ttk.Frame):
+	def __init__(self, parent):
+		super().__init__(parent)
+		self.place(relx = 0.3, y = 0, relwidth = 0.7, relheight = 1)
+		Entry(self, 'Entry 1','Button 1','green')
+		Entry(self, 'Entry 2','Button 2','blue')
