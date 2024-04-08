@@ -52,3 +52,8 @@ class Menu(ctk.CTkFrame):
 
         menu_slider1.grid(row=2, column=0, rowspan=2, sticky='ns', pady=20)
         menu_slider2.grid(row=2, column=2, rowspan=2, sticky='ns', pady=20)
+
+        # toggle layout
+        toggle_frame.grid(row=4, column=0, columnspan=3, sticky='nsew')
+        menu_toggle1.pack(side='left', expand=True)
+        menu_toggle2.pack(side='left', expand=True)
