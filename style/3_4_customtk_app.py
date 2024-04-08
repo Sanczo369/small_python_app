@@ -60,3 +60,10 @@ class Menu(ctk.CTkFrame):
 
         # entry layout
         entry.place(relx=0.5, rely=0.95, relwidth=0.9, anchor='center')
+
+class Main(ctk.CTkFrame):
+	def __init__(self, parent):
+		super().__init__(parent)
+		self.place(relx = 0.3, y = 0, relwidth = 0.7, relheight = 1)
+		Entry(self, 'Entry 1','Button 1','green')
+		Entry(self, 'Entry 2','Button 2','blue')
