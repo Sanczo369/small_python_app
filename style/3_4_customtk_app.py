@@ -21,11 +21,11 @@ class App(ctk.CTk):
         self.mainloop()
 
 class Menu(ctk.CTkFrame):
-	def __init__(self, parent):
-		super().__init__(parent)
-		self.place(x = 0, y = 0, relwidth = 0.3, relheight = 1)
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.place(x=0, y=0, relwidth=0.3, relheight=1)
 
-		self.create_widgets()
+        self.create_widgets()
     def create_widgets(self):
         # create the widgets
         menu_button1 = ctk.CTkButton(self, text='Button 1')
@@ -62,23 +62,23 @@ class Menu(ctk.CTkFrame):
         entry.place(relx=0.5, rely=0.95, relwidth=0.9, anchor='center')
 
 class Main(ctk.CTkFrame):
-	def __init__(self, parent):
-		super().__init__(parent)
-		self.place(relx = 0.3, y = 0, relwidth = 0.7, relheight = 1)
-		Entry(self, 'Entry 1','Button 1','green')
-		Entry(self, 'Entry 2','Button 2','blue')
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.place(relx=0.3, y=0, relwidth=0.7, relheight=1)
+        Entry(self, 'Entry 1', 'Button 1', 'green')
+        Entry(self, 'Entry 2', 'Button 2', 'blue')
 
 class Entry(ctk.CTkFrame):
-	def __init__(self, parent, label_text, button_text, label_background):
-		super().__init__(parent)
+    def __init__(self, parent, label_text, button_text, label_background):
+        super().__init__(parent)
 
-		label = ctk.CTkLabel(self, text = label_text)
-		button = ctk.CTkButton(self, text = button_text)
+        label = ctk.CTkLabel(self, text=label_text)
+        button = ctk.CTkButton(self, text=button_text)
 
-		label.pack(expand = True, fill = 'both')
-		button.pack(expand = True, fill = 'both', pady = 10)
+        label.pack(expand=True, fill='both')
+        button.pack(expand=True, fill='both', pady=10)
 
-		self.pack(side = 'left', expand = True, fill = 'both', padx = 20, pady = 20)
+        self.pack(side='left', expand=True, fill='both', padx=20, pady=20)
 
 
-App('Class based app with ctk', (600,600))
+App('Class based app with ctk', (600, 600))
