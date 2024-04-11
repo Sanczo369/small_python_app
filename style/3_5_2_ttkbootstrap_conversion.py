@@ -48,6 +48,9 @@ class Menu(ttk.Frame):
         menu_button2.grid(row=0, column=2, sticky='nswe', padx=4, pady=4)
         menu_button3.grid(row=1, column=0, columnspan=3, sticky='nsew', padx=4, pady=4)
 
+        menu_slider1.grid(row=2, column=0, rowspan=2, sticky='nsew', pady=20)
+        menu_slider2.grid(row=2, column=2, rowspan=2, sticky='nsew', pady=20)
+
 
 class Main(ttk.Frame):
 	def __init__(self, parent):
