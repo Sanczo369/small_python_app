@@ -43,6 +43,11 @@ class Menu(ttk.Frame):
         self.columnconfigure((0, 1, 2), weight=1, uniform='a')
         self.rowconfigure((0, 1, 2, 3, 4), weight=1, uniform='a')
 
+        # place the widgets
+        menu_button1.grid(row=0, column=0, sticky='nswe', columnspan=2, padx=4, pady=4)
+        menu_button2.grid(row=0, column=2, sticky='nswe', padx=4, pady=4)
+        menu_button3.grid(row=1, column=0, columnspan=3, sticky='nsew', padx=4, pady=4)
+
 
 class Main(ttk.Frame):
 	def __init__(self, parent):
