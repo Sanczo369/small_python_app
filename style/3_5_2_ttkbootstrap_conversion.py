@@ -39,6 +39,10 @@ class Menu(ttk.Frame):
 
         entry = ttk.Entry(self)
 
+        # create the grid
+        self.columnconfigure((0, 1, 2), weight=1, uniform='a')
+        self.rowconfigure((0, 1, 2, 3, 4), weight=1, uniform='a')
+
 
 class Main(ttk.Frame):
 	def __init__(self, parent):
@@ -58,3 +62,5 @@ class Entry(ttk.Frame):
 		button.pack(expand = True, fill = 'both', pady = 10)
 
 		self.pack(side = 'left', expand = True, fill = 'both', padx = 20, pady = 20)
+
+App('Class based app', (600,600))
