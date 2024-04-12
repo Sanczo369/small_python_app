@@ -7,5 +7,8 @@ window = ttk.Window(themename = 'journal')
 window.title('ttk bootstrap intro')
 window.geometry('400x300')
 
+label = ttk.Label(window, text = 'Label')
+label.pack(pady = 10)
+
 # run
 window.mainloop()
