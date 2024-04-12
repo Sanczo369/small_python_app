@@ -15,5 +15,8 @@ button1.pack(pady = 10)
 
 button2 = ttk.Button(window, text = 'Warning', bootstyle = 'warning')
 button2.pack(pady = 10)
+
+button3 = ttk.Button(window, text = 'Green', bootstyle = 'success')
+button3.pack(pady = 10)
 # run
 window.mainloop()
