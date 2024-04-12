@@ -10,5 +10,7 @@ window.geometry('400x300')
 label = ttk.Label(window, text = 'Label')
 label.pack(pady = 10)
 
+button1 = ttk.Button(window, text = 'Red', bootstyle = 'danger-outline')
+button1.pack(pady = 10)
 # run
 window.mainloop()
