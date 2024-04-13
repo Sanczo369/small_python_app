@@ -13,5 +13,11 @@ window.title('extra widgets')
 scroll_frame = ScrolledFrame(window)
 scroll_frame.pack(expand = True, fill = 'both')
 
+for i in range(100):
+	frame = ttk.Frame(scroll_frame)
+	ttk.Label(frame, text = f'Label: {i}').pack(fill = 'x', side = 'left')
+	ttk.Button(frame, text = f'Button :{i}').pack(fill = 'x', side = 'left')
+	frame.pack(fill = 'x', expand = True)
+
 # run
 window.mainloop()
