@@ -9,5 +9,9 @@ from ttkbootstrap.widgets import DateEntry, Floodgauge, Meter
 window = ttk.Window(themename = 'darkly')
 window.title('extra widgets')
 
+# scrollable frame
+scroll_frame = ScrolledFrame(window)
+scroll_frame.pack(expand = True, fill = 'both')
+
 # run
 window.mainloop()
