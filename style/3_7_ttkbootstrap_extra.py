@@ -29,5 +29,10 @@ toast = ToastNotification(
 
 ttk.Button(window, text = 'show toast', command = toast.show_toast).pack(pady = 10)
 
+# tooltip
+button = ttk.Button(window, text = 'tooltip button', bootstyle = 'warning')
+button.pack(pady = 10)
+ToolTip(button, text = 'This does something', bootstyle = 'danger-inverse')
+
 # run
 window.mainloop()
