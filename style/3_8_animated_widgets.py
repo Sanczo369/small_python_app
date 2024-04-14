@@ -6,6 +6,15 @@ window = ctk.CTk()
 window.title('Animated Widgets')
 window.geometry('600x400')
 
+
+def infinite_print():
+	global button_x
+	button_x += 0.5
+	if button_x < 10:
+		print('infinite')
+		print(button_x)
+		window.after(100, infinite_print)
+
 # animated widget
 animated_panel = SlidePanel(window, 1.0, 0.7)
 ctk.CTkLabel(animated_panel, text = 'Label 1').pack(expand = True, fill = 'both', padx = 2, pady = 10)
