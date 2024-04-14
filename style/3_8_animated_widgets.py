@@ -15,6 +15,11 @@ def move_btn():
     if button_x < 0.9:
         window.after(10, move_btn)
 
+    # configure
+    # colors = ['red', 'yellow', 'pink', 'green', 'blue', 'black', 'white']
+    # color = choice(colors)
+    # button.configure(fg_color = color)
+
 def infinite_print():
 	global button_x
 	button_x += 0.5
