@@ -7,6 +7,14 @@ window.title('Animated Widgets')
 window.geometry('600x400')
 
 
+def move_btn():
+    global button_x
+    button_x += 0.001
+    button.place(relx=button_x, rely=0.5, anchor='center')
+
+    if button_x < 0.9:
+        window.after(10, move_btn)
+
 def infinite_print():
 	global button_x
 	button_x += 0.5
