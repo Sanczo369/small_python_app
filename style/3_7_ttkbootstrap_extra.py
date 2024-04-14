@@ -52,5 +52,17 @@ progress = ttk.Floodgauge(
 progress.pack(pady = 10, fill = 'x')
 ttk.Scale(window, from_ = 0, to = 100, variable = progress_int).pack()
 
+# meter
+meter = ttk.Meter(
+	window,
+	amounttotal = 100,
+	amountused = 10,
+	interactive = True,
+	metertype = 'semi',
+	subtext = 'some other text',
+	bootstyle = 'danger'
+	)
+meter.pack()
+
 # run
 window.mainloop()
