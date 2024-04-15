@@ -8,5 +8,9 @@ window.title('Combined layout')
 window.geometry('600x600')
 window.minsize(600,600)
 
+# main layout widgets
+menu_frame = ttk.Frame(window)
+main_frame = ttk.Frame(window)
+
 # run
 window.mainloop()
