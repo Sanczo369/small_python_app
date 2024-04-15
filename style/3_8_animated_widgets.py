@@ -23,6 +23,13 @@ class SlidePanel(ctk.CTkFrame):
 		else:
 			self.animate_backwards()
 
+	def animate_forward(self):
+		if self.pos > self.end_pos:
+			self.pos -= 0.008
+			self.place(relx = self.pos, rely = 0.05, relwidth = self.width, relheight = 0.9)
+			self.after(10, self.animate_forward)
+		else:
+			self.in_start_pos = False
 
 
 def move_btn():
