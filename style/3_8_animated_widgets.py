@@ -30,7 +30,17 @@ class SlidePanel(ctk.CTkFrame):
 			self.after(10, self.animate_forward)
 		else:
 			self.in_start_pos = False
+	def animate_backwards(self):
+		if self.pos < self.start_pos:
+			self.pos += 0.008
+			self.place(relx = self.pos, rely = 0.05, relwidth = self.width, relheight = 0.9)
+			self.after(10, self.animate_backwards)
+		else:
+			self.in_start_pos = True
 
+# exercise
+# 1. animate the button and move it to the right side of the window
+# 2. update the panel so it move in from the right
 
 def move_btn():
     global button_x
