@@ -1,10 +1,22 @@
 import customtkinter as ctk
 from random import choice
 
-# window
-window = ctk.CTk()
-window.title('Animated Widgets')
-window.geometry('600x400')
+class SlidePanel(ctk.CTkFrame):
+	def __init__(self, parent, start_pos, end_pos):
+		super().__init__(master = parent)
+
+		# general attributes
+		self.start_pos = start_pos + 0.04
+		self.end_pos = end_pos - 0.03
+		self.width = abs(start_pos - end_pos)
+
+		# animation logic
+		self.pos = self.start_pos
+		self.in_start_pos = True
+
+		# layout
+		self.place(relx = self.start_pos, rely = 0.05, relwidth = self.width, relheight = 0.9)
+
 
 
 def move_btn():
@@ -27,6 +39,11 @@ def infinite_print():
 		print('infinite')
 		print(button_x)
 		window.after(100, infinite_print)
+
+# window
+window = ctk.CTk()
+window.title('Animated Widgets')
+window.geometry('600x400')
 
 # animated widget
 animated_panel = SlidePanel(window, 1.0, 0.7)
