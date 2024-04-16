@@ -30,5 +30,8 @@ menu_toggle2 = ttk.Checkbutton(toggle_frame, text = 'check 2')
 
 entry = ttk.Entry(menu_frame)
 
+# menu layout
+menu_frame.columnconfigure((0,1,2), weight = 1, uniform = 'a')
+menu_frame.rowconfigure((0,1,2,3,4), weight = 1, uniform = 'a')
 # run
 window.mainloop()
