@@ -23,5 +23,12 @@ menu_button3 = ttk.Button(menu_frame, text = 'Button 3')
 
 menu_slider1 = ttk.Scale(menu_frame, orient = 'vertical')
 menu_slider2 = ttk.Scale(menu_frame, orient = 'vertical')
+
+toggle_frame = ttk.Frame(menu_frame)
+menu_toggle1 = ttk.Checkbutton(toggle_frame, text = 'check 1')
+menu_toggle2 = ttk.Checkbutton(toggle_frame, text = 'check 2')
+
+entry = ttk.Entry(menu_frame)
+
 # run
 window.mainloop()
