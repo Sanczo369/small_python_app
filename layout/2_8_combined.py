@@ -45,5 +45,10 @@ menu_slider2.grid(row = 2, column = 2, rowspan = 2, sticky = 'nsew', pady = 20)
 toggle_frame.grid(row = 4, column = 0, columnspan = 3, sticky = 'nsew')
 menu_toggle1.pack(side = 'left', expand = True)
 menu_toggle2.pack(side = 'left', expand = True)
+
+# entry layout
+entry.place(relx = 0.5, rely = 0.95, relwidth = 0.9, anchor = 'center')
+
+
 # run
 window.mainloop()
