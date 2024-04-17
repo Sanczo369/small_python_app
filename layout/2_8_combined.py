@@ -65,5 +65,7 @@ entry_frame2.pack(side = 'left', expand = True, fill = 'both', padx = 20, pady =
 main_label1.pack(expand = True, fill = 'both')
 main_button1.pack(expand = True, fill = 'both', pady = 10)
 
+main_label2.pack(expand = True, fill = 'both')
+main_button2.pack(expand = True, fill = 'both', pady = 10)
 # run
 window.mainloop()
