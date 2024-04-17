@@ -57,5 +57,9 @@ main_button1 = ttk.Button(entry_frame1, text = 'Button 1')
 entry_frame2 = ttk.Frame(main_frame)
 main_label2 = ttk.Label(entry_frame2, text = 'label 2', background = 'blue')
 main_button2 = ttk.Button(entry_frame2, text = 'Button 2')
+
+# main layout
+entry_frame1.pack(side = 'left', expand = True, fill = 'both', padx = 20, pady = 20)
+entry_frame2.pack(side = 'left', expand = True, fill = 'both', padx = 20, pady = 20)
 # run
 window.mainloop()
