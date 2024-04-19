@@ -16,13 +16,13 @@ class App(tk.Tk):
 
         # run
         self.mainloop()
+
 class Menu(ttk.Frame):
-	def __init__(self, parent):
-		super().__init__(parent)
-		self.place(x = 0, y = 0, relwidth = 0.3, relheight = 1)
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.place(x=0, y=0, relwidth=0.3, relheight=1)
 
-		self.create_widgets()
-
+        self.create_widgets()
 
     def create_widgets(self):
         # create the widgets
@@ -52,34 +52,36 @@ class Menu(ttk.Frame):
         menu_slider2.grid(row=2, column=2, rowspan=2, sticky='nsew', pady=20)
 
         # toggle layout
-        toggle_frame.grid(row = 4, column = 0, columnspan = 3, sticky = 'nsew')
-        menu_toggle1.pack(side = 'left', expand = True)
-        menu_toggle2.pack(side = 'left', expand = True)
+        toggle_frame.grid(row=4, column=0, columnspan=3, sticky='nsew')
+        menu_toggle1.pack(side='left', expand=True)
+        menu_toggle2.pack(side='left', expand=True)
 
         # entry layout
         entry.place(relx=0.5, rely=0.95, relwidth=0.9, anchor='center')
+
 class Main(ttk.Frame):
-	def __init__(self, parent):
-		super().__init__(parent)
-		self.place(relx = 0.3, y = 0, relwidth = 0.7, relheight = 1)
-		Entry(self, 'Entry 1','Button 1','green')
-		Entry(self, 'Entry 2','Button 2','blue')
-		Entry(self, 'Entry 3','Button 3','green')
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.place(relx=0.3, y=0, relwidth=0.7, relheight=1)
+        Entry(self, 'Entry 1', 'Button 1', 'green')
+        Entry(self, 'Entry 2', 'Button 2', 'blue')
+        Entry(self, 'Entry 3', 'Button 3', 'green')
+
 
 class Entry(ttk.Frame):
-	def __init__(self, parent, label_text, button_text, label_background):
-		super().__init__(parent)
+    def __init__(self, parent, label_text, button_text, label_background):
+        super().__init__(parent)
 
-		label = ttk.Label(self, text = label_text, background = label_background)
-		button = ttk.Button(self, text = button_text)
+        label = ttk.Label(self, text=label_text, background=label_background)
+        button = ttk.Button(self, text=button_text)
 
-		label.pack(expand = True, fill = 'both')
-		button.pack(expand = True, fill = 'both', pady = 10)
+        label.pack(expand=True, fill='both')
+        button.pack(expand=True, fill='both', pady=10)
 
-		self.pack(side = 'left', expand = True, fill = 'both', padx = 20, pady = 20)
+        self.pack(side='left', expand=True, fill='both', padx=20, pady=20)
 
 # exercise:
 # turn the entry frame with its children into a separate class
 # you should be able to set the color, the label text and the button text via the arguments
 
-App('Class based app', (600,600))
+App('Class based app', (600, 600))
