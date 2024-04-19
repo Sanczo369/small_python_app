@@ -486,10 +486,6 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 
 ## Widget
 - 1_0_window_basic_widgets.py
-- 1_10_frame_parenting.py
-- 1_11_tabs.py
-- 1_12_menus.py
-- 1_13_window.py
 - 1_1_getting_widget_data.py
 - 1_2_tkinter_variables.py
 - 1_2_tkinter_variables_fix.py
@@ -500,6 +496,10 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 1_7_canvas.py
 - 1_8_treeview.py
 - 1_9_sliders.py
+- 1_10_frame_parenting.py
+- 1_11_tabs.py
+- 1_12_menus.py
+- 1_13_window.py
 
 ## Layout
 - 2_0_layout_intro.py
