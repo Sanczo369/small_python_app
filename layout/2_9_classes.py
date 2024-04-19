@@ -77,4 +77,9 @@ class Entry(ttk.Frame):
 		button.pack(expand = True, fill = 'both', pady = 10)
 
 		self.pack(side = 'left', expand = True, fill = 'both', padx = 20, pady = 20)
+
+# exercise:
+# turn the entry frame with its children into a separate class
+# you should be able to set the color, the label text and the button text via the arguments
+
 App('Class based app', (600,600))
