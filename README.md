@@ -503,12 +503,6 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 
 ## Layout
 - 2_0_layout_intro.py
-- 2_10_return.py
-- 2_11_responsive.py
-- 2_12_scroll_basics.py
-- 2_0_layout_intro.py
-- 2_13_scrollable_widgets.py
-- 2_14_multi_window.py
 - 2_1_pack.py
 - 2_2_pack_parenting.py
 - 2_3_grid.py
@@ -518,4 +512,10 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 2_7_toggle_widgets.py
 - 2_8_combined.py
 - 2_9_classes.py
+- 2_10_return.py
+- 2_11_responsive.py
+- 2_12_scroll_basics.py
+- 2_0_layout_intro.py
+- 2_13_scrollable_widgets.py
+- 2_14_multi_window.py
 
