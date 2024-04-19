@@ -520,11 +520,11 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 2_14_multi_window.py
 
 ## Style
-3_0_style_intro.py
-3_2_color.py
-3_3_customtk.py
-3_4_customtk_app.py
-3_5_2_ttkbootstrap_conversion.py
-3_5_ttkbootstrap_intro.py
-3_8_animated_widgets.py
-
+- 3_0_style_intro.py
+- 3_2_color.py
+- 3_3_customtk.py
+- 3_4_customtk_app.py
+- 3_5_2_ttkbootstrap_conversion.py
+- 3_5_ttkbootstrap_intro.py
+- 3_8_animated_widgets.py
+- 3_10_animations
