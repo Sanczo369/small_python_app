@@ -49,6 +49,13 @@ class AnimatedButton(ctk.CTkButton):
 
         return ctk_images
 
+    def trigger_animation(self):
+        if self.animation_status.get() == 'start':
+            self.frame_index = 0
+            self.animation_status.set('forward')
+        if self.animation_status.get() == 'end':
+            self.frame_index = self.animation_length
+            self.animation_status.set('backward')
 # window
 window = ctk.CTk()
 window.title('Animations')
