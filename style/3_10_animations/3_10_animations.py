@@ -22,6 +22,12 @@ class AnimatedButton(ctk.CTkButton):
             command=self.infinite_animate)
         self.pack(expand=True)
 
+    def infinite_animate(self):
+        self.frame_index += 1
+        self.frame_index = 0 if self.frame_index > self.animation_length else self.frame_index
+        self.configure(image=self.frames[self.frame_index])
+        self.after(20, self.infinite_animate)
+
 
 # window
 window = ctk.CTk()
