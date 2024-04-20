@@ -15,6 +15,13 @@ class AnimatedButton(ctk.CTkButton):
 
         self.animation_status.trace('w', self.animate)
 
+        super().__init__(
+            master=parent,
+            text='A animated button',
+            image=self.frames[self.frame_index],
+            command=self.infinite_animate)
+        self.pack(expand=True)
+
 
 # window
 window = ctk.CTk()
