@@ -486,10 +486,6 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 
 ## Widget
 - 1_0_window_basic_widgets.py
-- 1_10_frame_parenting.py
-- 1_11_tabs.py
-- 1_12_menus.py
-- 1_13_window.py
 - 1_1_getting_widget_data.py
 - 1_2_tkinter_variables.py
 - 1_2_tkinter_variables_fix.py
@@ -500,15 +496,13 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 1_7_canvas.py
 - 1_8_treeview.py
 - 1_9_sliders.py
+- 1_10_frame_parenting.py
+- 1_11_tabs.py
+- 1_12_menus.py
+- 1_13_window.py
 
 ## Layout
 - 2_0_layout_intro.py
-- 2_10_return.py
-- 2_11_responsive.py
-- 2_12_scroll_basics.py
-- 2_0_layout_intro.py
-- 2_13_scrollable_widgets.py
-- 2_14_multi_window.py
 - 2_1_pack.py
 - 2_2_pack_parenting.py
 - 2_3_grid.py
@@ -518,4 +512,19 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - 2_7_toggle_widgets.py
 - 2_8_combined.py
 - 2_9_classes.py
+- 2_10_return.py
+- 2_11_responsive.py
+- 2_12_scroll_basics.py
+- 2_0_layout_intro.py
+- 2_13_scrollable_widgets.py
+- 2_14_multi_window.py
 
+## Style
+- 3_0_style_intro.py
+- 3_2_color.py
+- 3_3_customtk.py
+- 3_4_customtk_app.py
+- 3_5_2_ttkbootstrap_conversion.py
+- 3_5_ttkbootstrap_intro.py
+- 3_8_animated_widgets.py
+- 3_10_animations
