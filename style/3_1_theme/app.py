@@ -17,4 +17,11 @@ class App(tk.Tk):
         # run
         self.mainloop()
 
+class Menu(ttk.Frame):
+	def __init__(self, parent):
+		super().__init__(parent)
+		self.place(x = 0, y = 0, relwidth = 0.3, relheight = 1)
+
+		self.create_widgets()
+
 App('Class based app', (600,600))
