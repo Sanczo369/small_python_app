@@ -40,4 +40,8 @@ class Menu(ttk.Frame):
 
         entry = ttk.Entry(self)
 
+        # create the grid
+        self.columnconfigure((0, 1, 2), weight=1, uniform='a')
+        self.rowconfigure((0, 1, 2, 3, 4), weight=1, uniform='a')
+
 App('Class based app', (600,600))
