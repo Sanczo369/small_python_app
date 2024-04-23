@@ -40,6 +40,31 @@ def fill_image(event):
 		anchor = 'center',
 		image = resized_tk)
 
+def show_full_image(event):
+	global resized_tk
+
+	# current ratio
+	canvas_ratio = event.width / event.height
+
+	# get coordinates
+	if canvas_ratio > image_ratio: # canvas is wider than the image
+		height = int(event.height)
+		width = int(height * image_ratio)
+	else: # canvas is narrower than the image
+		width = int(event.width)
+		height = int(width / image_ratio)
+
+
+
+	resized_image = image_original.resize((width, height))
+	resized_tk = ImageTk.PhotoImage(resized_image)
+	canvas.create_image(
+		int(event.width / 2),
+		int(event.height / 2),
+		anchor = 'center',
+		image = resized_tk)
+
+
 # setup
 window = tk.Tk()
 window.geometry('600x400')
