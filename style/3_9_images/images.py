@@ -52,6 +52,11 @@ button_ctk.pack(pady = 10)
 
 button_frame.grid(column = 0, row = 0, sticky = 'nsew')
 
+# canvas -> image
+canvas = tk.Canvas(window, background = 'black', bd = 0, highlightthickness = 0, relief = 'ridge')
+canvas.grid(column = 1, columnspan = 3, row = 0, sticky = 'nsew')
+
+canvas.bind('<Configure>', show_full_image)
 
 # run
 window.mainloop()
