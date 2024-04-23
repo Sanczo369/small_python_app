@@ -64,6 +64,8 @@ def show_full_image(event):
 		anchor = 'center',
 		image = resized_tk)
 
+# exercise:
+# create a third scaling behaviour to always show the full image without cutting off parts
 
 # setup
 window = tk.Tk()
