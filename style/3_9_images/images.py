@@ -40,6 +40,18 @@ img_ctk = ctk.CTkImage(
 	light_image = Image.open('python_dark.png'),
 	dark_image = Image.open('python_light.png'))
 
+# widget
+# label = ttk.Label(window, text = 'raccoon', image = image_tk)
+# label.pack()
+button_frame = ttk.Frame(window)
+button = ttk.Button(button_frame, text = '   A button', image = python_dark_tk, compound = 'left')
+button.pack(pady = 10)
+
+button_ctk = ctk.CTkButton(button_frame, text = 'A button', image = img_ctk, compound = 'left')
+button_ctk.pack(pady = 10)
+
+button_frame.grid(column = 0, row = 0, sticky = 'nsew')
+
 
 # run
 window.mainloop()
