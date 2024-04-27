@@ -14,7 +14,7 @@ window.geometry('800x500')
 
 # ttk label
 label = ttk.Label(master = window, text = 'This is a test')
-label.pack(
+label.pack()
 
 # tk.text
 text = tk.Text(master = window)
