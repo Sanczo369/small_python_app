@@ -485,6 +485,7 @@ Ten projekt można zastosować w dowolnym sklepie. Użytkownik może przechowywa
 - messagebox
 
 ## Widget
+- python.ico
 - 1_0_window_basic_widgets.py
 - 1_1_getting_widget_data.py
 - 1_2_tkinter_variables.py
