@@ -84,4 +84,14 @@ menubar.add_cascade(label="About",  menu=aboutmenu)
 # Returning defined setting for widget
 root.config(menu=menubar)
 
+#
+# Step 4: Adding top label to hold top and left labels
+# we have colored it for now to differentiate it from the main window
+#
+shortcutbar = Frame(root,  height=25, bg='light sea green')
+shortcutbar.pack(expand=NO, fill=X)
+lnlabel = Label(root,  width=2,  bg = 'antique white')
+lnlabel.pack(side=LEFT, anchor='nw', fill=Y)
+
+
 
