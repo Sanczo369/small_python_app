@@ -46,3 +46,33 @@ editmenu.add_separator()
 editmenu.add_command(label="Select All", underline=7, accelerator='Ctrl+A')
 menubar.add_cascade(label="Edit", menu=editmenu)
 
+#View menu -
+viewmenu = Menu(menubar, tearoff=0)
+showln = IntVar()
+showln.set(1)
+viewmenu.add_checkbutton(label="Show Line Number", variable=showln)
+showinbar = IntVar()
+showinbar.set(1)
+viewmenu.add_checkbutton(label="Show Info Bar at Bottom", variable=showinbar)
+hltln = IntVar()
+viewmenu.add_checkbutton(label="Highlight Current Line", onvalue=1, offvalue=0, variable=hltln)
+themesmenu = Menu(menubar, tearoff=0)
+viewmenu.add_cascade(label="Themes", menu=themesmenu)
+
+#we define a color scheme dictionary containg name and color code as key value pair
+clrschms = {
+'1. Default White': 'FFFFFF',
+'2. Greygarious Grey':'D1D4D1',
+'3. Lovely Lavender':'E1E1FF' ,
+'4. Aquamarine': 'D1E7E0',
+'5. Bold Beige': 'FFF0E1',
+'6. Cobalt Blue':'333AA',
+'7. Olive Green': '5B8340',
+}
+
+themechoice= StringVar()
+themechoice.set('1. Default White')
+for k in sorted(clrschms):
+    themesmenu.add_radiobutton(label=k, variable=themechoice)
+menubar.add_cascade(label="View", menu=viewmenu)
+
