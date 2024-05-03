@@ -169,6 +169,9 @@ aboutmenu.add_command(label="Help")
 menubar.add_cascade(label="About",  menu=aboutmenu)
 
 
+# Returning defined setting for widget
+
+root.config(menu=menubar)
 
 
 
