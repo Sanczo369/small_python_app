@@ -106,112 +106,63 @@ menubar.add_cascade(label="Edit", menu=editmenu)
 #View menu -
 
 viewmenu = Menu(menubar, tearoff=0)
-
 showln = IntVar()
-
 showln.set(1)
-
 viewmenu.add_checkbutton(label="Show Line Number", variable=showln)
-
 showinbar = IntVar()
-
 showinbar.set(1)
-
 viewmenu.add_checkbutton(label="Show Info Bar at Bottom", variable=showinbar)
-
 hltln = IntVar()
-
 viewmenu.add_checkbutton(label="Highlight Current Line", onvalue=1, offvalue=0, variable=hltln)
-
 themesmenu = Menu(menubar, tearoff=0)
-
 viewmenu.add_cascade(label="Themes", menu=themesmenu)
-
 
 #we define a color scheme dictionary containg name and color code as key value pair
 
 clrschms = {
-
 '1. Default White': 'FFFFFF',
-
 '2. Greygarious Grey':'D1D4D1',
-
 '3. Lovely Lavender':'E1E1FF' ,
-
 '4. Aquamarine': 'D1E7E0',
-
 '5. Bold Beige': 'FFF0E1',
-
 '6. Cobalt Blue':'333AA',
-
 '7. Olive Green': '5B8340',
-
 }
 
 themechoice= StringVar()
-
 themechoice.set('1. Default White')
-
 for k in sorted(clrschms):
-
     themesmenu.add_radiobutton(label=k, variable=themechoice)
-
 menubar.add_cascade(label="View", menu=viewmenu)
 
 # About menu - Aboutus, Help
-
 aboutmenu = Menu(menubar, tearoff=0)
-
 aboutmenu.add_command(label="About")
-
 aboutmenu.add_command(label="Help")
-
 menubar.add_cascade(label="About",  menu=aboutmenu)
 
-
 # Returning defined setting for widget
-
 root.config(menu=menubar)
 
-
 #
-
 # Adding top label to hold and left labels
-
 # we have colored it for now to differentiate it from the main window
-
 #
-
 
 shortcutbar = Frame(root,  height=25, bg='light sea green')
-
 shortcutbar.pack(expand=NO, fill=X)
-
 lnlabel = Label(root,  width=2,  bg = 'antique white')
-
 lnlabel.pack(side=LEFT, anchor='nw', fill=Y)
 
-
 #
-
 # Adding Text Widget & ScrollBar widget
-
 #
-
 
 textPad = Text(root, undo=True)
-
 textPad.pack(expand=YES, fill=BOTH)
-
 scroll=Scrollbar(textPad)
-
 textPad.configure(yscrollcommand=scroll.set)
-
 scroll.config(command=textPad.yview)
-
 scroll.pack(side=RIGHT,fill=Y)
-
-
-
 
 root.mainloop()
