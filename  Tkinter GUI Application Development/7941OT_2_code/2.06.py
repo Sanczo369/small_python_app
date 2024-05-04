@@ -11,5 +11,8 @@ import tkFileDialog
 
 root = Tk()
 
+def askopenfile():
+    tkFileDialog.askopenfile(mode='r')
+
 
 root.mainloop()
