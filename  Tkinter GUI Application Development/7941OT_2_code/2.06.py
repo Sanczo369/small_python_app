@@ -14,5 +14,7 @@ root = Tk()
 def askopenfile():
     tkFileDialog.askopenfile(mode='r')
 
+def askopenfilename():
+    tkFileDialog.askopenfilename()
 
 root.mainloop()
