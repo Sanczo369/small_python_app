@@ -16,4 +16,10 @@ t = Toplevel(root)
 Label(t, text='I am a transient window of root\n I always stay on top of my parent\n I get hidden if my parent window is minimized').pack()
 t.transient(root)
 
+#no window decoration
+nw = Toplevel(root, bg='black')
+Label(nw, text='I am a top-level with no window manager\n I cannot be resized or moved', bg='black', fg='white').pack()
+nw.overrideredirect(1)
+nw.geometry('250x100+700+500')
+
 root.mainloop()
