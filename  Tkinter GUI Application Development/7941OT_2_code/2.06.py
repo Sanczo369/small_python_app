@@ -23,5 +23,8 @@ def asksaveasFile():
 def asksaveasfilename():
     tkFileDialog.asksaveasfilename()
 
+def askDirectory():
+    tkFileDialog.askdirectory()
+
 
 root.mainloop()
