@@ -20,5 +20,8 @@ def askopenfilename():
 def asksaveasFile():
     tkFileDialog.asksaveasfile()
 
+def asksaveasfilename():
+    tkFileDialog.asksaveasfilename()
+
 
 root.mainloop()
