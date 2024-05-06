@@ -51,5 +51,19 @@ def save():
     except:
         save_as()
 
+#Defining save_as method
+
+def save_as():
+    try:
+        # Getting a filename to save the file.
+        f = tkFileDialog.asksaveasfilename(initialfile='Untitled.txt',defaultextension=".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
+        fh = open(f, 'w')
+        textoutput = textPad.get(0.0, END)
+        fh.write(textoutput)
+        fh.close()
+        root.title(os.path.basename(f) + " - pyPad") # Setting the title of the root widget.
+    except:
+        pass
+
 
 root.mainloop()
