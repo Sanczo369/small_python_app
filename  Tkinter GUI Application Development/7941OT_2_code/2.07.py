@@ -66,4 +66,8 @@ def save_as():
         pass
 
 
+def select_all():
+        textPad.tag_add('sel', '1.0', 'end')
+
+
 root.mainloop()
