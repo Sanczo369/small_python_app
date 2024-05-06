@@ -88,5 +88,10 @@ def on_find():
                                                                                                                 padx=2,
                                                                                                                 pady=2)
 
+    def close_search():
+        textPad.tag_remove('match', '1.0', END)
+        t2.destroy()
+    t2.protocol('WM_DELETE_WINDOW', close_search)  # override close button
+
 
 root.mainloop()
