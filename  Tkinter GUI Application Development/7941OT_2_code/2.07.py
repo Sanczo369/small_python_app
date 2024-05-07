@@ -190,7 +190,6 @@ for k in sorted(clrschms):
     themesmenu.add_radiobutton(label=k, variable=themechoice)
 menubar.add_cascade(label="View", menu=viewmenu)
 
-
 # About menu - Aboutus, Help
 aboutmenu = Menu(menubar, tearoff=0)
 aboutmenu.add_command(label="About")
@@ -200,14 +199,10 @@ menubar.add_cascade(label="About",  menu=aboutmenu)
 # Returning defined setting for widget
 root.config(menu=menubar)
 
-
-
 #
 # Adding top label to hold and left labels
 # we have colored it for now to differentiate it from the main window
 #
-
-
 shortcutbar = Frame(root,  height=25, bg='light sea green')
 shortcutbar.pack(expand=NO, fill=X)
 lnlabel = Label(root,  width=2,  bg = 'antique white')
@@ -217,14 +212,11 @@ lnlabel.pack(side=LEFT, anchor='nw', fill=Y)
 #
 # Adding Text Widget & ScrollBar widget
 #
-
 textPad = Text(root, undo=True)
 textPad.pack(expand=YES, fill=BOTH)
 scroll=Scrollbar(textPad)
 textPad.configure(yscrollcommand=scroll.set)
 scroll.config(command=textPad.yview)
 scroll.pack(side=RIGHT,fill=Y)
-
-
 
 root.mainloop()
