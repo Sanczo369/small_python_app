@@ -161,6 +161,18 @@ editmenu.add_separator()
 editmenu.add_command(label="Select All", underline=7, accelerator='Ctrl+A', command=select_all)
 menubar.add_cascade(label="Edit", menu=editmenu)
 
+#View menu -
+viewmenu = Menu(menubar, tearoff=0)
+showln = IntVar()
+showln.set(1)
+viewmenu.add_checkbutton(label="Show Line Number", variable=showln)
+showinbar = IntVar()
+showinbar.set(1)
+viewmenu.add_checkbutton(label="Show Info Bar at Bottom", variable=showinbar)
+hltln = IntVar()
+viewmenu.add_checkbutton(label="Highlight Current Line", onvalue=1, offvalue=0, variable=hltln)
+themesmenu = Menu(menubar, tearoff=0)
+viewmenu.add_cascade(label="Themes", menu=themesmenu)
 
 
 root.mainloop()
