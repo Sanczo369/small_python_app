@@ -36,6 +36,14 @@ def retrycancel():
     tkMessageBox.askretrycancel("Retry", "Load Failed")
 
 
+Button(fr1, text='warning', command=warn).pack(opt)
+Button(fr1, text='info', command=info).pack(opt)
+Button(fr1, text='error', command=error).pack(opt)
+Button(fr1, text='question', command=question).pack(opt)
+Button(fr2, text='okcancel', command=okcancel).pack(opt)
+Button(fr2, text='yesno', command=yesno).pack(opt)
+Button(fr2, text='retrycancel', command=retrycancel).pack(opt)
+
 
 fr1.pack()
 fr2.pack()
