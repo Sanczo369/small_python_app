@@ -136,5 +136,18 @@ def copy():
 def paste():
     textPad.event_generate("<<Paste>>")
 
+######################################################################
+
+
+#defining icons for compund menu demonstration
+newicon = PhotoImage(file='icons/new_file.gif')
+openicon = PhotoImage(file='icons/open_file.gif')
+saveicon = PhotoImage(file='icons/Save.gif')
+cuticon = PhotoImage(file='icons/Cut.gif')
+copyicon = PhotoImage(file='icons/Copy.gif')
+pasteicon = PhotoImage(file='icons/Paste.gif')
+undoicon = PhotoImage(file='icons/Undo.gif')
+redoicon = PhotoImage(file='icons/Redo.gif')
+menubar = Menu(root)
 
 root.mainloop()
