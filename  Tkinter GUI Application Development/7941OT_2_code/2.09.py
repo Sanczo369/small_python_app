@@ -211,6 +211,18 @@ menubar.add_cascade(label="About",  menu=aboutmenu)
 
 
 #
+# Adding top label to hold and left labels
+# we have colored it for now to differentiate it from the main window
+#
+
+shortcutbar = Frame(root,  height=25, bg='light sea green')
+shortcutbar.pack(expand=NO, fill=X)
+lnlabel = Label(root,  width=2,  bg = 'antique white')
+lnlabel.pack(side=LEFT, anchor='nw', fill=Y)
+
+
+
+#
 # Adding Text Widget & ScrollBar widget
 #
 
