@@ -209,6 +209,9 @@ aboutmenu.add_command(label="About", command=about)
 aboutmenu.add_cascade(label="Help", command=help_box)
 menubar.add_cascade(label="About",  menu=aboutmenu)
 
+# Returning defined setting for widget
+root.config(menu=menubar)
+
 
 #
 # Adding top label to hold and left labels
