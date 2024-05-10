@@ -210,5 +210,15 @@ aboutmenu.add_cascade(label="Help", command=help_box)
 menubar.add_cascade(label="About",  menu=aboutmenu)
 
 
+#
+# Adding Text Widget & ScrollBar widget
+#
+
+textPad = Text(root, undo=True)
+textPad.pack(expand=YES, fill=BOTH)
+scroll=Scrollbar(textPad)
+textPad.configure(yscrollcommand=scroll.set)
+scroll.config(command=textPad.yview)
+scroll.pack(side=RIGHT,fill=Y)
 
 root.mainloop()
