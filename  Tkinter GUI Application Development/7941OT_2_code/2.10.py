@@ -62,6 +62,18 @@ def new_file():
     textPad.delete(1.0,END)
     update_line_number()
 
+def open_file():
+    global filename
+    filename = tkFileDialog.askopenfilename(defaultextension=".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
+    if filename == "": # If no file chosen.
+        filename = None # Absence of file.
+    else:
+        root.title(os.path.basename(filename) + " - pyPad") # Returning the basename of 'file'
+        textPad.delete(1.0,END)
+        fh = open(filename,"r")
+        textPad.insert(1.0,fh.read())
+        fh.close()
+    update_line_number()
 
 
 root.mainloop()
