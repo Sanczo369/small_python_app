@@ -37,5 +37,10 @@ def toggle_highlight(event=None):
     val = hltln.get()
     undo_highlight() if not val else highlight_line()
 
+##########################################################################
+
+#Defining about method
+def about(event=None):
+    tkMessageBox.showinfo("About","Tkinter GUI Application\n Development Hotshot")
 
 root.mainloop()
