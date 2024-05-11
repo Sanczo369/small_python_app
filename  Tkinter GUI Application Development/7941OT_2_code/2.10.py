@@ -47,6 +47,11 @@ def about(event=None):
 def help_box(event=None):
     tkMessageBox.showinfo("Help","For help refer to book:\n Tkinter GUI Application\n Development Hotshot", icon='question')
 
+def exit_editor(event=None):
+    if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
+        root.destroy()
+
+
 
 
 
