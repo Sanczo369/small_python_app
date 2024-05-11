@@ -53,6 +53,14 @@ def exit_editor(event=None):
 
 root.protocol('WM_DELETE_WINDOW', exit_editor) # override close button and redirect to exit_editor
 
+#######################################################################
+
+def new_file():
+    root.title("Untitled")
+    global filename
+    filename = None
+    textPad.delete(1.0,END)
+    update_line_number()
 
 
 
