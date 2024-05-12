@@ -150,5 +150,8 @@ def undo():
     textPad.event_generate("<<Undo>>")
     update_line_number()
 
+def redo():
+    textPad.event_generate("<<Redo>>")
+    update_line_number()
 
 root.mainloop()
