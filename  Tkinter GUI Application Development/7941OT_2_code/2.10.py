@@ -145,4 +145,10 @@ def on_find():
         e.focus_set()
         t2.title('%d matches found' % count)
 
+
+def undo():
+    textPad.event_generate("<<Undo>>")
+    update_line_number()
+
+
 root.mainloop()
