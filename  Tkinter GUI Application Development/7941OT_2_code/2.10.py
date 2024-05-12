@@ -104,4 +104,11 @@ def save_as():
         pass
 
 
+#########################################################################
+# demo of indexing and tagging features of text widget
+
+def select_all():
+    textPad.tag_add('sel', '1.0', 'end')
+
+
 root.mainloop()
