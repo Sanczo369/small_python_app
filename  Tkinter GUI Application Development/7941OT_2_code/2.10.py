@@ -239,5 +239,16 @@ menubar.add_cascade(label="About",  menu=aboutmenu)
 # Returning defined setting for widget
 root.config(menu=menubar)
 
+shortcutbar = Frame(root,  height=25)
+
+#creating icon toolbar
+icons = ['new_file' ,'open_file', 'save', 'cut', 'copy', 'paste', 'undo', 'redo','on_find', 'about']
+for i, icon in enumerate(icons):
+    tbicon = PhotoImage(file='icons/'+icon+'.gif')
+    cmd = eval(icon)
+    toolbar = Button(shortcutbar, image=tbicon, command=cmd)
+    toolbar.image = tbicon
+    toolbar.pack(side=LEFT)
+
 
 root.mainloop()
