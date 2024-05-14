@@ -261,5 +261,9 @@ textPad.configure(yscrollcommand=scroll.set)
 scroll.config(command=textPad.yview)
 scroll.pack(side=RIGHT,fill=Y)
 
+#aDD events
+textPad.bind("<Any-KeyPress>", update_line_number)
+textPad.tag_configure("active_line", background="ivory2")
+
 
 root.mainloop()
