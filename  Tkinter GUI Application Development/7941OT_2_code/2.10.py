@@ -250,6 +250,13 @@ for i, icon in enumerate(icons):
     toolbar.image = tbicon
     toolbar.pack(side=LEFT)
 
+shortcutbar.pack(expand=NO, fill=X)
+
+lnlabel = Label(root,  width=2,  bg = 'antique white')
+lnlabel.pack(side=LEFT,  fill=Y)
+
+
+
 #
 # Adding Text Widget & ScrollBar widget
 #
