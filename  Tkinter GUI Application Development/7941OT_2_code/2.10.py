@@ -250,5 +250,16 @@ for i, icon in enumerate(icons):
     toolbar.image = tbicon
     toolbar.pack(side=LEFT)
 
+#
+# Adding Text Widget & ScrollBar widget
+#
+
+textPad = Text(root, undo=True)
+textPad.pack(expand=YES, fill=BOTH)
+scroll=Scrollbar(textPad)
+textPad.configure(yscrollcommand=scroll.set)
+scroll.config(command=textPad.yview)
+scroll.pack(side=RIGHT,fill=Y)
+
 
 root.mainloop()
