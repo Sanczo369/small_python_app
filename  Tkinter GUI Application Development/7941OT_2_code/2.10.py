@@ -239,6 +239,12 @@ menubar.add_cascade(label="About",  menu=aboutmenu)
 # Returning defined setting for widget
 root.config(menu=menubar)
 
+#
+# Adding Shortcut Icon Toolbar
+#
+#
+
+
 shortcutbar = Frame(root,  height=25)
 
 #creating icon toolbar
@@ -254,8 +260,6 @@ shortcutbar.pack(expand=NO, fill=X)
 
 lnlabel = Label(root,  width=2,  bg = 'antique white')
 lnlabel.pack(side=LEFT,  fill=Y)
-
-
 
 #
 # Adding Text Widget & ScrollBar widget
