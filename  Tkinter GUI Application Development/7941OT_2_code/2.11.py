@@ -14,4 +14,10 @@ root = Tk()
 root.geometry('350x350')
 
 
+
+#Add events
+textPad.bind("<Any-KeyPress>", update_line_number)
+textPad.tag_configure("active_line", background="ivory2")
+
+
 root.mainloop()
