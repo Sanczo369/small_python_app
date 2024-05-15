@@ -13,6 +13,16 @@ import tkMessageBox
 root = Tk()
 root.geometry('350x350')
 
+#creating icon toolbar
+icons = ['new_file' ,'open_file', 'save', 'cut', 'copy', 'paste', 'undo', 'redo','on_find', 'about']
+for i, icon in enumerate(icons):
+    tbicon = PhotoImage(file='icons/'+icon+'.gif')
+    cmd = eval(icon)
+    toolbar = Button(shortcutbar, image=tbicon, command=cmd)
+    toolbar.image = tbicon
+    toolbar.pack(side=LEFT)
+
+
 
 shortcutbar.pack(expand=NO, fill=X)
 
