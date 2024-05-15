@@ -14,6 +14,12 @@ root = Tk()
 root.geometry('350x350')
 
 
+shortcutbar.pack(expand=NO, fill=X)
+
+lnlabel = Label(root,  width=2,  bg = 'antique white')
+lnlabel.pack(side=LEFT,  fill=Y)
+
+
 #
 # Adding Text Widget & ScrollBar widget
 #
