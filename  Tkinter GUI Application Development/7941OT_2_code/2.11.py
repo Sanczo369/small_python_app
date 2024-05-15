@@ -13,6 +13,13 @@ import tkMessageBox
 root = Tk()
 root.geometry('350x350')
 
+# About menu - Aboutus, Help
+aboutmenu = Menu(menubar, tearoff=0)
+aboutmenu.add_command(label="About", command=about)
+aboutmenu.add_cascade(label="Help", command=help_box)
+menubar.add_cascade(label="About",  menu=aboutmenu)
+
+
 #creating icon toolbar
 icons = ['new_file' ,'open_file', 'save', 'cut', 'copy', 'paste', 'undo', 'redo','on_find', 'about']
 for i, icon in enumerate(icons):
