@@ -28,6 +28,15 @@ aboutmenu.add_command(label="About", command=about)
 aboutmenu.add_cascade(label="Help", command=help_box)
 menubar.add_cascade(label="About",  menu=aboutmenu)
 
+#theme choice
+
+def theme(event=None):
+        global bgc,fgc
+        val = themechoice.get()
+        clrs = clrschms.get(val)
+        fgc, bgc = clrs.split('.')
+        fgc, bgc = '#'+fgc, '#'+bgc
+        textPad.config(bg=bgc, fg=fgc)
 
 #creating icon toolbar
 icons = ['new_file' ,'open_file', 'save', 'cut', 'copy', 'paste', 'undo', 'redo','on_find', 'about']
