@@ -38,6 +38,18 @@ def theme(event=None):
         fgc, bgc = '#'+fgc, '#'+bgc
         textPad.config(bg=bgc, fg=fgc)
 
+#Displaying Line Numbers
+
+def update_line_number(event=None):
+    txt = ''
+    if showln.get():
+        endline, endcolumn = textPad.index('end-1c').split('.')
+        txt = '\n'.join(map(str, range(1, int(endline))))
+    lnlabel.config(text=txt, anchor='nw')
+
+
+
+
 #creating icon toolbar
 icons = ['new_file' ,'open_file', 'save', 'cut', 'copy', 'paste', 'undo', 'redo','on_find', 'about']
 for i, icon in enumerate(icons):
