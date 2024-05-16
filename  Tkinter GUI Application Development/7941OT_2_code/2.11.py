@@ -13,6 +13,15 @@ import tkMessageBox
 root = Tk()
 root.geometry('350x350')
 
+
+def show_info_bar():
+    val = showinbar.get()
+    if val:
+        infobar.pack(expand=NO, fill=None, side=RIGHT, anchor='se')
+    elif not val:
+        infobar.pack_forget()
+
+
 # About menu - Aboutus, Help
 aboutmenu = Menu(menubar, tearoff=0)
 aboutmenu.add_command(label="About", command=about)
