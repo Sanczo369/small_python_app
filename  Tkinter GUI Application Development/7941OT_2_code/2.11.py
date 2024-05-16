@@ -73,6 +73,9 @@ shortcutbar.pack(expand=NO, fill=X)
 lnlabel = Label(root,  width=2,  bg = 'antique white')
 lnlabel.pack(side=LEFT,  fill=Y)
 
+def toggle_highlight(event=None):
+    val = hltln.get()
+    undo_highlight() if not val else highlight_line()
 
 #
 # Adding Text Widget & ScrollBar widget
