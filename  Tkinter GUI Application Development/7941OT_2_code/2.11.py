@@ -82,6 +82,11 @@ def toggle_highlight(event=None):
 def about(event=None):
     tkMessageBox.showinfo("About","Tkinter GUI Application\n Development Hotshot")
 
+#Defining help method
+def help_box(event=None):
+    tkMessageBox.showinfo("Help","For help refer to book:\n Tkinter GUI Application\n Development Hotshot", icon='question')
+
+
 #
 # Adding Text Widget & ScrollBar widget
 #
