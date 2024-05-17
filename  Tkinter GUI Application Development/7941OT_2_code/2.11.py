@@ -90,6 +90,7 @@ def exit_editor(event=None):
     if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
         root.destroy()
 
+root.protocol('WM_DELETE_WINDOW', exit_editor) # override close button and redirect to exit_editor
 
 #
 # Adding Text Widget & ScrollBar widget
