@@ -113,6 +113,17 @@ def open_file():
         fh.close()
     update_line_number()
 
+#Defining save method
+
+def save():
+        global filename
+        try:
+            f = open(filename, 'w')
+            letter = textPad.get(1.0, 'end')
+            f.write(letter)
+            f.close()
+        except:
+            save_as()
 
 #
 # Adding Text Widget & ScrollBar widget
