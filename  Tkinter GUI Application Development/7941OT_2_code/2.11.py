@@ -180,6 +180,12 @@ def search_for(needle, cssnstv, textPad, t2, e):
     t2.title('%d matches found' % count)
 
 
+########################################################################
+# Levaraging built in text widget functionalities
+def undo():
+    textPad.event_generate("<<Undo>>")
+    update_line_number()
+
 #
 # Adding Text Widget & ScrollBar widget
 #
