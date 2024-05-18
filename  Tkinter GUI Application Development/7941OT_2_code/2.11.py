@@ -185,6 +185,10 @@ def search_for(needle, cssnstv, textPad, t2, e):
 def undo():
     textPad.event_generate("<<Undo>>")
     update_line_number()
+def redo():
+    textPad.event_generate("<<Redo>>")
+    update_line_number()
+
 
 #
 # Adding Text Widget & ScrollBar widget
