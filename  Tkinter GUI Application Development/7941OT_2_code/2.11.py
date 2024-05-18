@@ -158,7 +158,9 @@ def on_find():
         Checkbutton(t2, text='Ignore Case', variable=c).grid(row=1, column=1, sticky='e', padx=2, pady=2)
         Button(t2, text="Find All", underline=0, command=lambda: search_for(v.get(), c.get(), textPad, t2, e)).grid(
             row=0, column=2, sticky='e' + 'w', padx=2, pady=2)
-
+        def close_search():
+            textPad.tag_remove('match', '1.0', END)
+            t2.destroy()
         t2.protocol('WM_DELETE_WINDOW', close_search)  # override close button
 
 
