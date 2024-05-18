@@ -163,6 +163,22 @@ def on_find():
         t2.destroy()
     t2.protocol('WM_DELETE_WINDOW', close_search)  # override close button
 
+def search_for(needle, cssnstv, textPad, t2, e):
+    textPad.tag_remove('match', '1.0', END)
+    count = 0
+    if needle:
+        pos = '1.0'
+        while True:
+            pos = textPad.search(needle, pos, nocase=cssnstv, stopindex=END)
+            if not pos: break
+            lastpos = '%s+%dc' % (pos, len(needle))
+            textPad.tag_add('match', pos, lastpos)
+            count += 1
+            pos = lastpos
+        textPad.tag_config('match', foreground='red', background='yellow')
+    e.focus_set()
+    t2.title('%d matches found' % count)
+
 
 #
 # Adding Text Widget & ScrollBar widget
