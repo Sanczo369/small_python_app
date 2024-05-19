@@ -226,6 +226,15 @@ undoicon = PhotoImage(file='icons/Undo.gif')
 redoicon = PhotoImage(file='icons/Redo.gif')
 menubar = Menu(root)
 
+# File menu,for open,save,save as and quit
+filemenu = Menu(menubar, tearoff=0 )
+filemenu.add_command(label="New", accelerator='Ctrl+N', compound=LEFT, image=newicon, underline=0, command=new_file  )
+filemenu.add_command(label="Open", accelerator='Ctrl+O', compound=LEFT, image=openicon, underline =0, command=open_file)
+filemenu.add_command(label="Save", accelerator='Ctrl+S',compound=LEFT, image=saveicon,underline=0, command=save)
+filemenu.add_command(label="Save as",accelerator='Shift+Ctrl+S', command=save_as)
+filemenu.add_separator()
+filemenu.add_command(label="Exit", accelerator='Alt+F4', command=exit_editor)
+menubar.add_cascade(label="File", menu=filemenu)
 
 
 
