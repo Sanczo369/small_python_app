@@ -213,6 +213,23 @@ textPad.configure(yscrollcommand=scroll.set)
 scroll.config(command=textPad.yview)
 scroll.pack(side=RIGHT,fill=Y)
 
+######################################################################
+
+#defining icons for compund menu demonstration
+newicon = PhotoImage(file='icons/new_file.gif')
+openicon = PhotoImage(file='icons/open_file.gif')
+saveicon = PhotoImage(file='icons/Save.gif')
+cuticon = PhotoImage(file='icons/Cut.gif')
+copyicon = PhotoImage(file='icons/Copy.gif')
+pasteicon = PhotoImage(file='icons/Paste.gif')
+undoicon = PhotoImage(file='icons/Undo.gif')
+redoicon = PhotoImage(file='icons/Redo.gif')
+menubar = Menu(root)
+
+
+
+
+
 ########################################
 
 
