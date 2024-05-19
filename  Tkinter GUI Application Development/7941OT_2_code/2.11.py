@@ -189,6 +189,9 @@ def redo():
     textPad.event_generate("<<Redo>>")
     update_line_number()
 
+def cut():
+    textPad.event_generate("<<Cut>>")
+    update_line_number()
 
 #
 # Adding Text Widget & ScrollBar widget
