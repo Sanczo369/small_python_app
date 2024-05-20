@@ -280,6 +280,11 @@ for k in sorted(clrschms):
 menubar.add_cascade(label="View", menu=viewmenu)
 
 
+# About menu - Aboutus, Help
+aboutmenu = Menu(menubar, tearoff=0)
+aboutmenu.add_command(label="About", command=about)
+aboutmenu.add_cascade(label="Help", command=help_box)
+menubar.add_cascade(label="About",  menu=aboutmenu)
 
 ########################################
 
