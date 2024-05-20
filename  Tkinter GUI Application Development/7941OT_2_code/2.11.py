@@ -306,6 +306,16 @@ lnlabel = Label(root,  width=2,  bg = 'antique white')
 lnlabel.pack(side=LEFT,  fill=Y)
 
 
+#
+# Adding Text Widget & ScrollBar widget
+#
+
+textPad = Text(root, wrap=WORD, undo=True)
+textPad.pack(expand=YES, fill=BOTH)
+scroll=Scrollbar(textPad)
+textPad.configure(yscrollcommand=scroll.set)
+scroll.config(command=textPad.yview)
+scroll.pack(side=RIGHT,fill=Y)
 
 
 ########################################
