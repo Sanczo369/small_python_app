@@ -19,5 +19,12 @@ root.iconbitmap('icons/pypad.ico')
 def popup(event):
     cmenu.tk_popup(event.x_root, event.y_root, 0)
 
+def show_info_bar():
+    val = showinbar.get()
+    if val:
+        infobar.pack(expand=NO, fill=None, side=RIGHT, anchor='se')
+    elif not val:
+        infobar.pack_forget()
+
 
 root.mainloop()
