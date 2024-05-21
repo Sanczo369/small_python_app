@@ -26,5 +26,13 @@ def show_info_bar():
     elif not val:
         infobar.pack_forget()
 
+#Displaying Line Numbers
+def update_line_number(event=None):
+    txt = ''
+    if showln.get():
+        endline, endcolumn = textPad.index('end-1c').split('.')
+        txt = '\n'.join(map(str, range(1, int(endline))))
+    lnlabel.config(text=txt, anchor='nw')
+
 
 root.mainloop()
