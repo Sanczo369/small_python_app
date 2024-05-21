@@ -34,5 +34,11 @@ def update_line_number(event=None):
         txt = '\n'.join(map(str, range(1, int(endline))))
     lnlabel.config(text=txt, anchor='nw')
 
+#line highlighting
+def highlight_line(interval=100):
+        textPad.tag_remove("active_line", 1.0, "end")
+        textPad.tag_add("active_line", "insert linestart", "insert lineend+1c")
+        textPad.after(interval, toggle_highlight)
+
 
 root.mainloop()
