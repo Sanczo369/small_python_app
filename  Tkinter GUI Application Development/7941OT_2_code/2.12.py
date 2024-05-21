@@ -44,5 +44,8 @@ def highlight_line(interval=100):
 def undo_highlight():
     textPad.tag_remove("active_line", 1.0, "end")
 
+def toggle_highlight(event=None):
+    val = hltln.get()
+    undo_highlight() if not val else highlight_line()
 
 root.mainloop()
