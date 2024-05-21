@@ -36,9 +36,13 @@ def update_line_number(event=None):
 
 #line highlighting
 def highlight_line(interval=100):
-        textPad.tag_remove("active_line", 1.0, "end")
-        textPad.tag_add("active_line", "insert linestart", "insert lineend+1c")
-        textPad.after(interval, toggle_highlight)
+    textPad.tag_remove("active_line", 1.0, "end")
+    textPad.tag_add("active_line", "insert linestart", "insert lineend+1c")
+    textPad.after(interval, toggle_highlight)
+
+
+def undo_highlight():
+    textPad.tag_remove("active_line", 1.0, "end")
 
 
 root.mainloop()
