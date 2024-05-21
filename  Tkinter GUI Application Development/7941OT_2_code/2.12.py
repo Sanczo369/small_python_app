@@ -16,4 +16,8 @@ root = Tk()
 root.geometry('350x350')
 root.iconbitmap('icons/pypad.ico')
 
+def popup(event):
+    cmenu.tk_popup(event.x_root, event.y_root, 0)
+
+
 root.mainloop()
