@@ -73,6 +73,11 @@ shortcutbar.pack(expand=NO, fill=X)
 lnlabel = Label(root,  width=2,  bg = 'antique white')
 lnlabel.pack(side=LEFT,  fill=Y)
 
+
+def undo_highlight():
+    textPad.tag_remove("active_line", 1.0, "end")
+
+
 def toggle_highlight(event=None):
     val = hltln.get()
     undo_highlight() if not val else highlight_line()
