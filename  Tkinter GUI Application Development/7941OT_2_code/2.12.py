@@ -96,5 +96,24 @@ def open_file(event=None):
     update_line_number()
 
 
+# Defining save method
+
+def save(event=None):
+    global filename
+
+    try:
+
+        f = open(filename, 'w')
+
+        letter = textPad.get(1.0, 'end')
+
+        f.write(letter)
+
+        f.close()
+
+    except:
+
+        save_as(event=None)
+
 
 root.mainloop()
