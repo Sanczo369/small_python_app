@@ -183,5 +183,16 @@ def search_for(needle, cssnstv, textPad, t2, e):
 
     t2.title('%d matches found' % count)
 
+########################################################################
+
+#Levaraging built in text widget functionalities
+
+
+def undo(event=None):
+
+    textPad.event_generate("<<Undo>>")
+
+    update_line_number()
+
 
 root.mainloop()
