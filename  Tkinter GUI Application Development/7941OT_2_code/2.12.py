@@ -72,71 +72,49 @@ def new_file(event=None):
     update_line_number()
 
 def open_file(event=None):
-
     global filename
-
     filename = tkFileDialog.askopenfilename(defaultextension=".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
-
     if filename == "": # If no file chosen.
-
         filename = None # Absence of file.
 
     else:
-
         root.title(os.path.basename(filename) + " - pyPad") # Returning the basename of 'file'
-
         textPad.delete(1.0,END)
-
         fh = open(filename,"r")
-
         textPad.insert(1.0,fh.read())
-
         fh.close()
-
     update_line_number()
-
 
 # Defining save method
 
 def save(event=None):
     global filename
-
     try:
-
         f = open(filename, 'w')
-
         letter = textPad.get(1.0, 'end')
-
         f.write(letter)
-
         f.close()
-
     except:
-
         save_as(event=None)
 
 #Defining save_as method
-
 def save_as(event=None):
-
     try:
-
         # Getting a filename to save the file.
-
         f = tkFileDialog.asksaveasfilename(initialfile='Untitled.txt',defaultextension=".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
-
         fh = open(f, 'w')
-
         textoutput = textPad.get(0.0, END)
-
         fh.write(textoutput)
-
         fh.close()
-
         root.title(os.path.basename(f) + " - pyPad") # Setting the title of the root widget.
-
     except:
-
         pass
+
+#########################################################################
+#demo of indexing and tagging features of text widget
+def select_all(event=None):
+        textPad.tag_add('sel', '1.0', 'end')
+        return
+
 
 root.mainloop()
