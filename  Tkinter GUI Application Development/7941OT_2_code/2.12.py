@@ -164,5 +164,8 @@ def redo(event=None):
     textPad.event_generate("<<Redo>>")
     update_line_number()
 
+def cut(event=None):
+    textPad.event_generate("<<Cut>>")
+    update_line_number()
 
 root.mainloop()
