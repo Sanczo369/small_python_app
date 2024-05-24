@@ -172,4 +172,8 @@ def copy(event=None):
     textPad.event_generate("<<Copy>>")
     update_line_number()
 
+def paste(event=None):
+    textPad.event_generate("<<Paste>>")
+    update_line_number()
+
 root.mainloop()
