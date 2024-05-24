@@ -116,71 +116,39 @@ def select_all(event=None):
         textPad.tag_add('sel', '1.0', 'end')
         return
 
-
 def on_find():
     t2 = Toplevel(root)
-
     t2.title('Find')
-
     t2.geometry('262x65+200+250')
-
     t2.transient(root)
-
     Label(t2, text="Find All:").grid(row=0, column=0, sticky='e')
-
     v = StringVar()
-
     e = Entry(t2, width=25, textvariable=v)
-
     e.grid(row=0, column=1, padx=2, pady=2, sticky='we')
-
     e.focus_set()
-
     c = IntVar()
-
     Checkbutton(t2, text='Ignore Case', variable=c).grid(row=1, column=1, sticky='e', padx=2, pady=2)
-
-    Button(t2, text="Find All", underline=0, command=lambda: search_for(v.get(), c.get(), textPad, t2, e)).grid(row=0,
-                                                                                                                column=2,
-                                                                                                                sticky='e' + 'w',
-                                                                                                                padx=2,
-                                                                                                                pady=2)
-
+    Button(t2, text="Find All", underline=0, command=lambda: search_for(v.get(), c.get(), textPad, t2, e)).grid(row=0, column=2, sticky='e' + 'w', padx=2, pady=2)
     def close_search():
         textPad.tag_remove('match', '1.0', END)
-
         t2.destroy()
 
     t2.protocol('WM_DELETE_WINDOW', close_search)  # override close button
 
-
 def search_for(needle, cssnstv, textPad, t2, e):
     textPad.tag_remove('match', '1.0', END)
-
     count = 0
-
     if needle:
-
         pos = '1.0'
-
         while True:
-
             pos = textPad.search(needle, pos, nocase=cssnstv, stopindex=END)
-
             if not pos: break
-
             lastpos = '%s+%dc' % (pos, len(needle))
-
             textPad.tag_add('match', pos, lastpos)
-
             count += 1
-
             pos = lastpos
-
         textPad.tag_config('match', foreground='red', background='yellow')
-
     e.focus_set()
-
     t2.title('%d matches found' % count)
 
 ########################################################################
@@ -189,9 +157,7 @@ def search_for(needle, cssnstv, textPad, t2, e):
 
 
 def undo(event=None):
-
     textPad.event_generate("<<Undo>>")
-
     update_line_number()
 
 
