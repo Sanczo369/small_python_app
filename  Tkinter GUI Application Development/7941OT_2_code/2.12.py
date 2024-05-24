@@ -168,4 +168,8 @@ def cut(event=None):
     textPad.event_generate("<<Cut>>")
     update_line_number()
 
+def copy(event=None):
+    textPad.event_generate("<<Copy>>")
+    update_line_number()
+
 root.mainloop()
