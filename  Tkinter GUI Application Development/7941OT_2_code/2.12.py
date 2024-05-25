@@ -270,4 +270,7 @@ for i, icon in enumerate(icons):
     toolbar.pack(side=LEFT)
 
 
+shortcutbar.pack(expand=NO, fill=X)
+
+
 root.mainloop()
