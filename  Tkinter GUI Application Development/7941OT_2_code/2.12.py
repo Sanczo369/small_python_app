@@ -200,6 +200,19 @@ filemenu.add_separator()
 filemenu.add_command(label="Exit", accelerator='Alt+F4', command=exit_editor)
 menubar.add_cascade(label="File", menu=filemenu)
 
+#Edit menu - Undo, Redo, Cut, Copy and Paste
+editmenu = Menu(menubar, tearoff=0)
+editmenu.add_command(label="Undo",compound=LEFT,  image=undoicon, accelerator='Ctrl+Z', command=undo)
+editmenu.add_command(label="Redo",compound=LEFT,  image=redoicon, accelerator='Ctrl+Y', command=redo)
+editmenu.add_separator()
+editmenu.add_command(label="Cut", compound=LEFT, image=cuticon, accelerator='Ctrl+X', command=cut)
+editmenu.add_command(label="Copy", compound=LEFT, image=copyicon,  accelerator='Ctrl+C', command=copy)
+editmenu.add_command(label="Paste",compound=LEFT, image=pasteicon, accelerator='Ctrl+V', command = paste)
+editmenu.add_separator()
+editmenu.add_command(label="Find",underline= 0, accelerator='Ctrl+F', command=on_find)
+editmenu.add_separator()
+editmenu.add_command(label="Select All", underline=7, accelerator='Ctrl+A', command=select_all)
+menubar.add_cascade(label="Edit", menu=editmenu)
 
 
 
