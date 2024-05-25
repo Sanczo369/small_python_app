@@ -272,5 +272,8 @@ for i, icon in enumerate(icons):
 
 shortcutbar.pack(expand=NO, fill=X)
 
+lnlabel = Label(root,  width=2,  bg = 'antique white')
+lnlabel.pack(side=LEFT,  fill=Y)
+
 
 root.mainloop()
