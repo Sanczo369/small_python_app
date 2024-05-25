@@ -227,6 +227,23 @@ viewmenu.add_checkbutton(label="Highlight Current Line", onvalue=1, offvalue=0, 
 themesmenu = Menu(menubar, tearoff=0)
 viewmenu.add_cascade(label="Themes", menu=themesmenu)
 
+#we define a color scheme dictionary containing name and two color codes(fg.bg) as key value pair
+clrschms = {
+'1. Default White': '000000.FFFFFF',
+'2. Greygarious Grey':'83406A.D1D4D1',
+'3. Lovely Lavender':'202B4B.E1E1FF' ,
+'4. Aquamarine': '5B8340.D1E7E0',
+'5. Bold Beige': '4B4620.FFF0E1',
+'6. Cobalt Blue':'ffffBB.3333aa',
+'7. Olive Green': 'D1E7E0.5B8340',
+}
+themechoice= StringVar()
+themechoice.set('1. Default White')
+for k in sorted(clrschms):
+    themesmenu.add_radiobutton(label=k, variable=themechoice, command=theme)
+menubar.add_cascade(label="View", menu=viewmenu)
+
+
 
 
 root.mainloop()
