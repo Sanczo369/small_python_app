@@ -287,5 +287,9 @@ textPad.configure(yscrollcommand=scroll.set)
 scroll.config(command=textPad.yview)
 scroll.pack(side=RIGHT,fill=Y)
 
+#Creating Info Bar // widget within text widget
+infobar = Label(textPad, text='Line: 1 | Column: 0')
+infobar.pack(expand=NO, fill=None, side=RIGHT, anchor='se')
+
 
 root.mainloop()
