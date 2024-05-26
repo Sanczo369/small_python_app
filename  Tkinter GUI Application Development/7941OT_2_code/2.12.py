@@ -300,5 +300,20 @@ cmenu.add_separator()
 cmenu.add_command(label='Select All', underline=7, command=select_all)
 textPad.bind("<Button-3>", popup)
 
+#################################################
+#Add events
+#Binding events
+textPad.bind('<Control-N>', new_file)
+textPad.bind('<Control-n>', new_file)
+textPad.bind('<Control-O>', open_file)
+textPad.bind('<Control-o>', open_file)
+textPad.bind('<Control-S>', save)
+textPad.bind('<Control-s>', save)
+textPad.bind('<Control-A>', select_all)
+textPad.bind('<Control-a>', select_all)
+textPad.bind('<Control-f>', on_find)
+textPad.bind('<Control-F>', on_find)
+textPad.bind('<KeyPress-F1>', help_box)
+
 
 root.mainloop()
