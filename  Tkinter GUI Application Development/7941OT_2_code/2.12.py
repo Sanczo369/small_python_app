@@ -36,8 +36,6 @@ def theme(event=None):
     textPad.config(bg=bgc, fg=fgc)
 
 
-
-
 #Displaying Line Numbers
 def update_line_number(event=None):
     txt = ''
@@ -190,7 +188,6 @@ def paste(event=None):
 
 ######################################################################
 
-
 #defining icons for compund menu demonstration
 newicon = PhotoImage(file='icons/new_file.gif')
 openicon = PhotoImage(file='icons/open_file.gif')
@@ -267,7 +264,6 @@ root.config(menu=menubar)
 
 #
 # Adding Shortcut Icon Toolbar
-#
 #
 
 shortcutbar = Frame(root,  height=25)
