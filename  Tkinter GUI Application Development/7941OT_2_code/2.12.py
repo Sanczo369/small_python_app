@@ -26,6 +26,18 @@ def show_info_bar():
     elif not val:
         infobar.pack_forget()
 
+#theme choice
+def theme(event=None):
+    global bgc,fgc
+    val = themechoice.get()
+    clrs = clrschms.get(val)
+    fgc, bgc = clrs.split('.')
+    fgc, bgc = '#'+fgc, '#'+bgc
+    textPad.config(bg=bgc, fg=fgc)
+
+
+
+
 #Displaying Line Numbers
 def update_line_number(event=None):
     txt = ''
