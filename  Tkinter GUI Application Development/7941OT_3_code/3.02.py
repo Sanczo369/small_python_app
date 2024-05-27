@@ -8,6 +8,10 @@ Setting up Widgets
 
 from Tkinter import *
 
+#constants
+MAX_DRUM_NUM = 5
+
+
 class DrumMachine():
 
     def create_play_bar(self):
