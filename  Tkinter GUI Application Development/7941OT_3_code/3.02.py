@@ -33,6 +33,15 @@ class DrumMachine():
             self.drum_entry = Entry(left_frame)
             self.drum_entry.grid(row=i, column=4, padx=7,pady=2)
 
+    def create_right_pad(self):
+        right_frame = Frame(self.root)
+        right_frame.grid(row=10, column=6,sticky=W+E+N+S, padx=15, pady=2)
+        self.button = [[0 for x in range(4)] for x in range(MAX_DRUM_NUM)]
+        for i in range(MAX_DRUM_NUM):
+            for j in range(4):
+                self.button[i][j] = Button(right_frame, bg='grey55')
+                self.button[i][j].grid(row=i, column=j)
+
 # ======================================================================
 
 if __name__ == '__main__':
