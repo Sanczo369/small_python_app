@@ -6,7 +6,7 @@ Setting up Widgets
 @Tkinter GUI Application Development Hotshot
 """
 
-from Tkinter import *
+from tkinter import *
 
 #constants
 MAX_DRUM_NUM = 5
