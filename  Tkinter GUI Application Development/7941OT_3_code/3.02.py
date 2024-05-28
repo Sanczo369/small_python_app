@@ -59,6 +59,12 @@ class DrumMachine():
         self.units_widget = Spinbox(topbar_frame, from_=1, to=8, width=5, textvariable=self.units)
         self.units_widget.grid(row=0, column=5)
 
+        Label(topbar_frame, text='BPUs:').grid(row=0, column=6)
+        self.bpu = IntVar()
+        self.bpu.set(4)
+        self.bpu_widget = Spinbox(topbar_frame, from_=1, to=10, width=5, textvariable=self.bpu)
+        self.bpu_widget.grid(row=0, column=7)
+
 # ======================================================================
 
 if __name__ == '__main__':
