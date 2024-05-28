@@ -65,6 +65,16 @@ class DrumMachine():
         self.bpu_widget = Spinbox(topbar_frame, from_=1, to=10, width=5, textvariable=self.bpu)
         self.bpu_widget.grid(row=0, column=7)
 
+    def app(self):
+        self.root = Tk()
+        self.root.title('Drum Beast')
+        self.create_top_bar()
+        self.create_left_pad()
+        self.create_right_pad()
+        self.create_play_bar()
+        self.root.mainloop()
+
+
 # ======================================================================
 
 if __name__ == '__main__':
