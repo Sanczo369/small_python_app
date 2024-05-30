@@ -85,6 +85,12 @@ class DrumMachine():
                 self.button[i][j] = Button(right_frame, bg=color, width=1, command=self.button_clicked(i, j, bpu))
                 self.button[i][j].grid(row=i, column=j)
 
+    def create_top_bar(self):
+        '''creating top buttons'''
+        topbar_frame = Frame(self.root)
+        topbar_frame.config(height=25)
+        topbar_frame.grid(row=0, columnspan=12, rowspan=10, padx=5, pady=5)
+
         # ======================================================================
 
 if __name__ == '__main__':
