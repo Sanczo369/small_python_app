@@ -11,6 +11,11 @@ import tkFileDialog
 import tkMessageBox
 import os
 
+#modules for playing sounds
+import time
+import wave
+import pymedia.audio.sound as sound
+
 class DrumMachine():
     pass
 
