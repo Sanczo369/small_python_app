@@ -105,6 +105,19 @@ class DrumMachine():
 
         self.create_right_pad()
 
+    def app(self):
+        self.root = Tk()
+
+        self.root.title('Drum Beast')
+
+        self.create_top_bar()
+
+        self.create_left_pad()
+
+        self.create_play_bar()
+
+        self.root.mainloop()
+
         # ======================================================================
 
 if __name__ == '__main__':
