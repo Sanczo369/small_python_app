@@ -114,6 +114,12 @@ class DrumMachine():
         topbar_frame.config(height=25)
         topbar_frame.grid(row=0, columnspan=12, rowspan=10, padx=5, pady=5)
 
+        Label(topbar_frame, text='Units:').grid(row=0, column=4)
+        self.units = IntVar()
+        self.units.set(4)
+        self.units_widget = Spinbox(topbar_frame, from_=1, to=8, width=5, textvariable=self.units,command= self.create_right_pad)
+        self.units_widget.grid(row=0, column=5)
+
 # ======================================================================
 if __name__ == '__main__':
     dm = DrumMachine()
