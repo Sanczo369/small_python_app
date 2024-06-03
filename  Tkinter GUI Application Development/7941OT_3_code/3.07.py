@@ -18,6 +18,12 @@ import pymedia.audio.sound as sound
 import threading
 
 class DrumMachine():
+        def __init__(self):
+        self.widget_drum_name = []
+        self.widget_drum_file_name = [0]*MAX_DRUM_NUM
+        self.current_drum_no = 0
+        self.keep_playing = True
+        self.loop = False
 
 
 
