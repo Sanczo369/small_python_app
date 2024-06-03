@@ -16,6 +16,9 @@ import time
 import wave
 import pymedia.audio.sound as sound
 
+#constants
+MAX_DRUM_NUM = 5
+
 class DrumMachine():
     def __init__(self):
         self.widget_drum_name = []
