@@ -17,6 +17,10 @@ import pymedia.audio.sound as sound
 
 import threading
 
+#constants
+MAX_DRUM_NUM = 5
+
+
 class DrumMachine():
         def __init__(self):
         self.widget_drum_name = []
