@@ -64,6 +64,11 @@ class DrumMachine():
         except:
             pass
 
+    def stop_play(self):
+        self.keep_playing = False
+        self.start_button.config(state='normal')
+        return
+
 
     def app(self):
         self.root = Tk()
