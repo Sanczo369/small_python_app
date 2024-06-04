@@ -69,6 +69,9 @@ class DrumMachine():
         self.start_button.config(state='normal')
         return
 
+    def loop_play(self, xval):
+        self.loop = xval
+
 
     def app(self):
         self.root = Tk()
