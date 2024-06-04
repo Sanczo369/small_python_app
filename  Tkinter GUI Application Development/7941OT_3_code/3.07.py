@@ -32,10 +32,25 @@ class DrumMachine():
 
     def play_in_thread(self):
         self.start_button.config(state='disabled')
-
         self.thread = threading.Thread(None, self.play, None, (), {})
-
         self.thread.start()
+
+    def play(self):
+        self.keep_playing = True
+        while self.keep_playing:
+            for i in range(len(self.button[0])):
+                for item in self.button:
+                    try:
+                        if item[i].cget('bg') == 'green':
+                            if not self.widget_drum_file_name[self.button.index(item)]: continue
+                            sound_filename = self.widget_drum_file_name[self.button.index(item)]
+                            self.play_sound(sound_filename)
+                            # self.root.update() # a rather inelegant hack
+                    except:
+                        continue
+                time.sleep(1 / 8.0)  # change this to modify the tempo
+                if self.loop == False: self.keep_playing = False
+        self.start_button.config(state='normal')
 
     def app(self):
         self.root = Tk()
