@@ -22,7 +22,7 @@ MAX_DRUM_NUM = 5
 
 
 class DrumMachine():
-        def __init__(self):
+    def __init__(self):
         self.widget_drum_name = []
         self.widget_drum_file_name = [0]*MAX_DRUM_NUM
         self.current_drum_no = 0
@@ -30,6 +30,12 @@ class DrumMachine():
         self.loop = False
 
 
+    def play_in_thread(self):
+        self.start_button.config(state='disabled')
+
+        self.thread = threading.Thread(None, self.play, None, (), {})
+
+        self.thread.start()
 
     def app(self):
         self.root = Tk()
