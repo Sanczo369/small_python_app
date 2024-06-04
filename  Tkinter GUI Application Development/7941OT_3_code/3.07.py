@@ -90,6 +90,15 @@ class DrumMachine():
                 tkMessageBox.showerror('Invalid', "Error loading drum samples")
         return callback
 
+
+    def button_clicked(self,i,j,bpu):
+            def callback():
+                btn = self.button[i][j]
+                color = 'grey55' if (j/bpu)%2 else 'khaki'
+                new_color = 'green' if btn.cget('bg') != 'green' else color
+                btn.config(bg=new_color)
+            return callback
+
     def app(self):
         self.root = Tk()
         self.root.title('Drum Beast')
