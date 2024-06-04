@@ -72,6 +72,23 @@ class DrumMachine():
     def loop_play(self, xval):
         self.loop = xval
 
+    def drum_load(self, drum_no):
+        def callback():
+            self.current_drum_no = drum_no
+            try:
+                file_name = tkFileDialog.askopenfilename(defaultextension=".wav", filetypes=[("Wave Files", "*.wav"), ("OGG Files", "*.ogg")])
+                if not file_name: return
+                try:
+                    del self.widget_drum_file_name[drum_no]
+                except:
+                    pass
+                self.widget_drum_file_name.insert(drum_no, file_name)
+                drum_name = os.path.basename(file_name)
+                self.widget_drum_name[drum_no].delete(0, END)
+                self.widget_drum_name[drum_no].insert(0, drum_name)
+            except:
+                tkMessageBox.showerror('Invalid', "Error loading drum samples")
+        return callback
 
     def app(self):
         self.root = Tk()
