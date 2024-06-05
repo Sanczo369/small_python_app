@@ -6,8 +6,8 @@ Tkinter and Threading
 """
 
 from tkinter import *
-import tkFileDialog
-import tkMessageBox
+import tkinter.filedialog
+import tkinter.messagebox
 import os
 
 #modules for playing sounds
@@ -76,7 +76,7 @@ class DrumMachine():
         def callback():
             self.current_drum_no = drum_no
             try:
-                file_name = tkFileDialog.askopenfilename(defaultextension=".wav", filetypes=[("Wave Files", "*.wav"), ("OGG Files", "*.ogg")])
+                file_name = tkinter.filedialog.askopenfilename(defaultextension=".wav", filetypes=[("Wave Files", "*.wav"), ("OGG Files", "*.ogg")])
                 if not file_name: return
                 try:
                     del self.widget_drum_file_name[drum_no]
@@ -87,7 +87,7 @@ class DrumMachine():
                 self.widget_drum_name[drum_no].delete(0, END)
                 self.widget_drum_name[drum_no].insert(0, drum_name)
             except:
-                tkMessageBox.showerror('Invalid', "Error loading drum samples")
+                tkinter.messagebox.showerror('Invalid', "Error loading drum samples")
         return callback
 
 
