@@ -159,6 +159,18 @@ class DrumMachine():
         loopbutton = Checkbutton(playbar_frame, text='Loop', variable=loop, command=lambda: self.loop_play(loop.get()))
         loopbutton.grid(row=ln, column=16,padx=1)
 
+    def create_left_pad(self):
+        '''creating actual pattern editor pad'''
+        left_frame = Frame(self.root)
+        left_frame.grid(row=10, column=0, columnspan=6,sticky=W+E+N+S)
+        tbicon = PhotoImage(file='images/openfile.gif')
+        for i in range(0, MAX_DRUM_NUM):
+            button = Button(left_frame, image=tbicon, command= self.drum_load(i))
+            button.image = tbicon
+            button.grid(row=i, column=0,  padx=5,pady=2)
+            self.drum_entry = Entry(left_frame)
+            self.drum_entry.grid(row=i, column=4, padx=7,pady=2)
+            self.widget_drum_name.append(self.drum_entry)
 
 # ======================================================================
 
