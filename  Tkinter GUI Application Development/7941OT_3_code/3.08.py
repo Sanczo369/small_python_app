@@ -192,6 +192,16 @@ class DrumMachine():
         topbar_frame.config(height=25)
         topbar_frame.grid(row=0, columnspan=12, rowspan=10, padx=5, pady=5)
 
+        Label(topbar_frame, text='Pattern Number:').grid(row=0, column=1)
+        self.patt = IntVar()
+        self.patt.set(0)
+        self.prevpatvalue = 0 # to trace last click
+        Spinbox(topbar_frame, from_=0, to=9, width=5, textvariable=self.patt, command=self.record_pattern).grid(row=0, column=2)
+        self.pat_name = Entry(topbar_frame)
+        self.pat_name.grid(row=0, column=3, padx=7,pady=2)
+        self.pat_name.insert(0, 'Pattern %s'%self.patt.get())
+        self.pat_name.config(state='readonly')
+
 # ======================================================================
 
 if __name__ == '__main__':
