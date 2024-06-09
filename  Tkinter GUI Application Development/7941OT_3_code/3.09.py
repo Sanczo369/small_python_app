@@ -18,6 +18,9 @@ import pymedia.audio.sound as sound
 import threading
 import pickle
 
+#constants
+MAX_DRUM_NUM = 5
+
 
 class DrumMachine():
     def __init__(self):
