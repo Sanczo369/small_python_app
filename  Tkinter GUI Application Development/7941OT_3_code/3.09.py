@@ -20,7 +20,14 @@ import pickle
 
 
 class DrumMachine():
-    pass
+    def __init__(self):
+        self.widget_drum_name = []
+        self.widget_drum_file_name = [0]*MAX_DRUM_NUM
+        self.current_drum_no = 0
+        self.keep_playing = True
+        self.loop = False
+        self.pattern_list = [None]*10
+
 
 # ======================================================================
 if __name__ == '__main__':
