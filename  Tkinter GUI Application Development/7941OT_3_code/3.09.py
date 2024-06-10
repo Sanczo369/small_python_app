@@ -76,9 +76,44 @@ class DrumMachine():
         self.pattern_list[prevpval] = {'df': self.widget_drum_file_name, 'bl': self.buttonpickleformat, 'bpu':bpu, 'units':units}
         self.reconstruct_pattern(pattern_num, bpu, units)
 
-
-
-
+    def reconstruct_pattern(self, pattern_num, bpu, units):
+        self.widget_drum_file_name = [0] * MAX_DRUM_NUM
+        try:
+            self.df = self.pattern_list[pattern_num]['df']
+            for i in range(len(self.df)):
+                file_name = self.df[i]
+                if file_name == 0:
+                    self.widget_drum_name[i].delete(0, END)
+                    continue
+                self.widget_drum_file_name.insert(i, file_name)
+                drum_name = os.path.basename(file_name)
+                self.widget_drum_name[i].delete(0, END)
+                self.widget_drum_name[i].insert(0, drum_name)
+        except:
+            for i in range(MAX_DRUM_NUM):
+                try:
+                    self.df
+                except:
+                    self.widget_drum_name[i].delete(0, END)
+        try:
+            bpu = self.pattern_list[pattern_num]['bpu']
+            units = self.pattern_list[pattern_num]['units']
+        except:
+            return
+        self.bpu_widget.delete(0, END)
+        self.bpu_widget.insert(0, bpu)
+        self.units_widget.delete(0, END)
+        self.units_widget.insert(0, units)
+        self.create_right_pad()
+        c = bpu * units
+        self.create_right_pad()
+        try:
+            for i in range(MAX_DRUM_NUM):
+                for j in range(c):
+                    if self.pattern_list[pattern_num]['bl'][i][j] == 'active':
+                        self.button[i][j].config(bg='green')
+        except:
+            return
 
 
 # ======================================================================
