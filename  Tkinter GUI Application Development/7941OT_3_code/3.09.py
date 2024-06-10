@@ -145,6 +145,12 @@ class DrumMachine():
             self.snd.play(s)
         except:
             pass
+    def stop_play(self):
+        self.keep_playing = False
+        return
+
+
+
 
 
 # ======================================================================
