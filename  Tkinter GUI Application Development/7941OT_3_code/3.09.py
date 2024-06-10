@@ -149,6 +149,10 @@ class DrumMachine():
         self.keep_playing = False
         return
 
+    def loop_play(self, xval):
+        self.loop = xval
+
+
 
 
 
