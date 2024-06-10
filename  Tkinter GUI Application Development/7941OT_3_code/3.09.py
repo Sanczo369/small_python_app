@@ -115,6 +115,9 @@ class DrumMachine():
         except:
             return
 
+    def play_in_thread(self):
+        self.thread = threading.Thread(None,self.play, None, (), {})
+        self.thread.start()
 
 # ======================================================================
 if __name__ == '__main__':
