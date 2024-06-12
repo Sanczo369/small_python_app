@@ -23,6 +23,10 @@ f2 = ttk.Frame(n);
 n.add(f1, text='Tab One')
 n.add(f2, text='Tab Two')
 
+ttk.Progressbar(root, length = 140,value=65).grid(row=13, column=0)
+
+ttk.Sizegrip(root).grid(row=14, column=1)# small triangular thing that can be gripped to resize the window
+
 
 mytree = ttk.Treeview(root, height=2, columns=2)
 mytree.grid(row=14, columnspan=2)
