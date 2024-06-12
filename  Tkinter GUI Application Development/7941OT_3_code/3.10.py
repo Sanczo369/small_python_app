@@ -16,4 +16,11 @@ style = ttk.Style()
 print(style.theme_names())
 #style.theme_use('clam')
 
+mytree = ttk.Treeview(root, height=2, columns=2)
+mytree.grid(row=14, columnspan=2)
+mytree.heading('#0', text='Column A', anchor=W)
+mytree.heading(2, text='Column B', anchor=W)
+mytree.column(2, stretch=0, width=70)
+
+
 root.mainloop()
