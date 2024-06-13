@@ -16,6 +16,13 @@ style = ttk.Style()
 print(style.theme_names())
 #style.theme_use('clam')
 
+
+
+Label(root, text= 'Tkinter    Versus').grid(row=0, columnspan=2, sticky='ew')
+ttk.Label(root, text='ttk').grid(row=0, column=1)
+
+
+
 n = ttk.Notebook(root)
 n.grid(row=12, column=1)
 f1 = ttk.Frame(n); # you can embed other widgets into these frames
