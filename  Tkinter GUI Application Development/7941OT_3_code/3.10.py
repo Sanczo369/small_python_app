@@ -31,6 +31,11 @@ ttk.Checkbutton(root, text='ttk CheckButton').grid(row=2, column=1)
 Entry(root).grid(row=3, column=0)
 ttk.Entry(root).grid(row=3, column=1)
 
+PanedWindow(root).grid(row=4, column=0)
+ttk.PanedWindow(root).grid(row=4, column=1)
+
+
+
 
 n = ttk.Notebook(root)
 n.grid(row=12, column=1)
