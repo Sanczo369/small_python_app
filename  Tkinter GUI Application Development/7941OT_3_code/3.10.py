@@ -34,6 +34,8 @@ ttk.Entry(root).grid(row=3, column=1)
 PanedWindow(root).grid(row=4, column=0)
 ttk.PanedWindow(root).grid(row=4, column=1)
 
+Radiobutton(root, text='tk Radio').grid(row=5, column=0)
+ttk.Radiobutton(root, text='ttk Radio').grid(row=5, column=1)
 
 
 
