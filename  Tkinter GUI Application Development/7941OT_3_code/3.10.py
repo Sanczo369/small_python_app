@@ -22,6 +22,9 @@ Label(root, text= 'Tkinter    Versus').grid(row=0, columnspan=2, sticky='ew')
 ttk.Label(root, text='ttk').grid(row=0, column=1)
 
 
+Button(root, text='tk Button').grid(row=1, column=0)
+ttk.Button(root, text='ttk Button').grid(row=1, column=1)
+
 
 n = ttk.Notebook(root)
 n.grid(row=12, column=1)
