@@ -22,6 +22,9 @@ tkinter.ttk.Button(text="state style", style="s.TButton").pack()
 curr_theme = x.theme_use()
 x.theme_settings(curr_theme, { "TEntry": { "configure":  {"padding": 2}, "map": {"foreground": [("focus", "red")]}  }})
 
+print(x.theme_names())
+print(x.theme_use())
+
 root.mainloop()
 
 
