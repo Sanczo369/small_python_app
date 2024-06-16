@@ -7,6 +7,9 @@ tttk widgets styling and theming explained
 from tkinter import *
 import tkinter.ttk
 root= Tk()
+x = tkinter.ttk.Style()
+x.configure('.', font='Arial 14', foreground='brown', background='yellow')
+x.configure('danger.TButton', font='Times 12',foreground='red', padding=1)
 
 
 
