@@ -18,6 +18,9 @@ tkinter.ttk.Button(root, text='custom style', style='danger.TButton').pack()
 x.map("s.TButton",foreground=[('pressed', 'red'), ('active', 'blue')])
 tkinter.ttk.Button(text="state style", style="s.TButton").pack()
 
+# Overriding current theme styles for the combo box
+curr_theme = x.theme_use()
+x.theme_settings(curr_theme, { "TEntry": { "configure":  {"padding": 2}, "map": {"foreground": [("focus", "red")]}  }})
 
 root.mainloop()
 
