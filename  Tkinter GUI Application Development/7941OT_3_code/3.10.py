@@ -40,6 +40,14 @@ ttk.Radiobutton(root, text='ttk Radio').grid(row=5, column=1)
 Scale(root,orient=HORIZONTAL).grid(row=6, column=0)
 ttk.Scale(root).grid(row=6, column=1)
 
+ttk.Separator(root,orient=HORIZONTAL).grid(row=7, columnspan=2,sticky="ew")
+ttk.Label(root, text='NEW WIDGETS INTRODUCED IN ttk').grid(row=8, columnspan=2)
+ttk.Separator(root,orient=HORIZONTAL).grid(row=9, columnspan=2,sticky="ew")
+
+ttk.Combobox(root).grid(row=11, column=0)
+
+
+
 
 n = ttk.Notebook(root)
 n.grid(row=12, column=1)
