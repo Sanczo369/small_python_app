@@ -14,6 +14,9 @@ x.configure('danger.TButton', font='Times 12',foreground='red', padding=1)
 tkinter.ttk.Label(root, text='global style').pack()
 tkinter.ttk.Button(root, text='custom style', style='danger.TButton').pack()
 
+# Different  styling for different widget states
+x.map("s.TButton",foreground=[('pressed', 'red'), ('active', 'blue')])
+tkinter.ttk.Button(text="state style", style="s.TButton").pack()
 
 
 root.mainloop()
