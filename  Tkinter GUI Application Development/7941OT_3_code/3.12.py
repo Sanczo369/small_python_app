@@ -42,10 +42,24 @@ class DrumMachine():
 
     def save_project(self):
         self.record_pattern()#make sure the last pattern is recorded before save
-        file_name = tkFileDialog.asksaveasfilename(filetypes=[('Drum Beat File','*.bt')] , title="Save project as...")
+        file_name = tkinter.filedialog.asksaveasfilename(filetypes=[('Drum Beat File','*.bt')] , title="Save project as...")
         pickle.dump( self.pattern_list, open( file_name, "wb" ) )
         self.root.title(os.path.basename(file_name) + " - DrumBeast")
 
+    def load_project(self):
+        file_name = tkinter.filedialog.askopenfilename(filetypes=[('Drum Beat File','*.bt')], title='Load Project')
+        if file_name == '':return
+        self.root.title(os.path.basename(file_name) + " - DrumBeast")
+        fh = open(file_name,"rb") # open the file in reading mode
+        try:
+            while True: # load from the file until EOF is reached
+                self.pattern_list = pickle.load(fh)
+        except EOFError:
+            pass
+        fh.close()
+        try:
+            self.reconstruct_pattern(0, self.pattern_list[0]['bpu'], self.pattern_list[0]['units'])# reconstruct the first pattern
+        except:tkinter.messagebox.showerror("Error","An unexpected error occurred trying to reconstruct patterns")
 
 
 # ======================================================================
