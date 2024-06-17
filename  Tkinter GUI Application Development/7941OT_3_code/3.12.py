@@ -35,6 +35,9 @@ class DrumMachine():
     def about(self):
         tkinter.messagebox.showinfo("About","Tkinter GUI Application\n Development Hotshot")
 
+    def exit_app(self):
+        if tkinter.messagebox.askokcancel("Quit", "Do you really want to quit?"):
+            self.root.destroy()
 
 
 # ======================================================================
