@@ -32,6 +32,10 @@ class DrumMachine():
         self.loop = False
         self.pattern_list = [None] * 10
 
+    def about(self):
+        tkinter.messagebox.showinfo("About","Tkinter GUI Application\n Development Hotshot")
+
+
 
 # ======================================================================
 if __name__ == '__main__':
