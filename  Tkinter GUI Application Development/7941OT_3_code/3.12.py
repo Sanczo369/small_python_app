@@ -150,6 +150,11 @@ class DrumMachine():
         except:
             pass
 
+    def stop_play(self):
+        self.keep_playing = False
+        return
+
+
 # ======================================================================
 if __name__ == '__main__':
     dm = DrumMachine()
