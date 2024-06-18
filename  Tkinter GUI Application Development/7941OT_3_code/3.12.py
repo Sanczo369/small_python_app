@@ -125,18 +125,18 @@ class DrumMachine():
 
     def play(self):
         self.keep_playing = True
-            while self.keep_playing:
-                for i in range(len(self.button[0])):
-                    for item in self.button:
-                        try:
-                            if item[i].cget('bg') == 'green':
-                                if not self.widget_drum_file_name[self.button.index(item)]: continue
-                                sound_filename = self.widget_drum_file_name[self.button.index(item)]
-                                self.play_sound(sound_filename)
-                                # self.root.update() # a rather inelegant hack
-                        except:continue
-                    time.sleep(1 / 6.0)
-                    if self.loop == False: self.keep_playing = False
+        while self.keep_playing:
+            for i in range(len(self.button[0])):
+                for item in self.button:
+                    try:
+                        if item[i].cget('bg') == 'green':
+                            if not self.widget_drum_file_name[self.button.index(item)]: continue
+                            sound_filename = self.widget_drum_file_name[self.button.index(item)]
+                            self.play_sound(sound_filename)
+                            # self.root.update() # a rather inelegant hack
+                    except:continue
+                time.sleep(1 / 6.0)
+                if self.loop == False: self.keep_playing = False
 
 # ======================================================================
 if __name__ == '__main__':
