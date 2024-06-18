@@ -138,6 +138,18 @@ class DrumMachine():
                 time.sleep(1 / 6.0)
                 if self.loop == False: self.keep_playing = False
 
+    def play_sound(self, sound_filename):
+        try:
+            self.s = wave.open(sound_filename, 'rb')
+            sample_rate = self.s.getframerate()
+            channels = self.s.getnchannels()
+            frmt = sound.AFMT_S16_LE
+            self.snd= sound.Output(sample_rate, channels, frmt)
+            s = self.s.readframes(300000)
+            self.snd.play(s)
+        except:
+            pass
+
 # ======================================================================
 if __name__ == '__main__':
     dm = DrumMachine()
