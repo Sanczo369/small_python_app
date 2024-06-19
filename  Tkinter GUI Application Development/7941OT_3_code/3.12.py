@@ -211,6 +211,20 @@ class DrumMachine():
             self.drum_entry.grid(row=i, column=4, padx=7,pady=2)
             self.widget_drum_name.append(self.drum_entry)
 
+    def create_right_pad(self):
+        bpu = self.bpu.get()
+        units = self.units.get()
+        c = bpu * units
+        right_frame = Frame(self.root)
+        right_frame.grid(row=10, column=6,sticky=W+E+N+S, padx=15, pady=2)
+        self.button = [[0 for x in range(c)] for x in range(MAX_DRUM_NUM)]
+        for i in range(MAX_DRUM_NUM):
+            for j in range(c):
+                self.active = False
+                color = 'grey55' if (j/bpu)%2 else 'khaki'
+                self.button[i][j] = Button(right_frame,  bg=color, width=1, command=self.button_clicked(i,j,bpu))
+                self.button[i][j].grid(row=i, column=j)
+
 # ======================================================================
 if __name__ == '__main__':
     dm = DrumMachine()
