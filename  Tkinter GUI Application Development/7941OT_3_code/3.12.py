@@ -39,7 +39,6 @@ class DrumMachine():
         if tkinter.messagebox.askokcancel("Quit", "Do you really want to quit?"):
             self.root.destroy()
 
-
     def save_project(self):
         self.record_pattern()#make sure the last pattern is recorded before save
         file_name = tkinter.filedialog.asksaveasfilename(filetypes=[('Drum Beat File','*.bt')] , title="Save project as...")
@@ -117,11 +116,9 @@ class DrumMachine():
         except:
             return
 
-
     def play_in_thread(self):
         self.thread = threading.Thread(None,self.play, None, (), {})
         self.thread.start()
-
 
     def play(self):
         self.keep_playing = True
@@ -156,6 +153,25 @@ class DrumMachine():
 
     def loop_play(self, xval):
         self.loop = xval
+
+    def drum_load(self, drum_no):
+        def callback():
+            self.current_drum_no = drum_no
+            try:
+                file_name = tkinter.filedialog.askopenfilename(defaultextension=".wav",
+                                                        filetypes=[("Wave Files", "*.wav"), ("OGG Files", "*.ogg")])
+                if not file_name: return
+                try:
+                    del self.widget_drum_file_name[drum_no]
+                except:
+                    pass
+                self.widget_drum_file_name.insert(drum_no, file_name)
+                drum_name = os.path.basename(file_name)
+                self.widget_drum_name[drum_no].delete(0, END)
+                self.widget_drum_name[drum_no].insert(0, drum_name)
+            except:
+                tkinter.messagebox.showerror('Invalid', "Error loading drum samples")
+        return callback
 
 
 # ======================================================================
