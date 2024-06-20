@@ -254,8 +254,22 @@ class DrumMachine():
         self.bpu_widget.grid(row=0, column=7)
         self.create_right_pad()
 
+    def top_menu(self):
+        self.menubar = Menu(self.root)
+        self.filemenu = Menu(self.menubar, tearoff=0)
+        self.filemenu.add_command(label="Load Project", command=self.load_project)
+        self.filemenu.add_command(label="Save Project", command=self.save_project)
+        self.filemenu.add_separator()
+        self.filemenu.add_command(label="Exit", command=self.exit_app)
+        self.menubar.add_cascade(label="File", menu=self.filemenu)
+        self.aboutmenu = Menu(self.menubar, tearoff=0)
+        self.aboutmenu.add_command(label="About", command=self.about)
+        self.menubar.add_cascade(label="About", menu=self.aboutmenu)
+        self.root.config(menu=self.menubar)
 
-# ======================================================================
+
+
+    # ======================================================================
 if __name__ == '__main__':
     dm = DrumMachine()
     dm.app()
