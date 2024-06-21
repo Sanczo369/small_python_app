@@ -39,6 +39,10 @@ def main():
     root = Tk()
     root.title("Chess")
     root.mainloop()
+    gui = GUI(root)
+    gui.draw_board()
+    root.mainloop()
+
 
 if __name__ == "__main__":
     main()
