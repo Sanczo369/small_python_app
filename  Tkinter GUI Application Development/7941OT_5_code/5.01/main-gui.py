@@ -36,3 +36,11 @@ class GUI:
         add_filebtn.grid(row=2, column=1)
         bottomframe.grid(row=2, sticky='w', padx=5)
 
+    def toggle_play_pause(self):
+        if self.playbtn['text'] =='play':
+            self.playbtn.config(text='stop', image=self.stopicon)
+            self.player.start_play_thread()
+        elif self.playbtn['text'] =='stop':
+            self.playbtn.config(text ='play', image=self.playicon)
+            self.player.pause()
+
