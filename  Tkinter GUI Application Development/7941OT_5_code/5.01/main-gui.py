@@ -49,4 +49,8 @@ class GUI:
         self.currentTrack = tfile
 
 
+if __name__ == '__main__':
+    playerobj = player.Player()
+    app = GUI(playerobj)
+
 
