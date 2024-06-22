@@ -45,7 +45,7 @@ class GUI:
             self.player.pause()
 
     def add_file(self):
-        tfile = tkFileDialog.askopenfilename(filetypes=[('All supported', '.mp3 .wav .ogg'), ('All files', '*.*')])
+        tfile = tkinter.filedialog.askopenfilename(filetypes=[('All supported', '.mp3 .wav .ogg'), ('All files', '*.*')])
         self.currentTrack = tfile
 
 
