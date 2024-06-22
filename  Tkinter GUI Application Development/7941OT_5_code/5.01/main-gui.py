@@ -44,3 +44,9 @@ class GUI:
             self.playbtn.config(text ='play', image=self.playicon)
             self.player.pause()
 
+    def add_file(self):
+        tfile = tkFileDialog.askopenfilename(filetypes=[('All supported', '.mp3 .wav .ogg'), ('All files', '*.*')])
+        self.currentTrack = tfile
+
+
+
