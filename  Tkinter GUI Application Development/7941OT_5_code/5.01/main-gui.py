@@ -28,4 +28,11 @@ class GUI:
         self.playbtn.grid(row=3, column=3)
         buttonframe.grid(row=1, pady=4, padx=5)
 
+    def create_bottom_frame(self):
+        bottomframe = Frame(self.root)
+        add_fileicon = PhotoImage(file='../icons/add_file.gif')
+        add_filebtn = Button(bottomframe, image=add_fileicon, borderwidth=0, padx=0, text='Add File', command=self.add_file)
+        add_filebtn.image = add_fileicon
+        add_filebtn.grid(row=2, column=1)
+        bottomframe.grid(row=2, sticky='w', padx=5)
 
