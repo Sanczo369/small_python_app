@@ -20,6 +20,11 @@ class Player():
         except:
             pass
 
+    def start_play_thread(self):
+        player_thread = Thread(target=self.play_media)
+        player_thread.start()
+
+
 
 if __name__ == '__main__':
 
