@@ -32,6 +32,17 @@ class GUI:
     alltracks = []
     currentTrack = ''
 
+    def __init__(self, player):
+        self.player = player
+        player.parent = self
+        self.root = Tk()
+        self.create_button_frame()
+        self.create_list_frame()
+        self.create_bottom_frame()
+        self.root.mainloop()
+
+
+
 
 if __name__ == '__main__':
     playerobject = player.Player()
