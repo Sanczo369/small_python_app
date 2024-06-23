@@ -24,6 +24,11 @@ class Player():
         player_thread = Thread(target=self.play_media)
         player_thread.start()
 
+    def pause(self):
+        try:
+            self.myplayer.pause()
+        except:
+            pass
 
 
 if __name__ == '__main__':
