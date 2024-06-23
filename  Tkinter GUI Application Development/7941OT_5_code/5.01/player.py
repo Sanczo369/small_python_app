@@ -32,5 +32,4 @@ class Player():
 
 
 if __name__ == '__main__':
-
     print('a pyglet player class implementation')
