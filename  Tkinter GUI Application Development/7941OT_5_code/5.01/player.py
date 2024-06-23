@@ -10,6 +10,16 @@ from threading import Thread
 class Player():
     parent = None
 
+    def play_media(self) :
+        try:
+            self.myplayer= pyglet.media.Player()
+            self.source = pyglet.media.load(self.parent.currentTrack)
+            self.myplayer.queue(self.source)
+            self.myplayer.play()
+            pyglet.app.run()
+        except:
+            pass
+
 
 if __name__ == '__main__':
 
