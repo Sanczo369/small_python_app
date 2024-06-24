@@ -41,7 +41,14 @@ class GUI:
         self.create_bottom_frame()
         self.root.mainloop()
 
-
+    def create_button_frame(self):
+        buttonframe = Frame(self.root)
+        self.playicon = PhotoImage(file='../icons/play.gif')
+        self.stopicon = PhotoImage(file='../icons/stop.gif')
+        self.playbtn = Button(buttonframe, text='play', image=self.playicon, borderwidth=0, padx=0, command=self.toggle_play_pause)
+        self.playbtn.image = self.playicon
+        self.playbtn.grid(row=3, column=3)
+        buttonframe.grid(row=3, columnspan=5, sticky='w', pady=4, padx=5)
 
 
 if __name__ == '__main__':
