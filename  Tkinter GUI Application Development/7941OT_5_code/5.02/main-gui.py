@@ -79,6 +79,13 @@ class GUI:
         add_dirbtn.image = add_diricon
         add_dirbtn.grid(row=5, column=3 )
 
+        delallicon = PhotoImage(file='../icons/delall.gif')
+        delallbtn = Button(bottomframe, image=delallicon, borderwidth=0, padx=0, text='Clear All', command=self.clear_list)
+        delallbtn.image = delallicon
+        delallbtn.grid(row=5, column=4)
+
+        bottomframe.grid(row=5, sticky='w', padx=5)
+
 
 if __name__ == '__main__':
     playerobject = player.Player()
