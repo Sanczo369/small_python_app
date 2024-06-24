@@ -22,7 +22,7 @@ create_bottom_frame() - added 3 new buttons: delete file, add directory & delete
 
 @Tkinter GUI Application Development Hotshot
 """
-from Tkinter  import *
+from tkinter import *
 import tkFileDialog
 import os
 import time
@@ -60,6 +60,15 @@ class GUI:
         self.listbox.config(yscrollcommand=scrollbar.set)
         scrollbar.config(command=self.listbox.yview)
         list_frame.grid(row=4, padx=5)
+
+    def create_bottom_frame(self):
+        bottomframe = Frame(self.root)
+        add_fileicon = PhotoImage(file='../icons/add_file.gif')
+        add_filebtn = Button(bottomframe, image=add_fileicon, borderwidth=0, padx=0, text='Add File',
+                             command=self.add_file)
+        add_filebtn.image = add_fileicon
+        add_filebtn.grid(row=5, column=1)
+
 
 if __name__ == '__main__':
     playerobject = player.Player()
