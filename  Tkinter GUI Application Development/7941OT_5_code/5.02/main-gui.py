@@ -86,6 +86,12 @@ class GUI:
 
         bottomframe.grid(row=5, sticky='w', padx=5)
 
+    def add_file(self):
+        filename = tkFileDialog.askopenfilename(filetypes=[('All supported', '.mp3 .wav'), ('.mp3 files', '.mp3'), ('.wav files','.wav')])
+        if filename:
+            self.listbox.insert(END, filename)
+            self.alltracks = list(self.listbox.get(0, END))
+
 
 if __name__ == '__main__':
     playerobject = player.Player()
