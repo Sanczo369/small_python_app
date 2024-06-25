@@ -15,3 +15,13 @@ class Player():
     stopped = False
     current_time = 0
     vol = 0.0
+
+    def play_media(self) :
+        try:
+            self.myplayer= pyglet.media.Player()
+            self.source = pyglet.media.load(self.parent.currentTrack)
+            self.myplayer.queue(self.source)
+            self.myplayer.play()
+            pyglet.app.run()
+        except:
+            pass
