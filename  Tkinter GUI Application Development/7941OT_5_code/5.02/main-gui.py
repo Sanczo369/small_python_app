@@ -92,6 +92,18 @@ class GUI:
             self.listbox.insert(END, filename)
             self.alltracks = list(self.listbox.get(0, END))
 
+    def add_dir(self):
+        path = tkFileDialog.askdirectory()
+        if path:
+            tfileList = []
+            for (dirpath, dirnames, filenames) in os.walk(path):
+                for tfile in filenames:
+                    if tfile.endswith(".mp3") or tfile.endswith(".wav") or tfile.endswith(".ogg"):
+                        tfileList.append(dirpath + "/" + tfile)
+            for item in tfileList:
+                self.listbox.insert(END, item)
+            self.alltracks = list(self.listbox.get(0, END))
+
 
 if __name__ == '__main__':
     playerobject = player.Player()
