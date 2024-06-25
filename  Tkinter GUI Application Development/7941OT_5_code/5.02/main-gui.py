@@ -109,6 +109,10 @@ class GUI:
         self.alltracks = list(self.listbox.get(0, END))
 
 
+    def clear_list(self):
+        self.listbox.delete(0, END)
+        self.alltracks =list(self.listbox.get(0, END))
+
 if __name__ == '__main__':
     playerobject = player.Player()
     app = GUI(playerobject)
