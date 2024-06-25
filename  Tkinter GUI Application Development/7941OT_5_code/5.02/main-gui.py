@@ -103,6 +103,10 @@ class GUI:
             for item in tfileList:
                 self.listbox.insert(END, item)
             self.alltracks = list(self.listbox.get(0, END))
+    def del_selected(self):
+        while len(self.listbox.curselection())>0:
+            self.listbox.delete(self.listbox.curselection()[0])
+        self.alltracks = list(self.listbox.get(0, END))
 
 
 if __name__ == '__main__':
