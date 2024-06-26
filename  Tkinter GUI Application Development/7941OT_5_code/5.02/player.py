@@ -30,3 +30,8 @@ class Player():
         self.pause()
         player_thread = Thread(target=self.play_media)
         player_thread.start()
+
+    def pause(self):
+        try:
+            self.myplayer.pause()
+        except: pass
