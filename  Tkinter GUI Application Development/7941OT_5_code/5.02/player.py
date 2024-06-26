@@ -25,3 +25,8 @@ class Player():
             pyglet.app.run()
         except:
             pass
+
+    def start_play_thread(self):
+        self.pause()
+        player_thread = Thread(target=self.play_media)
+        player_thread.start()
