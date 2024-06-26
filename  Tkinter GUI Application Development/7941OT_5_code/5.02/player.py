@@ -35,3 +35,7 @@ class Player():
         try:
             self.myplayer.pause()
         except: pass
+
+
+if __name__ == '__main__':
+    print ('pyglet player class implementation')
