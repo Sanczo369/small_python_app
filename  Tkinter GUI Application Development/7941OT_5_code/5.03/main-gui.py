@@ -21,3 +21,11 @@ class GUI:
     timepattern = '{0:02d}:{1:02d}'
     loopchoices = [("No Loop", 1), ("Loop Current", 2), ("Loop All", 3)]
     selectedloopchoice = 3  # deafult 'no loop'
+    def __init__(self, player):
+        self.player = player
+        player.parent = self
+        self.root = Tk()
+        self.create_button_frame()
+        self.create_list_frame()
+        self.create_bottom_frame()
+        self.root.mainloop()
