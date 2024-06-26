@@ -29,3 +29,10 @@ class GUI:
         self.create_list_frame()
         self.create_bottom_frame()
         self.root.mainloop()
+
+    def create_button_frame(self):
+        buttonframe = Frame(self.root)
+        previcon = PhotoImage(file='../icons/previous.gif')
+        prevbtn=Button(buttonframe, image=previcon, borderwidth=0, padx=0, command=self.prev_track)
+        prevbtn.image = previcon
+        prevbtn.grid(row=3, column=1, sticky='w')
