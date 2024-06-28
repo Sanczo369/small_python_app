@@ -36,3 +36,8 @@ class GUI:
         prevbtn=Button(buttonframe, image=previcon, borderwidth=0, padx=0, command=self.prev_track)
         prevbtn.image = previcon
         prevbtn.grid(row=3, column=1, sticky='w')
+
+        del_selectedicon = PhotoImage(file='../icons/del_selected.gif')
+        del_selectedbtn=Button(bottomframe,image=del_selectedicon,borderwidth=0,padx=0, text='Delete', command=self.del_selected)
+        del_selectedbtn.image = del_selectedicon
+        del_selectedbtn.grid(row=5, column=2 )
