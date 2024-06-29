@@ -121,4 +121,12 @@ class GUI:
         except:
             return
         self.player.start_play_thread()
+    def toggle_mute(self):
+        if self.mutebtn.config('text')[-1] == 'unmute':
+            self.mutebtn.config(text='mute', image=self.muteicon)
+            self.player.mute()
+        elif self.mutebtn.config('text')[-1] == 'mute':
+            self.mutebtn.config(text='unmute', image=self.unmuteicon)
+            self.player.unmute()
+
 
