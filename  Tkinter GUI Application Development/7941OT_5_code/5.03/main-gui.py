@@ -100,4 +100,7 @@ class GUI:
         self.currentTrack = self.listbox.get(indx)
         self.player.start_play_thread()
 
+    def vol_update(self, e):
+        vol = float(e)
+        self.player.set_vol(vol)
 
