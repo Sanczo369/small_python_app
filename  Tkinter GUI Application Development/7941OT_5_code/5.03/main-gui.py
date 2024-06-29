@@ -129,4 +129,7 @@ class GUI:
             self.mutebtn.config(text='unmute', image=self.unmuteicon)
             self.player.unmute()
 
+if __name__ == '__main__':
+    playerobject = player.Player()
+    app = GUI(playerobject)
 
