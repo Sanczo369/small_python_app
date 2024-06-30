@@ -64,3 +64,9 @@ class Player():
     def start_play_thread(self):
         player_thread = Thread(target=self.play_media)
         player_thread.start()
+
+    def fast_fwd(self):
+        try:
+            current_time = self.myplayer.time
+            self.myplayer.seek(current_time+FWDREWNDTIME)
+        except:pass
