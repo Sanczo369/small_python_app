@@ -60,3 +60,7 @@ class Player():
             self.parent.launch_play()
         except:
             print 'end of list'
+
+    def start_play_thread(self):
+        player_thread = Thread(target=self.play_media)
+        player_thread.start()
