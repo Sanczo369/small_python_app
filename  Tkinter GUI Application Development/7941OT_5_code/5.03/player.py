@@ -52,3 +52,11 @@ class Player():
         if self.parent.selectedloopchoice == 3:
             # Loop All
             self.fetch_next_track()
+
+    def fetch_next_track(self):
+        try:
+            next_trackindx = self.parent.alltracks.index(self.parent.currentTrack) +1
+            self.parent.currentTrack = self.parent.alltracks[next_trackindx]
+            self.parent.launch_play()
+        except:
+            print 'end of list'
