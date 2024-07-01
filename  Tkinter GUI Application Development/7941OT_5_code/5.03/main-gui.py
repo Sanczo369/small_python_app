@@ -38,21 +38,21 @@ class GUI:
         prevbtn.grid(row=3, column=1, sticky='w')
 
         del_selectedicon = PhotoImage(file='../icons/del_selected.gif')
-        del_selectedbtn=Button(bottomframe,image=del_selectedicon,borderwidth=0,padx=0, text='Delete', command=self.del_selected)
+        del_selectedbtn=Button(buttonframe,image=del_selectedicon,borderwidth=0,padx=0, text='Delete', command=self.del_selected)
         del_selectedbtn.image = del_selectedicon
         del_selectedbtn.grid(row=5, column=2 )
 
         add_diricon = PhotoImage(file='../icons/add_dir.gif')
-        add_dirbtn=Button(bottomframe,image=add_diricon,borderwidth=0,padx=0, text='Add Dir', command=self.add_dir)
+        add_dirbtn=Button(buttonframe,image=add_diricon,borderwidth=0,padx=0, text='Add Dir', command=self.add_dir)
         add_dirbtn.image = add_diricon
         add_dirbtn.grid(row=5, column=3 )
 
         delallicon = PhotoImage(file='../icons/delall.gif')
-        delallbtn=Button(bottomframe, image=delallicon,borderwidth=0,padx=0, text='Clear All', command=self.clear_list)
+        delallbtn=Button(buttonframe, image=delallicon,borderwidth=0,padx=0, text='Clear All', command=self.clear_list)
         delallbtn.image = delallicon
         delallbtn.grid(row=5, column=4 )
 
-        bottomframe.grid(row=5, sticky='w',padx=5)
+        buttonframe.grid(row=5, sticky='w',padx=5)
 
     def add_file(self):
         filename = tkinter.filedialog.askopenfilename(filetypes=[('All supported', '.mp3 .wav'), ('.mp3 files', '.mp3'), ('.wav files', '.wav')])
