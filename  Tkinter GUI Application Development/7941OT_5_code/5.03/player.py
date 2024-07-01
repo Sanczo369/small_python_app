@@ -87,3 +87,11 @@ class Player():
         try:
             self.myplayer.volume = vol
         except:pass
+
+    def mute(self):
+        try:
+            self.myplayer.volume = 0.0
+            self.parent.volscale.set(0.0)
+            #self.parent.root.update()
+        except:pass
+
