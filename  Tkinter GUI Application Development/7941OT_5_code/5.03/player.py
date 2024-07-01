@@ -19,18 +19,19 @@ import time
 
 FWDREWNDTIME = 20
 
+
 class Player():
     parent = None
-    metadata ={} #mp3 artist title year genre in dictionary form.
-    song_length = 0 #in seconds
+    metadata = {}  # mp3 artist title year genre in dictionary form.
+    song_length = 0  # in seconds
     paused = False
     stopped = False
     current_time = 0
     vol = 0.0
 
-    def play_media(self) :
+    def play_media(self):
         try:
-            self.myplayer= pyglet.media.Player()
+            self.myplayer = pyglet.media.Player()
             self.myplayer.push_handlers(on_eos=self.what_next)
             self.source = pyglet.media.load(self.parent.currentTrack)
             self.myplayer.queue(self.source)
@@ -55,11 +56,11 @@ class Player():
 
     def fetch_next_track(self):
         try:
-            next_trackindx = self.parent.alltracks.index(self.parent.currentTrack) +1
+            next_trackindx = self.parent.alltracks.index(self.parent.currentTrack) + 1
             self.parent.currentTrack = self.parent.alltracks[next_trackindx]
             self.parent.launch_play()
         except:
-            print 'end of list'
+            print('end of list')
 
     def start_play_thread(self):
         player_thread = Thread(target=self.play_media)
@@ -68,38 +69,42 @@ class Player():
     def fast_fwd(self):
         try:
             current_time = self.myplayer.time
-            self.myplayer.seek(current_time+FWDREWNDTIME)
-        except:pass
+            self.myplayer.seek(current_time + FWDREWNDTIME)
+        except:
+            pass
 
     def rewind(self):
         try:
             current_time = self.myplayer.time
-            self.myplayer.seek(current_time-FWDREWNDTIME)
-        except:pass
+            self.myplayer.seek(current_time - FWDREWNDTIME)
+        except:
+            pass
 
     def pause(self):
         try:
             self.myplayer.pause()
             self.paused = True
-        except: pass
+        except:
+            pass
 
     def set_vol(self, vol):
         try:
             self.myplayer.volume = vol
-        except:pass
+        except:
+            pass
 
     def mute(self):
         try:
             self.myplayer.volume = 0.0
             self.parent.volscale.set(0.0)
-            #self.parent.root.update()
-        except:pass
+            # self.parent.root.update()
+        except:
+            pass
 
     def unmute(self):
         self.set_vol(self.vol)
         self.parent.volscale.set(0.3)
 
+
 if __name__ == '__main__':
-    print 'a pyglet player class implementation'
-
-
+    print('a pyglet player class implementation')
