@@ -36,3 +36,15 @@ class GUI:
     currentTrack = ''
     timer = [0, 0] #corresponding to minutes and seconds
     timepattern = '{0:02d}:{1:02d}'
+
+    def __init__(self, player):
+        self.player = player
+        player.parent = self
+        self.root = Tk()
+        self.root.title('Media Player')
+        self.root.iconbitmap('../icons/mp.ico')
+        self.create_console_frame()
+        self.create_button_frame()
+        self.create_list_frame()
+        self.create_bottom_frame()
+        self.root.mainloop()
