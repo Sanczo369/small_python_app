@@ -1,0 +1,38 @@
+"""
+Code illustration: 5.04
+
+NEW ATTRIBUTES ADDED HERE
+----------------------------
+
+
+NEW METHODS ADDED HERE:
+-------------------------
+create_console_frame - to display the top display console
+launch_play - to update display every time a new track is played
+update_clock_and_progressbar - to update the clock and progressbar periodically when a track is playing.
+
+METHODS MODIFIED:
+-----------------------
+identify_track_to_play
+prev_track
+next_track
+- rather than calling playthread directly these 3 methods now call the
+launch_play() method which takes care of console updation.
+
+@Tkinter GUI Application Development Hotshot
+"""
+from Tkinter  import *
+import tkFileDialog
+import tkMessageBox
+import ttk
+import os
+import time
+
+import player
+
+class GUI:
+    alltracks = []
+    indx=0
+    currentTrack = ''
+    timer = [0, 0] #corresponding to minutes and seconds
+    timepattern = '{0:02d}:{1:02d}'
