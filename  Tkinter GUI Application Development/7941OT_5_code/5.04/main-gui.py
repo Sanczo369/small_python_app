@@ -64,3 +64,10 @@ class GUI:
         self.progressBar.grid(row=2, columnspan=10, sticky='ew', padx=5)
 
         cnslfrm.grid(row=1, pady=1, padx=0)
+
+    def create_button_frame(self):
+        buttonframe = Frame(self.root)
+        previcon = PhotoImage(file='../icons/previous.gif')
+        prevbtn=Button(buttonframe, image=previcon, borderwidth=0, padx=0, command=self.prev_track)
+        prevbtn.image = previcon
+        prevbtn.grid(row=3, column=1, sticky='w')
