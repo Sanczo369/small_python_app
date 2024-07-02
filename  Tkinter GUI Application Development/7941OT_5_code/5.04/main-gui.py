@@ -62,3 +62,5 @@ class GUI:
                                                 text='\"Currently playing: none [00.00] \"')
         self.progressBar = ttk.Progressbar(cnslfrm, length=1, mode="determinate")
         self.progressBar.grid(row=2, columnspan=10, sticky='ew', padx=5)
+
+        cnslfrm.grid(row=1, pady=1, padx=0)
