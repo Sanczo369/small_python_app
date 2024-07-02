@@ -71,3 +71,11 @@ class GUI:
         prevbtn=Button(buttonframe, image=previcon, borderwidth=0, padx=0, command=self.prev_track)
         prevbtn.image = previcon
         prevbtn.grid(row=3, column=1, sticky='w')
+
+        rewindicon = PhotoImage(file='../icons/rewind.gif')
+        rewindbtn=Button(buttonframe, image=rewindicon, borderwidth=0, padx=0, command=self.player.rewind)
+        rewindbtn.image = rewindicon
+        rewindbtn.grid(row=3, column=2, sticky='w')
+
+
+
