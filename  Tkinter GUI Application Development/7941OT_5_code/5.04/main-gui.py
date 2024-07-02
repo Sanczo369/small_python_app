@@ -88,6 +88,12 @@ class GUI:
         fast_fwdbtn.image = fast_fwdicon
         fast_fwdbtn.grid(row=3, column=4)
 
+        nexticon = PhotoImage(file='../icons/next.gif')
+        nextbtn = Button(buttonframe, image=nexticon, borderwidth=0, padx=0, command=self.next_track)
+        nextbtn.image = nexticon
+        nextbtn.grid(row=3, column=5)
+
+
 
 
 
