@@ -77,5 +77,11 @@ class GUI:
         rewindbtn.image = rewindicon
         rewindbtn.grid(row=3, column=2, sticky='w')
 
+        self.playicon = PhotoImage(file='../icons/play.gif')
+        self.stopicon = PhotoImage(file='../icons/stop.gif')
+        self.playbtn=Button(buttonframe, text ='play', image=self.playicon, borderwidth=0, padx=0, command=self.toggle_play_pause)
+        self.playbtn.image = self.playicon
+        self.playbtn.grid(row=3, column=3)
+
 
 
