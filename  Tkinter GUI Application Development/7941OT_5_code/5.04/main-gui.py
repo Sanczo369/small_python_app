@@ -99,6 +99,13 @@ class GUI:
         self.mutebtn.image = self.unmuteicon
         self.mutebtn.grid(row=3, column=6)
 
+        self.volscale = ttk.Scale(buttonframe, from_=0.0, to=1.0, command=self.vol_update)
+        self.volscale.set(0.6)
+        self.volscale.grid(row=3, column=7, padx=5)
+
+        buttonframe.grid(row=3, columnspan=5, sticky='w', pady=4, padx=5)
+
+
 
 
 
