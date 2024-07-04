@@ -217,6 +217,9 @@ class GUI:
         else:
             self.canvas.after(1000, self.update_clock_and_progressbar)
 
+    def vol_update(self, e):
+        vol = float(e)
+        self.player.set_vol(vol)
 
 
 
