@@ -170,6 +170,14 @@ class GUI:
         self.listbox.delete(0, END)
         self.alltracks =list(self.listbox.get(0, END))
 
+    def toggle_play_pause(self):
+        if self.playbtn['text'] == 'play':
+            self.playbtn.config(text='stop', image=self.stopicon)
+            self.identify_track_to_play()
+        elif self.playbtn['text'] == 'stop':
+            self.playbtn.config(text='play', image=self.playicon)
+            self.player.pause()
+
 
 
 
