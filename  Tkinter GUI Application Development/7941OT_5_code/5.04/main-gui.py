@@ -188,6 +188,19 @@ class GUI:
         self.currentTrack = self.listbox.get(indx)
         self.launch_play()
 
+    def launch_play(self):
+        try:
+            self.player.pause()
+        except:
+            pass
+        self.player.start_play_thread()
+        song_lenminute = str(int(self.player.song_length / 60))
+        song_lenseconds = str(int(self.player.song_length % 60))
+        filename = self.currentTrack.split('/')[-1] + '\n [' + song_lenminute + ':' + song_lenseconds + ']'
+        self.canvas.itemconfig(self.songname, text=filename)
+        self.progressBar["maximum"] = self.player.song_length
+        self.update_clock_and_progressbar()
+
 
 
 
