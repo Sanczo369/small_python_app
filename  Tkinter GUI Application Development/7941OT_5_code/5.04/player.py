@@ -39,4 +39,19 @@ class Player():
         except:
             pass
 
+    def current_time(self):
+        try:
+            current_time = self.myplayer.time
+        except:
+            current_time = 0
+        return current_time
+
+    def song_len(self):
+        try:
+            self.song_length = self.source.duration
+        except:
+            self.song_length = 0
+        return self.song_length
+
+
 
