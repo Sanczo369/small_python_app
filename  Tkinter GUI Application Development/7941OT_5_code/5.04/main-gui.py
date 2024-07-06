@@ -245,5 +245,15 @@ class GUI:
             self.mutebtn.config(text ='unmute', image=self.unmuteicon)
             self.player.unmute()
 
+    def close_player(self):
+        if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
+            try:
+                self.player.pause()
+            except:
+                pass
+        self.root.destroy()
+
+
+
 
 
