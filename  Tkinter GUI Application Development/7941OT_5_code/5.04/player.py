@@ -71,4 +71,10 @@ class Player():
             self.myplayer.seek(current_time-FWDREWNDTIME)
         except:pass
 
+    def unpause(self):
+        try:
+            self.myplayer.play()
+            self.paused = False
+        except:pass
+
 
