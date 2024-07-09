@@ -90,4 +90,23 @@ class GUI:
         self.mutebtn.image = self.unmuteicon
         self.mutebtn.grid(row=3, column=6)
 
+        self.volscale = ttk.Scale(buttonframe, from_=0.0, to =1.0  , command=self.vol_update)
+        self.volscale.set(0.6)
+        self.volscale.grid(row=3, column=7 , padx=5)
+        buttonframe.grid(row=3, columnspan=5, sticky='w', pady=4, padx=5)
+
+    def create_list_frame(self):
+        list_frame = Frame(self.root)
+        self.listbox = Listbox(list_frame, activestyle='none', cursor='hand2', bg='#1C3D7D', fg='#A0B9E9',
+                               selectmode=EXTENDED, width=60, heigh=10)
+        self.listbox.pack(side=LEFT, fill=BOTH, expand=1)
+        self.listbox.bind("<Double-Button-1>", self.identify_track_to_play)
+        scrollbar = Scrollbar(list_frame)
+        scrollbar.pack(side=RIGHT, fill=BOTH)
+        self.listbox.config(yscrollcommand=scrollbar.set)
+        scrollbar.config(command=self.listbox.yview)
+        list_frame.grid(row=4, padx=5)
+
+
+
 
