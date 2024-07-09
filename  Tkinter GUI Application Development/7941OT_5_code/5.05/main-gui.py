@@ -107,6 +107,15 @@ class GUI:
         scrollbar.config(command=self.listbox.yview)
         list_frame.grid(row=4, padx=5)
 
+    def create_bottom_frame(self):
+        bottomframe = Frame(self.root)
+
+        add_fileicon = PhotoImage(file='../icons/add_file.gif')
+        add_filebtn = Button(bottomframe, image=add_fileicon, borderwidth=0, padx=0, text='Add File',
+                             command=self.add_file)
+        add_filebtn.image = add_fileicon
+        add_filebtn.grid(row=5, column=1)
+
 
 
 
