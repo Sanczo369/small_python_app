@@ -131,5 +131,14 @@ class GUI:
         delallbtn.image = delallicon
         delallbtn.grid(row=5, column=4 )
 
+        #radio buttons added
+        self.loopv = IntVar()
+        self.loopv.set(3)
+        for txt, val in self.loopchoices:
+            Radiobutton(bottomframe, text=txt,variable=self.loopv, command=self.set_loop_choice, value=val).grid(row=5, column=4+val, pady=3)
+
+        bottomframe.grid(row=5, sticky='w',padx=5)
+
+        bottomframe.grid(row=5, sticky='w',padx=5)
 
 
