@@ -175,5 +175,16 @@ class GUI:
             self.player.pause()
 
 
+    def identify_track_to_play(self, event=None):
+        try:
+            indx = int(self.listbox.curselection()[0])
+            if self.listbox.get(indx) == "":
+                self.del_selected()
+        except:
+            indx = 0
+        self.currentTrack = self.listbox.get(indx)
+        self.launch_play()
+
+
 
 
