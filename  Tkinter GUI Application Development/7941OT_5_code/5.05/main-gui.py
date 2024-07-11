@@ -199,5 +199,20 @@ class GUI:
         self.progressBar["maximum"] = self.player.song_length
         self.update_clock_and_progressbar()
 
+    def update_clock_and_progressbar(self):
+        current_time = (self.player.current_time())
+        song_len = (self.player.song_len())
+        currtimemin = int(current_time / 60)
+        currtimesec = int(current_time % 60)
+        currtimestrng = self.timepattern.format(currtimemin, currtimesec)
+        self.canvas.itemconfig(self.clock, text=currtimestrng)
+        self.progressBar["value"] = current_time
+        self.root.update()
+        if current_time == song_len:
+            self.canvas.itemconfig(self.clock, text='00:00')
+            self.timer = [0, 0]
+            self.progressBar["value"] = 0
+        else:
+            self.canvas.after(1000, self.update_clock_and_progressbar)
 
 
