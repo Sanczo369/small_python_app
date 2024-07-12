@@ -23,3 +23,11 @@ import time
 
 FWDREWNDTIME = 20
 
+class Player():
+    parent = None
+    metadata ={} #mp3 artist title year genre in dictionary form.
+    song_len = 0 #in seconds
+    paused = False
+    stopped = False
+    current_time = 0
+    vol = 0.0
