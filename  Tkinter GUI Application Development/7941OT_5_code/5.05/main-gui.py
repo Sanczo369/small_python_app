@@ -251,6 +251,9 @@ class GUI:
                 pass
         self.root.destroy()
 
+if __name__ == '__main__':
+    playerobject = player.Player()
+    app = GUI(playerobject)
 
 
 
