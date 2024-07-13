@@ -104,6 +104,12 @@ class Player():
             self.paused = False
         except:pass
 
+    def pause(self):
+        try:
+            self.myplayer.pause()
+            self.paused = True
+        except: pass
+
 
 
 
