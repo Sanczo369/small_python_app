@@ -32,3 +32,17 @@ class GUI:
     # new attributes added here
     loopchoices = [("No Loop", 1), ("Loop Current", 2), ("Loop All", 3)]
     selectedloopchoice = 3  # deafult 'no loop'
+
+    def __init__(self, player):
+        self.player = player
+        player.parent = self
+        self.root = Tk()
+        self.root.title('Media Player')
+        self.root.iconbitmap('../icons/mp.ico')
+        self.create_console_frame()
+        self.create_button_frame()
+        self.create_list_frame()
+        self.create_bottom_frame()
+        self.create_context_menu()
+        self.root.protocol('WM_DELETE_WINDOW', self.close_player)
+        self.root.mainloop()
