@@ -110,6 +110,10 @@ class Player():
             self.paused = True
         except: pass
 
+    def set_vol(self, vol):
+        try:
+            self.myplayer.volume = vol
+        except:pass
 
 
 
