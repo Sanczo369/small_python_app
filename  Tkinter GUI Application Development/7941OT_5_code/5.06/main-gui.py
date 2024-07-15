@@ -82,6 +82,12 @@ class GUI:
         self.playbtn.image = self.playicon
         self.playbtn.grid(row=3, column=3)
 
+        fast_fwdicon = PhotoImage(file='../icons/fast_fwd.gif')
+        fast_fwdbtn=Button(buttonframe, image=fast_fwdicon, borderwidth=0, padx=0, command=self.player.fast_fwd)
+        fast_fwdbtn.image = fast_fwdicon
+        fast_fwdbtn.grid(row=3, column=4)
+
+
 
 
 
