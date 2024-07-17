@@ -100,26 +100,32 @@ class GUI:
         buttonframe.grid(row=3, columnspan=5, sticky='w', pady=4, padx=5)
 
 
- def create_list_frame(self):
-        list_frame = Frame(self.root)
-        self.listbox = Listbox(list_frame, activestyle='none', cursor='hand2', bg='#1C3D7D', fg='#A0B9E9', selectmode=EXTENDED, width=60, heigh=10)
-        self.listbox.pack(side=LEFT, fill=BOTH, expand=1)
-        self.listbox.bind("<Double-Button-1>", self.identify_track_to_play)
-        self.listbox.bind("<Button-3>", self.show_context_menu)
-        scrollbar = Scrollbar(list_frame)
-        scrollbar.pack(side=RIGHT, fill=BOTH)
-        self.listbox.config(yscrollcommand=scrollbar.set)
-        scrollbar.config(command=self.listbox.yview)
-        list_frame.grid(row=4, padx=5)
+     def create_list_frame(self):
+            list_frame = Frame(self.root)
+            self.listbox = Listbox(list_frame, activestyle='none', cursor='hand2', bg='#1C3D7D', fg='#A0B9E9', selectmode=EXTENDED, width=60, heigh=10)
+            self.listbox.pack(side=LEFT, fill=BOTH, expand=1)
+            self.listbox.bind("<Double-Button-1>", self.identify_track_to_play)
+            self.listbox.bind("<Button-3>", self.show_context_menu)
+            scrollbar = Scrollbar(list_frame)
+            scrollbar.pack(side=RIGHT, fill=BOTH)
+            self.listbox.config(yscrollcommand=scrollbar.set)
+            scrollbar.config(command=self.listbox.yview)
+            list_frame.grid(row=4, padx=5)
 
 
-def create_bottom_frame(self):
-    bottomframe = Frame(self.root)
+    def create_bottom_frame(self):
+        bottomframe = Frame(self.root)
 
-    add_fileicon = PhotoImage(file='../icons/add_file.gif')
-    add_filebtn = Button(bottomframe, image=add_fileicon, borderwidth=0, padx=0, text='Add File', command=self.add_file)
-    add_filebtn.image = add_fileicon
-    add_filebtn.grid(row=5, column=1)
+        add_fileicon = PhotoImage(file='../icons/add_file.gif')
+        add_filebtn = Button(bottomframe, image=add_fileicon, borderwidth=0, padx=0, text='Add File', command=self.add_file)
+        add_filebtn.image = add_fileicon
+        add_filebtn.grid(row=5, column=1)
+
+
+        del_selectedicon = PhotoImage(file='../icons/del_selected.gif')
+        del_selectedbtn=Button(bottomframe,image=del_selectedicon,borderwidth=0,padx=0, text='Delete', command=self.del_selected)
+        del_selectedbtn.image = del_selectedicon
+        del_selectedbtn.grid(row=5, column=2 )
 
 
 
