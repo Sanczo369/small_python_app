@@ -127,6 +127,12 @@ class GUI:
         del_selectedbtn.image = del_selectedicon
         del_selectedbtn.grid(row=5, column=2 )
 
+        add_diricon = PhotoImage(file='../icons/add_dir.gif')
+        add_dirbtn=Button(bottomframe,image=add_diricon,borderwidth=0,padx=0, text='Add Dir', command=self.add_dir)
+        add_dirbtn.image = add_diricon
+        add_dirbtn.grid(row=5, column=3 )
+
+
 
 
 
