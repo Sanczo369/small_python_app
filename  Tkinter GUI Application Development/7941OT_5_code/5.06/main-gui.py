@@ -244,6 +244,16 @@ class GUI:
             return
         self.launch_play()
 
+    def next_track(self):
+        try:
+            self.player.pause()
+            nextindex = self.alltracks.index(self.currentTrack) + 1
+            self.currentTrack = self.alltracks[nextindex]
+        except:
+            return
+        self.launch_play()
+
+
 
 
 
