@@ -34,3 +34,17 @@ class Player():
             pyglet.app.run()
         except:
             pass
+
+    def what_next(self):
+        if self.stopped:
+            self.stopped = False
+            return None
+        if self.parent.loopv.get()  == 1:
+            # No Loop
+            return None
+        if self.parent.loopv.get()  == 2:
+            # Loop current
+            self.parent.launch_play()
+        if self.parent.loopv.get()  == 3:
+            # Loop All
+            self.fetch_next_track()
