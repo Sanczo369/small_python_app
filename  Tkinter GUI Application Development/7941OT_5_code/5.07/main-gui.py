@@ -49,3 +49,21 @@ class GUI:
         self.context_menu()
         self.root.protocol('WM_DELETE_WINDOW', self.close_player)
         self.root.mainloop()
+
+    def create_console_frame(self):
+        cnslfrm = Frame(self.root)
+        photo = PhotoImage(file='../icons/glassframe.gif')
+        self.canvas = Canvas(cnslfrm, width=370, height=90)
+        self.canvas.image = photo
+        self.canvas.grid(row=1)
+        self.console = self.canvas.create_image(0, 10, anchor=NW, image=photo)
+        self.clock = self.canvas.create_text(32, 34, anchor=W, fill='#CBE4F6', font="DS-Digital 20",
+                                             text="00:00")
+        self.songname = self.canvas.create_text(115, 37, anchor=W, fill='#9CEDAC', font="Verdana 10",
+                                                text='\"Currently playing: none [00.00] \"')
+
+        self.progressBar = ttk.Progressbar(cnslfrm, length=1, mode="determinate")
+        self.progressBar.grid(row=2, columnspan=10, sticky='ew', padx=5)
+
+        cnslfrm.grid(row=1, pady=1, padx=0)
+
