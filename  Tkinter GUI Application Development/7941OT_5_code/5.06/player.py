@@ -84,4 +84,9 @@ class Player():
             self.myplayer.seek(current_time+FWDREWNDTIME)
         except:pass
 
+    def rewind(self):
+        try:
+            current_time = self.myplayer.time
+            self.myplayer.seek(current_time-FWDREWNDTIME)
+        except:pass
 
