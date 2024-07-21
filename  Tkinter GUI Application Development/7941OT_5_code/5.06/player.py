@@ -120,5 +120,5 @@ class Player():
         self.parent.volscale.set(0.3)
 
 if __name__ == '__main__':
-    print 'a pyglet player class implementation'
+    print('a pyglet player class implementation')
 
