@@ -75,3 +75,11 @@ class GUI:
         prevbtn.grid(row=3, column=1, sticky='w')
         self.balloon.bind(prevbtn, 'Previous Song')
 
+        rewindicon = PhotoImage(file='../icons/rewind.gif')
+        rewindbtn = Button(buttonframe, image=rewindicon, borderwidth=0, padx=0, command=self.player.rewind)
+        rewindbtn.image = rewindicon
+        rewindbtn.grid(row=3, column=2, sticky='w')
+        self.balloon.bind(rewindbtn, 'Go Back')
+
+
+
