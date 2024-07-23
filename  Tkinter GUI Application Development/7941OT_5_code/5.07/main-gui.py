@@ -135,6 +135,12 @@ class GUI:
         add_filebtn.grid(row=5, column=1)
         self.balloon.bind(add_filebtn, 'Add New File')
 
+        del_selectedicon = PhotoImage(file='../icons/del_selected.gif')
+        del_selectedbtn=Button(bottomframe,image=del_selectedicon,borderwidth=0,padx=0, text='Delete', command=self.del_selected)
+        del_selectedbtn.image = del_selectedicon
+        del_selectedbtn.grid(row=5, column=2 )
+        self.balloon.bind(del_selectedbtn, 'Delete Selected')
+
 
 
 
