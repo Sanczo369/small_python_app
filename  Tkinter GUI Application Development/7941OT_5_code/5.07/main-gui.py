@@ -100,5 +100,11 @@ class GUI:
         nextbtn.grid(row=3, column=5)
         self.balloon.bind(nextbtn, 'Next Song')
 
+        self.muteicon = PhotoImage(file='../icons/mute.gif')
+        self.unmuteicon = PhotoImage(file='../icons/unmute.gif')
+        self.mutebtn=Button(buttonframe, image=self.unmuteicon, text='unmute', borderwidth=0,padx=0, command=self.toggle_mute)
+        self.mutebtn.image = self.unmuteicon
+        self.mutebtn.grid(row=3, column=6)
+        self.balloon.bind(self.mutebtn, 'Mute/Unmute')
 
 
