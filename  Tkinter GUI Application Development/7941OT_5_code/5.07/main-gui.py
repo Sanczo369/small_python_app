@@ -164,6 +164,12 @@ class GUI:
 
         bottomframe.grid(row=5, sticky='w',padx=5)
 
+        def context_menu(self):
+            self.context_menu = Menu(self.root, tearoff=0)
+            self.context_menu.add_command(label="Play", command=self.identify_track_to_play)
+            self.context_menu.add_command(label="Delete", command=self.del_selected)
+
+
 
 
 
