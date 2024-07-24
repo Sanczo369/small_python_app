@@ -141,6 +141,11 @@ class GUI:
         del_selectedbtn.grid(row=5, column=2 )
         self.balloon.bind(del_selectedbtn, 'Delete Selected')
 
+        add_diricon = PhotoImage(file='../icons/add_dir.gif')
+        add_dirbtn=Button(bottomframe,image=add_diricon,borderwidth=0,padx=0, text='Add Dir', command=self.add_dir)
+        add_dirbtn.image = add_diricon
+        add_dirbtn.grid(row=5, column=3 )
+        self.balloon.bind(add_dirbtn, 'Add Directory')
 
 
 
