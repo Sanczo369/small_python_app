@@ -141,18 +141,6 @@ class GUI:
         del_selectedbtn.grid(row=5, column=2 )
         self.balloon.bind(del_selectedbtn, 'Delete Selected')
 
-    def create_button_frame(self):
-        buttonframe = Frame(self.root)
-        previcon = PhotoImage(file='../icons/previous.gif')
-        prevbtn = Button(buttonframe, image=previcon, borderwidth=0, padx=0, command=self.prev_track)
-        prevbtn.image = previcon
-        prevbtn.grid(row=3, column=1, sticky='w')
-        self.balloon.bind(prevbtn, 'Previous Song')
 
-        rewindicon = PhotoImage(file='../icons/rewind.gif')
-        rewindbtn = Button(buttonframe, image=rewindicon, borderwidth=0, padx=0, command=self.player.rewind)
-        rewindbtn.image = rewindicon
-        rewindbtn.grid(row=3, column=2, sticky='w')
-        self.balloon.bind(rewindbtn, 'Go Back')
 
 
