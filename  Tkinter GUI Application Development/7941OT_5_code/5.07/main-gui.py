@@ -172,6 +172,12 @@ class GUI:
     def show_context_menu(self,event):
         self.context_menu.tk_popup(event.x_root+45, event.y_root+10, 0)
 
+    def add_file(self):
+        tfile = tkFileDialog.askopenfilename(
+            filetypes=[('All supported', '.mp3 .wav'), ('.mp3 files', '.mp3'), ('.wav files', '.wav')])
+        self.listbox.insert(END, tfile)
+        self.alltracks = list(self.listbox.get(0, END))
+
 
 
 
