@@ -278,6 +278,14 @@ class GUI:
     def set_loop_choice(self):
         self.selectedloopchoice = self.loopv.get()
 
+    def close_player(self):
+        if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
+            try:
+                self.player.pause()
+            except:
+                pass
+        self.root.destroy()
+
 
 
 
