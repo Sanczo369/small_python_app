@@ -251,6 +251,14 @@ class GUI:
         vol = float(e)
         self.player.set_vol(vol)
 
+    def prev_track(self):
+        try:
+         self.player.pause()
+         previndex = self.alltracks.index(self.currentTrack) -1
+         self.currentTrack = self.alltracks[previndex]
+        except:return
+        self.launch_play()
+
 
 
 
