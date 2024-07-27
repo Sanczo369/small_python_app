@@ -275,6 +275,8 @@ class GUI:
             self.mutebtn.config(text='unmute', image=self.unmuteicon)
             self.player.unmute()
 
+    def set_loop_choice(self):
+        self.selectedloopchoice = self.loopv.get()
 
 
 
