@@ -16,7 +16,7 @@ tootip addded for each button in both these frames
 from tkinter import *
 import tkinter.filedialog
 import tkinter.messagebox
-import ttk
+from tkinter import ttk
 import os
 import time
 
@@ -173,13 +173,13 @@ class GUI:
         self.context_menu.tk_popup(event.x_root+45, event.y_root+10, 0)
 
     def add_file(self):
-        tfile = tkFileDialog.askopenfilename(
+        tfile = tkinter.filedialog.askopenfilename(
             filetypes=[('All supported', '.mp3 .wav'), ('.mp3 files', '.mp3'), ('.wav files', '.wav')])
         self.listbox.insert(END, tfile)
         self.alltracks = list(self.listbox.get(0, END))
 
     def add_dir(self):
-        path = tkFileDialog.askdirectory()
+        path = tkinter.filedialog.askdirectory()
         tfileList = []
         for (dirpath, dirnames, filenames) in os.walk(path):
             for tfile in filenames:
@@ -279,7 +279,7 @@ class GUI:
         self.selectedloopchoice = self.loopv.get()
 
     def close_player(self):
-        if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
+        if tkinter.messagebox.askokcancel("Quit", "Do you really want to quit?"):
             try:
                 self.player.pause()
             except:
