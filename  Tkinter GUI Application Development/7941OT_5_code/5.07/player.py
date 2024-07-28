@@ -58,3 +58,10 @@ class Player():
         except:
             print 'end of list'
 
+    def current_time(self):
+        try:
+            current_time = self.myplayer.time
+        except:
+            current_time = 0
+        return current_time
+
