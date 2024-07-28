@@ -72,4 +72,11 @@ class Player():
             self.song_length = 0
         return self.song_length
 
+    def start_play_thread(self):
+        player_thread = Thread(target=self.play_media)
+        player_thread.start()
+        time.sleep(1)
+        self.song_len()
+
+
 
