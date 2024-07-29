@@ -78,5 +78,12 @@ class Player():
         time.sleep(1)
         self.song_len()
 
+    def fast_fwd(self):
+        try:
+            current_time = self.myplayer.time
+            self.myplayer.seek(current_time + FWDREWNDTIME)
+        except:
+            pass
+
 
 
