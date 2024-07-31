@@ -116,3 +116,6 @@ class Player():
             #self.parent.root.update()
         except:pass
 
+    def unmute(self):
+        self.set_vol(self.vol)
+        self.parent.volscale.set(0.3)
