@@ -56,7 +56,7 @@ class Player():
             self.parent.currentTrack = self.parent.alltracks[next_trackindx]
             self.parent.launch_play()
         except:
-            print 'end of list'
+            print('end of list')
 
     def current_time(self):
         try:
@@ -121,4 +121,4 @@ class Player():
         self.parent.volscale.set(0.3)
 
 if __name__ == '__main__':
-    print 'a pyglet player class implementation'
+    print('a pyglet player class implementation')
