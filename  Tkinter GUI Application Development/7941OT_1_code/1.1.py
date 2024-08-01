@@ -8,8 +8,7 @@ A demonstration of event binding with the bind() method
 @Tkinter GUI Application Development Hotshot
 
 """
-
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 
@@ -21,8 +20,7 @@ def callback(event):  ##(2)
     print
     dir(event)  ##(3) Inspecting the instance event
 
-    print
-    "you clicked at", event.x, event.y  ##(4)
+    print("you clicked at", event.x, event.y) ##(4)
 
 
 myframe = Frame(root, bg='khaki', width=130, height=80)
