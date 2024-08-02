@@ -8,7 +8,7 @@ A demonstration of grid() geometry manager options
 
 """
 
-from Tkinter import *
+from tkinter import *
 
 parent = Tk()
 
