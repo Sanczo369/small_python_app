@@ -9,7 +9,7 @@ Simple example of grid Geometry Manager
 
 """
 
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 
