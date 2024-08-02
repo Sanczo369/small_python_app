@@ -10,7 +10,7 @@ Where to use pack() options
 """
 
 
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 
