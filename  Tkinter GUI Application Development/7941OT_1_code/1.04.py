@@ -9,7 +9,7 @@ A demonstration of all core tkinter widgets
 
 """
 
-from Tkinter import *
+from tkinter import *
 root = Tk()
 root.title('I am a Top Level Widget, parent to other widgets')
 
@@ -245,5 +245,4 @@ bottom = Text(m2, height=3, width=3)
 m2.add(bottom)
 
 root.mainloop()
-
 
