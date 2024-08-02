@@ -9,7 +9,7 @@ A demonstration of common pack() options
 
 """
 
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 
