@@ -88,3 +88,7 @@ class GUI(framework.GUIFramework):
         vbar.config(command=self.canvas.yview)
         self.canvas.config(xscrollcommand=hbar.set, yscrollcommand=vbar.set)
         self.canvas.pack(side=RIGHT, expand=YES, fill=BOTH)
+
+    def new_file(self):
+        self.canvas.delete(ALL)
+        self.root.title('untitled')
