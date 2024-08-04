@@ -75,3 +75,16 @@ class GUI(framework.GUIFramework):
     def set_foreground_color(self, event=None):
         self.foreground = askcolor()[-1]
         self.colorpallete.itemconfig(self.foregroundpallete,outline=self.foreground, fill=self.foreground)
+
+    def create_drawing_canvas(self):
+        cnvsframe=Frame(self.root,width=900,height=900)
+        cnvsframe.pack(side=RIGHT, expand=YES, fill=BOTH)
+        self.canvas = Canvas(cnvsframe, background="white", width=500,height=500,scrollregion=(0,0,800,800))
+        hbar=Scrollbar(cnvsframe,orient=HORIZONTAL)
+        hbar.pack(side=BOTTOM,fill=X)
+        hbar.config(command=self.canvas.xview)
+        vbar=Scrollbar(cnvsframe,orient=VERTICAL)
+        vbar.pack(side=RIGHT,fill=Y)
+        vbar.config(command=self.canvas.yview)
+        self.canvas.config(xscrollcommand=hbar.set, yscrollcommand=vbar.set)
+        self.canvas.pack(side=RIGHT, expand=YES, fill=BOTH)
