@@ -37,3 +37,10 @@ class GUI(framework.GUIFramework):
     starty = 0
     lastx = 0
     lasty = 0
+
+    def __init__(self, root):
+       self.root = root
+       self.create_menu()
+       self.create_top_bar()
+       self.create_tool_bar()
+       self.create_drawing_canvas()
