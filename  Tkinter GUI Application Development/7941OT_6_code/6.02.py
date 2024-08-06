@@ -59,3 +59,6 @@ class GUI(framework.GUIFramework):
         self.topbar = Frame(self.root, height=25, relief=RAISED)
         self.topbar.pack(fill=X,side=TOP, pady=2)
 
+    def create_top_bar(self):
+        self.topbar = Frame(self.root, height=25, relief=RAISED)
+        self.topbar.pack(fill=X,side=TOP, pady=2)
