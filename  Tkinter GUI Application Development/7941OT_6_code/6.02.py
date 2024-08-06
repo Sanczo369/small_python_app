@@ -75,3 +75,6 @@ class GUI(framework.GUIFramework):
         for i in range(8):
             self.button = Button(self.toolbar, text=i, command=lambda i=i: self.selected_tool_bar_item(i))
             self.button.grid(row=i/2, column=1+i%2, sticky='nsew')
+
+    def selected_tool_bar_item(self, i):
+        print 'You selected {}'.format(i)
