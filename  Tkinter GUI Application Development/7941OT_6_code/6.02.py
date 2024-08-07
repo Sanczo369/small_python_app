@@ -113,3 +113,8 @@ class GUI(framework.GUIFramework):
         self.canvas.bind("<Button1-Motion>", self.mouse_down_motion)
         self.canvas.bind("<Button1-ButtonRelease>", self.mouse_up)
         self.canvas.bind("<Motion>", self.show_current_coordinates)
+
+    def mouse_down(self, event):
+        self.currentobject = None
+        self.lastx = self.startx = self.canvas.canvasx(event.x)
+        self.lasty = self.starty = self.canvas.canvasy(event.y)
