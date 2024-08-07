@@ -118,3 +118,8 @@ class GUI(framework.GUIFramework):
         self.currentobject = None
         self.lastx = self.startx = self.canvas.canvasx(event.x)
         self.lasty = self.starty = self.canvas.canvasy(event.y)
+
+    def mouse_down_motion(self, event):
+        self.lastx = self.canvas.canvasx(event.x)
+        self.lasty = self.canvas.canvasy(event.y)
+
