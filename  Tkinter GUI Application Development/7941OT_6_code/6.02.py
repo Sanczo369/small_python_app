@@ -133,3 +133,8 @@ class GUI(framework.GUIFramework):
         cord =  'x: %d \ny: %d '%(lx, ly)
         self.curcoordlabel.config(text=cord)
 
+    def new_file(self):
+        self.canvas.delete(ALL)
+        self.root.title('untitled')
+
+
