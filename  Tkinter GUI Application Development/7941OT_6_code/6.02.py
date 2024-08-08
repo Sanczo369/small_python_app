@@ -127,3 +127,9 @@ class GUI(framework.GUIFramework):
         self.lastx = self.canvas.canvasx(event.x)
         self.lasty = self.canvas.canvasy(event.y)
 
+    def show_current_coordinates(self, event=None):
+        lx = self.canvas.canvasx(event.x)
+        ly = self.canvas.canvasy(event.y)
+        cord =  'x: %d \ny: %d '%(lx, ly)
+        self.curcoordlabel.config(text=cord)
+
