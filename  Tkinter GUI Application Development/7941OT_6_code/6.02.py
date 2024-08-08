@@ -123,3 +123,7 @@ class GUI(framework.GUIFramework):
         self.lastx = self.canvas.canvasx(event.x)
         self.lasty = self.canvas.canvasy(event.y)
 
+    def mouse_up(self, event):
+        self.lastx = self.canvas.canvasx(event.x)
+        self.lasty = self.canvas.canvasy(event.y)
+
