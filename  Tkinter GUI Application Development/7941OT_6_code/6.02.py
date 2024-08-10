@@ -168,3 +168,7 @@ class GUI(framework.GUIFramework):
         self.canvas.postscript(file=self.filename, colormode='color')
         self.root.title(self.filename)
 
+    def about(self, event=None):
+        tkMessageBox.showinfo("About","Tkinter GUI Application\n Development Hotshot")
+
+
