@@ -157,3 +157,10 @@ class GUI(framework.GUIFramework):
             self.save_as()
         else:
             self.actual_save()
+
+    def save_as(self):
+        try:
+            self.filename = tkFileDialog.asksaveasfilename(master = self.root,filetypes = [('All Files',('*.ps', '*.ps'))], title="Save...")
+        except:pass
+        self.actual_save()
+
