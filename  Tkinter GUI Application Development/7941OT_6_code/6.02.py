@@ -172,3 +172,7 @@ class GUI(framework.GUIFramework):
         tkMessageBox.showinfo("About","Tkinter GUI Application\n Development Hotshot")
 
 
+    def close(self, event=None):
+        if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
+            self.root.destroy()
+
