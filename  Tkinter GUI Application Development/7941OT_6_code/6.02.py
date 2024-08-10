@@ -164,3 +164,7 @@ class GUI(framework.GUIFramework):
         except:pass
         self.actual_save()
 
+    def actual_save(self):
+        self.canvas.postscript(file=self.filename, colormode='color')
+        self.root.title(self.filename)
+
