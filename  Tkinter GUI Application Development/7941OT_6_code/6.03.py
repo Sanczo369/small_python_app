@@ -35,3 +35,10 @@ class GUI(framework.GUIFramework):
     lasty = 0
     all_toolbar_functions = ('draw_line', 'draw_rectangle', 'draw_oval', 'draw_brush')
     selected_toolbar_func_index = 0 # draw_line
+
+    def __init__(self, root):
+        self.root = root
+        self.create_menu()
+        self.create_top_bar()
+        self.create_tool_bar()
+        self.create_drawing_canvas()
