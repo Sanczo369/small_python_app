@@ -72,4 +72,8 @@ class GUI(framework.GUIFramework):
             self.button.grid(row=i/2, column=1+i%2, sticky='nsew')
             self.button.image = tbicon
 
+    def selected_tool_bar_item(self, i):
+        self.selected_toolbar_func_index = i
+
+
 
