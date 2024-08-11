@@ -57,4 +57,12 @@ class GUI(framework.GUIFramework):
         self.topbar = Frame(self.root, height=25, relief=RAISED)
         self.topbar.pack(fill=X, side=TOP, pady=2)
 
+    def create_tool_bar(self):
+        self.toolbar = Frame(self.root, width=50, relief=RAISED)
+        self.toolbar.pack(fill=Y,side=LEFT, pady=3)
+        self.create_tool_bar_buttons()
+        self.create_color_pallete()
+        self.curcoordlabel = Label(self.toolbar, text = 'x: 0  \ny: 0 ')
+        self.curcoordlabel.grid(row=13, column=1, columnspan=2, pady=5, padx=1, sticky='w')
+
 
