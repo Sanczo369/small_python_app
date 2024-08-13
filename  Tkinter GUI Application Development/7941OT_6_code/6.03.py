@@ -137,4 +137,6 @@ class GUI(framework.GUIFramework):
         cord =  'x: %d \ny: %d '%(lx, ly)
         self.curcoordlabel.config(text=cord)
 
+    def draw_line(self, x, y, x2, y2):
+        self.currentobject = self.canvas.create_line(x,y,x2,y2,fill= self.foreground )
 
