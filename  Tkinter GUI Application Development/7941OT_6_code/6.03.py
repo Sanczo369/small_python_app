@@ -126,3 +126,8 @@ class GUI(framework.GUIFramework):
         self.canvas.delete(self.currentobject)
         self.currentobject = None
         self.execute_method()
+
+    def execute_method(self):
+        fnc = getattr(self,self.all_toolbar_functions[self.selected_toolbar_func_index])
+        fnc(self.startx, self.starty,self.lastx, self.lasty)
+
