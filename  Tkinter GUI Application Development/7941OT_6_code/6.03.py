@@ -140,3 +140,7 @@ class GUI(framework.GUIFramework):
     def draw_line(self, x, y, x2, y2):
         self.currentobject = self.canvas.create_line(x,y,x2,y2,fill= self.foreground )
 
+    def draw_rectangle(self, x, y, x2, y2):
+        self.currentobject = self.canvas.create_rectangle(x, y,x2, y2, fill= self.foreground)
+
+
