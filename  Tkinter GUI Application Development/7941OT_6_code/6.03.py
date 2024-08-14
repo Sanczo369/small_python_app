@@ -154,3 +154,9 @@ class GUI(framework.GUIFramework):
 
         self.canvas.bind("<B1-Motion>", self.draw_brush_update_xy)
 
+    def draw_brush_update_xy(self, event):
+        self.startx, self.starty = self.lastx, self.lasty
+        self.lastx, self.lasty = event.x, event.y
+        self.draw_brush(self.startx, self.starty,self.lastx, self.lasty)
+
+
