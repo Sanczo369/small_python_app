@@ -175,6 +175,9 @@ class GUI(framework.GUIFramework):
         self.currentobject = self.canvas.create_image(10, 10, anchor=NW, image=self.image)
         self.canvas.config(scrollregion=self.canvas.bbox(ALL))
 
+    def undo(self, event=None):
+        self.canvas.delete(self.currentobject)
+
 
 
 
