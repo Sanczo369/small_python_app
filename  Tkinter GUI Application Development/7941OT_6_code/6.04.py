@@ -91,3 +91,10 @@ class GUI(framework.GUIFramework):
         self.curcoordlabel = Label(self.toolbar, text='x: 0  \ny: 0 ')
         self.curcoordlabel.grid(row=13, column=1, columnspan=2, pady=5, padx=1, sticky='w')
 
+    def create_tool_bar_buttons(self):
+        for i, item in enumerate(self.all_toolbar_functions):
+            tbicon = PhotoImage(file='icons/'+item+'.gif')
+            self.button = Button(self.toolbar, image=tbicon, command=lambda i=i: self.selected_tool_bar_item(i))
+            self.button.grid(row=i/2, column=1+i%2, sticky='nsew')
+            self.button.image = tbicon
+
