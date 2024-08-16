@@ -98,3 +98,12 @@ class GUI(framework.GUIFramework):
             self.button.grid(row=i/2, column=1+i%2, sticky='nsew')
             self.button.image = tbicon
 
+    def selected_tool_bar_item(self, i):
+            self.selected_toolbar_func_index = i
+            self.remove_options_from_topbar()
+            self.show_selected_tool_icon_in_topbar()
+            opt = self.all_toolbar_functions[self.selected_toolbar_func_index]+'_options'
+            fnc = getattr(self, opt)
+            fnc()
+
+
