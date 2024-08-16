@@ -78,3 +78,8 @@ class GUI(framework.GUIFramework):
                        )
         self.build_menu()
         self.root.config(menu=self.menubar)
+
+    def create_top_bar(self):
+        self.topbar = Frame(self.root, height=25, relief=RAISED)
+        self.topbar.pack(fill=X,side=TOP, pady=2)
+
