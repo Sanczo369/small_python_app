@@ -169,5 +169,12 @@ class GUI(framework.GUIFramework):
         elif fl == 'bg': self.fill = self.background
         else: self.fill = fl
 
+    def outline_options_combobox(self):
+            Label(self.topbar,text='Outline:').pack(side=LEFT)
+            self.outlncmbobx = ttk.Combobox(self.topbar, state='readonly', width=5)
+            self.outlncmbobx.pack(side=LEFT)
+            self.outlncmbobx['values'] = ('none', 'fg','bg', 'black', 'white' )
+            self.outlncmbobx.bind('<<ComboboxSelected>>', self.set_outline)
+            self.outlncmbobx.set(self.outline)
 
 
