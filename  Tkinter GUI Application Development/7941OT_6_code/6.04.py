@@ -124,3 +124,14 @@ class GUI(framework.GUIFramework):
         except:pass
         self.colorpallete.itemconfig(self.backgroundpallete, outline=self.background, fill=self.background)
 
+    def set_foreground_color(self, event=None):
+        self.foreground = askcolor()[-1]
+        try:
+            self.set_fill()
+        except:
+            pass
+        try:
+            self.set_outline()
+        except:
+            pass
+        self.colorpallete.itemconfig(self.foregroundpallete, outline=self.foreground, fill=self.foreground)
