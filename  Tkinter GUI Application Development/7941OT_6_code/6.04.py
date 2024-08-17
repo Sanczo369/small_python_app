@@ -135,3 +135,10 @@ class GUI(framework.GUIFramework):
         except:
             pass
         self.colorpallete.itemconfig(self.foregroundpallete, outline=self.foreground, fill=self.foreground)
+
+    def show_selected_tool_icon_in_topbar(self):
+        Label(self.topbar, text='Selected Tool:').pack(side=LEFT)
+        photo = PhotoImage(file='icons/' + self.all_toolbar_functions[self.selected_toolbar_func_index] + '.gif')
+        label = Label(self.topbar, image=photo)
+        label.image = photo
+        label.pack(side=LEFT)
