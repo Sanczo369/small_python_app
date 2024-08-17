@@ -177,4 +177,10 @@ class GUI(framework.GUIFramework):
             self.outlncmbobx.bind('<<ComboboxSelected>>', self.set_outline)
             self.outlncmbobx.set(self.outline)
 
+    def set_outline(self, event=None):
+        outln = self.outlncmbobx.get()
+        if outln == 'none': self.outline = ''#transparent
+        elif outln == 'fg': self.outline = self.foreground
+        elif outln == 'bg': self.outline = self.background
+        else: self.outline = outln
 
