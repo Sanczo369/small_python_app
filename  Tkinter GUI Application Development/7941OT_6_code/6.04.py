@@ -184,3 +184,12 @@ class GUI(framework.GUIFramework):
         elif outln == 'bg': self.outline = self.background
         else: self.outline = outln
 
+    def dash_options_combobox(self):
+            Label(self.topbar,text='Dash:').pack(side=LEFT)
+            self.dashcmbobx = ttk.Combobox(self.topbar, state='readonly', width=5)
+            self.dashcmbobx.pack(side=LEFT)
+            self.dashcmbobx['values'] = ('none','small', 'medium', 'large' )
+            self.dashcmbobx.bind('<<ComboboxSelected>>', self.set_dash)
+            self.dashcmbobx.current(0)
+
+
