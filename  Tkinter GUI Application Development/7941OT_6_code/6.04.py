@@ -142,3 +142,7 @@ class GUI(framework.GUIFramework):
         label = Label(self.topbar, image=photo)
         label.image = photo
         label.pack(side=LEFT)
+
+    def remove_options_from_topbar(self):
+        for child in self.topbar.winfo_children():
+            child.destroy()
