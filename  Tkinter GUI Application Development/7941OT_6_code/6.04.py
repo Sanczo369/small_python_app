@@ -192,4 +192,11 @@ class GUI(framework.GUIFramework):
             self.dashcmbobx.bind('<<ComboboxSelected>>', self.set_dash)
             self.dashcmbobx.current(0)
 
+    def arrow_options_combobox(self):
+            Label(self.topbar,text='Arrow:').pack(side=LEFT)
+            self.arrowcmbobx = ttk.Combobox(self.topbar, state='readonly', width=5)
+            self.arrowcmbobx.pack(side=LEFT)
+            self.arrowcmbobx['values'] = ('none', 'first', 'last', 'both')
+            self.arrowcmbobx.bind('<<ComboboxSelected>>', self.set_arrow)
+            self.arrowcmbobx.current(0)
 
