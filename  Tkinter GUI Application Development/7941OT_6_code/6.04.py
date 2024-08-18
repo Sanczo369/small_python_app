@@ -203,4 +203,6 @@ class GUI(framework.GUIFramework):
     def set_width(self, event):
         self.width = float(self.widthcmbobx.get())
 
+    def set_arrow(self, event):
+        self.arrow = self.arrowcmbobx.get()
 
