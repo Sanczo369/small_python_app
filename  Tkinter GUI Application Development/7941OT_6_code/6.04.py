@@ -216,3 +216,9 @@ class GUI(framework.GUIFramework):
             self.dash = 15
         elif self.dashcmbobx.get() == 'large':
             self.dash = 255
+
+    def draw_line_options(self):
+            self.fill_options_combobox()
+            self.width_options_combobox()
+            self.arrow_options_combobox()
+            self.dash_options_combobox()
