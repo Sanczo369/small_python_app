@@ -287,4 +287,8 @@ class GUI(framework.GUIFramework):
         self.currentobject = self.canvas.create_line(x, y, x2, y2, fill=self.fill, arrow=self.arrow, width=self.width,
                                                      dash=self.dash)
 
+    def draw_rectangle(self, x, y, x2, y2):
+        self.currentobject = self.canvas.create_rectangle(x, y,x2, y2, outline=self.outline, fill=self.fill, width=self.width)
+
+
 
