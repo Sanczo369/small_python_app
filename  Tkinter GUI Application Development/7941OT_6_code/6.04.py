@@ -290,5 +290,9 @@ class GUI(framework.GUIFramework):
     def draw_rectangle(self, x, y, x2, y2):
         self.currentobject = self.canvas.create_rectangle(x, y,x2, y2, outline=self.outline, fill=self.fill, width=self.width)
 
+    def draw_oval(self, x, y, x2, y2):
+        self.currentobject = self.canvas.create_oval(x, y, x2, y2, outline=self.outline, fill=self.fill,
+                                                     width=self.width)
+
 
 
