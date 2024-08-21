@@ -311,5 +311,16 @@ class GUI(framework.GUIFramework):
         self.canvas.delete(ALL)
         self.root.title('untitled')
 
+    def open_file(self):
+        self.filename = tkFileDialog.askopenfilename(master=self.root,
+                                                     filetypes=[('All Files', ('*.jpg', '*.png', '*.tif', '*.gif')),
+                                                                ('jpeg', '*.jpg'), ('png', '*.png'), ('tiff', '*.tif'),
+                                                                ('gif', '*.gif')], title="Open...")
+        if not self.filename: return
+        self.root.title(self.filename)
+        self.img = Image.open(self.filename)
+        self.image = ImageTk.PhotoImage(self.img)
+        self.currentobject = self.canvas.create_image(10, 10, anchor=NW, image=self.image)
+        self.canvas.config(scrollregion=self.canvas.bbox(ALL))
 
 
