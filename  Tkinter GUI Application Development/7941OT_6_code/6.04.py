@@ -294,5 +294,14 @@ class GUI(framework.GUIFramework):
         self.currentobject = self.canvas.create_oval(x, y, x2, y2, outline=self.outline, fill=self.fill,
                                                      width=self.width)
 
+    def draw_brush(self, x, y, x2, y2):
+        if not self.all_toolbar_functions[self.selected_toolbar_func_index] == 'draw_brush':
+            self.canvas.bind("<Button1-Motion>", self.mouse_down_motion)
+            return
+        self.currentobject = self.canvas.create_line(x, y, x2, y2, fill=self.fill, width=self.width)
+
+        self.canvas.bind("<B1-Motion>", self.draw_brush_update_xy)
+
+
 
 
