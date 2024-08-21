@@ -323,4 +323,9 @@ class GUI(framework.GUIFramework):
         self.currentobject = self.canvas.create_image(10, 10, anchor=NW, image=self.image)
         self.canvas.config(scrollregion=self.canvas.bbox(ALL))
 
+    def save(self):
+        if self.filename == 'untitled':
+            self.save_as()
+        else:
+            self.actual_save()
 
