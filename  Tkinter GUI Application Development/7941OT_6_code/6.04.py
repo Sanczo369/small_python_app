@@ -307,6 +307,9 @@ class GUI(framework.GUIFramework):
         self.lastx, self.lasty = event.x, event.y
         self.draw_brush(self.startx, self.starty, self.lastx, self.lasty)
 
+    def new_file(self):
+        self.canvas.delete(ALL)
+        self.root.title('untitled')
 
 
 
