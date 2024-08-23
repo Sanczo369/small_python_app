@@ -346,3 +346,7 @@ class GUI(framework.GUIFramework):
         if tkMessageBox.askokcancel("Quit", "Do you really want to quit?"):
             self.root.destroy()
 
+if __name__ == '__main__':
+    root = Tk()
+    app = GUI(root)
+    root.mainloop()
