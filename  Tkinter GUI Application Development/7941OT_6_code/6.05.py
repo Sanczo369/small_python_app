@@ -70,3 +70,6 @@ class GUI(framework.GUIFramework):
        self.create_top_bar()
        self.create_tool_bar()
        self.create_drawing_canvas()
+
+    def delete_object(self,x0,y0,x1,y1):
+        self.canvas.delete(self.selected_objected)
