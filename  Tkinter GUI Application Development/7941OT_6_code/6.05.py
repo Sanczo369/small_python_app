@@ -73,3 +73,7 @@ class GUI(framework.GUIFramework):
 
     def delete_object(self,x0,y0,x1,y1):
         self.canvas.delete(self.selected_objected)
+
+    def delete_object_options(self):
+        pass
+
