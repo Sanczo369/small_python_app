@@ -77,3 +77,9 @@ class GUI(framework.GUIFramework):
     def delete_object_options(self):
         pass
 
+    def fill_object(self,x0,y0,x1,y1):
+        if self.selected_objected == self.canvas:
+            self.canvas.config(bg=self.fill)
+        else:
+            self.canvas.itemconfig(self.selected_objected, fill=self.fill)
+
