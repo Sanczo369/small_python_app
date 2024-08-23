@@ -63,3 +63,10 @@ class GUI(framework.GUIFramework):
     outline = 'black'
 
     selected_objected = None
+
+    def __init__(self, root):
+       self.root = root
+       self.create_menu()
+       self.create_top_bar()
+       self.create_tool_bar()
+       self.create_drawing_canvas()
