@@ -92,3 +92,11 @@ class GUI(framework.GUIFramework):
     def move_to_top_options(self):
         pass
 
+    def drag_item(self,x0,y0,x1,y1):
+        if not self.all_toolbar_functions[self.selected_toolbar_func_index] == 'drag_item':
+            self.canvas.bind( "<Button1-Motion>", self.mouse_down_motion)
+            return
+        self.currentobject = self.canvas.move(self.selected_objected, x1-x0,y1-y0)
+        self.canvas.bind("<B1-Motion>", self.drag_item_update_xy)
+
+
