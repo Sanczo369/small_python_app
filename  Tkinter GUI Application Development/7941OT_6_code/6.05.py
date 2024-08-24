@@ -83,3 +83,5 @@ class GUI(framework.GUIFramework):
         else:
             self.canvas.itemconfig(self.selected_objected, fill=self.fill)
 
+    def fill_object_options(self):
+        self.fill_options_combobox()
