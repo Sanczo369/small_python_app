@@ -107,4 +107,13 @@ class GUI(framework.GUIFramework):
     def drag_item_options(self):
         pass
 
+    def create_menu(self):
+        self.menubar = Menu(self.root)
+        self.menuitems = (
+                       'File- &New/Ctrl+N/self.new_file, &Open/Ctrl+O/self.open_file, Save/Ctrl+S/self.save, SaveAs//self.save_as, Sep, Exit/Alt+F4/self.close',
+                       'Edit- Undo/Ctrl+Z/self.undo, Sep',
+                       'About- About//self.about'
+                       )
+        self.build_menu()
+        self.root.config(menu=self.menubar)
 
