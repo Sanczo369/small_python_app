@@ -104,3 +104,7 @@ class GUI(framework.GUIFramework):
         self.lastx, self.lasty = event.x, event.y
         self.drag_item(self.startx, self.starty,self.lastx, self.lasty)
 
+    def drag_item_options(self):
+        pass
+
+
