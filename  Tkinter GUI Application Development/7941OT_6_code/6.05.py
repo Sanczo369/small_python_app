@@ -99,4 +99,8 @@ class GUI(framework.GUIFramework):
         self.currentobject = self.canvas.move(self.selected_objected, x1-x0,y1-y0)
         self.canvas.bind("<B1-Motion>", self.drag_item_update_xy)
 
+    def drag_item_update_xy(self, event):
+        self.startx, self.starty = self.lastx, self.lasty
+        self.lastx, self.lasty = event.x, event.y
+        self.drag_item(self.startx, self.starty,self.lastx, self.lasty)
 
