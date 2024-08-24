@@ -85,3 +85,6 @@ class GUI(framework.GUIFramework):
 
     def fill_object_options(self):
         self.fill_options_combobox()
+
+    def move_to_top(self,x0,y0,x1,y1):
+        self.canvas.tag_raise(self.selected_objected)
