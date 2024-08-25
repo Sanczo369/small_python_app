@@ -143,3 +143,11 @@ class GUI(framework.GUIFramework):
             opt = self.all_toolbar_functions[self.selected_toolbar_func_index]+'_options'
             fnc = getattr(self, opt)
             fnc()
+
+    def create_color_pallete(self):
+        self.colorpallete = Canvas(self.toolbar, height=55, width =55)
+        self.colorpallete.grid(row=10, column=1, columnspan=2, pady=5, padx=3)
+        self.backgroundpallete = self.colorpallete.create_rectangle(15, 15,48, 48,tags="backgroundpallete", outline=self.background, fill=self.background)
+        self.foregroundpallete = self.colorpallete.create_rectangle(1, 1,33, 33,tags="foregroundpallete", outline=self.foreground, fill=self.foreground)
+        self.colorpallete.tag_bind(self.backgroundpallete, "<Button-1>", self.set_background_color)
+        self.colorpallete.tag_bind(self.foregroundpallete, "<Button-1>", self.set_foreground_color)
