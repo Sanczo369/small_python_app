@@ -151,3 +151,11 @@ class GUI(framework.GUIFramework):
         self.foregroundpallete = self.colorpallete.create_rectangle(1, 1,33, 33,tags="foregroundpallete", outline=self.foreground, fill=self.foreground)
         self.colorpallete.tag_bind(self.backgroundpallete, "<Button-1>", self.set_background_color)
         self.colorpallete.tag_bind(self.foregroundpallete, "<Button-1>", self.set_foreground_color)
+
+    def set_background_color(self, event=None):
+        self.background = askcolor()[-1]
+        try:self.set_fill()
+        except:pass
+        try:self.set_outline()
+        except:pass
+        self.colorpallete.itemconfig(self.backgroundpallete, outline=self.background, fill=self.background)
