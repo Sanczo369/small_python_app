@@ -179,3 +179,10 @@ class GUI(framework.GUIFramework):
         for child in self.topbar.winfo_children():
             child.destroy()
 
+    def width_options_combobox(self):
+            Label(self.topbar,text='Width:').pack(side=LEFT)
+            self.widthcmbobx = ttk.Combobox(self.topbar, state='readonly', width=3)
+            self.widthcmbobx.pack(side=LEFT)
+            self.widthcmbobx['values'] = (1.0, 2.0, 3.0,4.0,5.0,6.0,7.0,8.0,9.0, 10.0)
+            self.widthcmbobx.bind('<<ComboboxSelected>>', self.set_width)
+            self.widthcmbobx.set(self.width)
