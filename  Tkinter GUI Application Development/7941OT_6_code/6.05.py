@@ -186,3 +186,11 @@ class GUI(framework.GUIFramework):
             self.widthcmbobx['values'] = (1.0, 2.0, 3.0,4.0,5.0,6.0,7.0,8.0,9.0, 10.0)
             self.widthcmbobx.bind('<<ComboboxSelected>>', self.set_width)
             self.widthcmbobx.set(self.width)
+
+    def fill_options_combobox(self):
+            Label(self.topbar,text='Fill:').pack(side=LEFT)
+            self.fillcmbobx = ttk.Combobox(self.topbar, state='readonly', width=5)
+            self.fillcmbobx.pack(side=LEFT)
+            self.fillcmbobx['values'] = ('none', 'fg','bg', 'black', 'white' )
+            self.fillcmbobx.bind('<<ComboboxSelected>>', self.set_fill)
+            self.fillcmbobx.set(self.fill)
