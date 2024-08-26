@@ -194,3 +194,10 @@ class GUI(framework.GUIFramework):
             self.fillcmbobx['values'] = ('none', 'fg','bg', 'black', 'white' )
             self.fillcmbobx.bind('<<ComboboxSelected>>', self.set_fill)
             self.fillcmbobx.set(self.fill)
+
+    def set_fill(self, event=None):
+        fl = self.fillcmbobx.get()
+        if fl == 'none': self.fill = '' #transparent
+        elif fl == 'fg': self.fill = self.foreground
+        elif fl == 'bg': self.fill = self.background
+        else: self.fill = fl
