@@ -238,3 +238,15 @@ class GUI(framework.GUIFramework):
 
     def set_arrow(self, event):
         self.arrow = self.arrowcmbobx.get()
+
+    def set_dash(self, event):
+        '''Dash takes value from 1 to 255'''
+        if self.dashcmbobx.get() == 'none':
+            self.dash = None
+        elif self.dashcmbobx.get() == 'small':
+            self.dash = 1
+        elif self.dashcmbobx.get() == 'medium':
+            self.dash = 15
+        elif self.dashcmbobx.get() == 'large':
+            self.dash = 255
+
