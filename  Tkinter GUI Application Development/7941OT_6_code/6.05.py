@@ -232,3 +232,6 @@ class GUI(framework.GUIFramework):
             self.arrowcmbobx['values'] = ('none', 'first', 'last', 'both')
             self.arrowcmbobx.bind('<<ComboboxSelected>>', self.set_arrow)
             self.arrowcmbobx.current(0)
+
+    def set_width(self, event):
+        self.width = float(self.widthcmbobx.get())
