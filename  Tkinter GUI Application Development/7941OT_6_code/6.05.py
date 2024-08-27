@@ -255,3 +255,8 @@ class GUI(framework.GUIFramework):
             self.width_options_combobox()
             self.arrow_options_combobox()
             self.dash_options_combobox()
+
+    def draw_rectangle_options(self):
+        self.fill_options_combobox()
+        self.outline_options_combobox()
+        self.width_options_combobox()
