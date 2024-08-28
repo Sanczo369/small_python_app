@@ -304,3 +304,9 @@ class GUI(framework.GUIFramework):
             self.canvas.delete(self.currentobject)
             self.execute_method()
 
+    def mouse_up(self, event):
+        self.lastx = self.canvas.canvasx(event.x)
+        self.lasty = self.canvas.canvasy(event.y)
+        self.canvas.delete(self.currentobject)
+        self.currentobject = None
+        self.execute_method()
