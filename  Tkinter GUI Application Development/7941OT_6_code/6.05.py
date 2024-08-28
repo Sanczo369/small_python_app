@@ -286,3 +286,14 @@ class GUI(framework.GUIFramework):
         self.canvas.bind( "<Button1-Motion>", self.mouse_down_motion)
         self.canvas.bind( "<Button1-ButtonRelease>", self.mouse_up)
         self.canvas.bind( "<Motion>", self.show_current_coordinates)
+
+    def mouse_down(self, event):
+        self.currentobject = None
+        self.lastx = self.startx = self.canvas.canvasx(event.x)
+        self.lasty = self.starty = self.canvas.canvasy(event.y)
+        if self.all_toolbar_functions[self.selected_toolbar_func_index] in ['fill_object', 'delete_object', 'move_to_top', 'drag_item']: # work on selected objected
+            try:
+                self.selected_objected = self.canvas.find_closest(self.startx,self.starty)[0]
+            except:
+                self.selected_objected = self.canvas
+
