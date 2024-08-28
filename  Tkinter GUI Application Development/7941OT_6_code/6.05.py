@@ -297,3 +297,10 @@ class GUI(framework.GUIFramework):
             except:
                 self.selected_objected = self.canvas
 
+    def mouse_down_motion(self, event):
+        self.lastx = self.canvas.canvasx(event.x)
+        self.lasty = self.canvas.canvasy(event.y)
+        if self.selected_toolbar_func_index:
+            self.canvas.delete(self.currentobject)
+            self.execute_method()
+
