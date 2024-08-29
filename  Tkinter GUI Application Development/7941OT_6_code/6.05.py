@@ -314,3 +314,9 @@ class GUI(framework.GUIFramework):
     def execute_method(self):
         fnc = getattr(self,self.all_toolbar_functions[self.selected_toolbar_func_index])
         fnc(self.startx, self.starty,self.lastx, self.lasty)
+
+    def show_current_coordinates(self, event=None):
+        lx = self.canvas.canvasx(event.x)
+        ly = self.canvas.canvasy(event.y)
+        cord =  'x: %d \ny: %d '%(lx, ly)
+        self.curcoordlabel.config(text=cord)
