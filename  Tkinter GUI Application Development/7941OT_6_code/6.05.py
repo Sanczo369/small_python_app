@@ -372,3 +372,7 @@ class GUI(framework.GUIFramework):
             self.filename = tkFileDialog.asksaveasfilename(master = self.root,filetypes = [('All Files',('*.ps', '*.ps'))], title="Save...")
         except:pass
         self.actual_save()
+
+    def actual_save(self):
+        self.canvas.postscript(file=self.filename, colormode='color')
+        self.root.title(self.filename)
