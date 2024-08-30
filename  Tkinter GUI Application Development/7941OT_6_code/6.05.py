@@ -360,3 +360,10 @@ class GUI(framework.GUIFramework):
 
     def undo(self, event=None):
         self.canvas.delete(self.currentobject)
+
+    def save(self):
+        if self.filename == 'untitled':
+            self.save_as()
+        else:
+            self.actual_save()
+
