@@ -49,3 +49,10 @@ class GUIFramework(object):
                 underline = None
             menu.add_command(label=name, underline=underline,
                            accelerator=acc, command=eval(cmd))
+
+class TestThisFramework(GUIFramework):
+    menuitems = (
+        'File- &New/Ctrl+N/self.new_file, &Open/Ctrl+O/self.openFile',
+        'Edit- Undo/Ctrl+Z/self.undo, Sep',
+        'About- About//self.about'
+    )
