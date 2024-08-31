@@ -36,3 +36,16 @@ class GUIFramework(object):
                 self.__add_menu_command(menu, item)
             self.menubar.add_cascade(label=label, menu=menu)
         self.root.config(menu=self.menubar)
+
+    def __add_menu_command(self, menu, item):
+        if item == 'Sep':
+            menu.add_separator()
+        else:
+            name, acc, cmd = item.split('/')
+            try:
+                underline = name.index('&')
+                name = name.replace('&', '', 1)
+            except ValueError:
+                underline = None
+            menu.add_command(label=name, underline=underline,
+                           accelerator=acc, command=eval(cmd))
