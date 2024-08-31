@@ -56,3 +56,11 @@ class TestThisFramework(GUIFramework):
         'Edit- Undo/Ctrl+Z/self.undo, Sep',
         'About- About//self.about'
     )
+    def new_file(self):
+        print 'newfile tested OK'
+    def openFile(self):
+        print 'openfile tested OK'
+    def undo(self):
+        print 'undo tested OK'
+    def about(self):
+        print 'about tested OK'
