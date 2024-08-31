@@ -25,3 +25,14 @@ class GUIFramework(object):
         self.root = root
         if self.menuitems is not None:
             self.build_menu()
+
+    def build_menu(self):
+        self.menubar = tk.Menu(self.root)
+        for v in self.menuitems:
+            menu = tk.Menu(self.menubar, tearoff=0)
+            label, items = v.split('-')
+            items = map(str.strip, items.split(','))
+            for item in items:
+                self.__add_menu_command(menu, item)
+            self.menubar.add_cascade(label=label, menu=menu)
+        self.root.config(menu=self.menubar)
