@@ -50,6 +50,7 @@ class GUIFramework(object):
             menu.add_command(label=name, underline=underline,
                            accelerator=acc, command=eval(cmd))
 
+
 class TestThisFramework(GUIFramework):
     menuitems = (
         'File- &New/Ctrl+N/self.new_file, &Open/Ctrl+O/self.openFile',
@@ -57,15 +58,19 @@ class TestThisFramework(GUIFramework):
         'About- About//self.about'
     )
     def new_file(self):
-        print 'newfile tested OK'
+        print('newfile tested OK')
+
     def openFile(self):
-        print 'openfile tested OK'
+        print('openfile tested OK')
+
     def undo(self):
-        print 'undo tested OK'
+        print('undo tested OK')
+
     def about(self):
-        print 'about tested OK'
+        print('about tested OK')
+
 
 if __name__ == '__main__':
-    root= tk.Tk()
+    root = tk.Tk()
     app = TestThisFramework(root)
     root.mainloop()
