@@ -64,3 +64,8 @@ class TestThisFramework(GUIFramework):
         print 'undo tested OK'
     def about(self):
         print 'about tested OK'
+
+if __name__ == '__main__':
+    root= tk.Tk()
+    app = TestThisFramework(root)
+    root.mainloop()
