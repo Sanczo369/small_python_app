@@ -43,3 +43,7 @@ def main(chessboard):
     gui = GUI(root, chessboard)
     gui.draw_board()
     root.mainloop()
+
+if __name__ == "__main__":
+    game = chessboard.Board()
+    main(game)
