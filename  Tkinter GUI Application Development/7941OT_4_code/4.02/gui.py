@@ -37,3 +37,9 @@ class GUI(dict):
                 self.canvas.create_rectangle(x1, y1, x2, y2,  fill=color, tags="board")
                 color = self.color1 if color == self.color2 else self.color2
 
+def main(chessboard):
+    root = Tk()
+    root.title("Chess")
+    gui = GUI(root, chessboard)
+    gui.draw_board()
+    root.mainloop()
