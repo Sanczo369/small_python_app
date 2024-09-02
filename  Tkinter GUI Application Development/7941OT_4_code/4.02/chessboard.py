@@ -21,3 +21,8 @@ class Board(dict):
     x_axis = (1, 2, 3, 4, 5, 6, 7, 8)
     def __init__(self, patt = None):
         self.process_notation(START_PATTERN)
+
+
+    def alpha_notation(self,xycoord):
+        if not self.is_on_board(xycoord): return
+        return self.y_axis[xycoord[1]] + str(self.x_axis[xycoord[0]])
