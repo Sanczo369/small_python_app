@@ -26,3 +26,6 @@ class Board(dict):
     def alpha_notation(self,xycoord):
         if not self.is_on_board(xycoord): return
         return self.y_axis[xycoord[1]] + str(self.x_axis[xycoord[0]])
+
+    def num_notation(self, xycoord):
+        return int(xycoord[1])-1, self.y_axis.index(xycoord[0])
