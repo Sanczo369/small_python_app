@@ -29,3 +29,10 @@ class Piece():
     def ref(self, board):
         ''' Get a reference of chess board instance'''
         self.board = board
+
+class King(Piece):    shortname = 'k'
+class Queen(Piece):    shortname = 'q'
+class Rook(Piece):    shortname = 'r'
+class Knight(Piece):    shortname = 'n'
+class Bishop(Piece):    shortname = 'b'
+class Pawn(Piece):     shortname = 'p'
