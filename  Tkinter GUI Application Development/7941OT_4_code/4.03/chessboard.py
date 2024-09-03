@@ -24,3 +24,18 @@ class Board(dict):
 
     def num_notation(self, xycoord):
         return int(xycoord[1])-1, self.y_axis.index(xycoord[0])
+
+    def process_notation(self, patt):
+        #self.clear()
+        patt = patt.split(' ')
+        # expand_whitespaces blanks
+        def expand_whitespaces(match): return ' ' * int(match.group(0))
+        patt[0] = re.compile(r'\d').sub(expand_whitespaces, patt[0])
+        for x, row in enumerate(patt[0].split('/')):
+            for y, alphabet in enumerate(row):
+                if alphabet == ' ': continue
+                xycoord = self.alpha_notation((7-x,y))
+                self[xycoord] = pieces.create_piece(alphabet)
+                self[xycoord].ref(self)
+        if patt[1] == 'w': self.player_turn = 'white'
+        else: self.player_turn = 'black
