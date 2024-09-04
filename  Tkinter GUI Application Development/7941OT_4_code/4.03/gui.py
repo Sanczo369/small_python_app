@@ -63,3 +63,7 @@ def main(chessboard):
     gui.draw_pieces()# call this newly defined method from within the main loop
     root.mainloop()
 
+if __name__ == "__main__":
+    game = chessboard.Board()
+    main(game)
+
