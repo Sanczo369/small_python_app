@@ -38,7 +38,7 @@ class Board(dict):
                 self[xycoord] = pieces.create_piece(alphabet)
                 self[xycoord].ref(self)
         if patt[1] == 'w': self.player_turn = 'white'
-        else: self.player_turn = 'black
+        else: self.player_turn = 'black'
 
     def occupied(self, color):
 
@@ -52,3 +52,5 @@ class Board(dict):
         if coord[1] < 0 or coord[1] > 7 or coord[0] < 0 or coord[0] > 7:
             return False
         else: return True
+
+class ChessError(Exception): pass
