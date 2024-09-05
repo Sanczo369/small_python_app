@@ -25,3 +25,8 @@ class Piece():
         elif color == 'white':
             self.shortname = self.shortname.upper()
         self.color = color
+
+    def ref(self, board):
+        ''' Get a reference of chess board instance'''
+        self.board = board
+
