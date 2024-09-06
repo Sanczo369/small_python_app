@@ -51,3 +51,5 @@ class Board(dict):
         if coord[1] < 0 or coord[1] > 7 or coord[0] < 0 or coord[0] > 7:
             return False
         else: return True
+
+class ChessError(Exception): pass
