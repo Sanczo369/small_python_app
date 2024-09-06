@@ -38,3 +38,11 @@ class Board(dict):
                 self[xycoord].ref(self)
         if patt[1] == 'w': self.player_turn = 'white'
         else: self.player_turn = 'black'
+
+    def occupied(self, color):
+
+        result = []
+        for coord in self:
+            if self[coord].color == color:
+                result.append(coord)
+            return result
