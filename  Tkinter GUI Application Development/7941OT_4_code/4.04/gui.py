@@ -64,3 +64,9 @@ def main(chessboard):
     gui.draw_board()
     gui.draw_pieces()
     root.mainloop()
+
+
+if __name__ == "__main__":
+    game = chessboard.Board()
+    main(game)
+
