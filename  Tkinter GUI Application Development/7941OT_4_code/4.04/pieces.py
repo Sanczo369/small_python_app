@@ -90,3 +90,8 @@ class Rook(Piece):
     def moves_available(self,pos):
         return super(Rook, self).moves_available(pos.upper(), False, True, 8)
 
+class Bishop(Piece):
+    shortname = 'b'
+    def moves_available(self,pos):
+        return super(Bishop,self).moves_available(pos.upper(), True, False, 8)
+
