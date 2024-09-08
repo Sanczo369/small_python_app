@@ -44,4 +44,33 @@ class Piece():
         ''' Get a reference of chess board instance'''
         self.board = board
 
+    def moves_available(self, pos, diagonal, orthogonal, distance):
+        board = self.board
+        allowed_moves = []
+        orth = ((-1, 0), (0, -1), (0, 1), (1, 0))
+        diag = ((-1, -1), (-1, 1), (1, -1), (1, 1))
+        piece = self
 
+        beginningpos = board.num_notation(pos.upper())
+        if orthogonal and diagonal:
+            directions = diag + orth
+        elif diagonal:
+            directions = diag
+        elif orthogonal:
+            directions = orth
+
+        for x, y in directions:
+            collision = False
+            for step in range(1, distance + 1):
+                if collision: break
+                dest = beginningpos[0] + step * x, beginningpos[1] + step * y
+                if self.board.alpha_notation(dest) not in board.occupied('white') + board.occupied('black'):
+                    allowed_moves.append(dest)
+                elif self.board.alpha_notation(dest) in board.occupied(piece.color):
+                    collision = True
+                else:
+                    allowed_moves.append(dest)
+                    collision = True
+
+        allowed_moves = filter(board.is_on_board, allowed_moves)
+        return map(board.alpha_notation, allowed_moves)
