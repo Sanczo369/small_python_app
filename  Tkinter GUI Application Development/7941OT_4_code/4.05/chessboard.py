@@ -1,0 +1,23 @@
+"""
+Code illustration: 4.05
+
+New Methods added here:
+all_moves_available
+position_of_king
+king_in_check
+
+Methods modfied:
+None
+
+Tkinter GUI Application Development Hotshot
+"""
+import pieces
+import re
+
+START_PATTERN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w 0 1'
+
+
+class Board(dict):
+    y_axis = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H')
+    x_axis = (1, 2, 3, 4, 5, 6, 7, 8)
+
