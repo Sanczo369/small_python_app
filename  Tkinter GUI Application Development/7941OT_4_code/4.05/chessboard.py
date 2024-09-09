@@ -50,3 +50,11 @@ class Board(dict):
         else:
             self.player_turn = 'black'
 
+    def occupied(self, color):
+
+        result = []
+        for coord in self:
+            if self[coord].color == color:
+                result.append(coord)
+            return result
+
