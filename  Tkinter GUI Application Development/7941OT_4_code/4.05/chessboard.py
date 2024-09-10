@@ -76,3 +76,13 @@ class Board(dict):
         for pos in self.keys():
             if isinstance(self[pos], pieces.King) and self[pos].color == color:
                 return pos
+
+    def king_in_check(self, color):
+
+        kingpos = self.position_of_king(color)
+        opponent = ('black' if color == 'white' else 'white')
+        for pieces in self.iteritems():
+            if kingpos in self.all_moves_available(opponent):
+                return True
+            else:
+                return False
