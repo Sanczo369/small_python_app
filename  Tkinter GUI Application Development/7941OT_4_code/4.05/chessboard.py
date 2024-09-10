@@ -86,3 +86,4 @@ class Board(dict):
                 return True
             else:
                 return False
+class ChessError(Exception): pass
