@@ -62,3 +62,13 @@ class Board(dict):
         if coord[1] < 0 or coord[1] > 7 or coord[0] < 0 or coord[0] > 7:
             return False
         else: return True
+
+    def all_moves_available(self, color):
+
+        result = []
+        for coord in self.keys():
+            if (self[coord] is not None) and self[coord].color == color:
+                moves = self[coord].moves_available(coord)
+                if moves: result += moves
+        return result
+
