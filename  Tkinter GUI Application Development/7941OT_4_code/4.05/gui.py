@@ -26,3 +26,15 @@ class GUI(dict):
         self.canvas = Canvas(parent, width=canvas_width, height=canvas_height)
         self.canvas.pack(padx=8, pady=8)
         self.draw_board()
+
+    def draw_board(self):
+        color = self.color2
+        for r in range(self.rows):
+            color = self.color1 if color == self.color2 else self.color2
+            for c in range(self.columns):
+                x1 = (c * self.dim_square)
+                y1 = ((7-r) * self.dim_square)
+                x2 = x1 + self.dim_square
+                y2 = y1 + self.dim_square
+                self.canvas.create_rectangle(x1, y1, x2, y2,  fill=color, tags="area")
+                color = self.color1 if color == self.color2 else self.color2
