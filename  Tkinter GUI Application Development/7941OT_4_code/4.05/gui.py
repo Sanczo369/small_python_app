@@ -63,3 +63,7 @@ def show(chessboard):
     gui.draw_pieces()
     root.mainloop()
 
+if __name__ == "__main__":
+    game = chessboard.Board()
+    show(game)
+
