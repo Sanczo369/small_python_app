@@ -32,3 +32,12 @@ class Piece(object):
     def ref(self, board):
         ''' Get a reference of chess board instance'''
         self.board = board
+
+
+    def moves_available(self, pos, diagonal, orthogonal, distance):
+        board = self.board
+        allowed_moves = []
+        orth  = ((-1,0),(0,-1),(0,1),(1,0))
+        diag  = ((-1,-1),(-1,1),(1,-1),(1,1))
+        piece = self
+
