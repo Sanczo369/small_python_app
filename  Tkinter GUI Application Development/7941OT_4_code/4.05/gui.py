@@ -54,3 +54,12 @@ class GUI(dict):
                 x0 = (y * self.dim_square) + int(self.dim_square / 2)
                 y0 = ((7 - x) * self.dim_square) + int(self.dim_square / 2)
                 self.canvas.coords(piecename, x0, y0)
+
+def show(chessboard):
+    root = Tk()
+    root.title("Chess")
+    gui = GUI(root, chessboard)
+    gui.draw_board()
+    gui.draw_pieces()
+    root.mainloop()
+
