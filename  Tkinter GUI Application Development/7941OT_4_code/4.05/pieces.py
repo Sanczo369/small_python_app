@@ -49,3 +49,20 @@ class Piece(object):
         elif orthogonal:
             directions = orth
 
+        for x,y in directions:
+            collision = False
+            for step in range(1, distance+1):
+                if collision: break
+                dest = beginningpos[0]+step*x, beginningpos[1]+step*y
+                if self.board.alpha_notation(dest) not in board.occupied('white') + board.occupied('black'):
+                    allowed_moves.append(dest)
+                elif self.board.alpha_notation(dest) in board.occupied(piece.color):
+                    collision = True
+                else:
+                    allowed_moves.append(dest)
+                    collision = True
+
+        allowed_moves = filter(board.is_on_board, allowed_moves)
+        return map(board.alpha_notation, allowed_moves)
+
+
