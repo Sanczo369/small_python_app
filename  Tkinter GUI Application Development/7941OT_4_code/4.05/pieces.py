@@ -65,4 +65,9 @@ class Piece(object):
         allowed_moves = filter(board.is_on_board, allowed_moves)
         return map(board.alpha_notation, allowed_moves)
 
+class King(Piece):
+    shortname = 'k'
+    def moves_available(self,pos):
+        return super(King, self).moves_available(pos.upper(), True, True, 1)
+
 
