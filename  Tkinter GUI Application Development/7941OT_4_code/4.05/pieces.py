@@ -41,3 +41,11 @@ class Piece(object):
         diag  = ((-1,-1),(-1,1),(1,-1),(1,1))
         piece = self
 
+        beginningpos = board.num_notation(pos.upper())
+        if orthogonal and diagonal:
+            directions = diag+orth
+        elif diagonal:
+            directions = diag
+        elif orthogonal:
+            directions = orth
+
