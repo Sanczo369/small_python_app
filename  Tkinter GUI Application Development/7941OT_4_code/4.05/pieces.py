@@ -75,3 +75,7 @@ class Queen(Piece):
     def moves_available(self,pos):
         return super(Queen, self).moves_available(pos.upper(), True, True, 8)
 
+class Rook(Piece):
+    shortname = 'r'
+    def moves_available(self,pos):
+        return super(Rook, self).moves_available(pos.upper(), False, True, 8)
