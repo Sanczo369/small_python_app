@@ -70,4 +70,8 @@ class King(Piece):
     def moves_available(self,pos):
         return super(King, self).moves_available(pos.upper(), True, True, 1)
 
+class Queen(Piece):
+    shortname = 'q'
+    def moves_available(self,pos):
+        return super(Queen, self).moves_available(pos.upper(), True, True, 8)
 
