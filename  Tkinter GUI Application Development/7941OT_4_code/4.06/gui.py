@@ -88,3 +88,26 @@ class GUI():
         if piece is not None and (piece.color == self.chessboard.player_turn):
             self.selected_piece = (self.chessboard[pos], pos)
             self.focused = map(self.chessboard.num_notation, (self.chessboard[pos].moves_available(pos)))
+
+
+    def draw_board(self, event={}):
+        color = self.color2
+        for row in range(self.rows):
+            color = self.color1 if color == self.color2 else self.color2
+            for col in range(self.columns):
+                x1 = (col * self.dim_square)
+                y1 = ((7-row) * self.dim_square)
+                x2 = x1 + self.dim_square
+                y2 = y1 + self.dim_square
+                if(self.focused is not None and (row, col) in self.focused):
+                    self.canvas.create_rectangle(x1, y1, x2, y2,  fill=self.highlightcolor , tags="area")
+                else:
+                    self.canvas.create_rectangle(x1, y1, x2, y2,  fill=color, tags="area")
+                color = self.color1 if color == self.color2 else self.color2
+        for name in self.pieces:
+            self.pieces[name] = (self.pieces[name][0], self.pieces[name][1])
+            x0 = (self.pieces[name][1] * self.dim_square) + int(self.dim_square/2)
+            y0 = ((7-self.pieces[name][0]) * self.dim_square) + int(self.dim_square/2)
+            self.canvas.coords(name, x0, y0)
+        self.canvas.tag_raise("occupied")
+        self.canvas.tag_lower("area")
