@@ -38,3 +38,13 @@ class GUI():
     rows = 8
     columns = 8
     dim_square = 64
+
+    def __init__(self, parent, chessboard):
+        self.chessboard = chessboard
+        self.parent = parent
+        canvas_width = self.columns * self.dim_square
+        canvas_height = self.rows * self.dim_square
+        self.canvas = Canvas(parent, width=canvas_width, height=canvas_height)
+        self.canvas.pack(padx=8, pady=8)
+        self.draw_board()
+        self.canvas.bind("<Button-1>", self.square_clicked)
