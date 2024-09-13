@@ -102,3 +102,30 @@ class Knight(Piece):
         allowed_moves = filter(board.is_on_board, allowed_moves)
         return map(board.alpha_notation, allowed_moves)
 
+class Pawn(Piece):
+    shortname = 'p'
+    def moves_available(self, pos):
+        board = self.board
+        piece = self
+        if self.color == 'white':
+            startpos, direction, enemy = 1, 1, 'black'
+        else:
+            startpos, direction, enemy = 6, -1, 'white'
+        allowed_moves = []
+        prohibited = board.occupied('white') + board.occupied('black')
+        beginningpos   = board.num_notation(pos.upper())
+        forward = beginningpos[0] + direction, beginningpos[1]
+        if board.alpha_notation(forward) not in prohibited:
+            allowed_moves.append(forward)
+            if beginningpos[0] == startpos:
+                double_forward = (forward[0] + direction, forward[1])
+                if board.alpha_notation(double_forward) not in prohibited:
+                    allowed_moves.append(double_forward)
+        # Check for Capturing Moves Available
+        for a in range(-1, 2, 2):
+            attack = beginningpos[0] + direction, beginningpos[1] + a
+            if board.letter_notation(attack) in board.occupied(enemy):
+                allowed_moves.append(attack)
+        allowed_moves = filter(board.is_on_board, allowed_moves)
+        return map(board.alpha_notation, allowed_moves)
+
