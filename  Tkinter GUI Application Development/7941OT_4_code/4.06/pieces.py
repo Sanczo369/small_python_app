@@ -26,3 +26,11 @@ def create_piece(piece, color='white'):
     module = sys.modules[__name__]
     return module.__dict__[piece](color)
 
+class Piece(object):
+
+    def __init__(self, color):
+        if color == 'black':
+            self.shortname = self.shortname.lower()
+        elif color == 'white':
+            self.shortname = self.shortname.upper()
+        self.color = color
