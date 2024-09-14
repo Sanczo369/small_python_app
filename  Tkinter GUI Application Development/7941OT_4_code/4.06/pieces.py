@@ -15,3 +15,14 @@ SHORT_NAME = {
  'K':'King',
  'P':'Pawn'
 }
+
+def create_piece(piece, color='white'):
+    ''' Takes a piece name or shortname and returns the corresponding piece instance '''
+    if piece in (None, ' '): return
+    if len(piece) == 1:
+        if piece.isupper(): color = 'white'
+        else: color = 'black'
+        piece = SHORT_NAME[piece.upper()]
+    module = sys.modules[__name__]
+    return module.__dict__[piece](color)
+
