@@ -86,3 +86,18 @@ class Bishop(Piece):
     shortname = 'b'
     def moves_available(self,pos):
         return super(Bishop,self).moves_available(pos.upper(), False, True, 8)
+
+class Knight(Piece):
+    shortname = 'n'
+    def moves_available(self,pos):
+        board = self.board
+        allowed_moves = []
+        beginningpos = board.num_notation(pos.upper())
+        piece = board.get(pos.upper())
+        deltas = ((-2,-1),(-2,1),(-1,-2),(-1,2),(1,-2),(1,2),(2,-1),(2,1))
+        for x,y in deltas:
+            dest = beginningpos[0]+x, beginningpos[1]+y
+            if(board.alpha_notation(dest) not in board.occupied(piece.color)):
+                allowed_moves.append(dest)
+        allowed_moves = filter(board.is_on_board, allowed_moves)
+        return map(board.alpha_notation, allowed_moves)
