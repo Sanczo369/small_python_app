@@ -53,3 +53,28 @@ class Board(dict):
         tmp = deepcopy(self)
         tmp.move(p1,p2)
         return tmp.king_in_check(self[p1].color)
+
+ def shift(self, p1, p2):
+        p1, p2 = p1.upper(), p2.upper()
+        piece = self[p1]
+        try:
+            dest  = self[p2]
+        except:
+            dest = None
+        if self.player_turn != piece.color:
+            raise NotYourTurn("Not " + piece.color + "'s turn!")
+        enemy = ('white' if piece.color == 'black' else 'black' )
+        moves_available = piece.moves_available(p1)
+        if p2 not in moves_available:
+            raise InvalidMove
+        if self.all_moves_available(enemy):
+            if self.is_in_check_after_move(p1,p2):
+                raise Check
+        if not moves_available and self.king_in_check(piece.color):
+            raise CheckMate
+        elif not moves_available:
+            raise Draw
+        else:
+            self.move(p1, p2)
+            self.complete_move(piece, dest, p1,p2)
+
