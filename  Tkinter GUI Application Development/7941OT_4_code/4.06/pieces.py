@@ -125,3 +125,11 @@ class Pawn(Piece):
                 if board.alpha_notation(double_forward) not in prohibited:
                     allowed_moves.append(double_forward)
 
+        # Attacking
+        for a in range(-1, 2, 2):
+            attack = beginningpos[0] + direction, beginningpos[1] + a
+            if board.alpha_notation(attack) in board.occupied(enemy):
+                allowed_moves.append(attack)
+        allowed_moves = filter(board.is_on_board, allowed_moves)
+        return map(board.alpha_notation, allowed_moves)
+
