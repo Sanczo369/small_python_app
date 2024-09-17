@@ -124,6 +124,12 @@ class Board(dict):
         return result
 
 
+    def position_of_king(self, color):
+        for pos in self.keys():
+            if isinstance(self[pos], pieces.King) and self[pos].color == color:
+                return pos
+
+
 
 
 
