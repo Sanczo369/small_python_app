@@ -115,6 +115,14 @@ class Board(dict):
         return result
 
 
+    def occupied(self, color):
+        result = []
+
+        for coord in self.iterkeys():
+            if self[coord].color == color:
+                result.append(coord)
+        return result
+
 
 
 
