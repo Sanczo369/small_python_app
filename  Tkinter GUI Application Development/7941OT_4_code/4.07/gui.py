@@ -22,3 +22,15 @@ class GUI():
     rows = 8
     columns = 8
     dim_square = 64
+
+
+    def __init__(self, parent, chessboard):
+        self.chessboard = chessboard
+        self.parent = parent
+        #Adding Top Menu
+        self.menubar = Menu(parent)
+        self.filemenu = Menu(self.menubar, tearoff=0 )
+        self.filemenu.add_command(label="New Game", command=self.new_game )
+        self.menubar.add_cascade(label="File", menu=self.filemenu)
+        self.parent.config(menu=self.menubar)
+
