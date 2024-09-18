@@ -34,3 +34,9 @@ class GUI():
         self.menubar.add_cascade(label="File", menu=self.filemenu)
         self.parent.config(menu=self.menubar)
 
+        # Adding Frame
+        self.btmfrm = Frame(parent, height=64)
+        self.info_label = Label(self.btmfrm, text="   White to Start the Game  ", fg=self.color2)
+        self.info_label.pack(side=RIGHT, padx=8, pady=5)
+        self.btmfrm.pack(fill="x", side=BOTTOM)
+
