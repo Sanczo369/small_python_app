@@ -152,4 +152,19 @@ class Board(dict):
             return False
         else: return True
 
+    def show(self, pat):
+        self.clear()
+        pat = pat.split(' ')
+        def expand(match): return ' ' * int(match.group(0))
+        pat[0] = re.compile(r'\d').sub(expand, pat[0])
+        for x, row in enumerate(pat[0].split('/')):
+            for y, letter in enumerate(row):
+                if letter == ' ': continue
+                coord = self.alpha_notation((7-x,y))
+                self[coord] = pieces.create_piece(letter)
+                self[coord].place(self)
+        if pat[1] == 'w': self.player_turn = 'white'
+        else: self.player_turn = 'black'
+        self.halfmove_clock = int(pat[2])
+        self.fullmove_number = int(pat[3])
 
