@@ -144,5 +144,7 @@ class Board(dict):
         if not self.is_on_board(xycoord): return
         return self.y_axis[xycoord[1]] + str(self.x_axis[xycoord[0]])
 
+    def num_notation(self, coord):
+        return int(coord[1])-1, self.y_axis.index(coord[0])
 
 
