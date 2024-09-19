@@ -40,3 +40,9 @@ class GUI():
         self.info_label.pack(side=RIGHT, padx=8, pady=5)
         self.btmfrm.pack(fill="x", side=BOTTOM)
 
+        canvas_width = self.columns * self.dim_square
+        canvas_height = self.rows * self.dim_square
+        self.canvas = Canvas(parent, width=canvas_width, height=canvas_height)
+        self.canvas.pack(padx=8, pady=8)
+        self.draw_board()
+        self.canvas.bind("<Button-1>", self.square_clicked)
