@@ -52,3 +52,22 @@ class GUI():
         self.draw_board()
         self.draw_pieces()
         self.info_label.config(text="   White to Start the Game  ", fg='red')
+
+    def square_clicked(self, event):
+        col_size = row_size = self.dim_square
+        selected_column = event.x / col_size
+        selected_row = 7 - (event.y / row_size)
+        pos = self.chessboard.alpha_notation((selected_row, selected_column))
+        try:
+            piece = self.chessboard[pos]
+        except:
+            pass
+        if self.selected_piece:
+            self.shift(self.selected_piece[1], pos)
+            self.selected_piece = None
+            self.focused = None
+            self.pieces = {}
+            self.draw_board()
+            self.draw_pieces()
+        self.focus(pos)
+        self.draw_board()
