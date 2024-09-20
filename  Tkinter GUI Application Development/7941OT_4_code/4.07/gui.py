@@ -71,3 +71,18 @@ class GUI():
             self.draw_pieces()
         self.focus(pos)
         self.draw_board()
+
+    def shift(self, p1, p2):
+        piece = self.chessboard[p1]
+        try:
+            dest_piece = self.chessboard[p2]
+        except:
+            dest_piece = None
+        if dest_piece is None or dest_piece.color != piece.color:
+            try:
+                self.chessboard.shift(p1,p2)
+            except chessboard.ChessError as error:
+                self.info_label["text"] = error.__class__.__name__
+            else:
+                turn = ('white' if piece.color == 'black' else 'black')
+                self.info_label["text"] = '' + piece.color.capitalize() +"  :  "+ p1 + p2 + '    ' + turn.capitalize() + '\'s turn'
