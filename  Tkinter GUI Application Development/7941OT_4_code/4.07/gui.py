@@ -86,3 +86,12 @@ class GUI():
             else:
                 turn = ('white' if piece.color == 'black' else 'black')
                 self.info_label["text"] = '' + piece.color.capitalize() +"  :  "+ p1 + p2 + '    ' + turn.capitalize() + '\'s turn'
+
+    def focus(self, pos):
+        try:
+            piece = self.chessboard[pos]
+        except:
+            piece=None
+        if piece is not None and (piece.color == self.chessboard.player_turn):
+            self.selected_piece = (self.chessboard[pos], pos)
+            self.focused = map(self.chessboard.num_notation, (self.chessboard[pos].moves_available(pos)))
