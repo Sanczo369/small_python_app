@@ -46,3 +46,9 @@ class GUI():
         self.canvas.pack(padx=8, pady=8)
         self.draw_board()
         self.canvas.bind("<Button-1>", self.square_clicked)
+
+    def new_game(self):
+        self.chessboard.show(chessboard.START_PATTERN)
+        self.draw_board()
+        self.draw_pieces()
+        self.info_label.config(text="   White to Start the Game  ", fg='red')
