@@ -117,3 +117,18 @@ class GUI():
             self.canvas.coords(name, x0, y0)
         self.canvas.tag_raise("occupied")
         self.canvas.tag_lower("area")
+
+    def draw_pieces(self):
+        self.canvas.delete("occupied")
+        for coord, piece in self.chessboard.iteritems():
+            x,y = self.chessboard.num_notation(coord)
+            if piece is not None:
+                filename = "../pieces_image/%s%s.png" % (piece.shortname.lower(),piece.color)
+                piecename = "%s%s%s" % (piece.shortname, x, y)
+                if(filename not in self.images):
+                    self.images[filename] = ImageTk.PhotoImage(file=filename)
+                self.canvas.create_image(0,0, image=self.images[filename], tags=(piecename, "occupied"), anchor="c")
+                x0 = (y * self.dim_square) + int(self.dim_square/2)
+                y0 = ((7-x) * self.dim_square) + int(self.dim_square/2)
+                self.canvas.coords(piecename, x0, y0)
+
