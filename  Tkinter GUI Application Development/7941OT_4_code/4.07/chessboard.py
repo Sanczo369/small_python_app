@@ -25,3 +25,5 @@ class Board(dict):
     fullmove_number = 1
     history = []
 
+    def __init__(self, pat = None):
+        self.show(START_PATTERN)
