@@ -65,3 +65,20 @@ class Board(dict):
             pass
         del self[p1]
         self[p2] = piece
+
+    def complete_move(self, piece, dest, p1, p2):
+        enemy = ('white' if piece.color == 'black' else 'black' )
+        if piece.color == 'black':
+            self.fullmove_number += 1
+        self.halfmove_clock +=1
+        self.player_turn = enemy
+        abbr = piece.shortname
+        if abbr == 'P':
+            abbr = ''
+            self.halfmove_clock = 0
+        if dest is None:
+            movetext = abbr +  p2.lower()
+        else:
+            movetext = abbr + 'x' + p2.lower()
+            self.halfmove_clock = 0
+        self.history.append(movetext)
