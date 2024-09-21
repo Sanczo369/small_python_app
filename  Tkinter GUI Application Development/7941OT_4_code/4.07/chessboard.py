@@ -82,3 +82,12 @@ class Board(dict):
             movetext = abbr + 'x' + p2.lower()
             self.halfmove_clock = 0
         self.history.append(movetext)
+
+    def all_moves_available(self, color):
+
+        result = []
+        for coord in self.keys():
+            if (self[coord] is not None) and self[coord].color == color:
+                moves = self[coord].moves_available(coord)
+                if moves: result += moves
+        return result
