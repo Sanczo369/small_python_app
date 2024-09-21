@@ -27,3 +27,8 @@ class Board(dict):
 
     def __init__(self, pat = None):
         self.show(START_PATTERN)
+
+    def is_in_check_after_move(self, p1, p2):
+        tmp = deepcopy(self)
+        tmp.move(p1,p2)
+        return tmp.king_in_check(self[p1].color)
