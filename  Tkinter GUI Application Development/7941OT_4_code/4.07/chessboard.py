@@ -57,3 +57,11 @@ class Board(dict):
             self.move(p1, p2)
             self.complete_move(piece, dest, p1,p2)
 
+    def move(self, p1, p2):
+        piece = self[p1]
+        try:
+            dest  = self[p2]
+        except:
+            pass
+        del self[p1]
+        self[p2] = piece
