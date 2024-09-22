@@ -117,3 +117,6 @@ class Board(dict):
     def alpha_notation(self,xycoord):
         if xycoord[0] < 0 or xycoord[0] > 7 or xycoord[1] < 0 or xycoord[1] > 7: return
         return self.y_axis[xycoord[1]] + str(self.x_axis[xycoord[0]])
+
+    def num_notation(self, coord):
+        return int(coord[1])-1, self.y_axis.index(coord[0])
