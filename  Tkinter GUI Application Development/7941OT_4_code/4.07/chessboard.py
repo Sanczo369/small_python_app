@@ -120,3 +120,8 @@ class Board(dict):
 
     def num_notation(self, coord):
         return int(coord[1])-1, self.y_axis.index(coord[0])
+
+    def is_on_board(self, coord):
+        if coord[1] < 0 or coord[1] > 7 or coord[0] < 0 or coord[0] > 7:
+            return False
+        else: return True
