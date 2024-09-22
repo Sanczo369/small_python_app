@@ -99,3 +99,9 @@ class Board(dict):
             if self[coord].color == color:
                 result.append(coord)
         return result
+
+    def position_of_king(self, color):
+        for pos in self.keys():
+            if isinstance(self[pos], pieces.King) and self[pos].color == color:
+                return pos
+
