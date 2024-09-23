@@ -141,3 +141,13 @@ class Board(dict):
         else: self.player_turn = 'black'
         self.halfmove_clock = int(pat[2])
         self.fullmove_number = int(pat[3])
+
+
+class ChessError(Exception): pass
+
+class Check(ChessError): pass
+class InvalidMove(ChessError): pass
+class CheckMate(ChessError): pass
+class Draw(ChessError): pass
+class NotYourTurn(ChessError): pass
+class InvalidCoord(ChessError): pass
