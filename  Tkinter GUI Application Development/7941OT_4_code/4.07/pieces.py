@@ -35,3 +35,7 @@ class Piece(object):
         elif color == 'white':
             self.shortname = self.shortname.upper()
         self.color = color
+
+    def place(self, board):
+        ''' Keep a reference to the board '''
+        self.board = board
