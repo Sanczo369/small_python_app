@@ -115,3 +115,15 @@ class Pawn(Piece):
         else:
             startpos, direction, enemy = 6, -1, 'white'
         allowed_moves = []
+
+        # Moving
+        prohibited = board.occupied('white') + board.occupied('black')
+        beginningpos   = board.num_notation(pos.upper())
+        forward = beginningpos[0] + direction, beginningpos[1]
+        if board.alpha_notation(forward) not in prohibited:
+            allowed_moves.append(forward)
+            if beginningpos[0] == startpos:
+                # If pawn is in starting position allow double moves
+                double_forward = (forward[0] + direction, forward[1])
+                if board.alpha_notation(double_forward) not in prohibited:
+                    allowed_moves.append(double_forward)
