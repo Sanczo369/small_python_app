@@ -104,3 +104,14 @@ class Knight(Piece):
         allowed_moves = filter(board.is_on_board, allowed_moves)
         return map(board.alpha_notation, allowed_moves)
 
+
+class Pawn(Piece):
+    shortname = 'p'
+    def moves_available(self, pos):
+        board = self.board
+        piece = self
+        if self.color == 'white':
+            startpos, direction, enemy = 1, 1, 'black'
+        else:
+            startpos, direction, enemy = 6, -1, 'white'
+        allowed_moves = []
