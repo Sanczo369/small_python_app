@@ -47,3 +47,26 @@ class RandomBall:
             self.xvelocity = -self.xvelocity
 
         self.canvas.move(self.itm, self.xvelocity, self.yvelocity)
+
+
+# Now our Screen Saver Program
+class ScreenSaver:
+    balls = []
+
+    def __init__(self, num_balls):
+        self.root = Tk()
+        w, h = self.root.winfo_screenwidth(), self.root.winfo_screenheight()
+        self.root.overrideredirect(1)
+        self.root.geometry("%dx%d+0+0" % (w, h))
+        self.root.attributes('-alpha', 0.3)
+        self.root.bind('<Any-KeyPress>', quit)
+        self.root.bind('<Any-Button>', quit)
+        self.root.bind('<Motion>', quit)
+        self.canvas = Canvas(self.root, width=w, height=h)
+        self.canvas.pack()
+        for i in range(num_balls):
+            ball = RandomBall(self.canvas, scrnwidth=w, scrnheight=h)
+            ball.create_ball()
+            self.balls.append(ball)
+        self.run_screen_saver()
+        self.root.mainloop()
