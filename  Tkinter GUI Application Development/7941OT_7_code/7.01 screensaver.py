@@ -32,3 +32,18 @@ class RandomBall:
         x2 = self.xpos+self.radius
         y2 = self.ypos+self.radius
         self.itm = self.canvas.create_oval(x1, y1, x2, y2, fill=self.color,outline=self.color)
+
+
+    def move_ball(self):
+        self.xpos += self.xvelocity
+        self.ypos += self.yvelocity
+        if self.ypos >= self.scrnheight - self.radius:
+           self.yvelocity = -self.yvelocity # change direction
+
+        if self.ypos <= self.radius :
+            self.yvelocity = abs(self.yvelocity)
+
+        if self.xpos >= self.scrnwidth- self.radius or self.xpos <= self.radius:
+            self.xvelocity = -self.xvelocity
+
+        self.canvas.move(self.itm, self.xvelocity, self.yvelocity)
