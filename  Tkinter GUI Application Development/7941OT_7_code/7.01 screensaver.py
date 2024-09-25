@@ -70,3 +70,10 @@ class ScreenSaver:
             self.balls.append(ball)
         self.run_screen_saver()
         self.root.mainloop()
+
+
+    def run_screen_saver(self):
+        for ball in self.balls:
+            ball.move_ball()
+        self.canvas.after(20, self.run_screen_saver)
+
