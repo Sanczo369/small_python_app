@@ -25,3 +25,10 @@ class RandomBall:
         self.radius = randint(40, 70)
         r = lambda: randint(0, 255)  ### create a random number from 0-255
         self.color = '#%02x%02x%02x' % (r(), r(), r())
+
+    def create_ball(self):
+        x1 = self.xpos-self.radius
+        y1 = self.ypos-self.radius
+        x2 = self.xpos+self.radius
+        y2 = self.ypos+self.radius
+        self.itm = self.canvas.create_oval(x1, y1, x2, y2, fill=self.color,outline=self.color)
