@@ -77,3 +77,10 @@ class ScreenSaver:
             ball.move_ball()
         self.canvas.after(20, self.run_screen_saver)
 
+    def quit(self, event):
+        self.root.destroy()
+
+
+if __name__ == "__main__":
+    ScreenSaver(18)  ##18 is the number of balls
+
