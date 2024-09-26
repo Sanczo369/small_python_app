@@ -21,3 +21,6 @@ class Worker(threading.Thread):
            job = self.queue.get()
            self.taskHandler(job)
 
+   def taskHandler(self, job):
+        print 'doing task %s'%job
+        self.queue.task_done()
