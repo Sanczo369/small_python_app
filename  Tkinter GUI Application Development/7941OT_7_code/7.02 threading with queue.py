@@ -22,7 +22,7 @@ class Worker(threading.Thread):
            self.taskHandler(job)
 
    def taskHandler(self, job):
-        print 'doing task %s'%job
+        print('doing task %s'%job)
         self.queue.task_done()
 
 def main(tasks):
@@ -35,3 +35,12 @@ def main(tasks):
         mythread = Worker(queue)
         #mythread.setDaemon(True)
         mythread.start()
+
+    # wait for the queue to finish
+    queue.join()
+    print('all tasks completed')
+
+
+if __name__ == "__main__":
+    tasks = 'A B C D E F'.split()
+    main(tasks)
