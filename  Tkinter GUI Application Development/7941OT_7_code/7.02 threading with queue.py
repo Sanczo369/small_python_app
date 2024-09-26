@@ -24,3 +24,14 @@ class Worker(threading.Thread):
    def taskHandler(self, job):
         print 'doing task %s'%job
         self.queue.task_done()
+
+def main(tasks):
+    queue = Queue.Queue()
+    #populate queue with tasks
+    for task in tasks:
+        queue.put(task)
+    # create a list of threads and pass the queue as its argument
+    for i in range(6):
+        mythread = Worker(queue)
+        #mythread.setDaemon(True)
+        mythread.start()
