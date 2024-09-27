@@ -39,3 +39,8 @@ class GUI(Tk):
         self.canvas.create_text(200, 150, fill='white', text='Game Over')
         quitbtn = Button(self, text='Quit', command = self.destroy)
         self.canvas.create_window(200, 180, anchor='nw', window=quitbtn)
+
+class Food():
+    def __init__(self, queue):
+        self.queue = queue
+        self.generate_food()
