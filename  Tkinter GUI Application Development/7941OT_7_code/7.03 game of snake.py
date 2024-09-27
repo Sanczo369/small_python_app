@@ -51,3 +51,16 @@ class Food():
         self.position = x, y
         self.exppos = x - 5, y - 5, x + 5, y + 5
         self.queue.put({'food': self.exppos})
+
+
+class Snake(threading.Thread):
+    def __init__(self, gui, queue):
+        threading.Thread.__init__(self)
+        self.gui = gui
+        self.queue = queue
+        self.daemon = True
+        self.points_earned = 0
+        self.snake_points = [(495, 55), (485, 55), (475, 55), (465, 55), (455, 55)]
+        self.food = Food(queue)
+        self.direction = 'Left'
+        self.start()
