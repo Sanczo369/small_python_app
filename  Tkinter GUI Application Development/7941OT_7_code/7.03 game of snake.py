@@ -15,3 +15,21 @@ class GUI(Tk):
         self.food = self.canvas.create_rectangle(0, 0, 0, 0, fill='#FFCC4C', outline='#FFCC4C')
         self.points_earned = self.canvas.create_text(455, 15, fill='white', text='Score: 0')
         self.queue_handler()
+
+    def queue_handler(self):
+        try:
+            while True:
+                task = self.queue.get(block=False)
+                if task.has_key('game_over'):
+                    self.game_over()
+                elif task.has_key('move'):
+                    points = [x for point in task['move'] for x in point]
+                    self.canvas.coords(self.snake, *points)
+                elif task.has_key('food'):
+                    self.canvas.coords(self.food, *task['food'])
+                elif task.has_key('points_earned'):
+                    self.canvas.itemconfigure(self.points_earned , text='Score: {}'.format(task['points_earned']))
+                self.queue.task_done()
+        except Queue.Empty:
+            if not self.is_game_over:
+                self.canvas.after(100, self.queue_handler)
