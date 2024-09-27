@@ -33,3 +33,9 @@ class GUI(Tk):
         except Queue.Empty:
             if not self.is_game_over:
                 self.canvas.after(100, self.queue_handler)
+
+    def game_over(self):
+        self.is_game_over = True
+        self.canvas.create_text(200, 150, fill='white', text='Game Over')
+        quitbtn = Button(self, text='Quit', command = self.destroy)
+        self.canvas.create_window(200, 180, anchor='nw', window=quitbtn)
