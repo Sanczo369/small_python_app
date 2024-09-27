@@ -64,3 +64,9 @@ class Snake(threading.Thread):
         self.food = Food(queue)
         self.direction = 'Left'
         self.start()
+
+    def run(self):
+        while not self.gui.is_game_over:
+            self.queue.put({'move':self.snake_points})
+            time.sleep(0.1)
+            self.move()
