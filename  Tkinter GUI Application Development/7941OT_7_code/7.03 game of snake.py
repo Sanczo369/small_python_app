@@ -96,3 +96,8 @@ class Snake(threading.Thread):
         elif self.direction == 'Right':
             new_snake_point = (last_x + 10), last_y
         return new_snake_point
+
+    def check_game_over(self, snake_point):
+        x,y = snake_point[0], snake_point[1]
+        if not -5 < x < 505 or not -5 < y < 315 or snake_point in self.snake_points:
+            self.queue.put({'game_over':True})
