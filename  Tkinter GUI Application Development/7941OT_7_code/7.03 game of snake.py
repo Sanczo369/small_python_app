@@ -70,3 +70,6 @@ class Snake(threading.Thread):
             self.queue.put({'move':self.snake_points})
             time.sleep(0.1)
             self.move()
+
+    def key_pressed(self, e):
+        self.direction = e.keysym
