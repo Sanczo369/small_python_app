@@ -85,3 +85,14 @@ class Snake(threading.Thread):
         self.check_game_over(new_snake_point)
         self.snake_points.append(new_snake_point)
 
+    def calculate_new_coordinates(self):
+        last_x, last_y = self.snake_points[-1]
+        if self.direction == 'Up':
+            new_snake_point = last_x, (last_y - 10)
+        elif self.direction == 'Down':
+            new_snake_point = last_x, (last_y + 10)
+        elif self.direction == 'Left':
+            new_snake_point = (last_x - 10), last_y
+        elif self.direction == 'Right':
+            new_snake_point = (last_x + 10), last_y
+        return new_snake_point
