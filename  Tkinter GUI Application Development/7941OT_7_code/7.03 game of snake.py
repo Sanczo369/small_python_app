@@ -73,3 +73,15 @@ class Snake(threading.Thread):
 
     def key_pressed(self, e):
         self.direction = e.keysym
+
+    def move(self):
+        new_snake_point = self.calculate_new_coordinates()
+        if self.food.position == new_snake_point:
+            self.points_earned += 1
+            self.queue.put({'points_earned': self.points_earned})
+            self.food.generate_food()
+        else:
+            self.snake_points.pop(0)
+        self.check_game_over(new_snake_point)
+        self.snake_points.append(new_snake_point)
+
