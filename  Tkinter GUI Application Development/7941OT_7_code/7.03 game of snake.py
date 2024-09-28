@@ -101,3 +101,14 @@ class Snake(threading.Thread):
         x,y = snake_point[0], snake_point[1]
         if not -5 < x < 505 or not -5 < y < 315 or snake_point in self.snake_points:
             self.queue.put({'game_over':True})
+
+
+def main():
+    queue = Queue.Queue()
+    gui = GUI(queue)
+    snake = Snake(gui, queue)
+    gui.bind('<Key-Left>', snake.key_pressed)
+    gui.bind('<Key-Right>', snake.key_pressed)
+    gui.bind('<Key-Up>', snake.key_pressed)
+    gui.bind('<Key-Down>', snake.key_pressed)
+    gui.mainloop()
