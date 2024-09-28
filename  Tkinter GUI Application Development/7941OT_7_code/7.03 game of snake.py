@@ -112,3 +112,6 @@ def main():
     gui.bind('<Key-Up>', snake.key_pressed)
     gui.bind('<Key-Down>', snake.key_pressed)
     gui.mainloop()
+
+if __name__ == '__main__':
+    main()
