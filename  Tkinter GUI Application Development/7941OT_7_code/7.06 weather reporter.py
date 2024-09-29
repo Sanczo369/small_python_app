@@ -36,3 +36,12 @@ class WeatherReporter:
         self.canvas = Canvas(displayfrm, height='410', width='300', background='black', borderwidth=5)
         self.canvas.create_rectangle( 5, 5,305,415, fill='#F6AF06')
         self.canvas.grid(row=2, sticky='w', columnspan=5)
+
+    def show_weather_button_clicked(self):
+        if not self.enteredlocation.get():
+            return
+        self.canvas.delete(ALL)
+        self.canvas.create_rectangle( 5, 5,305,415, fill='#F6AF06')
+        data = self.get_weather_data()
+        data =self.json_to_dict(data)
+        self.display_final(data)
