@@ -45,3 +45,37 @@ class WeatherReporter:
         data = self.get_weather_data()
         data =self.json_to_dict(data)
         self.display_final(data)
+
+    def display_final(self, data):
+        try:
+            data['name']
+        except:
+            tkMessageBox.showerror('Name not found', 'Unable to fetch record - Name not found')
+            return
+        self.canvas.create_text(30, 30, text=data['name'], fill='white', font="Purisa 16", anchor=NW)
+        self.canvas.create_text(245, 35, text='Latitude :  ' + '%.3f' % (float(data['lat'])), fill='white',
+                                font="Purisa 10")
+        self.canvas.create_text(245, 53, text='Longitude: ' + '%.3f' % (float(data['lon'])), fill='white',
+                                font="Purisa 10")
+        self.canvas.create_text(30, 50, text='Country : ' + str(data['country']), fill='white', font="Purisa 10",
+                                anchor=NW)
+        self.canvas.create_text(155, 80, text=self.time_stamp_to_data(data['dt']), fill='white', font="Purisa 10")
+
+        self.canvas.create_text(85, 105, text='NOW', fill='white', font="Purisa 14")
+        iconname = "weatherimages/%s.png" % data['icon'].lower()
+        self.img = ImageTk.PhotoImage(file=iconname)
+        self.canvas.create_image(140, 105, image=self.img)
+
+        self.canvas.create_text(220, 105, text=data['description'], fill='white', font="Purisa 8")
+
+        # temperature
+        tempr = float(data['temp']) / 10.0
+        self.canvas.create_text(85, 155, text='Temperature', fill='white', font="Purisa 14")
+        self.canvas.create_text(87, 175, text=str('%.2f' % (float(data['temp_min']) / 10.0)) + u' \u2103'.encode(
+            'utf-8') + ' ~ ' + str('%.2f' % (float(data['temp_max']) / 10.0)) + u' \u2103'.encode('utf-8'),
+                                fill='white', font="Purisa 9")
+        self.canvas.create_text(225, 140, text=str(tempr) + u' \u2103'.encode('utf-8'), fill='white',
+                                font="Purisa 18")  # celcius
+        self.canvas.create_text(225, 180, text=str(self.celcius_to_fahrenheit(tempr)) + u' \u2109'.encode('utf-8'),
+                                fill='white', font="Purisa 18")  # fahrenheit
+
