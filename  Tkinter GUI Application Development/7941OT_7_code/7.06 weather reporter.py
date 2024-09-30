@@ -90,3 +90,7 @@ class WeatherReporter:
         #Wind Degree
         self.canvas.create_text( 80,255, text='Wind Degree', fill='white', font="Purisa 12")
         self.canvas.create_text( 223, 255, text=data['deg']+' degrees' ,fill='white', font="Purisa 12") #rh
+
+        #atmoshpheric pressure
+        self.canvas.create_text( 80,275, text='Pressure(at.)', fill='white', font="Purisa 12")
+        self.canvas.create_text( 225, 275, text=data['pressure']+' millibars' ,fill='white', font="Purisa 12") #rh
