@@ -94,3 +94,8 @@ class WeatherReporter:
         #atmoshpheric pressure
         self.canvas.create_text( 80,275, text='Pressure(at.)', fill='white', font="Purisa 12")
         self.canvas.create_text( 225, 275, text=data['pressure']+' millibars' ,fill='white', font="Purisa 12") #rh
+
+        #rain in last 3 hours
+        if data.has_key('3h'):
+            self.canvas.create_text( 83,293, text='Rain (Last 3h)', fill='white', font="Purisa 12")
+            self.canvas.create_text( 200, 293, text=data['3h']+' mm' ,fill='white', font="Purisa 12") #rain
