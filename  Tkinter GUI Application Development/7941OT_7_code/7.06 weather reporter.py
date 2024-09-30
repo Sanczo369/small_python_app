@@ -99,3 +99,7 @@ class WeatherReporter:
         if data.has_key('3h'):
             self.canvas.create_text( 83,293, text='Rain (Last 3h)', fill='white', font="Purisa 12")
             self.canvas.create_text( 200, 293, text=data['3h']+' mm' ,fill='white', font="Purisa 12") #rain
+
+        #clouds
+        self.canvas.create_text( 58,310, text='Clouds', fill='white', font="Purisa 12")
+        self.canvas.create_text( 200, 310, text=data['all']+' %' ,fill='white', font="Purisa 12") #clouds
