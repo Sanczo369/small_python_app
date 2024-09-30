@@ -111,3 +111,11 @@ class WeatherReporter:
         #sunsettime_stamp_to_data
         self.canvas.create_text( 59,343, text='Sunset', fill='white', font="Purisa 12")
         self.canvas.create_text( 200, 343, text=self.time_stamp_to_time(data['sunset']) ,fill='white', font="Purisa 12")
+
+    def time_stamp_to_time(self, ts):
+        return (datetime.datetime.fromtimestamp(int(ts)).strftime('%H:%M:%S'))
+        # poweredby Openweather.org
+        self.canvas.create_text(159, 378, text='Powered by:', fill='white', font="Purisa 12")
+        self.canvas.create_text(159, 398, text='www.openweathermap.org', fill='white', font="Purisa 12")
+
+
