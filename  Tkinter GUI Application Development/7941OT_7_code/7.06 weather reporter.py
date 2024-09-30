@@ -87,3 +87,6 @@ class WeatherReporter:
         self.canvas.create_text(77, 235, text='Wind Speed', fill='white', font="Purisa 12")
         self.canvas.create_text(205, 235, text=data['speed'] + ' m/s ', fill='white', font="Purisa 12")  # rh
 
+        #Wind Degree
+        self.canvas.create_text( 80,255, text='Wind Degree', fill='white', font="Purisa 12")
+        self.canvas.create_text( 223, 255, text=data['deg']+' degrees' ,fill='white', font="Purisa 12") #rh
