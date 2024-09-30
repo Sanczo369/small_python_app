@@ -103,3 +103,7 @@ class WeatherReporter:
         #clouds
         self.canvas.create_text( 58,310, text='Clouds', fill='white', font="Purisa 12")
         self.canvas.create_text( 200, 310, text=data['all']+' %' ,fill='white', font="Purisa 12") #clouds
+
+        #sunrise
+        self.canvas.create_text( 60,328, text='Sunrise', fill='white', font="Purisa 12")
+        self.canvas.create_text( 200, 328, text=self.time_stamp_to_time(data['sunrise']) ,fill='white', font="Purisa 12")
