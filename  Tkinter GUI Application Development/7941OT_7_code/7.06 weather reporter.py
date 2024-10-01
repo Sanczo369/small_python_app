@@ -148,3 +148,13 @@ class WeatherReporter:
             except:
                 flatteneddict[str(key)] = str(value).upper()
         return flatteneddict
+
+
+def main():
+    root = Tk()
+    WeatherReporter(root)
+    root.mainloop()
+
+
+if __name__ == '__main__':
+    main()
