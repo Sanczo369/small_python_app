@@ -118,4 +118,7 @@ class WeatherReporter:
         self.canvas.create_text(159, 378, text='Powered by:', fill='white', font="Purisa 12")
         self.canvas.create_text(159, 398, text='www.openweathermap.org', fill='white', font="Purisa 12")
 
+    def time_stamp_to_data(self, ts):
+        return (datetime.datetime.fromtimestamp(int(ts)).strftime('%Y-%m-%d %H:%M:%S'))
+
 
