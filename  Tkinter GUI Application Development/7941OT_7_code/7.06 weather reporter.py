@@ -133,3 +133,18 @@ class WeatherReporter:
         except IOError as e:
              tkMessageBox.showerror('Unable to connect', 'Unable to connect %s'%e)
 
+    def json_to_dict(self, jdata):
+        mydecoder = json.JSONDecoder()
+        decodedjdata = mydecoder.decode(jdata)
+        flatteneddict = {}
+        for key, value in decodedjdata.items():
+            if key == 'weather':
+                for ke,va in value[0].items():
+                        flatteneddict[str(ke)] = str(va).upper()
+                continue
+            try:
+                for k,v in value.items():
+                        flatteneddict[str(k)] = str(v).upper()
+            except:
+                flatteneddict[str(key)] = str(value).upper()
+        return flatteneddict
