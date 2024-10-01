@@ -124,3 +124,12 @@ class WeatherReporter:
     def celcius_to_fahrenheit(self, c):
          return (float(c) * 9.0/5) + 32
 
+    def get_weather_data(self):
+        try:
+            apiurl = 'http://api.openweathermap.org/data/2.5/weather?q=%s'%self.enteredlocation.get()
+            data =  urllib.urlopen(apiurl)
+            jdata= data.read()
+            return jdata
+        except IOError as e:
+             tkMessageBox.showerror('Unable to connect', 'Unable to connect %s'%e)
+
