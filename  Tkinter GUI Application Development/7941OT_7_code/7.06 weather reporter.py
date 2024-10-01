@@ -121,4 +121,6 @@ class WeatherReporter:
     def time_stamp_to_data(self, ts):
         return (datetime.datetime.fromtimestamp(int(ts)).strftime('%Y-%m-%d %H:%M:%S'))
 
+    def celcius_to_fahrenheit(self, c):
+         return (float(c) * 9.0/5) + 32
 
