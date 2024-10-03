@@ -37,3 +37,7 @@ class PhoneBook:
         self.msg = Label(text='', fg='red')
         self.msg.grid(row=3, column=1, sticky=W)
 
+        self.tree = ttk.Treeview(height=5, columns=2)
+        self.tree.grid(row=4, column=0, columnspan=2)
+        self.tree.heading('#0', text='Name', anchor=W)
+        self.tree.heading(2, text='Phone Number', anchor=W)
