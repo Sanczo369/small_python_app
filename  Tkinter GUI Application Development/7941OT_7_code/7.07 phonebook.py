@@ -18,6 +18,9 @@ class PhoneBook:
         label.image = photo
         label.grid(row=0, column=0)
 
+        fr = LabelFrame(master, text= 'Create New Record')
+        fr.grid(row=0, column=1, padx=8,pady=8, sticky='ew')
+
 
         Label(fr, text='Name:').grid(row=1, column=1, sticky=W, pady=2)
         self.name= StringVar()
