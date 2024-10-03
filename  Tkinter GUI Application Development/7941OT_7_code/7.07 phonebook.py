@@ -41,3 +41,6 @@ class PhoneBook:
         self.tree.grid(row=4, column=0, columnspan=2)
         self.tree.heading('#0', text='Name', anchor=W)
         self.tree.heading(2, text='Phone Number', anchor=W)
+
+        delbtn = ttk.Button(text="Delete Selected", command = self.delete_record)
+        delbtn.grid(row=5, column=0, sticky=W)
