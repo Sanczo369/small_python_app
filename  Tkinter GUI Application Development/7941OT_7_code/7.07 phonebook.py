@@ -33,3 +33,7 @@ class PhoneBook:
         ttk.Button(fr, text= 'Add Record', command=self.create_record).grid(row=3, column=2, sticky=E,padx=5, pady=2)
         showbtn = ttk.Button(text="Show Records", command = self.view_records)
         showbtn.grid(row=3, column=0, sticky=W)
+
+        self.msg = Label(text='', fg='red')
+        self.msg.grid(row=3, column=1, sticky=W)
+
