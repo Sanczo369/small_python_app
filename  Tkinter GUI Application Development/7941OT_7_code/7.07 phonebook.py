@@ -44,3 +44,7 @@ class PhoneBook:
 
         delbtn = ttk.Button(text="Delete Selected", command = self.delete_record)
         delbtn.grid(row=5, column=0, sticky=W)
+
+        updtbtn = ttk.Button(text="Modify Selected", command = self.open_modify_window)
+        updtbtn.grid(row=5, column=1, sticky=W)
+        #self.view_records()
