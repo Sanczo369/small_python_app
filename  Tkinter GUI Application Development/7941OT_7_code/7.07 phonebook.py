@@ -67,3 +67,15 @@ class PhoneBook:
         self.numfield.delete(0, END)
         self.msg["text"] = "Phone Record of %s Added" % name
         self.view_records()
+
+    def view_records(self):
+        x = self.tree.get_children()
+        for item in x:
+            self.tree.delete(item)
+        conn = sqlite3.connect('phonebook.db')
+        c = conn.cursor()
+        list = c.execute("SELECT * FROM contacts ORDER BY name desc")
+        for row in list:
+            self.tree.insert("", 0, text=row[1], values=row[2])
+        c.close()
+
