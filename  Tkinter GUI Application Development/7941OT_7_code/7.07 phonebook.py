@@ -48,3 +48,22 @@ class PhoneBook:
         updtbtn = ttk.Button(text="Modify Selected", command = self.open_modify_window)
         updtbtn.grid(row=5, column=1, sticky=W)
         #self.view_records()
+
+    def create_record(self):
+        name = self.namefield.get()
+        num = self.numfield.get()
+        if name == "":
+            self.msg["text"] = "Please Enter name"
+            return
+        if num == "":
+            self.msg["text"] = "Please Enter Number"
+            return
+        conn = sqlite3.connect('phonebook.db')
+        c = conn.cursor()
+        c.execute("INSERT INTO contacts VALUES(NULL,?, ?)", (name, num))
+        conn.commit()
+        c.close()
+        self.namefield.delete(0, END)
+        self.numfield.delete(0, END)
+        self.msg["text"] = "Phone Record of %s Added" % name
+        self.view_records()
