@@ -110,3 +110,9 @@ class PhoneBook:
             ope.insert(0, str(oldphone))
             ope.config(state='readonly')
 
+            Label(self.tl, text='New Phone Number:').grid(row=2, column=1, sticky=W)
+            newph = StringVar()
+            newphe = Entry(self.tl, textvariable=newph)
+            newphe.grid(row=2, column=2, sticky=W)
+
+
