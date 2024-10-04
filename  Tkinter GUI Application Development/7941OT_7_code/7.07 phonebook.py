@@ -79,3 +79,16 @@ class PhoneBook:
             self.tree.insert("", 0, text=row[1], values=row[2])
         c.close()
 
+    def delete_record(self):
+            self.msg["text"] = ""
+            conn = sqlite3.connect('phonebook.db')
+            c = conn.cursor()
+            name = self.tree.item(self.tree.selection())['text']
+            query = "DELETE FROM contacts WHERE name = '%s';" %name
+            c.execute(query)
+            conn.commit()
+            c.close()
+            self.msg["text"] = "Phone Record for %s Deleted" %name
+            self.view_records()
+
+
