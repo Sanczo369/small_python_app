@@ -103,3 +103,10 @@ class PhoneBook:
             ne.grid(row=0, column=2, sticky=W)
             ne.insert(0, name)
             ne.config(state='readonly')
+
+            Label(self.tl, text='Old Phone Number:').grid(row=1, column=1, sticky=W)
+            ope = Entry(self.tl)
+            ope.grid(row=1, column=2, sticky=W)
+            ope.insert(0, str(oldphone))
+            ope.config(state='readonly')
+
