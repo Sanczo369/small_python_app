@@ -115,4 +115,12 @@ class PhoneBook:
             newphe = Entry(self.tl, textvariable=newph)
             newphe.grid(row=2, column=2, sticky=W)
 
+            upbtn = Button(self.tl, text='Update Record', command=lambda: self.update_record(newphe.get(), oldphone, name))
+            upbtn.grid(row=3, column=2, sticky=E)
+
+            self.tl.mainloop()
+
+        except IndexError as e:
+        self.msg["text"] = "Please Select Item to Modify"
+
 
