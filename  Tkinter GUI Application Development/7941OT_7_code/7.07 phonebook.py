@@ -91,4 +91,15 @@ class PhoneBook:
             self.msg["text"] = "Phone Record for %s Deleted" %name
             self.view_records()
 
+    def open_modify_window(self):
+        try:
+            self.msg["text"] = ""
+            name = self.tree.item(self.tree.selection())['text']
+            oldphone = self.tree.item(self.tree.selection())['values'][0]
 
+            self.tl = Tk()
+            Label(self.tl, text='Name:').grid(row=0, column=1, sticky=W)
+            ne = Entry(self.tl)
+            ne.grid(row=0, column=2, sticky=W)
+            ne.insert(0, name)
+            ne.config(state='readonly')
