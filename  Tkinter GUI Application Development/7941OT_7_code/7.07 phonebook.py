@@ -6,7 +6,7 @@ Phonebook Application
 Tkinter GUI Application Development Hotshot
 """
 
-from Tkinter import *
+from tkinter import *
 import ttk
 import sqlite3
 
@@ -133,3 +133,6 @@ class PhoneBook:
         self.msg["text"] = "Phone Number of %s modified" % name
         self.view_records()
 
+root = tk()
+application = PhoneBook(root)
+root.mainloop()
