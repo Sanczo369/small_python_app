@@ -123,4 +123,13 @@ class PhoneBook:
         except IndexError as e:
         self.msg["text"] = "Please Select Item to Modify"
 
+    def update_record(self, newphone, oldphone, name):
+        conn = sqlite3.connect('phonebook.db')
+        c = conn.cursor()
+        c.execute("UPDATE contacts SET contactnumber=? WHERE contactnumber=? AND name=?", (newphone, oldphone, name))
+        conn.commit()
+        c.close()
+        self.tl.destroy()
+        self.msg["text"] = "Phone Number of %s modified" % name
+        self.view_records()
 
