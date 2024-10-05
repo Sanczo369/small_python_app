@@ -19,3 +19,8 @@ a = f.add_subplot(111)
 t = arange(-1.0,1.0,0.001)
 s = t*sin(1/t)
 a.plot(t,s)
+
+
+# embedding matplotlib figure f on a tk.DrawingArea
+canvas = FigureCanvasTkAgg(f, master=root)
+canvas.get_tk_widget().pack(side=Tk.TOP, fill=Tk.BOTH, expand=1)
