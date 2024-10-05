@@ -24,3 +24,10 @@ a.plot(t,s)
 # embedding matplotlib figure f on a tk.DrawingArea
 canvas = FigureCanvasTkAgg(f, master=root)
 canvas.get_tk_widget().pack(side=Tk.TOP, fill=Tk.BOTH, expand=1)
+
+
+#creating toolbar
+toolbar = NavigationToolbar2TkAgg( canvas, root )
+toolbar.update()
+
+root.mainloop()
