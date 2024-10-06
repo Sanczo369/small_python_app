@@ -32,3 +32,9 @@ class TraversalDemo:
         text.insert(END, 'Tabs does not jump to the next widget.Use Cntrl + Tab to traverse')
         text.grid(row=0, column=1, columnspan=3)
         textframe.pack(fill=X, expand=1)
+
+        scaleframe = Frame(root, takefocus=0)
+        Scale(scaleframe, from_=0.0, to=100.0, label='use left/right key', orient=HORIZONTAL, takefocus=1,
+              highlightthickness=2, highlightcolor='red').pack()
+        scaleframe.pack(fill=X, expand=1)
+
