@@ -20,3 +20,9 @@ class TraversalDemo:
         for button, clm in (('A',1), ('B',2), ('C',3), ('D',4)):
             Button(buttonframe, text=button, highlightthickness=2).grid(padx=10, pady=6, row=0, column=clm, sticky=NSEW)
         buttonframe.pack(fill=X, expand=1)
+
+        radioframe = Frame(root, takefocus=1, highlightthickness=2,  highlightcolor='red')
+        v= IntVar()
+        for i in range(4):
+            Radiobutton(radioframe, text=i, variable=v, value=i).grid(padx=10, pady=6, row=1, column=i, sticky=NSEW)
+        radioframe.pack(fill=X, expand=1)
