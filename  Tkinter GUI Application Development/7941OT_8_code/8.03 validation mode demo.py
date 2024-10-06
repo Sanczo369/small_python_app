@@ -16,3 +16,7 @@ class ValidateModeDemo():
         # validate = none mode - will not call validate method ever.
         tk.Label (text='None').pack()
         tk.Entry(self.root, validate="none", validatecommand=vcmd).pack()
+
+        # validate = focus mode - will call validate method on focusin and focusout
+        tk.Label (text='Focus').pack()
+        tk.Entry(self.root, validate="focus", validatecommand=vcmd).pack()
