@@ -1,0 +1,18 @@
+"""
+Code illustration: 8.03
+
+Validation Modes Demo
+
+Tkinter GUI Application Development Hotshot
+"""
+
+import tkinter as tk
+
+class ValidateModeDemo():
+    def __init__(self):
+        self.root = tk.Tk()
+        vcmd = (self.root.register(self.validate), '%V')
+
+        # validate = none mode - will not call validate method ever.
+        tk.Label (text='None').pack()
+        tk.Entry(self.root, validate="none", validatecommand=vcmd).pack()
