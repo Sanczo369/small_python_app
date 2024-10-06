@@ -4,7 +4,7 @@ Code illustration: 8.02
 Widget Traversal
 Tkinter GUI Application Development Hotshot
 """
-from Tkinter import *
+from tkinter import *
 
 
 class TraversalDemo:
@@ -15,3 +15,8 @@ class TraversalDemo:
         en.insert(END, 'Tabs jumps to next widget')
         topframe.pack(fill=X, expand=1)
         topframe.focus_force()
+
+        buttonframe = Frame(root, highlightthickness=2,  highlightcolor='red')
+        for button, clm in (('A',1), ('B',2), ('C',3), ('D',4)):
+            Button(buttonframe, text=button, highlightthickness=2).grid(padx=10, pady=6, row=0, column=clm, sticky=NSEW)
+        buttonframe.pack(fill=X, expand=1)
