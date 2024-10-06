@@ -26,3 +26,9 @@ class TraversalDemo:
         for i in range(4):
             Radiobutton(radioframe, text=i, variable=v, value=i).grid(padx=10, pady=6, row=1, column=i, sticky=NSEW)
         radioframe.pack(fill=X, expand=1)
+
+        textframe = Frame(root, takefocus=1, highlightthickness=2,  highlightcolor='red')
+        text = Text(textframe, width=25, height=4)
+        text.insert(END, 'Tabs does not jump to the next widget.Use Cntrl + Tab to traverse')
+        text.grid(row=0, column=1, columnspan=3)
+        textframe.pack(fill=X, expand=1)
