@@ -38,3 +38,6 @@ class TraversalDemo:
               highlightthickness=2, highlightcolor='red').pack()
         scaleframe.pack(fill=X, expand=1)
 
+root = Tk()
+app = TraversalDemo(root)
+root.mainloop()
