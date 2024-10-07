@@ -28,3 +28,12 @@ class ValidateModeDemo():
         # validate = all mode - will call validate method on focus and key events
         tk.Label (text='all').pack()
         tk.Entry(self.root, validate="all", validatecommand=vcmd).pack()
+
+        self.root.mainloop()
+
+    def validate(self, v):
+        print 'Called Just Now Via Mode %s' %v
+        # this is where you will validate your data and return True or False
+        #depending on wether the data is valid or not
+        # for now let us just return True for all cases.
+        return True
