@@ -24,3 +24,7 @@ class ValidateModeDemo():
         # validate = Key mode - will call validate method only when you type something or edit the entry
         tk.Label (text='key').pack()
         tk.Entry(self.root, validate="key", validatecommand=vcmd).pack()
+
+        # validate = all mode - will call validate method on focus and key events
+        tk.Label (text='all').pack()
+        tk.Entry(self.root, validate="all", validatecommand=vcmd).pack()
