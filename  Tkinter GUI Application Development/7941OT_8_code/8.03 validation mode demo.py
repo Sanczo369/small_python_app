@@ -37,3 +37,5 @@ class ValidateModeDemo():
         #depending on wether the data is valid or not
         # for now let us just return True for all cases.
         return True
+
+app = ValidateModeDemo()
