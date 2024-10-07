@@ -20,3 +20,7 @@ class ValidateModeDemo():
         # validate = focus mode - will call validate method on focusin and focusout
         tk.Label (text='Focus').pack()
         tk.Entry(self.root, validate="focus", validatecommand=vcmd).pack()
+
+        # validate = Key mode - will call validate method only when you type something or edit the entry
+        tk.Label (text='key').pack()
+        tk.Entry(self.root, validate="key", validatecommand=vcmd).pack()
