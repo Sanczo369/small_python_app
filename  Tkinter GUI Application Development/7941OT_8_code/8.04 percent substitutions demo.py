@@ -28,3 +28,5 @@ class PSubDemo():
         # returning true for now
         # in actual validation you return true if data is valid else return false
         return True
+
+app = PSubDemo()
