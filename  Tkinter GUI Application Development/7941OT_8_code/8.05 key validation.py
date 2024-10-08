@@ -16,3 +16,8 @@ class keyValidationDemo():
         self.errmsg = tk.Label(root, text= '', fg='red')
         self.errmsg.pack()
         root.mainloop()
+
+    def validate_data(self, S):
+        print(f"S='{S}'")
+        self.errmsg.config(text='')
+        return (S.isalpha() or S ==' ')
