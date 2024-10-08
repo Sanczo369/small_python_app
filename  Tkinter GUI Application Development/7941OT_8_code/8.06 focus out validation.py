@@ -25,3 +25,9 @@ class FocusOutValidationDemo():
         x = re.match(r"[^@]+@[^@]+\.[^@]+", P)
         return (x != None)
 
+    def invalid_email(self, P):
+        self.errormsg.config(text='Invalid Email Address')
+        self.emailentry.focus_set()
+
+
+app = FocusOutValidationDemo()
