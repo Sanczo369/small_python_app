@@ -5,7 +5,7 @@ Demonstration of percent substitutions in data validation
 Tkinter GUI Application Development Hotshot
 """
 
-import Tkinter as tk
+import tkinter as tk
 
 class PSubDemo():
     def __init__(self):
