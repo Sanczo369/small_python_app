@@ -21,3 +21,6 @@ class keyValidationDemo():
         print(f"S='{S}'")
         self.errmsg.config(text='')
         return (S.isalpha() or S ==' ')
+
+    def invalid_name(self, S):
+        self.errmsg.config(text='Invalid character %s \n name can only have alphabets'%S)
