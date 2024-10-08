@@ -19,3 +19,9 @@ class FocusOutValidationDemo():
         self.emailentry.pack()
         tk.Button(self.master, text="Login").pack()
         tk.mainloop()
+
+    def validate_email(self, P):
+        self.errormsg.config(text='')
+        x = re.match(r"[^@]+@[^@]+\.[^@]+", P)
+        return (x != None)
+
