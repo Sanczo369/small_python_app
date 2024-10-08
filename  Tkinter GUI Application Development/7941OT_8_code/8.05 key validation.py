@@ -24,3 +24,5 @@ class keyValidationDemo():
 
     def invalid_name(self, S):
         self.errmsg.config(text='Invalid character %s \n name can only have alphabets'%S)
+
+app= keyValidationDemo()
