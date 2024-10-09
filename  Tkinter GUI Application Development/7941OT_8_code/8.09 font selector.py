@@ -18,3 +18,13 @@ class FontSelectorDemo():
       self.underlinevalue  = BooleanVar(value=False)
       self.overstrikevalue = BooleanVar(value=False)
       self.gui_creator()
+
+   def gui_creator(self):
+      #font family selector combobox
+      Label(text='Font Family').grid(row=0, column=0)
+      fontList = ttk.Combobox(textvariable=self.family)
+      fontList.grid(row=1, column=0, columnspan=2, sticky=N+S+E+W, padx=10)
+      fontList.bind('<<ComboboxSelected>>', self.on_value_change)
+      allfonts = list(tkFont.families())
+      allfonts.sort()
+      fontList['values'] =  allfonts
