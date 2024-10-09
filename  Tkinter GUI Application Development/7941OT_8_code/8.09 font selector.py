@@ -28,3 +28,11 @@ class FontSelectorDemo():
       allfonts = list(tkFont.families())
       allfonts.sort()
       fontList['values'] =  allfonts
+
+      # Font Sizes
+      Label(text='Font Size').grid(row=0, column=2)
+      sizeList = ttk.Combobox(textvariable=self.fontsize)
+      sizeList.bind('<<ComboboxSelected>>', self.on_value_change)
+      sizeList.grid(row=1, column=2, columnspan=2, sticky=N+S+E+W, padx=10)
+      allfontsizes = range(6,70)
+      sizeList['values'] =  allfontsizes
