@@ -20,3 +20,14 @@ class FormatEntryWidgetDemo:
             if len(entrylist) > pos:
                 entrylist.insert(pos, '/')
         self.entereddata.set(''.join(entrylist))
+        # Controlling cursor
+        cursorpos = self.dateentrywidget.index(INSERT) #current cursor position
+        for pos in self.slashpositions:
+            if cursorpos == (pos + 1):                # if cursor position is on slash
+                cursorpos += 1
+        if event.keysym not in ['BackSpace', 'Right', 'Left', 'Up', 'Down']:
+            self.dateentrywidget.icursor(cursorpos)
+
+root = Tk()
+FormatEntryWidgetDemo(root)
+root.mainloop()
