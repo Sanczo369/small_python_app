@@ -14,3 +14,9 @@ class FormatEntryWidgetDemo:
         self.slashpositions = [2, 5]
         root.bind('<Key>', self.format_date_entry_widget)
 
+    def format_date_entry_widget(self, event):
+        entrylist = [c for c in self.entereddata.get() if c != '/']
+        for pos in self.slashpositions:
+            if len(entrylist) > pos:
+                entrylist.insert(pos, '/')
+        self.entereddata.set(''.join(entrylist))
