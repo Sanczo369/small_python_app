@@ -46,3 +46,10 @@ class FontSelectorDemo():
       except ValueError as e:
          print(e)
          pass  ### invalid entry - ignored for now. You can use a tkMessageBox dialog to show an error
+
+
+if __name__ == '__main__':
+   root = Tk()
+   root.resizable(0,0)
+   font = FontSelectorDemo()
+   root.mainloop()
