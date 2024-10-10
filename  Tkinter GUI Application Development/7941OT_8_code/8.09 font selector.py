@@ -36,3 +36,13 @@ class FontSelectorDemo():
       sizeList.grid(row=1, column=2, columnspan=2, sticky=N+S+E+W, padx=10)
       allfontsizes = range(6,70)
       sizeList['values'] =  allfontsizes
+
+   def on_value_change(self, event=None):
+      try:
+         self.currentfont.config(family=self.family.get(), size=self.fontsize.get(), weight=self.fontweight.get(),
+                                 slant=self.slant.get(), underline=self.underlinevalue.get(),
+                                 overstrike=self.overstrikevalue.get())
+         self.text.tag_config('fontspecs', font=self.currentfont)
+      except ValueError as e:
+         print(e)
+         pass  ### invalid entry - ignored for now. You can use a tkMessageBox dialog to show an error
