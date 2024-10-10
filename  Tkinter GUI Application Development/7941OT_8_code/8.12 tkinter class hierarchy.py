@@ -9,3 +9,7 @@ import inspect
 print('Class Hierarchy for Frame Widget')
 for i, classname in enumerate(inspect.getmro(tkinter.Frame)):
     print(f'{i}: {classname}')
+
+print('Class Hierarchy for Toplevel')
+for i, classname in enumerate(inspect.getmro(tkinter.Toplevel)):
+    print(f'{i}: {classname}')
