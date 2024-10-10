@@ -13,3 +13,7 @@ for i, classname in enumerate(inspect.getmro(tkinter.Frame)):
 print('Class Hierarchy for Toplevel')
 for i, classname in enumerate(inspect.getmro(tkinter.Toplevel)):
     print(f'{i}: {classname}')
+
+print('Class Hierarchy for Tk')
+for i, classname in enumerate(inspect.getmro(tkinter.Tk)):
+    print(f'{i}: {classname}')
