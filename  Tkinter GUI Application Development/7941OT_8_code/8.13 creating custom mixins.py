@@ -30,3 +30,14 @@ def button_pressed(uname, pwd):
     print(f'Username: {uname}')
     print(f'Password: {pwd}')
 
+if __name__ == '__main__':
+    root = Tk()
+    frm = frame(root, 0,0)
+    label(frm, 1,0,'Username:')
+    uname= StringVar()
+    entry(frm, 1,1,uname)
+    label(frm, 2,0,'Password:')
+    pwd= StringVar()
+    entry(frm, 2,1,pwd)
+    button(frm,3,1, 'login', lambda: button_pressed(uname.get(),pwd.get()) )
+    root.mainloop()
