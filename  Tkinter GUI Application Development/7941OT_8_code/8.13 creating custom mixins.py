@@ -15,3 +15,8 @@ def label(parent,  row, col, text):
     widget = Label(parent, text=text)
     widget.grid(row= row, column=col,  sticky='w', padx=2)
     return widget
+
+def button(parent, row, col, text, command):
+    widget = Button(parent, text=text, command=command)
+    widget.grid(row= row, column=col, sticky='e', padx=5, pady=3)
+    return widget
