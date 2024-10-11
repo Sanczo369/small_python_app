@@ -20,3 +20,8 @@ def button(parent, row, col, text, command):
     widget = Button(parent, text=text, command=command)
     widget.grid(row= row, column=col, sticky='e', padx=5, pady=3)
     return widget
+
+def entry(parent,  row, col, var):
+    widget = Entry(parent,textvariable= var)
+    widget.grid(row= row, column=col, sticky='w', padx=5)
+    return widget
