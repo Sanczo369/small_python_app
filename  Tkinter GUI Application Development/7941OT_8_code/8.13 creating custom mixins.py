@@ -25,3 +25,8 @@ def entry(parent,  row, col, var):
     widget = Entry(parent,textvariable= var)
     widget.grid(row= row, column=col, sticky='w', padx=5)
     return widget
+
+def button_pressed(uname, pwd):
+    print(f'Username: {uname}')
+    print(f'Password: {pwd}')
+
