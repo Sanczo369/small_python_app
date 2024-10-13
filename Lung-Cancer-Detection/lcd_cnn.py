@@ -24,3 +24,9 @@ class LCD_CNN:
         #button 1
         self.b1=Button(text="Import Data",cursor="hand2",command=self.import_data,font=("Times New Roman",15,"bold"),bg="white",fg="black")
         self.b1.place(x=80,y=130,width=180,height=30)
+
+        #button 2
+        self.b2=Button(text="Pre-Process Data",cursor="hand2",command=self.preprocess_data,font=("Times New Roman",15,"bold"),bg="white",fg="black")
+        self.b2.place(x=80,y=180,width=180,height=30)
+        self.b2["state"] = "disabled"
+        self.b2.config(cursor="arrow")
