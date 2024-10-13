@@ -20,3 +20,7 @@ class LCD_CNN:
         # title Label
         title_lbl=Label(text="Lung Cancer Detection",font=("Bradley Hand ITC",30,"bold"),bg="black",fg="white",)
         title_lbl.place(x=0,y=0,width=1006,height=50)
+
+        #button 1
+        self.b1=Button(text="Import Data",cursor="hand2",command=self.import_data,font=("Times New Roman",15,"bold"),bg="white",fg="black")
+        self.b1.place(x=80,y=130,width=180,height=30)
