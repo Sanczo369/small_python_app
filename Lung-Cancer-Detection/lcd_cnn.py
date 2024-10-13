@@ -30,3 +30,9 @@ class LCD_CNN:
         self.b2.place(x=80,y=180,width=180,height=30)
         self.b2["state"] = "disabled"
         self.b2.config(cursor="arrow")
+
+        #button 3
+        self.b3=Button(text="Train Data",cursor="hand2",command=self.train_data,font=("Times New Roman",15,"bold"),bg="white",fg="black")
+        self.b3.place(x=80,y=230,width=180,height=30)
+        self.b3["state"] = "disabled"
+        self.b3.config(cursor="arrow")
