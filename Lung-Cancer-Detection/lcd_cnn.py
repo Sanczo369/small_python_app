@@ -16,3 +16,7 @@ class LCD_CNN:
 
         bg_img=Label(self.root,image=self.photoimg4)
         bg_img.place(x=0,y=50,width=1006,height=500)
+
+        # title Label
+        title_lbl=Label(text="Lung Cancer Detection",font=("Bradley Hand ITC",30,"bold"),bg="black",fg="white",)
+        title_lbl.place(x=0,y=0,width=1006,height=50)
