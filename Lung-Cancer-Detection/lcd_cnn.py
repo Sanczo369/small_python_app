@@ -13,3 +13,6 @@ class LCD_CNN:
         img4=img4.resize((1006,500),Image.ANTIALIAS)
         #Antialiasing is a technique used in digital imaging to reduce the visual defects that occur when high-resolution images are presented in a lower resolution.
         self.photoimg4=ImageTk.PhotoImage(img4)
+
+        bg_img=Label(self.root,image=self.photoimg4)
+        bg_img.place(x=0,y=50,width=1006,height=500)
