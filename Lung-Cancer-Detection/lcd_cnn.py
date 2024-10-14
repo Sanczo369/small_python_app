@@ -68,3 +68,7 @@ class LCD_CNN:
                 if (count < self.NoSlices):
                     yield l[i:i + n]
                     count = count + 1
+
+        def mean(l):
+            return sum(l) / len(l)
+        #Average
