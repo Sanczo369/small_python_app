@@ -42,3 +42,6 @@ class LCD_CNN:
         ##Data directory
         self.dataDirectory = 'sample_images/'
         self.lungPatients = os.listdir(self.dataDirectory)
+
+    ##Read labels csv
+    self.labels = pd.read_csv('stage1_labels.csv', index_col=0)
