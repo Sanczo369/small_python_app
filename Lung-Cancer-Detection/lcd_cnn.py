@@ -48,3 +48,6 @@ class LCD_CNN:
 
         ##Setting x*y size to 10
         self.size = 10
+
+        ## Setting z-dimension (number of slices to 5)
+        self.NoSlices = 5
