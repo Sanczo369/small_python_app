@@ -58,3 +58,13 @@ class LCD_CNN:
         self.b1.config(cursor="arrow")
         self.b2["state"] = "normal"
         self.b2.config(cursor="hand2")
+
+# Data preprocessing is the process of transforming raw data into an understandable format.
+    def preprocess_data(self):
+
+        def chunks(l, n):
+            count = 0
+            for i in range(0, len(l), n):
+                if (count < self.NoSlices):
+                    yield l[i:i + n]
+                    count = count + 1
