@@ -36,3 +36,9 @@ class LCD_CNN:
         self.b3.place(x=80,y=230,width=180,height=30)
         self.b3["state"] = "disabled"
         self.b3.config(cursor="arrow")
+
+#Data Import lets you upload data from external sources and combine it with data you collect via Analytics.
+    def import_data(self):
+        ##Data directory
+        self.dataDirectory = 'sample_images/'
+        self.lungPatients = os.listdir(self.dataDirectory)
