@@ -51,3 +51,10 @@ class LCD_CNN:
 
         ## Setting z-dimension (number of slices to 5)
         self.NoSlices = 5
+
+        messagebox.showinfo("Import Data" , "Data Imported Successfully!")
+
+        self.b1["state"] = "disabled"
+        self.b1.config(cursor="arrow")
+        self.b2["state"] = "normal"
+        self.b2.config(cursor="hand2")
