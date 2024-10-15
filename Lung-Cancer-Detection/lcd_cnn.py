@@ -93,3 +93,14 @@ class LCD_CNN:
             elif label == 0:    #Non Cancerous Patient
                 label = np.array([1, 0])
             return np.array(new_slices), label
+
+        imageData = []
+        #Check if Data Labels is available in CSV or not
+        for num, patient in enumerate(self.lungPatients):
+            if num % 50 == 0:
+                print('Saved -', num)
+            try:
+                img_data, label = dataProcessing(patient, self.labels, size=self.size, noslices=self.NoSlices)
+                imageData.append([img_data, label,patient])
+            except KeyError as e:
+                print('Data is unlabeled')
