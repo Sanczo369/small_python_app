@@ -104,3 +104,6 @@ class LCD_CNN:
                 imageData.append([img_data, label,patient])
             except KeyError as e:
                 print('Data is unlabeled')
+
+        ##Results= Image Data and lable.
+        np.save('imageDataNew-{}-{}-{}.npy'.format(self.size, self.size, self.NoSlices), imageData)
