@@ -137,3 +137,6 @@ class LCD_CNN:
 
         def convolution3d(x, W):
             return tf.nn.conv3d(x, W, strides=[1, 1, 1, 1, 1], padding='SAME')
+
+        def maxpooling3d(x):
+            return tf.nn.max_pool3d(x, ksize=[1, 2, 2, 2, 1], strides=[1, 2, 2, 2, 1], padding='SAME')
