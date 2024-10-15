@@ -134,3 +134,6 @@ class LCD_CNN:
         size = 10
         keep_rate = 0.8
         NoSlices = 5
+
+        def convolution3d(x, W):
+            return tf.nn.conv3d(x, W, strides=[1, 1, 1, 1, 1], padding='SAME')
