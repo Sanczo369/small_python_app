@@ -114,3 +114,23 @@ class LCD_CNN:
         self.b2.config(cursor="arrow")
         self.b3["state"] = "normal"
         self.b3.config(cursor="hand2")
+
+
+# Data training is the process of training the model based on the dataset and then predict on new data.
+    def train_data(self):
+
+        imageData = np.load('imageDataNew-10-10-5.npy',allow_pickle=True)
+        trainingData = imageData[0:45]
+        validationData = imageData[45:50]
+
+        training_data=Label(text="Total Training Data: " + str(len(trainingData)),font=("Times New Roman",13,"bold"),bg="black", fg="white",)
+        training_data.place(x=750,y=150,width=200,height=18)
+
+        validation_data=Label(text="Total Validation Data: " + str(len(validationData)),font=("Times New Roman",13,"bold"),bg="black",fg="white",)
+        validation_data.place(x=750,y=190,width=200,height=18)
+
+        x = tf.placeholder('float')
+        y = tf.placeholder('float')
+        size = 10
+        keep_rate = 0.8
+        NoSlices = 5
