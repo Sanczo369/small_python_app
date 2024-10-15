@@ -107,3 +107,10 @@ class LCD_CNN:
 
         ##Results= Image Data and lable.
         np.save('imageDataNew-{}-{}-{}.npy'.format(self.size, self.size, self.NoSlices), imageData)
+
+        messagebox.showinfo("Pre-Process Data" , "Data Pre-Processing Done Successfully!")
+
+        self.b2["state"] = "disabled"
+        self.b2.config(cursor="arrow")
+        self.b3["state"] = "normal"
+        self.b3.config(cursor="hand2")
