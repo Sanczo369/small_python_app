@@ -72,3 +72,24 @@ class LCD_CNN:
         def mean(l):
             return sum(l) / len(l)
         #Average
+
+
+        def dataProcessing(patient, labels_df, size=10, noslices=5, visualize=False):
+            label = labels_df._get_value(patient, 'cancer')
+            path = self.dataDirectory + patient
+            slices = [dicom.read_file(path + '/' + s) for s in os.listdir(path)]
+            slices.sort(key=lambda x: int(x.ImagePositionPatient[2]))
+
+            new_slices = []
+            slices = [cv2.resize(np.array(each_slice.pixel_array), (size, size)) for each_slice in slices]
+
+            chunk_sizes = math.floor(len(slices) / noslices)
+            for slice_chunk in chunks(slices, chunk_sizes):
+                slice_chunk = list(map(mean, zip(*slice_chunk)))
+                new_slices.append(slice_chunk)
+
+            if label == 1: #Cancer Patient
+                label = np.array([0, 1])
+            elif label == 0:    #Non Cancerous Patient
+                label = np.array([1, 0])
+            return np.array(new_slices), label
