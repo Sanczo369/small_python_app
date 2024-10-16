@@ -168,3 +168,9 @@ class LCD_CNN:
             fullyconnected = tf.nn.dropout(fullyconnected, keep_rate)
             output = tf.matmul(fullyconnected, tf.Variable(tf.random_normal([256, 2]))) + tf.Variable(tf.random_normal([2]))
             return output
+
+# For GUI
+if __name__ == "__main__":
+        root=Tk()
+        obj=LCD_CNN(root)
+        root.mainloop()
