@@ -254,6 +254,29 @@ class LCD_CNN:
                         result1.append("Cancer")
                     else:
                         result1.append("No Cancer")
+                # print(result1)
+
+                total_rows = int(len(patients))
+                total_columns = int(len(result1) / len(patients))
+
+                heading = ["Patient: ", "Actual: ", "Predicted: "]
+
+                self.root.geometry("1006x" + str(500 + (len(patients) * 20) - 20) + "+0+0")
+                self.root.resizable(False, False)
+
+                for i in range(total_rows):
+                    for j in range(total_columns):
+                        self.e = Entry(root, width=42, fg='black', font=('Times New Roman', 12, 'bold'))
+                        self.e.grid(row=i, column=j)
+                        self.e.place(x=(j * 335), y=(478 + i * 20))
+                        self.e.insert(END, heading[j] + result1[j + i * 3])
+                        self.e["state"] = "disabled"
+                        self.e.config(cursor="arrow")
+
+                self.b3["state"] = "disabled"
+                self.b3.config(cursor="arrow")
+
+                messagebox.showinfo("Train Data", "Model Trained Successfully!")
 # For GUI
 if __name__ == "__main__":
         root=Tk()
