@@ -224,6 +224,24 @@ class LCD_CNN:
                     print("Actual: ", actual[i])
                     print("Predicted: ", predicted[i])
                     print("----------------------------------------------------")
+
+                # messagebox.showinfo("Result" , "Patient: " + ' '.join(map(str,patients)) + "\nActual: " + str(actual) + "\nPredicted: " + str(predicted) + "Accuracy: " + str(x1))
+
+                y_actual = pd.Series(
+                    (actualprediction.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]})),
+                    name='Actual')
+                y_predicted = pd.Series(
+                    (finalprediction.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]})),
+                    name='Predicted')
+
+                df_confusion = pd.crosstab(y_actual, y_predicted).reindex(columns=[0,1],index=[0,1], fill_value=0)
+                print('Confusion Matrix:\n')
+                print(df_confusion)
+
+                prediction_label=Label(text=">>>>    P R E D I C T I O N    <<<<",font=("Times New Roman",14,"bold"),bg="#778899", fg="black",)
+                prediction_label.place(x=0,y=458,width=1006,height=20)
+
+                result1 = []
 # For GUI
 if __name__ == "__main__":
         root=Tk()
