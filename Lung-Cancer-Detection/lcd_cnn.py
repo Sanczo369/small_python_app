@@ -140,3 +140,31 @@ class LCD_CNN:
 
         def maxpooling3d(x):
             return tf.nn.max_pool3d(x, ksize=[1, 2, 2, 2, 1], strides=[1, 2, 2, 2, 1], padding='SAME')
+
+        def cnn(x):
+            x = tf.reshape(x, shape=[-1, size, size, NoSlices, 1])
+            convolution1 = tf.nn.relu(
+                convolution3d(x, tf.Variable(tf.random_normal([3, 3, 3, 1, 32]))) + tf.Variable(tf.random_normal([32])))
+            convolution1 = maxpooling3d(convolution1)
+            convolution2 = tf.nn.relu(
+                convolution3d(convolution1, tf.Variable(tf.random_normal([3, 3, 3, 32, 64]))) + tf.Variable(
+                    tf.random_normal([64])))
+            convolution2 = maxpooling3d(convolution2)
+            convolution3 = tf.nn.relu(
+                convolution3d(convolution2, tf.Variable(tf.random_normal([3, 3, 3, 64, 128]))) + tf.Variable(
+                    tf.random_normal([128])))
+            convolution3 = maxpooling3d(convolution3)
+            convolution4 = tf.nn.relu(
+                convolution3d(convolution3, tf.Variable(tf.random_normal([3, 3, 3, 128, 256]))) + tf.Variable(
+                    tf.random_normal([256])))
+            convolution4 = maxpooling3d(convolution4)
+            convolution5 = tf.nn.relu(
+                convolution3d(convolution4, tf.Variable(tf.random_normal([3, 3, 3, 256, 512]))) + tf.Variable(
+                    tf.random_normal([512])))
+            convolution5 = maxpooling3d(convolution4)
+            fullyconnected = tf.reshape(convolution5, [-1, 256])
+            fullyconnected = tf.nn.relu(
+                tf.matmul(fullyconnected, tf.Variable(tf.random_normal([256, 256]))) + tf.Variable(tf.random_normal([256])))
+            fullyconnected = tf.nn.dropout(fullyconnected, keep_rate)
+            output = tf.matmul(fullyconnected, tf.Variable(tf.random_normal([256, 2]))) + tf.Variable(tf.random_normal([2]))
+            return output
