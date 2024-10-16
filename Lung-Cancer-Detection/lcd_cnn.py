@@ -242,6 +242,18 @@ class LCD_CNN:
                 prediction_label.place(x=0,y=458,width=1006,height=20)
 
                 result1 = []
+
+                for i in range(len(validationData)):
+                    result1.append(patients[i])
+                    if(y_actual[i] == 1):
+                        result1.append("Cancer")
+                    else:
+                        result1.append("No Cancer")
+
+                    if(y_predicted[i] == 1):
+                        result1.append("Cancer")
+                    else:
+                        result1.append("No Cancer")
 # For GUI
 if __name__ == "__main__":
         root=Tk()
