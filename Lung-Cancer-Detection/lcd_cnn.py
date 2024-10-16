@@ -188,6 +188,14 @@ class LCD_CNN:
                             pass
 
                     correct = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
+                    # if tf.argmax(prediction, 1) == 0:
+                    accuracy = tf.reduce_mean(tf.cast(correct, 'float'))
+                    print('Epoch', epoch + 1, 'completed out of', epochs, 'loss:', epoch_loss)
+                    # print('Correct:',correct.eval({x:[i[0] for i in validationData], y:[i[1] for i in validationData]}))
+                    print('Accuracy:',
+                          accuracy.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]}))
+                    # print('Final Accuracy:', accuracy.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]}))
+                x1 = accuracy.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]})
 # For GUI
 if __name__ == "__main__":
         root=Tk()
