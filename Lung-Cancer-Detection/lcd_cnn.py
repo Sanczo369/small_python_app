@@ -169,6 +169,25 @@ class LCD_CNN:
             output = tf.matmul(fullyconnected, tf.Variable(tf.random_normal([256, 2]))) + tf.Variable(tf.random_normal([2]))
             return output
 
+        def network(x):
+            prediction = cnn(x)
+            cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=prediction, labels=y))
+            optimizer = tf.train.AdamOptimizer(learning_rate=1e-3).minimize(cost)
+            epochs = 100
+            with tf.Session() as session:
+                session.run(tf.global_variables_initializer())
+                for epoch in range(epochs):
+                    epoch_loss = 0
+                    for data in trainingData:
+                        try:
+                            X = data[0]
+                            Y = data[1]
+                            _, c = session.run([optimizer, cost], feed_dict={x: X, y: Y})
+                            epoch_loss += c
+                        except Exception as e:
+                            pass
+
+                    correct = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
 # For GUI
 if __name__ == "__main__":
         root=Tk()
