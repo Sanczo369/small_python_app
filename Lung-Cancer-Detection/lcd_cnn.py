@@ -196,6 +196,34 @@ class LCD_CNN:
                           accuracy.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]}))
                     # print('Final Accuracy:', accuracy.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]}))
                 x1 = accuracy.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]})
+
+                final_accuracy=Label(text="Final Accuracy: " + str(x1),font=("Times New Roman",13,"bold"),bg="black", fg="white",)
+                final_accuracy.place(x=750,y=230,width=200,height=18)
+
+                patients = []
+                actual = []
+                predicted = []
+
+                finalprediction = tf.argmax(prediction, 1)
+                actualprediction = tf.argmax(y, 1)
+                for i in range(len(validationData)):
+                    patients.append(validationData[i][2])
+                for i in finalprediction.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]}):
+                    if(i==1):
+                        predicted.append("Cancer")
+                    else:
+                        predicted.append("No Cancer")
+                for i in actualprediction.eval({x: [i[0] for i in validationData], y: [i[1] for i in validationData]}):
+                    if(i==1):
+                        actual.append("Cancer")
+                    else:
+                        actual.append("No Cancer")
+                for i in range(len(patients)):
+                    print("----------------------------------------------------")
+                    print("Patient: ",patients[i])
+                    print("Actual: ", actual[i])
+                    print("Predicted: ", predicted[i])
+                    print("----------------------------------------------------")
 # For GUI
 if __name__ == "__main__":
         root=Tk()
