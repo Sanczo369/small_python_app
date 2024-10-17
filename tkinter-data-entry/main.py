@@ -36,3 +36,7 @@ window.title("Data Entry Form")
 
 frame = tkinter.Frame(window)
 frame.pack()
+
+# Saving User Info
+user_info_frame =tkinter.LabelFrame(frame, text="User Information")
+user_info_frame.grid(row= 0, column=0, padx=20, pady=10)
