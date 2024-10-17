@@ -30,3 +30,9 @@ def enter_data():
             tkinter.messagebox.showwarning(title="Error", message="First name and last name are required.")
     else:
         tkinter.messagebox.showwarning(title="Error", message="You have not accepted the terms")
+
+window = tkinter.Tk()
+window.title("Data Entry Form")
+
+frame = tkinter.Frame(window)
+frame.pack()
