@@ -16,3 +16,15 @@ def login():
         messagebox.showerror(title="Error", message="Invalid login.")
 
 frame = tkinter.Frame(bg='#333333')
+
+# Creating widgets
+login_label = tkinter.Label(
+    frame, text="Login", bg='#333333', fg="#FF3399", font=("Arial", 30))
+username_label = tkinter.Label(
+    frame, text="Username", bg='#333333', fg="#FFFFFF", font=("Arial", 16))
+username_entry = tkinter.Entry(frame, font=("Arial", 16))
+password_entry = tkinter.Entry(frame, show="*", font=("Arial", 16))
+password_label = tkinter.Label(
+    frame, text="Password", bg='#333333', fg="#FFFFFF", font=("Arial", 16))
+login_button = tkinter.Button(
+    frame, text="Login", bg="#FF3399", fg="#FFFFFF", font=("Arial", 16), command=login)
