@@ -65,3 +65,6 @@ nationality_label = tkinter.Label(user_info_frame, text="Nationality")
 nationality_combobox = ttk.Combobox(user_info_frame, values=["Africa", "Antarctica", "Asia", "Europe", "North America", "Oceania", "South America"])
 nationality_label.grid(row=2, column=1)
 nationality_combobox.grid(row=3, column=1)
+
+for widget in user_info_frame.winfo_children():
+    widget.grid_configure(padx=10, pady=5)
