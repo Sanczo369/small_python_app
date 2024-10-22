@@ -93,3 +93,6 @@ numsemesters_spinbox = tkinter.Spinbox(courses_frame, from_=0, to="infinity")
 numsemesters_label.grid(row=0, column=2)
 numsemesters_spinbox.grid(row=1, column=2)
 
+
+for widget in courses_frame.winfo_children():
+    widget.grid_configure(padx=10, pady=5)
