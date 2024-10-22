@@ -105,3 +105,9 @@ accept_var = tkinter.StringVar(value="Not Accepted")
 terms_check = tkinter.Checkbutton(terms_frame, text= "I accept the terms and conditions.",
                                   variable=accept_var, onvalue="Accepted", offvalue="Not Accepted")
 terms_check.grid(row=0, column=0)
+
+# Button
+button = tkinter.Button(frame, text="Enter data", command=enter_data)
+button.grid(row=3, column=0, sticky="news", padx=20, pady=10)
+
+window.mainloop()
