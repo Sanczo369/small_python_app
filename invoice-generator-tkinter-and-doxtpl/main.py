@@ -10,3 +10,18 @@ def clear_item():
     desc_entry.delete(0, tkinter.END)
     price_spinbox.delete(0, tkinter.END)
     price_spinbox.insert(0, "0.0")
+
+
+invoice_list = []
+
+
+def add_item():
+    qty = int(qty_spinbox.get())
+    desc = desc_entry.get()
+    price = float(price_spinbox.get())
+    line_total = qty * price
+    invoice_item = [qty, desc, price, line_total]
+    tree.insert('', 0, values=invoice_item)
+    clear_item()
+
+    invoice_list.append(invoice_item)
