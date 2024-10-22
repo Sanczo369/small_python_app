@@ -96,3 +96,12 @@ numsemesters_spinbox.grid(row=1, column=2)
 
 for widget in courses_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
+
+# Accept terms
+terms_frame = tkinter.LabelFrame(frame, text="Terms & Conditions")
+terms_frame.grid(row=2, column=0, sticky="news", padx=20, pady=10)
+
+accept_var = tkinter.StringVar(value="Not Accepted")
+terms_check = tkinter.Checkbutton(terms_frame, text= "I accept the terms and conditions.",
+                                  variable=accept_var, onvalue="Accepted", offvalue="Not Accepted")
+terms_check.grid(row=0, column=0)
