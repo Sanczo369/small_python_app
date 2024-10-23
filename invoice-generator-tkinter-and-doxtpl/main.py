@@ -44,3 +44,17 @@ def generate_invoice():
     subtotal = sum(item[3] for item in invoice_list)
     salestax = 0.1
     total = subtotal * (1 - salestax)
+
+    doc.render({"name": name,
+                "phone": phone,
+                "invoice_list": invoice_list,
+                "subtotal": subtotal,
+                "salestax": str(salestax * 100) + "%",
+                "total": total})
+
+    doc_name = "new_invoice" + name + datetime.datetime.now().strftime("%Y-%m-%d-%H%M%S") + ".docx"
+    doc.save(doc_name)
+
+    messagebox.showinfo("Invoice Complete", "Invoice Complete")
+
+    new_invoice()
