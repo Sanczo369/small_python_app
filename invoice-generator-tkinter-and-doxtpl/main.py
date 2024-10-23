@@ -64,3 +64,8 @@ window.title("Invoice Generator Form")
 
 frame = tkinter.Frame(window)
 frame.pack(padx=20, pady=10)
+
+first_name_label = tkinter.Label(frame, text="First Name")
+first_name_label.grid(row=0, column=0)
+last_name_label = tkinter.Label(frame, text="Last Name")
+last_name_label.grid(row=0, column=1)
