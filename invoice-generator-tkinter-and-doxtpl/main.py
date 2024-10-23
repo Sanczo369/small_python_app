@@ -25,3 +25,13 @@ def add_item():
     clear_item()
 
     invoice_list.append(invoice_item)
+
+
+def new_invoice():
+    first_name_entry.delete(0, tkinter.END)
+    last_name_entry.delete(0, tkinter.END)
+    phone_entry.delete(0, tkinter.END)
+    clear_item()
+    tree.delete(*tree.get_children())
+
+    invoice_list.clear()
