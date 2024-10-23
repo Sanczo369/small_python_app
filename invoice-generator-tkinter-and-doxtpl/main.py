@@ -58,3 +58,9 @@ def generate_invoice():
     messagebox.showinfo("Invoice Complete", "Invoice Complete")
 
     new_invoice()
+
+window = tkinter.Tk()
+window.title("Invoice Generator Form")
+
+frame = tkinter.Frame(window)
+frame.pack(padx=20, pady=10)
