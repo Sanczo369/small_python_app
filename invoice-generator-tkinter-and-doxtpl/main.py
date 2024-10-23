@@ -69,7 +69,13 @@ first_name_label = tkinter.Label(frame, text="First Name")
 first_name_label.grid(row=0, column=0)
 last_name_label = tkinter.Label(frame, text="Last Name")
 last_name_label.grid(row=0, column=1)
+
 first_name_entry = tkinter.Entry(frame)
 last_name_entry = tkinter.Entry(frame)
 first_name_entry.grid(row=1, column=0)
 last_name_entry.grid(row=1, column=1)
+
+phone_label = tkinter.Label(frame, text="Phone")
+phone_label.grid(row=0, column=2)
+phone_entry = tkinter.Entry(frame)
+phone_entry.grid(row=1, column=2)
