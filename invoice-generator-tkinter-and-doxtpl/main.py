@@ -79,3 +79,8 @@ phone_label = tkinter.Label(frame, text="Phone")
 phone_label.grid(row=0, column=2)
 phone_entry = tkinter.Entry(frame)
 phone_entry.grid(row=1, column=2)
+
+qty_label = tkinter.Label(frame, text="Qty")
+qty_label.grid(row=2, column=0)
+qty_spinbox = tkinter.Spinbox(frame, from_=1, to=100)
+qty_spinbox.grid(row=3, column=0)
