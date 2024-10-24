@@ -104,3 +104,9 @@ tree.heading('qty', text='Qty')
 tree.heading('desc', text='Description')
 tree.heading('price', text='Unit Price')
 tree.heading('total', text="Total")
+
+tree.grid(row=5, column=0, columnspan=3, padx=20, pady=10)
+
+
+save_invoice_button = tkinter.Button(frame, text="Generate Invoice", command=generate_invoice)
+save_invoice_button.grid(row=6, column=0, columnspan=3, sticky="news", padx=20, pady=5)
