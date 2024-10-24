@@ -97,3 +97,10 @@ price_spinbox.grid(row=3, column=2)
 
 add_item_button = tkinter.Button(frame, text = "Add item", command = add_item)
 add_item_button.grid(row=4, column=2, pady=5)
+
+columns = ('qty', 'desc', 'price', 'total')
+tree = ttk.Treeview(frame, columns=columns, show="headings")
+tree.heading('qty', text='Qty')
+tree.heading('desc', text='Description')
+tree.heading('price', text='Unit Price')
+tree.heading('total', text="Total")
