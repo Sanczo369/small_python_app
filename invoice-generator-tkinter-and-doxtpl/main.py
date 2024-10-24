@@ -110,3 +110,8 @@ tree.grid(row=5, column=0, columnspan=3, padx=20, pady=10)
 
 save_invoice_button = tkinter.Button(frame, text="Generate Invoice", command=generate_invoice)
 save_invoice_button.grid(row=6, column=0, columnspan=3, sticky="news", padx=20, pady=5)
+new_invoice_button = tkinter.Button(frame, text="New Invoice", command=new_invoice)
+new_invoice_button.grid(row=7, column=0, columnspan=3, sticky="news", padx=20, pady=5)
+
+
+window.mainloop()
