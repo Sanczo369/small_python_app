@@ -89,3 +89,8 @@ desc_label = tkinter.Label(frame, text="Description")
 desc_label.grid(row=2, column=1)
 desc_entry = tkinter.Entry(frame)
 desc_entry.grid(row=3, column=1)
+
+price_label = tkinter.Label(frame, text="Unit Price")
+price_label.grid(row=2, column=2)
+price_spinbox = tkinter.Spinbox(frame, from_=0.0, to=500, increment=0.5)
+price_spinbox.grid(row=3, column=2)
