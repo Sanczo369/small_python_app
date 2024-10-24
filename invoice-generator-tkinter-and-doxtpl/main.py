@@ -94,3 +94,6 @@ price_label = tkinter.Label(frame, text="Unit Price")
 price_label.grid(row=2, column=2)
 price_spinbox = tkinter.Spinbox(frame, from_=0.0, to=500, increment=0.5)
 price_spinbox.grid(row=3, column=2)
+
+add_item_button = tkinter.Button(frame, text = "Add item", command = add_item)
+add_item_button.grid(row=4, column=2, pady=5)
