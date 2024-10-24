@@ -84,3 +84,8 @@ qty_label = tkinter.Label(frame, text="Qty")
 qty_label.grid(row=2, column=0)
 qty_spinbox = tkinter.Spinbox(frame, from_=1, to=100)
 qty_spinbox.grid(row=3, column=0)
+
+desc_label = tkinter.Label(frame, text="Description")
+desc_label.grid(row=2, column=1)
+desc_entry = tkinter.Entry(frame)
+desc_entry.grid(row=3, column=1)
