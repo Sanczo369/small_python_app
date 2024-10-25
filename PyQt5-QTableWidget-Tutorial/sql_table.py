@@ -13,3 +13,16 @@ class MainWindow(QDialog):
         self.tableWidget.setColumnWidth(2, 350)
         self.tableWidget.setHorizontalHeaderLabels(["City","Country","Subcountry"])
         self.loaddata()
+    def loaddata(self):
+        connection = sqlite3.connect('data.sqlite')
+        cur = connection.cursor()
+        sqlstr = 'SELECT * FROM worldcities LIMIT 40'
+
+        tablerow=0
+        results = cur.execute(sqlstr)
+        self.tableWidget.setRowCount(40)
+        for row in results:
+            self.tableWidget.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(row[0]))
+            self.tableWidget.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(row[1]))
+            self.tableWidget.setItem(tablerow, 2, QtWidgets.QTableWidgetItem(row[2]))
+            tablerow+=1
