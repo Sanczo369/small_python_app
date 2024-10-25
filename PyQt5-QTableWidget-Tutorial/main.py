@@ -23,3 +23,12 @@ class MainWindow(QDialog):
             self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(str(person["age"])))
             self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(person["address"]))
             row=row+1
+
+# main
+app = QApplication(sys.argv)
+mainwindow = MainWindow()
+widget = QtWidgets.QStackedWidget()
+widget.addWidget(mainwindow)
+widget.setFixedHeight(850)
+widget.setFixedWidth(1120)
+widget.show()
