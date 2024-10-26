@@ -15,3 +15,7 @@ def generate():
         n=int(number_slider.get()),
         size="512x512"
     )
+    image_urls = []
+    for i in range(len(response['data'])):
+        image_urls.append(response['data'][i]['url'])
+    print(image_urls)
