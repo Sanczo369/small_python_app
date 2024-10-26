@@ -19,3 +19,10 @@ def generate():
     for i in range(len(response['data'])):
         image_urls.append(response['data'][i]['url'])
     print(image_urls)
+
+    images = []
+    for url in image_urls:
+        response = requests.get(url)
+        image = Image.open(io.BytesIO(response.content))
+        photo_image = ImageTk.PhotoImage(image)
+        images.append(photo_image)
