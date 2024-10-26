@@ -26,3 +26,16 @@ class MainWindow(QDialog):
             self.tableWidget.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(row[1]))
             self.tableWidget.setItem(tablerow, 2, QtWidgets.QTableWidgetItem(row[2]))
             tablerow+=1
+
+# main
+app = QApplication(sys.argv)
+mainwindow = MainWindow()
+widget = QtWidgets.QStackedWidget()
+widget.addWidget(mainwindow)
+widget.setFixedHeight(850)
+widget.setFixedWidth(1120)
+widget.show()
+try:
+    sys.exit(app.exec_())
+except:
+    print("Exiting")
