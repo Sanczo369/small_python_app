@@ -26,3 +26,11 @@ def generate():
         image = Image.open(io.BytesIO(response.content))
         photo_image = ImageTk.PhotoImage(image)
         images.append(photo_image)
+
+    def update_image(index=0):
+        canvas.image = images[index]
+        canvas.create_image(0, 0, anchor="nw", image=images[index])
+        index = (index + 1) % len(images)
+        canvas.after(3000, update_image, index)
+
+    update_image()
