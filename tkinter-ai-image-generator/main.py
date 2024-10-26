@@ -34,3 +34,6 @@ def generate():
         canvas.after(3000, update_image, index)
 
     update_image()
+
+root = ctk.CTk()
+root.title("AI Image Generator")
