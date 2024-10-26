@@ -37,3 +37,13 @@ def generate():
 
 root = ctk.CTk()
 root.title("AI Image Generator")
+
+ctk.set_appearance_mode("dark")
+
+input_frame = ctk.CTkFrame(root)
+input_frame.pack(side="left", expand=True, padx=20, pady=20)
+
+prompt_label = ctk.CTkLabel(input_frame, text="Prompt")
+prompt_label.grid(row=0,column=0, padx=10, pady=10)
+prompt_entry = ctk.CTkTextbox(input_frame, height=10)
+prompt_entry.grid(row=0,column=1, padx=10, pady=10)
