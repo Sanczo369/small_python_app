@@ -47,3 +47,8 @@ prompt_label = ctk.CTkLabel(input_frame, text="Prompt")
 prompt_label.grid(row=0,column=0, padx=10, pady=10)
 prompt_entry = ctk.CTkTextbox(input_frame, height=10)
 prompt_entry.grid(row=0,column=1, padx=10, pady=10)
+
+style_label = ctk.CTkLabel(input_frame, text="Style")
+style_label.grid(row=1,column=0, padx=10, pady=10)
+style_dropdown = ctk.CTkComboBox(input_frame, values=["Realistic", "Cartoon", "3D Illustration", "Flat Art"])
+style_dropdown.grid(row=1, column=1, padx=10, pady=10)
