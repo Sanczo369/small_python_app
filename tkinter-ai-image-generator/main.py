@@ -60,3 +60,6 @@ number_slider.grid(row=2,column=1)
 
 generate_button = ctk.CTkButton(input_frame, text="Generate", command=generate)
 generate_button.grid(row=3, column=0, columnspan=2, sticky="news", padx=10, pady=10)
+
+canvas = tkinter.Canvas(root, width=512, height=512)
+canvas.pack(side="left")
