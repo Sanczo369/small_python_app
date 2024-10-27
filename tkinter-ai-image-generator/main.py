@@ -57,3 +57,6 @@ number_label = ctk.CTkLabel(input_frame, text="# Images")
 number_label.grid(row=2,column=0)
 number_slider = ctk.CTkSlider(input_frame, from_=1, to=10, number_of_steps=9)
 number_slider.grid(row=2,column=1)
+
+generate_button = ctk.CTkButton(input_frame, text="Generate", command=generate)
+generate_button.grid(row=3, column=0, columnspan=2, sticky="news", padx=10, pady=10)
