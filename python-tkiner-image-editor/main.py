@@ -13,3 +13,15 @@ root.config(bg="white")
 pen_color = "black"
 pen_size = 5
 file_path = ""
+
+def add_image():
+    global file_path
+    file_path = filedialog.askopenfilename(
+        initialdir="D:/codefirst.io/Tkinter Image Editor/Pictures")
+    image = Image.open(file_path)
+    width, height = int(image.width / 2), int(image.height / 2)
+    image = image.resize((width, height), Image.ANTIALIAS)
+    canvas.config(width=image.width, height=image.height)
+    image = ImageTk.PhotoImage(image)
+    canvas.image = image
+    canvas.create_image(0, 0, image=image, anchor="nw")
