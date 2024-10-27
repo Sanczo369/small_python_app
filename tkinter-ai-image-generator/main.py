@@ -52,3 +52,8 @@ style_label = ctk.CTkLabel(input_frame, text="Style")
 style_label.grid(row=1,column=0, padx=10, pady=10)
 style_dropdown = ctk.CTkComboBox(input_frame, values=["Realistic", "Cartoon", "3D Illustration", "Flat Art"])
 style_dropdown.grid(row=1, column=1, padx=10, pady=10)
+
+number_label = ctk.CTkLabel(input_frame, text="# Images")
+number_label.grid(row=2,column=0)
+number_slider = ctk.CTkSlider(input_frame, from_=1, to=10, number_of_steps=9)
+number_slider.grid(row=2,column=1)
