@@ -63,3 +63,5 @@ generate_button.grid(row=3, column=0, columnspan=2, sticky="news", padx=10, pady
 
 canvas = tkinter.Canvas(root, width=512, height=512)
 canvas.pack(side="left")
+
+root.mainloop()
