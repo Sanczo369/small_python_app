@@ -39,3 +39,7 @@ def draw(event):
     x1, y1 = (event.x - pen_size), (event.y - pen_size)
     x2, y2 = (event.x + pen_size), (event.y + pen_size)
     canvas.create_oval(x1, y1, x2, y2, fill=pen_color, outline='')
+
+def clear_canvas():
+    canvas.delete("all")
+    canvas.create_image(0, 0, image=canvas.image, anchor="nw")
