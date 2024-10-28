@@ -61,3 +61,6 @@ def apply_filter(filter):
     image = ImageTk.PhotoImage(image)
     canvas.image = image
     canvas.create_image(0, 0, image=image, anchor="nw")
+
+left_frame = tk.Frame(root, width=200, height=600, bg="white")
+left_frame.pack(side="left", fill="y")
