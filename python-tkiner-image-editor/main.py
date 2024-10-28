@@ -29,3 +29,7 @@ def add_image():
 def change_color():
     global pen_color
     pen_color = colorchooser.askcolor(title="Select Pen Color")[1]
+
+def change_size(size):
+    global pen_size
+    pen_size = size
