@@ -33,3 +33,9 @@ def change_color():
 def change_size(size):
     global pen_size
     pen_size = size
+
+
+def draw(event):
+    x1, y1 = (event.x - pen_size), (event.y - pen_size)
+    x2, y2 = (event.x + pen_size), (event.y + pen_size)
+    canvas.create_oval(x1, y1, x2, y2, fill=pen_color, outline='')
