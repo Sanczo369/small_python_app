@@ -25,3 +25,7 @@ def add_image():
     image = ImageTk.PhotoImage(image)
     canvas.image = image
     canvas.create_image(0, 0, image=image, anchor="nw")
+
+def change_color():
+    global pen_color
+    pen_color = colorchooser.askcolor(title="Select Pen Color")[1]
