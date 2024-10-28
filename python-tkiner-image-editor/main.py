@@ -64,3 +64,6 @@ def apply_filter(filter):
 
 left_frame = tk.Frame(root, width=200, height=600, bg="white")
 left_frame.pack(side="left", fill="y")
+
+canvas = tk.Canvas(root, width=750, height=600)
+canvas.pack()
