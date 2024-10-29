@@ -67,3 +67,7 @@ left_frame.pack(side="left", fill="y")
 
 canvas = tk.Canvas(root, width=750, height=600)
 canvas.pack()
+
+image_button = tk.Button(left_frame, text="Add Image",
+                         command=add_image, bg="white")
+image_button.pack(pady=15)
