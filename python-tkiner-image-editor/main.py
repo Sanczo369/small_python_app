@@ -75,3 +75,6 @@ image_button.pack(pady=15)
 color_button = tk.Button(
     left_frame, text="Change Pen Color", command=change_color, bg="white")
 color_button.pack(pady=5)
+
+pen_size_frame = tk.Frame(left_frame, bg="white")
+pen_size_frame.pack(pady=5)
