@@ -91,3 +91,7 @@ pen_size_2.select()
 pen_size_3 = tk.Radiobutton(
     pen_size_frame, text="Large", value=7, command=lambda: change_size(7), bg="white")
 pen_size_3.pack(side="left")
+
+clear_button = tk.Button(left_frame, text="Clear",
+                         command=clear_canvas, bg="#FF9797")
+clear_button.pack(pady=10)
