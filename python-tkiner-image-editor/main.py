@@ -82,3 +82,8 @@ pen_size_frame.pack(pady=5)
 pen_size_1 = tk.Radiobutton(
     pen_size_frame, text="Small", value=3, command=lambda: change_size(3), bg="white")
 pen_size_1.pack(side="left")
+
+pen_size_2 = tk.Radiobutton(
+    pen_size_frame, text="Medium", value=5, command=lambda: change_size(5), bg="white")
+pen_size_2.pack(side="left")
+pen_size_2.select()
