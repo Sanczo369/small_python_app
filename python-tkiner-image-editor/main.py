@@ -78,3 +78,7 @@ color_button.pack(pady=5)
 
 pen_size_frame = tk.Frame(left_frame, bg="white")
 pen_size_frame.pack(pady=5)
+
+pen_size_1 = tk.Radiobutton(
+    pen_size_frame, text="Small", value=3, command=lambda: change_size(3), bg="white")
+pen_size_1.pack(side="left")
