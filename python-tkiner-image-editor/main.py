@@ -71,3 +71,7 @@ canvas.pack()
 image_button = tk.Button(left_frame, text="Add Image",
                          command=add_image, bg="white")
 image_button.pack(pady=15)
+
+color_button = tk.Button(
+    left_frame, text="Change Pen Color", command=change_color, bg="white")
+color_button.pack(pady=5)
