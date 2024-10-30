@@ -12,3 +12,6 @@ def openFile():
     for i in range (reader.numPages):
         current_text = reader.getPage(i).extractText()
         outputfile_text.insert(tkinter.END, current_text)
+
+root = tkinter.Tk()
+root.title("PDF Text Extractor")
