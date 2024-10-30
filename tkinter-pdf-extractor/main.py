@@ -15,3 +15,13 @@ def openFile():
 
 root = tkinter.Tk()
 root.title("PDF Text Extractor")
+
+filename_label = tkinter.Label(root, text="No File Selected")
+outputfile_text = tkinter.Text(root)
+openfile_button = tkinter.Button(root, text="Open PDF File", command=openFile)
+
+filename_label.pack()
+outputfile_text.pack()
+openfile_button.pack()
+
+root.mainloop()
