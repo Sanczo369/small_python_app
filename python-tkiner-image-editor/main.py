@@ -95,3 +95,13 @@ pen_size_3.pack(side="left")
 clear_button = tk.Button(left_frame, text="Clear",
                          command=clear_canvas, bg="#FF9797")
 clear_button.pack(pady=10)
+
+filter_label = tk.Label(left_frame, text="Select Filter", bg="white")
+filter_label.pack()
+filter_combobox = ttk.Combobox(left_frame, values=["Black and White", "Blur",
+                                             "Emboss", "Sharpen", "Smooth"])
+filter_combobox.pack()
+
+
+filter_combobox.bind("<<ComboboxSelected>>",
+                     lambda event: apply_filter(filter_combobox.get()))
