@@ -105,3 +105,6 @@ filter_combobox.pack()
 
 filter_combobox.bind("<<ComboboxSelected>>",
                      lambda event: apply_filter(filter_combobox.get()))
+canvas.bind("<B1-Motion>", draw)
+
+root.mainloop()
