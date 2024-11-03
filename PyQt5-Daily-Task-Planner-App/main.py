@@ -59,3 +59,18 @@ class Window(QWidget):
         messageBox.setText("Changes saved.")
         messageBox.setStandardButtons(QMessageBox.Ok)
         messageBox.exec()
+
+    def addNewTask(self):
+        db = sqlite3.connect("data.db")
+        cursor = db.cursor()
+
+        newTask = str(self.taskLineEdit.text())
+        date = self.calendarWidget.selectedDate().toPyDate()
+
+        query = "INSERT INTO tasks(task, completed, date) VALUES (?,?,?)"
+        row = (newTask, "NO", date,)
+
+        cursor.execute(query, row)
+        db.commit()
+        self.updateTaskList(date)
+        self.taskLineEdit.clear()
