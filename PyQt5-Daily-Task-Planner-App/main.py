@@ -20,3 +20,21 @@ class Window(QWidget):
         dateSelected = self.calendarWidget.selectedDate().toPyDate()
         print("Date selected:", dateSelected)
         self.updateTaskList(dateSelected)
+
+    def updateTaskList(self, date):
+        self.tasksListWidget.clear()
+
+        db = sqlite3.connect("data.db")
+        cursor = db.cursor()
+
+        query = "SELECT task, completed FROM tasks WHERE date = ?"
+        row = (date,)
+        results = cursor.execute(query, row).fetchall()
+        for result in results:
+            item = QListWidgetItem(str(result[0]))
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsUserCheckable)
+            if result[1] == "YES":
+                item.setCheckState(QtCore.Qt.Checked)
+            elif result[1] == "NO":
+                item.setCheckState(QtCore.Qt.Unchecked)
+            self.tasksListWidget.addItem(item)
