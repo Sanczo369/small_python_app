@@ -14,3 +14,9 @@ class Window(QWidget):
         self.calendarDateChanged()
         self.saveButton.clicked.connect(self.saveChanges)
         self.addButton.clicked.connect(self.addNewTask)
+
+    def calendarDateChanged(self):
+        print("The calendar date was changed.")
+        dateSelected = self.calendarWidget.selectedDate().toPyDate()
+        print("Date selected:", dateSelected)
+        self.updateTaskList(dateSelected)
