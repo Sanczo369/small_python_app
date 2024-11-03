@@ -14,3 +14,11 @@ class Main(QMainWindow):
             item.setCheckState(QtCore.Qt.Unchecked)
             self.todo_listWidget.addItem(item)
         self.toggleall_button.clicked.connect(self.toggle_all)
+
+    def toggle_all(self):
+        for i in range(self.todo_listWidget.count()):
+            item = self.todo_listWidget.item(i)
+            if item.checkState() == QtCore.Qt.Checked:
+                item.setCheckState(QtCore.Qt.Unchecked)
+            else:
+                item.setCheckState(QtCore.Qt.Checked)
