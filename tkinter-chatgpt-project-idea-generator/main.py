@@ -27,3 +27,7 @@ def generate():
     answer = response.choices[0].message.content
     print(answer)
     result.insert("0.0", answer)
+
+root = ctk.CTk()
+root.geometry("750x550")
+root.title("ChatGPT Project Idea Generator")
