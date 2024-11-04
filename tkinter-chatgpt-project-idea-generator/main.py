@@ -37,3 +37,6 @@ ctk.set_appearance_mode("dark")
 title_label = ctk.CTkLabel(root, text="Project Idea Generator",
                            font=ctk.CTkFont(size=30, weight="bold"))
 title_label.pack(padx=10, pady=(40, 20))
+
+frame = ctk.CTkFrame(root)
+frame.pack(fill="x", padx=100)
