@@ -22,3 +22,9 @@ class Main(QMainWindow):
                 item.setCheckState(QtCore.Qt.Unchecked)
             else:
                 item.setCheckState(QtCore.Qt.Checked)
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = Main()
+    window.show()
+    app.exec_()
