@@ -40,3 +40,13 @@ title_label.pack(padx=10, pady=(40, 20))
 
 frame = ctk.CTkFrame(root)
 frame.pack(fill="x", padx=100)
+
+
+language_frame = ctk.CTkFrame(frame)
+language_frame.pack(padx=100, pady=(20, 5), fill="both")
+language_label = ctk.CTkLabel(
+    language_frame, text="Programming Language", font=ctk.CTkFont(weight="bold"))
+language_label.pack()
+language_dropdown = ctk.CTkComboBox(
+    language_frame, values=["Python", "Java", "C++", "JavaScript", "Golang"])
+language_dropdown.pack(pady=10)
