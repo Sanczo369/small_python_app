@@ -50,3 +50,10 @@ language_label.pack()
 language_dropdown = ctk.CTkComboBox(
     language_frame, values=["Python", "Java", "C++", "JavaScript", "Golang"])
 language_dropdown.pack(pady=10)
+
+difficulty_frame = ctk.CTkFrame(frame)
+difficulty_frame.pack(padx=100, pady=5, fill="both")
+difficulty_label = ctk.CTkLabel(
+    difficulty_frame, text="Project Difficulty", font=ctk.CTkFont(weight="bold"))
+difficulty_label.pack()
+difficulty_value = ctk.StringVar(value="Easy")
