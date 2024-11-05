@@ -77,3 +77,6 @@ checkbox1 = ctk.CTkCheckBox(features_frame, text="Database")
 checkbox1.pack(side="left", padx=50, pady=10)
 checkbox2 = ctk.CTkCheckBox(features_frame, text="API")
 checkbox2.pack(side="left", padx=50, pady=10)
+
+button = ctk.CTkButton(frame, text="Generate Ideas", command=generate)
+button.pack(padx=100, fill="x", pady=(5, 20))
