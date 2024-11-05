@@ -72,3 +72,8 @@ features_frame.pack(padx=100, pady=5, fill="both")
 features_label = ctk.CTkLabel(
     features_frame, text="Features", font=ctk.CTkFont(weight="bold"))
 features_label.pack()
+
+checkbox1 = ctk.CTkCheckBox(features_frame, text="Database")
+checkbox1.pack(side="left", padx=50, pady=10)
+checkbox2 = ctk.CTkCheckBox(features_frame, text="API")
+checkbox2.pack(side="left", padx=50, pady=10)
