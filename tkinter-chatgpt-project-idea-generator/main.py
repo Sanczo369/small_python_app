@@ -66,3 +66,9 @@ radiobutton2.pack(side="left", padx=10, pady=10)
 radiobutton3 = ctk.CTkRadioButton(
     difficulty_frame, text="Hard", variable=difficulty_value, value="Hard")
 radiobutton3.pack(side="left", padx=10, pady=10)
+
+features_frame = ctk.CTkFrame(frame)
+features_frame.pack(padx=100, pady=5, fill="both")
+features_label = ctk.CTkLabel(
+    features_frame, text="Features", font=ctk.CTkFont(weight="bold"))
+features_label.pack()
