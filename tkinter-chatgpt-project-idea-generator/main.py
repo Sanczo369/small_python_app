@@ -80,3 +80,9 @@ checkbox2.pack(side="left", padx=50, pady=10)
 
 button = ctk.CTkButton(frame, text="Generate Ideas", command=generate)
 button.pack(padx=100, fill="x", pady=(5, 20))
+
+result = ctk.CTkTextbox(root, font=ctk.CTkFont(size=15))
+result.pack(pady=10, fill="x", padx=100)
+
+
+root.mainloop()
