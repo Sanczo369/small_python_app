@@ -57,3 +57,12 @@ difficulty_label = ctk.CTkLabel(
     difficulty_frame, text="Project Difficulty", font=ctk.CTkFont(weight="bold"))
 difficulty_label.pack()
 difficulty_value = ctk.StringVar(value="Easy")
+radiobutton1 = ctk.CTkRadioButton(
+    difficulty_frame, text="Easy", variable=difficulty_value, value="Easy")
+radiobutton1.pack(side="left", padx=(20, 10), pady=10)
+radiobutton2 = ctk.CTkRadioButton(
+    difficulty_frame, text="Medium", variable=difficulty_value, value="Medium")
+radiobutton2.pack(side="left", padx=10, pady=10)
+radiobutton3 = ctk.CTkRadioButton(
+    difficulty_frame, text="Hard", variable=difficulty_value, value="Hard")
+radiobutton3.pack(side="left", padx=10, pady=10)
