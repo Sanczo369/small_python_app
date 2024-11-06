@@ -14,3 +14,10 @@ class MainWindow(QDialog):
 
         # Check Box
         self.checkBox.stateChanged.connect(self.checked)
+
+        # Combo Box
+        self.comboBox.setVisible(False)
+        listocc=["engineer", "doctor", "manager"]
+        for job in listocc:
+            self.comboBox.addItem(job)
+        self.comboBox.currentIndexChanged.connect(self.combochanged)
