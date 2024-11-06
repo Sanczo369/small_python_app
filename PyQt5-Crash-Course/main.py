@@ -21,3 +21,8 @@ class MainWindow(QDialog):
         for job in listocc:
             self.comboBox.addItem(job)
         self.comboBox.currentIndexChanged.connect(self.combochanged)
+
+        # Spin Box
+        self.spinBox.setMinimum(1)
+        self.spinBox.setMaximum(10)
+        self.spinBox.valueChanged.connect(self.spinchanged)
