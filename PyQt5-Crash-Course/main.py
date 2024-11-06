@@ -38,3 +38,9 @@ class MainWindow(QDialog):
         else:
             outputstr = outputstr + " is not employed"
         print(outputstr)
+
+    def checked(self):
+        if self.checkBox.isChecked():
+            self.comboBox.setVisible(True)
+        else:
+            self.comboBox.setVisible(False)
