@@ -11,3 +11,6 @@ class MainWindow(QDialog):
 
         # Button
         self.button.clicked.connect(self.buttonclicked)
+
+        # Check Box
+        self.checkBox.stateChanged.connect(self.checked)
