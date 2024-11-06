@@ -26,3 +26,15 @@ class MainWindow(QDialog):
         self.spinBox.setMinimum(1)
         self.spinBox.setMaximum(10)
         self.spinBox.valueChanged.connect(self.spinchanged)
+
+    def buttonclicked(self):
+        outputstr = self.fname.toPlainText()+ " " + self.lname.toPlainText()
+        self.fname.setReadOnly(True)
+        self.lname.setReadOnly(True)
+        self.fname.setDisabled(True)
+        self.lname.setDisabled(True)
+        if self.checkBox.isChecked():
+            outputstr=outputstr+" is employed"
+        else:
+            outputstr = outputstr + " is not employed"
+        print(outputstr)
