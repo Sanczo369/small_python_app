@@ -8,3 +8,6 @@ class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
         loadUi("qtcrashcourse2.ui",self)
+
+        # Button
+        self.button.clicked.connect(self.buttonclicked)
