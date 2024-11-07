@@ -13,3 +13,19 @@ firebaseConfig = {'apiKey': "AIzaSyDm2HeGl3bApix5KsbhI8NOjdwXkhNTaJM",
 
 firebase=pyrebase.initialize_app(firebaseConfig)
 auth=firebase.auth()
+
+#Login function
+
+def login():
+    print("Log in...")
+    email=input("Enter email: ")
+    password=input("Enter password: ")
+    try:
+        login = auth.sign_in_with_email_and_password(email, password)
+        print("Successfully logged in!")
+        # print(auth.get_account_info(login['idToken']))
+       # email = auth.get_account_info(login['idToken'])['users'][0]['email']
+       # print(email)
+    except:
+        print("Invalid email or password")
+    return
