@@ -44,3 +44,6 @@ class MainWindow(QDialog):
             self.comboBox.setVisible(True)
         else:
             self.comboBox.setVisible(False)
+
+    def combochanged(self):
+        self.outputlabel.setText(self.comboBox.currentText()+" is selected")
