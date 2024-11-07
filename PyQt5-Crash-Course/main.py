@@ -47,3 +47,6 @@ class MainWindow(QDialog):
 
     def combochanged(self):
         self.outputlabel.setText(self.comboBox.currentText()+" is selected")
+
+    def spinchanged(self):
+        print("current value" + str(self.spinBox.value()))
