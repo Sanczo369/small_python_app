@@ -45,3 +45,11 @@ def signup():
     except:
         print("Email already exists")
     return
+#Main
+
+ans=input("Are you a new user?[y/n]")
+
+if ans == 'n':
+    login()
+elif ans == 'y':
+    signup()
