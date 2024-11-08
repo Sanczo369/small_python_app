@@ -45,3 +45,8 @@ ax5.set_title("Inventory by Month")
 ax5.set_xlabel("Month")
 ax5.set_ylabel("Inventory")
 # plt.show()
+
+# Create a window and add charts
+root = tk.Tk()
+root.title("Dashboard")
+root.state('zoomed')
