@@ -36,3 +36,12 @@ ax4.set_title("Sales by Year")
 ax4.set_xlabel("Year")
 ax4.set_ylabel("Sales")
 # plt.show()
+
+# Chart 5: Area chart of inventory by month
+fig5, ax5 = plt.subplots()
+ax5.fill_between(inventory_month_data.keys(),
+                 inventory_month_data.values())
+ax5.set_title("Inventory by Month")
+ax5.set_xlabel("Month")
+ax5.set_ylabel("Inventory")
+# plt.show()
