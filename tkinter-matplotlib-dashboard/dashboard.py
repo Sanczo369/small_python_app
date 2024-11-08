@@ -22,3 +22,17 @@ ax2.set_title("Inventory by Product")
 ax2.set_xlabel("Inventory")
 ax2.set_ylabel("Product")
 # plt.show()
+
+# Chart 3: Pie chart of product data
+fig3, ax3 = plt.subplots()
+ax3.pie(product_data.values(), labels=product_data.keys(), autopct='%1.1f%%')
+ax3.set_title("Product \nBreakdown")
+# plt.show()
+
+# Chart 4: Line chart of sales by year
+fig4, ax4 = plt.subplots()
+ax4.plot(list(sales_year_data.keys()), list(sales_year_data.values()))
+ax4.set_title("Sales by Year")
+ax4.set_xlabel("Year")
+ax4.set_ylabel("Sales")
+# plt.show()
