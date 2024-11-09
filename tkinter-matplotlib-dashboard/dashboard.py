@@ -53,3 +53,6 @@ root.state('zoomed')
 
 side_frame = tk.Frame(root, bg="#4C2A85")
 side_frame.pack(side="left", fill="y")
+
+label = tk.Label(side_frame, text="Dashboard", bg="#4C2A85", fg="#FFF", font=25)
+label.pack(pady=50, padx=20)
