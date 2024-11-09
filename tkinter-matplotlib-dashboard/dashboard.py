@@ -60,3 +60,6 @@ label.pack(pady=50, padx=20)
 
 charts_frame = tk.Frame(root)
 charts_frame.pack()
+
+upper_frame = tk.Frame(charts_frame)
+upper_frame.pack(fill="both", expand=True)
