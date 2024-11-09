@@ -67,3 +67,7 @@ upper_frame.pack(fill="both", expand=True)
 canvas1 = FigureCanvasTkAgg(fig1, upper_frame)
 canvas1.draw()
 canvas1.get_tk_widget().pack(side="left", fill="both", expand=True)
+
+canvas2 = FigureCanvasTkAgg(fig2, upper_frame)
+canvas2.draw()
+canvas2.get_tk_widget().pack(side="left", fill="both", expand=True)
