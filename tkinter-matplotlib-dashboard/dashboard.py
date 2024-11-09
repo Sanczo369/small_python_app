@@ -50,3 +50,6 @@ ax5.set_ylabel("Inventory")
 root = tk.Tk()
 root.title("Dashboard")
 root.state('zoomed')
+
+side_frame = tk.Frame(root, bg="#4C2A85")
+side_frame.pack(side="left", fill="y")
