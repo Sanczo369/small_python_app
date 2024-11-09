@@ -63,3 +63,7 @@ charts_frame.pack()
 
 upper_frame = tk.Frame(charts_frame)
 upper_frame.pack(fill="both", expand=True)
+
+canvas1 = FigureCanvasTkAgg(fig1, upper_frame)
+canvas1.draw()
+canvas1.get_tk_widget().pack(side="left", fill="both", expand=True)
