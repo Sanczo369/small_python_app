@@ -10,3 +10,13 @@ class EmailSender(QMainWindow):
         loadUi("main.ui", self)
 
         self.emailButton.clicked.connect(self.send_email)
+
+    def send_email(self):
+        if self.lineEdit.text():
+            send_email(recipient=self.lineEdit.text(), email=self.textEdit.toPlainText())
+        else:
+            message = QMessageBox()
+            message.setIcon(QMessageBox.Critical)
+            message.setText("Invalid recipient")
+            message.setWindowTitle("Error!")
+            message.exec_()
