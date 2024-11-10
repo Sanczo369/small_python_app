@@ -82,3 +82,7 @@ lower_frame.pack(fill="both", expand=True)
 canvas4 = FigureCanvasTkAgg(fig4, lower_frame)
 canvas4.draw()
 canvas4.get_tk_widget().pack(side="left", fill="both", expand=True)
+
+canvas5 = FigureCanvasTkAgg(fig5, lower_frame)
+canvas5.draw()
+canvas5.get_tk_widget().pack(side="left", fill="both", expand=True)
