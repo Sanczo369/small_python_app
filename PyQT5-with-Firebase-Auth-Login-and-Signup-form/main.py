@@ -25,3 +25,11 @@ class Login(QDialog):
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.createaccbutton.clicked.connect(self.gotocreate)
         self.invalid.setVisible(False)
+
+    def loginfunction(self):
+        email=self.email.text()
+        password=self.password.text()
+        try:
+            auth.sign_in_with_email_and_password(email,password)
+        except:
+            self.invalid.setVisible(True)
