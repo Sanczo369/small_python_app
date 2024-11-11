@@ -33,3 +33,8 @@ class Login(QDialog):
             auth.sign_in_with_email_and_password(email,password)
         except:
             self.invalid.setVisible(True)
+
+    def gotocreate(self):
+        createacc=CreateAcc()
+        widget.addWidget(createacc)
+        widget.setCurrentIndex(widget.currentIndex()+1)
