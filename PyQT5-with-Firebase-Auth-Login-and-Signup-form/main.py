@@ -47,3 +47,15 @@ class CreateAcc(QDialog):
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.confirmpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.invalid.setVisible(False)
+
+    def createaccfunction(self):
+        email = self.email.text()
+        if self.password.text()==self.confirmpass.text():
+            password=self.password.text()
+            try:
+                auth.create_user_with_email_and_password(email,password)
+                login = Login()
+                widget.addWidget(login)
+                widget.setCurrentIndex(widget.currentIndex() + 1)
+            except:
+                self.invalid.setVisible(True)
