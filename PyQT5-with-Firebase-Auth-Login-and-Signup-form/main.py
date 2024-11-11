@@ -38,3 +38,12 @@ class Login(QDialog):
         createacc=CreateAcc()
         widget.addWidget(createacc)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+class CreateAcc(QDialog):
+    def __init__(self):
+        super(CreateAcc,self).__init__()
+        loadUi("createacc.ui",self)
+        self.signupbutton.clicked.connect(self.createaccfunction)
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.confirmpass.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.invalid.setVisible(False)
