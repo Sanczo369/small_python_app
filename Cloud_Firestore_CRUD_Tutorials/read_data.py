@@ -13,3 +13,8 @@ db=firestore.client()
 result = db.collection('persons').document("p1").get()
 if result.exists:
     print(result.to_dict())
+
+# Get all documents
+docs = db.collection('persons').get()
+for doc in docs:
+    print(doc.to_dict())
