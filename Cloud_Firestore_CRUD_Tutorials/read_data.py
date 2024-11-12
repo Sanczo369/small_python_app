@@ -24,3 +24,8 @@ for doc in docs:
 docs = db.collection('persons').where("age", "==", "52").get()
 for doc in docs:
     print(doc.to_dict())
+
+# Greater than
+docs = db.collection('persons').where("age", ">", "22").get()
+for doc in docs:
+    print(doc.to_dict())
