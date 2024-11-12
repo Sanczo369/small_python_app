@@ -34,3 +34,8 @@ for doc in docs:
 docs = db.collection('persons').where("socials", "array_contains", "facebook").get()
 for doc in docs:
     print(doc.to_dict())
+
+# In
+docs = db.collection('persons').where("address", "in", ["Milan", "London"]).get()
+for doc in docs:
+    print(doc.to_dict())
