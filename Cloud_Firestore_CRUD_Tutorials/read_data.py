@@ -7,3 +7,9 @@ cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 
 db=firestore.client()
+
+# Read data
+# Get a document with known id
+result = db.collection('persons').document("p1").get()
+if result.exists:
+    print(result.to_dict())
