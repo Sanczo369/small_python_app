@@ -18,3 +18,9 @@ if result.exists:
 docs = db.collection('persons').get()
 for doc in docs:
     print(doc.to_dict())
+
+# Query
+# Equal
+docs = db.collection('persons').where("age", "==", "52").get()
+for doc in docs:
+    print(doc.to_dict())
