@@ -29,3 +29,8 @@ for doc in docs:
 docs = db.collection('persons').where("age", ">", "22").get()
 for doc in docs:
     print(doc.to_dict())
+
+# Array contains
+docs = db.collection('persons').where("socials", "array_contains", "facebook").get()
+for doc in docs:
+    print(doc.to_dict())
