@@ -24,3 +24,7 @@ data = {
 
 # Add a new doc in collection 'persons' with ID 'HP'
 db.collection('persons').document('HP').set(data)
+
+# Merge new data with existing data for 'HP'
+data = {'employed':True}
+db.collection('persons').document('HP').set(data, merge=True)
