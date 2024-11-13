@@ -36,3 +36,6 @@ data = {
 }
 document_reference=db.collection('heroes').document()
 document_reference.set(data)
+
+# Adding subcollections
+document_reference.collection('movies').add({'name':'Avengers'})
