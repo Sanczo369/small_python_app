@@ -28,3 +28,11 @@ db.collection('persons').document('HP').set(data)
 # Merge new data with existing data for 'HP'
 data = {'employed':True}
 db.collection('persons').document('HP').set(data, merge=True)
+
+# Using document() to get an auto generated ID with set()
+data = {
+    'name': 'Iron Man',
+    'address': 'USA'
+}
+document_reference=db.collection('heroes').document()
+document_reference.set(data)
