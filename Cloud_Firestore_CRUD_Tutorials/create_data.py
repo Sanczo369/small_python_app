@@ -21,3 +21,6 @@ data = {
     'name': 'Harry Potter',
     'address': 'USA'
 }
+
+# Add a new doc in collection 'persons' with ID 'HP'
+db.collection('persons').document('HP').set(data)
