@@ -11,3 +11,6 @@ db=firestore.client()
 
 # Delete a document - known ID
 db.collection('persons').document("p1").delete()
+
+# Delete a field - known ID
+db.collection('persons').document("p2").update("age", firestore.DELETE_FIELD)
