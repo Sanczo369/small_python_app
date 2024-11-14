@@ -26,3 +26,8 @@ docs = db.collection('persons').where("age", ">=", 40).get() # Get all documents
 for doc in docs:
     key = doc.id
     db.collection('persons').document(key).update("age", firestore.DELETE_FIELD)
+
+# Delete all documents in a collection
+docs = db.collection('persons').get() # Get all data
+for doc in docs:
+    db.collection('persons').document(key).delete()
