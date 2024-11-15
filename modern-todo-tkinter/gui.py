@@ -10,3 +10,6 @@ def add_todo():
 root = ctk.CTk()
 root.geometry("750x450")
 root.title("Todo App")
+
+title_label = ctk.CTkLabel(root, text="Daily Tasks", font=ctk.CTkFont(size=30, weight="bold"))
+title_label.pack(padx=10, pady=(40, 20))
