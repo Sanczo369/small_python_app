@@ -15,3 +15,10 @@ db.collection('persons').document("p1").update({"occupation": "engineer"}) # the
 db.collection('persons').document("p1").update({"occupation": "engineer"})
 db.collection('persons').document("p2").update({"socials": firestore.ArrayRemove(['linkedin'])})
 db.collection('persons').document("p1").update({"socials": firestore.ArrayUnion(['linkedin'])})
+
+# Update data with unknown key
+docs = db.collection('persons').get() # Get all data
+for doc in docs:
+    if doc.to_dict()["age"]>=40: # Check if age>=40
+        key = doc.id
+        db.collection('persons').document(key).update({"age_group":"middle age"})
