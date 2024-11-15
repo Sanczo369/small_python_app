@@ -16,3 +16,6 @@ title_label.pack(padx=10, pady=(40, 20))
 
 scrollable_frame = ctk.CTkScrollableFrame(root, width=500, height=200)
 scrollable_frame.pack()
+
+entry = ctk.CTkEntry(scrollable_frame, placeholder_text="Add todo")
+entry.pack(fill="x")
