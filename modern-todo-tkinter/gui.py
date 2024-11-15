@@ -13,3 +13,6 @@ root.title("Todo App")
 
 title_label = ctk.CTkLabel(root, text="Daily Tasks", font=ctk.CTkFont(size=30, weight="bold"))
 title_label.pack(padx=10, pady=(40, 20))
+
+scrollable_frame = ctk.CTkScrollableFrame(root, width=500, height=200)
+scrollable_frame.pack()
