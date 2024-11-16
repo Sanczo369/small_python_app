@@ -42,3 +42,6 @@ data_dict=json.loads(data)
 
 #verify dict class
 print(type(data_dict))
+
+#print the loaded data_dict
+print(data_dict)
