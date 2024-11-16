@@ -36,3 +36,6 @@ data = """{
 				]
 		}
 }"""
+
+#load JSON data into a dict
+data_dict=json.loads(data)
