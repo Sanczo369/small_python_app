@@ -48,3 +48,6 @@ print(data_dict)
 
 #verify list class
 print(type(data_dict['items']['item']))
+
+#print list
+print(data_dict['items']['item'])
