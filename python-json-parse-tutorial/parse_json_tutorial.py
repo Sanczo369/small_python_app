@@ -45,3 +45,6 @@ print(type(data_dict))
 
 #print the loaded data_dict
 print(data_dict)
+
+#verify list class
+print(type(data_dict['items']['item']))
