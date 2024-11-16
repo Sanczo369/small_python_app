@@ -19,3 +19,8 @@ scrollable_frame.pack()
 
 entry = ctk.CTkEntry(scrollable_frame, placeholder_text="Add todo")
 entry.pack(fill="x")
+
+add_button = ctk.CTkButton(root, text="Add", width=500, command=add_todo)
+add_button.pack(pady=20)
+
+root.mainloop()
