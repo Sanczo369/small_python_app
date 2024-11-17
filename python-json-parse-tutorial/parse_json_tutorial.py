@@ -51,3 +51,6 @@ print(type(data_dict['items']['item']))
 
 #print list
 print(data_dict['items']['item'])
+
+#print first item in the list
+print(data_dict['items']['item'][0])
