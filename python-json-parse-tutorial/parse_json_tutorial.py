@@ -57,3 +57,6 @@ print(data_dict['items']['item'][0])
 
 #print length of this list
 print(len(data_dict['items']['item']))
+
+#access word 'Maple'
+print(data_dict['items']['item'][0]["topping"][6]["type"])
