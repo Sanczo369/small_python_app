@@ -14,3 +14,7 @@ print(client.list_database_names())
 
 #Create a collection
 mycol = mydb["people"]
+
+#Insert a document into the collection
+mydict = { "name": "John", "address": "Highway 37" }
+x = mycol.insert_one(mydict)
