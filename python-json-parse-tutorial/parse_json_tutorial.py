@@ -54,3 +54,6 @@ print(data_dict['items']['item'])
 
 #print first item in the list
 print(data_dict['items']['item'][0])
+
+#print length of this list
+print(len(data_dict['items']['item']))
