@@ -35,3 +35,6 @@ print(x.inserted_ids)
 
 #Print the list of databases again
 print(client.list_database_names())
+
+#Print the list of collections in the database
+print(mydb.list_collection_names())
