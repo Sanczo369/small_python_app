@@ -18,3 +18,6 @@ mycol = mydb["people"]
 #Insert a document into the collection
 mydict = { "name": "John", "address": "Highway 37" }
 x = mycol.insert_one(mydict)
+
+#Print the _id of the inserted document
+print(x.inserted_id)
