@@ -32,3 +32,6 @@ x = mycol.insert_many(mylist)
 
 #Print list of the _id values of the inserted documents:
 print(x.inserted_ids)
+
+#Print the list of databases again
+print(client.list_database_names())
