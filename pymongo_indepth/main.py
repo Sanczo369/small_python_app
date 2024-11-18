@@ -21,3 +21,11 @@ x = mycol.insert_one(mydict)
 
 #Print the _id of the inserted document
 print(x.inserted_id)
+
+
+#Insert many documents into the collection
+mylist = [
+  { "name": "Jane", "age":40},
+  { "name": "Mark"}
+  ]
+x = mycol.insert_many(mylist)
