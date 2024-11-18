@@ -29,3 +29,6 @@ mylist = [
   { "name": "Mark"}
   ]
 x = mycol.insert_many(mylist)
+
+#Print list of the _id values of the inserted documents:
+print(x.inserted_ids)
