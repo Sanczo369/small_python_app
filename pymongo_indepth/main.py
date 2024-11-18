@@ -38,3 +38,6 @@ print(client.list_database_names())
 
 #Print the list of collections in the database
 print(mydb.list_collection_names())
+
+#Find the first document in the collection
+print(mycol.find_one())
