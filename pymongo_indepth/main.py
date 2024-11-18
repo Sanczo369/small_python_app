@@ -41,3 +41,7 @@ print(mydb.list_collection_names())
 
 #Find the first document in the collection
 print(mycol.find_one())
+
+#Print all documents in the collection
+for x in mycol.find():
+  print(x)
