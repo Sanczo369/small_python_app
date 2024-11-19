@@ -45,3 +45,7 @@ print(mycol.find_one())
 #Print all documents in the collection
 for x in mycol.find():
   print(x)
+
+#Print all documents excluding address
+for x in mycol.find({},{ "address": 0 }):
+  print(x)
