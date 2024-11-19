@@ -16,3 +16,6 @@ firebase=pyrebase.initialize_app(firebaseConfig)
 
 #define storage
 storage=firebase.storage()
+
+#define auth
+auth=firebase.auth()
