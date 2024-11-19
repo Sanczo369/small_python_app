@@ -19,3 +19,16 @@ storage=firebase.storage()
 
 #define auth
 auth=firebase.auth()
+
+#login
+email=input("Enter your email")
+password=input("Enter password")
+try:
+    login = auth.sign_in_with_email_and_password(email, password)
+    # upload a file
+    file = input("Enter the name of the file you want to upload to storage")
+    cloudfilename = input("Enter the name for the file in storage")
+    storage.child(cloudfilename).put(file, login['idToken'])
+
+except:
+    print("Invalid credentials")
