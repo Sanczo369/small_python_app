@@ -12,3 +12,7 @@ firebaseConfig={"apiKey": "AIzaSyDm2HeGl3bApix5KsbhI8NOjdwXkhNTaJM",
     "measurementId": "G-P4Y5QEDVXH"}
 
 firebase=pyrebase.initialize_app(firebaseConfig)
+
+
+#define storage
+storage=firebase.storage()
