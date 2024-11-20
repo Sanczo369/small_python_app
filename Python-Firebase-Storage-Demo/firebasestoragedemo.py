@@ -20,3 +20,6 @@ storage=firebase.storage()
 file=input("Enter the name of the file you want to upload to storage")
 cloudfilename=input("Enter the name for the file in storage")
 storage.child(cloudfilename).put(file)
+
+#get url of the file we just uploaded
+print(storage.child(cloudfilename).get_url(None))
