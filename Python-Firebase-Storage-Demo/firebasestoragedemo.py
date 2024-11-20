@@ -23,3 +23,7 @@ storage.child(cloudfilename).put(file)
 
 #get url of the file we just uploaded
 print(storage.child(cloudfilename).get_url(None))
+
+
+#download a file
+storage.child(cloudfilename).download("downloaded.txt")
