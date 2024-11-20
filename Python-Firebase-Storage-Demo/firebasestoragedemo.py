@@ -15,3 +15,8 @@ firebase=pyrebase.initialize_app(firebaseConfig)
 
 #define storage
 storage=firebase.storage()
+
+#upload a file
+file=input("Enter the name of the file you want to upload to storage")
+cloudfilename=input("Enter the name for the file in storage")
+storage.child(cloudfilename).put(file)
