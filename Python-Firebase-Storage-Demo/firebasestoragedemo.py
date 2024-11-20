@@ -27,3 +27,8 @@ print(storage.child(cloudfilename).get_url(None))
 
 #download a file
 storage.child(cloudfilename).download("downloaded.txt")
+
+#to read from the file
+path=storage.child(cloudfilename).get_url(None)
+f = urllib.request.urlopen(path).read()
+print(f)
