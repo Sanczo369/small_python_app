@@ -25,3 +25,7 @@ print(db.push(data)) #unique key is generated
 #Create your own key
 data={"age":20, "address":["new york", "los angeles"]}
 db.child("John").set(data)
+
+#Create your own key + paths with child
+data={"name":"John", "age":20, "address":["new york", "los angeles"]}
+db.child("Branch").child("Employee").child("male employees").child("John's info").set(data)
