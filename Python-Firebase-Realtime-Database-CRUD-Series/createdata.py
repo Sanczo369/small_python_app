@@ -17,3 +17,7 @@ db=firebase.database()
 #Push Data
 data={"age":20, "address":["new york", "los angeles"]}
 print(db.push(data)) #unique key is generated
+
+#Create paths using child
+#data={"name":"Jane", "age":20}
+#db.child("Branch").child("Employees").push(data)
