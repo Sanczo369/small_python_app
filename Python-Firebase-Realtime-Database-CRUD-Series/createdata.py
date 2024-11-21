@@ -21,3 +21,7 @@ print(db.push(data)) #unique key is generated
 #Create paths using child
 #data={"name":"Jane", "age":20}
 #db.child("Branch").child("Employees").push(data)
+
+#Create your own key
+data={"age":20, "address":["new york", "los angeles"]}
+db.child("John").set(data)
