@@ -12,3 +12,7 @@ firebaseConfig={"apiKey": "AIzaSyBPhwfUTQqOwKq2xH9087gHEslqEQTSNro",
 firebase=pyrebase.initialize_app(firebaseConfig)
 
 db=firebase.database()
+
+
+#Delete item with known key
+db.child("todolistA").child("wednesday").child("volunteer").child("deadline").remove()
