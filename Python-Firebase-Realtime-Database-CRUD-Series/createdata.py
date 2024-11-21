@@ -13,3 +13,7 @@ firebaseConfig={"apiKey": "AIzaSyDm2HeGl3bApix5KsbhI8NOjdwXkhNTaJM",
 firebase=pyrebase.initialize_app(firebaseConfig)
 
 db=firebase.database()
+
+#Push Data
+data={"age":20, "address":["new york", "los angeles"]}
+print(db.push(data)) #unique key is generated
