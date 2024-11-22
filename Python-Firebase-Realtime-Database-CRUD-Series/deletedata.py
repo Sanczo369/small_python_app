@@ -19,3 +19,6 @@ db.child("todolistA").child("wednesday").child("volunteer").child("deadline").re
 
 #Delete entire node and its children
 db.child("todolistA").child("tuesday").remove()
+
+#Delete item with unkown generated key
+monday_tasks=db.child("todolistB").child("monday").get()
