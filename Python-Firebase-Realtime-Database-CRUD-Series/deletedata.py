@@ -16,3 +16,6 @@ db=firebase.database()
 
 #Delete item with known key
 db.child("todolistA").child("wednesday").child("volunteer").child("deadline").remove()
+
+#Delete entire node and its children
+db.child("todolistA").child("tuesday").remove()
