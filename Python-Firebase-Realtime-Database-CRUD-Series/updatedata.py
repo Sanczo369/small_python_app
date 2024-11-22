@@ -16,3 +16,7 @@ db=firebase.database()
 
 #Update data with known path
 db.child("todolistA").child("monday").child("paper").update({"deadline":"1pm"})
+
+#Multi-location update data
+data={"todolistA/monday/paper":{"details":"v2"}, "todolistA/tuesday/filmvideo":{"deadline":"7pm"}}
+db.update(data)
