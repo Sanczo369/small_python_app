@@ -12,3 +12,7 @@ firebaseConfig={"apiKey": "AIzaSyBPhwfUTQqOwKq2xH9087gHEslqEQTSNro",
 firebase=pyrebase.initialize_app(firebaseConfig)
 
 db=firebase.database()
+
+
+#Update data with known path
+db.child("todolistA").child("monday").child("paper").update({"deadline":"1pm"})
