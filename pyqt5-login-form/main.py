@@ -10,3 +10,8 @@ class Login(QDialog):
         self.loginbutton.clicked.connect(self.loginfunction)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.createaccbutton.clicked.connect(self.gotocreate)
+
+    def loginfunction(self):
+        email = self.email.text()
+        password = self.password.text()
+        print("Successfully logged in with email: ", email, "and password:", password)
