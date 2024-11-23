@@ -15,3 +15,8 @@ class Login(QDialog):
         email = self.email.text()
         password = self.password.text()
         print("Successfully logged in with email: ", email, "and password:", password)
+
+    def gotocreate(self):
+        createacc=CreateAcc()
+        widget.addWidget(createacc)
+        widget.setCurrentIndex(widget.currentIndex()+1)
