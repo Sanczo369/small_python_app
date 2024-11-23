@@ -28,3 +28,12 @@ class CreateAcc(QDialog):
         self.signupbutton.clicked.connect(self.createaccfunction)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.confirmpass.setEchoMode(QtWidgets.QLineEdit.Password)
+
+    def createaccfunction(self):
+        email = self.email.text()
+        if self.password.text()==self.confirmpass.text():
+            password=self.password.text()
+            print("Successfully created acc with email: ", email, "and password: ", password)
+            login=Login()
+            widget.addWidget(login)
+            widget.setCurrentIndex(widget.currentIndex()+1)
