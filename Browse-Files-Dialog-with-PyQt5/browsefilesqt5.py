@@ -12,3 +12,12 @@ class MainWindow(QDialog):
     def browsefiles(self):
         fname=QFileDialog.getOpenFileName(self, 'Open file', 'D:\codefirst.io\PyQt5 tutorials\Browse Files', 'Images (*.png, *.xmp *.jpg)')
         self.filename.setText(fname[0])
+
+app=QApplication(sys.argv)
+mainwindow=MainWindow()
+widget=QtWidgets.QStackedWidget()
+widget.addWidget(mainwindow)
+widget.setFixedWidth(400)
+widget.setFixedHeight(300)
+widget.show()
+sys.exit(app.exec_())
