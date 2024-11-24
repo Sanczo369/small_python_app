@@ -14,3 +14,8 @@ class MainWindow(QDialog):
 
     def tabChanged(self):
         print("Tab was changed to ", self.tabWidget.currentIndex())
+
+
+    def changeTabText(self):
+        self.tabWidget.setTabText(0, "First tab")
+        self.tabWidget.setTabText(1, "Second tab")
