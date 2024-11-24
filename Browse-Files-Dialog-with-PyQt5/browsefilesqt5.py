@@ -8,3 +8,7 @@ class MainWindow(QDialog):
         super(MainWindow,self).__init__()
         loadUi("gui.ui",self)
         self.browse.clicked.connect(self.browsefiles)
+
+    def browsefiles(self):
+        fname=QFileDialog.getOpenFileName(self, 'Open file', 'D:\codefirst.io\PyQt5 tutorials\Browse Files', 'Images (*.png, *.xmp *.jpg)')
+        self.filename.setText(fname[0])
