@@ -19,3 +19,6 @@ class MainWindow(QDialog):
     def changeTabText(self):
         self.tabWidget.setTabText(0, "First tab")
         self.tabWidget.setTabText(1, "Second tab")
+
+    def insertTab(self):
+        self.tabWidget.addTab(QWidget(), "New Tab")
