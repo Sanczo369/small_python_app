@@ -11,3 +11,6 @@ class MainWindow(QDialog):
         self.change.clicked.connect(self.changeTabText)
         self.insert.clicked.connect(self.insertTab)
         self.remove.clicked.connect(self.removeTab)
+
+    def tabChanged(self):
+        print("Tab was changed to ", self.tabWidget.currentIndex())
