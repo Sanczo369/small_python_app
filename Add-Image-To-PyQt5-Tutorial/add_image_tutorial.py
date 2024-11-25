@@ -9,3 +9,8 @@ class MainWindow(QDialog):
         super(MainWindow, self).__init__()
         loadUi("addimagetutorial.ui",self)
         self.button.clicked.connect(self.addimage)
+
+    def addimage(self):
+        #Add the image
+        qpixmap = QPixmap('pythonlogo.png')
+        self.imglabel.setPixmap(qpixmap)
