@@ -22,3 +22,6 @@ class MainWindow(QDialog):
 
     def insertTab(self):
         self.tabWidget.addTab(QWidget(), "New Tab")
+
+    def removeTab(self):
+        self.tabWidget.removeTab(0)
