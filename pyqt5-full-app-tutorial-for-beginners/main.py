@@ -57,3 +57,10 @@ class CreateAccScreen(QDialog):
         self.passwordfield.setEchoMode(QtWidgets.QLineEdit.Password)
         self.confirmpasswordfield.setEchoMode(QtWidgets.QLineEdit.Password)
         self.signup.clicked.connect(self.signupfunction)
+
+class FillProfileScreen(QDialog):
+    def __init__(self):
+        super(FillProfileScreen, self).__init__()
+        loadUi("fillprofile.ui",self)
+        self.image.setPixmap(QPixmap('placeholder.png'))
+
