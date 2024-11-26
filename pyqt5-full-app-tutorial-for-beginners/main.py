@@ -49,3 +49,11 @@ class LoginScreen(QDialog):
                 self.error.setText("")
             else:
                 self.error.setText("Invalid username or password")
+
+class CreateAccScreen(QDialog):
+    def __init__(self):
+        super(CreateAccScreen, self).__init__()
+        loadUi("createacc.ui",self)
+        self.passwordfield.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.confirmpasswordfield.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.signup.clicked.connect(self.signupfunction)
