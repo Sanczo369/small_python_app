@@ -23,3 +23,10 @@ class WelcomeScreen(QDialog):
         create = CreateAccScreen()
         widget.addWidget(create)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+
+class LoginScreen(QDialog):
+    def __init__(self):
+        super(LoginScreen, self).__init__()
+        loadUi("login.ui",self)
+        self.passwordfield.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.login.clicked.connect(self.loginfunction)
