@@ -30,3 +30,10 @@ class LoginScreen(QDialog):
         loadUi("login.ui",self)
         self.passwordfield.setEchoMode(QtWidgets.QLineEdit.Password)
         self.login.clicked.connect(self.loginfunction)
+
+    def loginfunction(self):
+        user = self.emailfield.text()
+        password = self.passwordfield.text()
+
+        if len(user)==0 or len(password)==0:
+            self.error.setText("Please input all fields.")
