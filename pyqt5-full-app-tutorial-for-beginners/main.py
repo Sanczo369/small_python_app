@@ -18,3 +18,8 @@ class WelcomeScreen(QDialog):
         login = LoginScreen()
         widget.addWidget(login)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def gotocreate(self):
+        create = CreateAccScreen()
+        widget.addWidget(create)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
