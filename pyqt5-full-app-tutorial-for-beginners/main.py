@@ -13,3 +13,8 @@ class WelcomeScreen(QDialog):
         loadUi("welcomescreen.ui",self)
         self.login.clicked.connect(self.gotologin)
         self.create.clicked.connect(self.gotocreate)
+
+    def gotologin(self):
+        login = LoginScreen()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
