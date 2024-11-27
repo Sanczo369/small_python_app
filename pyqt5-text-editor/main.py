@@ -30,3 +30,12 @@ class Main(QMainWindow):
         self.textEdit.clear()
         self.setWindowTitle("Untitled")
         self.current_path = None
+
+    def saveFile(self):
+        if self.current_path is not None:
+            # save the changes without opening dialog
+            filetext = self.textEdit.toPlainText()
+            with open(self.current_path, 'w') as f:
+                f.write(filetext)
+        else:
+            self.saveFileAs()
