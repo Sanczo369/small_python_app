@@ -55,3 +55,6 @@ class Main(QMainWindow):
             filetext = f.read()
             self.textEdit.setText(filetext)
         self.current_path = fname[0]
+
+    def undo(self):
+        self.textEdit.undo()
