@@ -25,3 +25,8 @@ class Main(QMainWindow):
         self.actionSet_Light_Mode.triggered.connect(self.setLightMode)
         self.actionIncrease_Font_Size.triggered.connect(self.incFontSize)
         self.actionDecrease_Font_Size.triggered.connect(self.decFontSize)
+
+    def newFile(self):
+        self.textEdit.clear()
+        self.setWindowTitle("Untitled")
+        self.current_path = None
