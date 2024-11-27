@@ -58,6 +58,29 @@ class CreateAccScreen(QDialog):
         self.confirmpasswordfield.setEchoMode(QtWidgets.QLineEdit.Password)
         self.signup.clicked.connect(self.signupfunction)
 
+    def signupfunction(self):
+        user = self.emailfield.text()
+        password = self.passwordfield.text()
+        confirmpassword = self.confirmpasswordfield.text()
+
+        if len(user)==0 or len(password)==0 or len(confirmpassword)==0:
+            self.error.setText("Please fill in all inputs.")
+
+        elif password!=confirmpassword:
+            self.error.setText("Passwords do not match.")
+        else:
+            conn = sqlite3.connect("shop_data.db")
+            cur = conn.cursor()
+
+            user_info = [user, password]
+            cur.execute('INSERT INTO login_info (username, password) VALUES (?,?)', user_info)
+
+            conn.commit()
+            conn.close()
+
+            fillprofile = FillProfileScreen()
+            widget.addWidget(fillprofile)
+            widget.setCurrentIndex(widget.currentIndex()+1)
 class FillProfileScreen(QDialog):
     def __init__(self):
         super(FillProfileScreen, self).__init__()
