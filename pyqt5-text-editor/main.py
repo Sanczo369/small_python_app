@@ -47,3 +47,11 @@ class Main(QMainWindow):
             f.write(filetext)
         self.current_path = pathname[0]
         self.setWindowTitle(pathname[0])
+
+    def openFile(self):
+        fname = QFileDialog.getOpenFileName(self, 'Open file', 'D:\codefirst.io\PyQt5 Text Editor', 'Text files (*.txt)')
+        self.setWindowTitle(fname[0])
+        with open(fname[0], 'r') as f:
+            filetext = f.read()
+            self.textEdit.setText(filetext)
+        self.current_path = fname[0]
