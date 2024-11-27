@@ -39,3 +39,11 @@ class Main(QMainWindow):
                 f.write(filetext)
         else:
             self.saveFileAs()
+
+    def saveFileAs(self):
+        pathname = QFileDialog.getSaveFileName(self, 'Save file', 'D:\codefirst.io\PyQt5 Text Editor', 'Text files(*.txt)')
+        filetext = self.textEdit.toPlainText()
+        with open(pathname[0], 'w') as f:
+            f.write(filetext)
+        self.current_path = pathname[0]
+        self.setWindowTitle(pathname[0])
