@@ -59,6 +59,9 @@ class Main(QMainWindow):
     def undo(self):
         self.textEdit.undo()
 
+    def redo(self):
+        self.textEdit.redo()
+
     def setDarkMode(self):
         self.setStyleSheet('''QWidget{
             background-color: rgb(33,33,33);
