@@ -70,3 +70,5 @@ class Main(QMainWindow):
             QMenuBar::item:selected{
             color: #000000
             } ''')
+    def setLightMode(self):
+        self.setStyleSheet("")
