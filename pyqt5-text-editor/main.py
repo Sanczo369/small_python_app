@@ -72,3 +72,7 @@ class Main(QMainWindow):
             } ''')
     def setLightMode(self):
         self.setStyleSheet("")
+
+    def incFontSize(self):
+        self.current_fontsize += 1
+        self.textEdit.setFontPointSize(self.current_fontsize)
