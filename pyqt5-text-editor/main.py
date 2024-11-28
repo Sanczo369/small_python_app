@@ -61,6 +61,8 @@ class Main(QMainWindow):
 
     def redo(self):
         self.textEdit.redo()
+    def copy(self):
+        self.textEdit.copy()
 
     def setDarkMode(self):
         self.setStyleSheet('''QWidget{
