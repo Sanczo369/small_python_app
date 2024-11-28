@@ -76,3 +76,7 @@ class Main(QMainWindow):
     def incFontSize(self):
         self.current_fontsize += 1
         self.textEdit.setFontPointSize(self.current_fontsize)
+
+    def decFontSize(self):
+        self.current_fontsize -=1
+        self.textEdit.setFontPointSize(self.current_fontsize)
