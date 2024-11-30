@@ -67,6 +67,9 @@ class Main(QMainWindow):
     def cut(self):
         self.textEdit.cut()
 
+    def paste(self):
+        self.textEdit.paste()
+
     def setDarkMode(self):
         self.setStyleSheet('''QWidget{
             background-color: rgb(33,33,33);
