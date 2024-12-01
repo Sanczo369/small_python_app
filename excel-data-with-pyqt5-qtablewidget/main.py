@@ -34,3 +34,9 @@ class Main(QWidget):
                 self.table_widget.setItem(row_index, col_index, QTableWidgetItem(str(value)))
                 col_index += 1
             row_index += 1
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = Main()
+    window.showMaximized()
+    app.exec_()
