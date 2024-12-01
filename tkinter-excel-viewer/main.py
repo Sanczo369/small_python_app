@@ -17,3 +17,10 @@ def load_data():
 
     for value_tuple in list_values[1:]:
         tree.insert('', tkinter.END, values=value_tuple)
+
+window = tkinter.Tk()
+window.title("Excel Viewer")
+
+load_data()
+
+window.mainloop()
