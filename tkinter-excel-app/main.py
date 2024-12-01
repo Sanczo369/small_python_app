@@ -15,3 +15,11 @@ def load_data():
 
     for value_tuple in list_values[1:]:
         treeview.insert('', tk.END, values=value_tuple)
+
+def insert_row():
+    name = name_entry.get()
+    age = int(age_spinbox.get())
+    subscription_status = status_combobox.get()
+    employment_status = "Employed" if a.get() else "Unemployed"
+
+    print(name, age, subscription_status, employment_status)
