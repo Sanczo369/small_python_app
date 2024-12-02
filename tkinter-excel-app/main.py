@@ -74,3 +74,7 @@ name_entry.grid(row=0, column=0, padx=5, pady=(0, 5), sticky="ew")
 age_spinbox = ttk.Spinbox(widgets_frame, from_=18, to=100)
 age_spinbox.insert(0, "Age")
 age_spinbox.grid(row=1, column=0, padx=5, pady=5, sticky="ew")
+
+status_combobox = ttk.Combobox(widgets_frame, values=combo_list)
+status_combobox.current(0)
+status_combobox.grid(row=2, column=0, padx=5, pady=5,  sticky="ew")
