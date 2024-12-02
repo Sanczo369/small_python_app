@@ -48,3 +48,10 @@ def toggle_mode():
         style.theme_use("forest-light")
     else:
         style.theme_use("forest-dark")
+
+root = tk.Tk()
+
+style = ttk.Style(root)
+root.tk.call("source", "forest-light.tcl")
+root.tk.call("source", "forest-dark.tcl")
+style.theme_use("forest-dark")
