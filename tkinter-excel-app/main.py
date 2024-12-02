@@ -34,3 +34,17 @@ def insert_row():
 
     # Insert row into treeview
     treeview.insert('', tk.END, values=row_values)
+
+    # Clear the values
+    name_entry.delete(0, "end")
+    name_entry.insert(0, "Name")
+    age_spinbox.delete(0, "end")
+    age_spinbox.insert(0, "Age")
+    status_combobox.set(combo_list[0])
+    checkbutton.state(["!selected"])
+
+def toggle_mode():
+    if mode_switch.instate(["selected"]):
+        style.theme_use("forest-light")
+    else:
+        style.theme_use("forest-dark")
