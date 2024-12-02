@@ -31,3 +31,6 @@ def insert_row():
     row_values = [name, age, subscription_status, employment_status]
     sheet.append(row_values)
     workbook.save(path)
+
+    # Insert row into treeview
+    treeview.insert('', tk.END, values=row_values)
