@@ -23,3 +23,11 @@ def insert_row():
     employment_status = "Employed" if a.get() else "Unemployed"
 
     print(name, age, subscription_status, employment_status)
+
+    # Insert row into Excel sheet
+    path = "D:\codefirst.io\Tkinter Excel App\people.xlsx"
+    workbook = openpyxl.load_workbook(path)
+    sheet = workbook.active
+    row_values = [name, age, subscription_status, employment_status]
+    sheet.append(row_values)
+    workbook.save(path)
