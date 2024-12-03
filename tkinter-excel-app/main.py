@@ -78,3 +78,17 @@ age_spinbox.grid(row=1, column=0, padx=5, pady=5, sticky="ew")
 status_combobox = ttk.Combobox(widgets_frame, values=combo_list)
 status_combobox.current(0)
 status_combobox.grid(row=2, column=0, padx=5, pady=5,  sticky="ew")
+
+a = tk.BooleanVar()
+checkbutton = ttk.Checkbutton(widgets_frame, text="Employed", variable=a)
+checkbutton.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
+
+button = ttk.Button(widgets_frame, text="Insert", command=insert_row)
+button.grid(row=4, column=0, padx=5, pady=5, sticky="nsew")
+
+separator = ttk.Separator(widgets_frame)
+separator.grid(row=5, column=0, padx=(20, 10), pady=10, sticky="ew")
+
+mode_switch = ttk.Checkbutton(
+    widgets_frame, text="Mode", style="Switch", command=toggle_mode)
+mode_switch.grid(row=6, column=0, padx=5, pady=10, sticky="nsew")
