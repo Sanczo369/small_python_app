@@ -62,3 +62,27 @@ score_msg = Message(WIDTH-50, 28, 30, '0', final_score_font, RED, win)
 final_score_msg = Message(WIDTH//2, 280, 30, '0', final_score_font, RED, win)
 tap_to_play_msg = tap_to_play = BlinkingText(WIDTH//2, HEIGHT-60, 25, "Tap To Play",
 				 tap_to_play_font, WHITE, win)
+
+# SOUNDS **********************************************************************
+
+player_bullet_fx = pygame.mixer.Sound('Sounds/gunshot.wav')
+click_fx = pygame.mixer.Sound('Sounds/click.mp3')
+collision_fx = pygame.mixer.Sound('Sounds/mini_exp.mp3')
+blast_fx = pygame.mixer.Sound('Sounds/blast.wav')
+fuel_fx = pygame.mixer.Sound('Sounds/fuel.wav')
+
+pygame.mixer.music.load('Sounds/Defrini - Spookie.mp3')
+pygame.mixer.music.play(loops=-1)
+pygame.mixer.music.set_volume(0.1)
+
+# GROUPS & OBJECTS ************************************************************
+
+bg = Background(win)
+p = Player(144, HEIGHT - 100)
+
+enemy_group = pygame.sprite.Group()
+player_bullet_group = pygame.sprite.Group()
+enemy_bullet_group = pygame.sprite.Group()
+explosion_group = pygame.sprite.Group()
+fuel_group = pygame.sprite.Group()
+powerup_group = pygame.sprite.Group()
