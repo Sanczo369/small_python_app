@@ -86,3 +86,20 @@ enemy_bullet_group = pygame.sprite.Group()
 explosion_group = pygame.sprite.Group()
 fuel_group = pygame.sprite.Group()
 powerup_group = pygame.sprite.Group()
+
+# FUNCTIONS *******************************************************************
+
+def shoot_bullet():
+	x, y = p.rect.center[0], p.rect.y
+
+	if p.powerup > 0:
+		for dx in range(-3, 4):
+			b = Bullet(x, y, 4, dx)
+			player_bullet_group.add(b)
+		p.powerup -= 1
+	else:
+		b = Bullet(x-30, y, 6)
+		player_bullet_group.add(b)
+		b = Bullet(x+30, y, 6)
+		player_bullet_group.add(b)
+	player_bullet_fx.play()
