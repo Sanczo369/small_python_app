@@ -43,3 +43,9 @@ home_img = pygame.image.load('Assets/Buttons/homeBtn.png')
 replay_img = pygame.image.load('Assets/Buttons/replay.png')
 sound_off_img = pygame.image.load("Assets/Buttons/soundOffBtn.png")
 sound_on_img = pygame.image.load("Assets/Buttons/soundOnBtn.png")
+
+# BUTTONS *********************************************************************
+
+home_btn = Button(home_img, (24, 24), WIDTH // 4 - 18, HEIGHT//2 + 120)
+replay_btn = Button(replay_img, (36,36), WIDTH // 2  - 18, HEIGHT//2 + 115)
+sound_btn = Button(sound_on_img, (24, 24), WIDTH - WIDTH // 4 - 18, HEIGHT//2 + 120)
