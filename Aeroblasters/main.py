@@ -161,3 +161,7 @@ while running:
 							moving_left = True
 						elif x > WIDTH // 2:
 							moving_right = True
+
+		if event.type == pygame.KEYUP:
+			moving_left = False
+			moving_right = False
