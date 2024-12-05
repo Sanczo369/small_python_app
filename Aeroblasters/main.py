@@ -113,3 +113,20 @@ def reset():
 	powerup_group.empty()
 
 	p.reset(p.x, p.y)
+
+# VARIABLES *******************************************************************
+
+level = 1
+plane_destroy_count = 0
+plane_frequency = 5000
+start_time = pygame.time.get_ticks()
+
+moving_left = False
+moving_right = False
+
+home_page = True
+game_page = False
+score_page = False
+
+score = 0
+sound_on = True
