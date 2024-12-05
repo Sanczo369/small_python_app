@@ -169,3 +169,10 @@ while running:
 		if event.type == pygame.MOUSEBUTTONUP:
 			moving_left = False
 			moving_right = False
+
+	if home_page:
+		win.fill(BLACK)
+		win.blit(logo_img, (30, 80))
+		win.blit(fighter_img, (WIDTH//2 - 50, HEIGHT//2))
+		pygame.draw.circle(win, WHITE, (WIDTH//2, HEIGHT//2 + 50), 50, 4)
+		tap_to_play_msg.update()
