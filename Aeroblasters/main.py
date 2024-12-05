@@ -103,3 +103,13 @@ def shoot_bullet():
 		b = Bullet(x+30, y, 6)
 		player_bullet_group.add(b)
 	player_bullet_fx.play()
+
+def reset():
+	enemy_group.empty()
+	player_bullet_group.empty()
+	enemy_bullet_group.empty()
+	explosion_group.empty()
+	fuel_group.empty()
+	powerup_group.empty()
+
+	p.reset(p.x, p.y)
