@@ -165,3 +165,7 @@ while running:
 		if event.type == pygame.KEYUP:
 			moving_left = False
 			moving_right = False
+
+		if event.type == pygame.MOUSEBUTTONUP:
+			moving_left = False
+			moving_right = False
