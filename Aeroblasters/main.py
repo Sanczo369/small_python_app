@@ -130,3 +130,21 @@ score_page = False
 
 score = 0
 sound_on = True
+
+running = True
+while running:
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			running = False
+
+		if event.type == pygame.KEYDOWN:
+			if event.key == pygame.K_ESCAPE or event.key == pygame.K_q:
+				running = False
+
+		if event.type == pygame.KEYDOWN and game_page:
+			if event.key == pygame.K_LEFT:
+				moving_left = True
+			if event.key == pygame.K_RIGHT:
+				moving_right = True
+			if event.key == pygame.K_SPACE:
+				shoot_bullet()
