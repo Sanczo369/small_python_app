@@ -148,3 +148,16 @@ while running:
 				moving_right = True
 			if event.key == pygame.K_SPACE:
 				shoot_bullet()
+		if event.type == pygame.MOUSEBUTTONDOWN:
+					if home_page:
+						home_page = False
+						game_page = True
+						click_fx.play()
+					elif game_page:
+						x, y = event.pos
+						if p.rect.collidepoint((x,y)):
+							shoot_bullet()
+						elif x <= WIDTH // 2:
+							moving_left = True
+						elif x > WIDTH // 2:
+							moving_right = True
