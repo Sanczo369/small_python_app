@@ -176,3 +176,39 @@ while running:
 		win.blit(fighter_img, (WIDTH//2 - 50, HEIGHT//2))
 		pygame.draw.circle(win, WHITE, (WIDTH//2, HEIGHT//2 + 50), 50, 4)
 		tap_to_play_msg.update()
+
+	if score_page:
+		win.fill(BLACK)
+		win.blit(logo_img, (30, 50))
+		game_over_msg.update()
+		final_score_msg.update(score)
+
+		if home_btn.draw(win):
+			home_page = True
+			game_page = False
+			score_page = False
+			reset()
+			click_fx.play()
+
+			plane_destroy_count = 0
+			level = 1
+			score = 0
+
+		if replay_btn.draw(win):
+			score_page = False
+			game_page = True
+			reset()
+			click_fx.play()
+
+			plane_destroy_count = 0
+			score = 0
+
+		if sound_btn.draw(win):
+			sound_on = not sound_on
+
+			if sound_on:
+				sound_btn.update_image(sound_on_img)
+				pygame.mixer.music.play(loops=-1)
+			else:
+				sound_btn.update_image(sound_off_img)
+				pygame.mixer.music.stop()
