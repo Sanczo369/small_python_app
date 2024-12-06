@@ -233,3 +233,8 @@ while running:
 			e = Enemy(x, -150, type)
 			enemy_group.add(e)
 			start_time = current_time
+
+		if plane_destroy_count:
+			if plane_destroy_count % 5 == 0 and level < 5:
+				level += 1
+				plane_destroy_count = 0
