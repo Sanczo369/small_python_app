@@ -295,3 +295,26 @@ while running:
 
 					bullet.kill()
 					collision_fx.play()
+
+			player_collide = pygame.sprite.spritecollide(p, enemy_group, True)
+			if player_collide:
+				x, y = p.rect.center
+				explosion = Explosion(x, y, 2)
+				explosion_group.add(explosion)
+
+				x, y = player_collide[0].rect.center
+				explosion = Explosion(x, y, 2)
+				explosion_group.add(explosion)
+
+				p.health = 0
+				p.alive = False
+
+			if pygame.sprite.spritecollide(p, fuel_group, True):
+				p.fuel += 25
+				if p.fuel >= 100:
+					p.fuel = 100
+				fuel_fx.play()
+
+			if pygame.sprite.spritecollide(p, powerup_group, True):
+				p.powerup += 2
+				fuel_fx.play()
