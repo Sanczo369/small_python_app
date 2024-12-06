@@ -271,3 +271,27 @@ while running:
 
 				bullet.kill()
 				collision_fx.play()
+
+			for bullet in player_bullet_group:
+				planes_hit = pygame.sprite.spritecollide(bullet, enemy_group, False)
+				for plane in planes_hit:
+					plane.health -= bullet.damage
+					if plane.health <= 0:
+						x, y = plane.rect.center
+						rand = random.random()
+						if rand >= 0.9:
+							power = Powerup(x, y)
+							powerup_group.add(power)
+						elif rand >= 0.3:
+							fuel = Fuel(x, y)
+							fuel_group.add(fuel)
+
+						plane_destroy_count += 1
+						blast_fx.play()
+
+					x, y = bullet.rect.center
+					explosion = Explosion(x, y, 1)
+					explosion_group.add(explosion)
+
+					bullet.kill()
+					collision_fx.play()
