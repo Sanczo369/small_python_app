@@ -259,3 +259,15 @@ while running:
 
 		enemy_group.update(enemy_bullet_group, explosion_group)
 		enemy_group.draw(win)
+
+		if p.alive:
+			player_hit = pygame.sprite.spritecollide(p, enemy_bullet_group, False)
+			for bullet in player_hit:
+				p.health -= bullet.damage
+
+				x, y = bullet.rect.center
+				explosion = Explosion(x, y, 1)
+				explosion_group.add(explosion)
+
+				bullet.kill()
+				collision_fx.play()
