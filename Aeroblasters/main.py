@@ -238,3 +238,24 @@ while running:
 			if plane_destroy_count % 5 == 0 and level < 5:
 				level += 1
 				plane_destroy_count = 0
+
+		p.fuel -= 0.05
+		bg.update(1)
+		win.blit(clouds_img, (0, 70))
+
+		p.update(moving_left, moving_right, explosion_group)
+		p.draw(win)
+
+		player_bullet_group.update()
+		player_bullet_group.draw(win)
+		enemy_bullet_group.update()
+		enemy_bullet_group.draw(win)
+		explosion_group.update()
+		explosion_group.draw(win)
+		fuel_group.update()
+		fuel_group.draw(win)
+		powerup_group.update()
+		powerup_group.draw(win)
+
+		enemy_group.update(enemy_bullet_group, explosion_group)
+		enemy_group.draw(win)
