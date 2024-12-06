@@ -212,3 +212,24 @@ while running:
 			else:
 				sound_btn.update_image(sound_off_img)
 				pygame.mixer.music.stop()
+
+	if game_page:
+
+		current_time = pygame.time.get_ticks()
+		delta_time = current_time - start_time
+		if delta_time >= plane_frequency:
+			if level == 1:
+				type = 1
+			elif level == 2:
+				type = 2
+			elif level == 3:
+				type = 3
+			elif level == 4:
+				type = random.randint(4, 5)
+			elif level == 5:
+				type = random.randint(1, 5)
+
+			x = random.randint(10, WIDTH - 100)
+			e = Enemy(x, -150, type)
+			enemy_group.add(e)
+			start_time = current_time
