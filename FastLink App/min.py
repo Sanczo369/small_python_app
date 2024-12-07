@@ -9,3 +9,9 @@ def get_resource_path(relative_path):
         return os.path.join(bundle_dir, relative_path)
     base_path = os.path.abspath('.')
     return os.path.join(base_path, relative_path)
+
+def shorten():
+    shortener = pyshorteners.Shortener()
+    short_url = shortener.tinyurl.short(longurl_entry.get())
+    shorturl_entry.delete(0, tk.END)
+    shorturl_entry.insert(0, short_url)
