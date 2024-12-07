@@ -20,3 +20,9 @@ def shorten():
 root = tk.Tk()
 root.title("URL Shortener")
 root.geometry("400x200")
+
+FONT = ("Arial", 12)
+LABEL_BG = "#ECECEC"
+ENTRY_BG = "white"
+BUTTON_BG = "#4CAF50"
+BUTTON_FG = "white"
