@@ -318,3 +318,9 @@ while running:
 			if pygame.sprite.spritecollide(p, powerup_group, True):
 				p.powerup += 2
 				fuel_fx.play()
+
+		if not p.alive or p.fuel <= -10:
+			if len(explosion_group) == 0:
+				game_page = False
+				score_page = True
+				reset()
