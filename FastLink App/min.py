@@ -15,3 +15,8 @@ def shorten():
     short_url = shortener.tinyurl.short(longurl_entry.get())
     shorturl_entry.delete(0, tk.END)
     shorturl_entry.insert(0, short_url)
+
+
+root = tk.Tk()
+root.title("URL Shortener")
+root.geometry("400x200")
