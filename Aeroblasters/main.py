@@ -324,3 +324,19 @@ while running:
 				game_page = False
 				score_page = True
 				reset()
+
+		score += 1
+		score_msg.update(score)
+
+		fuel_color = RED if p.fuel <= 40 else GREEN
+		pygame.draw.rect(win, fuel_color, (30, 20, p.fuel, 10), border_radius=4)
+		pygame.draw.rect(win, WHITE, (30, 20, 100, 10), 2, border_radius=4)
+		pygame.draw.rect(win, BLUE, (30, 32, p.health, 10), border_radius=4)
+		pygame.draw.rect(win, WHITE, (30, 32, 100, 10), 2, border_radius=4)
+		win.blit(plane_img, (10, 15))
+
+	pygame.draw.rect(win, WHITE, (0,0, WIDTH, HEIGHT), 5, border_radius=4)
+	clock.tick(FPS)
+	pygame.display.update()
+
+pygame.quit()
