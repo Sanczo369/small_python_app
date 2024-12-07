@@ -21,6 +21,9 @@ root = tk.Tk()
 root.title("URL Shortener")
 root.geometry("400x200")
 
+favicon_path = get_resource_path('assets/favicon.ico')
+root.iconbitmap(favicon_path)
+
 FONT = ("Arial", 12)
 LABEL_BG = "#ECECEC"
 ENTRY_BG = "white"
