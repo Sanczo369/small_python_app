@@ -32,3 +32,9 @@ BUTTON_FG = "white"
 
 container_frame = tk.Frame(root, bg="white")
 container_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+
+longurl_label = tk.Label(container_frame, text="Enter Long URL", font=FONT, bg=LABEL_BG)
+longurl_entry = tk.Entry(container_frame, font=FONT, width=40, bg=ENTRY_BG)
+shorturl_label = tk.Label(container_frame, text="Output shortened URL", font=FONT, bg=LABEL_BG)
+shorturl_entry = tk.Entry(container_frame, font=FONT, width=40, bg=ENTRY_BG)
+shorten_button = tk.Button(container_frame, text="Shorten URL", font=FONT, bg=BUTTON_BG, fg=BUTTON_FG, command=shorten)
