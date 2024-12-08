@@ -29,3 +29,6 @@ LABEL_BG = "#ECECEC"
 ENTRY_BG = "white"
 BUTTON_BG = "#4CAF50"
 BUTTON_FG = "white"
+
+container_frame = tk.Frame(root, bg="white")
+container_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
