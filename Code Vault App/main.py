@@ -50,3 +50,36 @@ def encrypt():
         messagebox.showerror("ENCRYPTION", "Input Password")
     elif password != "1234":
         messagebox.showerror("ENCRYPTION", "Invalid Paasword")
+
+
+def main_screen():
+    global screen
+    global code
+    global text1
+
+    screen = Tk()
+    screen.geometry("375x398")
+    screen.iconbitmap(r'C:\coding in different different languages\PYTHON\ENCRYPTION AND DECRYPTION\keys.ico')
+    screen.title("Code Vault")
+
+    def reset():
+        code.set("")
+        text1.delete(1.0, END)
+
+    Label(text="Enter The Text For Encryption And Decryption", fg="black", font=("Comic Sans MS", 12)).place(x=10, y=10)
+    text1 = Text(font="Robote 20", bg="white", relief=GROOVE, wrap=WORD, bd=0)
+    text1.place(x=10, y=50, width=355, height=100)
+
+    Label(text="Enter Secret Key For Encryption And Decryption", fg="black", font=("Comic Sans MS", 11)).place(x=10,
+                                                                                                               y=170)
+    code = StringVar()
+    Entry(textvariable=code, width=19, bd=0, font=("arial", 25), show="*").place(x=10, y=200)
+
+    Button(text="ENCRYPT", height="2", width="23", bg="#ed3833", fg="white", bd=0, command=encrypt).place(x=10, y=250)
+    Button(text="DECRYPT", height="2", width=23, bg="#00bd56", fg="white", bd=0, command=decrypt).place(x=200, y=250)
+    Button(text="RESET", height="2", width="50", bg="#1089ff", fg="white", bd=0, command=reset).place(x=10, y=300)
+
+    screen.mainloop()
+
+
+main_screen()
