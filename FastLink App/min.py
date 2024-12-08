@@ -38,3 +38,11 @@ longurl_entry = tk.Entry(container_frame, font=FONT, width=40, bg=ENTRY_BG)
 shorturl_label = tk.Label(container_frame, text="Output shortened URL", font=FONT, bg=LABEL_BG)
 shorturl_entry = tk.Entry(container_frame, font=FONT, width=40, bg=ENTRY_BG)
 shorten_button = tk.Button(container_frame, text="Shorten URL", font=FONT, bg=BUTTON_BG, fg=BUTTON_FG, command=shorten)
+
+longurl_label.pack(pady=(0, 5))
+longurl_entry.pack(pady=(0, 10))
+shorturl_label.pack(pady=(0, 5))
+shorturl_entry.pack(pady=(0, 10))
+shorten_button.pack()
+
+root.mainloop()
