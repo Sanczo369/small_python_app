@@ -63,3 +63,7 @@ def pause_timer():
     else:
         pause_button.config(text="Pause")
         start_timer()
+
+def play_tick_sound():
+    pygame.mixer.music.load(resource_path("./assets/tick.wav"))
+    pygame.mixer.music.play()
