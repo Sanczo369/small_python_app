@@ -67,3 +67,7 @@ def pause_timer():
 def play_tick_sound():
     pygame.mixer.music.load(resource_path("./assets/tick.wav"))
     pygame.mixer.music.play()
+
+def play_finish_sound():
+    pygame.mixer.music.load(resource_path("./assets/finish.wav"))
+    pygame.mixer.music.play()
