@@ -54,3 +54,12 @@ def start_timer():
     elif count > 0:
         count_down(count)
         title_label.config(text="Work", fg=GREEN)
+
+def pause_timer():
+    global is_paused
+    is_paused = not is_paused
+    if is_paused:
+        pause_button.config(text="Resume")
+    else:
+        pause_button.config(text="Pause")
+        start_timer()
