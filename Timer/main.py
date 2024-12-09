@@ -24,3 +24,15 @@ reps = 0
 timer = None
 is_paused = False
 remaining_time = 0
+
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00:00")
+    canvas.itemconfig(progress_bar, fill="green")
+    title_label.config(text="Timer")
+    check_marks.config(text="")
+    global reps, is_paused, remaining_time
+    reps = 0
+    is_paused = False
+    remaining_time = 0
+    pause_button.config(text="Pause")
