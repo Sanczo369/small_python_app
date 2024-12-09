@@ -36,3 +36,21 @@ def reset_timer():
     is_paused = False
     remaining_time = 0
     pause_button.config(text="Pause")
+
+def start_timer():
+    global reps, remaining_time
+    reps += 1
+
+    hours = int(hours_entry.get())
+    minutes = int(minutes_entry.get())
+    seconds = int(seconds_entry.get())
+
+    count = hours * 3600 + minutes * 60 + seconds
+
+    if remaining_time > 0:
+        count_down(remaining_time)
+        title_label.config(text="Work", fg=GREEN)
+        remaining_time = 0
+    elif count > 0:
+        count_down(count)
+        title_label.config(text="Work", fg=GREEN)
