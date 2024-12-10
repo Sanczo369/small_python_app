@@ -103,3 +103,6 @@ seconds_label = Label(text="Seconds", fg="black", bg=YELLOW)
 seconds_label.grid(column=2, row=2)
 seconds_entry = Entry(width=10, justify="center")
 seconds_entry.grid(column=2, row=3)
+
+start_button = Button(text="Start", highlightthickness=0,width=10 ,pady=5 , command=start_timer)
+start_button.grid(column=0, row=4)
