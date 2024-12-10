@@ -71,3 +71,7 @@ def play_tick_sound():
 def play_finish_sound():
     pygame.mixer.music.load(resource_path("./assets/finish.wav"))
     pygame.mixer.music.play()
+
+window = Tk()
+window.title("TimerZen")
+window.config(padx=100, pady=50, bg=YELLOW)
