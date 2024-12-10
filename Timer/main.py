@@ -75,3 +75,6 @@ def play_finish_sound():
 window = Tk()
 window.title("TimerZen")
 window.config(padx=100, pady=50, bg=YELLOW)
+
+title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
+title_label.grid(column=1, row=0)
