@@ -78,3 +78,13 @@ window.config(padx=100, pady=50, bg=YELLOW)
 
 title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
 title_label.grid(column=1, row=0)
+
+canvas_width = 300
+canvas_height = 224
+canvas = Canvas(width=canvas_width, height=canvas_height, bg=YELLOW, highlightthickness=0)
+tomato_img = PhotoImage(file=resource_path("./assets/tomato.png"))
+image_x = canvas_width // 2
+image_y = canvas_height // 2
+canvas.create_image(image_x, image_y, image=tomato_img)
+timer_text = canvas.create_text(image_x, image_y + 20, text="00:00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+canvas.grid(column=1, row=1)
