@@ -98,3 +98,8 @@ minutes_label = Label(text="Minutes", fg="black", bg=YELLOW)
 minutes_label.grid(column=1, row=2)
 minutes_entry = Entry(width=10, justify="center")
 minutes_entry.grid(column=1, row=3)
+
+seconds_label = Label(text="Seconds", fg="black", bg=YELLOW)
+seconds_label.grid(column=2, row=2)
+seconds_entry = Entry(width=10, justify="center")
+seconds_entry.grid(column=2, row=3)
