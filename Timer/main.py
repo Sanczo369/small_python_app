@@ -88,3 +88,8 @@ image_y = canvas_height // 2
 canvas.create_image(image_x, image_y, image=tomato_img)
 timer_text = canvas.create_text(image_x, image_y + 20, text="00:00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1, row=1)
+
+hours_label = Label(text="Hours", fg="black", bg=YELLOW)
+hours_label.grid(column=0, row=2)
+hours_entry = Entry(width=10, justify="center")
+hours_entry.grid(column=0, row=3)
