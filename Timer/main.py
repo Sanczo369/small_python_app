@@ -106,3 +106,6 @@ seconds_entry.grid(column=2, row=3)
 
 start_button = Button(text="Start", highlightthickness=0,width=10 ,pady=5 , command=start_timer)
 start_button.grid(column=0, row=4)
+
+pause_button = Button(text="Pause", highlightthickness=0,pady=5 ,width=10, command=pause_timer)
+pause_button.grid(column=1, row=4)
