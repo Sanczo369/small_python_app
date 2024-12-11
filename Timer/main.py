@@ -68,6 +68,14 @@ def count_down(count):
     if count_sec < 10:
         count_sec = f"0{count_sec}"
 
+    canvas.itemconfig(timer_text, text=f"{count_hours:02d}:{count_min:02d}:{count_sec}")
+
+    elapsed_time = int(hours_entry.get()) * 3600 + int(minutes_entry.get()) * 60 + int(seconds_entry.get()) - count
+    progress = elapsed_time / (int(hours_entry.get()) * 3600 + int(minutes_entry.get()) * 60 + int(seconds_entry.get()))
+    canvas.itemconfig(progress_bar, fill=GREEN)
+    canvas.coords(progress_bar, (0, 0, canvas_width * progress, 30))
+
+
 def pause_timer():
     global is_paused
     is_paused = not is_paused
