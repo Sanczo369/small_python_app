@@ -112,3 +112,6 @@ pause_button.grid(column=1, row=4)
 
 reset_button = Button(text="Reset", highlightthickness=0,pady=5 ,width=10, command=reset_timer)
 reset_button.grid(column=2, row=4)
+
+check_marks = Label(fg=GREEN, bg=YELLOW)
+check_marks.grid(column=1, row=7)
