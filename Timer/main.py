@@ -75,6 +75,19 @@ def count_down(count):
     canvas.itemconfig(progress_bar, fill=GREEN)
     canvas.coords(progress_bar, (0, 0, canvas_width * progress, 30))
 
+    if count > 0:
+        if count % 60 == 0:
+            play_tick_sound()
+        timer = window.after(1000, count_down, count - 1)
+    else:
+        start_timer()
+        play_finish_sound()
+        marks = ""
+        work_sessions = math.floor(reps / 2)
+        for _ in range(work_sessions):
+            marks += "✔"
+        check_marks.config(text=marks)
+
 
 def pause_timer():
     global is_paused
