@@ -109,3 +109,6 @@ start_button.grid(column=0, row=4)
 
 pause_button = Button(text="Pause", highlightthickness=0,pady=5 ,width=10, command=pause_timer)
 pause_button.grid(column=1, row=4)
+
+reset_button = Button(text="Reset", highlightthickness=0,pady=5 ,width=10, command=reset_timer)
+reset_button.grid(column=2, row=4)
