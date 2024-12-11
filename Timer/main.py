@@ -115,3 +115,9 @@ reset_button.grid(column=2, row=4)
 
 check_marks = Label(fg=GREEN, bg=YELLOW)
 check_marks.grid(column=1, row=7)
+
+progress_bar = canvas.create_rectangle(0, 0, 0, 30, fill=GREEN)
+
+pygame.mixer.init()
+
+window.mainloop()
