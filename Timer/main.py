@@ -55,6 +55,19 @@ def start_timer():
         count_down(count)
         title_label.config(text="Work", fg=GREEN)
 
+def count_down(count):
+    global timer, is_paused, remaining_time
+
+    if is_paused:
+        remaining_time = count
+        return
+
+    count_hours = math.floor(count / 3600)
+    count_min = math.floor((count % 3600) / 60)
+    count_sec = (count % 3600) % 60
+    if count_sec < 10:
+        count_sec = f"0{count_sec}"
+
 def pause_timer():
     global is_paused
     is_paused = not is_paused
