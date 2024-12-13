@@ -29,3 +29,9 @@ class Hotel:
         query = "SELECT COUNT(*) FROM clients WHERE age < 18"
         self.cursor.execute(query)
         return self.cursor.fetchone()[0]
+
+    def add_room(self, floor, bed_type, area):
+        query = "INSERT INTO rooms (floor, bed_type, area) VALUES (?, ?, ?)"
+        self.cursor.execute(query, (floor, bed_type, area))
+        self.connection.commit()
+        return self.cursor.lastrowid
