@@ -24,3 +24,8 @@ class Hotel:
         if not result:
             raise ClientNotFoundException(f"Client with ID {client_id} not found.")
         return f"{result[0]} {result[1]}"
+
+    def count_minors(self):
+        query = "SELECT COUNT(*) FROM clients WHERE age < 18"
+        self.cursor.execute(query)
+        return self.cursor.fetchone()[0]
