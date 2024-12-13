@@ -16,3 +16,11 @@ class Hotel:
         self.cursor.execute(query, (first_name, last_name, age))
         self.connection.commit()
         return self.cursor.lastrowid
+
+    def get_client_name(self, client_id):
+        query = "SELECT first_name, last_name FROM clients WHERE client_id = ?"
+        self.cursor.execute(query, (client_id,))
+        result = self.cursor.fetchone()
+        if not result:
+            raise ClientNotFoundException(f"Client with ID {client_id} not found.")
+        return f"{result[0]} {result[1]}"
