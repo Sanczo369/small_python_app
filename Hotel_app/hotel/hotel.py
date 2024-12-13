@@ -35,3 +35,11 @@ class Hotel:
         self.cursor.execute(query, (floor, bed_type, area))
         self.connection.commit()
         return self.cursor.lastrowid
+
+    def get_room_area(self, room_id):
+        query = "SELECT area FROM rooms WHERE room_id = ?"
+        self.cursor.execute(query, (room_id,))
+        result = self.cursor.fetchone()
+        if not result:
+            raise RoomNotFoundException(f"Room with ID {room_id} not found.")
+        return result[0]
