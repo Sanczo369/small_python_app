@@ -43,3 +43,8 @@ class Hotel:
         if not result:
             raise RoomNotFoundException(f"Room with ID {room_id} not found.")
         return result[0]
+
+    def count_large_bed_rooms_on_floor(self, floor):
+        query = "SELECT COUNT(*) FROM rooms WHERE floor = ? AND bed_type = 'king'"
+        self.cursor.execute(query, (floor,))
+        return self.cursor.fetchone()[0]
