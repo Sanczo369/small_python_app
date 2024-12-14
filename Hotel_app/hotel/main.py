@@ -24,3 +24,11 @@ def main():
     # Powierzchnia pokoju
     area = hotel.get_room_area(room_id)
     print(f"Powierzchnia pokoju: {area} m2")
+
+    # Pokoje z dużym łóżkiem na piętrze
+    large_beds = hotel.count_large_bed_rooms_on_floor(2)
+    print(f"Liczba pokoi z dużym łóżkiem na piętrze 2: {large_beds}")
+
+
+if __name__ == "__main__":
+    main()
