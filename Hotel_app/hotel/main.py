@@ -16,3 +16,7 @@ def main():
     # Liczba niepełnoletnich
     minors = hotel.count_minors()
     print(f"Liczba niepełnoletnich klientów: {minors}")
+
+    # Dodaj pokój
+    room_id = hotel.add_room(2, "queen", 22.0)
+    print(f"Dodano pokój o ID: {room_id}")
