@@ -12,3 +12,7 @@ def main():
     # Pobierz imię i nazwisko klienta
     name = hotel.get_client_name(client_id)
     print(f"Imię i nazwisko klienta: {name}")
+
+    # Liczba niepełnoletnich
+    minors = hotel.count_minors()
+    print(f"Liczba niepełnoletnich klientów: {minors}")
