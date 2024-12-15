@@ -4,3 +4,10 @@ CREATE TABLE clients (
     last_name TEXT NOT NULL,
     age INTEGER NOT NULL
 );
+
+CREATE TABLE rooms (
+    room_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    floor INTEGER NOT NULL,
+    bed_type TEXT NOT NULL,
+    area REAL NOT NULL
+);
