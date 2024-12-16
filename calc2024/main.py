@@ -14,3 +14,8 @@ def show(value):
     global equation
     equation+=value
     label_result.config(text=equation)
+
+def clear():
+    global equation
+    equation =""
+    label_result.config(text=equation)
