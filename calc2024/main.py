@@ -9,3 +9,8 @@ root.configure(bg="#17161b")
 root.iconbitmap(r'C:\coding in different different languages\PYTHON\CALCULATOR\Calculator-icon.ico')
 
 equation=""
+
+def show(value):
+    global equation
+    equation+=value
+    label_result.config(text=equation)
