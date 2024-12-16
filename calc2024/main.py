@@ -30,3 +30,6 @@ def calculate():
             result="Error"
             equation= ""
         label_result.config(text=result)
+
+label_result=Label(root,width=25,height=2,text="",font=("arial",30))
+label_result.pack()
