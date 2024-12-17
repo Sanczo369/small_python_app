@@ -27,3 +27,8 @@ class piano():
         else:
             Button(frame1, padx=10, pady=100, bg="white", fg="black", relief=RAISED, borderwidth=2,
                    command=lambda: self.PianoSound(self.index), cursor="hand2").grid(row=0, column=self.index)
+
+if __name__ == '__main__':
+        for i in range(1,24):
+                piano(i)
+root.mainloop()
