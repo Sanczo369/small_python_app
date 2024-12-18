@@ -80,3 +80,7 @@ class Pomodoro:
         btn_break = tk.Button(self.root, text="Break", bd=5, command=self.break_, bg="red", font=("arial", 15, "bold")).place(x=240, y=380)
 
         self.root.mainloop()
+
+if __name__ == '__main__':
+	pomo = Pomodoro(tk.Tk())
+	pomo.main()
