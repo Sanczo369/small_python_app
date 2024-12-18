@@ -17,15 +17,29 @@ class Pomodoro:
         self.root.update()
         time.sleep(1)
 
-        def work(self):
-            timer = 25 * 60
-            while timer >= 0:
-                pomo.work_break(timer)
-                if timer == 0:
-                    # once work is done play
-                    # a sound and switch for break
-                    playsound("sound.ogg")
-                    messagebox.showinfo(
-                        "Good Job", "Take A Break, \
-        				nClick Break Button")
-                timer -= 1
+    def work(self):
+        timer = 25 * 60
+        while timer >= 0:
+        pomo.work_break(timer)
+        if timer == 0:
+            # once work is done play
+            # a sound and switch for break
+            playsound("sound.ogg")
+            messagebox.showinfo(
+            "Good Job", "Take A Break, \
+            nClick Break Button")
+        timer -= 1
+
+
+    def break_(self):
+        timer = 5 * 60
+        while timer >= 0:
+            pomo.work_break(timer)
+            if timer == 0:
+                # once break is done,
+                # switch back to work
+                playsound("sound.ogg")
+                messagebox.showinfo(
+                    "Times Up", "Get Back To Work, \
+                    nClick Work Button")
+            timer -= 1
