@@ -50,3 +50,19 @@ class Pomodoro:
         self.root.geometry("450x455")
         self.root.resizable(False, False)
         self.root.title("Pomodoro Timer")
+
+        # label
+        self.min = tk.StringVar(self.root)
+        self.min.set("25")
+        self.sec = tk.StringVar(self.root)
+        self.sec.set("00")
+
+        self.min_label = tk.Label(self.root,
+                                  textvariable=self.min, font=(
+                "arial", 22, "bold"), bg="red", fg='black')
+        self.min_label.pack()
+
+        self.sec_label = tk.Label(self.root,
+                                  textvariable=self.sec, font=(
+                "arial", 22, "bold"), bg="black", fg='white')
+        self.sec_label.pack()
