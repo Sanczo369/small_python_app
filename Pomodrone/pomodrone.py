@@ -43,3 +43,10 @@ class Pomodoro:
                     "Times Up", "Get Back To Work, \
                     nClick Work Button")
             timer -= 1
+
+
+    def main(self):
+        # GUI window configuration
+        self.root.geometry("450x455")
+        self.root.resizable(False, False)
+        self.root.title("Pomodoro Timer")
