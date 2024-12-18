@@ -66,3 +66,10 @@ class Pomodoro:
                                   textvariable=self.sec, font=(
                 "arial", 22, "bold"), bg="black", fg='white')
         self.sec_label.pack()
+
+        # add background image for GUI using Canvas widget
+        canvas = tk.Canvas(self.root)
+        canvas.pack(expand=True, fill="both")
+        img = Image.open('pomodoro.jpg')
+        bg = ImageTk.PhotoImage(img)
+        canvas.create_image(90, 10, image=bg, anchor="nw")
