@@ -51,3 +51,7 @@ types = Combobox(root, width = 13, textvariable = t, state='readonly',font=('ver
 types['values'] = ('Full Name', 'First Name','Last Name')
 types.place(x=170,y=90)
 types.current(0)
+
+
+button = Button(root,text="Search",font=('verdana','10','bold'),command=search)
+button.place(x=320,y=85)
