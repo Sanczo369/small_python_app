@@ -43,3 +43,11 @@ gender = Combobox(root, width = 13, textvariable = g, state='readonly',font=('ve
 gender['values'] = ('Male', 'Female')
 gender.place(x=10,y=90)
 gender.current(0)
+
+l2 = Label(root,text="Type",font=('verdana',10,'bold'))
+l2.place(x=170,y=60)
+t = tk.StringVar()
+types = Combobox(root, width = 13, textvariable = t, state='readonly',font=('verdana',10,'bold'),)
+types['values'] = ('Full Name', 'First Name','Last Name')
+types.place(x=170,y=90)
+types.current(0)
