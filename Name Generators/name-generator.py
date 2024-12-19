@@ -55,3 +55,13 @@ types.current(0)
 
 button = Button(root,text="Search",font=('verdana','10','bold'),command=search)
 button.place(x=320,y=85)
+
+
+text = ScrolledText(root,width=40,height=3)
+text['font'] = ("verdana",10,'bold')
+text.place(x=10,y=130)
+
+
+
+
+root.mainloop()
