@@ -35,3 +35,11 @@ def search():
 
 l =  Label(root, text="Name Generators",font=('verdana',15,'bold'),bg="black",fg="white")
 l.place(x=110,y=10)
+
+l1 = Label(root,text="Gender",font=('verdana',10,'bold'))
+l1.place(x=10,y=60)
+g = tk.StringVar()
+gender = Combobox(root, width = 13, textvariable = g, state='readonly',font=('verdana',10,'bold'),)
+gender['values'] = ('Male', 'Female')
+gender.place(x=10,y=90)
+gender.current(0)
