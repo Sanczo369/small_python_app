@@ -32,3 +32,6 @@ def search():
     elif Gender == 'Female' and Type == "Last Name":
         name = names.get_last_name()
         text.insert('end', name)
+
+l =  Label(root, text="Name Generators",font=('verdana',15,'bold'),bg="black",fg="white")
+l.place(x=110,y=10)
