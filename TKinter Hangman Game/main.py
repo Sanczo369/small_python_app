@@ -24,3 +24,7 @@ class Application(Frame):
         # Create entry widget to accept Guess
         self.guess_ent = Entry(self)
         self.guess_ent.grid(row=2, column=1, sticky=W)
+
+        # Create a space
+        self.gap1_lbl = Label(self, text = " ")
+        self.gap1_lbl.grid(row = 3, column = 0, sticky = W)
