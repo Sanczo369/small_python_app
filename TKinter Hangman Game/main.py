@@ -20,3 +20,7 @@ class Application(Frame):
         # Create label for entering Guess
         self.guess_lbl = Label(self, text="Enter your Guess:")
         self.guess_lbl.grid(row=2, column=0, sticky=W)
+
+        # Create entry widget to accept Guess
+        self.guess_ent = Entry(self)
+        self.guess_ent.grid(row=2, column=1, sticky=W)
