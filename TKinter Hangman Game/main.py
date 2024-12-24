@@ -34,3 +34,7 @@ class Application(Frame):
         # Creating a submit button
         self.submit_bttn = Button(self, text="Submit", command=self.reveal)
         self.submit_bttn.grid(row=6, column=0, sticky=W)
+
+        # Create a space
+        self.gap2_lbl = Label(self, text = " ")
+        self.gap2_lbl.grid(row = 7, column = 0, sticky = W)
