@@ -38,3 +38,9 @@ class Application(Frame):
         # Create a space
         self.gap2_lbl = Label(self, text = " ")
         self.gap2_lbl.grid(row = 7, column = 0, sticky = W)
+
+        """ RESET """
+
+        # Creating a reset button
+        self.reset_bttn = Button(self, text="Reset", command=self.reset)
+        self.reset_bttn.grid(row=6, column=1, sticky=W)
