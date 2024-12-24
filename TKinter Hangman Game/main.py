@@ -50,3 +50,7 @@ class Application(Frame):
         # Create text widget to display welcome_msg
         self.display1_txt = Text(self, width=45, height=1, wrap=WORD)
         self.display1_txt.grid(row=8, column=0, columnspan=2, sticky=W)
+
+        # Create text widget to display guess_msg
+        self.display2_txt = Text(self, width=45, height=1, wrap=WORD)
+        self.display2_txt.grid(row=9, column=0, columnspan=2, sticky=W)
