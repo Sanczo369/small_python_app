@@ -62,3 +62,7 @@ class Application(Frame):
         # Create text widget to display tries_msg
         self.display4_txt = Text(self, width=45, height=2, wrap=WORD)
         self.display4_txt.grid(row=11, column=0, columnspan=2, sticky=W)
+
+        # Create text widget to display word_msg
+        self.display5_txt = Text(self, width=45, height=2, wrap=WORD)
+        self.display5_txt.grid(row=12, column=0, columnspan=2, sticky=W)
