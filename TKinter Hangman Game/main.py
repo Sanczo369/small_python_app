@@ -44,3 +44,9 @@ class Application(Frame):
         # Creating a reset button
         self.reset_bttn = Button(self, text="Reset", command=self.reset)
         self.reset_bttn.grid(row=6, column=1, sticky=W)
+
+        """ Display """
+
+        # Create text widget to display welcome_msg
+        self.display1_txt = Text(self, width=45, height=1, wrap=WORD)
+        self.display1_txt.grid(row=8, column=0, columnspan=2, sticky=W)
