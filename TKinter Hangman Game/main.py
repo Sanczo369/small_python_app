@@ -92,3 +92,16 @@ class Application(Frame):
                         result_msg = "incorrect"
                     if guesses == 0:
                         result_msg = "G A M E  O V E R"
+
+        # Display
+        self.display1_txt.delete(0.0, END)
+        self.display1_txt.insert(0.0, welcome_msg)
+        self.display2_txt.delete(0.0, END)
+        self.display2_txt.insert(0.0, guess_msg)
+        self.display3_txt.delete(0.0, END)
+        self.display3_txt.insert(0.0, result_msg)
+        self.display4_txt.delete(0.0, END)
+        self.display4_txt.insert(0.0, tries_msg)
+        self.display5_txt.delete(0.0, END)
+        self.display5_txt.insert(0.0, word)
+        Tk.update(self)
