@@ -112,3 +112,9 @@ class Application(Frame):
         self.display3_txt.delete(0.0, END)
         self.display2_txt.delete(0.0, END)
         self.display1_txt.delete(0.0, END)
+
+# Main manager
+root = Tk()
+root.title("Guessing Game")
+root.geometry("300x225")
+app = Application(root)
