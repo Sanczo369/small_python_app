@@ -80,3 +80,15 @@ class Application(Frame):
                 welcome_msg = "Welcome!"
                 guess_msg = letter
                 print(letter)
+                for i in range (0, len(sword)):
+                    if sword[i] == letter:
+                        temp = i
+                        word = word[:temp] + letter +word[temp+1:]
+                        word_msg = word
+                    if word == sword:
+                        result_msg = "Congratulations! You win!"
+                    if letter not in sword:
+                        guesses = guesses - 1
+                        result_msg = "incorrect"
+                    if guesses == 0:
+                        result_msg = "G A M E  O V E R"
