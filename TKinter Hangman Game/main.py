@@ -66,3 +66,10 @@ class Application(Frame):
         # Create text widget to display word_msg
         self.display5_txt = Text(self, width=45, height=2, wrap=WORD)
         self.display5_txt.grid(row=12, column=0, columnspan=2, sticky=W)
+
+    def reveal(self):
+        global words
+        global sword
+        global word
+        guesses = 10
+        letter = self.guess_ent.get()
