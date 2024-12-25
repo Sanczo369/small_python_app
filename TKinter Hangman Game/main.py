@@ -105,3 +105,10 @@ class Application(Frame):
         self.display5_txt.delete(0.0, END)
         self.display5_txt.insert(0.0, word)
         Tk.update(self)
+
+    def reset(self):
+        global tries
+        self.display4_txt.delete(0.0, END)
+        self.display3_txt.delete(0.0, END)
+        self.display2_txt.delete(0.0, END)
+        self.display1_txt.delete(0.0, END)
