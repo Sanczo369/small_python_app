@@ -73,3 +73,10 @@ class Application(Frame):
         global word
         guesses = 10
         letter = self.guess_ent.get()
+        while guesses != 0:
+            for i in range(0, 1):
+                word_msg = word
+                tries_msg = guesses
+                welcome_msg = "Welcome!"
+                guess_msg = letter
+                print(letter)
