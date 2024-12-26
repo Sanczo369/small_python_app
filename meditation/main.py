@@ -41,3 +41,10 @@ class Meditation:
         self.StartButton()
         self.TimeButton()
         self.RemainingTime(self.defaultTime)
+
+    # Function to reset the default values
+    def Reset(self):
+        self.onHomePage = True
+        self.inhale = True
+        self.exhale = False
+        self.defaultTime = st.baseTime
