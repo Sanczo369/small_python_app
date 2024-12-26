@@ -18,3 +18,8 @@ class Meditation:
         self.window.title('Meditation App')
         self.window.resizable(width = False, height = False)
         self.window.configure(bg=st.color2)
+
+        # Tkinter Frame
+        self.frame = Frame(self.window, bg=st.color1, \
+        width=800, height=450)
+        self.frame.place(x=0, y=0)
