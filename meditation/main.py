@@ -23,3 +23,9 @@ class Meditation:
         self.frame = Frame(self.window, bg=st.color1, \
         width=800, height=450)
         self.frame.place(x=0, y=0)
+
+        # Default values
+        self.inhale = True
+        self.exhale = False
+        self.onHomePage = False
+        self.defaultTime = st.baseTime
