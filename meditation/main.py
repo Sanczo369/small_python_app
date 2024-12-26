@@ -29,3 +29,6 @@ class Meditation:
         self.exhale = False
         self.onHomePage = False
         self.defaultTime = st.baseTime
+
+        # Calling Home Page
+        self.HomePage()
