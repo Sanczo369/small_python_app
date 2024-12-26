@@ -32,3 +32,12 @@ class Meditation:
 
         # Calling Home Page
         self.HomePage()
+
+    # Manage the Home/Welcoming Window
+    def HomePage(self):
+        self.Reset()
+        self.ClearScreen()
+        self.BgImage(st.bgImage1)
+        self.StartButton()
+        self.TimeButton()
+        self.RemainingTime(self.defaultTime)
