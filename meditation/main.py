@@ -84,3 +84,11 @@ class Meditation:
         bg=st.color2, border=0, cursor='hand2', \
         command=self.SecondWindow)
         self.button.place(x=320, y=270)
+
+
+    # Label to show the remaining time of mediation
+    def RemainingTime(self, rTime):
+        mins, secs = divmod(rTime, 60)
+        self.timeLabel = Label(self.frame, text=f"{mins}:{secs}", \
+        bg=st.color2, fg=st.color3 ,font=(st.font3, 15))
+        self.timeLabel.place(x=727, y=25)
