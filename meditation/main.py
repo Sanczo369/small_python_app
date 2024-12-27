@@ -92,3 +92,22 @@ class Meditation:
         self.timeLabel = Label(self.frame, text=f"{mins}:{secs}", \
         bg=st.color2, fg=st.color3 ,font=(st.font3, 15))
         self.timeLabel.place(x=727, y=25)
+
+    # A different window for setting the mediation period
+    def SecondWindow(self):
+        self.newWindow = Tk()
+        self.newWindow.title("Set Time")
+        self.newWindow.geometry(st.resolution)
+
+        self.totalTime = IntVar()
+
+        self.chosenTime = ttk.Combobox(self.newWindow, \
+        textvariable=self.totalTime, values=st.timeList, \
+        font=(st.font3, 20), width=8)
+        self.chosenTime.set(1)
+        self.chosenTime.place(x=160, y=110)
+
+        setTimeBtn = Button(self.newWindow, text="Set Time", \
+        font=(st.font4, 11), bg=st.color5, fg=st.color2, \
+        cursor='hand2', command=self.GetTime)
+        setTimeBtn.place(x=185, y=150)
