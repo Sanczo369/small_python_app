@@ -73,3 +73,14 @@ class Meditation:
         bg=st.color2, border=0, cursor='hand2', \
         command=self.MeditationPage)
         self.button.place(x=320, y=120)
+
+    # Button for setting the duration of mediation
+    def TimeButton(self):
+        image = Image.open(st.setTimeBtn)
+        resizedImg = image.resize((130,40))
+        self.img3 = ImageTk.PhotoImage(resizedImg)
+
+        self.button = Button(self.frame, image=self.img3, \
+        bg=st.color2, border=0, cursor='hand2', \
+        command=self.SecondWindow)
+        self.button.place(x=320, y=270)
