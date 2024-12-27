@@ -122,3 +122,22 @@ class Meditation:
 
         self.timeLabel.config(text=f"{mins}:{secs}")
         self.timeLabel.update()
+
+    # It manages the Mediation/Second page and all its widgets
+    def MeditationPage(self):
+        self.onHomePage = False
+        self.ClearScreen()
+        self.BgImage(st.bgImage2)
+
+        self.breathLabel = Label(self.frame, text="", \
+        bg=st.color3, fg=st.color2 ,font=(st.font1, 28))
+        self.breathLabel.place(x=387, y=172)
+
+        self.statusLabel = Label(self.frame, text="", \
+        bg=st.color2, fg=st.color3 ,font=(st.font4, 20))
+        self.statusLabel.place(x=360, y=325)
+
+        self.RemainingTime(self.defaultTime)
+
+        # Call the function for Multi-Threading
+        self.MultiThreading()
