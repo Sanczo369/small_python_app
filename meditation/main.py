@@ -111,3 +111,14 @@ class Meditation:
         font=(st.font4, 11), bg=st.color5, fg=st.color2, \
         cursor='hand2', command=self.GetTime)
         setTimeBtn.place(x=185, y=150)
+
+    # It takes the time chosen by the user, and calculates in minutes
+    # and seconds, and displays on the time label.
+    def GetTime(self):
+        self.defaultTime = int(self.chosenTime.get()) * 60
+        self.newWindow.destroy()
+
+        mins, secs = divmod(self.defaultTime, 60)
+
+        self.timeLabel.config(text=f"{mins}:{secs}")
+        self.timeLabel.update()
