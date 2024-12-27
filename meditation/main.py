@@ -48,3 +48,17 @@ class Meditation:
         self.inhale = True
         self.exhale = False
         self.defaultTime = st.baseTime
+
+    # Clear all widgets from the Tkinter Frame
+    def ClearScreen(self):
+        for widget in self.frame.winfo_children():
+            widget.destroy()
+
+   # Displays the background image
+    def BgImage(self, img):
+        image = Image.open(img)
+        resizedImg = image.resize((st.width, st.height))
+        self.img1 = ImageTk.PhotoImage(resizedImg)
+
+        label = Label(self.frame, image=self.img1)
+        label.pack()
