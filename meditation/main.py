@@ -62,3 +62,14 @@ class Meditation:
 
         label = Label(self.frame, image=self.img1)
         label.pack()
+
+    # Button to Start Meditation
+    def StartButton(self):
+        image = Image.open(st.startBtn)
+        resizedImg = image.resize((130,130))
+        self.img2 = ImageTk.PhotoImage(resizedImg)
+
+        self.button = Button(self.frame, image=self.img2, \
+        bg=st.color2, border=0, cursor='hand2', \
+        command=self.MeditationPage)
+        self.button.place(x=320, y=120)
