@@ -157,3 +157,48 @@ class Meditation:
         self.button = Button(self.frame, image=self.img4, \
         bg=st.color3, border=0, cursor='hand2', command=self.HomePage)
         self.button.place(x=20, y=20)
+
+
+    # Function to handle time management tasks
+    def CountDown(self):
+        try:
+            self.UpdateStatus("Relax!")
+            process = self.PlayVoice(st.Relax)
+            time.sleep(4)
+            process.terminate()
+
+            self.HomeButton()
+
+            while self.defaultTime > 0:
+                # Inhale CountDown
+                if self.inhale:
+                    # A separate process to play 'Inhale' voice
+                    process = self.PlayVoice(st.Inhale)
+                    # Countdown inhale time
+                    self.CountInhale()
+                    # Terminate the process
+                    process.terminate()
+
+                # Exhale CountDown
+                elif self.exhale:
+                    # A separate process to play 'Exhale' voice
+                    process = self.PlayVoice(st.Exhale)
+                    # Countdown exhale time
+                    self.CountExhale()
+                    # Terminate the process
+                    process.terminate()
+
+                # Time is up
+                if self.defaultTime <= 0:
+                    self.UpdateStatus("Done!!")
+                    self.UpdateTime(0, 0)
+
+                # To Break the outer loop:
+                # If the user presses the Home button
+                # during meditation.
+                if self.onHomePage:
+                    break
+
+        # Catch and display any exceptions, if arises.
+        except Exception as es:
+            messagebox.showerror("Error!", f"Error due to {es}")
