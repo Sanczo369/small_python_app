@@ -267,3 +267,8 @@ class Meditation:
     def UpdateStatus(self, msg):
         self.statusLabel.config(text=msg)
         self.statusLabel.update()
+
+    # Function to update the remaining time
+    def UpdateTime(self, mins, secs):
+        self.timeLabel.config(text=f"{mins}:{secs}")
+        self.timeLabel.update()
