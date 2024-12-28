@@ -262,3 +262,8 @@ class Meditation:
                 exhale -= 1
                 self.defaultTime -= 1
                 time.sleep(1)
+
+    # Function to update the status: Inhale/Exhale
+    def UpdateStatus(self, msg):
+        self.statusLabel.config(text=msg)
+        self.statusLabel.update()
