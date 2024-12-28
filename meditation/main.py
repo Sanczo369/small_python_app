@@ -232,3 +232,33 @@ class Meditation:
                 inhale -= 1
                 self.defaultTime -= 1
                 time.sleep(1)
+
+    # Function to Count Exhale time repeatedly
+    # until the time ends up.
+    def CountExhale(self):
+        self.exhale = False
+        self.inhale = True
+
+        # getting the default exhale time
+        exhale = st.exhaleTime
+
+        # Update the Status with 'Exhale' text
+        self.UpdateStatus("Exhale")
+
+        while exhale > 0:
+            # To Break the inner loop: If the user presses
+            # the Home button during exhaling.
+            if self.onHomePage:
+                break
+            else:
+                # Update the remaining time of meditation
+                mins, secs = divmod(self.defaultTime, 60)
+                self.UpdateTime(mins, secs)
+
+                # Update the remaining exhale time
+                self.UpdateBreathTime(exhale)
+
+                # Decrease time by 1 per second
+                exhale -= 1
+                self.defaultTime -= 1
+                time.sleep(1)
