@@ -147,3 +147,13 @@ class Meditation:
     def MultiThreading(self):
         self.x = Thread(target=self.CountDown, daemon=True)
         self.x.start()
+
+    # Creates a Tkinter Button to return to the Home/Welcoming Page
+    def HomeButton(self):
+        image = Image.open(st.homeBtn)
+        resizedImg = image.resize((60, 22))
+        self.img4 = ImageTk.PhotoImage(resizedImg)
+
+        self.button = Button(self.frame, image=self.img4, \
+        bg=st.color3, border=0, cursor='hand2', command=self.HomePage)
+        self.button.place(x=20, y=20)
