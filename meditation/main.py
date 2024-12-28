@@ -202,3 +202,33 @@ class Meditation:
         # Catch and display any exceptions, if arises.
         except Exception as es:
             messagebox.showerror("Error!", f"Error due to {es}")
+
+    # Function to Count Inhale time repeatedly
+    # until the time ends up.
+    def CountInhale(self):
+        self.inhale = False
+        self.exhale = True
+
+        # getting the default inhale time
+        inhale = st.inhaleTime
+
+        # Update the Status with 'Inhale' text
+        self.UpdateStatus("Inhale")
+
+        while inhale > 0:
+            # To Break the inner loop: If the user presses
+            # the Home button during inhaling.
+            if self.onHomePage:
+                break
+            else:
+                # Update the remaining time of meditation
+                mins, secs = divmod(self.defaultTime, 60)
+                self.UpdateTime(mins, secs)
+
+                # Update the remaining inhale time
+                self.UpdateBreathTime(inhale)
+
+                # Decrease time by 1 per second
+                inhale -= 1
+                self.defaultTime -= 1
+                time.sleep(1)
