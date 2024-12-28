@@ -141,3 +141,9 @@ class Meditation:
 
         # Call the function for Multi-Threading
         self.MultiThreading()
+
+ # Function to create a different thread to handle
+    # time management tasks.
+    def MultiThreading(self):
+        self.x = Thread(target=self.CountDown, daemon=True)
+        self.x.start()
