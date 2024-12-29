@@ -276,3 +276,10 @@ class Meditation:
     def UpdateBreathTime(self, breath):
         self.breathLabel.config(text=f"{breath}")
         self.breathLabel.update()
+
+    # It plays a .mp3 file to express the current
+    # status of meditation: 'Inhale' or 'Exhale'.
+    def PlayVoice(self, voice):
+        process = mp.Process(target=playsound, args=(voice,))
+        process.start()
+        return process
