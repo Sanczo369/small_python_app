@@ -3,3 +3,6 @@
 # Screen Size
 width = 800
 height = 450
+
+# Secondary screen size
+resolution = "480x320"
