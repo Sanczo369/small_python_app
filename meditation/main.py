@@ -272,3 +272,7 @@ class Meditation:
     def UpdateTime(self, mins, secs):
         self.timeLabel.config(text=f"{mins}:{secs}")
         self.timeLabel.update()
+
+    def UpdateBreathTime(self, breath):
+        self.breathLabel.config(text=f"{breath}")
+        self.breathLabel.update()
