@@ -283,3 +283,11 @@ class Meditation:
         process = mp.Process(target=playsound, args=(voice,))
         process.start()
         return process
+
+# The main function
+if __name__ == "__main__":
+    # Instance of Tk class
+    root = Tk()
+    # Object of Meditation class
+    obj = Meditation(root)
+    root.mainloop()
