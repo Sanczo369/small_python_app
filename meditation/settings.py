@@ -10,3 +10,8 @@ resolution = "480x320"
 # Background Images
 bgImage1 = "Images/BgImage_1.png"
 bgImage2 = "Images/BgImage_2.png"
+
+# Button images
+startBtn = "Images/StartBtn.png"
+setTimeBtn = "Images/SetTimeBtn.png"
+homeBtn = "Images/HomeBtn.png"
