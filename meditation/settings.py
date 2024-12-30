@@ -32,3 +32,12 @@ font1 = "Times new roman"
 font2 = "Helvetica"
 font3 = "Courier"
 font4 = "Kokila"
+
+
+# Color choices
+color1 = "#63afdb"
+color2 = "white"
+color3 = "black"
+color4 = "yellow"
+color5 = "green"
+color6 = "sky blue"
