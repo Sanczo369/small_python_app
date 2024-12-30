@@ -23,3 +23,6 @@ timeList = [1, 3, 5, 7, 10]
 # Try to keep it as it is. Inhale+Exhale = must be 10.
 inhaleTime = 5
 exhaleTime = 5
+
+# Default meditation time in seconds
+baseTime = 60
