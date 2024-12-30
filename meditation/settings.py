@@ -15,3 +15,6 @@ bgImage2 = "Images/BgImage_2.png"
 startBtn = "Images/StartBtn.png"
 setTimeBtn = "Images/SetTimeBtn.png"
 homeBtn = "Images/HomeBtn.png"
+
+# List of Time in minutes. You can modify it.
+timeList = [1, 3, 5, 7, 10]
