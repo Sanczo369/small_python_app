@@ -41,3 +41,8 @@ color3 = "black"
 color4 = "yellow"
 color5 = "green"
 color6 = "sky blue"
+
+# Voice Cover
+Relax = "Voices/Relax.mp3"
+Inhale = "Voices/Inhale.mp3"
+Exhale = "Voices/Exhale.mp3"
