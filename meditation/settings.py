@@ -26,3 +26,9 @@ exhaleTime = 5
 
 # Default meditation time in seconds
 baseTime = 60
+
+# Font choices
+font1 = "Times new roman"
+font2 = "Helvetica"
+font3 = "Courier"
+font4 = "Kokila"
