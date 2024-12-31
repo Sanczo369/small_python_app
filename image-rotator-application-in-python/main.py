@@ -18,3 +18,14 @@ class Image_Rotator:
 
         self.width = 740
         self.height = 480
+
+        # ==============================================
+        # ================Menubar Section===============
+        # ==============================================
+        # Creating Menubar
+        self.menubar = Menu(self.window)
+
+        # Adding Edit Menu and its sub menus
+        edit = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='Open', menu=edit)
+        edit.add_command(label='Open Image',command=self.open_image)
