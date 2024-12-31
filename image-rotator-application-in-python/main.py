@@ -29,3 +29,8 @@ class Image_Rotator:
         edit = Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label='Open', menu=edit)
         edit.add_command(label='Open Image',command=self.open_image)
+
+        # Adding About Menu
+        about = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='About', menu=about)
+        about.add_command(label='About', command=self.about)
