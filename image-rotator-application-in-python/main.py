@@ -91,3 +91,14 @@ class Image_Rotator:
             cv2.imwrite(self.Image_Path, self.rot_image)
             self.clear_screen()
             self.show_image()
+
+    # Method to rotate the image 90-degree anti-clockwise
+    def rotate_left(self):
+        if self.image_name == None:
+            pass
+        else:
+            data = cv2.imread(self.Image_Path)
+            self.rot_image = cv2.rotate(data, cv2.ROTATE_90_COUNTERCLOCKWISE)
+            cv2.imwrite(self.Image_Path, self.rot_image)
+            self.clear_screen()
+            self.show_image()
