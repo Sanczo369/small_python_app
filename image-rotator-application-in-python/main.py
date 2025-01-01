@@ -68,3 +68,15 @@ class Image_Rotator:
             self.image_name = os.path.basename(self.Image_Path)
             if self.image_name != '':
                 self.show_image()
+
+    # Show the selected Image
+    def show_image(self):
+        image = Image.open(self.Image_Path)
+        resized_image = image.resize((self.width, self.height))
+
+        # Create an object of tkinter ImageTk
+        self.img = ImageTk.PhotoImage(resized_image)
+
+        # Create a Label Widget to display the text or Image
+        label = Label(self.frame_1, image=self.img)
+        label.pack()
