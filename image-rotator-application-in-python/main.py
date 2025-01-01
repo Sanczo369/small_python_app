@@ -57,3 +57,14 @@ class Image_Rotator:
         width=self.width,height=self.height)
         self.frame_1.pack()
         self.frame_1.place(anchor='center', relx=0.5, rely=0.5)
+
+    # Onen an Image
+    def open_image(self):
+        self.clear_screen()
+        self.Image_Path =
+        filedialog.askopenfilename(title = "Select an Image",
+        filetypes = (("Image files", "*.jpg *.jpeg *.png"),))
+        if len(self.Image_Path) != 0:
+            self.image_name = os.path.basename(self.Image_Path)
+            if self.image_name != '':
+                self.show_image()
