@@ -80,3 +80,14 @@ class Image_Rotator:
         # Create a Label Widget to display the text or Image
         label = Label(self.frame_1, image=self.img)
         label.pack()
+
+    # Method to rotate the image 90-degree clockwise
+    def rotate_right(self):
+        if self.image_name == None:
+            pass
+        else:
+            data = cv2.imread(self.Image_Path)
+            self.rot_image = cv2.rotate(data, cv2.ROTATE_90_CLOCKWISE)
+            cv2.imwrite(self.Image_Path, self.rot_image)
+            self.clear_screen()
+            self.show_image()
