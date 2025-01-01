@@ -102,3 +102,8 @@ class Image_Rotator:
             cv2.imwrite(self.Image_Path, self.rot_image)
             self.clear_screen()
             self.show_image()
+
+    # Remove all widgets from the frame_1
+    def clear_screen(self):
+        for widget in self.frame_1.winfo_children():
+            widget.destroy()
