@@ -107,3 +107,8 @@ class Image_Rotator:
     def clear_screen(self):
         for widget in self.frame_1.winfo_children():
             widget.destroy()
+
+    # About window
+    def about(self):
+        messagebox.showinfo("Image Rotator",
+        "Image Rotator AppnDeveloped by Subhankar Rakshit")
