@@ -112,3 +112,8 @@ class Image_Rotator:
     def about(self):
         messagebox.showinfo("Image Rotator",
         "Image Rotator AppnDeveloped by Subhankar Rakshit")
+
+    # It destroys the main GUI window of the
+    # application
+    def Exit(self):
+        self.window.destroy()
