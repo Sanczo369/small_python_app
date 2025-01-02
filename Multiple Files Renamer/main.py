@@ -31,3 +31,6 @@ class File_Renamer:
         width=280, height=70)
         self.frame_1.pack()
         self.frame_1.place(x=20, y=20)
+
+        # Calling the function to display the logo
+        self.Display_Logo()
