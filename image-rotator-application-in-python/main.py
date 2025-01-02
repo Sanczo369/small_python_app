@@ -117,3 +117,16 @@ class Image_Rotator:
     # application
     def Exit(self):
         self.window.destroy()
+
+
+if __name__ == "__main__":
+    root = Tk()
+
+    img = None
+    rot_image = None
+    image_name = None
+    image_path = None
+
+    # Creating a Image_Rotator class object
+    obj = Image_Rotator(root)
+    root.mainloop()
