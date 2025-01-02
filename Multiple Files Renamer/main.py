@@ -17,3 +17,11 @@ class File_Renamer:
         self.window.title('File Renamer - PySeek')
         self.window.resizable(width = False, height = False)
         self.window.configure(bg='gray90')
+
+        # Declaring some variables
+        self.Selected_Folder = ''
+        self.SaveTo_Loc = ''
+        self.File_List = list()
+        # Python Dictionary to store the file name corresponding
+        # with the file path
+        self.File_Dict = dict()
