@@ -25,3 +25,9 @@ class File_Renamer:
         # Python Dictionary to store the file name corresponding
         # with the file path
         self.File_Dict = dict()
+
+        # Frame 1: For the Logo
+        self.frame_1 = Frame(self.window,bg='gray90',\
+        width=280, height=70)
+        self.frame_1.pack()
+        self.frame_1.place(x=20, y=20)
