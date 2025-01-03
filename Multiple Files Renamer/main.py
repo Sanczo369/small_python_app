@@ -66,3 +66,18 @@ class File_Renamer:
         # Create a Label Widget to display the text or Image
         label = Label(self.frame_1, bg='gray90',image=self.img_1)
         label.pack()
+
+    # This function displays all the widgets in the 'self.frame_2'
+    # related to File Renaming Operation
+    def Main_Window(self):
+        Filetype_Label = Label(self.frame_2, text="File Type: ", \
+        font=("Kokila", 12, 'bold'), bg='white')
+        Filetype_Label.place(x=50, y=30)
+
+        self.f_type = StringVar()
+        # Combo Box for showing the file extensions
+        self.File_Type = ttk.Combobox(self.frame_2, \
+        textvariable=self.f_type, font=("times new roman",13),width=8)
+        self.File_Type['values'] = file_types
+        self.File_Type.current(0)
+        self.File_Type.place(x=150,y=30)
