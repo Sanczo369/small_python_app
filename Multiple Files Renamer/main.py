@@ -46,3 +46,8 @@ class File_Renamer:
         font=("Kokila", 10, 'bold'), bg="dodger blue", \
         fg="white", width=5, command=self.Exit_Window)
         Exit_Btn.place(x=600, y=60)
+
+        # Frame 2: For the Main Window Widgets
+        self.frame_2 = Frame(self.window, bg="white",\
+        width=720,height=480)
+        self.frame_2.place(x=0, y=110)
