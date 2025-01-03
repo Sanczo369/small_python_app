@@ -81,3 +81,14 @@ class File_Renamer:
         self.File_Type['values'] = file_types
         self.File_Type.current(0)
         self.File_Type.place(x=150,y=30)
+
+        # Button for selecting the directory (where
+        # the desired files are presented)
+        Folder_Button = Button(self.frame_2, text="Select Folder", \
+        font=("Kokila", 10, 'bold'), bg="gold", width=10, \
+        command=self.Select_Directory)
+        Folder_Button.place(x=20, y=70)
+
+        self.Folder_Entry = Entry(self.frame_2, \
+        font=("Helvetica", 12), width=30)
+        self.Folder_Entry.place(x=150, y=75)
