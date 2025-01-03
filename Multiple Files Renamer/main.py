@@ -34,3 +34,9 @@ class File_Renamer:
 
         # Calling the function to display the logo
         self.Display_Logo()
+
+        # About Button
+        About_Btn = Button(self.window, text="About", \
+        font=("Kokila", 10, 'bold'), bg="dodger blue", \
+        fg="white", width=5, command=self.About_Window)
+        About_Btn.place(x=600, y=20)
