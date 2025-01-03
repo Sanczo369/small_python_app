@@ -40,3 +40,9 @@ class File_Renamer:
         font=("Kokila", 10, 'bold'), bg="dodger blue", \
         fg="white", width=5, command=self.About_Window)
         About_Btn.place(x=600, y=20)
+
+        # Exit Button
+        Exit_Btn = Button(self.window, text="Exit", \
+        font=("Kokila", 10, 'bold'), bg="dodger blue", \
+        fg="white", width=5, command=self.Exit_Window)
+        Exit_Btn.place(x=600, y=60)
