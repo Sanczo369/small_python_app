@@ -54,3 +54,15 @@ class File_Renamer:
 
         # Calling the function to display main window widgets
         self.Main_Window()
+
+    # This function displays the File Renamer Logo
+    def Display_Logo(self):
+        # Opening the logo image
+        image = Image.open('Images/File_Renamer.png')
+        # Resizing the image
+        resized_image = image.resize((280, 70))
+        # Create an object of tkinter ImageTk
+        self.img_1 = ImageTk.PhotoImage(resized_image)
+        # Create a Label Widget to display the text or Image
+        label = Label(self.frame_1, bg='gray90',image=self.img_1)
+        label.pack()
