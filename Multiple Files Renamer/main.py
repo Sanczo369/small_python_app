@@ -51,3 +51,6 @@ class File_Renamer:
         self.frame_2 = Frame(self.window, bg="white",\
         width=720,height=480)
         self.frame_2.place(x=0, y=110)
+
+        # Calling the function to display main window widgets
+        self.Main_Window()
