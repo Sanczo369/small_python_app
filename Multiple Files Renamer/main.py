@@ -116,3 +116,8 @@ class File_Renamer:
         self.Status_Label = Label(self.frame_2, text="Not Started Yet", \
         font=("Kokila", 12), bg="white", fg="red")
         self.Status_Label.place(x=150, y=215)
+
+        # ListBox Label
+        Listbox_Label = Label(self.frame_2, text="Selected Files", \
+        font=("Times New Roman", 14, 'bold'), bg='white')
+        Listbox_Label.place(x=515, y=30)
