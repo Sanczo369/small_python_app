@@ -129,3 +129,7 @@ class File_Renamer:
         Add_Button = Button(self.frame_2, text='Add', \
         font=("Kokila", 9, 'bold'), width=6, command=self.Add_File)
         Add_Button.place(x=450, y=322)
+
+        Delete_Button = Button(self.frame_2, text='Delete', \
+        font=("Kokila", 9, 'bold'), width=6, command=self.Delete_File)
+        Delete_Button.place(x=530, y=322)
