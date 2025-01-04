@@ -92,3 +92,11 @@ class File_Renamer:
         self.Folder_Entry = Entry(self.frame_2, \
         font=("Helvetica", 12), width=30)
         self.Folder_Entry.place(x=150, y=75)
+
+        SaveTo_Button = Button(self.frame_2, text="Save To", \
+        font=("Kokila", 10, 'bold'), bg="green", fg='white', \
+        width=10, command=self.SaveTo_Directory)
+        SaveTo_Button.place(x=20, y=125)
+
+        self.SaveTo_Entry = Entry(self.frame_2, font=("Helvetica", 12), width=30)
+        self.SaveTo_Entry.place(x=150, y=130)
