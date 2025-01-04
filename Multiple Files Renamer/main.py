@@ -100,3 +100,11 @@ class File_Renamer:
 
         self.SaveTo_Entry = Entry(self.frame_2, font=("Helvetica", 12), width=30)
         self.SaveTo_Entry.place(x=150, y=130)
+
+        ResultFile_Label = Label(self.frame_2, \
+        text="Result File: ", font=("Kokila", 12, 'bold'), bg='white')
+        ResultFile_Label.place(x=35, y=175)
+
+        self.ResultFile_Entry = Entry(self.frame_2, \
+        font=("Helvetica", 12))
+        self.ResultFile_Entry.place(x=150, y=175)
