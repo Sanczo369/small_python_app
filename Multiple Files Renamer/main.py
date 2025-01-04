@@ -125,3 +125,7 @@ class File_Renamer:
         # Listbox for showing the selected files for renaming
         self.File_ListBox = Listbox(self.frame_2,width=30, height=14)
         self.File_ListBox.place(x=450, y=60)
+
+        Add_Button = Button(self.frame_2, text='Add', \
+        font=("Kokila", 9, 'bold'), width=6, command=self.Add_File)
+        Add_Button.place(x=450, y=322)
