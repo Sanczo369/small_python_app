@@ -108,3 +108,11 @@ class File_Renamer:
         self.ResultFile_Entry = Entry(self.frame_2, \
         font=("Helvetica", 12))
         self.ResultFile_Entry.place(x=150, y=175)
+
+        Status = Label(self.frame_2, text="Status: ", \
+        font=("Kokila", 12, 'bold'), bg='white')
+        Status.place(x=70, y=215)
+
+        self.Status_Label = Label(self.frame_2, text="Not Started Yet", \
+        font=("Kokila", 12), bg="white", fg="red")
+        self.Status_Label.place(x=150, y=215)
