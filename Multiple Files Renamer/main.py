@@ -121,3 +121,7 @@ class File_Renamer:
         Listbox_Label = Label(self.frame_2, text="Selected Files", \
         font=("Times New Roman", 14, 'bold'), bg='white')
         Listbox_Label.place(x=515, y=30)
+
+        # Listbox for showing the selected files for renaming
+        self.File_ListBox = Listbox(self.frame_2,width=30, height=14)
+        self.File_ListBox.place(x=450, y=60)
