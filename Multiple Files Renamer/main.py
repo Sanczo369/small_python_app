@@ -159,3 +159,17 @@ class File_Renamer:
             # path to the 'self.File_Dict' dictionary
             self.File_Dict[os.path.basename(path)] = path
             self.File_ListBox.insert(END, os.path.basename(path))
+
+    def Add_File(self):
+        File_Path = filedialog.askopenfilenames(initialdir = "/", \
+        title = "Select PDF Files", filetypes = \
+        ((f"{self.File_Type.get()} files",f"*{self.File_Type.get()}*"),))
+
+        for Path in File_Path:
+            # Adding the file path to the 'self.File_List'
+            self.File_List.append(Path)
+            # Adding the file name(as Key) and path(as Value)
+            # to the 'self.File_Dict'
+            self.File_Dict[os.path.basename(Path)] = Path
+            # Adding the File Name to the ListBox
+            self.File_ListBox.insert(END, os.path.basename(Path))
