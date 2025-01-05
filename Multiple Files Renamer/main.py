@@ -173,3 +173,18 @@ class File_Renamer:
             self.File_Dict[os.path.basename(Path)] = Path
             # Adding the File Name to the ListBox
             self.File_ListBox.insert(END, os.path.basename(Path))
+
+    def Delete_File(self):
+        try:
+            if len(self.File_List) < 1:
+                messagebox.showwarning('Warning!', \
+                'There are no more files to delete')
+            else:
+                for item in self.File_ListBox.curselection():
+                    self.File_List.remove(\
+                    self.File_Dict[self.File_ListBox.get(item)])
+                    self.File_Dict.pop(self.File_ListBox.get(item))
+
+                    self.File_ListBox.delete(item)
+        except Exception:
+            messagebox.showwarning('Warning!', "Please select PDFs first")
