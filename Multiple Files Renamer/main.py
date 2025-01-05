@@ -146,3 +146,7 @@ class File_Renamer:
         # If the user selects a directory
         if self.Selected_Folder != '':
             self.Files_in_Listbox()
+
+    def SaveTo_Directory(self):
+        self.SaveTo_Loc = filedialog.askdirectory(title = "Select a location")
+        self.SaveTo_Entry.insert(0, self.SaveTo_Loc)
