@@ -188,3 +188,8 @@ class File_Renamer:
                     self.File_ListBox.delete(item)
         except Exception:
             messagebox.showwarning('Warning!', "Please select PDFs first")
+
+    def Threading(self):
+        # Killing a thread through "daemon=True" isn't a good idea
+        self.x = Thread(target=self.Rename_Files, daemon=True)
+        self.x.start()
