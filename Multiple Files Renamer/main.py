@@ -150,3 +150,12 @@ class File_Renamer:
     def SaveTo_Directory(self):
         self.SaveTo_Loc = filedialog.askdirectory(title = "Select a location")
         self.SaveTo_Entry.insert(0, self.SaveTo_Loc)
+
+    def Files_in_Listbox(self):
+        self.File_List = \
+        glob.glob(f"{self.Selected_Folder}/*{self.File_Type.get()}")
+        for path in self.File_List:
+            # Storing the file name with the corresponding file
+            # path to the 'self.File_Dict' dictionary
+            self.File_Dict[os.path.basename(path)] = path
+            self.File_ListBox.insert(END, os.path.basename(path))
