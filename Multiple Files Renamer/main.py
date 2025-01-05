@@ -133,3 +133,8 @@ class File_Renamer:
         Delete_Button = Button(self.frame_2, text='Delete', \
         font=("Kokila", 9, 'bold'), width=6, command=self.Delete_File)
         Delete_Button.place(x=530, y=322)
+
+        Start_Button = Button(self.frame_2, text="Start", \
+        font=("Kokila", 13, 'bold'), bg="dodger blue", fg="white", \
+        width=8, command=self.Threading)
+        Start_Button.place(x=120, y=260)
