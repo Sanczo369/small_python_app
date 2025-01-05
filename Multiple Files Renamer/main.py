@@ -138,3 +138,11 @@ class File_Renamer:
         font=("Kokila", 13, 'bold'), bg="dodger blue", fg="white", \
         width=8, command=self.Threading)
         Start_Button.place(x=120, y=260)
+
+    def Select_Directory(self):
+        self.Clear_Listbox()
+        self.Selected_Folder = filedialog.askdirectory(title = "Select a location")
+        self.Folder_Entry.insert(0, self.Selected_Folder)
+        # If the user selects a directory
+        if self.Selected_Folder != '':
+            self.Files_in_Listbox()
