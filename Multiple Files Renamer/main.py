@@ -259,6 +259,10 @@ class File_Renamer:
 
     def Done_Message(self):
         messagebox.showinfo('Done!', "The files are renamed successfully")
+
     def About_Window(self):
         messagebox.showinfo("File Renamer 22.05",\
         "Developed by Subhankar Rakshit\n~PySeek")
+
+    def Exit_Window(self):
+        self.window.destroy()
