@@ -256,3 +256,6 @@ class File_Renamer:
         self.SaveTo_Entry.delete(0, END)
         self.ResultFile_Entry.delete(0, END)
         self.File_ListBox.delete(0, END)
+
+    def Done_Message(self):
+        messagebox.showinfo('Done!', "The files are renamed successfully")
