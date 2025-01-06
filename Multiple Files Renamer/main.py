@@ -242,3 +242,17 @@ class File_Renamer:
     def Status_Message(self, **Status):
         for key, value in Status.items():
             self.Status_Label.config(text=value)
+
+
+    # It clears the 'self.File_ListBox' and resets
+    # some python variables and Tkinter widgets
+    def Clear_Listbox(self):
+        self.File_List.clear()
+        self.File_Dict.clear()
+        self.Selected_Folder = ''
+        self.SaveTo_Loc = ''
+        self.Status_Label.config(text="Not Started Yet")
+        self.Folder_Entry.delete(0, END)
+        self.SaveTo_Entry.delete(0, END)
+        self.ResultFile_Entry.delete(0, END)
+        self.File_ListBox.delete(0, END)
