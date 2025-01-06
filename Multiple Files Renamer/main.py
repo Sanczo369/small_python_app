@@ -238,3 +238,7 @@ class File_Renamer:
                         self.Clear_Listbox()
                         self.Status_Message(status = 'Renaming Completed.')
                         self.Done_Message()
+
+    def Status_Message(self, **Status):
+        for key, value in Status.items():
+            self.Status_Label.config(text=value)
