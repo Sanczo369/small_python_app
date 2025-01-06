@@ -193,3 +193,48 @@ class File_Renamer:
         # Killing a thread through "daemon=True" isn't a good idea
         self.x = Thread(target=self.Rename_Files, daemon=True)
         self.x.start()
+
+     def Rename_Files(self):
+            # If no files are presented in the 'self.File_List'
+            # a Tkinter MessageBox will pop up
+            if len(self.File_List) == 0:
+                messagebox.showerror('Error!', "There are no files to rename")
+            else:
+                # If the user doesn't select the Saving Location a warning message will display
+                if self.SaveTo_Entry.get() == '':
+                    messagebox.showwarning('Warning!', \
+                    "Please Select a Save Location")
+                else:
+                    # If the user doesn't enter the Base File Name
+                    if self.ResultFile_Entry.get() == '':
+                        self.Status_Message(status = 'Renaming...')
+                        for file in self.File_List:
+                            source = file
+
+                            Part1 = self.SaveTo_Entry.get()
+                            Part2 = self.File_List.index(file)
+                            Part3 = self.File_Type.get()
+
+                            destination = f"{Part1}/{Part2}{Part3}"
+                            # Calling the os.rename function
+                            os.rename(source, destination)
+                        self.Clear_Listbox()
+                        self.Status_Message(status = 'Renaming Completed.')
+                        self.Done_Message()
+                    else:
+                        # If the user entered the Base File Name
+                        self.Status_Message(status = 'Renaming...')
+                        for file in self.File_List:
+                            source = file
+
+                            Part1 = self.SaveTo_Entry.get()
+                            Part2 = self.ResultFile_Entry.get()
+                            Part3 = self.File_List.index(file)
+                            Part4 = self.File_Type.get()
+
+                            destination = f"{Part1}/{Part2}_{Part3}{Part4}"
+                            # Calling the os.rename function
+                            os.rename(source, destination)
+                        self.Clear_Listbox()
+                        self.Status_Message(status = 'Renaming Completed.')
+                        self.Done_Message()
