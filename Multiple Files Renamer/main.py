@@ -266,3 +266,9 @@ class File_Renamer:
 
     def Exit_Window(self):
         self.window.destroy()
+
+if __name__ == "__main__":
+    root = Tk()
+    # Creating a 'File_Renamer' class object
+    obj = File_Renamer(root)
+    root.mainloop()
