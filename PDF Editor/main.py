@@ -29,3 +29,11 @@ class PDF_Editor:
 
         # ================Menubar Section===============
         self.menubar = Menu(self.window)
+
+        # Adding Edit Menu and its sub menus
+        edit = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='Edit', menu=edit)
+        edit.add_command(label='Split PDF',command=partial(self.SelectPDF, 1))
+        edit.add_command(label='Merge PDFs',command=self.Merge_PDFs_Data)
+        edit.add_separator()
+        edit.add_command(label='Rotate PDFs',command=partial(self.SelectPDF, 2))
