@@ -13,3 +13,9 @@ class PDF_Editor:
         self.window = root
         self.window.geometry("740x480")
         self.window.title('PDF Editor')
+
+        # Color Options
+        self.color_1 = "white"
+        self.color_2 = "gray30"
+        self.color_3 = "black"
+        self.color_4 = 'orange red'
