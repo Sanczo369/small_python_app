@@ -37,3 +37,8 @@ class PDF_Editor:
         edit.add_command(label='Merge PDFs',command=self.Merge_PDFs_Data)
         edit.add_separator()
         edit.add_command(label='Rotate PDFs',command=partial(self.SelectPDF, 2))
+
+        # Adding About Menu
+        about = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='About', menu=about)
+        about.add_command(label='About', command=self.AboutWindow)
