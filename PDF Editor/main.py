@@ -19,3 +19,10 @@ class PDF_Editor:
         self.color_2 = "gray30"
         self.color_3 = "black"
         self.color_4 = 'orange red'
+
+        # Font Options
+        self.font_1 = "Helvetica"
+        self.font_2 = "Times New Roman"
+        self.font_3 = "Kokila"
+
+        self.saving_location = ''
