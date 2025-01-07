@@ -26,3 +26,6 @@ class PDF_Editor:
         self.font_3 = "Kokila"
 
         self.saving_location = ''
+
+        # ================Menubar Section===============
+        self.menubar = Menu(self.window)
