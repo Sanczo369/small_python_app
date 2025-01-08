@@ -42,3 +42,8 @@ class PDF_Editor:
         about = Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label='About', menu=about)
         about.add_command(label='About', command=self.AboutWindow)
+
+        # Exit the Application
+        exit = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='Exit', menu=exit)
+        exit.add_command(label='Exit', command=self.Exit)
