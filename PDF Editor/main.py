@@ -57,3 +57,13 @@ class PDF_Editor:
         self.frame_1.place(x=0, y=0)
         # Calling Home Page Window
         self.Home_Page()
+
+    # Home Page: It consists Three Buttons
+    def Home_Page(self):
+        self.ClearScreen()
+
+        # ================Buttons Section===============
+        self.split_button = Button(self.frame_1, text='Split',
+        font=(self.font_1, 25, 'bold'), bg="yellow", fg="black", width=8,
+        command=partial(self.SelectPDF, 1))
+        self.split_button.place(x=260, y=80)
