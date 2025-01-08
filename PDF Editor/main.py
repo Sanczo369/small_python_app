@@ -73,3 +73,10 @@ class PDF_Editor:
         font=(self.font_1, 25, 'bold'), bg="yellow", fg="black",
         width=8, command=self.Merge_PDFs_Data)
         self.merge_button.place(x=260, y=160)
+
+        # Merge Button
+        self.rotation_button = Button(self.frame_1, text='Rotate',
+        font=(self.font_1, 25, 'bold'), bg="yellow", fg="black",
+        width=8, command=partial(self.SelectPDF, 2))
+        self.rotation_button.place(x=260, y=240)
+        # ===================End=======================
