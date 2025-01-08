@@ -67,3 +67,9 @@ class PDF_Editor:
         font=(self.font_1, 25, 'bold'), bg="yellow", fg="black", width=8,
         command=partial(self.SelectPDF, 1))
         self.split_button.place(x=260, y=80)
+
+        # Merge Button
+        self.merge_button = Button(self.frame_1, text='Merge',
+        font=(self.font_1, 25, 'bold'), bg="yellow", fg="black",
+        width=8, command=self.Merge_PDFs_Data)
+        self.merge_button.place(x=260, y=160)
