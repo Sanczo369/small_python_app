@@ -51,3 +51,9 @@ class PDF_Editor:
         # Configuring the menubar
         self.window.config(menu=self.menubar)
         # ===================End=======================
+
+        # Creating a Frame
+        self.frame_1 = Frame(self.window,bg=self.color_2,width=740,height=480)
+        self.frame_1.place(x=0, y=0)
+        # Calling Home Page Window
+        self.Home_Page()
