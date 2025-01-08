@@ -80,3 +80,13 @@ class PDF_Editor:
         width=8, command=partial(self.SelectPDF, 2))
         self.rotation_button.place(x=260, y=240)
         # ===================End=======================
+
+# Select the PDF for Splitting and Rotating
+    def SelectPDF(self, to_call):
+        self.PDF_path = filedialog.askopenfilename(initialdir = "/",
+        title = "Select a PDF File", filetypes = (("PDF files", "*.pdf*"),))
+        if len(self.PDF_path) != 0:
+            if to_call == 1:
+                self.Split_PDF_Data()
+            else:
+                self.Rotate_PDFs_Data()
