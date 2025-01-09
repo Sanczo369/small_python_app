@@ -129,3 +129,10 @@ class PDF_Editor:
                              text=f"Total Number of Pages: {total_pages}",
                              font=(self.font_2, 20, 'bold'), bg=self.color_2, fg=self.color_3)
     self.pages_label.place(x=40, y=70)
+
+
+    # From Label: the page number from where the
+    # user want to split the PDF pages
+    From = Label(self.frame_1, text="From",
+                 font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
+    From.place(x=40, y=120)
