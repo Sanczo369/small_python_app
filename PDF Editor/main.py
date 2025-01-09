@@ -111,3 +111,9 @@ class PDF_Editor:
     def Split_PDF_Data(self):
         pdfReader = PyPDF2.PdfFileReader(self.PDF_path)
         total_pages = pdfReader.numPages
+
+        self.ClearScreen()
+        # Button for getting back to the Home Page
+        home_btn = Button(self.frame_1, text="Home",
+        font=(self.font_1, 10, 'bold'), command=self.Home_Page)
+        home_btn.place(x=10, y=10)
