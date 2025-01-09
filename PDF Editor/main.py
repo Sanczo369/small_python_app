@@ -117,3 +117,8 @@ class PDF_Editor:
         home_btn = Button(self.frame_1, text="Home",
         font=(self.font_1, 10, 'bold'), command=self.Home_Page)
         home_btn.place(x=10, y=10)
+
+    # Header Label
+    header = Label(self.frame_1, text="Split PDF",
+                   font=(self.font_3, 25, "bold"), bg=self.color_2, fg=self.color_1)
+    header.place(x=265, y=15)
