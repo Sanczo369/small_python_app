@@ -90,3 +90,10 @@ class PDF_Editor:
                 self.Split_PDF_Data()
             else:
                 self.Rotate_PDFs_Data()
+
+    # Select PDF files only for merging
+    def SelectPDF_Merge(self):
+        self.PDF_path = filedialog.askopenfilenames(initialdir = "/",
+        title = "Select PDF Files", filetypes = (("PDF files", "*.pdf*"),))
+        for path in self.PDF_path:
+            self.PDF_List.insert((self.PDF_path.index(path)+1), path)
