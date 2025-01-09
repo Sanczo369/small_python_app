@@ -106,3 +106,8 @@ class PDF_Editor:
         self.saving_location = filedialog.askdirectory(title =
         "Select a location")
         self.Update_Path_Label()
+
+    # Get the data from the user for splitting a PDF file
+    def Split_PDF_Data(self):
+        pdfReader = PyPDF2.PdfFileReader(self.PDF_path)
+        total_pages = pdfReader.numPages
