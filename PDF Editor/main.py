@@ -122,3 +122,10 @@ class PDF_Editor:
     header = Label(self.frame_1, text="Split PDF",
                    font=(self.font_3, 25, "bold"), bg=self.color_2, fg=self.color_1)
     header.place(x=265, y=15)
+
+
+    # Label for showing the total number of pages
+    self.pages_label = Label(self.frame_1,
+                             text=f"Total Number of Pages: {total_pages}",
+                             font=(self.font_2, 20, 'bold'), bg=self.color_2, fg=self.color_3)
+    self.pages_label.place(x=40, y=70)
