@@ -97,3 +97,12 @@ class PDF_Editor:
         title = "Select PDF Files", filetypes = (("PDF files", "*.pdf*"),))
         for path in self.PDF_path:
             self.PDF_List.insert((self.PDF_path.index(path)+1), path)
+
+
+    # Select the directory where the result PDF
+    # file/files will be stored
+    def Select_Directory(self):
+        # Storing the 'saving location' for the result file
+        self.saving_location = filedialog.askdirectory(title =
+        "Select a location")
+        self.Update_Path_Label()
