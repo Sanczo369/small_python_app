@@ -158,3 +158,14 @@ class PDF_Editor:
         self.path_label = Label(self.frame_1, text='/',
         font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_3)
         self.path_label.place(x=300, y= 160)
+
+        # Button for selecting the directory
+        # where the splitted PDFs will be stored
+        select_loc_btn = Button(self.frame_1, text="Select Location",
+        font=(self.font_1, 8, 'bold'), command=self.Select_Directory)
+        select_loc_btn.place(x=320, y=200)
+
+        split_button = Button(self.frame_1, text="Split",
+        font=(self.font_3, 16, 'bold'), bg=self.color_4, fg=self.color_1,
+        width=12, command=self.Split_PDF)
+        split_button.place(x=250, y=250)
