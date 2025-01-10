@@ -118,21 +118,25 @@ class PDF_Editor:
         font=(self.font_1, 10, 'bold'), command=self.Home_Page)
         home_btn.place(x=10, y=10)
 
-    # Header Label
-    header = Label(self.frame_1, text="Split PDF",
-                   font=(self.font_3, 25, "bold"), bg=self.color_2, fg=self.color_1)
-    header.place(x=265, y=15)
+        # Header Label
+        header = Label(self.frame_1, text="Split PDF",
+                       font=(self.font_3, 25, "bold"), bg=self.color_2, fg=self.color_1)
+        header.place(x=265, y=15)
 
 
-    # Label for showing the total number of pages
-    self.pages_label = Label(self.frame_1,
-                             text=f"Total Number of Pages: {total_pages}",
-                             font=(self.font_2, 20, 'bold'), bg=self.color_2, fg=self.color_3)
-    self.pages_label.place(x=40, y=70)
+        # Label for showing the total number of pages
+        self.pages_label = Label(self.frame_1,
+                                 text=f"Total Number of Pages: {total_pages}",
+                                 font=(self.font_2, 20, 'bold'), bg=self.color_2, fg=self.color_3)
+        self.pages_label.place(x=40, y=70)
 
 
-    # From Label: the page number from where the
-    # user want to split the PDF pages
-    From = Label(self.frame_1, text="From",
-                 font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
-    From.place(x=40, y=120)
+        # From Label: the page number from where the
+        # user want to split the PDF pages
+        From = Label(self.frame_1, text="From",
+                     font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
+        From.place(x=40, y=120)
+
+        self.From_Entry = Entry(self.frame_1, font=(self.font_2, 12, 'bold'),
+                                width=8)
+        self.From_Entry.place(x=40, y=160)
