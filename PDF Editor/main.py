@@ -153,3 +153,8 @@ class PDF_Editor:
         Cur_Directory = Label(self.frame_1, text="Storing Location",
         font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
         Cur_Directory.place(x=300, y= 120)
+
+        # Constant
+        self.path_label = Label(self.frame_1, text='/',
+        font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_3)
+        self.path_label.place(x=300, y= 160)
