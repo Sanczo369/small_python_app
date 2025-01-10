@@ -140,3 +140,16 @@ class PDF_Editor:
         self.From_Entry = Entry(self.frame_1, font=(self.font_2, 12, 'bold'),
                                 width=8)
         self.From_Entry.place(x=40, y=160)
+
+        # To Label
+        To = Label(self.frame_1, text="To", font=(self.font_2, 16, 'bold'),
+        bg=self.color_2, fg=self.color_1)
+        To.place(x=160, y= 120)
+
+        self.To_Entry = Entry(self.frame_1, font=(self.font_2, 12, 'bold'),
+        width=8)
+        self.To_Entry.place(x=160, y= 160)
+
+        Cur_Directory = Label(self.frame_1, text="Storing Location",
+        font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
+        Cur_Directory.place(x=300, y= 120)
