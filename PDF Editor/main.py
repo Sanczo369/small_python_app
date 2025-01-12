@@ -206,3 +206,8 @@ class PDF_Editor:
         select_loc_btn = Button(self.frame_1, text="Select Location",
         font=(self.font_1, 8, 'bold'), command=self.Select_Directory)
         select_loc_btn.place(x=320, y=200)
+
+        split_button = Button(self.frame_1, text="Split",
+        font=(self.font_3, 16, 'bold'), bg=self.color_4, fg=self.color_1,
+        width=12, command=self.Split_PDF)
+        split_button.place(x=250, y=250)
