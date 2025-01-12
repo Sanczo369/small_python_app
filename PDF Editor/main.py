@@ -219,3 +219,20 @@ class PDF_Editor:
         home_btn = Button(self.frame_1, text="Home",
                           font=(self.font_1, 10, 'bold'), command=self.Home_Page)
         home_btn.place(x=10, y=10)
+
+        # Header Label
+        header = Label(self.frame_1, text="Merge PDFs",
+        font=(self.font_3, 25, "bold"), bg=self.color_2, fg=self.color_1)
+        header.place(x=265, y=15)
+
+        select_pdf_label = Label(self.frame_1, text="Select PDFs",
+        font=(self.font_2, 20, 'bold'), bg=self.color_2, fg=self.color_3)
+        select_pdf_label.place(x=40, y=70)
+
+        open_button = Button(self.frame_1, text="Open Folder",
+        font=(self.font_1, 9, 'bold'), command=self.SelectPDF_Merge)
+        open_button.place(x=55, y=110)
+
+        Cur_Directory = Label(self.frame_1, text="Storing Location",
+        font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
+        Cur_Directory.place(x=40, y= 150)
