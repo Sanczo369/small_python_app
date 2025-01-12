@@ -236,3 +236,18 @@ class PDF_Editor:
         Cur_Directory = Label(self.frame_1, text="Storing Location",
         font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
         Cur_Directory.place(x=40, y= 150)
+
+        # Constant
+        self.path_label = Label(self.frame_1, text='/',
+        font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_3)
+        self.path_label.place(x=40, y= 190)
+
+        # Button for selecting the directory
+        # where the merged PDFs will be stored
+        select_loc_btn = Button(self.frame_1, text="Select Location",
+        font=(self.font_1, 9, 'bold'), command=self.Select_Directory)
+        select_loc_btn.place(x=55, y=225)
+
+        saving_name = Label(self.frame_1, text="Choose a Name",
+        font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
+        saving_name.place(x=40, y=270)
