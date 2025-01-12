@@ -251,3 +251,17 @@ class PDF_Editor:
         saving_name = Label(self.frame_1, text="Choose a Name",
         font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
         saving_name.place(x=40, y=270)
+
+        # Get the 'result file' name from the user
+        self.sv_name_entry = Entry(self.frame_1,
+        font=(self.font_2, 12, 'bold'), width=20)
+        self.sv_name_entry.insert(0, 'Result')
+        self.sv_name_entry.place(x=40, y=310)
+
+        merge_btn = Button(self.frame_1, text="Merge",
+        font=(self.font_1, 10, 'bold'), command=self.Merge_PDFs)
+        merge_btn.place(x=80, y=350)
+
+        listbox_label = Label(self.frame_1, text="Selected PDFs",
+        font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
+        listbox_label.place(x=482, y=72)
