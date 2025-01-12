@@ -211,3 +211,11 @@ class PDF_Editor:
         font=(self.font_3, 16, 'bold'), bg=self.color_4, fg=self.color_1,
         width=12, command=self.Split_PDF)
         split_button.place(x=250, y=250)
+
+    # Get the data from the user for Merge PDF files
+    def Merge_PDFs_Data(self):
+        self.ClearScreen()
+        # Button for get back to the Home Page
+        home_btn = Button(self.frame_1, text="Home",
+                          font=(self.font_1, 10, 'bold'), command=self.Home_Page)
+        home_btn.place(x=10, y=10)
