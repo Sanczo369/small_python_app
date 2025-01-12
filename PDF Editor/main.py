@@ -265,3 +265,15 @@ class PDF_Editor:
         listbox_label = Label(self.frame_1, text="Selected PDFs",
         font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
         listbox_label.place(x=482, y=72)
+
+        # Listbox for showing the selected PDF files
+        self.PDF_List = Listbox(self.frame_1,width=40, height=15)
+        self.PDF_List.place(x=400, y=110)
+
+        delete_button = Button(self.frame_1, text="Delete",
+        font=(self.font_1, 9, 'bold'), command=self.Delete_from_ListBox)
+        delete_button.place(x=400, y=395)
+
+        more_button = Button(self.frame_1, text="Select More",
+        font=(self.font_1, 9, 'bold'), command=self.SelectPDF_Merge)
+        more_button.place(x=480, y=395)
