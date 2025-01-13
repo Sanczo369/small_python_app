@@ -285,3 +285,8 @@ class PDF_Editor:
 
         pdfReader = PyPDF2.PdfFileReader(self.PDF_path)
         total_pages = pdfReader.numPages
+
+        # Button for get back to the Home Page
+        home_btn = Button(self.frame_1, text="Home",
+        font=(self.font_1, 10, 'bold'), command=self.Home_Page)
+        home_btn.place(x=10, y=10)
