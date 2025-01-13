@@ -277,3 +277,11 @@ class PDF_Editor:
         more_button = Button(self.frame_1, text="Select More",
         font=(self.font_1, 9, 'bold'), command=self.SelectPDF_Merge)
         more_button.place(x=480, y=395)
+
+        # Get the data from the user for Rotating one/multiple
+        # pages of a PDF file
+    def Rotate_PDFs_Data(self):
+        self.ClearScreen()
+
+        pdfReader = PyPDF2.PdfFileReader(self.PDF_path)
+        total_pages = pdfReader.numPages
