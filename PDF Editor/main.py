@@ -314,3 +314,8 @@ class PDF_Editor:
         self.fix_entry = Entry(self.frame_1,
         font=(self.font_2, 12, 'bold'), width=40)
         self.fix_entry.place(x=260, y=190)
+
+        # Constant
+        self.path_label = Label(self.frame_1, text='/',
+        font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_3)
+        self.path_label.place(x=40, y= 190)
