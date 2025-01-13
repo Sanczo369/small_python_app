@@ -295,3 +295,22 @@ class PDF_Editor:
         header = Label(self.frame_1, text="Rotate PDFs",
         font=(self.font_3, 25, "bold"), bg=self.color_2, fg=self.color_1)
         header.place(x=265, y=15)
+
+        # Label for showing the total number of pages
+        self.pages_label = Label(self.frame_1,
+        text=f"Total Number of Pages: {total_pages}",
+        font=(self.font_2, 20, 'bold'), bg=self.color_2, fg=self.color_3)
+        self.pages_label.place(x=40, y=90)
+
+        Cur_Directory = Label(self.frame_1, text="Storing Location",
+        font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
+        Cur_Directory.place(x=40, y= 150)
+
+        self.fix_label = Label(self.frame_1,
+        text="Rotate this Pages(Comma-Separated-Number)",
+        font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
+        self.fix_label.place(x=260, y= 150)
+
+        self.fix_entry = Entry(self.frame_1,
+        font=(self.font_2, 12, 'bold'), width=40)
+        self.fix_entry.place(x=260, y=190)
