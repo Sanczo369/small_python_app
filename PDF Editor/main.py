@@ -329,3 +329,13 @@ class PDF_Editor:
         saving_name = Label(self.frame_1, text="Choose a Name",
         font=(self.font_2, 18, 'bold'), bg=self.color_2, fg=self.color_1)
         saving_name.place(x=40, y=270)
+
+        # Get the 'result file' name from the user
+        self.sv_name_entry = Entry(self.frame_1,
+        font=(self.font_2, 12, 'bold'), width=20)
+        self.sv_name_entry.insert(0, 'Result')
+        self.sv_name_entry.place(x=40, y=310)
+
+        which_side = Label(self.frame_1, text="Rotation Alignment",
+        font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
+        which_side.place(x=260, y=230)
