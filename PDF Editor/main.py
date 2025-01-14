@@ -352,3 +352,31 @@ class PDF_Editor:
         font=(self.font_3, 16, 'bold'), bg=self.color_4,
         fg=self.color_1, width=12, command=self.Rotate_PDFs)
         rotate_button.place(x=255, y=360)
+
+    # It manages the task for Splitting the
+    # selected PDF file
+    def Split_PDF(self):
+        if self.From_Entry.get() == "" and self.To_Entry.get() == "":
+            messagebox.showwarning("Warning!",
+                                   "Please mention the page rangen you want to split")
+        else:
+            from_page = int(self.From_Entry.get()) - 1
+            to_page = int(self.To_Entry.get())
+
+            pdfReader = PyPDF2.PdfFileReader(self.PDF_path)
+
+            for page in range(from_page, to_page):
+                pdfWriter = PdfFileWriter()
+                pdfWriter.addPage(pdfReader.getPage(page))
+
+                splitPage = os.path.join(self.saving_location, f'{page + 1}.pdf')
+                resultPdf = open(splitPage, 'wb')
+                pdfWriter.write(resultPdf)
+
+            resultPdf.close()
+            messagebox.showinfo("Success!", "The PDF file has been splitted")
+
+            self.saving_location = ''
+            self.total_pages = 0
+            self.ClearScreen()
+            self.Home_Page()
