@@ -439,6 +439,76 @@ class PDF_Editor:
         except Exception:
             messagebox.showwarning('Warning!', "Please select PDFs first")
 
+    # It manages the task for Rotating the pages/page of
+    # the selected PDF file
+    def Rotate_PDFs(self):
+        need_to_fix = list()
+
+        if self.fix_entry.get() == "":
+            messagebox.showwarning("Warning!",
+            "Please enter the page number separated by comma")
+        else:
+            for page in self.fix_entry.get().split(','):
+                    need_to_fix.append(int(page))
+
+            if self.saving_location == '':
+                curDirectory = os.getcwd()
+            else:
+                curDirectory = str(self.saving_location)
+
+            presentFiles = list()
+
+            for file in os.listdir(curDirectory):
+                presentFiles.append(file)
+
+            checkFile = f'{self.sv_name_entry.get()}.pdf'
+
+            if checkFile in presentFiles:
+                messagebox.showwarning('Warning!',
+                "Please select an another file name to saved")
+            else:
+                if self.alignment.get() == 'ClockWise':
+                    pdfReader = PdfFileReader(self.PDF_path)
+                    pdfWriter = PdfFileWriter()
+
+                    rotatefile = os.path.join(self.saving_location,
+                    f'{self.sv_name_entry.get()}.pdf')
+                    fixed_file = open(rotatefile, 'wb')
+
+                    for page in range(pdfReader.getNumPages()):
+                        thePage = pdfReader.getPage(page)
+                        if (page+1) in need_to_fix:
+                            thePage.rotateClockwise(90)
+
+                        pdfWriter.addPage(thePage)
+
+                    pdfWriter.write(fixed_file)
+                    fixed_file.close()
+                    messagebox.showinfo('Success', 'Rotation Complete')
+                    self.Update_Rotate_Page()
+
+                elif self.alignment.get() == 'Anti-ClockWise':
+                    pdfReader = PdfFileReader(self.PDF_path)
+                    pdfWriter = PdfFileWriter()
+
+                    rotatefile = os.path.join(self.saving_location,
+                    f'{self.sv_name_entry.get()}.pdf')
+                    fixed_file = open(rotatefile, 'wb')
+
+                    for page in range(pdfReader.getNumPages()):
+                        thePage = pdfReader.getPage(page)
+                        if (page+1) in need_to_fix:
+                            thePage.rotateCounterClockwise(90)
+
+                        pdfWriter.addPage(thePage)
+
+                    pdfWriter.write(fixed_file)
+                    fixed_file.close()
+                    messagebox.showinfo('Success','Rotation Complete')
+                    self.Update_Rotate_Page()
+                else:
+                    messagebox.showwarning('Warning!',
+                    "Please Select a Right Alignment")
 
 # The main function
 if __name__ == "__main__":
