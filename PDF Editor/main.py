@@ -339,3 +339,16 @@ class PDF_Editor:
         which_side = Label(self.frame_1, text="Rotation Alignment",
         font=(self.font_2, 16, 'bold'), bg=self.color_2, fg=self.color_1)
         which_side.place(x=260, y=230)
+
+        # Rotation Alignment(Clockwise and Anti-Clockwise)
+        text = StringVar()
+        self.alignment = ttk.Combobox(self.frame_1, textvariable=text)
+        self.alignment['values'] = ('ClockWise',
+                                    'Anti-ClockWise'
+                                    )
+        self.alignment.place(x=260, y=270)
+
+        rotate_button = Button(self.frame_1, text="Rotate",
+        font=(self.font_3, 16, 'bold'), bg=self.color_4,
+        fg=self.color_1, width=12, command=self.Rotate_PDFs)
+        rotate_button.place(x=255, y=360)
