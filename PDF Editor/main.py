@@ -423,3 +423,18 @@ class PDF_Editor:
                 self.saving_location = ''
                 self.ClearScreen()
                 self.Home_Page()
+
+    # Delete an item(One PDF Path)
+    def Delete_from_ListBox(self):
+        try:
+            if len(self.PDF_path) < 1:
+                messagebox.showwarning('Warning!',
+                                       'There is no more files to delete')
+            else:
+                for item in self.PDF_List.curselection():
+                    self.PDF_List.delete(item)
+
+                self.PDF_path = list(self.PDF_path)
+                del self.PDF_path[item]
+        except Exception:
+            messagebox.showwarning('Warning!', "Please select PDFs first")
