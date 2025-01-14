@@ -380,3 +380,46 @@ class PDF_Editor:
             self.total_pages = 0
             self.ClearScreen()
             self.Home_Page()
+
+    # It manages the task for Merging the
+    # selected PDF files
+    def Merge_PDFs(self):
+        if len(self.PDF_path) == 0:
+            messagebox.showerror("Error!", "Please Select PDFs first")
+        else:
+            if self.saving_location == '':
+                curDirectory = os.getcwd()
+            else:
+                curDirectory = str(self.saving_location)
+
+            presentFiles = list()
+
+            for file in os.listdir(curDirectory):
+                presentFiles.append(file)
+
+            checkFile = f'{self.sv_name_entry.get()}.pdf'
+
+            if checkFile in presentFiles:
+                messagebox.showwarning('Warning!',
+                                       "Please select an another file name to saved")
+            else:
+                pdfWriter = PyPDF2.PdfFileWriter()
+
+                for file in self.PDF_path:
+                    pdfReader = PyPDF2.PdfFileReader(file)
+                    numPages = pdfReader.numPages
+                    for page in range(numPages):
+                        pdfWriter.addPage(pdfReader.getPage(page))
+
+                mergePage = os.path.join(self.saving_location,
+                                         f'{self.sv_name_entry.get()}.pdf')
+                mergePdf = open(mergePage, 'wb')
+                pdfWriter.write(mergePdf)
+
+                mergePdf.close()
+                messagebox.showinfo("Success!",
+                                    "The PDFs have been merged successfully")
+
+                self.saving_location = ''
+                self.ClearScreen()
+                self.Home_Page()
