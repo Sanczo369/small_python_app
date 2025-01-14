@@ -438,3 +438,11 @@ class PDF_Editor:
                 del self.PDF_path[item]
         except Exception:
             messagebox.showwarning('Warning!', "Please select PDFs first")
+
+
+# The main function
+if __name__ == "__main__":
+    root = Tk()
+    # Creating a CountDown class object
+    obj = PDF_Editor(root)
+    root.mainloop()
