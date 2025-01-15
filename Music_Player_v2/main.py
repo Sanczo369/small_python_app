@@ -28,3 +28,7 @@ class MusicPlayer:
         # Create the stop button
         self.stop_button = tk.Button(controls_frame, text="Stop", command=self.stop)
         self.stop_button.grid(row=0, column=2, padx=10)
+
+        # Create the add button
+        self.add_button = tk.Button(controls_frame, text="Add", command=self.add_to_playlist)
+        self.add_button.grid(row=1, column=0, pady=10)
