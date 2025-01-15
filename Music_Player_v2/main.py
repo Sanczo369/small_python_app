@@ -12,3 +12,7 @@ class MusicPlayer:
         # Create the playlist
         self.playlist = tk.Listbox(self.window, width=50)
         self.playlist.pack(pady=10)
+
+        # Create the controls frame
+        controls_frame = tk.Frame(self.window)
+        controls_frame.pack()
