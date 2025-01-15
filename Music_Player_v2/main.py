@@ -8,3 +8,7 @@ class MusicPlayer:
         self.window = window
         self.window.title("Music Player")
         self.window.geometry("500x340")
+
+        # Create the playlist
+        self.playlist = tk.Listbox(self.window, width=50)
+        self.playlist.pack(pady=10)
