@@ -20,3 +20,7 @@ class MusicPlayer:
         # Create the play button
         self.play_button = tk.Button(controls_frame, text="Play", command=self.play)
         self.play_button.grid(row=0, column=0, padx=10)
+
+        # Create the pause button
+        self.pause_button = tk.Button(controls_frame, text="Pause", command=self.pause)
+        self.pause_button.grid(row=0, column=1, padx=10)
