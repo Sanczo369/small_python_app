@@ -16,3 +16,7 @@ class MusicPlayer:
         # Create the controls frame
         controls_frame = tk.Frame(self.window)
         controls_frame.pack()
+
+        # Create the play button
+        self.play_button = tk.Button(controls_frame, text="Play", command=self.play)
+        self.play_button.grid(row=0, column=0, padx=10)
