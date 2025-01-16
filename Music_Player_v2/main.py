@@ -32,3 +32,7 @@ class MusicPlayer:
         # Create the add button
         self.add_button = tk.Button(controls_frame, text="Add", command=self.add_to_playlist)
         self.add_button.grid(row=1, column=0, pady=10)
+
+        # Create the remove button
+        self.remove_button = tk.Button(controls_frame,text="Remove",command=self.remove_song)
+        self.remove_button.grid(row=1, column=1, pady=10)
