@@ -40,3 +40,7 @@ class MusicPlayer:
         # Create the vlc player instance
         self.player = vlc.Instance()
         self.media_player = self.player.media_player_new()
+
+        # Set the end event
+        the_event = vlc.EventType.MediaPlayerEndReached
+        self.media_player.event_manager().event_attach(the_event, self.next_song)
