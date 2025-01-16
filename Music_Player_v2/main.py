@@ -56,3 +56,10 @@ class MusicPlayer:
 
     def stop(self):
         self.media_player.stop()
+
+    def next_song(self, event):
+        next_index = (self.playlist.curselection()[0] + 1) % self.playlist.size()
+        self.playlist.selection_clear(0, tk.END)
+        self.playlist.activate(next_index)
+        self.playlist.selection_set(next_index)
+        self.play()
