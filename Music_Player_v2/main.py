@@ -44,3 +44,10 @@ class MusicPlayer:
         # Set the end event
         the_event = vlc.EventType.MediaPlayerEndReached
         self.media_player.event_manager().event_attach(the_event, self.next_song)
+
+    def play(self):
+        selected_song = self.playlist.get(tk.ACTIVE)
+        media = self.player.media_new(selected_song)
+        self.media_player.set_media(media)
+        self.media_player.play()
+
