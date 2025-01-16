@@ -36,3 +36,7 @@ class MusicPlayer:
         # Create the remove button
         self.remove_button = tk.Button(controls_frame,text="Remove",command=self.remove_song)
         self.remove_button.grid(row=1, column=1, pady=10)
+
+        # Create the vlc player instance
+        self.player = vlc.Instance()
+        self.media_player = self.player.media_player_new()
