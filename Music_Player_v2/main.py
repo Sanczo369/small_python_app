@@ -51,3 +51,6 @@ class MusicPlayer:
         self.media_player.set_media(media)
         self.media_player.play()
 
+    def pause(self):
+        self.media_player.pause()
+
