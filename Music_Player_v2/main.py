@@ -54,3 +54,5 @@ class MusicPlayer:
     def pause(self):
         self.media_player.pause()
 
+    def stop(self):
+        self.media_player.stop()
