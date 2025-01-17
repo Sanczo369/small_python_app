@@ -67,3 +67,10 @@ class MusicPlayer:
     def add_to_playlist(self):
         file_path = filedialog.askopenfilename(defaultextension=".mp3",
                                                filetypes=[("MP3 Files", "*.mp3"), ("WAV Files", "*.wav")])
+
+        if file_path:
+            self.playlist.insert(tk.END, file_path)
+
+    def remove_song(self):
+        selected_index = self.playlist.curselection()[0]
+        self.playlist.delete(selected_index)
