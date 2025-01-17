@@ -74,3 +74,8 @@ class MusicPlayer:
     def remove_song(self):
         selected_index = self.playlist.curselection()[0]
         self.playlist.delete(selected_index)
+
+if __name__ == "__main__":
+    window = tk.Tk()
+    music_player = MusicPlayer(window)
+    window.mainloop()
