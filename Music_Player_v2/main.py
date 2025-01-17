@@ -63,3 +63,7 @@ class MusicPlayer:
         self.playlist.activate(next_index)
         self.playlist.selection_set(next_index)
         self.play()
+
+    def add_to_playlist(self):
+        file_path = filedialog.askopenfilename(defaultextension=".mp3",
+                                               filetypes=[("MP3 Files", "*.mp3"), ("WAV Files", "*.wav")])
