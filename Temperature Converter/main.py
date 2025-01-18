@@ -43,3 +43,5 @@ fahrenheit_to_celsius_button.pack()
 # Result section
 result_label = tk.Label(window, text="")
 result_label.pack()
+
+window.mainloop()
