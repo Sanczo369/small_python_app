@@ -15,3 +15,5 @@ def update_selected_date():
     selected_date.config(text="Selected Date: " + cal.get_date())
 
 cal.bind("<<CalendarSelected>>", lambda event: update_selected_date())
+
+root.mainloop()
