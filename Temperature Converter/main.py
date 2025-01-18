@@ -27,3 +27,15 @@ celsius_to_fahrenheit_button = tk.Button(window,
 text="Convert to Fahrenheit", command=celsius_to_fahrenheit)
 
 celsius_to_fahrenheit_button.pack()
+
+# Fahrenheit to Celsius conversion section
+fahrenheit_label = tk.Label(window, text="Fahrenheit")
+fahrenheit_label.pack()
+
+fahrenheit_entry = tk.Entry(window)
+fahrenheit_entry.pack()
+
+fahrenheit_to_celsius_button = tk.Button(window,
+text="Convert to Celsius", command=fahrenheit_to_celsius)
+
+fahrenheit_to_celsius_button.pack()
