@@ -39,3 +39,7 @@ fahrenheit_to_celsius_button = tk.Button(window,
 text="Convert to Celsius", command=fahrenheit_to_celsius)
 
 fahrenheit_to_celsius_button.pack()
+
+# Result section
+result_label = tk.Label(window, text="")
+result_label.pack()
