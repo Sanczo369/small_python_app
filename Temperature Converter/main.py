@@ -15,3 +15,15 @@ def fahrenheit_to_celsius():
     fahrenheit = float(fahrenheit_entry.get())
     celsius = (fahrenheit - 32) * 5 / 9
     result_label.config(text=f"{fahrenheit}°F = {celsius}°C")
+
+# Celsius to Fahrenheit conversion section
+celsius_label = tk.Label(window, text="Celsius")
+celsius_label.pack()
+
+celsius_entry = tk.Entry(window)
+celsius_entry.pack()
+
+celsius_to_fahrenheit_button = tk.Button(window,
+text="Convert to Fahrenheit", command=celsius_to_fahrenheit)
+
+celsius_to_fahrenheit_button.pack()
