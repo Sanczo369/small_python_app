@@ -18,3 +18,6 @@ class Image_Rotator:
 
         self.width = 740
         self.height = 480
+
+        # Creating Menubar
+        self.menubar = Menu(self.window)
