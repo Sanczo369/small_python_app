@@ -40,3 +40,12 @@ class Image_Rotator:
         # Configuring the menubar
         self.window.config(menu=self.menubar)
         # ===================End=======================
+
+
+        left_btn = Button(self.window, text="Left",
+        font=("Helvetica", 15, 'bold'), command=self.rotate_left)
+        left_btn.place(x=15,y=270)
+
+        right_btn = Button(self.window, text="Right",
+        font=("Helvetica", 15, 'bold'), command=self.rotate_right)
+        right_btn.place(x=865,y=270)
