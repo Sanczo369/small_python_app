@@ -49,3 +49,9 @@ class Image_Rotator:
         right_btn = Button(self.window, text="Right",
         font=("Helvetica", 15, 'bold'), command=self.rotate_right)
         right_btn.place(x=865,y=270)
+
+        # Creating a Frame
+        self.frame_1 = Frame(self.window,
+        width=self.width,height=self.height)
+        self.frame_1.pack()
+        self.frame_1.place(anchor='center', relx=0.5, rely=0.5)
