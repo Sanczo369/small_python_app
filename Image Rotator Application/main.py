@@ -124,3 +124,7 @@ if __name__ == "__main__":
     rot_image = None
     image_name = None
     image_path = None
+
+    # Creating a Image_Rotator class object
+    obj = Image_Rotator(root)
+    root.mainloop()
