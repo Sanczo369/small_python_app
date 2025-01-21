@@ -16,3 +16,6 @@ class Image_Cartoonify:
         self.height = 480
 
         self.Image_Path = ''
+
+        # Creating Menubar
+        self.menubar = Menu(self.window)
