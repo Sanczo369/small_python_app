@@ -24,3 +24,8 @@ class Image_Cartoonify:
         edit = Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label='Open', menu=edit)
         edit.add_command(label='Open Image',command=self.open_image)
+
+        # Menu widget to cartoonify the image
+        cartoonify = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='Cartoonify', menu=cartoonify)
+        cartoonify.add_command(label='Create Cartoon', command=self.cartoonify)
