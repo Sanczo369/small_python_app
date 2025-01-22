@@ -52,3 +52,9 @@ class Image_Cartoonify:
                                                      filetypes=(("Image files", "*.jpg *.jpeg *.png"),))
         if len(self.Image_Path) != 0:
             self.show_image(self.Image_Path)
+    # Display the Image
+    def show_image(self, Img):
+        # Opening the image
+        image = Image.open(Img)
+        # resize the image, so that it fits to the screen
+        resized_image = image.resize((self.width, self.height))
