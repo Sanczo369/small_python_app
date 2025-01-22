@@ -38,3 +38,9 @@ class Image_Cartoonify:
         # Configuring the menubar
         self.window.config(menu=self.menubar)
         # ===================End=======================
+
+        # Creating a Frame
+        self.frame = Frame(self.window,
+        width=self.width,height=self.height)
+        self.frame.pack()
+        self.frame.place(anchor='center', relx=0.5, rely=0.5)
