@@ -29,3 +29,8 @@ class Image_Cartoonify:
         cartoonify = Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label='Cartoonify', menu=cartoonify)
         cartoonify.add_command(label='Create Cartoon', command=self.cartoonify)
+
+        # Exit the Application
+        exit = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='Exit', menu=exit)
+        exit.add_command(label='Exit', command=self._exit)
