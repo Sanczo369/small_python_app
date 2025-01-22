@@ -34,3 +34,7 @@ class Image_Cartoonify:
         exit = Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label='Exit', menu=exit)
         exit.add_command(label='Exit', command=self._exit)
+
+        # Configuring the menubar
+        self.window.config(menu=self.menubar)
+        # ===================End=======================
