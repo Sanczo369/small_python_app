@@ -44,3 +44,11 @@ class Image_Cartoonify:
         width=self.width,height=self.height)
         self.frame.pack()
         self.frame.place(anchor='center', relx=0.5, rely=0.5)
+
+        # Open an Image through filedialog
+    def open_image(self):
+        self.clear_screen()
+        self.Image_Path = filedialog.askopenfilename(title="Select an Image",
+                                                     filetypes=(("Image files", "*.jpg *.jpeg *.png"),))
+        if len(self.Image_Path) != 0:
+            self.show_image(self.Image_Path)
