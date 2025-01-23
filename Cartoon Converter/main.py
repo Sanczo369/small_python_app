@@ -96,3 +96,8 @@ class Image_Cartoonify:
 
             self.clear_screen()
             self.show_image(filename)
+
+    # Remove all widgets from the frame
+    def clear_screen(self):
+        for widget in self.frame.winfo_children():
+            widget.destroy()
