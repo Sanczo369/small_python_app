@@ -101,3 +101,8 @@ class Image_Cartoonify:
     def clear_screen(self):
         for widget in self.frame.winfo_children():
             widget.destroy()
+
+    # It destroys the main GUI window of the
+    # application
+    def _exit(self):
+        self.window.destroy()
