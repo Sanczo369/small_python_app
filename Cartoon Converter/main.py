@@ -61,3 +61,7 @@ class Image_Cartoonify:
 
         # Create an object of tkinter ImageTk
         self.img = ImageTk.PhotoImage(resized_image)
+
+        # A Label Widget for displaying the Image
+        label = Label(self.frame, image=self.img)
+        label.pack()
