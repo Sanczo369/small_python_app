@@ -58,3 +58,6 @@ class Image_Cartoonify:
         image = Image.open(Img)
         # resize the image, so that it fits to the screen
         resized_image = image.resize((self.width, self.height))
+
+        # Create an object of tkinter ImageTk
+        self.img = ImageTk.PhotoImage(resized_image)
