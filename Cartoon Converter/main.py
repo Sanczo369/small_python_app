@@ -65,3 +65,7 @@ class Image_Cartoonify:
         # A Label Widget for displaying the Image
         label = Label(self.frame, image=self.img)
         label.pack()
+
+    def cartoonify(self):
+        # Storing the image path to a variable
+        ImgPath = self.Image_Path
