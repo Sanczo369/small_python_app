@@ -69,3 +69,30 @@ class Image_Cartoonify:
     def cartoonify(self):
         # Storing the image path to a variable
         ImgPath = self.Image_Path
+
+        # If any image is not selected
+        if len(ImgPath) == 0:
+            pass
+        else:
+            # Get the file name to be saved after cartoonify the image
+            filename = pyautogui.prompt("Enter the filename to be saved")
+            # Filename with the extension (extension of the original image)
+            filename = filename + pathlib.Path(ImgPath).suffix
+            # Read the image
+            Img = cv2.imread(ImgPath)
+            Img = cv2.resize(Img, (740, 480))
+            GrayImg = cv2.cvtColor(src=Img, code=cv2.COLOR_BGR2GRAY)
+            SmoothImg = cv2.medianBlur(src=GrayImg, ksize=5)
+
+            Edges = cv2.adaptiveThreshold(src=SmoothImg, maxValue=255, adaptiveMethod=cv2.ADAPTIVE_THRESH_MEAN_C,
+                                          thresholdType=cv2.THRESH_BINARY, blockSize=9, C=9)
+
+            # Adjust the the values of sigmaColor and sigmaSpace to get a proper cartoon effect
+            ColorImg = cv2.bilateralFilter(src=Img, d=9, sigmaColor=300, sigmaSpace=300)
+
+            CartoonImg = cv2.bitwise_and(src1=ColorImg, src2=ColorImg, mask=Edges)
+
+            cv2.imwrite(filename, CartoonImg)
+
+            self.clear_screen()
+            self.show_image(filename)
