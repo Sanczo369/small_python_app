@@ -106,3 +106,9 @@ class Image_Cartoonify:
     # application
     def _exit(self):
         self.window.destroy()
+
+if __name__ == "__main__":
+    root = Tk()
+    # Creating an object of Image_Cartoonify class
+    obj = Image_Cartoonify(root)
+    root.mainloop()
