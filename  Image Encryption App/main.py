@@ -20,3 +20,11 @@ class ImageEncryption:
         self.window.geometry("920x520")
         self.window.title('IMAGE ENCRYPTION APP')
         self.window.resizable(width = False, height = False)
+
+        # ==============Start Menubar===============
+        self.menubar = Menu(self.window, bg="#5956BA", fg="white", font=("Montserrat", 9))
+        # Adding Edit Menu and its sub menus
+        edit = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='OPEN', menu=edit)
+        edit.add_command(label='ENCRYPT',command=self.open_image_for_encryption)
+        edit.add_command(label='DECRYPT',command=self.open_image_for_decryption)
