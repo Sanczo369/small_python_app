@@ -28,3 +28,7 @@ class ImageEncryption:
         self.menubar.add_cascade(label='OPEN', menu=edit)
         edit.add_command(label='ENCRYPT',command=self.open_image_for_encryption)
         edit.add_command(label='DECRYPT',command=self.open_image_for_decryption)
+
+        about = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='ABOUT', menu=about)
+        about.add_command(label='ABOUT', command=self.about)
