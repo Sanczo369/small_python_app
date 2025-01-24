@@ -32,3 +32,8 @@ class ImageEncryption:
         about = Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label='ABOUT', menu=about)
         about.add_command(label='ABOUT', command=self.about)
+
+        # Exit the Application
+        _exit = Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label='EXIT', menu=_exit)
+        _exit.add_command(label='EXIT', command=self.window.destroy)
