@@ -41,3 +41,14 @@ class ImageEncryption:
         # Configuring the menubar
         self.window.config(menu=self.menubar)
         # ===================End of menubar=======================
+
+        # ===================Start of frames====================
+        self.frame1 = Frame(self.window, bg='white')
+        self.frame1.place(x=0, y=0, width=720, height=420)
+
+        self.frame2 = Frame(self.window, bg='white')
+        self.frame2.place(x=0, y=420, width=720, height=100)
+
+        self.frame3 = Frame(self.window, bg='yellow')
+        self.frame3.place(x=720, y=0, width=200, height=520)
+        # ==================End of frames======================
