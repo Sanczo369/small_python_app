@@ -37,3 +37,7 @@ class ImageEncryption:
         _exit = Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label='EXIT', menu=_exit)
         _exit.add_command(label='EXIT', command=self.window.destroy)
+
+        # Configuring the menubar
+        self.window.config(menu=self.menubar)
+        # ===================End of menubar=======================
