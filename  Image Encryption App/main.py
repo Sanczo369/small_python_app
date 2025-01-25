@@ -90,3 +90,21 @@ class ImageEncryption:
         self.decryption_status = False
         self.image_path = ''
         self.iv_path = ''
+
+    # Resizing the image
+    def resize_image(self, image_path):
+        image = Image.open(image_path)
+        width, height = image.size
+
+        # Determine image type and calculate resize dimensions
+        if width > height:  # Landscape
+            new_width = self.frame1.winfo_width()
+            new_height = int(height * (new_width / width))
+        elif width < height:  # Portrait
+            new_height = self.frame1.winfo_height()
+            new_width = int(width * (new_height / height))
+        else:  # Square
+            new_width = 400
+            new_height = 400
+
+        return new_width, new_height
