@@ -58,3 +58,8 @@ class ImageEncryption:
         encrypt_img = PhotoImage(file='Images/encrypt.png')
         decrypt_img = PhotoImage(file='Images/decrypt.png')
         self.browse_iv_img = PhotoImage(file='Images/browse_iv.png')
+
+        # Displaying sidebar image
+        self.img1 = ImageTk.PhotoImage(sidebar_image)
+        label1 = Label(self.frame3, image=self.img1)
+        label1.pack()
