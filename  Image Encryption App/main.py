@@ -52,3 +52,9 @@ class ImageEncryption:
         self.frame3 = Frame(self.window, bg='yellow')
         self.frame3.place(x=720, y=0, width=200, height=520)
         # ==================End of frames======================
+
+        sidebar_image = Image.open("Images/sidebar.png")
+        footer_image = Image.open("Images/footer.png")
+        encrypt_img = PhotoImage(file='Images/encrypt.png')
+        decrypt_img = PhotoImage(file='Images/decrypt.png')
+        self.browse_iv_img = PhotoImage(file='Images/browse_iv.png')
