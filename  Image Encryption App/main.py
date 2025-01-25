@@ -63,3 +63,8 @@ class ImageEncryption:
         self.img1 = ImageTk.PhotoImage(sidebar_image)
         label1 = Label(self.frame3, image=self.img1)
         label1.pack()
+
+        # Displaying footer image
+        self.img2 = ImageTk.PhotoImage(footer_image)
+        label2 = Label(self.frame2, image=self.img2)
+        label2.pack()
