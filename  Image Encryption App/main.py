@@ -84,3 +84,9 @@ class ImageEncryption:
         decrypt_btn.pack(padx= 20, pady=20)
 
         self.default_values()
+
+    def default_values(self):
+        self.encryption_status = False
+        self.decryption_status = False
+        self.image_path = ''
+        self.iv_path = ''
