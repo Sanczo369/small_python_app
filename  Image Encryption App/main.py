@@ -68,3 +68,10 @@ class ImageEncryption:
         self.img2 = ImageTk.PhotoImage(footer_image)
         label2 = Label(self.frame2, image=self.img2)
         label2.pack()
+
+        # Encryption Button
+        btn_1 = Button(self.frame3, image=encrypt_img, border=0, cursor="hand2", command=self.pre_encryption)
+        btn_1.place(x=35, y=70)
+
+        encrypt_btn = customtkinter.CTkButton(master=self.frame3, image=encrypt_img)
+        encrypt_btn.pack(padx= 20, pady=20)
