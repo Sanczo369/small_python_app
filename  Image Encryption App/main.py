@@ -75,3 +75,12 @@ class ImageEncryption:
 
         encrypt_btn = customtkinter.CTkButton(master=self.frame3, image=encrypt_img)
         encrypt_btn.pack(padx= 20, pady=20)
+
+        # Decryption Button
+        btn_2 = Button(self.frame3, image=decrypt_img, border=0, cursor="hand2", command=self.pre_decryption)
+        btn_2.place(x=35, y=125)
+
+        decrypt_btn = customtkinter.CTkButton(master=self.frame3, image=decrypt_img)
+        decrypt_btn.pack(padx= 20, pady=20)
+
+        self.default_values()
