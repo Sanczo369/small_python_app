@@ -116,6 +116,9 @@ class ImageEncryption:
         self.width, self.height = self.resize_image(self.image_path)
         resized_image = image.resize((self.width, self.height))
 
-
         # Create an object of tkinter ImageTk
         self.image = ImageTk.PhotoImage(resized_image)
+
+        # Create a new inner frame for the resized image
+        inner_frame = Frame(self.frame1, width=self.width, height=self.height)
+        inner_frame.pack()
