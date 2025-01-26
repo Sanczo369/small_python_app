@@ -122,3 +122,7 @@ class ImageEncryption:
         # Create a new inner frame for the resized image
         inner_frame = Frame(self.frame1, width=self.width, height=self.height)
         inner_frame.pack()
+
+        # Create a label to display the image
+        image_label = Label(inner_frame, image=self.image)
+        image_label.pack()
