@@ -108,3 +108,10 @@ class ImageEncryption:
             new_height = 400
 
         return new_width, new_height
+
+    # Displays the original image before encryption
+    def display_original_image(self, image_path):
+        image = Image.open(image_path)
+        self.clear_screen()
+        self.width, self.height = self.resize_image(self.image_path)
+        resized_image = image.resize((self.width, self.height))
