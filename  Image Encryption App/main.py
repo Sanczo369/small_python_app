@@ -126,3 +126,6 @@ class ImageEncryption:
         # Create a label to display the image
         image_label = Label(inner_frame, image=self.image)
         image_label.pack()
+
+        # Displays the image information
+        self.image_information_1()
