@@ -129,3 +129,11 @@ class ImageEncryption:
 
         # Displays the image information
         self.image_information_1()
+
+    # Displays the decryprted image after decryption operation
+    def display_decrypted_image(self, image_path):
+        self.clear_screen()
+
+        image = Image.open(image_path)
+        self.width, self.height = self.resize_image(image_path)
+        resized_image = image.resize((self.width, self.height))
