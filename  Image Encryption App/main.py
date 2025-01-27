@@ -148,3 +148,9 @@ class ImageEncryption:
         # Create a label to display the image
         image_label = Label(inner_frame, image=self.image)
         image_label.pack()
+
+        self.file_name_label.config(text=f"Image: {os.path.basename(image_path)}")
+        self.file_status_label.config(text=f"Decrypted Image", bg="green")
+
+        self.key_entry.destroy()
+        self.btn_3.destroy()
