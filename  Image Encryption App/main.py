@@ -156,17 +156,20 @@ class ImageEncryption:
         self.btn_3.destroy()
 
         # Displays a dummy image
-        def display_placeholder_image(self):
-            self.clear_screen()
-            image = Image.open("Images/sample_encrypted_image.png")
+    def display_placeholder_image(self):
+        self.clear_screen()
+        image = Image.open("Images/sample_encrypted_image.png")
 
-            # Create an object of tkinter ImageTk
-            self.image = ImageTk.PhotoImage(image)
+        # Create an object of tkinter ImageTk
+        self.image = ImageTk.PhotoImage(image)
 
-            # Create a new inner frame for the resized image
-            inner_frame = Frame(self.frame1, width=720, height=420)
-            inner_frame.pack()
+        # Create a new inner frame for the resized image
+        inner_frame = Frame(self.frame1, width=720, height=420)
+        inner_frame.pack()
 
-            # Create a label to display the image
-            image_label = Label(inner_frame, image=self.image)
-            image_label.pack()
+        # Create a label to display the image
+        image_label = Label(inner_frame, image=self.image)
+        image_label.pack()
+
+        # Displays the image information
+        self.image_information_1()
