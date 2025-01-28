@@ -199,3 +199,8 @@ class ImageEncryption:
 
         self.key_entry.destroy()
         self.btn_3.destroy()
+
+    # Displays a dummy image
+    def display_placeholder_image(self):
+        self.clear_screen()
+        image = Image.open("Images/sample_encrypted_image.png")
