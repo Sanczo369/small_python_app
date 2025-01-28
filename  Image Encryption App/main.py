@@ -204,3 +204,6 @@ class ImageEncryption:
     def display_placeholder_image(self):
         self.clear_screen()
         image = Image.open("Images/sample_encrypted_image.png")
+
+        # Create an object of tkinter ImageTk
+        self.image = ImageTk.PhotoImage(image)
