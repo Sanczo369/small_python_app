@@ -210,3 +210,9 @@ class ImageEncryption:
         self.file_status_label = Label(self.frame2, text="Image is Opened", font=("Montserrat", 8), bg="#03226F",
                                        fg="white")
         self.file_status_label.place(x=20, y=42)
+
+    # Opens the filedialog to select a directory for saving resulting image
+    def choose_directory(self):
+        chosen_dir = filedialog.askdirectory()
+        if chosen_dir:
+            return chosen_dir
