@@ -174,3 +174,16 @@ class ImageEncryption:
         # Displays the image information
         self.image_information_1()
 
+    # Displays the original image information
+    def image_information_1(self):
+        image = Image.open(self.image_path)
+        width, height = image.size
+
+        self.image_name_label = Label(self.frame2, text=f"Image Name: {os.path.basename(self.image_path)}", font=("Montserrat", 8), bg="#03226F", fg="white")
+        self.image_name_label.place(x=20, y=17)
+
+        self.image_size_label = Label(self.frame2, text=f"Image Size: {width}x{height}", font=("Montserrat", 8), bg="#03226F", fg="white")
+        self.image_size_label.place(x=20, y=42)
+
+        self.status_label = Label(self.frame2, text="Image is Opened", font=("Montserrat", 8), bg="#03226F", fg="white")
+        self.status_label.place(x=20, y=67)
