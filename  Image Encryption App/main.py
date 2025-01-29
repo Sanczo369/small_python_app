@@ -216,3 +216,12 @@ class ImageEncryption:
         chosen_dir = filedialog.askdirectory()
         if chosen_dir:
             return chosen_dir
+    # Generates random key values
+    def generate_random_text(self):
+        # Available length options: 16, 24, or 32 (You can modify here)
+        length = 32
+        # Define the character pool containing all desired characters
+        char_pool = string.ascii_uppercase + string.ascii_lowercase + string.digits
+
+        random_text = ''.join(random.sample(char_pool, length))
+        return random_text
