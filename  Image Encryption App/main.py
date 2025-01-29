@@ -174,36 +174,3 @@ class ImageEncryption:
         # Displays the image information
         self.image_information_1()
 
-
-    # Displays the decryprted image after decryption operation
-    def display_decrypted_image(self, image_path):
-        self.clear_screen()
-
-        image = Image.open(image_path)
-        self.width, self.height = self.resize_image(image_path)
-        resized_image = image.resize((self.width, self.height))
-
-        # Create an object of tkinter ImageTk
-        self.image = ImageTk.PhotoImage(resized_image)
-
-        # Create a new inner frame for the resized image
-        inner_frame = Frame(self.frame1, width=self.width, height=self.height)
-        inner_frame.pack()
-
-        # Create a label to display the image
-        image_label = Label(inner_frame, image=self.image)
-        image_label.pack()
-
-        self.file_name_label.config(text=f"Image: {os.path.basename(image_path)}")
-        self.file_status_label.config(text=f"Decrypted Image", bg="green")
-
-        self.key_entry.destroy()
-        self.btn_3.destroy()
-
-    # Displays a dummy image
-    def display_placeholder_image(self):
-        self.clear_screen()
-        image = Image.open("Images/sample_encrypted_image.png")
-
-        # Create an object of tkinter ImageTk
-        self.image = ImageTk.PhotoImage(image)
