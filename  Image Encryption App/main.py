@@ -225,3 +225,7 @@ class ImageEncryption:
 
         random_text = ''.join(random.sample(char_pool, length))
         return random_text
+
+    # Performs encryption on images
+    def encrypt_image(self, image_path, output_image_path, iv_path, key):
+        image = Image.open(image_path)
