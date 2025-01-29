@@ -229,3 +229,6 @@ class ImageEncryption:
     # Performs encryption on images
     def encrypt_image(self, image_path, output_image_path, iv_path, key):
         image = Image.open(image_path)
+
+        # Generate a random IV
+        iv = get_random_bytes(AES.block_size)
