@@ -187,3 +187,26 @@ class ImageEncryption:
 
         self.status_label = Label(self.frame2, text="Image is Opened", font=("Montserrat", 8), bg="#03226F", fg="white")
         self.status_label.place(x=20, y=67)
+
+    # Displays the encrypted image information
+    def image_information_2(self):
+        self.clear_screen()
+
+        self.key_var = StringVar(value='')
+        self.key_entry = Entry(self.frame3, textvariable=self.key_var, font=("Montserrat", 8), width=15)
+        self.key_entry.place(x=81, y=222)
+
+        self.btn_3 = Button(self.frame3, image=self.browse_iv_img, border=0, cursor="hand2",
+                            command=self.browse_IV_file)
+        self.btn_3.place(x=35, y=350)
+
+        self.browse_iv_btn = customtkinter.CTkButton(master=self.frame3, image=self.browse_iv_img)
+        self.browse_iv_btn.pack(padx=20, pady=20)
+
+        self.file_name_label = Label(self.frame2, text=f"Image Name: {os.path.basename(self.image_path)}",
+                                     font=("Montserrat", 8), bg="#03226F", fg="white")
+        self.file_name_label.place(x=20, y=17)
+
+        self.file_status_label = Label(self.frame2, text="Image is Opened", font=("Montserrat", 8), bg="#03226F",
+                                       fg="white")
+        self.file_status_label.place(x=20, y=42)
