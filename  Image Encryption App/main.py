@@ -239,3 +239,8 @@ class ImageEncryption:
         # Combine key-specific value with random string (nonce) using HMAC
         key_specific = HMAC.new(key, msg=image_hash.encode("utf-8"), digestmod=SHA256).digest()
         unique_iv = HMAC.new(key_specific, msg=os.urandom(16), digestmod=SHA256).digest()[:16]
+
+        # Convert the image to bytes
+        img_byte_array = io.BytesIO()
+        image.save(img_byte_array, format=image.format)
+        img_bytes = img_byte_array.getvalue()
