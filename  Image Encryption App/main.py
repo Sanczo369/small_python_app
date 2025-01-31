@@ -232,3 +232,6 @@ class ImageEncryption:
 
         # Generate a random IV
         iv = get_random_bytes(AES.block_size)
+
+        # Get a unique identifier from the filename
+        image_hash = SHA256.new(os.path.basename(image_path).encode("utf-8")).hexdigest()
