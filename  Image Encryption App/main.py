@@ -235,3 +235,7 @@ class ImageEncryption:
 
         # Get a unique identifier from the filename
         image_hash = SHA256.new(os.path.basename(image_path).encode("utf-8")).hexdigest()
+
+        # Combine key-specific value with random string (nonce) using HMAC
+        key_specific = HMAC.new(key, msg=image_hash.encode("utf-8"), digestmod=SHA256).digest()
+        unique_iv = HMAC.new(key_specific, msg=os.urandom(16), digestmod=SHA256).digest()[:16]
