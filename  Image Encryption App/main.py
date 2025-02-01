@@ -247,3 +247,7 @@ class ImageEncryption:
 
         # Initialize AES cipher
         cipher = AES.new(key, AES.MODE_CBC, unique_iv)
+
+        # Encrypt the image data with padding
+        padded_data = pad(img_bytes, AES.block_size)
+        encrypted_data = iv + cipher.encrypt(padded_data)
