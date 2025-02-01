@@ -251,3 +251,7 @@ class ImageEncryption:
         # Encrypt the image data with padding
         padded_data = pad(img_bytes, AES.block_size)
         encrypted_data = iv + cipher.encrypt(padded_data)
+
+        # Write the encrypted data with IV to the output image file
+        with open(output_image_path, 'wb') as f:
+            f.write(encrypted_data)
