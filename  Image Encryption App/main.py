@@ -244,3 +244,6 @@ class ImageEncryption:
         img_byte_array = io.BytesIO()
         image.save(img_byte_array, format=image.format)
         img_bytes = img_byte_array.getvalue()
+
+        # Initialize AES cipher
+        cipher = AES.new(key, AES.MODE_CBC, unique_iv)
