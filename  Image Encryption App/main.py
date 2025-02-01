@@ -261,3 +261,31 @@ class ImageEncryption:
             f.write(unique_iv)
 
         self.decryption_status = False
+
+        # Performs pre-encryprion tasks
+        def pre_encryption(self):
+            if self.image_path == '':
+                tk.messagebox.showerror(title="Image Missing", message="Please select an image")
+            else:
+                key = self.generate_random_text()
+                key = bytes(key, encoding="utf-8")
+                key_str = key[0:].decode("utf-8")
+
+                chosen_dir = self.choose_directory()
+                filename = os.path.basename(self.image_path)
+                image_name = filename.split('.')[0]
+                output_image_path = f"{chosen_dir}/{image_name}_encrypted.jpg"
+                iv_path = f"{chosen_dir}/{image_name}_encrypted.iv"
+
+                self.encrypt_image(self.image_path, output_image_path, iv_path, key)
+
+                self.status_label.config(text="Image is encrypted", bg="green")
+
+                self.key_label_var = StringVar()
+                self.key_label = Entry(self.frame2, textvariable=self.key_label_var, font=("Montserrat", 8), width=20,
+                                       bg="#03226F", fg="white")
+                self.key_label.insert(0, f"{key_str}")
+                self.key_label.place(x=180, y=17)
+
+                self.clear_screen()
+                self.image_path = ''
