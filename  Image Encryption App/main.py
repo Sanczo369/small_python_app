@@ -255,3 +255,9 @@ class ImageEncryption:
         # Write the encrypted data with IV to the output image file
         with open(output_image_path, 'wb') as f:
             f.write(encrypted_data)
+
+        # Saving the iv file
+        with open(iv_path, 'wb') as f:
+            f.write(unique_iv)
+
+        self.decryption_status = False
