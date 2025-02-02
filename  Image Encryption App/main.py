@@ -305,3 +305,14 @@ class ImageEncryption:
         # Read the encrypted data
         with open(input_image_path, 'rb') as f:
             encrypted_data = f.read()
+
+        try:
+            # Separate the IV from the encrypted data
+            iv = encrypted_data[:AES.block_size]
+            encrypted_data = encrypted_data[AES.block_size:]
+
+            # Initialize AES cipher
+            cipher = AES.new(key, AES.MODE_CBC, unique_iv)
+
+            # Decrypt the image data
+            decrypted_data = unpad(cipher.decrypt(encrypted_data), AES.block_size)
