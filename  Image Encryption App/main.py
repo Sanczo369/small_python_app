@@ -371,3 +371,36 @@ class ImageEncryption:
     def clear_screen(self):
         for widget in self.frame1.winfo_children():
             widget.destroy()
+
+    # Displayes about section of the application
+    def about(self):
+        about_frame = Frame(self.window)
+        about_frame.place(x=290, y=2, width=340, height=180)
+
+        # Create labels with formatted text
+        app_name_label = Label(about_frame, text="IMAGE ENCRYPTOR v1.0", font=("Montserrat", 12, "bold"))
+        app_name_label.pack(pady=5)
+
+        features_label = Label(about_frame, text="**Features**", font=("Montserrat", 8, "bold"))
+        features_label.place(x=15, y=35)
+
+        point_1 = Label(about_frame, text="* Encrypts images using a secure algorithm", font=("Montserrat", 8))
+        point_1.place(x=15, y=50)
+
+        point_2 = Label(about_frame, text="* Decrypts encrypted images with the corresponding key",
+                        font=("Montserrat", 8))
+        point_2.place(x=15, y=65)
+
+        developer_info = Label(about_frame, text="**Developed By: Subhankar Rakshit",
+                               font=("Montserrat", 8, "bold"))
+        developer_info.place(x=15, y=85)
+
+        # License information
+        license_label = Label(about_frame, text="**License: Apache License, Version 2.0",
+                              font=("Montserrat", 8, "bold"))
+        license_label.place(x=15, y=105)
+
+        # Close button
+        close_button = Button(about_frame, text="CLOSE", font=("Montserrat", 7), cursor="hand2",
+                              command=about_frame.destroy)
+        close_button.place(x=135, y=149)
