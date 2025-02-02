@@ -316,3 +316,15 @@ class ImageEncryption:
 
             # Decrypt the image data
             decrypted_data = unpad(cipher.decrypt(encrypted_data), AES.block_size)
+
+            try:
+                # Convert decrypted bytes to image
+                decrypted_image = Image.open(io.BytesIO(decrypted_data))
+            except:
+                tk.messagebox.showerror(title="Wrong IV File", message="Wrong IV File")
+                self.clear_screen()
+                self.file_name_label.destroy()
+                self.file_status_label.destroy()
+                self.key_entry.destroy()
+                self.btn_3.destroy()
+                return
