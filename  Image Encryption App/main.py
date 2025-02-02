@@ -293,3 +293,15 @@ class ImageEncryption:
     # Selecting the iv file (secret file)
     def browse_IV_file(self):
         self.iv_path = filedialog.askopenfilename(title="Select the IV File", filetypes=(("IV File", "*.iv"),))
+
+  # Performs decryption on images
+    def decrypt_image(self, input_image_path, output_image_path, key, iv_path):
+        self.output_image_path = output_image_path
+
+        # Read the IV from the separate file
+        with open(iv_path, 'rb') as f:
+            unique_iv = f.read()
+
+        # Read the encrypted data
+        with open(input_image_path, 'rb') as f:
+            encrypted_data = f.read()
