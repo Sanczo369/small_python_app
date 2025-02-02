@@ -342,3 +342,27 @@ class ImageEncryption:
             self.file_status_label.destroy()
             self.key_entry.destroy()
             self.btn_3.destroy()
+
+    # Performs pre-decryption tasks
+    def pre_decryption(self):
+        if self.image_path == '':
+            tk.messagebox.showerror(title="Image Missing", message="Please select an image")
+            return
+        elif self.key_entry.get() == '':
+            tk.messagebox.showerror(title="Key Missing", message="Please enter the key")
+            return
+        elif self.iv_path == '':
+            tk.messagebox.showerror(title="IV File Missing", message="Please select the IV file")
+            return
+        else:
+            key = self.key_var.get()
+            key = bytes(key, encoding="utf-8")
+
+            chosen_dir = self.choose_directory()
+            filename = os.path.basename(self.image_path)
+            image_name = filename.split('.')[0]
+            output_image_path = f"{chosen_dir}/{image_name}_recovered.jpg"
+
+            self.decrypt_image(self.image_path, output_image_path, key, self.iv_path)
+            self.image_path = ''
+            self.iv_path = ''
