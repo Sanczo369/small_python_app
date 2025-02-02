@@ -366,3 +366,8 @@ class ImageEncryption:
             self.decrypt_image(self.image_path, output_image_path, key, self.iv_path)
             self.image_path = ''
             self.iv_path = ''
+
+    # Clears the Frame 1
+    def clear_screen(self):
+        for widget in self.frame1.winfo_children():
+            widget.destroy()
