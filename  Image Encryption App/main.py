@@ -328,3 +328,17 @@ class ImageEncryption:
                 self.key_entry.destroy()
                 self.btn_3.destroy()
                 return
+
+            # Save the decrypted image
+            decrypted_image.save(self.output_image_path, format=decrypted_image.format)
+
+            self.display_decrypted_image(self.output_image_path)
+
+            self.encryption_status = False
+        except ValueError:
+            tk.messagebox.showerror(title="Incorrect Key", message="Incorrect key value")
+            self.clear_screen()
+            self.file_name_label.destroy()
+            self.file_status_label.destroy()
+            self.key_entry.destroy()
+            self.btn_3.destroy()
