@@ -404,3 +404,8 @@ class ImageEncryption:
         close_button = Button(about_frame, text="CLOSE", font=("Montserrat", 7), cursor="hand2",
                               command=about_frame.destroy)
         close_button.place(x=135, y=149)
+
+if __name__ == "__main__":
+    root = Tk()
+    obj = ImageEncryption(root)
+    root.mainloop()
