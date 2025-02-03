@@ -38,3 +38,9 @@ class Yt_Downloader:
         font=("Kokila", 10, 'bold'), bg="dodger blue", \
         fg="white", width=5, command=self.About_Window)
         about_btn.place(x=600, y=30)
+
+        # Exit Button
+        exit_btn = Button(self.window, text="Exit", \
+        font=("Kokila", 10, 'bold'), bg="dodger blue", \
+        fg="white", width=5, command=self.Exit_Window)
+        exit_btn.place(x=600, y=70)
