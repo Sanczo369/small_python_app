@@ -19,3 +19,16 @@ class Yt_Downloader:
         self.window.resizable(width=False, height=False)
 
         self.save_to_loc = ''
+
+        # Frame 1: For YouTube Logo
+        self.frame_1 = Frame(self.window, width=220, height=80)
+        self.frame_1.pack()
+        self.frame_1.place(x=20, y=20)
+
+        # Frame 2: For Download Logo
+        self.frame_2 = Frame(self.window, width=50, height=50)
+        self.frame_2.pack()
+        self.frame_2.place(x=235, y=40)
+
+        self.show_yt_logo()
+        self.show_dn_logo()
