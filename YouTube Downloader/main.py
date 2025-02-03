@@ -32,3 +32,9 @@ class Yt_Downloader:
 
         self.show_yt_logo()
         self.show_dn_logo()
+
+        # About Button
+        about_btn = Button(self.window, text="About", \
+        font=("Kokila", 10, 'bold'), bg="dodger blue", \
+        fg="white", width=5, command=self.About_Window)
+        about_btn.place(x=600, y=30)
