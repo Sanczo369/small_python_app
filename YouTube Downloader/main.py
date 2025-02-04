@@ -66,3 +66,16 @@ class Yt_Downloader:
         # Create a Label Widget to display the text or Image
         label = Label(self.frame_1, image=self.img_1)
         label.pack()
+
+    # This Function displays the Download logo
+    def show_dn_logo(self):
+        # The image Path(Opening the image)
+        image = Image.open('Images/Download_Button.png')
+        resized_image = image.resize((50, 50))
+
+        # Create an object of tkinter ImageTk
+        self.img_2 = ImageTk.PhotoImage(resized_image)
+
+        # Create a Label Widget to display the text or Image
+        label = Label(self.frame_2, image=self.img_2)
+        label.pack()
