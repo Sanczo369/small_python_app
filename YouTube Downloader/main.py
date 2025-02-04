@@ -79,3 +79,9 @@ class Yt_Downloader:
         # Create a Label Widget to display the text or Image
         label = Label(self.frame_2, image=self.img_2)
         label.pack()
+
+    # This function displays all the widgets in the Main Page
+    def Main_Window(self):
+        self.URL = Entry(self.frame_3, \
+        font=("Helvetica", 18), width=41)
+        self.URL.place(x=20,y=20)
