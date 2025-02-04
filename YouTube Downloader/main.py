@@ -90,3 +90,9 @@ class Yt_Downloader:
         paste_btn = Button(self.frame_3, text="Paste URL", \
         command=self.Paste_URL)
         paste_btn.place(x=580,y=20)
+
+        # Resolution Label
+        resolution_lbl = Label(self.frame_3, \
+        text="Download Quality", \
+        font=("Times New Roman", 13, 'bold'))
+        resolution_lbl.place(x=150, y=70)
