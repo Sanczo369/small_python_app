@@ -85,3 +85,8 @@ class Yt_Downloader:
         self.URL = Entry(self.frame_3, \
         font=("Helvetica", 18), width=41)
         self.URL.place(x=20,y=20)
+
+        # Paste URL Button
+        paste_btn = Button(self.frame_3, text="Paste URL", \
+        command=self.Paste_URL)
+        paste_btn.place(x=580,y=20)
