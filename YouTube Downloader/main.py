@@ -52,3 +52,17 @@ class Yt_Downloader:
 
         # Calling the Main_Window() Function
         self.Main_Window()
+
+    # This function displays the YouTube Logo
+    def show_yt_logo(self):
+        # Opening the YouTube logo image
+        image = Image.open('Images/YouTube_logo.png')
+        # Resizing the image
+        resized_image = image.resize((220, 80))
+
+        # Create an object of tkinter ImageTk
+        self.img_1 = ImageTk.PhotoImage(resized_image)
+
+        # Create a Label Widget to display the text or Image
+        label = Label(self.frame_1, image=self.img_1)
+        label.pack()
