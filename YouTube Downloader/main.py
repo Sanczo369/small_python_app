@@ -49,3 +49,6 @@ class Yt_Downloader:
         self.frame_3 = Frame(self.window, bg="white", \
                              width=700, height=480)
         self.frame_3.place(x=0, y=130)
+
+        # Calling the Main_Window() Function
+        self.Main_Window()
