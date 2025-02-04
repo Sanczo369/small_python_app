@@ -44,3 +44,8 @@ class Yt_Downloader:
         font=("Kokila", 10, 'bold'), bg="dodger blue", \
         fg="white", width=5, command=self.Exit_Window)
         exit_btn.place(x=600, y=70)
+
+        # Frame 3: For the Main Page Widgets
+        self.frame_3 = Frame(self.window, bg="white", \
+                             width=700, height=480)
+        self.frame_3.place(x=0, y=130)
