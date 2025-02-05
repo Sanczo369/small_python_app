@@ -111,3 +111,14 @@ class Yt_Downloader:
         font=("Kokila", 10, 'bold'), bg="gold", width=6, \
         command=self.Select_Directory)
         save_to_btn.place(x=150, y=110)
+
+        # Tkinter Label sor showing the Save To location path
+        # on the window
+        self.loc_label = Label(self.frame_3, \
+        text=self.save_to_loc, font=("Helvetica", 12), \
+        fg='blue', bg='white')
+        self.loc_label.place(x=240, y=116)
+
+        status_lbl = Label(self.frame_3, text="Status", \
+        font=("Times New Roman", 13, 'bold'))
+        status_lbl.place(x=150, y=160)
