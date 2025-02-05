@@ -96,3 +96,12 @@ class Yt_Downloader:
         text="Download Quality", \
         font=("Times New Roman", 13, 'bold'))
         resolution_lbl.place(x=150, y=70)
+
+        self.quality = StringVar()
+        # Combo Box for showing the available video resolution
+        # and  Audio download options
+        self.quality_combobox = ttk.Combobox(self.frame_3, \
+        textvariable=self.quality, font=("times new roman",13))
+        self.quality_combobox['values'] = download_quality
+        self.quality_combobox.current(0)
+        self.quality_combobox.place(x=310,y=70)
