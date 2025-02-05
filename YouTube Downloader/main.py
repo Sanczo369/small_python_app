@@ -105,3 +105,9 @@ class Yt_Downloader:
         self.quality_combobox['values'] = download_quality
         self.quality_combobox.current(0)
         self.quality_combobox.place(x=310,y=70)
+
+        # Save To Button: Where the downloaded file will be stored
+        save_to_btn = Button(self.frame_3, text="Save To", \
+        font=("Kokila", 10, 'bold'), bg="gold", width=6, \
+        command=self.Select_Directory)
+        save_to_btn.place(x=150, y=110)
