@@ -122,3 +122,15 @@ class Yt_Downloader:
         status_lbl = Label(self.frame_3, text="Status", \
         font=("Times New Roman", 13, 'bold'))
         status_lbl.place(x=150, y=160)
+
+        # Status Label:
+        # Options: 'Not Slected(By Default), or 'Downloading...',
+        # or 'Download Completed''
+        self.status = Label(self.frame_3, text="Not Selected", \
+        font=("Helvetica", 12), bg="white", fg="red")
+        self.status.place(x=220, y=163)
+
+        download_btn = Button(self.frame_3, text="Download", \
+        font=("Kokila", 13, 'bold'), bg="red", fg="white", \
+        width=8, command=self.Threading)
+        download_btn.place(x=280, y=210)
