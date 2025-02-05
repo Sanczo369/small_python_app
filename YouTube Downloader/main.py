@@ -142,3 +142,10 @@ class Yt_Downloader:
         exact_URL = StringVar()
         self.URL.config(textvariable=exact_URL)
         exact_URL.set(str(pyperclip.paste()))
+
+    # This function opens the Tkinter file dialog to
+    # let users select the save to location for the Yt video
+    def Select_Directory(self):
+        # Storing the 'saving location' for the result file
+        self.save_to_loc = filedialog.askdirectory(title="Select a location")
+        self.loc_label.config(text=self.save_to_loc)
