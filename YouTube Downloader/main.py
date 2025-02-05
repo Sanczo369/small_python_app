@@ -134,3 +134,11 @@ class Yt_Downloader:
         font=("Kokila", 13, 'bold'), bg="red", fg="white", \
         width=8, command=self.Threading)
         download_btn.place(x=280, y=210)
+
+    # When the 'Paste URL' button is pressed, this function
+    # gets a call and paste the pre-copied text(URL) in the
+    # Tkinter Entry Box
+    def Paste_URL(self):
+        exact_URL = StringVar()
+        self.URL.config(textvariable=exact_URL)
+        exact_URL.set(str(pyperclip.paste()))
