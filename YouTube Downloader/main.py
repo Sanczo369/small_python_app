@@ -149,3 +149,9 @@ class Yt_Downloader:
         # Storing the 'saving location' for the result file
         self.save_to_loc = filedialog.askdirectory(title="Select a location")
         self.loc_label.config(text=self.save_to_loc)
+
+    # Creating a different thread to run the 'Download' function
+    def Threading(self):
+        # Killing a thread through "daemon=True" isn't a good idea
+        self.x = Thread(target=self.Download, daemon=True)
+        self.x.start()
