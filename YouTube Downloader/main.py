@@ -187,3 +187,7 @@ class Yt_Downloader:
     def About_Window(self):
         messagebox.showinfo("Yt Downloader 22.05", \
                             "Developed by Subhankar Rakshit\n~PySeek")
+
+    # This function closes the main window
+    def Exit_Window(self):
+        self.window.destroy()
