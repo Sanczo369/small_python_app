@@ -182,3 +182,8 @@ class Yt_Downloader:
                 self.status.config(text="Download Completed")
             except Exception as es:
                 messagebox.showerror("Error!", f"Error due to {es}")
+
+    # When the 'About' button is pressed, this function gets a call
+    def About_Window(self):
+        messagebox.showinfo("Yt Downloader 22.05", \
+                            "Developed by Subhankar Rakshit\n~PySeek")
