@@ -155,3 +155,30 @@ class Yt_Downloader:
         # Killing a thread through "daemon=True" isn't a good idea
         self.x = Thread(target=self.Download, daemon=True)
         self.x.start()
+
+    def Download(self):
+        # If the user doesn't enter any URL, a warning messagebox
+        # will popped up
+        if self.URL.get() == '':
+            messagebox.showwarning('Warning!', \
+                                   "Please Enter a Valid URL")
+        else:
+            try:
+                yt = YouTube(self.URL.get())
+                # If the user selects 'Audio Only' option
+                # from the combo box(Download the Audio)
+                if self.quality_combobox.get() == 'Audio Only':
+                    self.status.config(text="Downloading...")
+                    audio = yt.streams.filter(type="audio").last()
+                    audio.download(output_path=self.save_to_loc)
+                # If the user selects any video resolution from
+                # the combo box
+                else:
+                    self.status.config(text="Downloading...")
+                    video = yt.streams.filter(mime_type="video/mp4", \
+                                              res=self.quality_combobox.get(), progressive=True).first()
+                    video.download(output_path=self.save_to_loc)
+
+                self.status.config(text="Download Completed")
+            except Exception as es:
+                messagebox.showerror("Error!", f"Error due to {es}")
