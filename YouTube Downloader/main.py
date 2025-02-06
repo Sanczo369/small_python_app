@@ -191,3 +191,10 @@ class Yt_Downloader:
     # This function closes the main window
     def Exit_Window(self):
         self.window.destroy()
+
+# The main function
+if __name__ == "__main__":
+    root = Tk()
+    # Creating a 'Yt_Downloader' class object
+    obj = Yt_Downloader(root)
+    root.mainloop()
