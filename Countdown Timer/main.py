@@ -86,3 +86,10 @@ class CountDown:
         self.second_combobox.current(0)
         self.second_combobox.place(x=350,y=110)
         # ===========================================
+
+        # Tkinter Buttons
+        # Cancel button
+        cancel_button = Button(self.window, text='Cancel',
+        font=('Helvetica',12), bg="white", fg="black",
+        command=self.Cancel)
+        cancel_button.place(x=70, y=150)
