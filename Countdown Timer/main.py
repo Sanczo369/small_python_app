@@ -103,6 +103,11 @@ class CountDown:
         command=self.Get_Time)
         set_button.place(x=160, y=150)
 
-        def Cancel(self):
-            self.pause = True
-            self.window.destroy()
+    def Cancel(self):
+        self.pause = True
+        self.window.destroy()
+
+    def Threading(self):
+        # Killing a thread through "daemon=True" isn't a good idea
+        self.x = Thread(target=self.start_time, daemon=True)
+        self.x.start()
