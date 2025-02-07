@@ -102,3 +102,7 @@ class CountDown:
         font=('Helvetica',12), bg="white", fg="black",
         command=self.Get_Time)
         set_button.place(x=160, y=150)
+
+        def Cancel(self):
+            self.pause = True
+            self.window.destroy()
