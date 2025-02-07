@@ -111,3 +111,7 @@ class CountDown:
         # Killing a thread through "daemon=True" isn't a good idea
         self.x = Thread(target=self.start_time, daemon=True)
         self.x.start()
+
+    def Clear_Screen(self):
+        for widget in self.button_frame.winfo_children():
+            widget.destroy()
