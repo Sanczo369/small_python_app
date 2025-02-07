@@ -27,3 +27,6 @@ class CountDown:
         self.window.configure(bg='gray35')
         # Fixing the Window length constant
         self.window.resizable(width=False, height=False)
+
+        # Declaring a variable to pause the countdown time
+        self.pause = False
