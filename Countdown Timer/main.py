@@ -57,3 +57,13 @@ class CountDown:
                              font=("times new roman", 15), bg='gray35', fg='white')
         second_label.place(x=350, y=70)
         # ===========================================
+
+        # Tkinter Comboboxes
+        # Combobox for hours
+        self.hour = IntVar()
+        self.hour_combobox = ttk.Combobox(self.window, width=8,
+                                          height=10, textvariable=self.hour,
+                                          font=("times new roman", 15))
+        self.hour_combobox['values'] = hour_list
+        self.hour_combobox.current(0)
+        self.hour_combobox.place(x=50, y=110)
