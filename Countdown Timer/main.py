@@ -93,3 +93,12 @@ class CountDown:
         font=('Helvetica',12), bg="white", fg="black",
         command=self.Cancel)
         cancel_button.place(x=70, y=150)
+
+        # Set Time Button
+        # When the user presses this button
+        # the 'Start' and 'Pause' button will
+        # show inside the 'self.button_frame' frame
+        set_button = Button(self.window, text='Set',
+        font=('Helvetica',12), bg="white", fg="black",
+        command=self.Get_Time)
+        set_button.place(x=160, y=150)
