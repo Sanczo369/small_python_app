@@ -39,3 +39,21 @@ class CountDown:
         # This frame is used to show the countdown time label
         self.time_frame = Frame(self.window, bg="gray35", \
         width=480, height=120).place(x=0, y=210)
+
+        # Tkinter Labels
+        time_label = Label(self.window, text="Set Time",
+        font=("times new roman",20, "bold"), bg='gray35',fg='yellow')
+        time_label.place(x=180, y=30)
+
+        hour_label = Label(self.window, text="Hour",
+                           font=("times new roman", 15), bg='gray35', fg='white')
+        hour_label.place(x=50, y=70)
+
+        minute_label = Label(self.window, text="Minute",
+                             font=("times new roman", 15), bg='gray35', fg='white')
+        minute_label.place(x=200, y=70)
+
+        second_label = Label(self.window, text="Second",
+                             font=("times new roman", 15), bg='gray35', fg='white')
+        second_label.place(x=350, y=70)
+        # ===========================================
