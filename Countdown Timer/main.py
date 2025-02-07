@@ -76,3 +76,13 @@ class CountDown:
         self.minute_combobox['values'] = min_sec_list
         self.minute_combobox.current(0)
         self.minute_combobox.place(x=200,y=110)
+
+        # Combobox for seconds
+        self.second = IntVar()
+        self.second_combobox = ttk.Combobox(self.window, width=8,
+        height=10, textvariable=self.second,
+        font=("times new roman",15))
+        self.second_combobox['values'] = min_sec_list
+        self.second_combobox.current(0)
+        self.second_combobox.place(x=350,y=110)
+        # ===========================================
