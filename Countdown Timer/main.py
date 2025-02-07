@@ -30,3 +30,12 @@ class CountDown:
 
         # Declaring a variable to pause the countdown time
         self.pause = False
+
+        # The Start and Pause buttons are placed
+        # inside this frame
+        self.button_frame = Frame(self.window, bg="gray35", \
+        width=240, height=40)
+        self.button_frame.place(x=230, y=150)
+        # This frame is used to show the countdown time label
+        self.time_frame = Frame(self.window, bg="gray35", \
+        width=480, height=120).place(x=0, y=210)
