@@ -113,6 +113,13 @@ class CountDown:
         bg = 'gray35', fg = 'yellow')
         self.time_display.place(x=130, y=210)
 
+        try:
+            # Total amount of time in seconds
+            h = (int(self.hour_combobox.get())*3600)
+            m = (int(self.minute_combobox.get())*60)
+            s = (int(self.second_combobox.get()))
+            self.time_left = h + m + s
+
     def Threading(self):
         # Killing a thread through "daemon=True" isn't a good idea
         self.x = Thread(target=self.start_time, daemon=True)
