@@ -107,6 +107,12 @@ class CountDown:
         self.pause = True
         self.window.destroy()
 
+    def Get_Time(self):
+        self.time_display = Label(self.time_frame,
+        font=('Helvetica', 20 , "bold"),
+        bg = 'gray35', fg = 'yellow')
+        self.time_display.place(x=130, y=210)
+
     def Threading(self):
         # Killing a thread through "daemon=True" isn't a good idea
         self.x = Thread(target=self.start_time, daemon=True)
