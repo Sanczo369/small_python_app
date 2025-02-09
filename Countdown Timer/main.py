@@ -115,3 +115,19 @@ class CountDown:
     def Clear_Screen(self):
         for widget in self.button_frame.winfo_children():
             widget.destroy()
+
+    def start_time(self):
+        self.pause = False
+        while self.time_left > 0:
+            mins, secs = divmod(self.time_left, 60)
+
+            hours = 0
+            if mins > 60:
+                # hour minute
+                hours, mins = divmod(mins, 60)
+
+            self.time_display.config(text=f"Time Left: {hours}: {mins}: {secs}")
+            self.time_display.update()
+            # sleep function: for 1 second
+            time.sleep(1)
+            self.time_left = self.time_left -1
