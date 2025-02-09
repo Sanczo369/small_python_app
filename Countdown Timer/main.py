@@ -145,3 +145,14 @@ class CountDown:
             # the while loop will break
             if self.pause == True:
                 break
+    def pause_time(self):
+        self.pause = True
+
+        mins, secs = divmod(self.time_left, 60)
+        hours = 0
+        if mins > 60:
+            # hour minute
+            hours, mins = divmod(mins, 60)
+
+        self.time_display.config(text=f"Time Left: {hours}: {mins}: {secs}")
+        self.time_display.update()
