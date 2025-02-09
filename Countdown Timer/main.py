@@ -120,6 +120,26 @@ class CountDown:
             s = (int(self.second_combobox.get()))
             self.time_left = h + m + s
 
+            # If the user tries to set the default time(0:0:0) then
+            # A warning message will display
+            if s == 0 and m == 0 and h == 0:
+                messagebox.showwarning('Warning!', \
+                                       'Please select a right time to set')
+            else:
+                # Start Button
+                start_button = Button(self.button_frame, text='Start',
+                                      font=('Helvetica', 12), bg="green", fg="white",
+                                      command=self.Threading)
+                start_button.place(x=20, y=0)
+
+                # Pause Button
+                pause_button = Button(self.button_frame, text='Pause',
+                                      font=('Helvetica', 12), bg="red", fg="white",
+                                      command=self.pause_time)
+                pause_button.place(x=100, y=0)
+        except Exception as es:
+            messagebox.showerror("Error!", f"Error due to {es}")
+
     def Threading(self):
         # Killing a thread through "daemon=True" isn't a good idea
         self.x = Thread(target=self.start_time, daemon=True)
