@@ -156,3 +156,9 @@ class CountDown:
 
         self.time_display.config(text=f"Time Left: {hours}: {mins}: {secs}")
         self.time_display.update()
+
+if __name__ == "__main__":
+    root = Tk()
+    # Creating a CountDown class object
+    obj = CountDown(root)
+    root.mainloop()
