@@ -141,3 +141,7 @@ class CountDown:
                 process.terminate()
                 # Clearing the 'self.button_frame' frame
                 self.Clear_Screen()
+            # if the pause button is pressed,
+            # the while loop will break
+            if self.pause == True:
+                break
