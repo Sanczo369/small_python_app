@@ -131,3 +131,13 @@ class CountDown:
             # sleep function: for 1 second
             time.sleep(1)
             self.time_left = self.time_left -1
+            # When the time is over, a piece of music will
+            # play in the background
+            if self.time_left <= 0:
+                process = multiprocessing.Process(target=playsound,
+                args=('Ringtones/romantic.mp3',))
+                process.start()
+                messagebox.showinfo('Time Over', 'Please ENTER to stop playing')
+                process.terminate()
+                # Clearing the 'self.button_frame' frame
+                self.Clear_Screen()
