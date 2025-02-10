@@ -36,3 +36,8 @@ class AlarmClock:
         self.window.geometry("680x420+0+0")
         self.window.title("PyClock")
         self.window.resizable(width = False, height = False)
+
+        # Background image of the first window.
+        self.bg_image = ImageTk.PhotoImage(file="Images/image_1.jpg")
+        self.background = Label(self.window, image=self.bg_image)
+        self.background.place(x=0, y=0, relwidth=1, relheight=1)
