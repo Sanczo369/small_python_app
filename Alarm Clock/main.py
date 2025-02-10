@@ -41,3 +41,16 @@ class AlarmClock:
         self.bg_image = ImageTk.PhotoImage(file="Images/image_1.jpg")
         self.background = Label(self.window, image=self.bg_image)
         self.background.place(x=0, y=0, relwidth=1, relheight=1)
+
+        # Display Label shows the current time in the
+        # first window
+        self.display = Label(self.window, font=('Helvetica', 34),
+        bg = 'gray8', fg = 'yellow')
+        self.display.place(x=100,y=150)
+
+        self.show_time()
+
+        set_button = Button(self.window, text="Set Alarm",
+        font=('Helvetica',15), bg="green", fg="white",
+        command=self.set_alarm)
+        set_button.place(x=270, y=220)
