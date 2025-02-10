@@ -29,3 +29,10 @@ ringtones_path = {
     'twirling_intime': 'Ringtones/twirling_intime.mp3',
     'wakeup_alarm_tone': 'Ringtones/wakeup_alarm_tone.mp3'
 }
+
+class AlarmClock:
+    def __init__(self, root):
+        self.window = root
+        self.window.geometry("680x420+0+0")
+        self.window.title("PyClock")
+        self.window.resizable(width = False, height = False)
