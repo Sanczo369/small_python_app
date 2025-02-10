@@ -54,3 +54,10 @@ class AlarmClock:
         font=('Helvetica',15), bg="green", fg="white",
         command=self.set_alarm)
         set_button.place(x=270, y=220)
+
+    # Method to show the current time in the first window
+    def show_time(self):
+        current_time = time.strftime('%H:%M:%S %p, %A')
+        # Placing the time format level.
+        self.display.config(text = current_time)
+        self.display.after(100, self.show_time)
