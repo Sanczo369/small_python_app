@@ -21,3 +21,11 @@ minutes_list = ['00', '01', '02', '03', '04', '05', '06', '07',
 		'56', '57', '58', '59']
 
 ringtones_list = ['mom_calling', 'nice_wake_up', 'romantic', 'twirling_intime', 'wakeup_alarm_tone']
+
+ringtones_path = {
+    'mom_calling': 'Ringtones/mom_calling.mp3',
+    'nice_wake_up': 'Ringtones/nice_wake_up.mp3',
+    'romantic': 'Ringtones/romantic.mp3',
+    'twirling_intime': 'Ringtones/twirling_intime.mp3',
+    'wakeup_alarm_tone': 'Ringtones/wakeup_alarm_tone.mp3'
+}
