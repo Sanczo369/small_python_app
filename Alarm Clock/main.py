@@ -94,3 +94,8 @@ class AlarmClock:
         self.minute_combo['values'] = minutes_list
         self.minute_combo.current(0)
         self.minute_combo.place(x=450,y=90)
+
+        # Ringtone Label.
+        ringtone_label = Label(self.alarm_window, text="Ringtones",
+        font=("times new roman",20))
+        ringtone_label.place(x=150, y=130)
