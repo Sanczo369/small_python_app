@@ -71,3 +71,8 @@ class AlarmClock:
     hours_label = Label(self.alarm_window, text="Hours",
                         font=("times new roman", 20))
     hours_label.place(x=150, y=50)
+
+    #  Minute Label
+    minute_label = Label(self.alarm_window, text="Minutes",
+                         font=("times new roman", 20))
+    minute_label.place(x=450, y=50)
