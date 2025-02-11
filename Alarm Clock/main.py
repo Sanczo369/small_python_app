@@ -99,3 +99,12 @@ class AlarmClock:
         ringtone_label = Label(self.alarm_window, text="Ringtones",
         font=("times new roman",20))
         ringtone_label.place(x=150, y=130)
+
+        # Ringtone Combobox(Choose the ringtone).
+        self.ringtone_var = StringVar()
+        self.ringtone_combo = ttk.Combobox(self.alarm_window,
+        width=15, height=10, textvariable=self.ringtone_var,
+        font=("times new roman",15))
+        self.ringtone_combo['values'] = ringtones_list
+        self.ringtone_combo.current(0)
+        self.ringtone_combo.place(x=150,y=170)
