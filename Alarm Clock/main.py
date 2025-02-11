@@ -76,3 +76,12 @@ class AlarmClock:
     minute_label = Label(self.alarm_window, text="Minutes",
                          font=("times new roman", 20))
     minute_label.place(x=450, y=50)
+
+    # Hour Combobox
+    self.hour_var = StringVar()
+    self.hour_combo = ttk.Combobox(self.alarm_window,
+                                   width=10, height=10, textvariable=self.hour_var,
+                                   font=("times new roman", 15))
+    self.hour_combo['values'] = hours_list
+    self.hour_combo.current(0)
+    self.hour_combo.place(x=150, y=90)
