@@ -66,3 +66,8 @@ class AlarmClock:
         self.alarm_window = Tk()
         self.alarm_window.title("Set Alarm")
         self.alarm_window.geometry("680x420+200+200")
+
+    # Hour Label
+    hours_label = Label(self.alarm_window, text="Hours",
+                        font=("times new roman", 20))
+    hours_label.place(x=150, y=50)
