@@ -61,3 +61,8 @@ class AlarmClock:
         # Placing the time format level.
         self.display.config(text = current_time)
         self.display.after(100, self.show_time)
+
+    def set_alarm(self):
+        self.alarm_window = Tk()
+        self.alarm_window.title("Set Alarm")
+        self.alarm_window.geometry("680x420+200+200")
