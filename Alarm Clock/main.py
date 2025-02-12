@@ -124,3 +124,9 @@ class AlarmClock:
         test_button = Button(self.alarm_window, text='Test',
         font=('Helvetica',15), bg="white", fg="black", command=self.preview_alarm)
         test_button.place(x=150, y=300)
+
+        # The Cancel Button: For cancel the alarm.
+        cancel_button = Button(self.alarm_window,
+        text='Cancel', font=('Helvetica',15), bg="white",
+        fg="black", command=self.alarm_window.destroy)
+        cancel_button.place(x=390, y=300)
