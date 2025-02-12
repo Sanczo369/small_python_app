@@ -144,3 +144,8 @@ class AlarmClock:
         process.start()
         messagebox.showinfo('Playing...', 'press ENTER to stop playing')
         process.terminate()
+
+    # Method for creating a thread
+    def _threading(self):
+        x = Thread(target=self.save_alarm)
+        x.start()
