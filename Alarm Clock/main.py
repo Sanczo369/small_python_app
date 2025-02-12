@@ -108,3 +108,15 @@ class AlarmClock:
         self.ringtone_combo['values'] = ringtones_list
         self.ringtone_combo.current(0)
         self.ringtone_combo.place(x=150,y=170)
+
+        # Create an entry for setting a message
+        message_label = Label(self.alarm_window, text="Message",
+        font=("times new roman",20))
+        message_label.place(x=150, y=210)
+
+        self.message_var = StringVar()
+        self.message_entry = Entry(self.alarm_window,
+        textvariable=self.message_var, font=("times new roman",14), width=30)
+        self.message_entry.insert(0, 'Wake Up')
+        self.message_entry.place(x=150, y=250)
+
