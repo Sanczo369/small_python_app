@@ -130,3 +130,10 @@ class AlarmClock:
         text='Cancel', font=('Helvetica',15), bg="white",
         fg="black", command=self.alarm_window.destroy)
         cancel_button.place(x=390, y=300)
+
+        # The Start Button: For set the alarm time
+        start_button = Button(self.alarm_window, text='Start',
+        font=('Helvetica',15), bg="green", fg="white", command=self._threading)
+        start_button.place(x=490, y=300)
+
+        self.alarm_window.mainloop()
