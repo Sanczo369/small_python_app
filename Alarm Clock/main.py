@@ -137,3 +137,10 @@ class AlarmClock:
         start_button.place(x=490, y=300)
 
         self.alarm_window.mainloop()
+
+    def preview_alarm(self):
+        process = multiprocessing.Process(target=playsound,
+        args=(ringtones_path[self.ringtone_combo.get()],))
+        process.start()
+        messagebox.showinfo('Playing...', 'press ENTER to stop playing')
+        process.terminate()
