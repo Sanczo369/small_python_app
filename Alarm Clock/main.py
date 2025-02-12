@@ -149,3 +149,24 @@ class AlarmClock:
     def _threading(self):
         x = Thread(target=self.save_alarm)
         x.start()
+
+    def save_alarm(self):
+        alarm_time = f"{self.hour_combo.get()}:{self.minute_combo.get()}"
+        messagebox.showinfo("Alarm Set", f"Alarm set for {alarm_time}")
+        sound_name = self.ringtone_combo.get()
+        message = self.message_entry.get()
+        try:
+            while True:
+                # The current time is in 24 hour format
+                current_time = datetime.now()
+                # Converting the current time into hours and minutes
+                current_time_format = current_time.strftime("%H:%M")
+                if current_time_format == alarm_time:
+                    process = multiprocessing.Process(target=playsound,
+                    args=(ringtones_path[sound_name],))
+                    process.start()
+                    messagebox.showinfo("Alarm",f"{message}, It's {alarm_time}")
+                    process.terminate()
+                    break
+        except Exception as es:
+            messagebox.showerror("Error!", f"Error due to {es}")
