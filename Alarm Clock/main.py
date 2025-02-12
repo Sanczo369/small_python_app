@@ -120,3 +120,7 @@ class AlarmClock:
         self.message_entry.insert(0, 'Wake Up')
         self.message_entry.place(x=150, y=250)
 
+        # Test Button: For testing the ringtone music.
+        test_button = Button(self.alarm_window, text='Test',
+        font=('Helvetica',15), bg="white", fg="black", command=self.preview_alarm)
+        test_button.place(x=150, y=300)
