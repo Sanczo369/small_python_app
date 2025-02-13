@@ -6,3 +6,6 @@ from ultralytics import YOLO
 
 # Load YOLO model with custom weights
 yolo_model = YOLO("Weights/best.pt")
+
+# Define class names
+class_labels = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
