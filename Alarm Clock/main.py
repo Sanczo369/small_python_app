@@ -170,3 +170,7 @@ class AlarmClock:
                     break
         except Exception as es:
             messagebox.showerror("Error!", f"Error due to {es}")
+if __name__ == "__main__":
+    root = Tk()
+    obj = AlarmClock(root)
+    root.mainloop()
