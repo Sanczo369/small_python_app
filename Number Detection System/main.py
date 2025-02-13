@@ -29,3 +29,8 @@ video_capture = cv2.VideoCapture(0)
 # For number detection in a video
 # video_path = "video_file_here"
 # video_capture = cv2.VideoCapture(url)
+
+# Start the video capture in a separate thread
+capture_thread = threading.Thread(target=capture_video, args=(video_capture,))
+capture_thread.daemon = True
+capture_thread.start()
