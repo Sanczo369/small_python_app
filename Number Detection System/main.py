@@ -18,3 +18,6 @@ def capture_video(video_capture):
         success, img = video_capture.read()
         if success:
             frame = img
+
+# For number detection through webcam
+video_capture = cv2.VideoCapture(0)
