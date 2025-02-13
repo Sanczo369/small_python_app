@@ -21,3 +21,11 @@ def capture_video(video_capture):
 
 # For number detection through webcam
 video_capture = cv2.VideoCapture(0)
+
+# For number detection through ip webcam
+# url = 'ip_address_here/video'
+# video_capture = cv2.VideoCapture(url)
+
+# For number detection in a video
+# video_path = "video_file_here"
+# video_capture = cv2.VideoCapture(url)
