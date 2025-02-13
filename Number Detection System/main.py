@@ -9,3 +9,12 @@ yolo_model = YOLO("Weights/best.pt")
 
 # Define class names
 class_labels = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+frame = None
+
+def capture_video(video_capture):
+    global frame
+    while True:
+        success, img = video_capture.read()
+        if success:
+            frame = img
