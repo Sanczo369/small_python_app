@@ -45,3 +45,10 @@ class File_Organizer:
         width=720,height=480)
         self.frame_2.place(x=0, y=110)
         self.main_window()
+
+    def display_logo(self):
+        image = Image.open('Images/logo.png')
+        resized_image = image.resize((280, 70))
+        self.logo = ImageTk.PhotoImage(resized_image)
+        label = Label(self.frame_1, bg='gray90',image=self.logo)
+        label.pack()
