@@ -52,3 +52,27 @@ class File_Organizer:
         self.logo = ImageTk.PhotoImage(resized_image)
         label = Label(self.frame_1, bg='gray90',image=self.logo)
         label.pack()
+
+    def main_window(self):
+        Heading_Label = Label(self.frame_2,
+        text="Please Select the Folder",
+        font=("Kokila", 20, 'bold'), bg='white')
+        Heading_Label.place(x=160, y=20)
+        Folder_Button = Button(self.frame_2, text="Select Folder",
+        font=("Kokila", 10, 'bold'), bg="gold", width=10,
+        command=self.select_directory)
+        Folder_Button.place(x=130, y=80)
+        self.Folder_Entry = Entry(self.frame_2,
+        font=("Helvetica", 12), width=32)
+        self.Folder_Entry.place(x=256, y=85)
+        Status = Label(self.frame_2, text="Status: ",
+        font=("Kokila", 12, 'bold'), bg='white')
+        Status.place(x=180, y=130)
+        # Status Label:
+        self.Status_Label = Label(self.frame_2, text="Not Started Yet",
+        font=("Kokila", 12), bg="white", fg="red")
+        self.Status_Label.place(x=256, y=130)
+        Start_Button = Button(self.frame_2, text="Start",
+        font=("Kokila", 13, 'bold'), bg="dodger blue", fg="white",
+        width=8, command=self._threading)
+        Start_Button.place(x=280, y=180)
