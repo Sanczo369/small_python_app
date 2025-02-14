@@ -76,3 +76,12 @@ class File_Organizer:
         font=("Kokila", 13, 'bold'), bg="dodger blue", fg="white",
         width=8, command=self._threading)
         Start_Button.place(x=280, y=180)
+
+    def select_directory(self):
+        self.selected_dir = filedialog.askdirectory(title =
+        "Select a location")
+        self.Folder_Entry.insert(0, self.selected_dir)
+        self.selected_dir = str(self.selected_dir)
+        # Checking if the folder path is exists or not
+        if os.path.exists(self.selected_dir):
+            self.browsed = True
