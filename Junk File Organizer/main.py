@@ -167,3 +167,6 @@ class File_Organizer:
     def about_window(self):
         messagebox.showinfo("File Organizer",
                             "Developed by Subhankar Rakshitn~PySeek")
+
+    def exit_window(self):
+        self.window.destroy()
