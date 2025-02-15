@@ -89,3 +89,64 @@ class File_Organizer:
     def _threading(self):
         self.x = Thread(target=self.organizer, daemon=True)
         self.x.start()
+
+    def organizer(self):
+        # If no directory is chosen
+        if not self.browsed:
+            messagebox.showwarning('No folders are choosen',
+                                   'Please Select a Folder First')
+            return
+        try:
+            # Showing the current status of the operation
+            self.Status_Label.config(text='Processing...')
+            self.Current_Path = self.selected_dir
+            if os.path.exists(self.Current_Path):
+                # self.Folder_List1: stores all the folders that
+                # are already presented in the selected directory
+                self.Folder_List1 = []
+                # self.Folder_List2: stores newly created folders
+                self.Folder_List2 = []
+                self.flag = False
+                for folder, extensions in file_types.items():
+                    self.folder_name = folder
+                    self.folder_path = os.path.join(self.Current_Path, self.folder_name)
+                    # Change the directory to the current
+                    # folder path that we've selected
+                    os.chdir(self.Current_Path)
+                    # If the folder is already present in that directory
+                    if os.path.exists(self.folder_name):
+                        self.Folder_List1.append(self.folder_name)
+                    # If the folder is not present in that directory,
+                    # then create a new folder
+                    else:
+                        self.Folder_List2.append(self.folder_name)
+                        os.mkdir(self.folder_path)
+
+                    # Calling the 'file_finder' function to
+                    # find a specific type of file (or extension)
+                    # and change their old path to new path.
+                    for item in self.file_finder(self.Current_Path, extensions):
+                        self.Old_File_Path = os.path.join(self.Current_Path, item)
+                        self.New_File_Path = os.path.join(self.folder_path, item)
+                        # Moving each file to their new location
+                        shutil.move(self.Old_File_Path, self.New_File_Path)
+                        self.flag = True
+            else:
+                messagebox.showerror('Error!', 'Please Enter a Valid Path!')
+            # Checking if the files are separated or not
+            # If `flag` is True: It means the program discovered
+            # matching files and they have been organized.
+            if self.flag:
+                self.Status_Label.config(text='Done!')
+                messagebox.showinfo('Done!', 'Operation Successful!')
+                self.reset()
+            # If `flag` is False: It means the program didn't find
+            # any matching files there; only empty folders are created.
+            if not self.flag:
+                self.Status_Label.config(text='Complete!')
+                messagebox.showinfo('Done!',
+                                    'Folders have been creatednNo Files were there to move')
+                self.reset()
+        # If any error occurs
+        except Exception as es:
+            messagebox.showerror("Error!", f"Error due to {str(es)}")
