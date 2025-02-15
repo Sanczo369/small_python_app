@@ -85,3 +85,7 @@ class File_Organizer:
         # Checking if the folder path is exists or not
         if os.path.exists(self.selected_dir):
             self.browsed = True
+
+    def _threading(self):
+        self.x = Thread(target=self.organizer, daemon=True)
+        self.x.start()
