@@ -150,3 +150,11 @@ class File_Organizer:
         # If any error occurs
         except Exception as es:
             messagebox.showerror("Error!", f"Error due to {str(es)}")
+
+    def file_finder(self, folder_path, file_extensions):
+        self.files = []
+        for file in os.listdir(folder_path):
+            for extension in file_extensions:
+                if file.endswith(extension):
+                    self.files.append(file)
+        return self.files
