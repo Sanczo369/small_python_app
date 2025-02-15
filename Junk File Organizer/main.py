@@ -158,3 +158,8 @@ class File_Organizer:
                 if file.endswith(extension):
                     self.files.append(file)
         return self.files
+
+    def reset(self):
+        self.Status_Label.config(text='Not Started Yet')
+        self.Folder_Entry.delete(0, END)
+        self.selected_dir = ''
