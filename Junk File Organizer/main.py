@@ -170,3 +170,8 @@ class File_Organizer:
 
     def exit_window(self):
         self.window.destroy()
+
+if __name__ == "__main__":
+    root = Tk()
+    obj = File_Organizer(root)
+    root.mainloop()
