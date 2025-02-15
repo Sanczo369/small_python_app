@@ -163,3 +163,7 @@ class File_Organizer:
         self.Status_Label.config(text='Not Started Yet')
         self.Folder_Entry.delete(0, END)
         self.selected_dir = ''
+
+    def about_window(self):
+        messagebox.showinfo("File Organizer",
+                            "Developed by Subhankar Rakshitn~PySeek")
