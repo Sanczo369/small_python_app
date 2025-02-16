@@ -22,3 +22,7 @@ class TypingTest:
 
         # Text for using as a paragraph
         self.textList = [tt.text1, tt.text2, tt.text3, tt.text4, tt.text5]
+
+        # Tkinter Frame
+        self.frame = Frame(self.window, bg=st.color2, width=st.width, height=st.height)
+        self.frame.place(x=0, y=0)
