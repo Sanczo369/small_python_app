@@ -26,3 +26,6 @@ class TypingTest:
         # Tkinter Frame
         self.frame = Frame(self.window, bg=st.color2, width=st.width, height=st.height)
         self.frame.place(x=0, y=0)
+
+        # Calling the function, startWindow()
+        self.startWindow()
