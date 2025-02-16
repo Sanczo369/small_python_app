@@ -19,3 +19,6 @@ class TypingTest:
         # Declaring some variables
         self.key = None
         self.typingStarted = False
+
+        # Text for using as a paragraph
+        self.textList = [tt.text1, tt.text2, tt.text3, tt.text4, tt.text5]
