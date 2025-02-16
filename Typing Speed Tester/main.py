@@ -15,3 +15,7 @@ class TypingTest:
         self.window.title('Typing Tester')
         self.window.resizable(width=False, height=False)
         self.window.configure(bg=st.color2)
+
+        # Declaring some variables
+        self.key = None
+        self.typingStarted = False
