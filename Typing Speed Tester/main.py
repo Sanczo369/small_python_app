@@ -37,3 +37,34 @@ class TypingTest:
 
         startButton = Button(self.frame, text="Start Here", border=0, cursor='hand2' ,fg=st.color2, bg=st.color1, font=(st.font4, 18), command=self.startTest)
         startButton.place(x=320, y=215)
+
+    def startTest(self):
+        # Clearing the previous screen
+        self.clearScreen()
+
+        # Getting the total time allocated for the test
+        self.totalTime = st.totalTime
+
+        # Choosing a random paragraph from the list of several choices
+        self.paragraph = random.choice(self.textList)
+
+        # A Label widget for showing the remainning time
+        self.timeLabel = Label(self.frame, text="1:00", bg=st.color2, fg=st.color1, font=(st.font1, 15))
+        self.timeLabel.place(x=20, y=15)
+
+        # A Tkinter Text widget to display the paragraph
+        textBox = Text(self.frame, width=65, height=10, bg=st.color1, font=(st.color2, 13))
+        textBox.place(x=40, y=80)
+
+        # Inserting the text into the Text widget
+        textBox.insert(END, self.paragraph)
+        textBox.config(state='disabled')
+
+        # A Tkinter Entry widget to get input from the user
+        self.inputEntry = Entry(self.frame, fg=st.color2, bg=st.color1, width=35, font=(st.font4, 20))
+        self.inputEntry.place(x=100, y=360)
+
+        # Define the on press to capture key pressing
+        ls = Listener(on_press=self.listener)
+        # Starting a different thread for this task
+        ls.start()
