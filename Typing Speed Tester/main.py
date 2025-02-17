@@ -85,3 +85,14 @@ class TypingTest:
     def multiThreading(self):
         x = Thread(target=self.countDown)
         x.start()
+
+    def countDown(self):
+        while self.totalTime > 0:
+            # Updating the Time Label
+            self.timeLabel.config(text=f"{0}:{self.totalTime}")
+            time.sleep(1)
+            self.totalTime -= 1
+
+        self.timeLabel.config(text=f"{0}:{0}")
+        # Calling the Function to Calculate the Final Result
+        self.calculateResult()
