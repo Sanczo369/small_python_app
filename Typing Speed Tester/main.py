@@ -68,3 +68,16 @@ class TypingTest:
         ls = Listener(on_press=self.listener)
         # Starting a different thread for this task
         ls.start()
+
+    def listener(self, key):
+        self.key = str(key)
+
+        # If any key is pressed, a different thread will create
+        # to Count Down the remaining time.
+        if self.key != None:
+            self.typingStarted = True
+            self.multiThreading()
+
+        # Returning False to stop the thread created to
+        # capture key pressing.
+        return False
