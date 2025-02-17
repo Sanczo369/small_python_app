@@ -111,3 +111,10 @@ class TypingTest:
     def clearScreen(self):
         for widget in self.frame.winfo_children():
             widget.destroy()
+
+if __name__ == "__main__":
+    # Instance of Tk class
+    root = Tk()
+    # Object of TypingTest class
+    obj = TypingTest(root)
+    root.mainloop()
