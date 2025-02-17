@@ -107,3 +107,7 @@ class TypingTest:
 
         label = Label(self.frame, image=self.img)
         label.pack()
+
+    def clearScreen(self):
+        for widget in self.frame.winfo_children():
+            widget.destroy()
