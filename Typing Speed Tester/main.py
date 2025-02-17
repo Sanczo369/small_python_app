@@ -81,3 +81,7 @@ class TypingTest:
         # Returning False to stop the thread created to
         # capture key pressing.
         return False
+
+    def multiThreading(self):
+        x = Thread(target=self.countDown)
+        x.start()
