@@ -96,3 +96,14 @@ class TypingTest:
         self.timeLabel.config(text=f"{0}:{0}")
         # Calling the Function to Calculate the Final Result
         self.calculateResult()
+
+    def backgroundImage(self, img):
+        # Opening the image
+        image = Image.open(img)
+        # Resize the image to fit to the screen
+        resizedImg = image.resize((st.width, st.height))
+        # Creating an instance of PhotoImage class of ImageTk module
+        self.img = ImageTk.PhotoImage(resizedImg)
+
+        label = Label(self.frame, image=self.img)
+        label.pack()
