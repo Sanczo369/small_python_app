@@ -42,3 +42,11 @@ class AppleCatcher:
                 self._check_apples_bottom()
                 self._update_apples()
             self._update_screen()
+
+    def check_for_level_up(self):
+        # The game level up when the scores reach multiple of 20.
+        if self.stats.score!=0 and self.stats.score%20 == 0:
+            self.settings.increase_speed()
+            # Increase Level
+            self.stats.level += 1
+            self.sb.prep_level()
