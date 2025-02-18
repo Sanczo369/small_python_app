@@ -19,3 +19,15 @@ class AppleCatcher:
 
         # Background Window Image
         self.background = pg.image.load('Images/background.png')
+
+        self.music = Music()
+
+        self.stats = GameStats(self)
+        self.sb = Scoreboard(self)
+        self.basket = Basket(self)
+        self.apples = pg.sprite.Group()
+        # Make the Play button
+        self.play_button = Button(self, "Play")
+
+        # Getting the Screen's Rectangular
+        self.screen_rect = self.screen.get_rect()
