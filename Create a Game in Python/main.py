@@ -50,3 +50,10 @@ class AppleCatcher:
             # Increase Level
             self.stats.level += 1
             self.sb.prep_level()
+
+    def _update_apples(self):
+        '''If a apple crosses the window, it disappears'''
+        for apple in self.apples.copy():
+            if apple.rect.bottom >= self.screen_rect.bottom:
+                self.apples.remove(apple)
+        self._check_basket_apple_collisions()
