@@ -31,3 +31,14 @@ class AppleCatcher:
 
         # Getting the Screen's Rectangular
         self.screen_rect = self.screen.get_rect()
+
+    def run_game(self):
+        while True:
+            self._check_events()
+            if self.stats.game_active:
+                self.basket.update()
+                self._drop_apples()
+                self.apples.update()
+                self._check_apples_bottom()
+                self._update_apples()
+            self._update_screen()
