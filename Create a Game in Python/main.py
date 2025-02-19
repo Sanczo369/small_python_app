@@ -57,3 +57,13 @@ class AppleCatcher:
             if apple.rect.bottom >= self.screen_rect.bottom:
                 self.apples.remove(apple)
         self._check_basket_apple_collisions()
+
+    def _check_basket_apple_collisions(self):
+        '''If the basket and a apple collide, add a point.'''
+        collisions = pg.sprite.spritecollide(self.basket, self.apples, True)
+        if collisions:
+            # If collision detected add a point
+            self.stats.score += self.settings.apple_points
+            self.check_for_level_up()
+            self.music.apple_catched.play()
+            self.sb.prep_score()
