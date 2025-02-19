@@ -75,3 +75,17 @@ class AppleCatcher:
             if apple.rect.bottom >= screen_rect.bottom:
                 self._apple_hit()
                 break
+
+    def _apple_hit(self):
+        '''It checks the remaining chances to miss the apple
+        from being catched and play the drop sound. If chances over, it
+        plays a 'game over' sound.'''
+        if self.stats.apples_left > 0:
+            self.stats.apples_left -= 1
+            self.music.apple_droped.play()
+            self.sb.prep_apples()
+        else:
+            self.music.game_over.play()
+            self.stats.game_active = False
+            pg.mouse.set_visible(True)
+            self.music.bg_music.stop()
