@@ -89,3 +89,24 @@ class AppleCatcher:
             self.stats.game_active = False
             pg.mouse.set_visible(True)
             self.music.bg_music.stop()
+
+    def _drop_apples(self):
+        '''Drop apples from the top, randomly'''
+        if len(self.apples) == 0:
+                new_apple = Apple(self)
+                self.apples.add(new_apple)
+        if len(self.apples) == 1:
+            for apple in self.apples.sprites():
+                if apple.rect.bottom > 300:
+                    new_apple = Apple(self)
+                    self.apples.add(new_apple)
+        if len(self.apples) == 2:
+            for apple in self.apples.sprites():
+                if apple.rect.bottom > 600:
+                    new_apple = Apple(self)
+                    self.apples.add(new_apple)
+        if len(self.apples) == 3:
+            for apple in self.apples.sprites():
+                if apple.rect.bottom > 900:
+                    new_apple = Apple(self)
+                    self.apples.add(new_apple)
