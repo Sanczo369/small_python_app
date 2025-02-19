@@ -67,3 +67,11 @@ class AppleCatcher:
             self.check_for_level_up()
             self.music.apple_catched.play()
             self.sb.prep_score()
+
+    def _check_apples_bottom(self):
+        '''It checks if the apple crosses the screen bottom'''
+        screen_rect = self.screen.get_rect()
+        for apple in self.apples.sprites():
+            if apple.rect.bottom >= screen_rect.bottom:
+                self._apple_hit()
+                break
