@@ -129,3 +129,16 @@ class AppleCatcher:
             self.apples.empty()
             # Hide the mouse cursor
             pg.mouse.set_visible(False)
+
+    def _check_events(self):
+        """Respond to keypresses and mouse events."""
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                sys.exit()
+            elif event.type == pg.MOUSEBUTTONDOWN:
+                mouse_pos = pg.mouse.get_pos()
+                self._check_play_button(mouse_pos)
+            elif event.type == pg.KEYDOWN:
+                self._check_keydown_events(event)
+            elif event.type == pg.KEYUP:
+                self._check_keyup_events(event)
