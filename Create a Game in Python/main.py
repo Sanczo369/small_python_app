@@ -142,3 +142,12 @@ class AppleCatcher:
                 self._check_keydown_events(event)
             elif event.type == pg.KEYUP:
                 self._check_keyup_events(event)
+
+    def _check_keydown_events(self, event):
+        """Respond to keypresses."""
+        if event.key == pg.K_RIGHT:
+            self.basket.moving_right = True
+        elif event.key == pg.K_LEFT:
+            self.basket.moving_left = True
+        elif event.key == pg.K_SPACE:
+            self._drop_apples()
