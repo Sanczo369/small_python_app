@@ -110,3 +110,22 @@ class AppleCatcher:
                 if apple.rect.bottom > 900:
                     new_apple = Apple(self)
                     self.apples.add(new_apple)
+
+    def _check_play_button(self, mouse_pos):
+        """Start a new game when the player clicks Play."""
+        button_clicked = self.play_button.rect.collidepoint(mouse_pos)
+        if button_clicked and not self.stats.game_active:
+            self.settings.initialize_dynamic_settings()
+            # Reset the game statistics.
+            self.stats.reset_stats()
+            self.stats.game_active = True
+            # Play the Background Music
+            self.music.bg_music.play()
+
+            self.sb.prep_score()
+            self.sb.prep_apples()
+            self.sb.prep_level()
+            # Get rid of any remaining apples
+            self.apples.empty()
+            # Hide the mouse cursor
+            pg.mouse.set_visible(False)
