@@ -151,3 +151,10 @@ class AppleCatcher:
             self.basket.moving_left = True
         elif event.key == pg.K_SPACE:
             self._drop_apples()
+
+    def _check_keyup_events(self, event):
+        """Respond to key releases."""
+        if event.key == pg.K_RIGHT:
+            self.basket.moving_right = False
+        elif event.key == pg.K_LEFT:
+            self.basket.moving_left = False
