@@ -24,3 +24,7 @@ class Settings:
     def initialize_dynamic_settings(self):
         self.basket_speed = 1
         self.apple_drop_speed = 0.4
+
+    def increase_speed(self):
+        self.basket_speed *= self.levelup_scale
+        self.apple_drop_speed *= self.levelup_scale
