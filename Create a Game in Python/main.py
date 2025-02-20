@@ -174,3 +174,9 @@ class AppleCatcher:
             self.play_button.draw_button()
 
         pg.display.flip()
+
+
+
+if __name__ == '__main__':
+    ec = AppleCatcher()
+    ec.run_game()
