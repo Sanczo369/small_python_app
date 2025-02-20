@@ -19,4 +19,8 @@ class Settings:
         # Levelup Scale
         self.levelup_scale = 1.1
 
-        self.initialize_dynamic_settings()
+        self.initialize_dynamic_settings(
+
+    def initialize_dynamic_settings(self):
+        self.basket_speed = 1
+        self.apple_drop_speed = 0.4
