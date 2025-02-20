@@ -158,3 +158,19 @@ class AppleCatcher:
             self.basket.moving_right = False
         elif event.key == pg.K_LEFT:
             self.basket.moving_left = False
+
+    def _update_screen(self):
+        """Update images on the screen, and flip to the new screen."""
+        self.screen.blit(self.background, (0,0))
+        self.basket.blitme()
+
+        for apple in self.apples.sprites():
+            apple.blitme()
+
+        # Draw the score information.
+        self.sb.show_score()
+        # Draw the play button if the game is inactive.
+        if not self.stats.game_active:
+            self.play_button.draw_button()
+
+        pg.display.flip()
