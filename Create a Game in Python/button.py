@@ -17,3 +17,9 @@ class Button:
         self.rect.center = self.screen_rect.center
 
         self._show_text(text)
+
+    def _show_text(self, text):
+        self.text_image = self.font.render(text, True, \
+        self.text_color, self.button_color)
+        self.text_image_rect = self.text_image.get_rect()
+        self.text_image_rect.center = self.rect.center
