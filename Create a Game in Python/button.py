@@ -23,3 +23,8 @@ class Button:
         self.text_color, self.button_color)
         self.text_image_rect = self.text_image.get_rect()
         self.text_image_rect.center = self.rect.center
+
+    def draw_button(self):
+        # Draw blank button and then draw blank message.
+        self.screen.fill(self.button_color, self.rect)
+        self.screen.blit(self.text_image, self.text_image_rect)
