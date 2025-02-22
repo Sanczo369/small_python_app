@@ -23,3 +23,13 @@ class Apple(Sprite):
 
         # Store the decimal value for the apple's vertical position.
         self.y = float(self.rect.y)
+
+
+    def update(self):
+        self.y += self.settings.apple_drop_speed
+        self.rect.y = self.y
+
+
+    def blitme(self):
+        """Draw the basket at its current location"""
+        self.screen.blit(self.image, self.rect)
