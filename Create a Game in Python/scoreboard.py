@@ -26,3 +26,13 @@ class Scoreboard:
         self.level_rect = self.level_image.get_rect()
         self.level_rect.right = self.score_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
+
+    # It shows the remainning chances to drop the apple again.
+    def prep_apples(self):
+        """Show how many apples are left"""
+        self.apples = Group()
+        for apple_number in range(self.stats.apples_left):
+            apple = Apple(self.ac_game)
+            apple.rect.x = 10 + apple_number * apple.rect.width
+            apple.rect.y = 10
+            self.apples.add(apple)
