@@ -40,3 +40,12 @@ def boundary():
     (x, y) = snake.pos()
     boundary = (x<=left_wall or x>=right_wall or y<=bottom_wall or y>=top_wall)
     return boundary
+
+def display_score(current_score):
+    score_text.clear()
+    score_text.penup()
+    x = (t.window_width() / 2) - 50
+    y = (t.window_height() / 2) - 50
+    score_text.setpos(x, y)
+    score_text.write(str(current_score), align='right',
+    font=('Helvetica', 30, 'bold'))
