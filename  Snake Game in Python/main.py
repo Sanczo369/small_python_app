@@ -16,3 +16,10 @@ food.shape('square')
 food.speed(0)
 food.penup()
 food.hideturtle()
+
+welcome_text = t.Turtle()
+welcome_text.write('Press SPACE to Start', align='center', font=('Helvetica', 20, 'bold'))
+welcome_text.hideturtle()
+
+score_text = t.Turtle()
+score_text.hideturtle()
