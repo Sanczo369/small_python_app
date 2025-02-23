@@ -23,3 +23,10 @@ welcome_text.hideturtle()
 
 score_text = t.Turtle()
 score_text.hideturtle()
+
+def game_over():
+    snake.color('yellow')
+    food.color('yellow')
+    t.penup()
+    t.hideturtle()
+    t.write('GAME OVER!', align='center', font=('Helvetica', 40, 'bold'))
