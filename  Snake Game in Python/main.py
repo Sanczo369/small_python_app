@@ -30,3 +30,13 @@ def game_over():
     t.penup()
     t.hideturtle()
     t.write('GAME OVER!', align='center', font=('Helvetica', 40, 'bold'))
+
+def boundary():
+    left_wall = -t.window_width() / 2
+    right_wall = t.window_width() / 2
+    top_wall = t.window_height() / 2
+    bottom_wall = -t.window_height() / 2
+
+    (x, y) = snake.pos()
+    boundary = (x<=left_wall or x>=right_wall or y<=bottom_wall or y>=top_wall)
+    return boundary
