@@ -97,3 +97,11 @@ def go_up():
 def go_down():
     if snake.heading() == 0 or snake.heading() == 180:
         snake.setheading(270)
+
+t.onkey(start_game, 'space')
+t.onkey(go_up, 'Up')
+t.onkey(go_right, 'Right')
+t.onkey(go_down, 'Down')
+t.onkey(go_left, 'Left')
+t.listen()
+t.mainloop()
