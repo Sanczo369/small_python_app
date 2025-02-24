@@ -83,3 +83,8 @@ def start_game():
         if boundary():
             game_over()
             break
+
+def go_left():
+    if snake.heading() == 90 or snake.heading() == 270:
+        # The head of the snake is being set at a 180 degree angle.
+        snake.setheading(180)
