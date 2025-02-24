@@ -57,3 +57,29 @@ def place_food():
     food.sety(random.randint(-150, 150))
     # Show Turtle
     food.st()
+
+def start_game():
+    score = 0
+    # Clear the Starting Screen
+    welcome_text.clear()
+
+    snake_speed = 1
+    snake_length = 2
+    snake.shapesize(1, snake_length, 1)
+    snake.showturtle()
+    display_score(score)
+    place_food()
+
+    while True:
+        snake.forward(snake_speed)
+        # The snake eats the food when it is less than 30 pixels away
+        if snake.distance(food) < 30:
+            place_food()
+            snake_length += 0.5
+            snake.shapesize(1, snake_length, 1)
+            snake_speed += 0.4
+            score += 2
+            display_score(score)
+        if boundary():
+            game_over()
+            break
