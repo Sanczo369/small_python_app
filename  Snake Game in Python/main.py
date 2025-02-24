@@ -49,3 +49,11 @@ def display_score(current_score):
     score_text.setpos(x, y)
     score_text.write(str(current_score), align='right',
     font=('Helvetica', 30, 'bold'))
+
+def place_food():
+    # Hide Turtle
+    food.ht()
+    food.setx(random.randint(-150, 150))
+    food.sety(random.randint(-150, 150))
+    # Show Turtle
+    food.st()
