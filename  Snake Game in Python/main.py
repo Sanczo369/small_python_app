@@ -94,3 +94,6 @@ def go_right():
 def go_up():
     if snake.heading() == 0 or snake.heading() == 180:
         snake.setheading(90)
+def go_down():
+    if snake.heading() == 0 or snake.heading() == 180:
+        snake.setheading(270)
