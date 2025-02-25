@@ -14,3 +14,7 @@ def signal_handler(sig, frame):
 def main(stdscr):
     # Hide the cursor
     curses.curs_set(0)
+
+    # Initialize colors
+    curses.start_color()
+    curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
