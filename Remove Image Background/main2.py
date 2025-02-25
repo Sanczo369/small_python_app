@@ -9,8 +9,11 @@ with open('input_image.png', 'rb') as img_file:
 # Remove the background
 output_data = remove(img_data)
 
-# Convert the output to an image
+# Load the output image
 output_image = Image.open(io.BytesIO(output_data))
 
-# Convert and save as JPEG
-output_image.convert('RGB').save('output_image.jpg', 'JPEG')
+# Resize the image
+resized_image = output_image.resize((300, 300))
+
+# Save the resized image
+resized_image.save('resized_output_image.png')
