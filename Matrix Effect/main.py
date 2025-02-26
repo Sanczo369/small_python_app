@@ -24,3 +24,8 @@ def main(stdscr):
 
     # Initialize a list to keep track of the current position of characters in each column
     columns = [0] * max_x
+
+    # Main loop for the matrix rain effect
+    while True:
+        # Clear the screen
+        stdscr.clear()
