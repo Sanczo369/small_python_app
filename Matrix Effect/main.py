@@ -41,3 +41,6 @@ def main(stdscr):
             elif columns[x] >= max_y - 1:
                 stdscr.addstr(0, x, chr(random.randint(33, 126)), curses.color_pair(1))
                 columns[x] = 0
+
+        # Refresh the screen to display the changes
+        stdscr.refresh()
