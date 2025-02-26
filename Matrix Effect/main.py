@@ -21,3 +21,6 @@ def main(stdscr):
 
     # Get the maximum y and x coordinates of the screen
     max_y, max_x = stdscr.getmaxyx()
+
+    # Initialize a list to keep track of the current position of characters in each column
+    columns = [0] * max_x
