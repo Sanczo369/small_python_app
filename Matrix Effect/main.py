@@ -44,3 +44,13 @@ def main(stdscr):
 
         # Refresh the screen to display the changes
         stdscr.refresh()
+
+        # Introduce a small delay to control the speed of the falling characters
+        time.sleep(0.05)
+# Entry point of the program
+if __name__ == "__main__":
+    # Set up a signal handler to handle interrupts
+    signal.signal(signal.SIGINT, signal_handler)
+
+    # Run the main function
+    curses.wrapper(main)
