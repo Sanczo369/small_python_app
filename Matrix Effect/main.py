@@ -29,3 +29,15 @@ def main(stdscr):
     while True:
         # Clear the screen
         stdscr.clear()
+
+        # Iterate through each column
+        for x in range(max_x):
+            # Check if the column is not full and randomly decide whether to add a new character
+            if columns[x] < max_y - 1 and random.randint(0, 10) > 5:
+                y = columns[x]
+                stdscr.addstr(y, x, chr(random.randint(33, 126)), curses.color_pair(1))
+                columns[x] += 1
+            # If the column is full, wrap the character to the top of the screen
+            elif columns[x] >= max_y - 1:
+                stdscr.addstr(0, x, chr(random.randint(33, 126)), curses.color_pair(1))
+                columns[x] = 0
