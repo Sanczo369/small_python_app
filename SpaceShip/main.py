@@ -41,3 +41,15 @@ for i in range(num_of_enemies):
     enemyY.append(random.randint(50, 150))
     enemyX_change.append(4)
     enemyY_change.append(40)
+
+# Bullet
+
+# Ready - You can't see the bullet on the screen
+# Fire - The bullet is currently moving
+
+bulletImg = pygame.image.load('bullet.png')
+bulletX = 0
+bulletY = 480
+bulletX_change = 0
+bulletY_change = 10
+bullet_state = "ready"
