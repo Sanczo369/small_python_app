@@ -61,3 +61,6 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 
 textX = 10
 testY = 10
+
+# Game Over
+over_font = pygame.font.Font('freesansbold.ttf', 64)
