@@ -30,3 +30,12 @@ class Player(pygame.sprite.Sprite):
         self.rect.y += self.gravity
         if self.rect.bottom >= 300:
             self.rect.bottom = 300
+
+
+	def animation_state(self):
+		if self.rect.bottom < 300:
+			self.image = self.player_jump
+		else:
+			self.player_index += 0.1
+			if self.player_index >= len(self.player_walk): self.player_index = 0
+			self.image = self.player_walk[int(self.player_index)]
