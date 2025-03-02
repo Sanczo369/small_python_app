@@ -76,3 +76,7 @@ class Obstacle(pygame.sprite.Sprite):
 		self.animation_state()
 		self.rect.x -= 6
 		self.destroy()
+
+	def destroy(self):
+		if self.rect.x <= -100:
+			self.kill()
