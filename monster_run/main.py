@@ -105,3 +105,12 @@ start_time = 0
 score = 0
 bg_music = pygame.mixer.Sound('audio/music.wav')
 bg_music.play(loops = -1)
+
+#Groups
+player = pygame.sprite.GroupSingle()
+player.add(Player())
+
+obstacle_group = pygame.sprite.Group()
+
+sky_surface = pygame.image.load('graphics/Sky.png').convert()
+ground_surface = pygame.image.load('graphics/ground.png').convert()
