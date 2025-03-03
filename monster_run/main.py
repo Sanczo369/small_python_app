@@ -87,3 +87,10 @@ def display_score():
 	score_rect = score_surf.get_rect(center = (400,50))
 	screen.blit(score_surf,score_rect)
 	return current_time
+
+
+def collision_sprite():
+	if pygame.sprite.spritecollide(player.sprite,obstacle_group,False):
+		obstacle_group.empty()
+		return False
+	else: return True
