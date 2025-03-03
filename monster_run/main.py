@@ -130,3 +130,18 @@ game_message_rect = game_message.get_rect(center = (400,330))
 # Timer
 obstacle_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(obstacle_timer,1500)
+
+while True:
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			pygame.quit()
+			exit()
+
+		if game_active:
+			if event.type == obstacle_timer:
+				obstacle_group.add(Obstacle(choice(['fly', 'snail', 'snail', 'snail'])))
+
+		else:
+			if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+				game_active = True
+				start_time = int(pygame.time.get_ticks() / 1000)
