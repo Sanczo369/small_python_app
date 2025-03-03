@@ -80,3 +80,10 @@ class Obstacle(pygame.sprite.Sprite):
 	def destroy(self):
 		if self.rect.x <= -100:
 			self.kill()
+
+def display_score():
+	current_time = int(pygame.time.get_ticks() / 1000) - start_time
+	score_surf = test_font.render(f'Score: {current_time}',False,(64,64,64))
+	score_rect = score_surf.get_rect(center = (400,50))
+	screen.blit(score_surf,score_rect)
+	return current_time
